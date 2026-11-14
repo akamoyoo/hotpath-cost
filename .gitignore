@@ -1,0 +1,14 @@
+# build outputs
+*.o
+*.a
+*.so
+*.out
+__pycache__/
+.venv/
+
+# working notes, not published yet
+research/
+cases/
+REVIEW_TYPES.md
+CASE_STUDIES.md
+zh/
