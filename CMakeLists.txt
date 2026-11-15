@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(llvm_fn_effects CXX)
+project(llvm_fn_effects C CXX)   # C only because LLVMConfig.cmake probes with it
 
 # Build against an LLVM installation: pass -DLLVM_DIR=<prefix>/lib/cmake/llvm, or have llvm-config on PATH.
 if(NOT LLVM_DIR)
