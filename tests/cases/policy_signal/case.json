@@ -1,0 +1,59 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "policy": "signal-safety.json",
+ "rtsan": false,
+ "expect": [
+  {
+   "entry": "good_handler(int)",
+   "verdict": {
+    "unsafe": "none*",
+    "external-unknown": "none*"
+   },
+   "violations": [
+    "external-unknown",
+    "indirect-unknown",
+    "tls-dynamic",
+    "unsafe"
+   ]
+  },
+  {
+   "entry": "bad_handler(int)",
+   "verdict": {
+    "unsafe": "reachable"
+   },
+   "violations": [
+    "external-unknown",
+    "indirect-unknown",
+    "tls-dynamic",
+    "unsafe"
+   ],
+   "has": [
+    {
+     "class": "unsafe",
+     "symbol": "fprintf"
+    },
+    {
+     "class": "unsafe",
+     "symbol": "malloc"
+    },
+    {
+     "class": "unsafe",
+     "symbol": "free"
+    }
+   ]
+  },
+  {
+   "entry": "act_handler(int, siginfo_t*, void*)",
+   "verdict": {
+    "unsafe": "none"
+   },
+   "note": "found through the store into sa.sa_sigaction next to the sigaction call"
+  }
+ ],
+ "expect_absent": [
+  "not_a_handler(int)",
+  "main"
+ ]
+}

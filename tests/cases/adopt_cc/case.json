@@ -1,0 +1,98 @@
+{
+ "compile_commands": {
+  "commands": [
+   {
+    "file": "src/engine.cpp",
+    "compiler": "g++",
+    "args": [
+     "-O2",
+     "-g",
+     "-std=gnu++17",
+     "-fno-tree-vectorize",
+     "-fipa-pta",
+     "-flto=auto",
+     "-fno-semantic-interposition",
+     "-fprofile-use=prof",
+     "-fprofile-correction",
+     "-Wa,--noexecstack",
+     "-fconserve-stack",
+     "-fvar-tracking-assignments",
+     "-MD",
+     "-MF",
+     "engine.d",
+     "-c"
+    ]
+   },
+   {
+    "file": "src/legacy.c",
+    "compiler": "gcc",
+    "args": [
+     "-O2",
+     "-g",
+     "-std=gnu11",
+     "-fno-tree-vectorize",
+     "-c"
+    ]
+   },
+   {
+    "file": "src/main.cpp",
+    "compiler": "g++",
+    "args": [
+     "-O2",
+     "-std=gnu++17",
+     "-c"
+    ]
+   }
+  ],
+  "prebuild_with_gcc": true
+ },
+ "entries_file": "entries.txt",
+ "rtsan": false,
+ "sources": [],
+ "expect": [
+  {
+   "entry": "on_tick(int)",
+   "verdict": {
+    "alloc": "none",
+    "external-unknown": "none"
+   }
+  },
+  {
+   "entry": "on_order(int)",
+   "verdict": {
+    "alloc": "reachable"
+   }
+  },
+  {
+   "entry": "on_packet(unsigned char const*, int)",
+   "verdict": {
+    "alloc": "unknown",
+    "external-unknown": "reachable"
+   },
+   "has": [
+    {
+     "class": "external-unknown",
+     "subclass": "tu-not-compiled:src/legacy.c",
+     "symbol": "legacy_checksum"
+    }
+   ]
+  }
+ ],
+ "expect_build": {
+  "failed": [
+   "src/legacy.c"
+  ],
+  "dropped_contains": [
+   "-fno-tree-vectorize",
+   "-fipa-pta",
+   "-flto=auto",
+   "-fprofile-use=prof",
+   "-fconserve-stack"
+  ]
+ },
+ "checks": [
+  {
+   "kind": "relative_work"
+  }
+ ]
+}

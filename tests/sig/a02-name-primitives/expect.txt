@@ -1,0 +1,5 @@
+# rule (b): the program's own functions with primitive names are ordinary functions
+SIG _Z7publishi .*syscall=never\[direct\]
+SIG _Z7mk_slabl alloc=never\[direct\]
+SIG _Z2mkl alloc=never\[own\]
+!=always

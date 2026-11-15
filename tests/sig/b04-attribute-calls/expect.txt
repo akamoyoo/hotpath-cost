@@ -1,0 +1,4 @@
+# rule (d): fentry, XRay, SafeStack, split stack
+ENTRY hot\(long\) \{'alloc': 'unknown', 'lock': 'unknown', 'syscall': 'unknown'
+!SIG _Z4leafl alloc=never\[own\]
+!SIG _Z3hotl alloc=never\[direct\]

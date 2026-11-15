@@ -1,0 +1,62 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "dispatch",
+  "only_quiet"
+ ],
+ "expect": [
+  {
+   "entry": "dispatch(Sink&, int)",
+   "verdict": {
+    "alloc": "reachable",
+    "lock": "reachable",
+    "indirect-unknown": "none*"
+   },
+   "none_hot": [
+    "lock",
+    "syscall"
+   ],
+   "note_lock": "expected lock none before the guarantee rules; vector::push_back can throw length_error, and a throw is counted as reaching the unwinder lock (cold)",
+   "has": [
+    {
+     "class": "alloc",
+     "chain_contains": "_ZN4Loud2onEi",
+     "edge": "virtual",
+     "temp": "likely"
+    }
+   ],
+   "assumption": {
+    "kind": "indirect-call",
+    "rule_re": "vtable|points-to",
+    "min_targets": 2
+   },
+   "note": "two vtables carry !type _ZTS4Sink; Loud::on reaches operator new through vector::push_back (_M_realloc_append), Quiet::on reaches nothing; the Sink vtable slot is __cxa_pure_virtual and is reported as cold abort"
+  },
+  {
+   "entry": "only_quiet(Quiet&, int)",
+   "verdict": {
+    "alloc": "none",
+    "free": "none",
+    "throw": "none",
+    "abort": "none",
+    "indirect-unknown": "none"
+   }
+  }
+ ],
+ "variants": [
+  {
+   "name": "no-scale-levers",
+   "cflags": "",
+   "env": {
+    "FX_PTA_NO_PREPASS": "1",
+    "FX_PTA_NO_CYCLES": "1"
+   },
+   "rtsan": false,
+   "same_as_base": true,
+   "expect": [],
+   "note": "regression (round 3): the pre-pass (DATA objects) and cycle collapse must not change any verdict"
+  }
+ ]
+}

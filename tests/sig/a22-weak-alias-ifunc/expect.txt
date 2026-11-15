@@ -1,0 +1,7 @@
+# rule (c): weak aliases, weak definitions and ifuncs are closed-world
+SIG _Z15call_weak_aliasl alloc=always\(elidable\)\[closed-world
+SIG _Z12call_weakdefl alloc=always\(elidable\)\[closed-world
+SIG _Z17call_weak_alias_ql alloc=never\[closed-world\]
+ENTRY call_weak_alias_q\(long\) alloc = none\*
+SIG _Z10call_ifuncl alloc=may\[closed-world
+SIG _Z17call_strong_aliasl alloc=always\(elidable\)\[library-policy

@@ -1,0 +1,70 @@
+{
+ "sources": [
+  "main.cpp",
+  "ctor.cpp"
+ ],
+ "link_flags": "-pthread",
+ "entries": [
+  "via_alias",
+  "via_memcpy",
+  "via_libc_memcpy",
+  "via_union",
+  "via_library",
+  "via_global_ctor"
+ ],
+ "expect": [
+  {
+   "entry": "via_alias(int)",
+   "not_none": [
+    "alloc"
+   ],
+   "note": "install(&g_holder.fp, alloc_alias): the store goes through a parameter"
+  },
+  {
+   "entry": "via_memcpy(int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "via_libc_memcpy(int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "via_union(int)",
+   "not_none": [
+    "alloc"
+   ],
+   "note": "the address travels as a long (ptrtoint), is stored, and is loaded as a pointer"
+  },
+  {
+   "entry": "via_library(int)",
+   "not_none": [
+    "alloc"
+   ],
+   "note": "the pointer comes back from pthread_getspecific: EXT; g_ops_tls escaped through pthread_setspecific, so alloc_roundtrip is an escaped function of the type"
+  },
+  {
+   "entry": "via_global_ctor(int)",
+   "not_none": [
+    "alloc"
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "name": "no-scale-levers",
+   "cflags": "",
+   "env": {
+    "FX_PTA_NO_PREPASS": "1",
+    "FX_PTA_NO_CYCLES": "1"
+   },
+   "rtsan": false,
+   "same_as_base": true,
+   "expect": [],
+   "note": "regression (round 3): the pre-pass (DATA objects) and cycle collapse must not change any verdict"
+  }
+ ]
+}

@@ -1,0 +1,1658 @@
+{
+  "name": "common",
+  "description": "Facts about the Itanium C++ ABI, glibc and libstdc++ that every policy shares. Not a policy on its own: no classes, no entries.",
+  "abi": {
+    "terminate": [
+      "__clang_call_terminate",
+      "_ZSt9terminatev",
+      "__cxa_call_terminate",
+      "__std_terminate"
+    ],
+    "registration_only": [
+      "__cxa_atexit",
+      "atexit",
+      "at_quick_exit",
+      "__cxa_thread_atexit",
+      "__cxa_thread_atexit_impl",
+      "pthread_create",
+      "pthread_key_create",
+      "pthread_atfork",
+      "signal",
+      "sigaction",
+      "bsd_signal",
+      "sysv_signal",
+      "sigset"
+    ],
+    "cold_targets": [
+      {
+        "pattern": "__cxa_pure_virtual",
+        "subclass": "pure-virtual"
+      },
+      {
+        "pattern": "__cxa_deleted_virtual",
+        "subclass": "pure-virtual"
+      }
+    ],
+    "open_types": [
+      "_ZTSSt*",
+      "_ZTSNSt*",
+      "_ZTSN9__gnu_cxx*",
+      "_ZTSN10__cxxabiv1*"
+    ],
+    "intrinsic_libcalls": [
+      {
+        "pattern": "re:^llvm\\.memcpy\\.p",
+        "calls": [
+          "memcpy"
+        ],
+        "inline_max_bytes": 32
+      },
+      {
+        "pattern": "re:^llvm\\.memmove\\.p",
+        "calls": [
+          "memmove"
+        ],
+        "inline_max_bytes": 32
+      },
+      {
+        "pattern": "re:^llvm\\.memset\\.p",
+        "calls": [
+          "memset"
+        ],
+        "inline_max_bytes": 32
+      },
+      {
+        "pattern": "re:^llvm\\.(memcpy|memmove|memset)\\.element\\.unordered\\.atomic",
+        "calls": [
+          "__llvm_$1_element_unordered_atomic"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.(sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|exp|exp2|exp10|log|log2|log10|pow|ldexp|frexp|modf|sincos|floor|ceil|trunc|rint|nearbyint|round|roundeven|lround|llround|lrint|llrint|fma|sqrt)\\.",
+        "calls": [
+          "$1",
+          "$1f",
+          "$1l"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.experimental\\.constrained\\.(sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|exp|exp2|exp10|log|log2|log10|pow|ldexp|frexp|modf|sincos|floor|ceil|trunc|rint|nearbyint|round|roundeven|lround|llround|lrint|llrint|fma|sqrt)\\.",
+        "calls": [
+          "$1",
+          "$1f",
+          "$1l"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.experimental\\.constrained\\.frem\\.",
+        "calls": [
+          "fmod",
+          "fmodf",
+          "fmodl"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.powi\\.",
+        "calls": [
+          "__powisf2",
+          "__powidf2",
+          "__powixf2"
+        ]
+      },
+      {
+        "pattern": "llvm.clear_cache",
+        "calls": [
+          "__clear_cache"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.instrprof\\.value\\.profile",
+        "calls": [
+          "__llvm_profile_instrument_target",
+          "__llvm_profile_instrument_memop"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.smul\\.with\\.overflow\\.i128",
+        "calls": [
+          "__muloti4"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.convert\\.to\\.fp16",
+        "calls": [
+          "__truncsfhf2"
+        ]
+      },
+      {
+        "pattern": "re:^llvm\\.convert\\.from\\.fp16",
+        "calls": [
+          "__extendhfsf2"
+        ]
+      }
+    ],
+    "intrinsics_no_call": [
+      "re:^llvm\\.(lifetime|dbg|assume|expect|type\\.test|public\\.type\\.test|type\\.checked\\.load|invariant|launder\\.invariant\\.group|strip\\.invariant\\.group|threadlocal\\.address|objectsize|is\\.constant|ptrmask|fshl|fshr|ctpop|ctlz|cttz|bswap|bitreverse|abs|smax|smin|umax|umin|sadd|uadd|ssub|usub|smul|umul|sshl|ushl|scmp|ucmp|fabs|copysign|minnum|maxnum|minimum|maximum|fmuladd|vector\\.|masked\\.|prefetch|donothing|experimental\\.noalias\\.scope\\.decl|sideeffect|stackprotector|stacksave|stackrestore|stackguard|eh\\.|frameaddress|returnaddress|sponentry|var\\.annotation|ptr\\.annotation|annotation|codeview|memcpy\\.inline|memset\\.inline|load\\.relative|allow\\.runtime\\.check|allow\\.ubsan\\.check|x86\\.|is\\.fpclass|canonicalize|arithmetic\\.fence|experimental\\.widenable|readcyclecounter|read_register|write_register|pseudoprobe|instrprof\\.(increment|increment\\.step|cover|timestamp|mcdc\\.tvbitmap\\.update|mcdc\\.parameters)|fake\\.use|get\\.active\\.lane\\.mask|stepvector|experimental\\.stepvector|vscale|fptosi\\.sat|fptoui\\.sat|convert\\.|thread\\.pointer|experimental\\.vector\\.)"
+    ],
+    "attr_libcalls": [
+      {
+        "attr": "ssp",
+        "calls": [
+          "__stack_chk_fail"
+        ],
+        "temp": "cold",
+        "needs_alloca": true
+      },
+      {
+        "attr": "sspstrong",
+        "calls": [
+          "__stack_chk_fail"
+        ],
+        "temp": "cold",
+        "needs_alloca": true
+      },
+      {
+        "attr": "sspreq",
+        "calls": [
+          "__stack_chk_fail"
+        ],
+        "temp": "cold"
+      },
+      {
+        "attr": "instrument-function-entry",
+        "calls": [
+          "$value"
+        ]
+      },
+      {
+        "attr": "instrument-function-entry-inlined",
+        "calls": [
+          "$value"
+        ]
+      },
+      {
+        "attr": "instrument-function-exit",
+        "calls": [
+          "$value"
+        ]
+      },
+      {
+        "attr": "instrument-function-exit-inlined",
+        "calls": [
+          "$value"
+        ]
+      },
+      {
+        "attr": "split-stack",
+        "calls": [
+          "__morestack"
+        ]
+      },
+      {
+        "attr": "fentry-call",
+        "calls": [
+          "<__fentry__: a tracer's entry hook>"
+        ],
+        "skip_values": [
+          "false"
+        ]
+      },
+      {
+        "attr": "function-instrument",
+        "calls": [
+          "<XRay runtime: patched entry and exit sleds>"
+        ],
+        "skip_values": [
+          "xray-never"
+        ]
+      },
+      {
+        "attr": "xray-instruction-threshold",
+        "calls": [
+          "<XRay runtime: patched entry and exit sleds>"
+        ]
+      },
+      {
+        "attr": "patchable-function-entry",
+        "calls": [
+          "<patchable function entry: code patched in at run time>"
+        ],
+        "skip_values": [
+          "0"
+        ]
+      },
+      {
+        "attr": "patchable-function-prefix",
+        "calls": [
+          "<patchable function entry: code patched in at run time>"
+        ],
+        "skip_values": [
+          "0"
+        ]
+      },
+      {
+        "attr": "probe-stack",
+        "calls": [
+          "$value"
+        ],
+        "skip_values": [
+          "inline-asm"
+        ]
+      },
+      {
+        "attr": "safestack",
+        "calls": [
+          "<SafeStack runtime>"
+        ]
+      },
+      {
+        "attr": "fn_ret_thunk_extern",
+        "calls": [
+          "__x86_return_thunk"
+        ]
+      }
+    ],
+    "frem_libcall": "fmod",
+    "atomic_inline_max_bytes": 8,
+    "exit_functions": [
+      "exit",
+      "quick_exit"
+    ],
+    "exit_registrations": [
+      "__cxa_atexit",
+      "atexit",
+      "at_quick_exit"
+    ],
+    "dynamic_loading": [
+      "dlopen",
+      "dlmopen",
+      "dlsym",
+      "dlvsym"
+    ],
+    "dlsym_like": [
+      "dlsym",
+      "dlvsym"
+    ],
+    "exec_mapping": [
+      {
+        "function": "mmap",
+        "prot_arg": 2
+      },
+      {
+        "function": "mmap64",
+        "prot_arg": 2
+      },
+      {
+        "function": "mprotect",
+        "prot_arg": 2
+      },
+      {
+        "function": "pkey_mprotect",
+        "prot_arg": 2
+      }
+    ],
+    "called_from_outside": [
+      "main"
+    ],
+    "pointer_models_note": "How a function without a body treats pointers, for the points-to analysis (README, 'Library pointer models'). First match wins. The default, for anything not listed, is escape: every pointer argument escapes (library code may keep it and write anything through it, at any time), the result is a library pointer (EXT). Every entry weaker than that carries a note: the one line of the function's documented contract it rests on. Kinds: none (keeps no pointer, returns no pointer: a pointer result is EXT, an integer result has no provenance); fresh; realloc; ret_arg0/ret_arg1 (a pointer into that argument); copy (bytes of argument 1 into argument 0); data (container internals: size, reads, writes, closure, write_reached, self, bodies); ret_ext; throw; catch. Effects added to any kind: writes_bytes (the objects these arguments point to receive bytes from outside or computed bytes: they hold no provenance; an entry is an index, 'varargs', or {arg, size}); exposes (the address is revealed, as by %p); sends (the pointers stored in those bytes leave the process and may come back: their objects are exposed); permutes (pointers move within the object); calls (callbacks: fn called with args); format (printf-like: a constant format without %n/%p limits the varargs effects); va_list; fill_value (memset: a constant 0 writes nothing); fresh_unknown (mmap).",
+    "pointer_models": [
+      {
+        "pattern": "re:^_ZN(3fmt|8fmtquill)3v[0-9]+19basic_memory_buffer.*4growERNS[0-9]_6bufferI",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "fmt basic_memory_buffer::grow: allocates new character storage, copies the characters, stores the new pointer and capacity into the buffer it is given (fmt/format.h)"
+      },
+      {
+        "pattern": "re:^_ZStplIcSt11char_traitsIcESaIcEE",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "operator+ on std::string: builds its result string from the characters of its operands ([string.op.plus])",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZSt12__str_concatINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "libstdc++'s helper of operator+: the same contract",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZNSt7__cxx11(9to_string|10to_wstring)",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "std::to_string: a new string of computed digits ([string.conversions]); the characters are bytes without provenance",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4swapERS4_$",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "reads": [
+          0,
+          1
+        ],
+        "writes": [
+          0,
+          1
+        ],
+        "note": "basic_string::swap exchanges the two strings' representations, nothing else ([string.swap])"
+      },
+      {
+        "pattern": "re:^_ZNK?St7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE[0-9]+[_a-z][_a-z0-9A-HJ-Z]*E",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "std::string members (not templates): they move characters, the string's own buffer pointer and fresh heap pointers only ([basic.string]: a string holds characters)",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZNK?St7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE[0-9]+[_a-z][_a-z0-9A-HJ-Z]*I(PKc|Pc|N9__gnu_cxx17__normal_iteratorI(PKc|Pc)S[0-9]_EE)E",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "std::string member templates over char pointers and std::string iterators only (never user iterators): characters only",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZNK?St7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE[CD][0-9]E",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "std::string constructors and destructor: characters, own buffer, fresh heap",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZNK?St7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC[0-9]I(PKc|Pc|N9__gnu_cxx17__normal_iteratorI(PKc|Pc)S[0-9]_EE)vEE",
+        "model": "data",
+        "size": 32,
+        "bodies": true,
+        "self": true,
+        "note": "std::string constructor templates over character ranges: characters only",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZNSt(11logic_error|13runtime_error|12out_of_range|16invalid_argument|12length_error|12domain_error|14overflow_error|15underflow_error|11range_error)C[12]E",
+        "model": "data",
+        "size": 16,
+        "self": true,
+        "note": "standard exception constructors: copy the message characters into a reference-counted string held in the object ([std.exceptions])"
+      },
+      {
+        "pattern": "re:^_ZNSt(11logic_error|13runtime_error|12out_of_range|16invalid_argument|12length_error|12domain_error|14overflow_error|15underflow_error|11range_error)D[012]Ev$",
+        "model": "none",
+        "note": "standard exception destructors: release the message string; keep no pointer, write nothing the program reads"
+      },
+      {
+        "pattern": "re:^_ZNSt9exceptionD[012]Ev$",
+        "model": "none",
+        "note": "std::exception's destructor has no members to touch ([exception])"
+      },
+      {
+        "pattern": "re:^_ZNKSt[0-9]+[a-z_]+4whatEv$",
+        "model": "ret_ext",
+        "note": "what(): a pointer to the message characters, in a string the library allocated (a pointer to characters, never to an object the program reads pointers from)"
+      },
+      {
+        "pattern": "__cxa_throw",
+        "model": "throw",
+        "calls": [
+          {
+            "fn": 2,
+            "args": [
+              0
+            ]
+          }
+        ],
+        "note": "Itanium C++ ABI 2.4.3: argument 0 becomes the in-flight exception; argument 2 (the destructor) is called on it later"
+      },
+      {
+        "pattern": "re:^(__cxa_begin_catch|__cxa_get_exception_ptr)$",
+        "model": "catch",
+        "note": "Itanium C++ ABI 2.5.3: returns the adjusted pointer to the in-flight exception"
+      },
+      {
+        "pattern": "re:^(__cxa_allocate_exception|__cxa_allocate_dependent_exception)$",
+        "model": "fresh",
+        "note": "Itanium C++ ABI 2.4.2: returns new storage for an exception object"
+      },
+      {
+        "pattern": "re:^(__cxa_end_catch|__cxa_free_exception|__cxa_rethrow|_Unwind_Resume|__cxa_call_terminate|__gxx_personality_v0)$",
+        "model": "none",
+        "note": "Itanium C++ ABI 2.5: end or continue handling of the in-flight exception; no pointer kept, nothing written that the program reads"
+      },
+      {
+        "pattern": "re:^(__cxa_guard_acquire|__cxa_guard_release|__cxa_guard_abort)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 8
+          }
+        ],
+        "note": "Itanium C++ ABI 3.3.3: reads and writes only the 8-byte guard object"
+      },
+      {
+        "pattern": "re:^_ZNSt15__exception_ptr13exception_ptr(9_M_addrefEv|10_M_releaseEv)$",
+        "model": "none",
+        "note": "exception_ptr reference counting on the exception header; the destructor call on release is the one __cxa_throw's model records"
+      },
+      {
+        "pattern": "re:^_ZSt[0-9]+__throw_",
+        "model": "none",
+        "note": "throw a standard exception the library constructs (its message is library memory); keep no program pointer"
+      },
+      {
+        "pattern": "re:^_ZSt21__glibcxx_assert_fail",
+        "model": "none",
+        "note": "prints the assertion and aborts; reads its string arguments only"
+      },
+      {
+        "pattern": "re:^_ZSt9terminatev$",
+        "model": "none",
+        "note": "calls the terminate handler, registered through std::set_terminate (whose default model makes the handler escape)"
+      },
+      {
+        "pattern": "__dynamic_cast",
+        "model": "ret_arg0",
+        "note": "Itanium C++ ABI 2.9.7: returns a pointer into argument 0 or null"
+      },
+      {
+        "pattern": "re:^_ZSt11_Hash_bytesPKvmm$",
+        "model": "none",
+        "note": "std::_Hash_bytes: reads the bytes, returns a hash"
+      },
+      {
+        "pattern": "re:^_ZSt15_Fnv_hash_bytesPKvmm$",
+        "model": "none",
+        "note": "FNV hash of the bytes; returns a hash"
+      },
+      {
+        "pattern": "re:^_ZNKSt8__detail20_Prime_rehash_policy",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 16
+          }
+        ],
+        "note": "the hashtable's rehash policy: computes bucket counts, writes only its own 16 bytes (next resize)"
+      },
+      {
+        "pattern": "re:^_ZSt(18_Rb_tree_increment|18_Rb_tree_decrement|29_Rb_tree_insert_and_rebalance|28_Rb_tree_rebalance_for_erase)",
+        "model": "data",
+        "size": 32,
+        "closure": true,
+        "write_reached": true,
+        "writes": [],
+        "reads": [],
+        "note": "red-black tree node links: reads and writes the 32-byte node headers (colour, parent, left, right) of the nodes it is given and of linked nodes"
+      },
+      {
+        "pattern": "re:^_ZNSt8__detail15_List_node_base",
+        "model": "data",
+        "size": 16,
+        "closure": true,
+        "write_reached": true,
+        "note": "list node links: the 16-byte next/prev headers of the nodes it is given and of linked nodes"
+      },
+      {
+        "pattern": "re:^_ZNK?St7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE",
+        "model": "data",
+        "size": 32,
+        "self": true,
+        "note": "other std::string const members: characters only",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^_ZNSt7__cxx1112basic_string",
+        "model": "data",
+        "size": 32,
+        "self": true,
+        "note": "other std::string members: characters only",
+        "inline_buffer": {
+          "offset": 16,
+          "size": 16
+        }
+      },
+      {
+        "pattern": "re:^(malloc|calloc|aligned_alloc|memalign|valloc|pvalloc|__libc_malloc|__libc_calloc)$",
+        "model": "fresh",
+        "note": "C 7.24.3: returns new storage (calloc: zeroed; malloc: indeterminate contents, reading them as a pointer is undefined)"
+      },
+      {
+        "pattern": "re:^(mmap|mmap64)$",
+        "model": "fresh",
+        "fresh_unknown": true,
+        "note": "POSIX mmap: a new mapping whose contents come from a file, another process or zero: bytes without provenance"
+      },
+      {
+        "pattern": "re:^_Zn[wa][jm]",
+        "model": "fresh",
+        "note": "[new.delete]: the library's replaceable operator new returns new storage (a replacement in the module has a body and is analysed)"
+      },
+      {
+        "pattern": "re:^(realloc|reallocarray)$",
+        "model": "realloc",
+        "note": "C 7.24.3.7: a new object holding argument 0's contents"
+      },
+      {
+        "pattern": "re:^(strdup|strndup)$",
+        "model": "realloc",
+        "note": "POSIX strdup: a new object holding a copy of argument 0's bytes"
+      },
+      {
+        "pattern": "re:^(free|cfree|munmap|__libc_free)$",
+        "model": "none",
+        "note": "releases the block; keeps no pointer and writes nothing the program may read afterwards"
+      },
+      {
+        "pattern": "re:^_Zd[la]Pv",
+        "model": "none",
+        "note": "[new.delete]: operator delete releases the block"
+      },
+      {
+        "pattern": "re:^(posix_memalign)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 8
+          }
+        ],
+        "note": "POSIX: stores a pointer to new storage into *argument 0 (a library pointer, written as bytes)"
+      },
+      {
+        "pattern": "re:^(strcpy|strncpy|stpcpy|strcat|strncat|__strcpy_chk|__strcat_chk|__stpcpy_chk|__strncpy_chk|__stpncpy_chk|__strncat_chk|stpncpy)$",
+        "model": "copy",
+        "note": "C 7.26.2/7.26.3: copies bytes of argument 1 into argument 0, returns a pointer into argument 0"
+      },
+      {
+        "pattern": "re:^(memcpy|memmove|mempcpy|__memcpy_chk|__memmove_chk|__mempcpy_chk)$",
+        "model": "copy",
+        "note": "C 7.26.2: copies bytes of argument 1 into argument 0, returns a pointer into argument 0"
+      },
+      {
+        "pattern": "re:^(memset|__memset_chk|explicit_bzero|bzero)$",
+        "model": "ret_arg0",
+        "writes_bytes": [
+          0
+        ],
+        "fill_value": 1,
+        "note": "C 7.26.6.1: fills argument 0 with a byte (not a constant 0: bytes without provenance); returns argument 0"
+      },
+      {
+        "pattern": "re:^(strchr|strrchr|strstr|memchr|memrchr|strpbrk|rawmemchr|strchrnul|strcasestr)$",
+        "model": "ret_arg0",
+        "note": "C 7.26.5: returns a pointer into argument 0 or null; reads only"
+      },
+      {
+        "pattern": "re:^(strlen|strnlen|strcmp|strncmp|strcasecmp|strncasecmp|memcmp|bcmp|strspn|strcspn|atoi|atol|atoll|atof|toupper|tolower|abs|labs|llabs|isalpha|isdigit|isspace|isalnum|isupper|islower|isprint|ispunct|isxdigit|htonl|htons|ntohl|ntohs)$",
+        "model": "none",
+        "note": "C 7.26.4, 7.22.1, 7.4: read their arguments, return an integer"
+      },
+      {
+        "pattern": "re:^(strtol|strtoul|strtoll|strtoull|strtod|strtof|strtold|strtoimax|strtoumax)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 8
+          }
+        ],
+        "note": "C 7.22.1.3/4: parse argument 0 and store into *argument 1 a pointer into argument 0"
+      },
+      {
+        "pattern": "re:^printf$",
+        "model": "none",
+        "format": 0,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^fprintf$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^dprintf$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^__printf_chk$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^__fprintf_chk$",
+        "model": "none",
+        "format": 2,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^vprintf$",
+        "model": "none",
+        "format": 0,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "va_list": 1,
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^vfprintf$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "va_list": 2,
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^vdprintf$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "va_list": 2,
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^__vprintf_chk$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "va_list": 2,
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^__vfprintf_chk$",
+        "model": "none",
+        "format": 2,
+        "writes_bytes": [
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "sends": [
+          "varargs"
+        ],
+        "va_list": 3,
+        "note": "C 7.21.6.1/3: writes formatted text to a stream; %p prints a variadic argument's address, %n stores an integer through one (a constant format without them does neither)"
+      },
+      {
+        "pattern": "re:^sprintf$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^snprintf$",
+        "model": "none",
+        "format": 2,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^__sprintf_chk$",
+        "model": "none",
+        "format": 3,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^__snprintf_chk$",
+        "model": "none",
+        "format": 4,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^vsprintf$",
+        "model": "none",
+        "format": 1,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "va_list": 2,
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^vsnprintf$",
+        "model": "none",
+        "format": 2,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "va_list": 3,
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^__vsprintf_chk$",
+        "model": "none",
+        "format": 3,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "va_list": 4,
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^__vsnprintf_chk$",
+        "model": "none",
+        "format": 4,
+        "writes_bytes": [
+          0,
+          {
+            "arg": "varargs",
+            "size": 8
+          }
+        ],
+        "exposes": [
+          "varargs"
+        ],
+        "va_list": 5,
+        "note": "C 7.21.6.5/6: writes formatted characters into argument 0 (bytes without provenance, an address under %p); %n stores an integer through a variadic argument"
+      },
+      {
+        "pattern": "re:^(puts|fputs|fputs_unlocked)$",
+        "model": "none",
+        "sends": [
+          0
+        ],
+        "note": "C 7.21.7: writes argument 0's characters to a stream (the bytes leave the process and may come back)"
+      },
+      {
+        "pattern": "re:^(fputc|putc|putchar|fputc_unlocked|putc_unlocked|putchar_unlocked|fflush|fflush_unlocked|perror)$",
+        "model": "none",
+        "note": "C 7.21.7, 7.21.5.2: write a character or flush a stream; read only their arguments"
+      },
+      {
+        "pattern": "re:^(fwrite|fwrite_unlocked)$",
+        "model": "none",
+        "sends": [
+          0
+        ],
+        "note": "C 7.21.8.2: writes argument 0's bytes to a stream (they may come back)"
+      },
+      {
+        "pattern": "re:^(write|pwrite|pwrite64|send|sendto)$",
+        "model": "none",
+        "sends": [
+          1
+        ],
+        "note": "POSIX: writes argument 1's bytes to a file or socket (they may come back through a read)"
+      },
+      {
+        "pattern": "re:^(writev|pwritev|sendmsg)$",
+        "model": "none",
+        "sends": [
+          {
+            "arg": 1,
+            "reach": true
+          }
+        ],
+        "note": "POSIX: writes the bytes of the buffers argument 1 describes (they may come back)"
+      },
+      {
+        "pattern": "re:^(fread|fread_unlocked)$",
+        "model": "none",
+        "writes_bytes": [
+          0
+        ],
+        "note": "C 7.21.8.1: stores bytes read from a stream into argument 0: bytes without provenance"
+      },
+      {
+        "pattern": "re:^(fgets|fgets_unlocked)$",
+        "model": "ret_arg0",
+        "writes_bytes": [
+          0
+        ],
+        "note": "C 7.21.7.2: stores characters read from a stream into argument 0; returns argument 0 or null"
+      },
+      {
+        "pattern": "re:^(fgetc|getc|getchar|fgetc_unlocked|getc_unlocked|getchar_unlocked)$",
+        "model": "none",
+        "note": "C 7.21.7.1: returns a character read from a stream (an integer without provenance)"
+      },
+      {
+        "pattern": "re:^(read|pread|pread64|recv)$",
+        "model": "none",
+        "writes_bytes": [
+          1
+        ],
+        "note": "POSIX: stores bytes from a file or socket into argument 1: bytes without provenance"
+      },
+      {
+        "pattern": "re:^(recvfrom)$",
+        "model": "none",
+        "writes_bytes": [
+          1,
+          4,
+          {
+            "arg": 5,
+            "size": 4
+          }
+        ],
+        "note": "POSIX: stores bytes into argument 1, the sender's address into argument 4 and its length into argument 5"
+      },
+      {
+        "pattern": "re:^(readv|preadv|recvmsg)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "reach": true
+          }
+        ],
+        "note": "POSIX: stores bytes into the buffers argument 1 describes (iovec, msghdr: the objects reachable from it)"
+      },
+      {
+        "pattern": "re:^(open|open64|openat|close|lseek|lseek64|fsync|fdatasync|sched_yield|getpid|gettid|sleep|usleep|dup|dup2|socket|eventfd|timerfd_create|epoll_create|epoll_create1)$",
+        "model": "none",
+        "note": "POSIX: take integers and path strings, return an integer"
+      },
+      {
+        "pattern": "re:^(pipe|pipe2)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 8
+          }
+        ],
+        "note": "POSIX pipe: stores two int file descriptors into argument 0"
+      },
+      {
+        "pattern": "re:^(poll|ppoll)$",
+        "model": "none",
+        "writes_bytes": [
+          0
+        ],
+        "note": "POSIX poll: writes the revents fields of the array argument 0"
+      },
+      {
+        "pattern": "re:^(epoll_wait|epoll_pwait)$",
+        "model": "none",
+        "writes_bytes": [
+          1
+        ],
+        "note": "Linux epoll_wait: stores ready events into argument 1, each with the data word given to epoll_ctl (bytes; a pointer stored there was exposed when it escaped through epoll_ctl)"
+      },
+      {
+        "pattern": "re:^(nanosleep|clock_nanosleep)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 16
+          },
+          {
+            "arg": 3,
+            "size": 16
+          }
+        ],
+        "note": "POSIX: reads the request, writes the remaining time (16 bytes) into the last argument"
+      },
+      {
+        "pattern": "re:^(ioctl)$",
+        "model": "none",
+        "writes_bytes": [
+          "varargs"
+        ],
+        "note": "POSIX ioctl: the request may write anything into the object its variadic argument points to"
+      },
+      {
+        "pattern": "re:^(clock_gettime|__clock_gettime|clock_gettime64|clock_getres)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 16
+          }
+        ],
+        "note": "POSIX: stores a 16-byte timespec into argument 1"
+      },
+      {
+        "pattern": "re:^(gettimeofday)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 16
+          },
+          {
+            "arg": 1,
+            "size": 8
+          }
+        ],
+        "note": "POSIX: stores a 16-byte timeval into argument 0 (and the obsolete timezone into argument 1)"
+      },
+      {
+        "pattern": "re:^(time)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 8
+          }
+        ],
+        "note": "C 7.27.2.4: returns the time and stores it into argument 0 when not null"
+      },
+      {
+        "pattern": "re:^(getcpu)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 4
+          },
+          {
+            "arg": 1,
+            "size": 4
+          }
+        ],
+        "note": "Linux getcpu: stores two unsigned integers into arguments 0 and 1"
+      },
+      {
+        "pattern": "re:^(sched_getcpu)$",
+        "model": "none",
+        "note": "returns an integer"
+      },
+      {
+        "pattern": "re:^(clock_getcpuclockid|pthread_getcpuclockid)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 4
+          }
+        ],
+        "note": "POSIX: stores a clockid_t (4 bytes) into argument 1"
+      },
+      {
+        "pattern": "re:^(__errno_location|getenv|secure_getenv|strerror|__ctype_b_loc|__ctype_tolower_loc|__ctype_toupper_loc|localeconv|pthread_self)$",
+        "model": "ret_ext",
+        "note": "return a pointer to library memory (errno, environment, tables, the thread descriptor); keep nothing"
+      },
+      {
+        "pattern": "pthread_getspecific",
+        "model": "ret_ext",
+        "note": "POSIX: returns the value given to pthread_setspecific, whose default (escape) model makes it escape: EXT stands for it"
+      },
+      {
+        "pattern": "re:^pthread_mutex_(lock|trylock|timedlock|clocklock|unlock|init|destroy|consistent|getprioceiling|setprioceiling)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 40
+          },
+          {
+            "arg": 2,
+            "size": 4
+          }
+        ],
+        "note": "POSIX/glibc: reads and writes only the 40-byte pthread_mutex_t (owner, counters, robust-list links)"
+      },
+      {
+        "pattern": "re:^pthread_cond_(wait|timedwait|clockwait)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 48
+          },
+          {
+            "arg": 1,
+            "size": 40
+          }
+        ],
+        "note": "POSIX/glibc: writes the 48-byte condition variable and the 40-byte mutex; reads the timeout"
+      },
+      {
+        "pattern": "re:^pthread_cond_(signal|broadcast|init|destroy)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 48
+          }
+        ],
+        "note": "POSIX/glibc: reads and writes only the 48-byte pthread_cond_t"
+      },
+      {
+        "pattern": "re:^pthread_rwlock_",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 56
+          }
+        ],
+        "note": "POSIX/glibc: reads and writes only the 56-byte pthread_rwlock_t"
+      },
+      {
+        "pattern": "re:^pthread_spin_",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 4
+          }
+        ],
+        "note": "POSIX/glibc: reads and writes only the 4-byte spinlock"
+      },
+      {
+        "pattern": "re:^pthread_barrier_",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 32
+          }
+        ],
+        "note": "POSIX/glibc: reads and writes only the 32-byte barrier"
+      },
+      {
+        "pattern": "re:^pthread_attr_",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 56
+          },
+          1,
+          2,
+          3
+        ],
+        "note": "POSIX: the 56-byte pthread_attr_t; getters store values (pthread_attr_getstack: a library address) into their pointer arguments"
+      },
+      {
+        "pattern": "re:^pthread_(mutexattr|condattr|barrierattr)_",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 4
+          },
+          {
+            "arg": 1,
+            "size": 4
+          }
+        ],
+        "note": "POSIX: the 4-byte attribute object; getters store an integer into argument 1"
+      },
+      {
+        "pattern": "re:^pthread_rwlockattr_",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 8
+          },
+          {
+            "arg": 1,
+            "size": 4
+          }
+        ],
+        "note": "POSIX: the 8-byte attribute object; getters store an integer into argument 1"
+      },
+      {
+        "pattern": "re:^(sem_wait|sem_post|sem_timedwait|sem_clockwait|sem_trywait|sem_init|sem_destroy|sem_getvalue)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 32
+          },
+          {
+            "arg": 1,
+            "size": 4
+          }
+        ],
+        "note": "POSIX/glibc: reads and writes only the 32-byte sem_t (sem_getvalue: an integer into argument 1)"
+      },
+      {
+        "pattern": "re:^(pthread_detach|pthread_equal|pthread_kill|pthread_cancel)$",
+        "model": "none",
+        "note": "POSIX: take pthread_t integers"
+      },
+      {
+        "pattern": "pthread_once",
+        "model": "none",
+        "calls": [
+          {
+            "fn": 1,
+            "args": []
+          }
+        ],
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 4
+          }
+        ],
+        "note": "POSIX: writes the 4-byte once control, calls argument 1 once"
+      },
+      {
+        "pattern": "pthread_create",
+        "model": "none",
+        "calls": [
+          {
+            "fn": 2,
+            "args": [
+              3
+            ]
+          }
+        ],
+        "writes_bytes": [
+          {
+            "arg": 0,
+            "size": 8
+          }
+        ],
+        "note": "POSIX: stores the new thread's id into argument 0 and calls argument 2 with argument 3 (in the new thread)"
+      },
+      {
+        "pattern": "re:^(pthread_join)$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 8
+          }
+        ],
+        "note": "POSIX: stores the thread's exit value into *argument 1: the pointer its start function returned (bytes without provenance)"
+      },
+      {
+        "pattern": "re:^(abort|exit|_exit|_Exit|quick_exit|__assert_fail|__assert_perror_fail|__stack_chk_fail|__chk_fail|__fortify_fail|__cxa_pure_virtual|__cxa_deleted_virtual)$",
+        "model": "none",
+        "note": "end the process (exit: after the handlers registered by atexit's model); read only their string arguments"
+      },
+      {
+        "pattern": "re:^__ubsan_handle_",
+        "model": "none",
+        "writes_bytes": [
+          0
+        ],
+        "note": "UBSan runtime: reports the error; may mark the static source-location record as reported (bytes)"
+      },
+      {
+        "pattern": "re:^(__cxa_atexit|__cxa_thread_atexit|__cxa_thread_atexit_impl)$",
+        "model": "none",
+        "calls": [
+          {
+            "fn": 0,
+            "args": [
+              1
+            ]
+          }
+        ],
+        "note": "Itanium C++ ABI 3.3.5: calls argument 0 with argument 1 at exit"
+      },
+      {
+        "pattern": "re:^(atexit|at_quick_exit)$",
+        "model": "none",
+        "calls": [
+          {
+            "fn": 0,
+            "args": []
+          }
+        ],
+        "note": "C 7.22.4: calls argument 0 at exit"
+      },
+      {
+        "pattern": "re:^(qsort)$",
+        "model": "none",
+        "calls": [
+          {
+            "fn": 3,
+            "args": [
+              0,
+              0
+            ]
+          }
+        ],
+        "permutes": [
+          0
+        ],
+        "note": "C 7.22.5.2: reorders argument 0's elements (pointers move within it) and calls argument 3 with pointers into argument 0"
+      },
+      {
+        "pattern": "re:^(qsort_r)$",
+        "model": "none",
+        "calls": [
+          {
+            "fn": 3,
+            "args": [
+              0,
+              0,
+              4
+            ]
+          }
+        ],
+        "permutes": [
+          0
+        ],
+        "note": "glibc qsort_r: as qsort, argument 4 passed to the comparator"
+      },
+      {
+        "pattern": "re:^(bsearch)$",
+        "model": "ret_arg1",
+        "calls": [
+          {
+            "fn": 4,
+            "args": [
+              0,
+              1
+            ]
+          }
+        ],
+        "note": "C 7.22.5.1: calls argument 4 with argument 0 and pointers into argument 1; returns a pointer into argument 1 or null"
+      },
+      {
+        "pattern": "re:^(sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|exp|exp2|exp10|expm1|log|log2|log10|log1p|pow|sqrt|cbrt|hypot|fmod|remainder|erf|erfc|tgamma|lgamma|ceil|floor|trunc|round|lround|llround|rint|lrint|nearbyint|fma|fabs|copysign|ldexp|scalbn|ilogb|nextafter|fmin|fmax|fdim)[fl]?$",
+        "model": "none",
+        "note": "C 7.12: functions of their numeric arguments"
+      },
+      {
+        "pattern": "re:^(frexp)[fl]?$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 4
+          }
+        ],
+        "note": "C 7.12.6.4: stores an int exponent into argument 1"
+      },
+      {
+        "pattern": "re:^(modf)[fl]?$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 16
+          }
+        ],
+        "note": "C 7.12.6.12: stores the integral part into argument 1"
+      },
+      {
+        "pattern": "re:^(sincos)[fl]?$",
+        "model": "none",
+        "writes_bytes": [
+          {
+            "arg": 1,
+            "size": 16
+          },
+          {
+            "arg": 2,
+            "size": 16
+          }
+        ],
+        "note": "GNU sincos: stores the sine and cosine into arguments 1 and 2"
+      },
+      {
+        "pattern": "re:^(__powisf2|__powidf2|__powixf2)$",
+        "model": "none",
+        "note": "compiler runtime: a function of its numeric arguments"
+      },
+      {
+        "pattern": "re:^(__clear_cache)$",
+        "model": "none",
+        "note": "compiler runtime: flushes the instruction cache for a range; writes nothing the program reads"
+      },
+      {
+        "pattern": "re:^__rtsan_",
+        "model": "none",
+        "note": "RealtimeSanitizer runtime notifications: read their arguments"
+      }
+    ],
+    "intrinsic_inline_note": "x86-64: a memcpy/memmove/memset of constant length up to 32 bytes is expanded into at most four 8-byte moves (below every target's MaxStoresPerMemcpy), never a library call",
+    "intrinsics_no_call_note": "Intrinsics that code generation never turns into a call (reviewed against LLVM 21's lowering for x86-64). Removed in round 5: trap/ubsantrap/debugtrap (they stop the process: abort class), instrprof.value.profile (calls __llvm_profile_instrument_target), instrprof.callsite (calls the contextual-profiling runtime). Lowered to calls by abi.intrinsic_libcalls instead: memcpy/memmove/memset above 32 constant bytes, libm intrinsics, powi, clear_cache, smul.with.overflow.i128 (__muloti4), convert.to/from.fp16 without F16C. Kept with a reason: threadlocal.address (the access itself is classified by the tls-dynamic rule), sadd/uadd/ssub/usub/umul.with.overflow and the bit operations (inline at every width), masked/vector operations (scalarized inline), x86.* except x86.int (machine instructions; llvm.x86.int is a software interrupt, syscall class).",
+    "attr_libcalls_note": "Rule (d). Function attributes that make code generation add a call. Each call is classified like a library call: the classes its summary gives, and external-unknown without one. Reviewed against Clang/LLVM 21 for x86-64: stack protector (ssp*), -finstrument-functions (instrument-function-*; -pg is instrument-function-entry-inlined=mcount), -mfentry (fentry-call), XRay (function-instrument, xray-instruction-threshold), -fpatchable-function-entry, stack probes through a named function (probe-stack; inline-asm probing calls nothing), split stacks (__morestack), SafeStack, external return thunks (fn_ret_thunk_extern) and external retpoline thunks (target feature). Sanitizer, coverage and profile instrumentation is inserted by IR passes before the bitcode is written: its calls are in the IR. shadowcallstack adds no call (register operations).",
+    "asm_harmless": [
+      "",
+      "pause",
+      "rep; nop",
+      "rep nop",
+      "nop",
+      "mfence",
+      "lfence",
+      "sfence",
+      "rdtsc",
+      "rdtscp",
+      "cpuid"
+    ],
+    "asm_harmless_note": "Rule (e). Inline assembly blocks that are known not to enter the kernel and not to transfer control, compared as exact strings after whitespace is normalised. The empty block is the optimisation barrier (asm volatile(\"\" : : \"r\"(p) : \"memory\")). Every other block is an unknown callee.",
+    "known_fn_attrs": [
+      "alloc-family",
+      "amdgpu-unsafe-fp-atomics",
+      "approx-func-fp-math",
+      "branch-target-enforcement",
+      "correctly-rounded-divide-sqrt-fp-math",
+      "denormal-fp-math",
+      "denormal-fp-math-f32",
+      "disable-tail-calls",
+      "dontcall-error",
+      "dontcall-warn",
+      "entry_count",
+      "frame-pointer",
+      "guarded-control-stack",
+      "implicit-section-name",
+      "indirect-tls-seg-refs",
+      "less-precise-fpmad",
+      "min-legal-vector-width",
+      "mnop-mcount",
+      "mrecord-mcount",
+      "no-builtins",
+      "no-callee-saved-registers",
+      "no-infs-fp-math",
+      "no-inline-line-tables",
+      "no-jump-tables",
+      "no-nans-fp-math",
+      "no-realign-stack",
+      "no-signed-zeros-fp-math",
+      "no-stack-arg-probe",
+      "no-trapping-math",
+      "no_caller_saved_registers",
+      "nofree-inferred",
+      "packed-stack",
+      "prefer-vector-width",
+      "profile-sample-accurate",
+      "reciprocal-estimates",
+      "sample-profile-suffix-elision-policy",
+      "sign-return-address",
+      "sign-return-address-key",
+      "stack-probe-size",
+      "stack-protector-buffer-size",
+      "stackrealign",
+      "synthetic-prefetch",
+      "target-cpu",
+      "target-features",
+      "thunk",
+      "tune-cpu",
+      "uniform-work-group-size",
+      "unsafe-fp-math",
+      "use-sample-profile",
+      "use-soft-float",
+      "warn-stack-size",
+      "zero-call-used-regs"
+    ],
+    "known_module_flags": [
+      "CG Profile",
+      "Code Model",
+      "CodeView",
+      "Debug Info Version",
+      "Dwarf Version",
+      "EnableSplitLTOUnit",
+      "LTOPostLink",
+      "Large Data Threshold",
+      "Linker Options",
+      "MaxTLSAlign",
+      "NumRegisterParameters",
+      "PIC Level",
+      "PIE Level",
+      "ProfileSummary",
+      "RtLibUseGOT",
+      "SDK Version",
+      "SemanticInterposition",
+      "SmallDataLimit",
+      "ThinLTO",
+      "UnifiedLTO",
+      "Virtual Function Elim",
+      "branch-target-enforcement",
+      "cf-protection-branch",
+      "cf-protection-return",
+      "debug-info-assignment-tracking",
+      "direct-access-external-data",
+      "frame-pointer",
+      "function_return_thunk_extern",
+      "ibt-seal",
+      "indirect_branch_cs_prefix",
+      "min_enum_size",
+      "openmp",
+      "override-stack-alignment",
+      "short_enum",
+      "sign-return-address",
+      "sign-return-address-all",
+      "sign-return-address-with-bkey",
+      "stack-protector-guard",
+      "stack-protector-guard-offset",
+      "stack-protector-guard-reg",
+      "stack-protector-guard-symbol",
+      "target-abi",
+      "uwtable",
+      "wchar_size"
+    ],
+    "known_fn_attrs_note": "Rule (d). String function attributes known not to add a call at code generation (floating-point modes, target selection, frame layout, diagnostics, profile data). A string attribute that is neither here nor in attr_libcalls is reported in module.unknown_function_attributes. Enumerated attributes are a closed set of LLVM 21; those that add a call are in attr_libcalls.",
+    "known_module_flags_note": "Rule (d). Module flags known not to add a call the IR does not show. Any other flag (Cross-DSO CFI, kcfi, ...) is reported in module.unknown_module_flags. -femulated-tls is not recorded in the IR at all: the driver passes it on when it sees the flag, and --emulated-tls says so for bare bitcode."
+  },
+  "lint": {
+    "enabled": true,
+    "libm": [
+      "re:^(sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|asinh|acosh|atanh|exp|exp2|exp10|expm1|log|log2|log10|log1p|logb|pow|cbrt|hypot|fmod|remainder|remquo|erf|erfc|lgamma|lgamma_r|tgamma|frexp|ldexp|modf|scalbn|scalbln|ilogb|nextafter|nexttoward|fdim|sincos)[fl]?$",
+      "re:^__(sin|cos|tan|exp|exp2|log|log2|log10|pow|atan2|hypot)[fl]?_finite$",
+      "re:^llvm\\.(sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|exp|exp2|exp10|log|log2|log10|pow|powi|ldexp|frexp|modf|sincos)\\."
+    ],
+    "libm_correctly_rounded": [
+      "re:^(sqrt|ceil|floor|trunc|round|lround|llround|rint|lrint|llrint|nearbyint|fma|fabs|copysign|fmin|fmax)[fl]?$",
+      "re:^llvm\\.(sqrt|ceil|floor|trunc|round|roundeven|rint|nearbyint|lround|llround|lrint|llrint|fabs|copysign|minnum|maxnum|minimum|maximum)\\."
+    ]
+  },
+  "assumptions": [
+    "The program has no undefined behaviour (in particular, no call through a function pointer of the wrong type, no out-of-bounds vtable use).",
+    "Whole program: the linked module contains every translation unit that defines a class with virtual functions used by the entries, and every address-taken function the entries can call through a pointer. Function pointers created inside libraries without bitcode are not seen.",
+    "ODR: linkonce_odr, weak_odr and available_externally bodies are the bodies the program runs.",
+    "No symbol interposition at run time (LD_PRELOAD, kernel-bypass libraries that replace socket calls, symbol versioning tricks): a call goes to the definition in the module or to the library named by the summary.",
+    "External functions call back only the functions passed to them as arguments (callback edges); callbacks stored by a library and called later are not modelled except through summaries with unresolved indirect calls.",
+    "Signal handlers and other threads are not part of an entry's call tree.",
+    "Analysis is of pre-link LTO bitcode at the optimisation level given; the final link-time optimisation can only remove calls, inline, or turn equivalent library calls into one another (for example malloc+memset into calloc).",
+    "Hand-written assembly files and inline assembly that does not match a policy pattern are not analysed."
+  ],
+  "resolution": {
+    "fnptr_match": "exact",
+    "note": "exact: targets of a call through a function pointer are the address-taken functions of the same IR function type; arity: same number of parameters; any: every address-taken function"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "include": ["../../../policies/hotpath.json"],
+  "name": "test-arity",
+  "resolution": {"fnptr_match": "arity"}
+}

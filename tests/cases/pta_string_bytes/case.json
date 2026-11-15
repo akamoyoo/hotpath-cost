@@ -1,0 +1,63 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "via_string",
+  "via_swap",
+  "via_append"
+ ],
+ "expect": [
+  {
+   "entry": "via_string(int)",
+   "not_none": [
+    "alloc"
+   ],
+   "note": "the buffers of strings are one shared object (DATA) with a real slot: bytes copied in are visible from every string"
+  },
+  {
+   "entry": "via_swap(int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "via_append(int)",
+   "not_none": [
+    "alloc"
+   ],
+   "note": "regression (round 3): _M_append copies the characters of its argument; the string model must carry pointer bytes along"
+  }
+ ],
+ "variants": [
+  {
+   "name": "no-prepass",
+   "cflags": "",
+   "env": {
+    "FX_PTA_NO_PREPASS": "1"
+   },
+   "rtsan": false,
+   "expect": [
+    {
+     "entry": "via_string(int)",
+     "not_none": [
+      "alloc"
+     ]
+    },
+    {
+     "entry": "via_swap(int)",
+     "not_none": [
+      "alloc"
+     ]
+    },
+    {
+     "entry": "via_append(int)",
+     "not_none": [
+      "alloc"
+     ]
+    }
+   ],
+   "note": "without the pre-pass the fresh buffers are per call site; the self model must still not lose the bytes"
+  }
+ ]
+}

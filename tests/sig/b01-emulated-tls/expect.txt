@@ -1,0 +1,4 @@
+# rule (d): emulated TLS
+SIG _Z4bumpl alloc=unknown.* lock=unknown
+SIG _Z5outerl alloc=unknown
+!=never

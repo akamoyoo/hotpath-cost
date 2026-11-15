@@ -1,0 +1,57 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "policy": "noexcept.json",
+ "rtsan": false,
+ "cflags": "-Wno-exceptions",
+ "expect": [
+  {
+   "entry": "bad(int)",
+   "verdict": {
+    "throw": "reachable"
+   },
+   "violations": [
+    "external-unknown",
+    "indirect-unknown",
+    "throw"
+   ],
+   "note2": "with the libstdc++ summary the invalid_argument constructor is classified, so external-unknown is gone",
+   "has": [
+    {
+     "class": "throw",
+     "symbol": "__cxa_throw",
+     "chain_contains": "_Z9may_throwi"
+    }
+   ]
+  },
+  {
+   "entry": "at_in_noexcept(std::vector<int, std::allocator<int>> const&, int)",
+   "verdict": {
+    "throw": "reachable"
+   },
+   "has": [
+    {
+     "class": "throw",
+     "symbol": "_ZSt24__throw_out_of_range_fmtPKcz"
+    }
+   ]
+  },
+  {
+   "entry": "direct_throw(int)",
+   "verdict": {
+    "throw": "reachable"
+   }
+  },
+  {
+   "entry": "calls_noexcept(int)",
+   "verdict": {
+    "throw": "reachable"
+   },
+   "note": "false positive by design: caught_inside catches everything, but the engine does not match catch clauses; it reports a throw that may escape"
+  }
+ ],
+ "expect_absent": [
+  "safe_leaf(int)"
+ ]
+}

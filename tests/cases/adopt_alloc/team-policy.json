@@ -1,0 +1,9 @@
+{
+  "include": ["../../../policies/hotpath.json"],
+  "name": "team-hotpath",
+  "description": "A team's policy: the arena's allocate is accepted on the hot path (pre-sized arenas), jemalloc's entry points count as alloc.",
+  "classes": {
+    "alloc": {"extend": true, "symbols": [{"pattern": "re:^(mallocx|rallocx|sallocx)$", "subclass": "jemalloc (team)"}]}
+  },
+  "opaque": ["dem:Arena::allocate(*"]
+}

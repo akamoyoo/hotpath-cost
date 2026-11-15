@@ -1,0 +1,1006 @@
+#!/usr/bin/env python3
+"""fn-effects: whole-program effect analysis of C++ on LLVM IR.
+
+Builds whole-program bitcode (from sources, from bitcode files, or by re-running an existing
+compile_commands.json with Clang), runs the FnEffects pass plugin under a policy, and writes the JSON
+report, a text report, and optionally the effect table of every function.
+
+  fn-effects [options] SOURCES/BITCODE...          analyse
+  fn-effects -p build/compile_commands.json ...    analyse a project without changing its build
+  fn-effects --diff OLD.json NEW.json              what is new; exit 1 if a hazard appeared
+"""
+import argparse, collections, concurrent.futures, fnmatch, hashlib, json, os, re, shlex, shutil, subprocess, sys, time
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+SRC_EXT = ('.cpp', '.cc', '.cxx', '.c++', '.C', '.cp')
+C_EXT = ('.c',)
+BC_EXT = ('.bc', '.ll')
+
+# ------------------------------------------------------------------------------------------- toolchain
+
+def find_tool(name, args):
+    cands = []
+    if args.llvm_bin:
+        cands.append(os.path.join(args.llvm_bin, name))
+    if os.environ.get('FX_LLVM_BIN'):
+        cands.append(os.path.join(os.environ['FX_LLVM_BIN'], name))
+    cache = os.path.join(HERE, 'build', 'CMakeCache.txt')
+    if os.path.exists(cache):  # the LLVM the plugin was built against
+        for line in open(cache):
+            if line.startswith('LLVM_DIR:'):
+                cands.append(os.path.normpath(os.path.join(line.split('=', 1)[1].strip(), '..', '..', '..', 'bin', name)))
+    w = shutil.which('llvm-config')
+    if w:
+        try:
+            b = subprocess.run([w, '--bindir'], capture_output=True, text=True).stdout.strip()
+            cands.append(os.path.join(b, name))
+        except OSError:
+            pass
+    w = shutil.which(name)
+    if w:
+        cands.append(w)
+    for c in cands:
+        if os.path.exists(c):
+            return c
+    sys.exit(f'fn-effects: cannot find {name}; set --llvm-bin or FX_LLVM_BIN')
+
+
+def plugin_path(args):
+    p = args.plugin or os.path.join(HERE, 'build', 'FnEffects.so')
+    if not os.path.exists(p):
+        sys.exit(f'fn-effects: plugin not found at {p}; build it with cmake (see README)')
+    return p
+
+# ------------------------------------------------------------------------------------ compile commands
+
+# Flags GCC accepts and Clang rejects or must not see. Each entry: regex over one argument, and whether
+# the next argument belongs to it. Everything else is passed through; flags Clang still rejects are
+# found from its error message and dropped on a retry.
+GCC_ONLY = [
+    (r'-f(no-)?tree-.*', 0), (r'-f(no-)?ipa-.*', 0), (r'-f(no-)?gcse.*', 0), (r'-f(no-)?sched-.*', 0),
+    (r'-f(no-)?var-tracking.*', 0), (r'-fconserve-stack', 0), (r'-f(no-)?prefetch-loop-arrays', 0),
+    (r'-flto(=.*)?', 0), (r'-flto-partition=.*', 0), (r'-flto-odr-type-merging', 0), (r'-f(no-)?fat-lto-objects', 0),
+    (r'-fuse-linker-plugin', 0), (r'-fdevirtualize-at-ltrans', 0), (r'-fopt-info.*', 0), (r'-fdump-.*', 0),
+    (r'-fplugin(-arg)?=.*', 0), (r'-specs=.*', 0), (r'-fmax-errors=.*', 0), (r'-fconcepts(-ts)?', 0),
+    (r'-fcoroutines', 0), (r'-fmodules-ts', 0), (r'-f(no-)?keep-inline-dllexport', 0), (r'-fext-numeric-literals', 0),
+    (r'-f(no-)?printf-return-value', 0), (r'-f(no-)?reorder-blocks-and-partition', 0), (r'-fipa-pta', 0),
+    (r'-f(no-)?semantic-interposition', 0), (r'-fno-gnu-unique', 0), (r'-fstack-reuse=.*', 0),
+    (r'-mno-direct-extern-access', 0), (r'-fcf-protection=check', 0), (r'-Wa,.*', 0),
+    (r'-fprofile-use(=.*)?', 0), (r'-fprofile-generate(=.*)?', 0), (r'-fprofile-arcs', 0), (r'-ftest-coverage', 0),
+    (r'-fprofile-dir=.*', 0), (r'-fauto-profile(=.*)?', 0), (r'-fprofile-partial-training', 0),
+    (r'-fprofile-correction', 0), (r'-fprofile-update=.*', 0),
+]
+DROP_ALWAYS = [  # build-system and output flags we replace
+    (r'-o', 1), (r'-o.+', 0), (r'-c', 0), (r'-S', 0), (r'-E', 0), (r'-M[MD]?D?', 0), (r'-M[FTQ]', 1), (r'-MP', 0),
+    (r'-fdiagnostics-color(=.*)?', 0), (r'-save-temps(=.*)?', 0), (r'-Werror(=.*)?', 0), (r'-pipe', 0),
+    (r'-emit-llvm', 0), (r'-fwhole-program-vtables', 0),
+]
+
+
+def translate_args(argv):
+    """Return (kept, dropped) for one compile command, compiler and source file removed."""
+    kept, dropped = [], []
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        hit = None
+        for rx, takes in DROP_ALWAYS:
+            if re.fullmatch(rx, a):
+                hit = ('build', takes)
+                break
+        if not hit:
+            for rx, takes in GCC_ONLY:
+                if re.fullmatch(rx, a):
+                    hit = ('gcc', takes)
+                    break
+        if hit:
+            if hit[0] == 'gcc':
+                dropped.append(a)
+            i += 1 + hit[1]
+            continue
+        kept.append(a)
+        i += 1
+    return kept, dropped
+
+
+def load_compile_commands(path, filt, excl):
+    with open(path) as f:
+        cmds = json.load(f)
+    out, seen = [], set()
+    for c in cmds:
+        d = c.get('directory', '.')
+        src = c['file']
+        srcabs = src if os.path.isabs(src) else os.path.normpath(os.path.join(d, src))
+        if filt and not re.search(filt, srcabs):
+            continue
+        if excl and re.search(excl, srcabs):
+            continue
+        if 'arguments' in c:
+            argv = list(c['arguments'])
+        else:
+            argv = shlex.split(c['command'])
+        compiler = argv[0]
+        rest = [a for a in argv[1:]]
+        # remove the source file argument
+        rest2 = []
+        for a in rest:
+            aabs = a if os.path.isabs(a) else os.path.normpath(os.path.join(d, a))
+            if aabs == srcabs:
+                continue
+            rest2.append(a)
+        output = c.get('output')
+        if output is None:
+            for i, a in enumerate(rest):
+                if a == '-o' and i + 1 < len(rest):
+                    output = rest[i + 1]
+        if output and not os.path.isabs(output):
+            output = os.path.join(d, output)
+        if srcabs in seen:
+            # The same file built into two targets (e.g. a static and a shared library): one copy in the
+            # whole-program module, or the link sees the same symbols twice.
+            DUPLICATES.append(srcabs)
+            continue
+        seen.add(srcabs)
+        out.append({'dir': d, 'file': srcabs, 'compiler': compiler, 'args': rest2, 'output': output})
+    return out
+
+
+DUPLICATES = []
+
+
+def gcc_toolchain_flags(compiler, mode):
+    """Make Clang use the GCC installation the project was built with: same libstdc++, same system headers."""
+    if mode == 'none' or not compiler:
+        return []
+    if mode != 'auto':
+        return [f'--gcc-toolchain={mode}'] + (['--sysroot=/'] if os.path.normpath(mode) == '/usr' else [])
+    base = os.path.basename(compiler)
+    if not re.fullmatch(r'(.*-)?(g\+\+|gcc|c\+\+|cc)(-[0-9.]+)?', base):
+        return []
+    path = compiler if os.path.isabs(compiler) else shutil.which(compiler)
+    if not path or not os.path.exists(path):
+        return []
+    real = os.path.realpath(path)
+    if 'clang' in os.path.basename(real):
+        return []
+    prefix = os.path.dirname(os.path.dirname(real))
+    flags = [f'--gcc-toolchain={prefix}']
+    if prefix == '/usr':
+        flags.append('--sysroot=/')
+    return flags
+
+
+def compile_one(job, clangxx, clang, work, args):
+    """Compile one translation unit to bitcode with Clang. Returns a result dict."""
+    src = job['file']
+    h = hashlib.sha1(src.encode()).hexdigest()[:10]
+    bc = os.path.join(work, 'bc', f'{os.path.basename(src)}.{h}.bc')
+    kept, dropped = translate_args(job['args'])
+    is_c = src.endswith(C_EXT) or re.search(r'(^|/)(gcc|cc|clang)(-[0-9.]+)?$', job['compiler'] or '') is not None
+    cc = clang if is_c and not src.endswith(SRC_EXT) else clangxx
+    if not any(re.fullmatch(r'-g.*', a) and a not in ('-g0',) for a in kept):
+        kept.append('-gline-tables-only')
+    extra = ['-flto', '-fwhole-program-vtables', '-Wno-unknown-warning-option', '-Qunused-arguments', '-w']
+    extra += gcc_toolchain_flags(job.get('compiler'), args.gcc_toolchain)
+    user, user_dropped = translate_args(shlex.split(args.cflags or ''))
+    extra += user
+    dropped = dropped + user_dropped
+    dropped_retry = []
+    for attempt in range(4):
+        cmd = [cc] + kept + extra + ['-c', src, '-o', bc]
+        p = subprocess.run(cmd, cwd=job['dir'], capture_output=True, text=True)
+        if p.returncode == 0:
+            return {'file': src, 'bc': bc, 'ok': True, 'dropped': dropped + dropped_retry}
+        bad = re.findall(r"(?:unknown argument|unsupported option|unknown target CPU|invalid value)[^']*'([^']+)'", p.stderr)
+        bad = [b for b in bad if b in kept or b in extra]
+        if not bad:
+            break
+        for b in bad:
+            if b in kept:
+                kept.remove(b)
+            if b in extra:
+                extra.remove(b)
+            dropped_retry.append(b)
+    err = '\n'.join(l for l in p.stderr.splitlines() if 'error' in l)[:600]
+    return {'file': src, 'bc': None, 'ok': False, 'dropped': dropped + dropped_retry, 'error': err,
+            'output': job.get('output')}
+
+
+def file_digest(path):
+    h = hashlib.sha256()
+    with open(path, 'rb') as f:
+        for chunk in iter(lambda: f.read(1 << 20), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def default_summaries(args, clangxx, jobs):
+    """Library summaries shipped in summaries/ (*.json or *.json.gz): libc, libm and the libstdc++ the program
+    would link with. A summary is used only if the library it was made from is the one on this machine: for
+    libstdc++ the file the dynamic loader resolves, for the others the file at the recorded path with the
+    recorded build id."""
+    d = args.summaries_dir or os.path.join(HERE, 'summaries')
+    if args.no_default_summaries or not os.path.isdir(d):
+        return [], []
+    tc = []
+    for j in jobs:
+        tc = gcc_toolchain_flags(j.get('compiler'), args.gcc_toolchain)
+        if tc:
+            break
+    # The library loaded at run time: link a one-line program with the same toolchain flags and ask the
+    # dynamic loader which libstdc++ it resolves (the file the linker reads can be another copy).
+    linked = ''
+    import tempfile
+    with tempfile.TemporaryDirectory() as td:
+        src, exe = os.path.join(td, 'probe.cpp'), os.path.join(td, 'probe')
+        with open(src, 'w') as f:
+            f.write('#include <string>\nint main(int c, char**) { return (int)std::to_string(c).size(); }\n')
+        p = subprocess.run([clangxx] + tc + [src, '-o', exe], capture_output=True, text=True)
+        if p.returncode == 0:
+            q = subprocess.run(['ldd', exe], capture_output=True, text=True)
+            m = re.search(r'libstdc\+\+\.so\.6 => (\S+)', q.stdout)
+            if m:
+                linked = os.path.realpath(m.group(1))
+    chosen, notes = [], []
+    import gzip
+    readelf = None
+    for f in sorted(os.listdir(d)):
+        if not (f.endswith('.json') or f.endswith('.json.gz')):
+            continue
+        path = os.path.join(d, f)
+        try:
+            with (gzip.open(path, 'rt') if f.endswith('.gz') else open(path)) as fh:
+                head = fh.read(4096)
+            m = re.search(r'"path":\s*"([^"]+)"', head)
+            lib = re.search(r'"library":\s*"([^"]+)"', head)
+        except OSError:
+            continue
+        libname = lib.group(1) if lib else f
+        spath = os.path.realpath(os.path.expandvars(m.group(1))) if m else ''
+        if libname.startswith('libstdc++'):
+            same = bool(linked) and os.path.exists(spath) and os.path.exists(linked) and \
+                (os.path.samefile(spath, linked) or file_digest(spath) == file_digest(linked))
+            if not same:
+                notes.append(f'{f}: not the libstdc++ this build links ({os.path.basename(linked)}), not used')
+                continue
+        else:
+            bid = re.search(r'"build_id":\s*"([0-9a-f]+)"', head)
+            here = build_id_of(spath, clangxx)
+            if not bid or not here or bid.group(1) != here:
+                notes.append(f'{f}: made from another build of {libname} than the one on this machine, not used')
+                continue
+        if f.endswith('.gz'):
+            out = os.path.join(args._work, 'summaries', f[:-3])
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            with gzip.open(path, 'rb') as a, open(out, 'wb') as b:
+                shutil.copyfileobj(a, b)
+            path = out
+        chosen.append(path)
+    return chosen, notes
+
+
+def build_id_of(lib, clangxx):
+    """GNU build id of an ELF file (hex), or '' if it has none or cannot be read."""
+    if not lib or not os.path.exists(lib):
+        return ''
+    tool = os.path.join(os.path.dirname(clangxx), 'llvm-readelf')
+    p = subprocess.run([tool if os.path.exists(tool) else 'readelf', '-n', lib], capture_output=True, text=True)
+    m = re.search(r'Build ID:\s*([0-9a-f]+)', p.stdout)
+    return m.group(1) if m else ''
+
+
+def defined_symbols_of_object(obj, nm):
+    if not obj or not os.path.exists(obj):
+        return []
+    p = subprocess.run([nm, '--defined-only', '--extern-only', '--format=just-symbols', obj], capture_output=True, text=True)
+    if p.returncode != 0:
+        return []
+    return [l.strip() for l in p.stdout.splitlines() if l.strip()]
+
+# -------------------------------------------------------------------------------------------- reports
+
+# Tags (README, "Tags"): what the compiler's hints say about a site's path. A tag never changes a verdict:
+# an unlikely or first-use site can run on every call.
+TAG_ORDER = {'likely': 0, 'first-use': 1, 'unknown': 2, 'unlikely': 3}
+ORDER = ['alloc', 'free', 'lock', 'syscall', 'throw', 'abort', 'tls-dynamic', 'alloca-dynamic', 'recursion',
+         'indirect-unknown', 'external-unknown', 'atomic', 'unwind', 'ub-unreachable']
+
+
+def demangle_all(names, args):
+    names = sorted(set(n for n in names if n))
+    if not names:
+        return {}
+    filt = find_tool('llvm-cxxfilt', args)
+    p = subprocess.run([filt], input='\n'.join(names) + '\n', capture_output=True, text=True)
+    out = p.stdout.splitlines()
+    return dict(zip(names, out)) if len(out) == len(names) else {n: n for n in names}
+
+
+def short(d, width=60):
+    # Drop parameter lists and template arguments for chains.
+    s = d
+    depth, res = 0, []
+    for ch in s:
+        if ch in '<(':
+            depth += 1
+            if depth == 1:
+                res.append('<>' if ch == '<' else '()')
+            continue
+        if ch in '>)':
+            depth -= 1
+            continue
+        if depth == 0:
+            res.append(ch)
+    s = ''.join(res).replace('()', '').replace('<>', '<..>')
+    return s if len(s) <= width else s[:width - 3] + '...'
+
+
+def short_path(f):
+    m = re.search(r'/include/c\+\+/(?:[0-9][^/]*/)?(.*)$', f)
+    if m:
+        return '<c++>/' + m.group(1)
+    return os.path.normpath(f) if f.startswith('<toolchain>') else f
+
+
+def site_str(s):
+    if not s:
+        return '?'
+    f = short_path(s.get('file') or '?')
+    f = os.path.basename(f) if '/' in f and not f.startswith(('.', '<')) and len(f) > 40 else f
+    out = f'{f}:{s.get("line", 0)}'
+    ia = s.get('inlined_at')
+    if ia:
+        c = ia[-1]
+        cf = short_path(c.get('file') or '?')
+        cf = os.path.basename(cf) if len(cf) > 40 else cf
+        out += f' (inlined into {cf}:{c.get("line", 0)})'
+    return out
+
+
+CUR_FUNCS = []  # the 'functions' table of the report being keyed (compact reports store indices)
+
+
+def finding_key(entry, f, funcs=None):
+    s = f.get('site', {})
+    ft = CUR_FUNCS if funcs is None else funcs
+    name = lambda v: ft[v] if isinstance(v, int) and v < len(ft) else str(v)
+    return '|'.join([entry, f['class'], f['symbol'], name(s.get('func', '')), name(s.get('scope', ''))])
+
+
+def load_baseline(path):
+    if not path:
+        return set()
+    with open(path) as f:
+        b = json.load(f)
+    return set(b.get('accepted', []))
+
+
+def write_baseline(path, report):
+    keys = set()
+    for e in report['entries']:
+        for f in e['findings']:
+            keys.add(finding_key(e['entry'], f))
+        for c, v in e['verdict'].items():
+            if v in ('unknown', 'none*'):
+                keys.add(f"{e['entry']}|{c}|verdict:{v}")
+    with open(path, 'w') as f:
+        json.dump({'tool': 'fn-effects', 'kind': 'baseline', 'accepted': sorted(keys)}, f, indent=1)
+
+
+def text_report(rep, args, build_info, baseline, out):
+    W = out.write
+    informational = {c['name'] for c in rep['classes'] if c.get('informational')}
+    names = []
+    for e in rep['entries']:
+        names.append(e['entry'])
+        for f in e['findings']:
+            names.extend(chain_names(rep, f))
+    dem = demangle_all(names, args)
+    W(f"fn-effects report  target={rep['target']}  policy={rep['policy']}  analysis {rep.get('analysis_ms', 0)} ms\n")
+    m = rep['module']
+    W(f"module: {m['functions_defined']} functions, {m['address_taken']} address-taken, indirect calls: "
+      f"{m['indirect_virtual']} virtual, {m['indirect_fnptr_type']} by function type, {m['indirect_const_table']} "
+      f"constant table, {m['indirect_unresolved']} unresolved, {m['indirect_open']} open hierarchy; {m['relocation']}\n")
+    module_notes(m, W)
+    if not rep.get('table_agrees', True):
+        W('INTERNAL CHECK FAILED: the effect table and the entry search disagree\n')
+    total_new = 0
+    for e in rep['entries']:
+        forbid = {v['class'] for v in e.get('violations', [])}
+        W('\n' + '=' * 100 + '\n')
+        W(f"ENTRY {e['demangled']}   [{e['kind']}]\n      {e['entry']}   ({e['functions_reached']} functions reached)\n")
+        vs = e['verdict']
+        cls = [c for c in ORDER if c in vs] + sorted(c for c in vs if c not in ORDER)
+        line = []
+        for c in cls:
+            v = vs[c]
+            mark = '!' if c in forbid else ' '
+            cnt = e.get('counts', {}).get(c)
+            extra = (f"({cnt['likely']}l/{cnt['unlikely']}u" + (f"/{cnt['first_use']}f" if cnt.get('first_use') else '') +
+                     (f"/{cnt['unknown']}?" if cnt.get('unknown') else '') + ")") if cnt else ''
+            line.append(f"{mark}{c}={v}{extra}")
+        for i in range(0, len(line), 5):
+            W('  ' + '  '.join(f'{x:<26}' for x in line[i:i + 5]).rstrip() + '\n')
+        if e.get('violations'):
+            W('  VIOLATIONS: ' + ', '.join(f"{v['class']} ({v['verdict']})" for v in e['violations']) + '\n')
+        if e.get('trusted') and any(v == 'none*' for v in vs.values()):
+            W(f"  none* rests on {len(e['trusted'])} trusted items (not a guarantee): " + ', '.join(e['trusted'][:12]) +
+              (' ...' if len(e['trusted']) > 12 else '') + '\n')
+        # group findings: same class/symbol/site line
+        groups = {}
+        for f in e['findings']:
+            k = finding_key(e['entry'], f)
+            g = (f['class'], f['symbol'], f['site'].get('file'), f['site'].get('line'), f['temp'])
+            if g not in groups:
+                groups[g] = [f, 0, k in baseline]
+            groups[g][1] += f.get('sites', 1)
+        tord = TAG_ORDER
+        items = sorted(groups.values(), key=lambda x: (x[2], x[0]['class'] in informational, tord[x[0]['temp']],
+                                                        ORDER.index(x[0]['class']) if x[0]['class'] in ORDER else 99))
+        newc = sum(1 for x in items if not x[2] and x[0]['class'] not in informational)
+        total_new += newc
+        shown = 0
+        hidden_info = sum(1 for x in items if x[0]['class'] in informational)
+        base = sum(1 for x in items if x[2])
+        W(f"  findings: {len(items)} distinct sites ({newc} new, {base} in baseline, {hidden_info} informational)\n")
+        for f, n, inb in items:
+            if inb or (f['class'] in informational and not args.all):
+                continue
+            if shown >= args.max_findings:
+                W(f"  ... more in the JSON report\n")
+                break
+            shown += 1
+            sym = dem.get(f['symbol'], f['symbol']) if not f['symbol'].startswith('<') else f['symbol']
+            sub = f"/{f['subclass']}" if f.get('subclass') else ''
+            mult = f' x{n}' if n > 1 else ''
+            W(f"  [{f['temp']:<4}] {f['class']}{sub}: {short(sym, 70)}{mult}  at {site_str(f['site'])}  via {f['via']}\n")
+            ch = chain_names(rep, f)
+            if len(ch) > 1:
+                parts = [short(dem.get(x, x), 40) for x in ch]
+                edges = f.get('edges', [])
+                s = parts[0]
+                for i, p in enumerate(parts[1:]):
+                    v = edges[i] if i < len(edges) else ''
+                    s += (' -> ' if v == 'direct' else f' -{v}-> ') + p
+                W(f"           chain: {s}\n")
+        # assumptions (ids into the top-level table)
+        A = [rep['assumptions'][i] for i in e.get('assumptions', [])]
+        ic = e.get('indirect_calls', {})
+        rules = ic.get('by_rule', {})
+        if rules:
+            nopen = sum(1 for a in A if a['kind'] == 'indirect-call')
+            W('  indirect calls: ' + ', '.join(f"{r} {v['sites']} sites ({v['targets']} targets)" for r, v in sorted(rules.items())) +
+              f"; {nopen} unresolved or open (listed as indirect-unknown)\n")
+        ext = sorted({a['symbol'] for a in A if a['kind'] == 'external-unknown'})
+        if ext:
+            W(f"  external functions with no body, no policy entry and no summary ({len(ext)}): " +
+              ', '.join(short(dem.get(x, x) if x in dem else x, 50) for x in ext[:12]) + (' ...' if len(ext) > 12 else '') + '\n')
+        summ = sorted({(a['library'], a['symbol']) for a in A if a['kind'] == 'summary'})
+        if summ:
+            W(f"  resolved by library summaries: {len(summ)} symbols\n")
+        asm = [a for a in A if a['kind'] == 'inline-asm']
+        if asm:
+            W(f"  inline asm not matched by the policy: {len(asm)} sites\n")
+        lint = e.get('lint', [])
+        if lint:
+            fm = sum(1 for l in lint if 'fast_math' in l)
+            fmad = sum(l.get('fmuladd', 0) for l in lint)
+            libm = sorted({x for l in lint for x in l.get('libm', [])})
+            W(f"  reproducibility: {fm} functions with fast-math flags, {fmad} fmuladd (contraction), libm: "
+              f"{', '.join(libm) if libm else 'none'}\n")
+    W('\n' + '=' * 100 + '\nBLIND SPOTS (what this report cannot see)\n')
+    unres = sum(1 for e in rep['entries'] for f in e['findings'] if f['class'] == 'indirect-unknown')
+    ext = sorted({f['symbol'] for e in rep['entries'] for f in e['findings'] if f['class'] == 'external-unknown'})
+    W(f"  indirect call sites under entries not fully resolved: {unres}\n")
+    W(f"  external functions not classified (no policy entry, no summary): {len(ext)}\n")
+    W(f"  library summaries used: {', '.join(rep.get('summaries', [])) or 'none'}\n")
+    if build_info:
+        failed = [b for b in build_info if not b['ok']]
+        W(f"  translation units: {len(build_info)} compiled with Clang, {len(failed)} failed" +
+          ("; RTA pruning and the closed-hierarchy rule are off (every vtable counts as installed)" if failed else '') + "\n")
+        for b in failed[:20]:
+            W(f"    FAILED {b['file']}: {b.get('error', '').splitlines()[0] if b.get('error') else ''}\n")
+        if rep.get('build', {}).get('duplicates_skipped'):
+            W(f"  files listed twice in the compile database, analysed once: {', '.join(rep['build']['duplicates_skipped'])}\n")
+        tc = [t for t in rep.get('build', {}).get('toolchain', []) if t]
+        if tc:
+            W(f"  Clang used the project's GCC installation: {'; '.join(tc)}\n")
+        dropped = sorted({d for b in build_info for d in b['dropped']})
+        if dropped:
+            W(f"  GCC-only flags dropped: {' '.join(dropped)}\n")
+    for a in rep.get('global_assumptions', []):
+        W(f"  assumption: {a}\n")
+    if rep.get('unmatched_entries'):
+        for u in rep['unmatched_entries']:
+            W(f"  entry pattern '{u['pattern']}': {u['reason']}\n")
+    return total_new
+
+
+def chain_names(rep, f):
+    """A finding's chain as names (compact reports store indices into rep['functions'])."""
+    ft = rep.get('functions', [])
+    return [ft[x] if isinstance(x, int) else x for x in f.get('chain', [])]
+
+
+def module_notes(m, W):
+    """What the module section says about rules (a), (d) and (e) of the README."""
+    n = m.get('vtables_without_type_metadata', 0)
+    if n:
+        W(f"  {n} vtable(s) without type metadata ({', '.join(m.get('vtables_without_type_metadata_names', [])[:3])} ...): every "
+          f"virtual call is open (unknown). Build with -flto -fwhole-program-vtables.\n")
+    if m.get('inline_asm_not_harmless'):
+        blocks = sorted({b['asm'][:40] for b in m.get('inline_asm', []) if not b['harmless']})
+        W(f"  {m['inline_asm_not_harmless']} inline assembly block(s) not on the harmless list (unknown callees): {'; '.join(repr(b) for b in blocks[:5])}\n")
+    if m.get('unknown_function_attributes') or m.get('unknown_module_flags'):
+        W(f"  not known to the policy (they may add calls the IR does not show): function attributes "
+          f"{sorted(m.get('unknown_function_attributes', {}))}, module flags {m.get('unknown_module_flags', [])}\n")
+    if m.get('emulated_tls'):
+        W("  emulated TLS: every thread-local access is a call of __emutls_get_address\n")
+
+
+def text_summary(rep, args, build_info, baseline, out):
+    """One screen per entry: verdicts, violations, the hottest findings, what the answer rests on."""
+    W = out.write
+    informational = {c['name'] for c in rep['classes'] if c.get('informational')}
+    names = [e['entry'] for e in rep['entries']] + [x for e in rep['entries'] for f in e['findings'][:8] for x in chain_names(rep, f)]
+    dem = demangle_all(names, args)
+    m = rep['module']
+    W(f"fn-effects  {rep['target']}  policy={rep['policy']}  precision={m.get('precision')}  {m['functions_defined']} functions, "
+      f"analysis {rep.get('analysis_ms', 0)} ms\n")
+    module_notes(m, W)
+    if not rep.get('table_agrees', True):
+        W('INTERNAL CHECK FAILED: the effect table and the entry search disagree\n')
+    tord = TAG_ORDER
+    total_new = 0
+    for e in rep['entries']:
+        forbid = {v['class'] for v in e.get('violations', [])}
+        vs = e['verdict']
+        W(f"\n== {short(e['demangled'], 90)}  [{e['kind']}]  {e['functions_reached']} functions\n")
+        cls = [c for c in ORDER if c in vs] + sorted(c for c in vs if c not in ORDER)
+        parts = []
+        for c in cls:
+            v = vs[c]
+            if c in informational and v == 'none':
+                continue
+            cnt = e.get('counts', {}).get(c)
+            tag = {'reachable': 'R', 'unknown': '?', 'none': '-', 'none*': '*'}[v]
+            hot = f"{cnt['likely']}l" if cnt and cnt.get('likely') else ''
+            parts.append(f"{'!' if c in forbid else ''}{c}:{tag}{hot}")
+        W('   ' + '  '.join(parts) + '\n')
+        fs = [f for f in e['findings'] if f['class'] not in informational and finding_key(e['entry'], f) not in baseline]
+        fs.sort(key=lambda f: (tord[f['temp']], ORDER.index(f['class']) if f['class'] in ORDER else 99))
+        total_new += len(fs)
+        for f in fs[:args.summary_findings]:
+            sym = dem.get(f['symbol'], f['symbol']) if not f['symbol'].startswith('<') else f['symbol']
+            sub = f"/{f['subclass']}" if f.get('subclass') else ''
+            cn = chain_names(rep, f)
+            ch = ' > '.join(short(dem.get(x, x), 28) for x in cn[-4:])
+            more = '... > ' if len(cn) > 4 else ''
+            W(f"   [{f['temp']:<4}] {f['class']}{sub}: {short(sym, 50)} at {site_str(f['site'])}\n            {more}{ch}\n")
+        if len(fs) > args.summary_findings:
+            nh = sum(1 for f in fs if f['temp'] == 'likely')
+            W(f"   ... {len(fs) - args.summary_findings} more findings ({nh} likely in all), in the JSON report\n")
+        ic = e.get('indirect_calls', {})
+        rules = ', '.join(f"{r} {v['sites']}" for r, v in sorted(ic.get('by_rule', {}).items()))
+        ac = e.get('assumption_counts', {})
+        W(f"   rests on: {ic.get('sites', 0)} indirect calls ({rules or '-'}); " +
+          ', '.join(f"{k} {n}" for k, n in sorted(ac.items())) + '\n')
+        if any(v == 'none*' for v in vs.values()):
+            tr = e.get('trusted', [])
+            kinds = {}
+            for t in tr:
+                kinds[t.split(':', 1)[0]] = kinds.get(t.split(':', 1)[0], 0) + 1
+            W(f"   none* (not a guarantee) trusts {len(tr)} items: " + ', '.join(f"{k} {n}" for k, n in sorted(kinds.items())) +
+              (f"; e.g. {', '.join(t for t in tr[:4])}" if tr else '') + '\n')
+    W('\nblind spots: ' + f"{sum(1 for e in rep['entries'] for f in e['findings'] if f['class'] == 'indirect-unknown')} unresolved indirect-call findings, "
+      f"{len({f['symbol'] for e in rep['entries'] for f in e['findings'] if f['class'] == 'external-unknown'})} unclassified externals, "
+      f"summaries: {', '.join(rep.get('summaries', [])) or 'none'}; assumptions: see global_assumptions in the JSON\n")
+    if build_info:
+        failed = [b for b in build_info if not b['ok']]
+        if failed:
+            W(f"translation units that did not compile with Clang: {', '.join(b['file'] for b in failed[:10])}; "
+              "RTA pruning and the closed-hierarchy rule are off (every vtable counts as installed)\n")
+    return total_new
+
+
+SIG_EV = ['own', 'direct', 'indirect-pta', 'indirect-vtable', 'indirect-type', 'library-policy', 'library-summary',
+          'model', 'closed-world', 'unknown']
+
+
+def print_signatures(eff, args, out):
+    """Per-function signatures (README, "Per-function signatures"): the table is the product, an entry
+    report is a query over it."""
+    W = out.write
+    _cxxfilt[0] = find_tool('llvm-cxxfilt', args)
+    F = eff['functions']
+    cls = args.sig_classes or ['alloc', 'free', 'lock', 'syscall', 'throw', 'abort']
+    sel = {f: v for f, v in F.items() if v['demangled'].startswith(args.prefix)}
+    name = lambda x: F[x]['demangled'] if x in F else x
+
+    def acct(s):
+        a = s.get('account', 'own')
+        if a == 'consequence':
+            return 'consequence of ' + ', '.join(s.get('consequence_of', []))
+        return {'own': 'own account', 'library': 'inside library functions'}[a]
+
+    if args.functions:
+        W(f"per-function signatures: {len(sel)} functions (of {len(F)}) with prefix '{args.prefix}'\n\n")
+        W("verdicts ((elid.): of the always, those that are `always (elidable)`), and on whose account a may/always is (own: a primitive or a symbol the policy names, or an\n"
+          "instruction; library: only inside library functions, by their summaries; consequence: only what another\n"
+          "class's primitive does inside, e.g. malloc's lock)\n")
+        W(f"{'class':<9} {'always':>7} {'(elid.)':>8} {'may':>6} {'never':>6} {'unknown':>8}  | {'own':>5} {'library':>8} {'consequence':>12}\n")
+        evt = []
+        for c in cls:
+            cnt = collections.Counter()
+            byev = collections.defaultdict(collections.Counter)
+            for v in sel.values():
+                s = v.get('signature', {}).get(c)
+                if not s:
+                    continue
+                cnt[s['verdict']] += 1
+                if s.get('qualifier') == 'elidable':
+                    cnt['elidable'] += 1
+                byev[s['verdict']][s['evidence']] += 1
+                if s['verdict'] in ('may', 'always'):
+                    cnt['acc:' + s.get('account', 'own')] += 1
+            W(f"{c:<9} {cnt['always']:>7} {cnt['elidable']:>8} {cnt['may']:>6} {cnt['never']:>6} {cnt['unknown']:>8}  | {cnt['acc:own']:>5} "
+              f"{cnt['acc:library']:>8} {cnt['acc:consequence']:>12}\n")
+            evt.append((c, byev))
+        W("\nevidence: the weakest link each verdict rests on\n")
+        W(f"{'class':<9} {'verdict':<8}" + ''.join(f" {e:>15}" for e in SIG_EV) + '\n')
+        for c, byev in evt:
+            for vd in ('always', 'may', 'never', 'unknown'):
+                if byev[vd]:
+                    W(f"{c:<9} {vd:<8}" + ''.join(f" {byev[vd][e]:>15}" for e in SIG_EV) + '\n')
+        W("\nown body: functions with a site of the class in their own instructions (inlined code included), by the\n"
+          "best account among those sites; in brackets the same on paths the compiler does not mark unlikely\n")
+        W(f"{'class':<9} {'own account':>16} {'library only':>16} {'consequence only':>18} {'no own site':>16}\n")
+        for c in cls:
+            row = []
+            for likely in (False, True):
+                k = collections.Counter()
+                for v in sel.values():
+                    acc = [o.get('account', 'own') for o in v.get('own', []) if o['class'] == c and (not likely or o['temp'] != 'c')]
+                    k['own' if 'own' in acc else 'library' if 'library' in acc else 'consequence' if acc else 'none'] += 1
+                row.append(k)
+            W(f"{c:<9} " + ' '.join(f"{row[0][x]:>8} [{row[1][x]:>5}]" + (' ' * 2 if x == 'consequence' else '')
+                                    for x in ('own', 'library', 'consequence', 'none')) + '\n')
+        W('\n')
+        for f, v in sorted(sel.items(), key=lambda x: x[1]['demangled']):
+            W(f"{short(v['demangled'], 110)}{'' if v.get('returns', True) else '   (never returns normally)'}\n")
+            for c in cls:
+                s = v.get('signature', {}).get(c)
+                if not s:
+                    continue
+                extra = ''
+                if s['verdict'] in ('may', 'always'):
+                    extra = acct(s)
+                vd = s['verdict'] + (' (elidable)' if s.get('qualifier') == 'elidable' else '')
+                W(f"    {c:<8} {vd:<18} {s['evidence']:<16} {extra}\n")
+    for pat in args.why:
+        hits = [f for f, v in F.items() if pat == f or pat == v['demangled']] or [f for f, v in F.items() if pat in v['demangled']]
+        if not hits:
+            W(f"--why {pat}: no such function\n")
+        for f in hits[:3]:
+            v = F[f]
+            W(f"\n== {v['demangled']}\n   {f}{'' if v.get('returns', True) else '   (never returns normally)'}\n")
+            for c in cls:
+                s = v.get('signature', {}).get(c)
+                if not s:
+                    continue
+                W(f"  {c}: {s['verdict']}{' (elidable)' if s.get('qualifier') == 'elidable' else ''}, evidence {s['evidence']}" + (', ' + acct(s) if s.get('account') else '') + '\n')
+                if s.get('always'):
+                    al = s['always']
+                    W(f"      always because, on every returning path: {al['own_sites']} own site(s)" +
+                      (f"; calls to {', '.join(short(name(x), 60) for x in al['callees'][:6])}" + (' ...' if len(al['callees']) > 6 else '')
+                       if al['callees'] else '') + f"   (rests on: {', '.join(al['rests_on'])})\n")
+                own = [o for o in v.get('own', []) if o['class'] == c]
+                for label, key in (('own sites (a primitive, a symbol the policy names, an instruction)', 'own'),
+                                   ('own sites inside library functions (by their summaries)', 'library')):
+                    grp = sorted((o for o in own if o.get('account', 'own') == key), key=lambda o: (o.get('file', ''), o.get('line', 0)))
+                    if not grp:
+                        continue
+                    W(f"      {label}: {len(grp)}\n")
+                    seen = set()
+                    for o in grp:
+                        k = (o.get('file', '?').split('/')[-1], o.get('line', 0), o['symbol'])
+                        if k in seen:
+                            continue
+                        seen.add(k)
+                        if len(seen) > 10:
+                            W(f"         ...\n")
+                            break
+                        tag = {'h': 'likely', 'c': 'unlikely', 'u': 'unknown'}.get(o['temp'], o['temp'])
+                        W(f"         {k[0]}:{k[1]}  {short(_dem(k[2]), 70)}  [{tag}{', on every returning path' if o.get('on_every_return') else ''}]\n")
+                cons = collections.Counter(o['consequence_of'] + ': ' + _dem(o['symbol']) for o in own if o.get('account') == 'consequence')
+                if cons:
+                    W(f"      consequences of other classes' primitives called here: " +
+                      '; '.join(f"{short(k, 50)} x{n}" for k, n in cons.most_common(6)) + (' ...' if len(cons) > 6 else '') + '\n')
+                for ev in SIG_EV:
+                    cs = s.get('callees', {}).get(ev, [])
+                    if not cs:
+                        continue
+                    def tagc(x):
+                        t = F.get(x, {}).get('signature', {}).get(c, {})
+                        return f"{short(name(x), 60)} [{t.get('verdict', '?')}, {t.get('account', '-')}]"
+                    cs = sorted(cs, key=lambda x: ({'own': 0, 'library': 1, 'consequence': 2}.get(F.get(x, {}).get('signature', {}).get(c, {}).get('account'), 3), name(x)))
+                    W(f"      callees that bring it, {'direct calls' if ev == 'direct' else 'via ' + ev} ({len(cs)}):\n")
+                    for x in cs[:8 if ev == 'direct' else 4]:
+                        W(f"         {tagc(x)}\n")
+                    if len(cs) > (8 if ev == 'direct' else 4):
+                        W(f"         ... {len(cs) - (8 if ev == 'direct' else 4)} more\n")
+
+
+_dem_memo = {}
+_cxxfilt = [None]
+
+
+def _dem(sym):
+    """Demangle one symbol for display (best effort)."""
+    if sym not in _dem_memo:
+        try:
+            r = subprocess.run([_cxxfilt[0], sym], capture_output=True, text=True).stdout.strip() if _cxxfilt[0] else ''
+        except OSError:
+            r = ''
+        _dem_memo[sym] = r or sym
+    return _dem_memo[sym]
+
+
+def do_diff(old_path, new_path, args):
+    old = json.load(open(old_path))
+    new = json.load(open(new_path))
+    info = {c['name'] for c in new.get('classes', []) if c.get('informational')}
+    oe = {e['entry'] + '|' + e['kind']: e for e in old['entries']}
+    rank = {'none': 0, 'none*': 1, 'unknown': 2, 'reachable': 3}
+    bad = False
+    lines = []
+    for e in new['entries']:
+        k = e['entry'] + '|' + e['kind']
+        o = oe.get(k)
+        if o is None:
+            lines.append(f"NEW ENTRY {e['demangled']}")
+            continue
+        for c, v in e['verdict'].items():
+            ov = o['verdict'].get(c, 'none')
+            if v != ov:
+                worse = rank[v] > rank[ov]
+                lines.append(f"{'WORSE' if worse else 'better'} {e['demangled']}: {c} {ov} -> {v}")
+                if worse and c not in info:
+                    bad = True
+        ok = {finding_key(o['entry'], f, old.get('functions', [])) for f in o['findings']}
+        nk = {}
+        for f in e['findings']:
+            nk.setdefault(finding_key(e['entry'], f, new.get('functions', [])), f)
+        for key, f in nk.items():
+            if key not in ok:
+                lines.append(f"  + {f['class']}: {f['symbol']} at {site_str(f['site'])} [{f['temp']}] chain {' > '.join(chain_names(new, f))}")
+                if f['class'] not in info:
+                    bad = True
+        for key in ok - set(nk):
+            lines.append(f"  - {key}")
+    for k in oe:
+        if k not in {e['entry'] + '|' + e['kind'] for e in new['entries']}:
+            lines.append(f"REMOVED ENTRY {k}")
+    print('\n'.join(lines) if lines else 'no change')
+    return 1 if bad else 0
+
+# ----------------------------------------------------------------------------------------------- main
+
+def main():
+    ap = argparse.ArgumentParser(prog='fn-effects', description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument('inputs', nargs='*', help='C++ sources, .bc or .ll files')
+    ap.add_argument('--diff', nargs=2, metavar=('OLD', 'NEW'))
+    ap.add_argument('-p', '--compile-commands', help='compile_commands.json of an existing build')
+    ap.add_argument('--cc-filter', help='regex: only these files from compile_commands.json')
+    ap.add_argument('--cc-exclude', help='regex: skip these files from compile_commands.json')
+    ap.add_argument('--cflags', default='', help='extra compile flags (sources and compile_commands)')
+    ap.add_argument('-O', dest='opt', default='2', help='optimisation level for sources (default 2)')
+    ap.add_argument('--std', default='c++20')
+    ap.add_argument('--policy', default=os.path.join(HERE, 'policies', 'hotpath.json'))
+    ap.add_argument('-e', '--entry', action='append', default=[], help='entry: mangled, demangled, or glob pattern')
+    ap.add_argument('--entries-file', help='file with one entry pattern per line (# comments)')
+    ap.add_argument('--entry-kind', default='', help='entry kind of the policy for --entry (default: the first)')
+    ap.add_argument('--summary', action='append', default=[], help='library summary JSON (repeatable)')
+    ap.add_argument('--summaries-dir', help='directory of library summaries (default: summaries/ next to this script)')
+    ap.add_argument('--no-default-summaries', action='store_true', help='do not load the summaries of summaries/')
+    ap.add_argument('-o', '--out', default='fn-effects-report.json')
+    ap.add_argument('--text', default='-', help='text report file (default: stdout)')
+    ap.add_argument('--effects', help='write the effect table of every function to this file')
+    ap.add_argument('--work', help='keep intermediate files in this directory')
+    ap.add_argument('--baseline', help='accepted findings: report only what is not in it')
+    ap.add_argument('--write-baseline', help='accept every finding of this run into this file')
+    ap.add_argument('--check', action='store_true', help='exit 1 if an entry has a non-baselined violation (reachable, unknown or none*)')
+    ap.add_argument('--strict', action='store_true',
+                    help='every none that rests on library data (summaries, known patterns, pointer models, closed-world rules) is unknown')
+    ap.add_argument('--path-base', default=os.getcwd(), help='source paths are printed relative to this')
+    ap.add_argument('--max-findings', type=int, default=25, help='findings per entry in the full text report')
+    ap.add_argument('--summary-findings', type=int, default=5, help='findings per entry in the one-screen text summary')
+    ap.add_argument('--text-full', action='store_true', help='the long text report (every finding up to --max-findings)')
+    ap.add_argument('--full', action='store_true', help='JSON: findings per function with every site, per-function lint')
+    ap.add_argument('--all', action='store_true', help='also list findings of informational classes (atomic, unwind, ...)')
+    ap.add_argument('--precision', choices=['type', 'rta', 'pta'], help='indirect-call resolution (default: the policy, pta)')
+    ap.add_argument('--pta-scope', choices=['module', 'component', 'auto'],
+                    help='points-to: one solve over the module (default), per strongly connected component of the direct-call '
+                         'graph with calls between components cut, or auto (component if the module solve is over its budget)')
+    ap.add_argument('--emulated-tls', action='store_true',
+                    help='the program is built with -femulated-tls (set automatically when the flag is among the compile flags)')
+    ap.add_argument('--pta-budget', type=float, default=120.0,
+                    help='seconds after which the points-to analysis is abandoned for the rta rule (0: no limit)')
+    ap.add_argument('--gcc-toolchain', default='auto',
+                    help="for compile databases built with GCC: 'auto' (use that GCC's libstdc++ and headers), 'none', or a prefix")
+    ap.add_argument('-j', '--jobs', type=int, default=os.cpu_count() or 4)
+    ap.add_argument('--llvm-bin')
+    ap.add_argument('--plugin')
+    ap.add_argument('--time', action='store_true', help='print phase times and peak memory')
+    ap.add_argument('--functions', action='store_true',
+                    help='per-function signatures: one line per function and class (verdict, evidence), after a summary table')
+    ap.add_argument('--why', action='append', default=[], metavar='FUNCTION',
+                    help="a function's own sites and the callees that bring each class (substring of the demangled name)")
+    ap.add_argument('--class', dest='sig_classes', action='append', help='classes for --functions/--why (default: alloc free lock syscall throw abort)')
+    ap.add_argument('--prefix', default='', help='--functions: only functions whose demangled name starts with this')
+    ap.add_argument('--from-effects', help='--functions/--why on an existing effect table, without analysing')
+    args = ap.parse_args()
+
+    if args.from_effects:
+        print_signatures(json.load(open(args.from_effects)), args, sys.stdout)
+        return
+    if args.diff:
+        sys.exit(do_diff(args.diff[0], args.diff[1], args))
+
+    clangxx = find_tool('clang++', args)
+    clang = find_tool('clang', args)
+    link = find_tool('llvm-link', args)
+    opt = find_tool('opt', args)
+    nm = find_tool('llvm-nm', args)
+    import tempfile
+    work = os.path.abspath(args.work) if args.work else tempfile.mkdtemp(prefix='fn-effects-')  # compiles run in other directories
+    args._work = work
+    os.makedirs(os.path.join(work, 'bc'), exist_ok=True)
+    times = {}
+    t0 = time.time()
+
+    bcs, build_info = [], []
+    jobs = []
+    for i in args.inputs:
+        if i.endswith(BC_EXT):
+            bcs.append(os.path.abspath(i))
+        elif i.endswith(SRC_EXT + C_EXT):
+            std = [] if i.endswith(C_EXT) else [f'-std={args.std}']
+            jobs.append({'dir': os.getcwd(), 'file': os.path.abspath(i), 'compiler': 'clang++',
+                         'args': std + [f'-O{args.opt}', '-g'], 'output': None})
+        else:
+            sys.exit(f'fn-effects: do not know what to do with {i}')
+    if args.compile_commands:
+        jobs += load_compile_commands(args.compile_commands, args.cc_filter, args.cc_exclude)
+    if jobs:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
+            res = list(ex.map(lambda j: compile_one(j, clangxx, clang, work, args), jobs))
+        for r in res:
+            build_info.append(r)
+            if r['ok']:
+                bcs.append(r['bc'])
+            else:
+                print(f"fn-effects: warning: {r['file']} does not compile with Clang; continuing without it", file=sys.stderr)
+    times['compile_s'] = round(time.time() - t0, 2)
+    if not bcs:
+        sys.exit('fn-effects: nothing to analyse')
+
+    missing = {}
+    for r in build_info:
+        if not r['ok']:
+            for s in defined_symbols_of_object(r.get('output'), nm):
+                missing.setdefault(s, os.path.relpath(r['file'], args.path_base))
+    missing_file = os.path.join(work, 'missing.json')
+    with open(missing_file, 'w') as f:
+        json.dump(missing, f)
+
+    t1 = time.time()
+    whole = os.path.join(work, 'whole.bc')
+    lst = os.path.join(work, 'inputs.txt')
+    p = subprocess.run([link, '-o', whole] + bcs, capture_output=True, text=True)
+    if p.returncode != 0:
+        msg = p.stderr.strip()
+        if 'multiply defined' in msg or 'symbol multiply' in msg:
+            msg += '\n(fn-effects: two translation units define the same symbol; the compile database probably holds ' \
+                   'several programs. Select one with --cc-filter / --cc-exclude.)'
+        sys.exit(f'fn-effects: llvm-link failed:\n{msg}')
+    times['link_s'] = round(time.time() - t1, 2)
+
+    entries = list(args.entry)
+    if args.entries_file:
+        with open(args.entries_file) as f:
+            for l in f:
+                l = l.split('#', 1)[0].strip()
+                if l:
+                    entries.append(l)
+    toolroot = os.path.dirname(os.path.dirname(os.path.realpath(clangxx)))
+    cmd = [opt, f'-load-pass-plugin={plugin_path(args)}', '-passes=fn-effects', '-disable-output', whole,
+           f'-fx-policy={args.policy}', f'-fx-out={args.out}', f'-fx-missing={missing_file}',
+           f'-fx-incomplete={sum(1 for b in build_info if not b["ok"])}',
+           f'-fx-path-map={os.path.realpath(toolroot)}=<toolchain>/', f'-fx-path-map={toolroot}=<toolchain>/',
+           f'-fx-path-map={os.path.realpath(args.path_base)}=']
+    target = args.compile_commands or (' '.join(os.path.relpath(i, args.path_base) for i in args.inputs))
+    cmd.append(f'-fx-target={target}')
+    for e in entries:
+        cmd.append(f'-fx-entry={e}')
+    if args.entry_kind:
+        cmd.append(f'-fx-entry-kind={args.entry_kind}')
+    auto_summ, summ_notes = default_summaries(args, clangxx, jobs)
+    for s in args.summary + auto_summ:
+        cmd.append(f'-fx-summary={s}')
+    if (args.functions or args.why) and not args.effects:
+        args.effects = os.path.join(work, 'effects.json')
+    if args.effects:
+        cmd.append(f'-fx-effects={args.effects}')
+    if args.all:
+        cmd.append('-fx-all-findings')
+    if args.full:
+        cmd.append('-fx-full')
+    if args.strict:
+        cmd.append('-fx-strict')
+    if args.precision:
+        cmd.append(f'-fx-precision={args.precision}')
+    if args.pta_budget:
+        cmd.append(f'-fx-pta-budget={args.pta_budget}')
+    if args.pta_scope:
+        cmd.append(f'-fx-pta-scope={args.pta_scope}')
+    # -femulated-tls is a code-generation option that the IR does not record (README, rule (d))
+    seen_flags = shlex.split(args.cflags or '') + [a for j in jobs for a in (j.get('args') or [])]
+    if args.emulated_tls or ('-femulated-tls' in seen_flags and '-fno-emulated-tls' not in seen_flags):
+        cmd.append('-fx-emulated-tls')
+    t2 = time.time()
+    tcmd = ['/usr/bin/time', '-f', '%M'] if os.path.exists('/usr/bin/time') else []
+    p = subprocess.run(tcmd + cmd, capture_output=True, text=True)
+    times['analyse_s'] = round(time.time() - t2, 2)
+    err = p.stderr
+    peak = None
+    if tcmd:
+        lines = err.strip().splitlines()
+        if lines and lines[-1].strip().isdigit():
+            peak = int(lines[-1].strip())
+            err = '\n'.join(lines[:-1])
+    if p.returncode != 0:
+        sys.exit(f'fn-effects: analysis failed:\n{err}')
+    if err.strip():
+        print(err.strip(), file=sys.stderr)
+    rep = json.load(open(args.out))
+    CUR_FUNCS[:] = rep.get('functions', [])
+    rep['build'] = {'summaries_skipped': summ_notes, 'duplicates_skipped': [os.path.relpath(x, args.path_base) for x in DUPLICATES],
+                    'toolchain': sorted({' '.join(gcc_toolchain_flags(j.get('compiler'), args.gcc_toolchain)) for j in jobs}),
+                    'translation_units': len(build_info), 'failed': [os.path.relpath(b['file'], args.path_base) for b in build_info if not b['ok']],
+                    'dropped_flags': sorted({d for b in build_info for d in b['dropped']}),
+                    'functions_not_seen': len(missing), 'times': times, 'opt_peak_rss_kb': peak}
+    with open(args.out, 'w') as f:
+        json.dump(rep, f, indent=1)
+
+    baseline = load_baseline(args.baseline)
+    out = sys.stdout if args.text == '-' else open(args.text, 'w')
+    if args.text_full:
+        text_report(rep, args, build_info, baseline, out)
+    else:
+        text_summary(rep, args, build_info, baseline, out)
+    if args.time:
+        out.write(f"\ntimes: {times}  opt peak RSS: {peak} kB\n")
+    if out is not sys.stdout:
+        out.close()
+    if args.write_baseline:
+        write_baseline(args.write_baseline, rep)
+    if args.functions or args.why:
+        print_signatures(json.load(open(args.effects)), args, sys.stdout if args.text != '-' else sys.stdout)
+    if args.check:
+        bad = False
+        for e in rep['entries']:
+            forb = {v['class'] for v in e.get('violations', [])}
+            for f in e['findings']:
+                if f['class'] in forb and finding_key(e['entry'], f) not in baseline:
+                    bad = True
+            for c in forb:
+                # unknown and none* are not guarantees: a violation unless the baseline accepts them
+                v = e['verdict'][c]
+                if v in ('unknown', 'none*') and f"{e['entry']}|{c}|verdict:{v}" not in baseline:
+                    bad = True
+        sys.exit(1 if bad else 0)
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,53 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "bump"
+ ],
+ "expect": [
+  {
+   "entry": "bump(int)",
+   "verdict": {
+    "alloc": "reachable"
+   },
+   "has": [
+    {
+     "class": "alloc",
+     "symbol": "__cxa_thread_atexit",
+     "temp": "first-use"
+    },
+    {
+     "class": "alloc",
+     "symbol": "_Znwm",
+     "temp": "first-use"
+    }
+   ],
+   "none_hot": [
+    "alloc"
+   ],
+   "note": "PIE build: the variable is dso_local, local-exec; the init path is behind the __tls_guard check with weights; tls-dynamic may still come from inside libstdc++ (summary), not from the variable's own access",
+   "lacks": [
+    {
+     "class": "tls-dynamic",
+     "via": "instruction"
+    }
+   ]
+  }
+ ],
+ "variants": [
+  {
+   "name": "pic-shared",
+   "cflags": "-fPIC",
+   "expect": [
+    {
+     "entry": "bump(int)",
+     "verdict": {
+      "tls-dynamic": "reachable"
+     },
+     "note": "built as for a shared object: the variable is not dso_local, general-dynamic model, __tls_get_addr"
+    }
+   ]
+  }
+ ]
+}

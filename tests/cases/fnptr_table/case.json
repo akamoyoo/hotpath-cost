@@ -1,0 +1,125 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "apply_const",
+  "apply_mut"
+ ],
+ "expect": [
+  {
+   "entry": "apply_const(unsigned int, int)",
+   "verdict": {
+    "alloc": "reachable",
+    "indirect-unknown": "none*"
+   },
+   "has": [
+    {
+     "class": "alloc",
+     "symbol": "malloc",
+     "edge": "fnptr"
+    }
+   ],
+   "assumption": {
+    "kind": "indirect-call",
+    "rule_re": "const-table|points-to",
+    "targets": 3
+   },
+   "note_free": "expected free none before the libc summary was available; the summary of malloc reaches free (malloc consolidates and frees chunks internally)"
+  },
+  {
+   "entry": "apply_mut(unsigned int, int)",
+   "verdict": {
+    "alloc": "none",
+    "indirect-unknown": "none"
+   },
+   "assumption": {
+    "kind": "indirect-call",
+    "rule": "points-to",
+    "targets": 3
+   },
+   "note": "points-to: g_ops holds only op_add, op_mul, op_other (nothing else is ever stored into it), so op_alloc is not a target; the type rule (variant) gives every i32(i32) function"
+  }
+ ],
+ "variants": [
+  {
+   "name": "type-rule",
+   "cflags": "",
+   "extra_args": [
+    "--precision",
+    "type"
+   ],
+   "rtsan": false,
+   "expect": [
+    {
+     "entry": "apply_const(unsigned int, int)",
+     "verdict": {
+      "alloc": "reachable",
+      "indirect-unknown": "none*"
+     },
+     "has": [
+      {
+       "class": "alloc",
+       "symbol": "malloc",
+       "edge": "fnptr"
+      }
+     ],
+     "assumption": {
+      "kind": "indirect-call",
+      "rule": "const-table",
+      "targets": 3
+     },
+     "note_free": "expected free none before the libc summary was available; the summary of malloc reaches free (malloc consolidates and frees chunks internally)"
+    },
+    {
+     "entry": "apply_mut(unsigned int, int)",
+     "verdict": {
+      "alloc": "reachable",
+      "indirect-unknown": "none*"
+     },
+     "assumption": {
+      "kind": "indirect-call",
+      "rule": "fnptr-type",
+      "min_targets": 4
+     },
+     "note": "g_ops is mutable: all address-taken i32(i32) functions are targets, so op_alloc (only in k_ops) is included: sound, imprecise"
+    }
+   ]
+  },
+  {
+   "name": "no-scale-levers",
+   "cflags": "",
+   "env": {
+    "FX_PTA_NO_PREPASS": "1",
+    "FX_PTA_NO_CYCLES": "1"
+   },
+   "rtsan": false,
+   "same_as_base": true,
+   "expect": [],
+   "note": "regression (round 3): the pre-pass (DATA objects) and cycle collapse must not change any verdict"
+  },
+  {
+   "name": "strict",
+   "cflags": "",
+   "extra_args": [
+    "--strict"
+   ],
+   "rtsan": false,
+   "expect": [
+    {
+     "entry": "apply_const(unsigned int, int)",
+     "verdict": {
+      "indirect-unknown": "unknown"
+     }
+    },
+    {
+     "entry": "apply_mut(unsigned int, int)",
+     "verdict": {
+      "alloc": "none",
+      "indirect-unknown": "none"
+     }
+    }
+   ]
+  }
+ ]
+}

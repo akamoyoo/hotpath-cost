@@ -1,0 +1,6 @@
+{"sources": ["main.cpp"], "entries": ["via_bytes", "via_mixed"],
+ "expect": [
+  {"entry": "via_bytes(int)", "not_none": ["alloc"], "note": "the pointer moves through i8 loads and stores"},
+  {"entry": "via_mixed(int)", "verdict": {"indirect-unknown": "none"}, "lacks": [{"class": "alloc", "symbol": "_Znwm"}],
+   "note": "only harmless is ever stored in g_mixed.f"}
+ ]}

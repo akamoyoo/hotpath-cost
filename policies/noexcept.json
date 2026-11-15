@@ -1,0 +1,31 @@
+{
+  "include": ["common.json"],
+  "name": "noexcept",
+  "description": "Can an exception escape a noexcept function (which at run time is std::terminate)? Entries: functions the IR marks nounwind that contain a landing pad leading to std::terminate, which is how Clang lowers a noexcept function whose body has potentially-throwing calls. A noexcept function without such a pad has no call that can throw.",
+  "classes": {
+    "throw": {
+      "description": "starting or rethrowing an exception",
+      "symbols": [
+        "__cxa_throw", "__cxa_rethrow", "_Unwind_RaiseException", "_Unwind_Resume_or_Rethrow",
+        "__cxa_bad_cast", "__cxa_bad_typeid", "__cxa_throw_bad_array_new_length",
+        "re:^_ZSt[0-9]+__throw_", "re:^_ZNSt3__1[0-9]+__throw_", "re:^_ZSt17rethrow_exception"
+      ]
+    }
+  },
+  "known": [
+    "re:^(__cxa_allocate_exception|__cxa_free_exception|__cxa_begin_catch|__cxa_end_catch|__cxa_get_exception_ptr|__gxx_personality_v0|__cxa_guard_acquire|__cxa_guard_release|__cxa_guard_abort)$",
+    "re:^_ZNSt(9exception|13runtime_error|11logic_error)D[012]Ev$",
+    "re:^__rtsan_"
+  ],
+  "known_if_call_attrs": ["nounwind"],
+  "prune_call_attrs": ["nounwind"],
+  "lint": {"enabled": false},
+  "entry_kinds": [
+    {
+      "name": "noexcept",
+      "select": ["attr:nounwind&has-terminate-pad"],
+      "start": "terminate-invokes",
+      "forbid": ["throw", "external-unknown", "indirect-unknown"]
+    }
+  ]
+}

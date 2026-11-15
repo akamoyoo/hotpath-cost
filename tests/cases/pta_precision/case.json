@@ -1,0 +1,124 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "fast_entry",
+  "slow_entry",
+  "dispatch",
+  "run_fast",
+  "run_slow"
+ ],
+ "expect": [
+  {
+   "entry": "fast_entry(int)",
+   "verdict": {
+    "indirect-unknown": "none*"
+   },
+   "note": "the invoker loaded from g_fast can only be the first lambda's: the std::function constructor stores it in g_fast's invoker field; the only alloc left is the summary of __throw_bad_function_call (cold), not the slow lambda's operator new",
+   "lacks": [
+    {
+     "class": "alloc",
+     "symbol": "_Znwm"
+    }
+   ],
+   "none_hot": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "slow_entry(int)",
+   "verdict": {
+    "alloc": "reachable"
+   }
+  },
+  {
+   "entry": "dispatch(unsigned int, int)",
+   "verdict": {
+    "alloc": "none",
+    "indirect-unknown": "none"
+   },
+   "assumption": {
+    "kind": "indirect-call",
+    "rule": "points-to",
+    "targets": 2
+   },
+   "note": "g_table holds on_quote and on_trade; unrelated_alloc has the same type but is stored only in g_other"
+  },
+  {
+   "entry": "run_fast(Engine*, long)",
+   "verdict": {
+    "alloc": "none*",
+    "indirect-unknown": "none*"
+   },
+   "note": "the Engine passed by main to run_fast is the one make_fast built, whose strategy is a Cheap; this needs the constructor inlined (the analysis is context-insensitive)"
+  },
+  {
+   "entry": "run_slow(Engine*, long)",
+   "verdict": {
+    "alloc": "reachable"
+   }
+  }
+ ],
+ "variants": [
+  {
+   "name": "type-rule",
+   "cflags": "",
+   "extra_args": [
+    "--precision",
+    "type"
+   ],
+   "rtsan": false,
+   "expect": [
+    {
+     "entry": "fast_entry(int)",
+     "verdict": {
+      "alloc": "reachable"
+     }
+    },
+    {
+     "entry": "dispatch(unsigned int, int)",
+     "verdict": {
+      "alloc": "reachable"
+     }
+    },
+    {
+     "entry": "run_fast(Engine*, long)",
+     "verdict": {
+      "alloc": "reachable"
+     }
+    }
+   ]
+  },
+  {
+   "name": "rta",
+   "cflags": "",
+   "extra_args": [
+    "--precision",
+    "rta"
+   ],
+   "rtsan": false,
+   "expect": [
+    {
+     "entry": "run_fast(Engine*, long)",
+     "verdict": {
+      "alloc": "reachable"
+     },
+     "note": "both Cheap and Costly are instantiated: RTA cannot separate them"
+    }
+   ]
+  },
+  {
+   "name": "no-scale-levers",
+   "cflags": "",
+   "env": {
+    "FX_PTA_NO_PREPASS": "1",
+    "FX_PTA_NO_CYCLES": "1"
+   },
+   "rtsan": false,
+   "same_as_base": true,
+   "expect": [],
+   "note": "regression (round 3): the pre-pass (DATA objects) and cycle collapse must not change any verdict"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "sources": [
+  "a.cpp",
+  "b.cpp"
+ ],
+ "entries": [
+  "process"
+ ],
+ "expect": [
+  {
+   "entry": "process(int)",
+   "verdict": {
+    "alloc": "reachable"
+   },
+   "has": [
+    {
+     "class": "alloc",
+     "chain_contains": "_Z6helperi"
+    }
+   ],
+   "note": "lock/syscall none before the summaries; with the libstdc++ and libc summaries loaded, the library side of operator new and of the __throw_* helpers is visible (malloc locks and may mmap; formatting an exception message allocates)"
+  }
+ ],
+ "diff": {
+  "old_cflags": "-DNO_ALLOC",
+  "new_cflags": "",
+  "expect_exit": 1,
+  "expect_new_class": "alloc",
+  "expect_new_symbol": "_Znwm"
+ },
+ "variants": [
+  {
+   "name": "gcc-only-cflags",
+   "cflags": "-fno-tree-ch -fno-move-loop-invariants -Dnoipa=noinline",
+   "rtsan": false,
+   "expect": [
+    {
+     "entry": "process(int)",
+     "verdict": {
+      "alloc": "reachable"
+     }
+    }
+   ],
+   "note": "regression (round 4): GCC-only flags given with --cflags are dropped (one by the list, one after Clang rejects it)"
+  }
+ ]
+}

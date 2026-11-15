@@ -1,0 +1,12 @@
+{"sources": ["main.cpp"], "entries": ["arena_hot", "je_hot"], "rtsan": false,
+ "expect": [
+  {"entry": "arena_hot(Arena&, unsigned long)", "verdict": {"alloc": "reachable"}, "note": "default policy: the refill calls malloc"},
+  {"entry": "je_hot(unsigned long)", "verdict": {"alloc": "reachable"}, "note": "mallocx is in the default jemalloc list"}
+ ],
+ "variants": [
+  {"name": "team-policy", "cflags": "", "policy_override": "./team-policy.json",
+   "expect": [
+    {"entry": "arena_hot(Arena&, unsigned long)", "verdict": {"alloc": "none", "external-unknown": "none"}, "note": "Arena::allocate is declared opaque: not followed"},
+    {"entry": "je_hot(unsigned long)", "verdict": {"alloc": "reachable"}, "has": [{"class": "alloc", "symbol": "mallocx"}]}
+   ]}
+ ]}

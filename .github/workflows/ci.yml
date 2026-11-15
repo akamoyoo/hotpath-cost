@@ -1,0 +1,19 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build-and-smoke:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LLVM 21
+        run: |
+          wget -q https://apt.llvm.org/llvm.sh
+          chmod +x llvm.sh
+          sudo ./llvm.sh 21
+          sudo apt-get install -y llvm-21-dev clang-21 lld-21 ninja-build libzstd-dev zlib1g-dev libedit-dev libcurl4-openssl-dev libxml2-dev
+      - name: Build the plugin
+        run: |
+          cmake -S . -B build -G Ninja -DLLVM_DIR=/usr/lib/llvm-21/lib/cmake/llvm -DCMAKE_CXX_COMPILER=/usr/lib/llvm-21/bin/clang++
+          ninja -C build
+      - name: Smoke test
+        run: FX_LLVM_BIN=/usr/lib/llvm-21/bin python3 tests/smoke.py

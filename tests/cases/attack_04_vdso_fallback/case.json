@@ -1,0 +1,25 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry_cpu",
+  "entry_thread"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/04-vdso-fallback (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z9entry_cpuv",
+   "not_plain_none": [
+    "syscall"
+   ]
+  },
+  {
+   "entry": "_Z12entry_threadv",
+   "not_plain_none": [
+    "syscall"
+   ]
+  }
+ ]
+}

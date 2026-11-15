@@ -1,0 +1,18 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/08-relative-offsets (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z5entryjl",
+   "not_plain_none": [
+    "alloc"
+   ]
+  }
+ ]
+}

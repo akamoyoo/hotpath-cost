@@ -1,0 +1,188 @@
+{
+ "sources": [
+  "main.cpp",
+  "factory.cpp",
+  "circle.cpp",
+  "hooks.cpp"
+ ],
+ "policy": "./test-libc.json",
+ "rtsan": false,
+ "link_flags": "-ldl",
+ "entries": [
+  "g_virtual",
+  "g_cast_back",
+  "g_cast_wrong",
+  "g_unwind_dtor",
+  "g_unwind_catch",
+  "g_global_ctor",
+  "g_struct_copy",
+  "g_frem",
+  "g_floor",
+  "g_tail",
+  "g_lambda_fp",
+  "g_lambda_fn",
+  "g_exit",
+  "g_dlsym",
+  "g_asm_call",
+  "g_std_virtual"
+ ],
+ "expect": [
+  {
+   "entry": "g_virtual(Shape const&)",
+   "not_none": [
+    "alloc"
+   ],
+   "has": [
+    {
+     "class": "alloc",
+     "chain_contains": "_ZNK6Circle4areaEv"
+    }
+   ]
+  },
+  {
+   "entry": "g_cast_back(int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "g_cast_wrong(long)",
+   "note": "this module calls dlsym, so every call resolved by function type is open (indirect-unknown) and the wrong-type cast is covered; see guarantee_ub_cast for the same cast without dlsym",
+   "verdict": {
+    "alloc": "unknown"
+   }
+  },
+  {
+   "entry": "g_unwind_dtor(int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "g_unwind_catch(int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "g_global_ctor(int)",
+   "not_none": [
+    "alloc"
+   ],
+   "has": [
+    {
+     "class": "alloc",
+     "symbol": "malloc",
+     "edge": "fnptr"
+    }
+   ]
+  },
+  {
+   "entry": "g_struct_copy(int)",
+   "not_none": [
+    "libc"
+   ],
+   "has": [
+    {
+     "class": "libc",
+     "symbol": "memcpy"
+    }
+   ]
+  },
+  {
+   "entry": "g_frem(double, double)",
+   "not_none": [
+    "libc"
+   ],
+   "has": [
+    {
+     "class": "libc",
+     "symbol": "fmod"
+    }
+   ]
+  },
+  {
+   "entry": "g_floor(double)",
+   "not_none": [
+    "libc"
+   ],
+   "has": [
+    {
+     "class": "libc",
+     "symbol": "floor"
+    }
+   ]
+  },
+  {
+   "entry": "g_tail(int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "g_lambda_fp(Holder&, int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "g_lambda_fn(Holder&, int)",
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "g_exit(int)",
+   "not_none": [
+    "alloc"
+   ],
+   "has": [
+    {
+     "class": "alloc",
+     "chain_contains": "_ZL13at_exit_allocv"
+    }
+   ]
+  },
+  {
+   "entry": "g_dlsym(char const*, int)",
+   "verdict": {
+    "indirect-unknown": "reachable"
+   },
+   "module_has": [
+    "dynamic-loading",
+    "exec-mapping"
+   ],
+   "not_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "g_asm_call()",
+   "verdict": {
+    "alloc": "unknown",
+    "external-unknown": "reachable"
+   }
+  },
+  {
+   "entry": "g_std_virtual(std::exception const&)",
+   "verdict": {
+    "alloc": "unknown",
+    "indirect-unknown": "reachable"
+   }
+  }
+ ],
+ "variants": [
+  {
+   "name": "no-scale-levers",
+   "cflags": "",
+   "env": {
+    "FX_PTA_NO_PREPASS": "1",
+    "FX_PTA_NO_CYCLES": "1"
+   },
+   "rtsan": false,
+   "same_as_base": true,
+   "expect": [],
+   "note": "regression (round 3): the pre-pass (DATA objects) and cycle collapse must not change any verdict"
+  }
+ ]
+}

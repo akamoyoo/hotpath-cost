@@ -1,0 +1,34 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "rtsan": false,
+ "entries": [
+  "g_cast_wrong"
+ ],
+ "expect": [
+  {
+   "entry": "g_cast_wrong(long)",
+   "verdict": {
+    "alloc": "none"
+   },
+   "note": "KNOWN UNSOUND UNDER UB: int(int) called through int(*)(long). With fnptr_match=exact the only target of type i32(i64) is other_long. Excused by assumption 1; the arity variant finds it."
+  }
+ ],
+ "variants": [
+  {
+   "name": "arity",
+   "cflags": "",
+   "policy_override": "./test-arity.json",
+   "expect": [
+    {
+     "entry": "g_cast_wrong(long)",
+     "not_none": [
+      "alloc"
+     ]
+    }
+   ]
+  }
+ ],
+ "runtime_check": "no: the case is undefined behaviour on purpose (a call through a wrongly typed pointer), which assumption 1 excludes; the plain never of g_cast_wrong is false at run time, as the case documents"
+}

@@ -1,0 +1,19 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/19 (round 5). With -fprofile-instr-generate and -flto the front end's value profiling of this call is not in the pre-link bitcode (the counters are already lowered), and the run of the adversary's binary shows no hazard under the entry: a plain none is the truth here. The intrinsic itself is tested at the IR level in attack_19b.",
+ "expect": [
+  {
+   "entry": "_Z5entryl",
+   "verdict": {
+    "alloc": "none"
+   }
+  }
+ ],
+ "cflags": "-fprofile-instr-generate"
+}

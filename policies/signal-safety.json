@@ -1,0 +1,44 @@
+{
+  "include": [
+    "common.json"
+  ],
+  "name": "signal-safety",
+  "description": "A signal handler may call only async-signal-safe functions (POSIX.1-2024, 2.4.3). Entries: functions passed to signal/sigaction (or stored next to a sigaction call) where the IR shows it, plus any named on the command line. Violation: any call to an external function not on the list, and dynamic TLS.",
+  "classes": {
+    "unsafe": {
+      "description": "a call to an external function that is not async-signal-safe",
+      "external_except": [
+        "re:^(_Exit|_exit|abort|accept|accept4|access|aio_error|aio_return|aio_suspend|alarm|bind|cfgetispeed|cfgetospeed|cfsetispeed|cfsetospeed|chdir|chmod|chown|clock_gettime|close|connect|creat|dup|dup2|dup3|execl|execle|execv|execve|faccessat|fchdir|fchmod|fchmodat|fchown|fchownat|fcntl|fcntl64|fdatasync|fexecve|ffs|_Fork|fstat|fstat64|fstatat|fsync|ftruncate|futimens|getegid|geteuid|getgid|getgroups|getpeername|getpgrp|getpid|getppid|getsockname|getsockopt|getuid|htonl|htons|kill|link|linkat|listen|longjmp|lseek|lseek64|lstat|memccpy|memchr|memcmp|memcpy|memmove|memset|mkdir|mkdirat|mkfifo|mkfifoat|mknod|mknodat|ntohl|ntohs|open|open64|openat|pause|pipe|pipe2|poll|posix_close|ppoll|pselect|pthread_kill|pthread_self|pthread_sigmask|raise|read|readlink|readlinkat|recv|recvfrom|recvmsg|rename|renameat|rmdir|select|sem_post|send|sendmsg|sendto|setgid|setpgid|setsid|setsockopt|setuid|shutdown|sigaction|sigaddset|sigdelset|sigemptyset|sigfillset|sigismember|siglongjmp|signal|sigpending|sigprocmask|sigqueue|sigsuspend|sleep|sockatmark|socket|socketpair|stat|stpcpy|stpncpy|strcat|strchr|strcmp|strcpy|strcspn|strlen|strncat|strncmp|strncpy|strnlen|strpbrk|strrchr|strspn|strstr|strtok_r|symlink|symlinkat|tcdrain|tcflow|tcflush|tcgetattr|tcgetpgrp|tcsendbreak|tcsetattr|tcsetpgrp|time|timer_getoverrun|timer_gettime|timer_settime|times|umask|uname|unlink|unlinkat|utime|utimensat|utimes|wait|waitpid|wcpcpy|wcpncpy|wcscat|wcschr|wcscmp|wcscpy|wcscspn|wcslen|wcsncat|wcsncmp|wcsncpy|wcsnlen|wcspbrk|wcsrchr|wcsspn|wcsstr|wcstok|write)$",
+        "re:^(__errno_location|__stack_chk_fail|__read_chk|__memcpy_chk|__memmove_chk|__memset_chk|__strcpy_chk|__rtsan_.*)$"
+      ],
+      "summary_classes": []
+    },
+    "tls-dynamic": {
+      "description": "thread-local access through __tls_get_addr (may allocate on first use in a thread) Applies to the module's own code: for library functions the POSIX list is the authority, so library summaries are not consulted for this class.",
+      "symbols": [
+        "__tls_get_addr"
+      ],
+      "instructions": [
+        "tls-dynamic"
+      ],
+      "summary_classes": []
+    }
+  },
+  "lint": {
+    "enabled": false
+  },
+  "entry_kinds": [
+    {
+      "name": "signal-handler",
+      "select": [
+        "registered-with:signal|sigaction|bsd_signal|sysv_signal|sigset"
+      ],
+      "forbid": [
+        "unsafe",
+        "tls-dynamic",
+        "external-unknown",
+        "indirect-unknown"
+      ]
+    }
+  ]
+}

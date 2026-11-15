@@ -1,0 +1,8 @@
+{
+  "include": ["../../../policies/hotpath.json"],
+  "name": "test-libc",
+  "description": "Test policy: hotpath plus a class for libc string and math calls, to see calls that appear only after code generation.",
+  "classes": {
+    "libc": {"description": "memcpy/memset/memmove and libm calls", "symbols": ["memcpy", "memmove", "memset", "fmod", "floor", "re:^(fmod|floor)[fl]$"]}
+  }
+}

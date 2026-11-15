@@ -1,0 +1,9 @@
+{"sources": ["main.cpp"], "entries": ["lookup"],
+ "expect": [
+  {"entry": "lookup(int)", "verdict": {"lock": "reachable", "alloc": "reachable", "atomic": "reachable"},
+   "has": [{"class": "lock", "symbol": "__cxa_guard_acquire", "temp": "first-use"},
+           {"class": "alloc", "temp": "first-use"},
+           {"class": "atomic", "symbol_re": "load atomic acquire", "temp": "likely"}],
+   "none_hot": ["lock", "alloc"],
+   "note": "clang puts branch weights 1:1048575 on the guard check; the acquire load of the guard byte is on every call"}
+ ]}

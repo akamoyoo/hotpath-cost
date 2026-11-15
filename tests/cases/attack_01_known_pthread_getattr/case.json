@@ -1,0 +1,19 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/01-known-pthread-getattr (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z5entryv",
+   "not_plain_none": [
+    "alloc",
+    "syscall"
+   ]
+  }
+ ]
+}

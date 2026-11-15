@@ -1,0 +1,4 @@
+# entries for the hot path, one per line: names or globs, no annotations in the code
+on_tick
+on_order
+on_packet

@@ -1,0 +1,201 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "every_path"
+ ],
+ "rtsan": false,
+ "note": "per-function signatures: expectations are on the effect table (signature_expect); sys_write alloc was first expected never: libc's summary of write lists alloc on its termination paths, so it is may, on the account of the syscall primitive",
+ "signature_expect": {
+  "every_path(long)": {
+   "alloc": "always"
+  },
+  "one_branch(long)": {
+   "alloc": "may"
+  },
+  "loop_zero(long)": {
+   "alloc": "may"
+  },
+  "early_return(long)": {
+   "alloc": "may"
+  },
+  "push(std::vector<long, std::allocator<long>>&, long)": {
+   "alloc": "may"
+  },
+  "reserve_swap(std::vector<long, std::allocator<long>>&, long)": {
+   "alloc": "always"
+  },
+  "make_one(long)": {
+   "alloc": "always"
+  },
+  "calls_maker(long)": {
+   "alloc": "always",
+   "free": "always"
+  },
+  "maybe_maker(long)": {
+   "alloc": "may"
+  },
+  "virt(Shape*, long)": {
+   "alloc": "may"
+  },
+  "both_loud(Loud*, long)": {
+   "alloc": "always"
+  },
+  "Quiet::area(long)": {
+   "alloc": "never"
+  },
+  "throws_or_allocs(long)": {
+   "alloc": "always"
+  },
+  "catch_skips(long)": {
+   "alloc": "may"
+  },
+  "locked(long)": {
+   "lock": "always",
+   "alloc": "may"
+  },
+  "recurse(long)": {
+   "alloc": "never"
+  },
+  "rec_alloc(long)": {
+   "alloc": "always"
+  },
+  "reserve_n(long)": {
+   "alloc": "may"
+  },
+  "reserve_capacity_swap(std::vector<long, std::allocator<long>>&)": {
+   "alloc": "may"
+  },
+  "Book::callback_now()": {
+   "alloc": "may"
+  },
+  "alloc_a(long)": {
+   "alloc": "always",
+   "free": "always"
+  },
+  "alloc_b(long)": {
+   "alloc": "always",
+   "free": "always"
+  },
+  "call_fp(long (*)(long), long)": {
+   "alloc": "always"
+  },
+  "weak_alloc(long)": {
+   "alloc": "always"
+  },
+  "calls_weak(long)": {
+   "alloc": "always"
+  },
+  "caught_throw(long)": {
+   "alloc": "always",
+   "throw": "always"
+  },
+  "invoke_caught(long)": {
+   "alloc": "may"
+  },
+  "uses_setjmp(long)": {
+   "alloc": "may"
+  },
+  "spin_then_alloc(long volatile*)": {
+   "alloc": "always"
+  },
+  "do_while_alloc(long volatile*)": {
+   "alloc": "always"
+  },
+  "abort_or_alloc(long)": {
+   "alloc": "always",
+   "abort": "may"
+  },
+  "tail_maker(long)": {
+   "alloc": "always"
+  },
+  "cyc_a(long)": {
+   "alloc": "never"
+  },
+  "cyc_b(long)": {
+   "alloc": "never"
+  },
+  "sys_write(long)": {
+   "syscall": "always",
+   "alloc": "may"
+  },
+  "atom(long)": {
+   "atomic": "always",
+   "alloc": "never"
+  }
+ },
+ "signature_evidence": {
+  "recurse(long)": {
+   "alloc": "own"
+  },
+  "Quiet::area(long)": {
+   "alloc": "own"
+  },
+  "atom(long)": {
+   "atomic": "own",
+   "alloc": "own"
+  },
+  "cyc_a(long)": {
+   "alloc": "direct"
+  },
+  "every_path(long)": {
+   "alloc": "library-policy"
+  },
+  "calls_maker(long)": {
+   "alloc": "library-policy"
+  },
+  "calls_weak(long)": {
+   "alloc": "closed-world"
+  },
+  "weak_alloc(long)": {
+   "alloc": "library-policy"
+  },
+  "call_fp(long (*)(long), long)": {
+   "alloc": "library-policy"
+  }
+ },
+ "signature_account": {
+  "locked(long)": {
+   "lock": "own",
+   "alloc": "consequence"
+  },
+  "every_path(long)": {
+   "lock": "consequence"
+  },
+  "caught_throw(long)": {
+   "alloc": "consequence"
+  },
+  "push(std::vector<long, std::allocator<long>>&, long)": {
+   "alloc": "own"
+  },
+  "sys_write(long)": {
+   "syscall": "own",
+   "alloc": "consequence"
+  }
+ },
+ "variants": [
+  {
+   "name": "type-rule",
+   "extra_args": [
+    "--precision",
+    "type"
+   ],
+   "rtsan": false,
+   "signature_expect": {
+    "call_fp(long (*)(long), long)": {
+     "alloc": "may"
+    },
+    "every_path(long)": {
+     "alloc": "always"
+    },
+    "virt(Shape*, long)": {
+     "alloc": "may"
+    },
+    "both_loud(Loud*, long)": {
+     "alloc": "always"
+    }
+   }
+  }
+ ]
+}

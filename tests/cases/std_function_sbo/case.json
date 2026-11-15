@@ -1,0 +1,98 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "build_small",
+  "build_big",
+  "call_fn"
+ ],
+ "variants": [
+  {
+   "name": "no-elision",
+   "cflags": "-fno-builtin",
+   "rtsan": false,
+   "expect": [
+    {
+     "entry": "build_big(int)",
+     "verdict": {
+      "alloc": "reachable",
+      "free": "reachable"
+     },
+     "has": [
+      {
+       "class": "alloc",
+       "symbol": "_Znwm",
+       "temp": "likely"
+      }
+     ]
+    },
+    {
+     "entry": "build_small(int)",
+     "verdict": {
+      "alloc": "none"
+     }
+    }
+   ]
+  },
+  {
+   "name": "no-scale-levers",
+   "cflags": "",
+   "env": {
+    "FX_PTA_NO_PREPASS": "1",
+    "FX_PTA_NO_CYCLES": "1"
+   },
+   "rtsan": false,
+   "same_as_base": true,
+   "expect": [],
+   "note": "regression (round 3): the pre-pass (DATA objects) and cycle collapse must not change any verdict"
+  }
+ ],
+ "expect": [
+  {
+   "entry": "build_small(int)",
+   "verdict": {
+    "alloc": "none",
+    "free": "none"
+   },
+   "note": "the small capture is stored in place; after -O2 the manager and invoker calls are direct and inlined"
+  },
+  {
+   "entry": "build_big(int)",
+   "verdict": {
+    "alloc": "none",
+    "free": "none"
+   },
+   "note": "expected alloc before the first run; clang -O2 elides the new/delete pair of the heap-stored capture ([expr.new] allows it) and folds the call. The -fsanitize=realtime build with [[clang::nonblocking]] keeps them (the RealtimeSanitizer comparison analyses that build), and so does -fno-builtin: see the variant"
+  },
+  {
+   "entry": "call_fn(std::function<int (int)> const&, int)",
+   "verdict": {
+    "throw": "reachable",
+    "indirect-unknown": "none*"
+   },
+   "has": [
+    {
+     "class": "throw",
+     "symbol": "_ZSt25__throw_bad_function_callv",
+     "temp": "unlikely"
+    }
+   ],
+   "assumption": {
+    "kind": "indirect-call",
+    "rule_re": "fnptr-type|points-to",
+    "min_targets": 1
+   },
+   "note": "the invoker is called through a pointer of type i32(ptr, ptr): every address-taken _M_invoke of that type is a target. Expected 3 before the first run; at -O2 the two in build_small/build_big are inlined away, so only main's lambda is address-taken",
+   "lacks": [
+    {
+     "class": "alloc",
+     "symbol": "_Znwm"
+    }
+   ],
+   "none_hot": [
+    "alloc"
+   ]
+  }
+ ]
+}

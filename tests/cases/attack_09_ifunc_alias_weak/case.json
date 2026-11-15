@@ -1,0 +1,33 @@
+{
+ "sources": [
+  "other.cpp",
+  "t.cpp"
+ ],
+ "entries": [
+  "entry_ifunc",
+  "entry_alias",
+  "entry_weak"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/09-ifunc-alias-weak (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z11entry_ifuncl",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "_Z11entry_aliasl",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "_Z10entry_weakl",
+   "not_plain_none": [
+    "alloc"
+   ]
+  }
+ ]
+}

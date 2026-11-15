@@ -1,0 +1,5 @@
+# rule (f)
+e_malloc_free\(long\) +alloc=always\(elidable\) free=always\(elidable\)
+e_free_null\(long\) +free=always\(elidable\)
+e_lock\(long\) +lock=always$
+e_write0\(long\) +syscall=always$

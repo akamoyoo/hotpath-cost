@@ -1,0 +1,7 @@
+# rule (a): a vtable without type metadata opens every virtual call
+SIG _Z15dispatch_taggedml alloc=may
+SIG _Z11pull_taggedml alloc=unknown
+SIG _Z4pullP3Srcl alloc=unknown
+ENTRY _Z4pullP3Srcl alloc = unknown
+!alloc=always
+!alloc=never

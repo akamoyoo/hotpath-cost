@@ -1,0 +1,51 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "parse",
+  "maybe_grow",
+  "plain_grow"
+ ],
+ "expect": [
+  {
+   "entry": "parse(char const*, int)",
+   "verdict": {
+    "syscall": "reachable",
+    "throw": "reachable",
+    "alloc": "reachable"
+   },
+   "all_temp": "unlikely",
+   "note": "fprintf, __cxa_allocate_exception, the runtime_error constructor and __cxa_throw sit in one block that ends in unreachable"
+  },
+  {
+   "entry": "maybe_grow(int)",
+   "verdict": {
+    "alloc": "reachable"
+   },
+   "all_temp": "unlikely",
+   "note": "[[unlikely]] becomes branch weights 1:2000"
+  },
+  {
+   "entry": "plain_grow(int)",
+   "verdict": {
+    "alloc": "reachable"
+   },
+   "has": [
+    {
+     "class": "alloc",
+     "temp": "likely"
+    }
+   ],
+   "note": "no hint: the call is hot"
+  }
+ ],
+ "summaries": [
+  "../../summaries/libstdcxx-min.json"
+ ],
+ "checks": [
+  {
+   "kind": "baseline"
+  }
+ ]
+}

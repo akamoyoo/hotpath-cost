@@ -1,0 +1,19 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/10-misaligned-atomic (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z5entryl",
+   "not_plain_none": [
+    "lock"
+   ]
+  }
+ ],
+ "link_flags": "-latomic"
+}

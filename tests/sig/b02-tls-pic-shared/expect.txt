@@ -1,0 +1,3 @@
+# rule (d): general-dynamic TLS
+SIG _ZN12_GLOBAL__N_15innerEl alloc=unknown.* lock=unknown
+!=never

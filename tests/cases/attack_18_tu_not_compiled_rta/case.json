@@ -1,0 +1,52 @@
+{
+ "sources": [
+  "shapes.cpp",
+  "factory.cpp",
+  "main.cpp"
+ ],
+ "entries": [
+  "_Z5entryP4Basel"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/18 (round 5): the only unit that constructs Loud fails with Clang",
+ "compile_commands": {
+  "prebuild_with_gcc": true,
+  "commands": [
+   {
+    "compiler": "g++",
+    "args": [
+     "-O2",
+     "-g",
+     "-c"
+    ],
+    "file": "shapes.cpp"
+   },
+   {
+    "compiler": "g++",
+    "args": [
+     "-O2",
+     "-g",
+     "-c"
+    ],
+    "file": "factory.cpp"
+   },
+   {
+    "compiler": "g++",
+    "args": [
+     "-O2",
+     "-g",
+     "-c"
+    ],
+    "file": "main.cpp"
+   }
+  ]
+ },
+ "expect": [
+  {
+   "entry": "_Z5entryP4Basel",
+   "not_plain_none": [
+    "alloc"
+   ]
+  }
+ ]
+}

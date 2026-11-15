@@ -1,0 +1,111 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "sum_at",
+  "sum_idx",
+  "sum_range",
+  "front_back"
+ ],
+ "expect": [
+  {
+   "entry": "sum_at(std::vector<long, std::allocator<long>> const&, std::vector<int, std::allocator<int>> const&)",
+   "verdict": {
+    "throw": "reachable"
+   },
+   "has": [
+    {
+     "class": "throw",
+     "symbol": "_ZSt24__throw_out_of_range_fmtPKcz",
+     "temp": "unlikely"
+    }
+   ],
+   "count_sites": {
+    "throw": [
+     1,
+     2
+    ]
+   },
+   "none_hot": [
+    "abort",
+    "throw"
+   ],
+   "lacks": [
+    {
+     "class": "abort",
+     "subclass": "hardening"
+    }
+   ]
+  },
+  {
+   "entry": "sum_idx(std::vector<long, std::allocator<long>> const&, std::vector<int, std::allocator<int>> const&)",
+   "verdict": {
+    "throw": "none",
+    "abort": "none"
+   }
+  },
+  {
+   "entry": "sum_range(std::vector<long, std::allocator<long>> const&)",
+   "verdict": {
+    "throw": "none",
+    "abort": "none"
+   }
+  },
+  {
+   "entry": "front_back(std::vector<long, std::allocator<long>> const&)",
+   "verdict": {
+    "throw": "none",
+    "abort": "none"
+   }
+  }
+ ],
+ "variants": [
+  {
+   "name": "glibcxx-assertions",
+   "cflags": "-D_GLIBCXX_ASSERTIONS",
+   "expect": [
+    {
+     "entry": "sum_idx(std::vector<long, std::allocator<long>> const&, std::vector<int, std::allocator<int>> const&)",
+     "verdict": {
+      "abort": "reachable"
+     },
+     "has": [
+      {
+       "class": "abort",
+       "subclass": "hardening",
+       "temp": "unlikely"
+      }
+     ],
+     "count_sites": {
+      "abort": [
+       1,
+       3
+      ]
+     },
+     "note": "operator[] asserts __n < size(); the check on idx[i] is removed (loop bound), the one on v[...] survives"
+    },
+    {
+     "entry": "sum_range(std::vector<long, std::allocator<long>> const&)",
+     "verdict": {
+      "abort": "none"
+     },
+     "note": "range-for uses iterators: no assertion"
+    },
+    {
+     "entry": "front_back(std::vector<long, std::allocator<long>> const&)",
+     "verdict": {
+      "abort": "reachable"
+     },
+     "count_sites": {
+      "abort": [
+       1,
+       2
+      ]
+     },
+     "note": "front() and back() assert !empty(); the two checks may be merged"
+    }
+   ]
+  }
+ ]
+}

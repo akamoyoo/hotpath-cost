@@ -1,0 +1,458 @@
+{
+  "include": [
+    "common.json"
+  ],
+  "name": "hotpath",
+  "description": "Hazards on the hot path of a latency-critical C++ program (DESIGN.md, hazard classes v0).",
+  "classes": {
+    "alloc": {
+      "description": "heap allocation: malloc family, operator new, exception objects, mmap/brk, allocator entry points",
+      "symbols": [
+        "malloc",
+        "calloc",
+        "realloc",
+        "reallocarray",
+        "aligned_alloc",
+        "posix_memalign",
+        "memalign",
+        "valloc",
+        "pvalloc",
+        "strdup",
+        "strndup",
+        "asprintf",
+        "vasprintf",
+        "getline",
+        "getdelim",
+        "__libc_malloc",
+        "__libc_calloc",
+        "__libc_realloc",
+        "re:^_Zn[wa][jm]",
+        {
+          "pattern": "__cxa_allocate_exception",
+          "subclass": "exception"
+        },
+        {
+          "pattern": "__cxa_allocate_dependent_exception",
+          "subclass": "exception"
+        },
+        {
+          "pattern": "re:^(mmap|mmap64|brk|sbrk|mremap)$",
+          "subclass": "os"
+        },
+        {
+          "pattern": "re:^(__cxa_thread_atexit|__cxa_thread_atexit_impl|__cxa_atexit|atexit)$",
+          "subclass": "registration"
+        },
+        {
+          "pattern": "re:^(pthread_create|pthread_setspecific|__cxa_demangle|fopen|fopen64|fdopen|open_memstream)$",
+          "subclass": "library"
+        },
+        {
+          "pattern": "re:^(printf|fprintf|vprintf|vfprintf|dprintf|__printf_chk|__fprintf_chk|__vfprintf_chk|snprintf|sprintf|vsnprintf|vsprintf|__snprintf_chk|__sprintf_chk|__vsnprintf_chk|puts|fputs|fwrite|putchar|fputc|putc|_IO_putc|fflush|scanf|fscanf|sscanf|strtod|strtof|strtold)$",
+          "subclass": "stdio"
+        },
+        {
+          "pattern": "re:^(mallocx|rallocx|xallocx|nallocx|je_malloc|je_calloc|je_realloc|je_aligned_alloc|je_posix_memalign)$",
+          "subclass": "jemalloc"
+        },
+        {
+          "pattern": "re:^je_(mallocx|rallocx|xallocx|nallocx|je_malloc|je_calloc|je_realloc|je_aligned_alloc|je_posix_memalign)$",
+          "subclass": "jemalloc"
+        },
+        {
+          "pattern": "re:^tc_(malloc|calloc|realloc|new|newarray|new_nothrow|newarray_nothrow|memalign|posix_memalign|malloc_skip_new_handler)",
+          "subclass": "tcmalloc"
+        },
+        {
+          "pattern": "re:^__rust_(alloc|alloc_zeroed|realloc)$",
+          "subclass": "rust"
+        },
+        {
+          "pattern": "__morestack",
+          "subclass": "split-stack"
+        }
+      ],
+      "exclude": [
+        "re:^_Zn[wa][jm]Pv$"
+      ],
+      "primitives": [
+        "re:^(malloc|calloc|realloc|reallocarray|aligned_alloc|posix_memalign|memalign|valloc|pvalloc|__libc_malloc|__libc_calloc|__libc_realloc)$",
+        "re:^_Zn[wa][jm]",
+        "re:^(__cxa_allocate_exception|__cxa_allocate_dependent_exception)$",
+        "re:^(mmap|mmap64|mremap|brk|sbrk)$"
+      ],
+      "elidable": [
+        "re:^(malloc|calloc|realloc|reallocarray|aligned_alloc|memalign|valloc|pvalloc|__libc_malloc|__libc_calloc|__libc_realloc)$",
+        "re:^_Zn[wa][jm]"
+      ]
+    },
+    "free": {
+      "description": "heap release",
+      "symbols": [
+        "free",
+        "cfree",
+        "realloc",
+        "__libc_free",
+        "re:^_Zd[la]Pv",
+        {
+          "pattern": "re:^(__cxa_free_exception|__cxa_free_dependent_exception|__cxa_end_catch)$",
+          "subclass": "exception"
+        },
+        {
+          "pattern": "re:^(munmap)$",
+          "subclass": "os"
+        },
+        {
+          "pattern": "re:^(free|sdallocx|dallocx)$",
+          "subclass": "jemalloc"
+        },
+        {
+          "pattern": "re:^je_(free|sdallocx|dallocx)$",
+          "subclass": "jemalloc"
+        },
+        {
+          "pattern": "re:^tc_(free|delete|deletearray|free_sized|delete_sized)",
+          "subclass": "tcmalloc"
+        },
+        {
+          "pattern": "__rust_dealloc",
+          "subclass": "rust"
+        }
+      ],
+      "exclude": [
+        "re:^_Zd[la]PvS_$"
+      ],
+      "primitives": [
+        "re:^(free|cfree|__libc_free)$",
+        "re:^_Zd[la]Pv",
+        "re:^(munmap)$"
+      ],
+      "elidable": [
+        "re:^(free|cfree|__libc_free)$",
+        "re:^_Zd[la]Pv"
+      ],
+      "own_account": [
+        "re:^(realloc|reallocarray)$"
+      ]
+    },
+    "lock": {
+      "description": "mutexes, condition variables, semaphores, once, static-local guards, stdio locks",
+      "symbols": [
+        "re:^pthread_(mutex|rwlock|cond|spin|barrier)_(lock|unlock|trylock|timedlock|clocklock|rdlock|wrlock|timedrdlock|timedwrlock|tryrdlock|trywrlock|clockrdlock|clockwrlock|wait|timedwait|clockwait|signal|broadcast)$",
+        "pthread_once",
+        "pthread_join",
+        "pthread_key_create",
+        "re:^sem_(wait|timedwait|clockwait|trywait|post)$",
+        {
+          "pattern": "re:^__cxa_guard_(acquire|release|abort)$",
+          "subclass": "static-guard"
+        },
+        "re:^_ZNSt18condition_variable",
+        "re:^_ZNSt22condition_variable_any",
+        "re:^_ZNSt28__atomic_futex_unsigned_base",
+        "re:^_ZNSt6thread4joinEv$",
+        {
+          "pattern": "re:^(flockfile|ftrylockfile|funlockfile|__cxa_atexit|atexit)$",
+          "subclass": "library"
+        },
+        {
+          "pattern": "re:^(printf|fprintf|vprintf|vfprintf|__printf_chk|__fprintf_chk|__vfprintf_chk|puts|fputs|fwrite|fread|fgets|fgetc|getc|getchar|putchar|fputc|putc|_IO_putc|fflush|fopen|fopen64|fclose|fseek|ftell|perror|scanf|fscanf)$",
+          "subclass": "stdio"
+        },
+        {
+          "pattern": "re:^(__cxa_throw|__cxa_rethrow|_Unwind_RaiseException|_Unwind_Resume_or_Rethrow|_Unwind_ForcedUnwind|_ZSt17rethrow_exception)$",
+          "subclass": "unwinder (dl_iterate_phdr lock with older glibc/libgcc)"
+        },
+        {
+          "pattern": "re:^_ZSt[0-9]+__throw_",
+          "subclass": "unwinder (dl_iterate_phdr lock with older glibc/libgcc)"
+        },
+        {
+          "pattern": "re:^(__cxa_allocate_exception|__cxa_allocate_dependent_exception|__cxa_free_exception)$",
+          "subclass": "emergency exception pool mutex"
+        },
+        {
+          "pattern": "re:^__atomic_(load|store|exchange|compare_exchange|fetch_[a-z]+)(_[0-9]+)?$",
+          "subclass": "libatomic (lock-based for wide or misaligned objects)"
+        },
+        {
+          "pattern": "re:^__atomic_(load|store|exchange|compare_exchange)$",
+          "subclass": "libatomic (lock-based)"
+        }
+      ],
+      "summary_classes": [
+        "lock"
+      ],
+      "primitives": [
+        "re:^pthread_mutex_(lock|unlock|trylock|timedlock|clocklock)$",
+        "re:^pthread_rwlock_(rdlock|wrlock|unlock|tryrdlock|trywrlock|timedrdlock|timedwrlock)$",
+        "re:^pthread_spin_(lock|unlock|trylock)$",
+        "re:^sem_(wait|post|trywait|timedwait)$"
+      ]
+    },
+    "syscall": {
+      "description": "system calls: the instruction in inline assembly, or a libc wrapper (vDSO calls such as clock_gettime are excluded)",
+      "symbols": [
+        "re:^(syscall|read|write|pread|pread64|pwrite|pwrite64|readv|writev|preadv|pwritev|open|open64|openat|openat64|creat|close|recv|recvfrom|recvmsg|recvmmsg|send|sendto|sendmsg|sendmmsg|socket|socketpair|connect|accept|accept4|bind|listen|shutdown|getsockopt|setsockopt|poll|ppoll|select|pselect|epoll_wait|epoll_pwait|epoll_pwait2|epoll_ctl|epoll_create|epoll_create1|nanosleep|clock_nanosleep|usleep|sleep|ioctl|fcntl|fcntl64|fsync|fdatasync|sync|lseek|lseek64|mmap|mmap64|munmap|mprotect|madvise|mremap|msync|mlock|munlock|mlockall|sched_yield|sched_setaffinity|sched_getaffinity|getpid|gettid|getppid|kill|tgkill|raise|eventfd|eventfd_read|eventfd_write|timerfd_create|timerfd_settime|timerfd_gettime|signalfd|pipe|pipe2|dup|dup2|dup3|stat|fstat|lstat|fstatat|stat64|fstat64|statx|unlink|rename|mkdir|rmdir|ftruncate|truncate|fallocate|getrandom|io_uring_enter|io_submit|io_getevents|sigaction|signal|sigprocmask|pthread_sigmask|fork|vfork|execve|wait|waitpid|pthread_create|pthread_join|pthread_kill|prctl|setitimer|alarm|getrusage|times|uname|brk|sbrk|exit|_exit|_Exit)$",
+        "re:^__(read|pread|pread64|recv|recvfrom)_chk$",
+        {
+          "pattern": "re:^(printf|fprintf|vprintf|vfprintf|dprintf|__printf_chk|__fprintf_chk|__vfprintf_chk|puts|fputs|fwrite|fread|fgets|fgetc|getc|getchar|putchar|fputc|putc|_IO_putc|fflush|fopen|fopen64|fclose|fseek|ftell|perror|scanf|fscanf)$",
+          "subclass": "stdio"
+        },
+        {
+          "pattern": "re:^_ZNSt18condition_variable",
+          "subclass": "futex"
+        },
+        {
+          "pattern": "re:^_ZNSt28__atomic_futex_unsigned_base",
+          "subclass": "futex"
+        },
+        {
+          "pattern": "re:^(clock_getcpuclockid)$",
+          "subclass": "validates the clock with clock_getres (glibc: always, for a pid other than 0 and for 0 through the CPU-clock check)"
+        }
+      ],
+      "asm": [
+        {
+          "pattern": "(^|[^a-z_])(syscall|sysenter|int[ \\t]+\\$\\$?0x80)([^a-z_]|$)",
+          "subclass": "asm"
+        }
+      ],
+      "summary_classes": [
+        "syscall",
+        "thread"
+      ],
+      "intrinsics": [
+        {
+          "pattern": "llvm.x86.int",
+          "subclass": "software interrupt (int $n)"
+        }
+      ],
+      "primitives": [
+        "re:^(syscall|read|write|pread|pread64|pwrite|pwrite64|readv|writev|open|open64|openat|close|recv|recvfrom|recvmsg|send|sendto|sendmsg|socket|connect|accept|accept4|bind|listen|shutdown|getsockopt|setsockopt|poll|ppoll|select|epoll_wait|epoll_pwait|epoll_ctl|epoll_create1|nanosleep|clock_nanosleep|ioctl|fcntl|fsync|fdatasync|lseek|mmap|mmap64|munmap|mprotect|madvise|sched_yield|getpid|gettid|kill|tgkill|eventfd|timerfd_settime|pipe|pipe2|dup|dup2|fstat|stat|unlink|ftruncate|getrandom|sigaction|sigprocmask)$"
+      ]
+    },
+    "throw": {
+      "description": "starting an exception",
+      "symbols": [
+        "__cxa_throw",
+        "__cxa_rethrow",
+        "_Unwind_RaiseException",
+        "_Unwind_Resume_or_Rethrow",
+        "_Unwind_ForcedUnwind",
+        "__cxa_bad_cast",
+        "__cxa_bad_typeid",
+        "__cxa_throw_bad_array_new_length",
+        "re:^_ZSt[0-9]+__throw_",
+        "re:^_ZNSt3__1[0-9]+__throw_",
+        "re:^_ZSt17rethrow_exception"
+      ],
+      "primitives": [
+        "re:^(__cxa_throw|__cxa_rethrow|_Unwind_RaiseException|_Unwind_Resume_or_Rethrow|__cxa_bad_cast|__cxa_bad_typeid|__cxa_throw_bad_array_new_length)$",
+        "re:^_ZSt[0-9]+__throw_",
+        "re:^_ZSt17rethrow_exception"
+      ],
+      "attributed": [
+        "re:^(__cxa_allocate_exception|__cxa_allocate_dependent_exception|__cxa_free_exception|__cxa_free_dependent_exception|__cxa_begin_catch|__cxa_end_catch|__cxa_get_globals|__cxa_get_globals_fast|__cxa_current_exception_type|_Unwind_Resume)$"
+      ]
+    },
+    "abort": {
+      "description": "ways for the program to stop: abort, terminate, exit, assertion and hardening failures, traps, sanitizer handlers, stack protector, pure virtual, Rust panics",
+      "symbols": [
+        "abort",
+        "exit",
+        "_exit",
+        "_Exit",
+        "quick_exit",
+        {
+          "pattern": "re:^(_ZSt9terminatev|__cxa_call_terminate|__cxa_call_unexpected|__clang_call_terminate|_ZSt10unexpectedv)$",
+          "subclass": "terminate"
+        },
+        {
+          "pattern": "re:^(__assert_fail|__assert_perror_fail|__assert)$",
+          "subclass": "assert"
+        },
+        {
+          "pattern": "re:^_ZSt21__glibcxx_assert_fail",
+          "subclass": "hardening"
+        },
+        {
+          "pattern": "re:^_ZNSt3__122__libcpp_verbose_abort",
+          "subclass": "hardening"
+        },
+        {
+          "pattern": "__libcpp_verbose_abort",
+          "subclass": "hardening"
+        },
+        {
+          "pattern": "re:^__ubsan_handle_",
+          "subclass": "ubsan"
+        },
+        {
+          "pattern": "__stack_chk_fail",
+          "subclass": "stack-protector"
+        },
+        {
+          "pattern": "re:^(__chk_fail|__fortify_fail)$",
+          "subclass": "fortify"
+        },
+        {
+          "pattern": "re:^__(memcpy|memmove|memset|strcpy|strncpy|strcat|stpcpy|mempcpy|snprintf|sprintf|vsnprintf)_chk$",
+          "subclass": "fortify"
+        },
+        {
+          "pattern": "re:^(__cxa_pure_virtual|__cxa_deleted_virtual)$",
+          "subclass": "pure-virtual"
+        },
+        {
+          "pattern": "re:^_ZN4core9panicking",
+          "subclass": "rust-panic"
+        },
+        {
+          "pattern": "re:^_ZN3std9panicking",
+          "subclass": "rust-panic"
+        },
+        {
+          "pattern": "re:^_RNvNtCs[0-9A-Za-z_]+_4core9panicking",
+          "subclass": "rust-panic"
+        },
+        {
+          "pattern": "re:^(rust_begin_unwind|__rust_start_panic|rust_panic)$",
+          "subclass": "rust-panic"
+        }
+      ],
+      "intrinsics": [
+        {
+          "pattern": "llvm.trap",
+          "subclass": "trap"
+        },
+        {
+          "pattern": "llvm.ubsantrap",
+          "subclass": "trap"
+        },
+        {
+          "pattern": "llvm.debugtrap",
+          "subclass": "trap (int3: SIGTRAP ends the process without a debugger)"
+        }
+      ],
+      "primitives": [
+        "re:^(abort|exit|_exit|_Exit|quick_exit)$",
+        "re:^(_ZSt9terminatev|__cxa_call_terminate|__cxa_call_unexpected|__clang_call_terminate|_ZSt10unexpectedv)$",
+        "re:^(__assert_fail|__assert_perror_fail|__assert)$",
+        "re:^_ZSt21__glibcxx_assert_fail",
+        "re:^__ubsan_handle_",
+        "re:^(__stack_chk_fail|__chk_fail|__fortify_fail)$",
+        "re:^(__cxa_pure_virtual|__cxa_deleted_virtual)$"
+      ]
+    },
+    "atomic": {
+      "description": "atomic read-modify-write, compare-exchange, fences, atomic loads and stores, lock-prefixed asm (informational)",
+      "informational": true,
+      "instructions": [
+        "atomicrmw",
+        "cmpxchg",
+        "fence",
+        "load-atomic",
+        "store-atomic"
+      ],
+      "symbols": [
+        "re:^__atomic_",
+        "re:^__sync_"
+      ],
+      "asm": [
+        {
+          "pattern": "(^|[^a-z_])lock([^a-z_]|$)",
+          "subclass": "asm-lock"
+        }
+      ]
+    },
+    "tls-dynamic": {
+      "description": "thread-local access through __tls_get_addr (general- or local-dynamic model)",
+      "symbols": [
+        "__tls_get_addr",
+        {
+          "pattern": "re:^(__cxa_throw|__cxa_rethrow|__cxa_begin_catch|__cxa_end_catch|__cxa_get_globals|__cxa_get_globals_fast|__cxa_current_exception_type|_ZSt[0-9]+__throw_)$",
+          "subclass": "possible: exception globals are thread-local in libstdc++.so"
+        }
+      ],
+      "instructions": [
+        "tls-dynamic"
+      ]
+    },
+    "alloca-dynamic": {
+      "description": "stack allocation of variable size",
+      "instructions": [
+        "alloca-dynamic"
+      ]
+    },
+    "unwind": {
+      "description": "landing pads and exception propagation (informational: an exception from below passes through here)",
+      "informational": true,
+      "instructions": [
+        "landingpad",
+        "resume"
+      ],
+      "symbols": [
+        "_Unwind_Resume"
+      ]
+    },
+    "ub-unreachable": {
+      "description": "a bare unreachable not preceded by a trap or noreturn call (undefined behaviour if reached; informational)",
+      "informational": true,
+      "instructions": [
+        "unreachable-bare"
+      ]
+    },
+    "vdso": {
+      "description": "calls served by the vDSO without entering the kernel on the common path: clock_gettime, gettimeofday, time, clock_getres, getcpu, sched_getcpu. Some clocks and some clock sources fall back to a real system call (README); with a libc summary the fallback shows as syscall too. Informational.",
+      "informational": true,
+      "symbols": [
+        "re:^(clock_gettime|__clock_gettime|clock_gettime64|gettimeofday|time|clock_getres|getcpu|sched_getcpu)$"
+      ]
+    },
+    "recursion": {
+      "description": "a cycle in the call graph",
+      "summary_classes": [
+        "recursion"
+      ]
+    }
+  },
+  "known": [
+    "re:^(memcpy|memmove|memset|memcmp|bcmp|memchr|memrchr|rawmemchr|mempcpy|strlen|strnlen|strcmp|strncmp|strcasecmp|strncasecmp|strcpy|strncpy|stpcpy|strcat|strncat|strchr|strrchr|strstr|strspn|strcspn|strpbrk|strtok_r|strtol|strtoul|strtoll|strtoull|atoi|atol|atoll|wcslen|wmemcpy|wmemset|wmemcmp|wmemchr|wmemmove)$",
+    "re:^(__errno_location|abs|labs|llabs|div|ldiv|qsort|bsearch|htonl|htons|ntohl|ntohs|__ctype_b_loc|__ctype_tolower_loc|__ctype_toupper_loc|toupper|tolower|isalpha|isdigit|isspace|isalnum|isupper|islower|isprint|ispunct|isxdigit)$",
+    "re:^(pthread_self|pthread_equal|pthread_getspecific|pthread_mutex_init|pthread_mutex_destroy|pthread_cond_init|pthread_cond_destroy|pthread_rwlock_init|pthread_rwlock_destroy|pthread_spin_init|pthread_spin_destroy|sem_init|sem_destroy|sem_getvalue)$",
+    "re:^pthread_.*attr_",
+    "re:^(__cxa_begin_catch|__cxa_get_exception_ptr|__cxa_current_exception_type|__cxa_uncaught_exception|__cxa_uncaught_exceptions|__dynamic_cast|__gxx_personality_v0|__cxa_get_globals|__cxa_get_globals_fast)$",
+    "re:^_ZNSt(9exception|9bad_alloc|20bad_array_new_length|8bad_cast|10bad_typeid|11logic_error|13runtime_error|12out_of_range|16invalid_argument|12length_error|12domain_error|14overflow_error|15underflow_error|11range_error|17bad_function_call)D[012]Ev$",
+    "re:^_ZNKSt[0-9]+[a-z_]+4whatEv$",
+    "re:^(sin|cos|tan|asin|acos|atan|atan2|sinh|cosh|tanh|asinh|acosh|atanh|exp|exp2|exp10|expm1|log|log2|log10|log1p|logb|pow|sqrt|cbrt|hypot|fmod|remainder|remquo|erf|erfc|tgamma|ceil|floor|trunc|round|lround|llround|rint|lrint|llrint|nearbyint|fma|fabs|copysign|frexp|ldexp|modf|scalbn|scalbln|ilogb|nextafter|nexttoward|fmin|fmax|fdim|sincos)[fl]?$",
+    "re:^__(sin|cos|tan|exp|exp2|log|log2|log10|pow|atan2|hypot)[fl]?_finite$",
+    "re:^__rtsan_",
+    "re:^__llvm_(memcpy|memmove|memset)_element_unordered_atomic$",
+    "re:^__powi[sdx]f2$",
+    "__clear_cache",
+    "__rdtsc",
+    "re:^__(truncsfhf2|extendhfsf2|gnu_h2f_ieee|gnu_f2h_ieee|muloti4|divti3|udivti3|modti3|umodti3|addtf3|subtf3|multf3|divtf3)$"
+  ],
+  "entry_kinds": [
+    {
+      "name": "hotpath",
+      "select": [
+        "annotate:hotpath"
+      ],
+      "forbid": [
+        "alloc",
+        "free",
+        "lock",
+        "syscall",
+        "throw",
+        "abort",
+        "tls-dynamic",
+        "alloca-dynamic",
+        "recursion",
+        "indirect-unknown",
+        "external-unknown"
+      ]
+    }
+  ]
+}

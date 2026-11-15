@@ -1,0 +1,6 @@
+{"sources": ["a.cpp", "b.cpp"], "entries": ["is_even", "depth", "flat"],
+ "expect": [
+  {"entry": "is_even(unsigned int)", "verdict": {"recursion": "reachable"}, "has": [{"class": "recursion", "subclass": "mutual"}]},
+  {"entry": "depth(Node const*)", "verdict": {"recursion": "reachable"}, "has": [{"class": "recursion", "subclass": "self"}]},
+  {"entry": "flat(int)", "verdict": {"recursion": "none", "alloc": "none", "abort": "none", "throw": "none"}}
+ ]}

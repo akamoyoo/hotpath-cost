@@ -1,0 +1,4 @@
+{"sources": ["value.ll"], "entries": ["entry"], "rtsan": false,
+ "note": "regression: attack-ir/19 at the IR level (round 5): llvm.instrprof.value.profile is a call of the profile runtime, not a no-call intrinsic",
+ "expect": [{"entry": "entry", "not_plain_none": ["alloc"],
+             "has": [{"class": "external-unknown", "symbol": "__llvm_profile_instrument_target"}]}]}

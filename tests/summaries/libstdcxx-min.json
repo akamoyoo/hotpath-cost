@@ -1,0 +1,12 @@
+{"library": "libstdc++.so.6", "build_id": "hand-written-test-fixture",
+ "note": "Hand-written for the tests until the binary analyser produces real summaries. Classes from reading the libstdc++ sources, not measured.",
+ "symbols": {
+  "_ZNSt13runtime_errorC1EPKc": {"classes": {"alloc": ["_Znwm"], "throw": ["_ZSt20__throw_length_errorPKc"]}, "unresolved_indirect": 0},
+  "_ZNSt13runtime_errorC2EPKc": {"classes": {"alloc": ["_Znwm"], "throw": ["_ZSt20__throw_length_errorPKc"]}, "unresolved_indirect": 0},
+  "_ZNSt13runtime_errorD1Ev": {"classes": {"free": ["_ZdlPv"], "atomic": ["lock xadd"]}, "unresolved_indirect": 0},
+  "_ZNSt13runtime_errorD2Ev": {"classes": {"free": ["_ZdlPv"], "atomic": ["lock xadd"]}, "unresolved_indirect": 0},
+  "_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm": {"classes": {"alloc": ["_Znwm"], "throw": ["_ZSt20__throw_length_errorPKc"]}, "unresolved_indirect": 0},
+  "_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_appendEPKcm": {"classes": {"alloc": ["_Znwm"], "free": ["_ZdlPvm"], "throw": ["_ZSt20__throw_length_errorPKc"]}, "unresolved_indirect": 0},
+  "_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm": {"classes": {"alloc": ["_Znwm"], "free": ["_ZdlPvm"], "throw": ["_ZSt20__throw_length_errorPKc", "_ZSt24__throw_out_of_range_fmtPKcz"]}, "unresolved_indirect": 0},
+  "_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14default_deleteIS1_EEPFvvE": {"classes": {"alloc": ["malloc"], "syscall": ["clone3"], "lock": ["pthread_mutex_lock"], "throw": ["_ZSt20__throw_system_errori"]}, "unresolved_indirect": 1}
+ }}

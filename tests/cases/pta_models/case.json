@@ -1,0 +1,5 @@
+{"sources": ["main.cpp"], "entries": ["sort_items", "via_strdup"], "rtsan": false,
+ "expect": [
+  {"entry": "sort_items()", "not_none": ["alloc"], "note": "the comparator is called with pointers to the second element, whose f allocates"},
+  {"entry": "via_strdup(int)", "not_none": ["alloc"], "note": "strdup copies the pointer bytes (no NUL among them on x86-64 user addresses here)"}
+ ]}

@@ -1,0 +1,32 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry_sem",
+  "entry_latch",
+  "entry_wait"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/05-cxx20-semaphore (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z9entry_semv",
+   "not_plain_none": [
+    "syscall"
+   ]
+  },
+  {
+   "entry": "_Z11entry_latchv",
+   "not_plain_none": [
+    "syscall"
+   ]
+  },
+  {
+   "entry": "_Z10entry_waitv",
+   "not_plain_none": [
+    "syscall"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+# rule (e): inline assembly is not pattern-matched
+SIG _Z9sys_plainl .*syscall=may
+SIG _Z9sys_upperl .*syscall=unknown
+SIG _Z9sys_bytesl .*syscall=unknown
+SIG _Z10sys_int128l .*syscall=unknown
+SIG _Z14cond_jump_calll .*syscall=unknown
+!syscall=never

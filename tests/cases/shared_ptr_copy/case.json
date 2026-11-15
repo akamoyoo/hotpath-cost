@@ -1,0 +1,31 @@
+{
+ "sources": [
+  "main.cpp"
+ ],
+ "entries": [
+  "use"
+ ],
+ "link_flags": "-pthread",
+ "expect": [
+  {
+   "entry": "use(std::shared_ptr<X> const&)",
+   "verdict": {
+    "atomic": "reachable",
+    "free": "reachable",
+    "indirect-unknown": "reachable"
+   },
+   "has": [
+    {
+     "class": "atomic",
+     "symbol_re": "atomicrmw add",
+     "temp": "likely"
+    }
+   ],
+   "note": "the copy increments the use count (atomicrmw add, or a plain add when __libc_single_threaded); the destructor of q decrements it and may run _M_dispose/_M_destroy (virtual), which frees. Expected alloc/lock none before the first run; _Sp_counted_base is a std type whose derived classes may be defined inside libstdc++.so (open hierarchy), so _M_dispose/_M_destroy are open virtual calls and the answer is unknown",
+   "not_none": [
+    "alloc",
+    "lock"
+   ]
+  }
+ ]
+}

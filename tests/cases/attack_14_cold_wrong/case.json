@@ -1,0 +1,53 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry_tls",
+  "entry_static",
+  "entry_expect"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/14-cold-wrong (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z9entry_tlsl",
+   "not_plain_none": [
+    "alloc"
+   ],
+   "has": [
+    {
+     "class": "alloc",
+     "temp": "first-use"
+    }
+   ]
+  },
+  {
+   "entry": "_Z12entry_staticl",
+   "not_plain_none": [
+    "alloc",
+    "lock"
+   ],
+   "has": [
+    {
+     "class": "lock",
+     "symbol": "__cxa_guard_acquire",
+     "temp": "first-use"
+    }
+   ]
+  },
+  {
+   "entry": "_Z12entry_expectl",
+   "not_plain_none": [
+    "alloc"
+   ],
+   "has": [
+    {
+     "class": "alloc",
+     "symbol": "malloc",
+     "temp": "unlikely"
+    }
+   ]
+  }
+ ]
+}

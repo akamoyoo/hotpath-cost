@@ -1,0 +1,5 @@
+# rule (a): the vtable rule on a public class is closed-world in every mode
+SIG _Z3getP5QBasel alloc=never\[closed-world\]
+!SIG _Z3getP5QBasel alloc=never\[indirect-vtable\]
+!ENTRY get\(QBase\*, long\) \{'alloc': 'none',
+SIG _Z9pull_loudP4Loudl alloc=always\(elidable\)\[closed-world

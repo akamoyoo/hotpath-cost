@@ -1,14 +1,18 @@
-# build outputs
-*.o
-*.a
-*.so
-*.out
+build/
 __pycache__/
-.venv/
-
-# working notes, not published yet
-research/
-cases/
-REVIEW_TYPES.md
-CASE_STUDIES.md
-zh/
+fn-effects-report.json
+cases/src/
+cases/out/
+tests/out/
+tests/sig/*/w/
+tests/sig/*/t0*
+tests/sig/*/t2
+tests/sig/*/*.o
+tests/sig/*/*.so
+tests/sig/*/*.bc
+tests/sig/*/host
+tests/sig/*/out.txt
+tests/sig/*/report.*
+tests/sig/*/fn-effects.log
+tests/sig/*/effects*.json
+tests/sig/*/diff.txt

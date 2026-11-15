@@ -1,0 +1,7 @@
+{"sources": ["main.cpp"], "entries": ["e_union", "e_halves", "e_arith", "e_field"],
+ "expect": [
+  {"entry": "e_union(long)", "not_plain_none": ["alloc"], "note": "union punning is a char (may-alias) access for Clang's TBAA: visible to the pointer load"},
+  {"entry": "e_halves(long)", "not_plain_none": ["alloc"], "note": "two 32-bit stores, then memcpy: a load from memory makes the bytes generic"},
+  {"entry": "e_arith(long)", "not_plain_none": ["alloc"], "note": "a function address plus an offset is UNK"},
+  {"entry": "e_field(long)", "verdict": {"alloc": "none", "indirect-unknown": "none"}, "note": "the int field beside the handler (typed int) cannot be read by the pointer load"}
+ ]}

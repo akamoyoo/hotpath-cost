@@ -1,0 +1,32 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "entry_memcpy",
+  "entry_cast",
+  "entry_double"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/12-integer-store-no-provenance (round 5); every hazard the run showed must not be a plain none",
+ "expect": [
+  {
+   "entry": "_Z12entry_memcpyl",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "_Z10entry_castl",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "_Z12entry_doublel",
+   "not_plain_none": [
+    "alloc"
+   ]
+  }
+ ]
+}

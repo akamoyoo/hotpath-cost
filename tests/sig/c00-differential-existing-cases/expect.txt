@@ -1,0 +1,2 @@
+# component mode is never stronger than module mode, except the documented library-pointer case (pta_adversarial via_library)
+!^DIFF (?!pta_adversarial)

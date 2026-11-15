@@ -1,0 +1,74 @@
+{
+ "sources": [
+  "t.cpp"
+ ],
+ "entries": [
+  "e_variant",
+  "e_any",
+  "e_vecfn",
+  "e_swapfn",
+  "e_vbase",
+  "e_placement",
+  "e_pmf",
+  "e_map",
+  "e_xorlist"
+ ],
+ "rtsan": false,
+ "note": "regression: attack-ir/20 (round 5): held; must keep holding",
+ "expect": [
+  {
+   "entry": "e_variant",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_any",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_vecfn",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_swapfn",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_vbase",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_placement",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_pmf",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_map",
+   "not_plain_none": [
+    "alloc"
+   ]
+  },
+  {
+   "entry": "e_xorlist",
+   "not_plain_none": [
+    "alloc"
+   ]
+  }
+ ]
+}
