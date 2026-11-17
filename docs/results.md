@@ -58,6 +58,32 @@ hot path at zero allocations and locks, and over every measured commit nothing s
 numerical and hashing libraries the counts are zero by design; what differs there is time, which the
 compiler matrix below compares.
 
+## Open pull requests
+
+`replay/check.py LIB BASE HEAD` on every open pull request (November 17, 2026, up to 30 per library)
+that touches a library's measured paths, BASE being its merge base: 148 pull requests of 14 libraries
+(spdlog, fmt, simdjson, nlohmann/json, glaze, quill, msgpack-c, yyjson, parallel-hashmap, fast_float,
+Taskflow, xxHash, rapidjson, flatbuffers; concurrentqueue's 8 checked first). 122 change no count and
+no instruction count by 3 % or more; 2 do not build with the workload. The others, priced with
+`price.py` where it matters (median of 9 alternating rounds on one core, GCC 13 `-O2`):
+
+| pull request | counts | instructions | time |
+|---|---|---|---|
+| parallel-hashmap #167 "AVX2 optimization of group lookup" | same | find +6 %, `operator[]` +6 % | find of a present key +13 %, `operator[]` +10 %, insert+erase -11 % |
+| fast_float #307 "Improving speed and reduce code size ..." | same | `integer 100` +11 %, 17 digits with exponent -5 % | `integer 100` +19 % (9.9 -> 11.8 ns), `price 187.25` +7 % |
+| fast_float #416 "Speed up parsing: branch-free exponent ..." | same | -3 to -4 % | `price 187.25` -9 %, others within 3 % |
+| rapidjson #2402, #2403 (allocation failures) | same | +5 %, +8 % on a fixed-buffer pool | +5 %, +6 % |
+| spdlog #3641 "Reuse backtrace ring-buffer slots ..." | same | +27 per message with backtrace off (+5 % for `info(string)`) | +4 % for `info(string)`, within noise otherwise |
+| fmt #4997 "Add `'` format option for digit grouping" | same | `{:.4f}` of a double +4 % | +1.7 % |
+| spdlog #3404 (compile-time patterns) | same | -3 % | not timed |
+| msgpack-c #1103 | first unpack into a zone: 2 -> 3 allocations | | |
+| msgpack-c #1223 (from this work) | unpack into a reused zone: 2 -> 0 allocations | | case 8 |
+
+Taskflow's pull requests first showed instruction changes for most of them, including one that only
+touches MSVC module builds: with a worker thread, one build's count varies by up to 8 % between runs.
+`check.py` now measures such workloads three times and compares ranges, and none of them is left.
+None of these results was posted to the pull requests.
+
 ## The compiler matrix
 
 The latest library commit of every library, three compilers, two levels, ns per call (median of three

@@ -164,6 +164,12 @@ Keeping their first 32 levels inline removes both: 118.6 -> 83.7 ns per message 
 with clang 21 ([msgpack-c#1222](https://github.com/msgpack/msgpack-c/issues/1222), fix and test in
 [#1223](https://github.com/msgpack/msgpack-c/pull/1223)).
 
+**8. Open pull requests, checked.** `check.py` on the 148 open pull requests of 14 of these libraries
+that touch their hot paths: 122 change nothing, and among the rest, a pull request titled "AVX2
+optimization of group lookup" makes parallel-hashmap's `find` 13 % slower in this workload and
+insert+erase 11 % faster, and one titled "Improving speed ..." makes fast_float's parsing of `100` 19 %
+slower ([details](docs/results.md#open-pull-requests)).
+
 **Static and run time agree.** On every measured operation of Liquibook and concurrentqueue, every
 allocation and lock seen at run time matches a site of the static analysis (no static miss), and the
 static analysis lists the paths the workloads never take ([details](docs/cases.md#static-and-run-time-side-by-side)).
