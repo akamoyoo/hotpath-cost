@@ -4,7 +4,7 @@ What the tool reported for every library it was applied to, then the compiler ma
 
 ## What was found
 
-Thirty-eight libraries, 25,567 library commits in their first-parent histories, 4,704 of them measured.
+Thirty-eight libraries, 25,567 library commits in their first-parent histories, 4,702 of them measured.
 Twenty-four of them were measured at every library commit where the driver compiles. quill was sampled
 every fifth commit, spdlog every 30th, fmt every 50th, simdjson, rapidjson and flatbuffers every 4th, Eigen
 every 100th, json and cereal every 10th, Taskflow and abseil every 15th, xsimd every 30th, glaze and Highway
@@ -47,7 +47,7 @@ every 40th, and every interval whose counts differed was bisected. Built with GC
 | [rapidjson](https://github.com/Tencent/rapidjson) (JSON) | 89 of 443, bisected | 2 | DOM parse of a 90-byte message: 5 -> 7 allocations (2015), 7 -> 8 in 2021 (`cd5ee4df`, #1858: the pool allocator allocates a shared control block in its constructor); on a fixed buffer: 0 |
 | [yyjson](https://github.com/ibireme/yyjson) (JSON) | 239 of 280 | 0 | parse: 2 allocations with the default allocator, 0 with a pool, throughout |
 | [glaze](https://github.com/stephenberry/glaze) (JSON) | 45 of 2,689, sampled | 1 | reading into a reused struct and writing to a reused string: 0; first read 4 -> 2 allocations in 2024 (`f8cb7923`, statically sized decode buffer) |
-| [abseil](https://github.com/abseil/abseil-cpp) (`flat_hash_map`) | 70 of 1,197, sampled | 0 | 0 and 0 (versions before 2019 crash the workload, whose hash-table sampling is not linked) |
+| [abseil](https://github.com/abseil/abseil-cpp) (`flat_hash_map`) | 68 of 1,197, sampled | 0 | 0 and 0 (the 2019 versions that sample every table by default are not built: the workload does not link the sampler) |
 | [gtl](https://github.com/greg7mdp/gtl) (hash map) | 179 of 179 | 0 | 0 and 0; instructions per call unchanged at every other commit |
 | [emhash](https://github.com/ktprime/emhash) (hash map) | 219 of 228 | 0 | 0 and 0. Instructions per `find`: +6 to +7 % in June 2026 at `ba124419` "fix:overflow", which also turned on a prefetch, and back a month later at `280842c5` "disable prefetch by default ... (no performance gain)" |
 | [Highway](https://github.com/google/highway) (SIMD) | 36 of 2,329, sampled | 0 | 0 and 0; instructions per 1,024-float sum and dot unchanged |
