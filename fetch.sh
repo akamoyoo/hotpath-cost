@@ -1,5 +1,5 @@
 #!/bin/bash
-# Clones the libraries into src/ with full history (about 2 GB). Nothing else is downloaded.
+# Clones the libraries into src/ with full history (about 3 GB). Nothing else is downloaded.
 set -eu
 cd "$(dirname "$0")"; mkdir -p src
 while read name url; do
@@ -24,4 +24,11 @@ robin-hood-hashing https://github.com/martinus/robin-hood-hashing
 fast_float https://github.com/fastfloat/fast_float
 xxHash https://github.com/Cyan4973/xxHash
 eigen https://gitlab.com/libeigen/eigen.git
+json https://github.com/nlohmann/json
+taskflow https://github.com/taskflow/taskflow
+pdqsort https://github.com/orlp/pdqsort
+lz4 https://github.com/lz4/lz4
+dragonbox https://github.com/jk-jeon/dragonbox
+libdivide https://github.com/ridiculousfish/libdivide
+date https://github.com/HowardHinnant/date
 LIST

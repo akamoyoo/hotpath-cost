@@ -3,6 +3,9 @@
 // call over batches of 100 calls.
 #pragma once
 #include "counts.h"
+#ifdef REPLAY_INSTR   // instruction counts: built by replay.py --metric instr, run under callgrind
+#include <valgrind/callgrind.h>
+#endif
 #include <algorithm>
 #include <chrono>
 #include <cstdio>
@@ -32,6 +35,15 @@ static void run_ops(const std::vector<Op> &ops, long warm = 10000, long meas = 2
       tl_trace = true; for (long i = 0; i < tn; i++) op.f(); tl_trace = false;
       std::fprintf(stderr, "== %s, steady state\n", op.name.c_str()); trace_dump(stderr, tn);
     }
+#ifdef REPLAY_INSTR
+    // Instructions per call: callgrind's statistics are zeroed, the operation runs INSTR_N times with
+    // nothing else in the loop, and the statistics are dumped under the operation's name.
+    const long instr_n = 20000;
+    CALLGRIND_ZERO_STATS;
+    for (long i = 0; i < instr_n; i++) op.f();
+    CALLGRIND_DUMP_STATS_AT(op.name.c_str());
+    std::fprintf(stdout, "{\"instr_op\":\"%s\",\"instr_n\":%ld}\n", op.name.c_str(), instr_n);
+#endif
     std::sort(t.begin(), t.end());
     std::printf("{\"op\":\"%s\",\"alloc\":%.4f,\"free\":%.4f,\"lock\":%.4f,\"ns\":%.1f,\"first_alloc\":%lu,\"first_lock\":%lu}\n", op.name.c_str(),
                 double(c1.alloc - c0.alloc) / meas, double(c1.free - c0.free) / meas,

@@ -5,19 +5,42 @@ one call actually perform, at which commit did that change, and how fast is it u
 
 A refactoring, a dependency update or a compiler upgrade can add an allocation or a lock to a hot path,
 or make it slower. It passes review and tests, and timing every commit is too noisy to see it. This
-repository answers the question in three parts:
+repository measures it over the whole history of real libraries, and is built on what that taught us.
 
-- **`static/`: what can happen.** `fn-effects`, an analyser built on LLVM, infers for every function of
-  a C++ program, without annotations, whether it may or always allocates, locks, enters the kernel or
-  throws, counting everything it calls. It sees every path, but can only say "may".
-- **`replay/`: what does happen, commit by commit.** A fixed benchmark is built at every commit of a
-  library's history. Allocations and mutex locks per call are counted exactly, so they do not depend
-  on machine noise. Changes are bisected to the commit and traced to the source line. Latency is
-  compared across GCC 13, GCC 15 and clang 21 at `-O2` and `-O3`.
-- **`replay/combine.py`: both views of one commit, side by side.** Static sites are matched against
-  run-time stacks. A site can be exercised (with its count per call), reachable but never exercised
-  (where the benchmark is blind), or seen at run time but missing from the static result (where the
-  analysis is wrong).
+## What we learned
+
+Over 15,000 commits of 25 open-source low-latency and numerical C++ libraries ([evidence](docs/insights.md)):
+
+1. **Count, don't time.** Allocations, locks and executed instructions per call are exact and
+   repeat on every run; per-commit timings jumped 2x between builds with identical machine code.
+   Counts find a change; only an alternating timing of the two commits on an idle core prices it.
+2. **Instruction counts find performance changes but do not price them.** In every change timed, time
+   moved in the same direction as instructions, by anything from less than a tenth of it to twice as much.
+3. **A machine-code difference is not a cost.** Compiler hints that visibly changed a queue's hot
+   path cost nothing measurable in the real queue.
+4. **A gap between compilers is a lead, with a few usual causes**: a helper left out of line, a
+   repeated division, vectorisation in one build only. The fix belongs in the source, and it has to
+   be timed with every compiler, because a fix for one compiler can slow another.
+5. **The static and the run-time view each see what the other cannot.** Only counts told apart two
+   Liquibook versions that may both allocate; only the static view named the 22 allocating paths that
+   the benchmark never took.
+6. **Costs enter through refactorings, come back, and stay unreleased.** A lock removed in 2016 came
+   back for six releases; an extra allocation per order is in a library's last release; none was
+   caught by tests.
+
+## The tool
+
+- **`static/`: what can happen.** `fn-effects`, an analyser on LLVM, infers for every function,
+  without annotations, whether it may or always allocates, locks, enters the kernel or throws,
+  counting everything it calls ([static/README.md](static/README.md)).
+- **`replay/`: what does happen, commit by commit.** A fixed benchmark per library, built at every
+  commit (or a sample, then bisected): allocations, frees and mutex locks per call (`replay.py`),
+  executed instructions per call under callgrind (`--metric instr`), the line each event comes from
+  (`attribute.py`), and the price of a change (`price.py`).
+- **Compilers.** Latency under GCC 13, GCC 15 and clang 21 at `-O2` and `-O3` (`matrix.sh`), and the
+  machine-code facts behind a gap: out-of-line helpers, divisions, vector instructions (`gap.py`).
+- **Both views together.** `combine.py` matches the static sites of one commit against its run-time
+  stacks: exercised, never exercised, or missed by the analysis.
 
 ## Example
 
@@ -44,12 +67,9 @@ The static list is the same before and after: both versions *may* allocate in `c
 run-time count tells them apart. In the other direction, the 22 hot sites that this benchmark never
 reaches are on paths it does not take, such as stop orders and all-or-none matching.
 
-## What it found
+## Cases
 
-Over 13,246 commits of eighteen open-source low-latency libraries (order book, queues, loggers, FIX,
-JSON, formatting, hash maps, number parsing, hashing, linear algebra). Fourteen never changed their
-allocation and lock counts over their measured history ([all results](docs/results.md)). The four
-cases below are the ones that did change, or whose latency depends on the compiler.
+The four cases behind most of the lessons above ([all libraries](docs/results.md)).
 
 **1. Liquibook's last release allocates twice as often per order** ([details](docs/cases.md#case-1-liquibook-200-allocates-twice-more-per-order)).
 Allocations per add+cancel, counted at every library commit:
@@ -104,11 +124,15 @@ static analysis lists the paths the benchmarks never take ([details](docs/cases.
 ## Use
 
 ```
-./fetch.sh                                   # clone the eighteen libraries into src/
-replay/replay.py liquibook                   # count at every library commit (GCC 13 -O2)
-replay/diff.py liquibook                     # what changed, and at which commit
-replay/attribute.py liquibook 25b0c5ec       # which line allocates
-replay/combine.py liquibook 25b0c5ec         # static and run-time side by side (needs static/ built)
+./fetch.sh                                         # clone the libraries into src/
+replay/replay.py liquibook                         # allocations and locks at every library commit
+replay/diff.py liquibook                           # what changed, and at which commit
+replay/attribute.py liquibook 25b0c5ec             # which line allocates
+replay/combine.py liquibook 25b0c5ec               # static and run-time side by side (needs static/ built)
+replay/replay.py fast_float --metric instr         # instructions per call at every commit (valgrind)
+replay/diff.py fast_float --instr 5                # commits that changed them by 5 % or more
+replay/price.py fast_float 254f10ce 3044c9b1       # what such a change costs in time
+replay/gap.py hffix fix_write_new_order            # why one compiler is faster than another
 ```
 
 For a change under review, measuring the merge base and the head is enough:
@@ -117,6 +141,7 @@ For a change under review, measuring the merge base and the head is enough:
 
 ## Documents
 
+- [docs/insights.md](docs/insights.md): the lessons above, with their evidence.
 - [docs/cases.md](docs/cases.md): the four cases, and the matching of static and run-time sites.
 - [docs/results.md](docs/results.md): all eighteen libraries, and the compiler matrix.
 - [docs/method.md](docs/method.md): how it works, what did not work, what is not claimed, how to

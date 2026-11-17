@@ -14,6 +14,9 @@ correctly.
 | Which allocating or locking paths does the benchmark never take? | `replay/combine.py LIB COMMIT` | static: "may", not "will" |
 | May this function allocate, lock or enter the kernel, on any path? | `static/fn-effects ... --functions` (see `static/README.md`) | depends on the evidence level printed |
 | Does the compiler or the optimisation level change the latency? | `replay/matrix.sh 3`, then `replay/matrix_table.py` | only on an idle machine, see below |
+| Did a commit change the work done per call (for code that never allocates)? | `replay/replay.py LIB --metric instr`, then `replay/diff.py LIB --instr 5` | yes: instructions per call under callgrind |
+| What does a change cost in time? | `replay/price.py LIB A B` | on an idle core, alternating rounds |
+| Why is one compiler or level faster? | `replay/gap.py LIB ENTRY` | facts, not proof: read the code |
 
 ## Setup
 
@@ -25,7 +28,8 @@ correctly.
 
 Environment variables: `CXX_GCC`, `CXX_GCC15`, `CXX_CLANG` (compilers), `REPLAY_OPT` (default `-O2`),
 `REPLAY_TAG` (suffix of the output directory), `REPLAY_CORES` (comma-separated cores to pin runs to),
-`LLVM_BIN` and `FN_EFFECTS` (for `combine.py`). Output goes to `out/` (not committed); `replay/export.py`
+`LLVM_BIN` and `FN_EFFECTS` (for `combine.py`), `VALGRIND` and `VALGRIND_INC` (the valgrind binary and
+the directory holding `valgrind/callgrind.h`, for `--metric instr`). Output goes to `out/` (not committed); `replay/export.py`
 writes the CSVs in `results/`.
 
 ## Recipes
@@ -38,6 +42,18 @@ writes the CSVs in `results/`.
    line, the count per call before and after, and whether it is every call or only the first call.
 4. Put a price on it only with an alternating timing of both builds on one idle physical core
    (see "Timing").
+
+**Check a change in code that never allocates** (hash maps, parsers, hashing, numerics). Use
+`--metric instr` instead of the counts, then `diff.py LIB --instr 5`. An instruction change is real but
+its cost is not known: price it with `replay/price.py LIB BASE HEAD` before calling it a regression or
+an improvement. In the changes measured so far, time moved in the same direction as instructions by
+anything from less than a tenth to twice as much (`docs/insights.md`).
+
+**Explain a compiler gap.** Run `replay/gap.py LIB ENTRY` (ENTRY: a substring of the entry function's
+name). Look first at helpers that are out of line in the slow builds only (with their call sites), then
+at the number of divisions, then at 256-bit vector instructions. Confirm the cause by changing the
+source and timing every compiler with `cases/*/run.sh`-style scripts; a fix for one compiler can slow
+another.
 
 **Find which paths the benchmark misses.** Run `replay/combine.py LIB COMMIT` and report the "not
 exercised" sites that are not marked cold. Each is a place that may allocate or lock in production and

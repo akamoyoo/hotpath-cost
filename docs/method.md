@@ -18,6 +18,16 @@ How the measurements are made, what did not work, what is not claimed, and how t
   runs it pinned to a core, and stores one JSON line per operation. `--stride` samples, `--refine`
   bisects. `replay/diff.py` prints the changes; `replay/attribute.py` the stacks;
   `replay/matrix.sh` and `replay/matrix_table.py` the compiler matrix.
+- `--metric instr` builds the benchmark with `-DREPLAY_INSTR` and runs it under valgrind's callgrind.
+  For each operation, `bench_common.h` zeroes callgrind's statistics, runs the operation 20,000 times
+  with nothing else in the loop, and dumps the statistics under the operation's name; `replay.py`
+  divides. The result is exact: the same build gives the same count on every run. `diff.py --instr PCT`
+  reports changes of PCT percent or more, and `--refine` bisects them (`REPLAY_INSTR_PCT`, default 3).
+- `replay/price.py` builds two commits and times them alternately for several rounds on one core.
+- `replay/gap.py` disassembles one entry function and everything it reaches by direct calls (including
+  the parts compilers split off, such as `[clone .cold]`) under each build, and counts instructions,
+  call sites, divisions, 256-bit vector instructions and backward jumps, and lists helpers that stay
+  out of line in some builds only, with their call sites.
 - `replay/combine.py` runs `static/fn-effects` on a library's driver and `attribute.py` on its
   benchmark at the same commit, both with clang, and matches the sites as described in
   [cases.md](cases.md#static-and-run-time-side-by-side).

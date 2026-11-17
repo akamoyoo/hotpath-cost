@@ -26,6 +26,10 @@ CXX = {"gcc": os.environ.get("CXX_GCC", "g++"), "gcc15": os.environ.get("CXX_GCC
        "clang": os.environ.get("CXX_CLANG", "clang++")}
 OPT = os.environ.get("REPLAY_OPT", "-O2")
 TAG = os.environ.get("REPLAY_TAG", "" if OPT == "-O2" else OPT)
+# --metric instr: instructions per call, counted by valgrind's callgrind (exact and independent of load)
+METRIC = sys.argv[sys.argv.index("--metric") + 1] if "--metric" in sys.argv else "counts"
+VALGRIND = os.environ.get("VALGRIND", "valgrind")
+VALGRIND_INC = os.environ.get("VALGRIND_INC", "")   # directory holding valgrind/callgrind.h
 
 # drv: replay/drivers/<drv>/main.cpp holds the entry functions, replay/bench/<drv>.cpp the measurement;
 # bench only: replay/bench/<bench>.cpp holds both.
@@ -50,6 +54,13 @@ P = {
     "xxHash": dict(bench="xxHash", paths=["xxhash.h", "xxh3.h"], inc=["."], srcs=[]),
     "readerwriterqueue": dict(bench="readerwriterqueue", paths=["readerwriterqueue.h", "atomicops.h"], inc=["."], srcs=[]),
     "eigen": dict(bench="eigen", paths=["Eigen"], inc=["."], srcs=[]),
+    "json": dict(bench="json", paths=["single_include"], inc=["single_include"], srcs=[]),
+    "taskflow": dict(bench="taskflow", paths=["taskflow"], inc=["."], srcs=[], cores=2),
+    "pdqsort": dict(bench="pdqsort", paths=["pdqsort.h"], inc=["."], srcs=[]),
+    "lz4": dict(bench="lz4", paths=["lib/lz4.c", "lib/lz4.h"], inc=["lib"], srcs=[]),
+    "dragonbox": dict(bench="dragonbox", paths=["include"], inc=["include"], srcs=[]),
+    "libdivide": dict(bench="libdivide", paths=["libdivide.h"], inc=["."], srcs=[]),
+    "date": dict(bench="date", paths=["include/date/date.h"], inc=["include"], srcs=[]),
 }
 CORES = [int(c) for c in os.environ.get("REPLAY_CORES", "2,4,6,8").split(",")]
 lock = threading.Lock(); free_cores = list(CORES)
@@ -60,7 +71,7 @@ def commits(proj):
     return [l.split(" ", 2) for l in out.splitlines()]
 
 def outdir(proj, cc):
-    return TOP / "out" / (cc + TAG) / proj
+    return TOP / "out" / (cc + TAG + ("-instr" if METRIC == "instr" else "")) / proj
 
 def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
     bench = HERE / "bench" / f"{cfg.get('drv') or cfg['bench']}.cpp"
@@ -83,31 +94,57 @@ def one(proj, cc, h):
     if res.exists() or fail.exists(): return h, "cached"
     with tempfile.TemporaryDirectory() as t:
         t = Path(t); exe = t / "_bench_exe"
-        b = build(proj, cc, h, t, exe)
+        extra = ("-DREPLAY_INSTR", *([f"-I{VALGRIND_INC}"] if VALGRIND_INC else [])) if METRIC == "instr" else ()
+        b = build(proj, cc, h, t, exe, extra=extra)
         if b.returncode:
             fail.write_text("BUILD\n" + b.stderr[:4000]); return h, "build-fail"
         n = P[proj].get("cores", 1)
         with lock: cs = [free_cores.pop(0) for _ in range(n)]
         try:
-            r = subprocess.run(["taskset", "-c", ",".join(map(str, cs)), str(exe)], capture_output=True, text=True, timeout=600)
+            run = [str(exe)] if METRIC != "instr" else [VALGRIND, "--tool=callgrind", f"--callgrind-out-file={t}/cg.out",
+                                                         "--dump-instr=no", "--compress-strings=no", "--compress-pos=no", str(exe)]
+            r = subprocess.run(["taskset", "-c", ",".join(map(str, cs)), *run], capture_output=True, text=True,
+                               timeout=600 if METRIC != "instr" else 3600)
         finally:
             with lock: free_cores[:0] = cs
         lines = [l for l in r.stdout.splitlines() if l.startswith('{"op"')]
+        if METRIC == "instr" and not r.returncode:
+            lines = instr_lines(t, r.stdout)
         if r.returncode or not lines:
             fail.write_text(f"RUN rc={r.returncode}\n" + r.stderr[-3000:]); return h, "run-fail"
         res.write_text("\n".join(lines) + "\n")
     return h, "ok"
 
+def instr_lines(t, stdout):
+    """One JSON line per operation with instructions per call, from callgrind's per-operation dumps."""
+    n = {d["instr_op"]: d["instr_n"] for d in (json.loads(l) for l in stdout.splitlines() if l.startswith('{"instr_op"'))}
+    out = []
+    for f in sorted(Path(t).glob("cg.out.*")):
+        name = ir = None
+        for line in f.read_text(errors="replace").splitlines():
+            if line.startswith("desc: Trigger: Client Request: "): name = line[len("desc: Trigger: Client Request: "):].strip()
+            elif line.startswith(("summary:", "totals:")) and ir is None: ir = int(line.split()[1])
+        if name in n and ir is not None:
+            out.append(json.dumps({"op": name, "instr": round(ir / n[name], 2)}))
+    return out
+
+INSTR_PCT = float(os.environ.get("REPLAY_INSTR_PCT", "3"))   # instruction changes below this are not bisected
+
 def counts_of(out, h):
     f = out / f"{h}.jsonl"
     if not f.exists(): return None
-    return {d["op"]: tuple(round(d[k], 2) for k in ("alloc", "free", "lock", "first_alloc", "first_lock") if k in d)
+    return {d["op"]: (("instr", d["instr"]),) if "instr" in d else
+            tuple(round(d[k], 2) for k in ("alloc", "free", "lock", "first_alloc", "first_lock") if k in d)
             for d in map(json.loads, f.read_text().splitlines())}
 
 def differ(x, y):
     for op in set(x) & set(y):
-        n = min(len(x[op]), len(y[op]))
-        if x[op][:n] != y[op][:n]: return True
+        a, b = x[op], y[op]
+        if a and a[0][0] == "instr" and b and b[0][0] == "instr":
+            if abs(a[0][1] - b[0][1]) * 100 >= INSTR_PCT * max(a[0][1], 1): return True
+            continue
+        n = min(len(a), len(b))
+        if a[:n] != b[:n]: return True
     return False
 
 def refine(proj, cc, cs, j):
