@@ -86,7 +86,10 @@ The first prices of the two rows above came from `price.py`, with the replay's w
 11 % faster for #167, `integer 100` 19 % slower for #307. A standalone benchmark (one `noinline` function,
 21 batches of a million calls, alternating builds) gave insert+erase 11 to 17 % slower and `100` 7 %
 slower. Both harnesses are exact about counts; their times differ with code layout and the loop around
-the call. A price meant for someone else is now confirmed with a second, independent harness.
+the call. A price meant for someone else is now confirmed with a second, independent harness. The
+standalone numbers for #167 were posted to the pull request
+([comment](https://github.com/greg7mdp/parallel-hashmap/pull/167#issuecomment-6961404564)), which had
+asked whether the change helps; nothing else was posted.
 
 ## The compiler matrix
 
