@@ -54,7 +54,7 @@ def main():
     with tempfile.TemporaryDirectory() as t:
         t = Path(t); exes = {}
         for c in (a, b):
-            d = t / c; d.mkdir(); exe = d / "x"
+            d = t / f"c{len(exes)}"; d.mkdir(); exe = d / "x"   # c may be a ref such as refs/hp/pr12
             r = rp.build(proj, cc, full(c), d, exe)
             if r.returncode: sys.exit(f"{c}: build failed\n{r.stderr[:2000]}")
             exes[c] = exe
