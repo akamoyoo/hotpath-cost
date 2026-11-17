@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 36d7151e8d18e4646ce5f415a4fcb0af2b2d9cdf,2018-12-30,build failed,,,,,,,,Merge branch 'workingonmsvs'
 3e74059cc38b62f2be1c1386362c071c07847c0d,2019-01-04,build failed,,,,,,,,Fix the shuffle.
 105ced3b01a8da1401881dead89ef2d101ae4d74,2019-02-26,build failed,,,,,,,,Update single-header version as well as fix c++11 -> c++17 in scripts for this version

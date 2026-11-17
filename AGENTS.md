@@ -82,6 +82,11 @@ library's header; older headers relied on transitive includes.
   CPU N and N+20). The load on other cores changed one build's time by 40 %, and per-commit timings
   from parallel replays jumped by 2x between commits whose machine code was identical. Report the
   median and the spread between rounds, and call a difference real only if it repeats in every round.
+- **Benchmarks with another thread** (a logger's backend, an executor's worker; `cores > 1` in `P`):
+  frees counted on the calling thread depend on which thread drops the last reference, and vary between
+  runs of the same build (Taskflow: 1.4 to 2.8 per call), so `diff.py` and `--refine` do not compare
+  them. Locks can vary slightly too (Taskflow `348ba9b4`: 3.99 to 4.00 per call); treat a change smaller
+  than one per call there as possible noise and rerun both commits.
 - **First-call counts** include one-time set-up and depend on which operation the benchmark runs
   first. Say "first call" explicitly when reporting them.
 - **Static verdicts.** `may` means some path reaches the primitive, not that it runs. `never` and

@@ -1,0 +1,3 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+d81e2f7df7b334fee057e53017388d02e555a836,2026-03-06,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,354.0,Fix llvm20 compile issue in tuple.hpp (#872)
+d81e2f7df7b334fee057e53017388d02e555a836,2026-03-06,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,271.7,Fix llvm20 compile issue in tuple.hpp (#872)

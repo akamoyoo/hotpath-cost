@@ -9,7 +9,7 @@ repository measures it over the whole history of real libraries, and is built on
 
 ## What we learned
 
-Over 15,000 commits of 25 open-source low-latency and numerical C++ libraries ([evidence](docs/insights.md)):
+Over 15,986 commits of 25 open-source low-latency and numerical C++ libraries ([evidence](docs/insights.md)):
 
 1. **Count, don't time.** Allocations, locks and executed instructions per call are exact and
    repeat on every run; per-commit timings jumped 2x between builds with identical machine code.
@@ -69,7 +69,7 @@ reaches are on paths it does not take, such as stop orders and all-or-none match
 
 ## Cases
 
-The four cases behind most of the lessons above ([all libraries](docs/results.md)).
+The five cases behind most of the lessons above ([all libraries](docs/results.md)).
 
 **1. Liquibook's last release allocates twice as often per order** ([details](docs/cases.md#case-1-liquibook-200-allocates-twice-more-per-order)).
 Allocations per add+cancel, counted at every library commit:
@@ -117,6 +117,13 @@ GCC divides by the capacity twice per operation, because the atomic compare-and-
 capacity to be reloaded. LLVM hides the cost with its 64-bit division bypass. The change computes the
 quotient once.
 
+**5. Eigen 5's 4x4 Cholesky solve is 1.5x slower with GCC** ([details](docs/cases.md#case-5-eigen-5s-4x4-cholesky-solve-is-15x-slower-with-gcc)).
+Found by the instruction replay: commit `28c3b26d` "masked load/store framework" (April 2025) raised
+`A.llt().solve(b)` for a `Matrix4d` from 548 to 732 instructions per call. Timed alternately: 1.49x
+slower with GCC 13, 1.40x with GCC 15, 1.11x with clang; between releases 3.4.1 and 5.0.1, 1.48x with
+GCC. `gap.py` shows a new out-of-line masked-segment loop for the factorisation's 1-to-3-element
+updates. Not yet reported upstream.
+
 **Static and run time agree.** On every measured operation of Liquibook and concurrentqueue, every
 allocation and lock seen at run time matches a site of the static analysis (no static miss), and the
 static analysis lists the paths the benchmarks never take ([details](docs/cases.md#static-and-run-time-side-by-side)).
@@ -143,7 +150,7 @@ For a change under review, measuring the merge base and the head is enough:
 
 - [docs/insights.md](docs/insights.md): the lessons above, with their evidence.
 - [docs/cases.md](docs/cases.md): the four cases, and the matching of static and run-time sites.
-- [docs/results.md](docs/results.md): all eighteen libraries, and the compiler matrix.
+- [docs/results.md](docs/results.md): all libraries, and the compiler matrix.
 - [docs/method.md](docs/method.md): how it works, what did not work, what is not claimed, how to
   reproduce every number.
 - [AGENTS.md](AGENTS.md): how a coding agent should run the tool and report results.

@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 681e40ce46c568f66bcbfb33ad34c39c35f75ab4,2014-01-25,build failed,,,,,,,,Initial import
 005dc7e605ceeabbda80679dbc8af1a184d069dc,2014-02-22,build failed,,,,,,,,underscore first in members
 8494590fb3d4fcc8af9c91c3785d7aed3ce7e0f9,2014-03-22,build failed,,,,,,,,astyle+dos2unix

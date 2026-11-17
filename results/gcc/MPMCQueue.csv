@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 c7ee1820427bbf28c1f5ea196c725d12feb8b4b6,2018-09-13,ok,push+pop,0.0,0.0,0.0,0,0,85.5,Merge pull request #6 from rigtorp/dev
 c7ee1820427bbf28c1f5ea196c725d12feb8b4b6,2018-09-13,ok,try_push+try_pop,0.0,0.0,0.0,0,0,52.9,Merge pull request #6 from rigtorp/dev
 46b194e662955dc5d833fab2bac196a3df863d08,2019-10-03,ok,push+pop,0.0,0.0,0.0,0,0,63.2,Replace use of ssize_t with ptrdiff_t

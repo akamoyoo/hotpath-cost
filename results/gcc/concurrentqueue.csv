@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 25ae235718a481ab59c512d7c97f73fad1fbe9ff,2014-11-05,build failed,,,,,,,,Initial commit
 cff5faadf50ad46dfaccc70b8ffaa9e8b4b3cd5f,2014-11-09,build failed,,,,,,,,Fixed compile-time error on VS2013 (I think)
 576978c95397b28a9c61a7ba89ea2473fc45bd5f,2014-11-11,build failed,,,,,,,,"Another fix for VS2013 (issue #3), plus comment tweaks"

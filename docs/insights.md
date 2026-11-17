@@ -20,6 +20,15 @@ difference in the code. Timing has no such property:
 - Instruction counts of the same build repeat exactly: fast_float's four parses took 155, 97, 239 and
   198 instructions in each of three runs.
 
+Exactness has one limit: it holds for work that the calling thread does itself. In a benchmark with
+a worker thread (Taskflow's executor), frees counted on the calling thread vary between runs of the
+same build, from 1.4 to 2.8 per call, because either thread may drop the last reference first. A first
+replay of Taskflow's history reported 260 "changes", nearly all of them that. Allocations and locks
+on the calling thread did repeat (with a rare 3.99 instead of 4.00 locks per call), and without frees
+the history shows 20 changes, which match their commits ("removed the waiter vector in
+AtomicNotifier": one lock fewer per call). The replay no longer compares frees when the benchmark has
+another thread.
+
 So the replay finds changes with counts and puts a price on them by timing only the two commits
 concerned, alternately, on one idle physical core (`replay/price.py`).
 
@@ -41,10 +50,12 @@ direction. The size of the effect on time varied by a factor of more than 20:
 | xxHash `d9dfb820`, XXH64 over 1 KiB | -14 % | -1 % |
 | Eigen, 4x4 Cholesky, GCC 13 `-O2` to `-O3` | -35 % | -5 % |
 | Eigen, 8x8 matrix-vector, GCC 13 to GCC 15 at `-O2` | +13 % | +29 % |
+| Eigen `28c3b26d`, 4x4 Cholesky solve, GCC 13 | +34 % | +49 % |
 
 Code bound by a dependency chain (a multiply chain in XXH64, square roots and divisions in Cholesky)
 hides most of an instruction change. Code bound by the number of instructions passes it on almost
-one to one (fast_float). The Eigen case goes the other way: time grew twice as much as instructions.
+one to one (fast_float). The Eigen cases go the other way: time grew more than instructions, up to twice
+as much.
 An instruction count is a detector, and the price has to be measured.
 
 ## 3. A machine-code difference is not a cost
@@ -111,6 +122,10 @@ run time in the measured Liquibook and concurrentqueue operations matches a stat
   release tag sits between the two commits, and there is no later release.
 - concurrentqueue's first `try_enqueue` on each thread has taken a mutex since a 2022 fix for a
   use-after-free: a cost paid for correctness, visible only on the first call.
+
+- Eigen's 4x4 Cholesky solve became 1.5x slower with GCC in April 2025, inside a 1,363-line commit
+  that added a masked load/store framework. It shipped in 5.0.0 and 5.0.1 and is still there at the
+  latest commit (1.30x).
 
 None of these was a bug, and none was caught by tests. Each is a one-line difference in an exact count
 at the commit that made it.

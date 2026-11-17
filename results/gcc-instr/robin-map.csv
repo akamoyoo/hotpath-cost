@@ -1,0 +1,218 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+29e001269bcb6908d55b7323dff5e36a5a8f26d1,2018-09-16,ok,find (hit),,,,,,,Move headers from tsl to include/tsl for coherence with other C++ projects.,50.11
+29e001269bcb6908d55b7323dff5e36a5a8f26d1,2018-09-16,ok,find (miss),,,,,,,Move headers from tsl to include/tsl for coherence with other C++ projects.,54.42
+29e001269bcb6908d55b7323dff5e36a5a8f26d1,2018-09-16,ok,insert+erase,,,,,,,Move headers from tsl to include/tsl for coherence with other C++ projects.,123.08
+29e001269bcb6908d55b7323dff5e36a5a8f26d1,2018-09-16,ok,operator[] (hit),,,,,,,Move headers from tsl to include/tsl for coherence with other C++ projects.,56.35
+cb69fb50168128f5638703fda361c99b7ea1dd9e,2018-09-17,ok,find (hit),,,,,,,Use TSL_RH prefix for macros instead of just TSL.,50.11
+cb69fb50168128f5638703fda361c99b7ea1dd9e,2018-09-17,ok,find (miss),,,,,,,Use TSL_RH prefix for macros instead of just TSL.,54.42
+cb69fb50168128f5638703fda361c99b7ea1dd9e,2018-09-17,ok,insert+erase,,,,,,,Use TSL_RH prefix for macros instead of just TSL.,123.08
+cb69fb50168128f5638703fda361c99b7ea1dd9e,2018-09-17,ok,operator[] (hit),,,,,,,Use TSL_RH prefix for macros instead of just TSL.,56.35
+7b73ef9911bd0a3e0756f663d4d7259a05cb979e,2019-01-13,ok,find (hit),,,,,,,Rename some internal variables for better code clarity.,49.9
+7b73ef9911bd0a3e0756f663d4d7259a05cb979e,2019-01-13,ok,find (miss),,,,,,,Rename some internal variables for better code clarity.,54.91
+7b73ef9911bd0a3e0756f663d4d7259a05cb979e,2019-01-13,ok,insert+erase,,,,,,,Rename some internal variables for better code clarity.,120.52
+7b73ef9911bd0a3e0756f663d4d7259a05cb979e,2019-01-13,ok,operator[] (hit),,,,,,,Rename some internal variables for better code clarity.,54.14
+8d494bc23923dbb047936ed0e1e03243dc9e5d1f,2019-01-14,ok,find (hit),,,,,,,Change error message when max_bucket_count is reached. It's the maximum bucket count that has been reached and not the size.,49.9
+8d494bc23923dbb047936ed0e1e03243dc9e5d1f,2019-01-14,ok,find (miss),,,,,,,Change error message when max_bucket_count is reached. It's the maximum bucket count that has been reached and not the size.,54.91
+8d494bc23923dbb047936ed0e1e03243dc9e5d1f,2019-01-14,ok,insert+erase,,,,,,,Change error message when max_bucket_count is reached. It's the maximum bucket count that has been reached and not the size.,120.52
+8d494bc23923dbb047936ed0e1e03243dc9e5d1f,2019-01-14,ok,operator[] (hit),,,,,,,Change error message when max_bucket_count is reached. It's the maximum bucket count that has been reached and not the size.,54.14
+5e4b5e3a6b0dd4558d5dc8610527828383b19946,2019-01-20,ok,find (hit),,,,,,,Set bucket count for default contructed map/set to 0 to avoid any allocation.,49.9
+5e4b5e3a6b0dd4558d5dc8610527828383b19946,2019-01-20,ok,find (miss),,,,,,,Set bucket count for default contructed map/set to 0 to avoid any allocation.,54.91
+5e4b5e3a6b0dd4558d5dc8610527828383b19946,2019-01-20,ok,insert+erase,,,,,,,Set bucket count for default contructed map/set to 0 to avoid any allocation.,120.52
+5e4b5e3a6b0dd4558d5dc8610527828383b19946,2019-01-20,ok,operator[] (hit),,,,,,,Set bucket count for default contructed map/set to 0 to avoid any allocation.,54.14
+10b9ef0a12f644ed1841fea854a540dd1509de0c,2019-02-12,ok,find (hit),,,,,,,"Fix compilation error with GCC 9, the implicit copy/move constructor/operator of the iterator were not generated  (#12)",49.9
+10b9ef0a12f644ed1841fea854a540dd1509de0c,2019-02-12,ok,find (miss),,,,,,,"Fix compilation error with GCC 9, the implicit copy/move constructor/operator of the iterator were not generated  (#12)",54.91
+10b9ef0a12f644ed1841fea854a540dd1509de0c,2019-02-12,ok,insert+erase,,,,,,,"Fix compilation error with GCC 9, the implicit copy/move constructor/operator of the iterator were not generated  (#12)",120.52
+10b9ef0a12f644ed1841fea854a540dd1509de0c,2019-02-12,ok,operator[] (hit),,,,,,,"Fix compilation error with GCC 9, the implicit copy/move constructor/operator of the iterator were not generated  (#12)",54.14
+1855aad969d13f6ec09a66f049201334b703c6a8,2019-02-13,ok,find (hit),,,,,,,Rename the internal 'insert' with hint method to 'insert_hint' to avoid a potential ambiguous overload with the 'insert' with a pair of iterators.,49.9
+1855aad969d13f6ec09a66f049201334b703c6a8,2019-02-13,ok,find (miss),,,,,,,Rename the internal 'insert' with hint method to 'insert_hint' to avoid a potential ambiguous overload with the 'insert' with a pair of iterators.,54.91
+1855aad969d13f6ec09a66f049201334b703c6a8,2019-02-13,ok,insert+erase,,,,,,,Rename the internal 'insert' with hint method to 'insert_hint' to avoid a potential ambiguous overload with the 'insert' with a pair of iterators.,120.52
+1855aad969d13f6ec09a66f049201334b703c6a8,2019-02-13,ok,operator[] (hit),,,,,,,Rename the internal 'insert' with hint method to 'insert_hint' to avoid a potential ambiguous overload with the 'insert' with a pair of iterators.,54.14
+5d3f52f4ef86e321bdcb1cb4521fa8f45c0043c9,2019-02-25,ok,find (hit),,,,,,,Fix compilation error for move-only types with a throwing move constructor/operator. (#14),49.9
+5d3f52f4ef86e321bdcb1cb4521fa8f45c0043c9,2019-02-25,ok,find (miss),,,,,,,Fix compilation error for move-only types with a throwing move constructor/operator. (#14),54.91
+5d3f52f4ef86e321bdcb1cb4521fa8f45c0043c9,2019-02-25,ok,insert+erase,,,,,,,Fix compilation error for move-only types with a throwing move constructor/operator. (#14),120.52
+5d3f52f4ef86e321bdcb1cb4521fa8f45c0043c9,2019-02-25,ok,operator[] (hit),,,,,,,Fix compilation error for move-only types with a throwing move constructor/operator. (#14),54.14
+a27938076c7d6ca77ee463d47fd1774753f56576,2019-04-28,ok,find (hit),,,,,,,Add support for min_load_factor (#17).,49.9
+a27938076c7d6ca77ee463d47fd1774753f56576,2019-04-28,ok,find (miss),,,,,,,Add support for min_load_factor (#17).,54.91
+a27938076c7d6ca77ee463d47fd1774753f56576,2019-04-28,ok,insert+erase,,,,,,,Add support for min_load_factor (#17).,129.42
+a27938076c7d6ca77ee463d47fd1774753f56576,2019-04-28,ok,operator[] (hit),,,,,,,Add support for min_load_factor (#17).,50.14
+60a2fe59abf5b61005320abc157b0f3fd0257e4a,2019-05-12,ok,find (hit),,,,,,,Fix compilation error when exceptions are disabled and C++ 14 or higher is used. (#18),49.9
+60a2fe59abf5b61005320abc157b0f3fd0257e4a,2019-05-12,ok,find (miss),,,,,,,Fix compilation error when exceptions are disabled and C++ 14 or higher is used. (#18),54.91
+60a2fe59abf5b61005320abc157b0f3fd0257e4a,2019-05-12,ok,insert+erase,,,,,,,Fix compilation error when exceptions are disabled and C++ 14 or higher is used. (#18),129.42
+60a2fe59abf5b61005320abc157b0f3fd0257e4a,2019-05-12,ok,operator[] (hit),,,,,,,Fix compilation error when exceptions are disabled and C++ 14 or higher is used. (#18),50.14
+580391e68911af70caf0d7685048bc69a31bcca4,2019-05-18,ok,find (hit),,,,,,,Add documentation on the 'Swappable' requirement of 'Key' and 'T' (#19).,49.9
+580391e68911af70caf0d7685048bc69a31bcca4,2019-05-18,ok,find (miss),,,,,,,Add documentation on the 'Swappable' requirement of 'Key' and 'T' (#19).,54.91
+580391e68911af70caf0d7685048bc69a31bcca4,2019-05-18,ok,insert+erase,,,,,,,Add documentation on the 'Swappable' requirement of 'Key' and 'T' (#19).,129.42
+580391e68911af70caf0d7685048bc69a31bcca4,2019-05-18,ok,operator[] (hit),,,,,,,Add documentation on the 'Swappable' requirement of 'Key' and 'T' (#19).,50.14
+7d079e8cb33ab93f1d42c5f3f84c8688932b6d55,2019-05-18,ok,find (hit),,,,,,,Add information on the copy and/or move constructible requirement of 'Key' and 'T'.,49.9
+7d079e8cb33ab93f1d42c5f3f84c8688932b6d55,2019-05-18,ok,find (miss),,,,,,,Add information on the copy and/or move constructible requirement of 'Key' and 'T'.,54.91
+7d079e8cb33ab93f1d42c5f3f84c8688932b6d55,2019-05-18,ok,insert+erase,,,,,,,Add information on the copy and/or move constructible requirement of 'Key' and 'T'.,129.42
+7d079e8cb33ab93f1d42c5f3f84c8688932b6d55,2019-05-18,ok,operator[] (hit),,,,,,,Add information on the copy and/or move constructible requirement of 'Key' and 'T'.,50.14
+02f526cf1debef75a48839608dda29a1ef53834c,2019-08-15,ok,find (hit),,,,,,,Add possibility to compile the tests with exceptions disabled.,49.9
+02f526cf1debef75a48839608dda29a1ef53834c,2019-08-15,ok,find (miss),,,,,,,Add possibility to compile the tests with exceptions disabled.,54.91
+02f526cf1debef75a48839608dda29a1ef53834c,2019-08-15,ok,insert+erase,,,,,,,Add possibility to compile the tests with exceptions disabled.,129.42
+02f526cf1debef75a48839608dda29a1ef53834c,2019-08-15,ok,operator[] (hit),,,,,,,Add possibility to compile the tests with exceptions disabled.,50.14
+73959d62e3e75dcdf44763e9db78e44c1a302146,2019-09-25,ok,find (hit),,,,,,,Fix issue #23. The 'distance_type' used to store the distance of a value in a bucket from its ideal bucket could overflow when a lot of collisions happened and the load_factor() stayed below REHASH_ON_HIGH_NB_PROBES__MIN_LOAD_FACTOR. We now rehash no matter the load factor if the distance becomes too high.,49.9
+73959d62e3e75dcdf44763e9db78e44c1a302146,2019-09-25,ok,find (miss),,,,,,,Fix issue #23. The 'distance_type' used to store the distance of a value in a bucket from its ideal bucket could overflow when a lot of collisions happened and the load_factor() stayed below REHASH_ON_HIGH_NB_PROBES__MIN_LOAD_FACTOR. We now rehash no matter the load factor if the distance becomes too high.,54.91
+73959d62e3e75dcdf44763e9db78e44c1a302146,2019-09-25,ok,insert+erase,,,,,,,Fix issue #23. The 'distance_type' used to store the distance of a value in a bucket from its ideal bucket could overflow when a lot of collisions happened and the load_factor() stayed below REHASH_ON_HIGH_NB_PROBES__MIN_LOAD_FACTOR. We now rehash no matter the load factor if the distance becomes too high.,128.22
+73959d62e3e75dcdf44763e9db78e44c1a302146,2019-09-25,ok,operator[] (hit),,,,,,,Fix issue #23. The 'distance_type' used to store the distance of a value in a bucket from its ideal bucket could overflow when a lot of collisions happened and the load_factor() stayed below REHASH_ON_HIGH_NB_PROBES__MIN_LOAD_FACTOR. We now rehash no matter the load factor if the distance becomes too high.,50.14
+9a3a4f3f27facf5f0ff01b31bedf96c81387775c,2019-09-25,ok,find (hit),,,,,,,Fix typo in comment.,49.9
+9a3a4f3f27facf5f0ff01b31bedf96c81387775c,2019-09-25,ok,find (miss),,,,,,,Fix typo in comment.,54.91
+9a3a4f3f27facf5f0ff01b31bedf96c81387775c,2019-09-25,ok,insert+erase,,,,,,,Fix typo in comment.,128.22
+9a3a4f3f27facf5f0ff01b31bedf96c81387775c,2019-09-25,ok,operator[] (hit),,,,,,,Fix typo in comment.,50.14
+f66212139c152dbf7eb3e24d95e30a4861c66a7b,2019-09-25,ok,find (hit),,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 4096.,49.9
+f66212139c152dbf7eb3e24d95e30a4861c66a7b,2019-09-25,ok,find (miss),,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 4096.,54.91
+f66212139c152dbf7eb3e24d95e30a4861c66a7b,2019-09-25,ok,insert+erase,,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 4096.,128.22
+f66212139c152dbf7eb3e24d95e30a4861c66a7b,2019-09-25,ok,operator[] (hit),,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 4096.,50.14
+425a213b17705fb9331103fe6a30a881d625ec71,2019-09-25,ok,find (hit),,,,,,,Add 'bool contains(...)' methods.,49.9
+425a213b17705fb9331103fe6a30a881d625ec71,2019-09-25,ok,find (miss),,,,,,,Add 'bool contains(...)' methods.,54.91
+425a213b17705fb9331103fe6a30a881d625ec71,2019-09-25,ok,insert+erase,,,,,,,Add 'bool contains(...)' methods.,128.22
+425a213b17705fb9331103fe6a30a881d625ec71,2019-09-25,ok,operator[] (hit),,,,,,,Add 'bool contains(...)' methods.,50.14
+e4316eb284d87f37b93334808bd4aa7e7d819c85,2019-10-25,ok,find (hit),,,,,,,Raise the maximum possible size of the hash table when using the prime_growth_policy on a 64-bit platform. Fix issue #26.,49.9
+e4316eb284d87f37b93334808bd4aa7e7d819c85,2019-10-25,ok,find (miss),,,,,,,Raise the maximum possible size of the hash table when using the prime_growth_policy on a 64-bit platform. Fix issue #26.,54.91
+e4316eb284d87f37b93334808bd4aa7e7d819c85,2019-10-25,ok,insert+erase,,,,,,,Raise the maximum possible size of the hash table when using the prime_growth_policy on a 64-bit platform. Fix issue #26.,128.22
+e4316eb284d87f37b93334808bd4aa7e7d819c85,2019-10-25,ok,operator[] (hit),,,,,,,Raise the maximum possible size of the hash table when using the prime_growth_policy on a 64-bit platform. Fix issue #26.,50.14
+0e0df6c99a442984bcd3899f66964985cf903e99,2020-03-28,ok,find (hit),,,,,,,Make static_empty_bucket_ptr() function noexcept for better readability when used in noexcept functions.,49.9
+0e0df6c99a442984bcd3899f66964985cf903e99,2020-03-28,ok,find (miss),,,,,,,Make static_empty_bucket_ptr() function noexcept for better readability when used in noexcept functions.,54.91
+0e0df6c99a442984bcd3899f66964985cf903e99,2020-03-28,ok,insert+erase,,,,,,,Make static_empty_bucket_ptr() function noexcept for better readability when used in noexcept functions.,128.22
+0e0df6c99a442984bcd3899f66964985cf903e99,2020-03-28,ok,operator[] (hit),,,,,,,Make static_empty_bucket_ptr() function noexcept for better readability when used in noexcept functions.,50.14
+cb6b7cf8c71ecb2edba2efff1e6119d2ab1a3593,2020-03-28,ok,find (hit),,,,,,,"Fix issue #31. When 'min_load_factor()' > 0, the 'clear()' method will also reset the 'bucket_count' of the hash table to 0.",49.9
+cb6b7cf8c71ecb2edba2efff1e6119d2ab1a3593,2020-03-28,ok,find (miss),,,,,,,"Fix issue #31. When 'min_load_factor()' > 0, the 'clear()' method will also reset the 'bucket_count' of the hash table to 0.",54.91
+cb6b7cf8c71ecb2edba2efff1e6119d2ab1a3593,2020-03-28,ok,insert+erase,,,,,,,"Fix issue #31. When 'min_load_factor()' > 0, the 'clear()' method will also reset the 'bucket_count' of the hash table to 0.",128.22
+cb6b7cf8c71ecb2edba2efff1e6119d2ab1a3593,2020-03-28,ok,operator[] (hit),,,,,,,"Fix issue #31. When 'min_load_factor()' > 0, the 'clear()' method will also reset the 'bucket_count' of the hash table to 0.",50.14
+f26e2ebb128762d8a53449988ac2881368a96fad,2020-03-30,ok,find (hit),,,,,,,Remove erroneous comment.,49.9
+f26e2ebb128762d8a53449988ac2881368a96fad,2020-03-30,ok,find (miss),,,,,,,Remove erroneous comment.,54.91
+f26e2ebb128762d8a53449988ac2881368a96fad,2020-03-30,ok,insert+erase,,,,,,,Remove erroneous comment.,128.22
+f26e2ebb128762d8a53449988ac2881368a96fad,2020-03-30,ok,operator[] (hit),,,,,,,Remove erroneous comment.,50.14
+c3e86d3935689cce72dadaa695abd22073f61582,2020-04-11,ok,find (hit),,,,,,,Add full name in license.,49.9
+c3e86d3935689cce72dadaa695abd22073f61582,2020-04-11,ok,find (miss),,,,,,,Add full name in license.,54.91
+c3e86d3935689cce72dadaa695abd22073f61582,2020-04-11,ok,insert+erase,,,,,,,Add full name in license.,128.22
+c3e86d3935689cce72dadaa695abd22073f61582,2020-04-11,ok,operator[] (hit),,,,,,,Add full name in license.,50.14
+a3451bde492b82ff4ad404c4ed568cdd8eab2721,2020-04-13,ok,find (hit),,,,,,,Reorder the members of robin_hash.,49.9
+a3451bde492b82ff4ad404c4ed568cdd8eab2721,2020-04-13,ok,find (miss),,,,,,,Reorder the members of robin_hash.,54.91
+a3451bde492b82ff4ad404c4ed568cdd8eab2721,2020-04-13,ok,insert+erase,,,,,,,Reorder the members of robin_hash.,128.22
+a3451bde492b82ff4ad404c4ed568cdd8eab2721,2020-04-13,ok,operator[] (hit),,,,,,,Reorder the members of robin_hash.,50.14
+5c6b2e5c55239999f989e996bcede0e1f46056f7,2020-04-17,ok,find (hit),,,,,,,Fix shrink when min_load_factor is set and a range erase with end() as last is called. The m_try_skrink_on_next_insert was not correctly set.,49.9
+5c6b2e5c55239999f989e996bcede0e1f46056f7,2020-04-17,ok,find (miss),,,,,,,Fix shrink when min_load_factor is set and a range erase with end() as last is called. The m_try_skrink_on_next_insert was not correctly set.,54.91
+5c6b2e5c55239999f989e996bcede0e1f46056f7,2020-04-17,ok,insert+erase,,,,,,,Fix shrink when min_load_factor is set and a range erase with end() as last is called. The m_try_skrink_on_next_insert was not correctly set.,128.22
+5c6b2e5c55239999f989e996bcede0e1f46056f7,2020-04-17,ok,operator[] (hit),,,,,,,Fix shrink when min_load_factor is set and a range erase with end() as last is called. The m_try_skrink_on_next_insert was not correctly set.,50.14
+4d1666633e2dbca94cf63b5ebd73b3876ab10a57,2020-05-17,ok,find (hit),,,,,,,Fix issue #33. The value function of a 'const iterator' can now be called and returns a mutable reference to the underlying 'value_type'.,49.9
+4d1666633e2dbca94cf63b5ebd73b3876ab10a57,2020-05-17,ok,find (miss),,,,,,,Fix issue #33. The value function of a 'const iterator' can now be called and returns a mutable reference to the underlying 'value_type'.,54.91
+4d1666633e2dbca94cf63b5ebd73b3876ab10a57,2020-05-17,ok,insert+erase,,,,,,,Fix issue #33. The value function of a 'const iterator' can now be called and returns a mutable reference to the underlying 'value_type'.,128.22
+4d1666633e2dbca94cf63b5ebd73b3876ab10a57,2020-05-17,ok,operator[] (hit),,,,,,,Fix issue #33. The value function of a 'const iterator' can now be called and returns a mutable reference to the underlying 'value_type'.,50.14
+5cf53c6f5d81ba31a475f66ac4a61c6f54e476d3,2020-05-17,ok,find (hit),,,,,,,Fix typos.,49.9
+5cf53c6f5d81ba31a475f66ac4a61c6f54e476d3,2020-05-17,ok,find (miss),,,,,,,Fix typos.,54.91
+5cf53c6f5d81ba31a475f66ac4a61c6f54e476d3,2020-05-17,ok,insert+erase,,,,,,,Fix typos.,128.22
+5cf53c6f5d81ba31a475f66ac4a61c6f54e476d3,2020-05-17,ok,operator[] (hit),,,,,,,Fix typos.,50.14
+997a30d2990704efd67ae2f0047732514dde9d02,2020-08-09,ok,find (hit),,,,,,,Add and use TSL_RH_UNUSED macro.,49.9
+997a30d2990704efd67ae2f0047732514dde9d02,2020-08-09,ok,find (miss),,,,,,,Add and use TSL_RH_UNUSED macro.,54.91
+997a30d2990704efd67ae2f0047732514dde9d02,2020-08-09,ok,insert+erase,,,,,,,Add and use TSL_RH_UNUSED macro.,128.22
+997a30d2990704efd67ae2f0047732514dde9d02,2020-08-09,ok,operator[] (hit),,,,,,,Add and use TSL_RH_UNUSED macro.,50.14
+dc2023b02e35e51b386fbd7ab524b0f56d491965,2020-08-23,ok,find (hit),,,,,,,Add support for efficient serialization (#36),49.9
+dc2023b02e35e51b386fbd7ab524b0f56d491965,2020-08-23,ok,find (miss),,,,,,,Add support for efficient serialization (#36),54.91
+dc2023b02e35e51b386fbd7ab524b0f56d491965,2020-08-23,ok,insert+erase,,,,,,,Add support for efficient serialization (#36),128.22
+dc2023b02e35e51b386fbd7ab524b0f56d491965,2020-08-23,ok,operator[] (hit),,,,,,,Add support for efficient serialization (#36),50.14
+84c1bee16e2449c28589ccd6ab366df257d18c24,2020-11-08,ok,find (hit),,,,,,,Apply clang-format with Google style to the source code,49.9
+84c1bee16e2449c28589ccd6ab366df257d18c24,2020-11-08,ok,find (miss),,,,,,,Apply clang-format with Google style to the source code,54.91
+84c1bee16e2449c28589ccd6ab366df257d18c24,2020-11-08,ok,insert+erase,,,,,,,Apply clang-format with Google style to the source code,128.22
+84c1bee16e2449c28589ccd6ab366df257d18c24,2020-11-08,ok,operator[] (hit),,,,,,,Apply clang-format with Google style to the source code,50.14
+a603419b9a0687c9148e02c8bd5e3db180bb9ac0,2021-02-13,ok,find (hit),,,,,,,Remove compilation error when -Wshadow flag is set (#41),49.9
+a603419b9a0687c9148e02c8bd5e3db180bb9ac0,2021-02-13,ok,find (miss),,,,,,,Remove compilation error when -Wshadow flag is set (#41),54.91
+a603419b9a0687c9148e02c8bd5e3db180bb9ac0,2021-02-13,ok,insert+erase,,,,,,,Remove compilation error when -Wshadow flag is set (#41),128.22
+a603419b9a0687c9148e02c8bd5e3db180bb9ac0,2021-02-13,ok,operator[] (hit),,,,,,,Remove compilation error when -Wshadow flag is set (#41),50.14
+a24e904455aa0bf09f9c7dc4f740ffe00f220907,2022-02-27,ok,find (hit),,,,,,,"Fix USE_STORED_HASH_ON_REHASH to return true when bucket_count is 0, STORE_HASH is true and is_power_of_two_policy<GrowthPolicy>::value is true",49.9
+a24e904455aa0bf09f9c7dc4f740ffe00f220907,2022-02-27,ok,find (miss),,,,,,,"Fix USE_STORED_HASH_ON_REHASH to return true when bucket_count is 0, STORE_HASH is true and is_power_of_two_policy<GrowthPolicy>::value is true",54.91
+a24e904455aa0bf09f9c7dc4f740ffe00f220907,2022-02-27,ok,insert+erase,,,,,,,"Fix USE_STORED_HASH_ON_REHASH to return true when bucket_count is 0, STORE_HASH is true and is_power_of_two_policy<GrowthPolicy>::value is true",128.22
+a24e904455aa0bf09f9c7dc4f740ffe00f220907,2022-02-27,ok,operator[] (hit),,,,,,,"Fix USE_STORED_HASH_ON_REHASH to return true when bucket_count is 0, STORE_HASH is true and is_power_of_two_policy<GrowthPolicy>::value is true",50.14
+0c3c8582dbd538701290e59c90e90892c21f591e,2022-04-17,ok,find (hit),,,,,,,Check that bucket_count doesn't exceed max_bucket_count() after the constructor initialization,49.9
+0c3c8582dbd538701290e59c90e90892c21f591e,2022-04-17,ok,find (miss),,,,,,,Check that bucket_count doesn't exceed max_bucket_count() after the constructor initialization,54.91
+0c3c8582dbd538701290e59c90e90892c21f591e,2022-04-17,ok,insert+erase,,,,,,,Check that bucket_count doesn't exceed max_bucket_count() after the constructor initialization,128.22
+0c3c8582dbd538701290e59c90e90892c21f591e,2022-04-17,ok,operator[] (hit),,,,,,,Check that bucket_count doesn't exceed max_bucket_count() after the constructor initialization,50.14
+37e94dcdb201f05633155aabf7def56d47ac8ab4,2022-04-30,ok,find (hit),,,,,,,"When exceptions are disabled, only print the error message when defined(TSL_DEBUG) instead of !defined(NDEBUG)",49.9
+37e94dcdb201f05633155aabf7def56d47ac8ab4,2022-04-30,ok,find (miss),,,,,,,"When exceptions are disabled, only print the error message when defined(TSL_DEBUG) instead of !defined(NDEBUG)",54.91
+37e94dcdb201f05633155aabf7def56d47ac8ab4,2022-04-30,ok,insert+erase,,,,,,,"When exceptions are disabled, only print the error message when defined(TSL_DEBUG) instead of !defined(NDEBUG)",128.22
+37e94dcdb201f05633155aabf7def56d47ac8ab4,2022-04-30,ok,operator[] (hit),,,,,,,"When exceptions are disabled, only print the error message when defined(TSL_DEBUG) instead of !defined(NDEBUG)",50.14
+c7595ba0582e832dfd7c3cbd8c6788faf3d88478,2022-04-30,ok,find (hit),,,,,,,Apply clang-format --style=Google,49.9
+c7595ba0582e832dfd7c3cbd8c6788faf3d88478,2022-04-30,ok,find (miss),,,,,,,Apply clang-format --style=Google,54.91
+c7595ba0582e832dfd7c3cbd8c6788faf3d88478,2022-04-30,ok,insert+erase,,,,,,,Apply clang-format --style=Google,128.22
+c7595ba0582e832dfd7c3cbd8c6788faf3d88478,2022-04-30,ok,operator[] (hit),,,,,,,Apply clang-format --style=Google,50.14
+4abcc978b94478febddd76594a2c1ecb7d5fc5f3,2022-05-21,ok,find (hit),,,,,,,"When using C++17, std::launder the reinterpreted pointer from std::aligned_storage to adapt to the change of object model introduced in P0137R1. Fix potential undefined behaviour.",49.9
+4abcc978b94478febddd76594a2c1ecb7d5fc5f3,2022-05-21,ok,find (miss),,,,,,,"When using C++17, std::launder the reinterpreted pointer from std::aligned_storage to adapt to the change of object model introduced in P0137R1. Fix potential undefined behaviour.",54.91
+4abcc978b94478febddd76594a2c1ecb7d5fc5f3,2022-05-21,ok,insert+erase,,,,,,,"When using C++17, std::launder the reinterpreted pointer from std::aligned_storage to adapt to the change of object model introduced in P0137R1. Fix potential undefined behaviour.",128.22
+4abcc978b94478febddd76594a2c1ecb7d5fc5f3,2022-05-21,ok,operator[] (hit),,,,,,,"When using C++17, std::launder the reinterpreted pointer from std::aligned_storage to adapt to the change of object model introduced in P0137R1. Fix potential undefined behaviour.",51.35
+f1e7457a71b0ddb47f99ab51dc01d80d7d80d81e,2022-05-21,ok,find (hit),,,,,,,Clear and shrink the moved hash table in the move operator to be coherent with the move constructor,49.9
+f1e7457a71b0ddb47f99ab51dc01d80d7d80d81e,2022-05-21,ok,find (miss),,,,,,,Clear and shrink the moved hash table in the move operator to be coherent with the move constructor,54.91
+f1e7457a71b0ddb47f99ab51dc01d80d7d80d81e,2022-05-21,ok,insert+erase,,,,,,,Clear and shrink the moved hash table in the move operator to be coherent with the move constructor,128.22
+f1e7457a71b0ddb47f99ab51dc01d80d7d80d81e,2022-05-21,ok,operator[] (hit),,,,,,,Clear and shrink the moved hash table in the move operator to be coherent with the move constructor,51.35
+ac1e3d8481ac635067141a0e0bd57fe3088dcdc9,2022-05-21,ok,find (hit),,,,,,,Add some extra assertions for clarity and ease of debug,49.9
+ac1e3d8481ac635067141a0e0bd57fe3088dcdc9,2022-05-21,ok,find (miss),,,,,,,Add some extra assertions for clarity and ease of debug,54.91
+ac1e3d8481ac635067141a0e0bd57fe3088dcdc9,2022-05-21,ok,insert+erase,,,,,,,Add some extra assertions for clarity and ease of debug,128.22
+ac1e3d8481ac635067141a0e0bd57fe3088dcdc9,2022-05-21,ok,operator[] (hit),,,,,,,Add some extra assertions for clarity and ease of debug,51.35
+f8e0f679d2fad8b47f6300f25ab844fd49a1f7e5,2022-06-13,ok,find (hit),,,,,,,Add assertion to make sure that static_empty_bucket_ptr is empty,49.9
+f8e0f679d2fad8b47f6300f25ab844fd49a1f7e5,2022-06-13,ok,find (miss),,,,,,,Add assertion to make sure that static_empty_bucket_ptr is empty,54.91
+f8e0f679d2fad8b47f6300f25ab844fd49a1f7e5,2022-06-13,ok,insert+erase,,,,,,,Add assertion to make sure that static_empty_bucket_ptr is empty,128.22
+f8e0f679d2fad8b47f6300f25ab844fd49a1f7e5,2022-06-13,ok,operator[] (hit),,,,,,,Add assertion to make sure that static_empty_bucket_ptr is empty,51.35
+d3131e44bb7cf9341ce99a3935f32483e8b59265,2022-12-18,ok,find (hit),,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 8192,49.9
+d3131e44bb7cf9341ce99a3935f32483e8b59265,2022-12-18,ok,find (miss),,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 8192,54.91
+d3131e44bb7cf9341ce99a3935f32483e8b59265,2022-12-18,ok,insert+erase,,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 8192,128.22
+d3131e44bb7cf9341ce99a3935f32483e8b59265,2022-12-18,ok,operator[] (hit),,,,,,,Raise DIST_FROM_IDEAL_BUCKET_LIMIT to 8192,51.35
+57c9b65e517f7a9ca24df632f26b0fd1ba5a18f9,2022-12-18,ok,find (hit),,,,,,,Replace depecrated std::aligned_storage since C++23 by alignas (#61),49.9
+57c9b65e517f7a9ca24df632f26b0fd1ba5a18f9,2022-12-18,ok,find (miss),,,,,,,Replace depecrated std::aligned_storage since C++23 by alignas (#61),54.91
+57c9b65e517f7a9ca24df632f26b0fd1ba5a18f9,2022-12-18,ok,insert+erase,,,,,,,Replace depecrated std::aligned_storage since C++23 by alignas (#61),128.22
+57c9b65e517f7a9ca24df632f26b0fd1ba5a18f9,2022-12-18,ok,operator[] (hit),,,,,,,Replace depecrated std::aligned_storage since C++23 by alignas (#61),51.35
+68ff7325b3898fca267a103bad5c509e8861144d,2022-12-29,ok,find (hit),,,,,,,Keep rehashing if dist_from_ideal_bucket is > DIST_FROM_IDEAL_BUCKET_LIMIT during insertion (fix issue #52),49.9
+68ff7325b3898fca267a103bad5c509e8861144d,2022-12-29,ok,find (miss),,,,,,,Keep rehashing if dist_from_ideal_bucket is > DIST_FROM_IDEAL_BUCKET_LIMIT during insertion (fix issue #52),54.91
+68ff7325b3898fca267a103bad5c509e8861144d,2022-12-29,ok,insert+erase,,,,,,,Keep rehashing if dist_from_ideal_bucket is > DIST_FROM_IDEAL_BUCKET_LIMIT during insertion (fix issue #52),161.89
+68ff7325b3898fca267a103bad5c509e8861144d,2022-12-29,ok,operator[] (hit),,,,,,,Keep rehashing if dist_from_ideal_bucket is > DIST_FROM_IDEAL_BUCKET_LIMIT during insertion (fix issue #52),51.35
+0430aee4df9d213ed5be24ad0a5006eb30b95cdd,2023-09-16,build failed,,,,,,,,Mark error_message in numeric_cast as unused
+5eace6f74c9edff8e264c2d26a85365ad9ea149c,2023-09-25,ok,find (hit),,,,,,,Fix build error due to missing semicolon,49.9
+5eace6f74c9edff8e264c2d26a85365ad9ea149c,2023-09-25,ok,find (miss),,,,,,,Fix build error due to missing semicolon,54.91
+5eace6f74c9edff8e264c2d26a85365ad9ea149c,2023-09-25,ok,insert+erase,,,,,,,Fix build error due to missing semicolon,161.89
+5eace6f74c9edff8e264c2d26a85365ad9ea149c,2023-09-25,ok,operator[] (hit),,,,,,,Fix build error due to missing semicolon,51.35
+918f6647ff1b920ee4791f1987eed4d8d3227843,2024-03-11,ok,find (hit),,,,,,,Specify library version & versioning rules in headers,49.9
+918f6647ff1b920ee4791f1987eed4d8d3227843,2024-03-11,ok,find (miss),,,,,,,Specify library version & versioning rules in headers,54.91
+918f6647ff1b920ee4791f1987eed4d8d3227843,2024-03-11,ok,insert+erase,,,,,,,Specify library version & versioning rules in headers,161.89
+918f6647ff1b920ee4791f1987eed4d8d3227843,2024-03-11,ok,operator[] (hit),,,,,,,Specify library version & versioning rules in headers,51.35
+b5009d2c2e0e173da4065e366e4a0895a4f70431,2024-03-19,ok,find (hit),,,,,,,Apply clang-format,49.9
+b5009d2c2e0e173da4065e366e4a0895a4f70431,2024-03-19,ok,find (miss),,,,,,,Apply clang-format,54.91
+b5009d2c2e0e173da4065e366e4a0895a4f70431,2024-03-19,ok,insert+erase,,,,,,,Apply clang-format,161.89
+b5009d2c2e0e173da4065e366e4a0895a4f70431,2024-03-19,ok,operator[] (hit),,,,,,,Apply clang-format,51.35
+048eb1442a76ab81ecb3c4ab0495f15a68e54a6d,2024-03-19,ok,find (hit),,,,,,,Update version to 1.2.2,49.9
+048eb1442a76ab81ecb3c4ab0495f15a68e54a6d,2024-03-19,ok,find (miss),,,,,,,Update version to 1.2.2,54.91
+048eb1442a76ab81ecb3c4ab0495f15a68e54a6d,2024-03-19,ok,insert+erase,,,,,,,Update version to 1.2.2,161.89
+048eb1442a76ab81ecb3c4ab0495f15a68e54a6d,2024-03-19,ok,operator[] (hit),,,,,,,Update version to 1.2.2,51.35
+149ff4590f16f3dbff9ec891dde8189fafb30987,2024-04-19,ok,find (hit),,,,,,,Add ``robin_map/set::erase_fast()`` method (fixes #75) (#76),49.9
+149ff4590f16f3dbff9ec891dde8189fafb30987,2024-04-19,ok,find (miss),,,,,,,Add ``robin_map/set::erase_fast()`` method (fixes #75) (#76),54.91
+149ff4590f16f3dbff9ec891dde8189fafb30987,2024-04-19,ok,insert+erase,,,,,,,Add ``robin_map/set::erase_fast()`` method (fixes #75) (#76),161.89
+149ff4590f16f3dbff9ec891dde8189fafb30987,2024-04-19,ok,operator[] (hit),,,,,,,Add ``robin_map/set::erase_fast()`` method (fixes #75) (#76),51.35
+188c45569cc2a5dd768077c193830b51d33a5020,2024-04-19,ok,find (hit),,,,,,,Update version to 1.3.0,49.9
+188c45569cc2a5dd768077c193830b51d33a5020,2024-04-19,ok,find (miss),,,,,,,Update version to 1.3.0,54.91
+188c45569cc2a5dd768077c193830b51d33a5020,2024-04-19,ok,insert+erase,,,,,,,Update version to 1.3.0,161.89
+188c45569cc2a5dd768077c193830b51d33a5020,2024-04-19,ok,operator[] (hit),,,,,,,Update version to 1.3.0,51.35
+55c5b0aab218310ee843dc2537662d5dd04fe024,2024-09-15,ok,find (hit),,,,,,,Move to C++17 dropping C++11 support,49.9
+55c5b0aab218310ee843dc2537662d5dd04fe024,2024-09-15,ok,find (miss),,,,,,,Move to C++17 dropping C++11 support,54.91
+55c5b0aab218310ee843dc2537662d5dd04fe024,2024-09-15,ok,insert+erase,,,,,,,Move to C++17 dropping C++11 support,161.89
+55c5b0aab218310ee843dc2537662d5dd04fe024,2024-09-15,ok,operator[] (hit),,,,,,,Move to C++17 dropping C++11 support,51.35
+fe845fd7852ef541c5479ae23b3d36b57f8608ee,2024-09-22,ok,find (hit),,,,,,,Use inline constexpr for PRIMES and MOD_PRIME arrays,49.9
+fe845fd7852ef541c5479ae23b3d36b57f8608ee,2024-09-22,ok,find (miss),,,,,,,Use inline constexpr for PRIMES and MOD_PRIME arrays,54.91
+fe845fd7852ef541c5479ae23b3d36b57f8608ee,2024-09-22,ok,insert+erase,,,,,,,Use inline constexpr for PRIMES and MOD_PRIME arrays,161.89
+fe845fd7852ef541c5479ae23b3d36b57f8608ee,2024-09-22,ok,operator[] (hit),,,,,,,Use inline constexpr for PRIMES and MOD_PRIME arrays,51.35
+612c2be389e7e80893c6087c1cdd8fee177cd099,2025-01-29,ok,find (hit),,,,,,,Fix load threshold on deserialization,49.9
+612c2be389e7e80893c6087c1cdd8fee177cd099,2025-01-29,ok,find (miss),,,,,,,Fix load threshold on deserialization,54.91
+612c2be389e7e80893c6087c1cdd8fee177cd099,2025-01-29,ok,insert+erase,,,,,,,Fix load threshold on deserialization,161.89
+612c2be389e7e80893c6087c1cdd8fee177cd099,2025-01-29,ok,operator[] (hit),,,,,,,Fix load threshold on deserialization,51.35
+4ec1bf19c6a96125ea22062f38c2cf5b958e448e,2025-03-30,ok,find (hit),,,,,,,Update version to 1.4.0,49.9
+4ec1bf19c6a96125ea22062f38c2cf5b958e448e,2025-03-30,ok,find (miss),,,,,,,Update version to 1.4.0,54.91
+4ec1bf19c6a96125ea22062f38c2cf5b958e448e,2025-03-30,ok,insert+erase,,,,,,,Update version to 1.4.0,161.89
+4ec1bf19c6a96125ea22062f38c2cf5b958e448e,2025-03-30,ok,operator[] (hit),,,,,,,Update version to 1.4.0,51.35
+bd14e6830a1474fed9d2d03f5c3b0683d818d540,2025-11-02,ok,find (hit),,,,,,,Bump version to 1.4.1,49.9
+bd14e6830a1474fed9d2d03f5c3b0683d818d540,2025-11-02,ok,find (miss),,,,,,,Bump version to 1.4.1,54.91
+bd14e6830a1474fed9d2d03f5c3b0683d818d540,2025-11-02,ok,insert+erase,,,,,,,Bump version to 1.4.1,161.89
+bd14e6830a1474fed9d2d03f5c3b0683d818d540,2025-11-02,ok,operator[] (hit),,,,,,,Bump version to 1.4.1,51.35
+17364b00ffe9d36988fc31db9861878f6b28b10d,2026-06-09,ok,find (hit),,,,,,,Add hash-aware insertion functions with a precalculated hash,49.9
+17364b00ffe9d36988fc31db9861878f6b28b10d,2026-06-09,ok,find (miss),,,,,,,Add hash-aware insertion functions with a precalculated hash,54.91
+17364b00ffe9d36988fc31db9861878f6b28b10d,2026-06-09,ok,insert+erase,,,,,,,Add hash-aware insertion functions with a precalculated hash,138.13
+17364b00ffe9d36988fc31db9861878f6b28b10d,2026-06-09,ok,operator[] (hit),,,,,,,Add hash-aware insertion functions with a precalculated hash,51.35
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,find (hit),,,,,,,Rename functions to ``*_with_hash``,49.9
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,find (miss),,,,,,,Rename functions to ``*_with_hash``,54.91
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,insert+erase,,,,,,,Rename functions to ``*_with_hash``,138.13
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,operator[] (hit),,,,,,,Rename functions to ``*_with_hash``,51.35

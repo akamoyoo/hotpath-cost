@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 a52c74095ffd4b898a05d1ec93e410eaa639d6a2,2007-12-20,build failed,,,,,,,,"rename src/ to Eigen/ so that we're able to #include<Eigen/Core.h> in the examples instead of ugly things like #include""../../src/Core.h"""
 4c92150676dea30748215549ba1b94df2624e652,2008-04-26,build failed,,,,,,,,Added Triangular expression to extract upper or lower (strictly or not) part of a matrix. Triangular also provide an optimised method for forward and backward substitution. Further optimizations regarding assignments and products might come later.
 e27b2b95cf566201810aa9f831c52bed3314d927,2008-06-27,build failed,,,,,,,,"* rework Map, allow vectorization * rework PacketMath and DummyPacketMath, make these actual template specializations instead of just overriding by non-template inline functions * introduce ei_ploadt and ei_pstoret, make use of them in Map and Matrix * remove Matrix::map() methods, use Map constructors instead."

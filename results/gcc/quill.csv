@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 e9ce4ca8bf2ae6c2a56d7dfc86d79d9912d200e0,2024-08-14,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.5,Merge pull request #523 from odygrd/v7
 e9ce4ca8bf2ae6c2a56d7dfc86d79d9912d200e0,2024-08-14,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,19.1,Merge pull request #523 from odygrd/v7
 e9ce4ca8bf2ae6c2a56d7dfc86d79d9912d200e0,2024-08-14,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.5,Merge pull request #523 from odygrd/v7

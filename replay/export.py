@@ -20,11 +20,14 @@ def main():
             with open(dst, "w", newline="") as f:
                 w = csv.writer(f)
                 w.writerow(["commit", "date", "status", "op", "alloc_per_call", "free_per_call", "lock_per_call",
-                            "first_call_alloc", "first_call_lock", "median_ns", "subject"])
+                            "first_call_alloc", "first_call_lock", "median_ns", "subject", "instructions_per_call"])
                 for h, date, subj in json.load(open(order)):
                     res, fail = proj / f"{h}.jsonl", proj / f"{h}.fail"
                     if res.exists():
                         for d in map(json.loads, res.read_text().splitlines()):
+                            if "instr" in d:
+                                w.writerow([h, date, "ok", d["op"], "", "", "", "", "", "", subj, d["instr"]]); n += 1
+                                continue
                             w.writerow([h, date, "ok", d["op"], d["alloc"], d["free"], d["lock"], d.get("first_alloc", ""),
                                         d.get("first_lock", ""), d["ns"], subj]); n += 1
                     elif fail.exists():

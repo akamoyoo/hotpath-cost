@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 ab856b12b872edc56a26871534fcba4a841579d9,2012-04-30,build failed,,,,,,,,initial release
 db3c9f7f3bfc6dcccde41a8994f09a081365f4f9,2012-05-10,build failed,,,,,,,,"Added : benchmark program, for easier evaluation Corrected : _rotl() support limited to Windows; replaced with software-defined for other targets"
 d6a6bd9e7289121c7bb858938d014508514efda6,2012-12-12,build failed,,,,,,,,"New version Added : capability to provide input in several consecutive blocks Single version provided : XXH32() (Speed 5.4 GB/s), with a Q.Score of 10"

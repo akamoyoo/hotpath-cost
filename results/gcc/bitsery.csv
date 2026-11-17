@@ -1,0 +1,106 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+0fb7b0986dff09671abe55dd11acbc950573e8d3,2017-02-07,build failed,,,,,,,,initial concept commit
+2d71a92287204a957abe385b371aee21008afbbe,2017-02-09,build failed,,,,,,,,written more tests and first code example
+8607338bfbaad2904bcf74d63d587d14f2d05ec7,2017-02-10,build failed,,,,,,,,basic functionality is tested and is can be used
+0ed492d9b45716e7c140cd457bf5767b176ea580,2017-02-15,build failed,,,,,,,,in progress of range values feature
+5d2d547330918c2f0d2245da65a0aafaec72d6eb,2017-02-16,build failed,,,,,,,,range spec bits required is constexpr
+08cd2b3dfa599bebbe0a028083a2ad6431d12860,2017-02-17,build failed,,,,,,,,range implementation complete
+8d1f860c8f96b0b366729cf18fc08f59ccac3934,2017-02-17,build failed,,,,,,,,default values
+7964679ec2d05daeded296af1d0a1f07fb05ed3e,2017-02-20,build failed,,,,,,,,default renamed to substitution and covered with tests
+bfaf5909ef6fc7e994fc7b3b585da5edb0b5ee36,2017-02-21,build failed,,,,,,,,"default values completed, added bool support and applied license"
+b9c663285819a6b9754cd7c27a8cd8d424075221,2017-02-22,build failed,,,,,,,,added bitsery.h header
+bf712bc9e59d17fc5a1cf06ed4f04db83630ec67,2017-02-23,build failed,,,,,,,,added more BufferReader ctors
+6ab4378bc2143c50a488c275c07feef84faa2cb5,2017-02-23,build failed,,,,,,,,renaming source files
+1176f4908e61d9f94b1af6157768df4e3104474c,2017-05-30,build failed,,,,,,,,enforce type size on serializer/deserializer functions that accept primitive types
+014b072b9610c933abaa1e8ef2236d00d315c459,2017-06-09,build failed,,,,,,,,"added extension support, and changed invoke parameters for  custom serialization function"
+4ad65f83845126e599043bb214f815b8e7e6703d,2017-07-24,build failed,,,,,,,,added endianness support
+198649117336b54a5919d847400807d5af3d7deb,2017-08-11,build failed,,,,,,,,ext function redesign and documentation
+944197db97dedd93c463bb3dd494a36123949d50,2017-08-25,build failed,,,,,,,,buffer writer improvements
+241f1f294013c6a264f56b2876d4360ed09d23c6,2017-09-01,build failed,,,,,,,,buffer reading/writing improvements
+2f8ae0075c0d646c19c5552854ba1b3e64734f1e,2017-09-08,build failed,,,,,,,,added -growable- function
+ad7090539eaa4d69f445a9e9497bbf40b76ab590,2017-09-19,build failed,,,,,,,,"refactoring to work with C++11, and added containerMap extension"
+f0508025f626d464fdc999829f82609162fd736d,2017-09-19,build failed,,,,,,,,separated advanced features from core functionality
+ab5cc8a2c06eebd20be67309ae71a77670c73689,2017-09-25,build failed,,,,,,,,flexible syntax
+982374be425705294c550a2ea7d80a1ff76aae75,2017-10-04,build failed,,,,,,,,added more std containers
+5ede85395400c9880c5ed10355ca461cb8647340,2017-10-05,build failed,,,,,,,,added adapter type for serializer/deserializer
+f3c9a338498d1362714dbe164e69907e18aeb043,2017-10-06,build failed,,,,,,,,"new stream adapter, and lots of refactorings"
+4ccd4d368eabe734dd3f667c8dd4e2b36a89ce5f,2017-10-13,build failed,,,,,,,,maxSize archive modifying function now works with extensions
+bdc24eb3c27ea3db2442d135d76511eff518ee04,2017-10-16,build failed,,,,,,,,"compile warnings, and usage improvements for VisualStudio"
+5b1dc3bcfa125a74273f51e1d9dc88fe665f95be,2017-10-27,build failed,,,,,,,,"raw pointers support, without polymorphism."
+be9ccf08d9072ebf6f2edddafc378604f47d7420,2017-10-30,build failed,,,,,,,,added NotNull pointer to to pointer extensions
+f6d02aba38c2f4fcf7f319ccf77d577271580b72,2017-11-06,build failed,,,,,,,,"added inheritance extension, and ability to have internal contexts within serializer/deserializer"
+507b5ae01d3ceaa9eb2b7f68240b562e7fc86f99,2017-11-28,build failed,,,,,,,,added polymorphism support for raw pointers
+952635ff70089fc9ba5b6f2485a1465c715c8fe5,2018-02-28,build failed,,,,,,,,improved configuration to follow modern cmake practices
+275c4138ee5645762dd12fbfc689c1c45311ec49,2018-04-12,build failed,,,,,,,,polymorphism in progress
+54f69a5eeab20f4a0944b12eeb818183fbe69d46,2018-08-23,build failed,,,,,,,,polymorphism and smart pointers
+2e62bd08e3b4f9b9920a0588204cca18afc08048,2018-08-23,build failed,,,,,,,,cleanup
+a2ecf8d7b05deaab8a77bc229a5f28ade3ec49a4,2019-01-08,build failed,,,,,,,,polymorphism improvements and new CompactValue extension
+e5f8d5742f8eb6c597889058df95df34441b671a,2019-01-08,build failed,,,,,,,,Merge branch 'master' of https://github.com/fraillt/bitsery
+6c3e1aee4328e423da77efc527921cbba40b3a39,2019-01-08,build failed,,,,,,,,"removed anonymous namespace from PolymorphicBaseClass as it only works on clang, and is not standard compliant"
+b10f86da00946531058be5f15981258c081ac438,2019-01-10,build failed,,,,,,,,non default constructible types
+65f90637df9624c03d294f644efa8b92d7615f30,2019-01-10,build failed,,,,,,,,input buffer adapter accepts const buffer
+a6dad0885f139e4db2686e9799dae186163f4d83,2019-01-16,build failed,,,,,,,,visual studio variadic templates issues
+8e94596a6f66a12d7c155c725a2dcf6a20e87426,2019-01-18,build failed,,,,,,,,Merge pull request #11 from ArekSredzki/misc-documentation-improvements
+1fe2b398fccd84d9382bbd2786571a9f203285f9,2019-01-30,build failed,,,,,,,,Merge pull request #12 from ArekSredzki/fix-quickMeasureSize
+ddca8e4ad0d7c050bd578adae3c89e7688e7662e,2019-03-12,build failed,,,,,,,,"extensions for tuple, variant and chrono types"
+aca3139600ce2b45b5203c3ca108f955c4a6bc2a,2019-03-12,build failed,,,,,,,,"Added serializer/deserializer ""cereal like"" interface"
+03f2c3c8b5ba18dc3abe9879a8c9dd41e826feb3,2019-06-27,build failed,,,,,,,,bugfix in enableBitPacking
+57dd028b7ab75b548dee892b7b461c9bd99c93f7,2019-03-13,build failed,,,,,,,,added custom allocator support for pointer like objects.
+1822796f2ef2d15737563f901989a6bb82fea5e4,2019-06-25,build failed,,,,,,,,multiple breaking change improvements
+105aa5f9e59dad309fcd94c928caca0289c38a22,2019-06-26,build failed,,,,,,,,simplified usage by merging adapter writer/reader with input/output adapter and ability to disable checks on deserialization
+a1785f3e159fd89c31e2e787fd8b6debe2e393fb,2019-07-02,build failed,,,,,,,,all bitsery types that allocates memory can be configured to accept memory resource for allocation
+ff402221241e478b1a12d4d9c7095d74c3ce9d3a,2019-07-03,build failed,,,,,,,,removed Reader/Writer parameter from extensions serialize/deserialize methods
+f35ae3f4dca23adc594966cb84c69b5c378d0245,2019-07-04,build failed,,,,,,,,renamed flexible to brief_syntax
+f85dff74151530fb05241877e3c80afab5891467,2019-07-05,build failed,,,,,,,,few more renames and updated change log for version 5.0.0
+01d56e00b884bc665ab0c9a6e0eb7906f4f4e0e5,2019-08-21,build failed,,,,,,,,Merge pull request #25 from BotellaA/patch-1
+c9619e3e3d094b253df8f3cbd31a116418270728,2019-08-05,build failed,,,,,,,,macOS compilation fix and polymorphic handler deleter fix
+c555088aa39f555341a0b20f12379eb9c1120ae4,2019-08-21,build failed,,,,,,,,version 5.0.1 release
+501d60f67d7bb4bc824b5c58101ca0a6eaa5c7b6,2019-11-25,build failed,,,,,,,,Merge pull request #30 from nicktrandafil/master
+0e76e0608c3140e5538b98fc4fc60ac7e5d0bc25,2020-01-17,build failed,,,,,,,,Fix compilation with gcc 4.8.2 (#33)
+8d6ffc9873cd23757372c1ca151ea216b51d745d,2020-01-17,build failed,,,,,,,,extracted Centos7 gcc4.8.2 specific code into separate patch file
+ee68261124b743bc122fd5897f296a0b287ccea7,2020-01-27,build failed,,,,,,,,"rewriten buffer adapters, to fix UB when incrementing past the end iterator."
+d24dfe14f5a756c0f8ad3d56ae6949ecc2c99b2e,2020-01-29,build failed,,,,,,,,provided read/write method for adapaters that accepts number of bytes at compile-time
+c556c75100ed1ca5111c3e941bbe90e92a6cae18,2020-04-15,build failed,,,,,,,,fixed some include paths
+d47ee834e44f612067fcb1c3ad05f66be5c19315,2020-04-15,build failed,,,,,,,,fix integer cast warnings. (#38)
+a544879b221d49184bd71431d492ca706e620d45,2020-04-16,build failed,,,,,,,,basic_ios <=> basic_ostream (#45)
+3dc5940c162084a93eb4e2cddf720f86b20a373d,2020-04-21,build failed,,,,,,,,Integer casts. Part 2. (#41)
+9cade41dbb9a7b8220d674aba3ff3eb09a410c3b,2020-04-21,build failed,,,,,,,,msvc warnings suppression (#47)
+16f637da0d8125bf2cdbf580c82616fa637074b5,2020-04-21,build failed,,,,,,,,integer casts part3
+826b8d4269993084e2508722c145f309c6f96a53,2020-05-02,build failed,,,,,,,,std::atomic support (#54)
+a519d333e28f2064867c147d0758a7b1b300f065,2020-05-16,build failed,,,,,,,,Fix typo (#57)
+d7876808195834f05fd84619b8f6b266e5c1d5bd,2020-06-08,build failed,,,,,,,,release v5.1.0
+ee7bb2cb939dec491a9d3c269af285cc9a07d72a,2020-11-07,build failed,,,,,,,,Fixed unknown-pragmas warnings on non-MSVC. (#69)
+8a00183c8016b87033861b325c2093f08c80ad02,2020-11-09,build failed,,,,,,,,release 5.2.0
+db884a0656a3aabb87da1ae6edf12629507f76a7,2020-11-10,build failed,,,,,,,,release v5.2.1
+47f6f9248a07b5d581b5c662ec6796d7c10c42fc,2021-05-28,build failed,,,,,,,,Merge pull request #75 from victorstewart/16b
+126a6c29717ee9bfbfef84498e6d411f3e8b3da3,2021-05-29,build failed,,,,,,,,Merge pull request #77 from robbert-vdh/feature/nontrivial-variant-deserialization
+4ff80c642626d33e1845c0ffcb032c076cb04a39,2021-05-31,build failed,,,,,,,,fix: std::variant access with get_if using index
+bcd03b4d685fa90943240d6ee2a4d70daaf69489,2021-08-23,build failed,,,,,,,,Add Missing header (#82)
+c0fc083c9de805e5825d7553507569febf6a6f93,2021-08-23,build failed,,,,,,,,Additional improvements for v5.2.2 release
+d24e0ab1b3daaa92219b60a57dca51fa8e23103f,2021-10-22,build failed,,,,,,,,fix shadow warning in gcc8 (#1) (#87)
+d3dd64baafd68ec3a4da2170f1df11e3ac1ca3e6,2022-04-15,build failed,,,,,,,,changed increaseBufferSize signature simplified adapters implementations
+d6909085413fbaafcb3a28318485585ca4a4053e,2022-04-23,build failed,,,,,,,,"reworked bitpacking, to fix measure size (measure size now is not bit-packing enabled by default)"
+3e02d0ca445d1a77f0bfdefa4db6939f0424061a,2022-12-01,build failed,,,,,,,,format code base in Mozilla style
+ceeb189c8b888d43bc68aaff2b6e4810a1087418,2023-05-09,build failed,,,,,,,,Changes the code path for arrays of bytes in big (#105)
+94f7adaf6cdcfb48e707c2750515d60c7483f8b1,2023-06-06,ok,serialize order,0.0,0.0,0.0,0,0,7.2,FIX: Build error on GCC 13.x (#106)
+94f7adaf6cdcfb48e707c2750515d60c7483f8b1,2023-06-06,ok,deserialize order,0.0,0.0,0.0,0,0,8.3,FIX: Build error on GCC 13.x (#106)
+cd73aca2f56d521513f10cc7b6a4f672e6e548f7,2024-06-23,ok,serialize order,0.0,0.0,0.0,0,0,9.3,Fix compilation errors in clang 17
+cd73aca2f56d521513f10cc7b6a4f672e6e548f7,2024-06-23,ok,deserialize order,0.0,0.0,0.0,0,0,10.3,Fix compilation errors in clang 17
+be2f2953108c623cb21ebea1aee7ed7964ff3fd9,2024-06-24,ok,serialize order,0.0,0.0,0.0,0,0,11.7,"Discourage inlining the resize case, as that should happen rather rarely."
+be2f2953108c623cb21ebea1aee7ed7964ff3fd9,2024-06-24,ok,deserialize order,0.0,0.0,0.0,0,0,14.5,"Discourage inlining the resize case, as that should happen rather rarely."
+b714459a2b64b2e100b892a6236da086e8826ef6,2024-06-23,ok,serialize order,0.0,0.0,0.0,0,0,11.5,Implement brief syntax for optional and bitset
+b714459a2b64b2e100b892a6236da086e8826ef6,2024-06-23,ok,deserialize order,0.0,0.0,0.0,0,0,14.7,Implement brief syntax for optional and bitset
+ee992d8b5782e41792e4810c5b00ad4625783427,2024-07-29,ok,serialize order,0.0,0.0,0.0,0,0,11.6,changelog update for 5.2.4
+ee992d8b5782e41792e4810c5b00ad4625783427,2024-07-29,ok,deserialize order,0.0,0.0,0.0,0,0,14.6,changelog update for 5.2.4
+8bda82576e7b45502688262194dd850844f86583,2025-01-18,ok,serialize order,0.0,0.0,0.0,0,0,9.3,"Fix spelling error of ""likely"""
+8bda82576e7b45502688262194dd850844f86583,2025-01-18,ok,deserialize order,0.0,0.0,0.0,0,0,10.8,"Fix spelling error of ""likely"""
+7ea1da0d48fef540bc8f463f3405ab326832aac6,2025-09-09,ok,serialize order,0.0,0.0,0.0,0,0,9.3,clang-format using ./format.sh
+7ea1da0d48fef540bc8f463f3405ab326832aac6,2025-09-09,ok,deserialize order,0.0,0.0,0.0,0,0,10.3,clang-format using ./format.sh
+66d16516e24893bebc1c8af52bf2fe9ad0735061,2025-10-02,ok,serialize order,0.0,0.0,0.0,0,0,8.4,Fix shared polymorphic poiner like type serialization/deserialization
+66d16516e24893bebc1c8af52bf2fe9ad0735061,2025-10-02,ok,deserialize order,0.0,0.0,0.0,0,0,9.8,Fix shared polymorphic poiner like type serialization/deserialization
+ff841d63f64bb05011f87776e8c50ff92ee66292,2025-10-08,ok,serialize order,0.0,0.0,0.0,0,0,14.0,check type information before assigning to  observer pointer
+ff841d63f64bb05011f87776e8c50ff92ee66292,2025-10-08,ok,deserialize order,0.0,0.0,0.0,0,0,10.2,check type information before assigning to  observer pointer
+5e7ecede9b09e308c32ab9bdbdd4d2664db1f93e,2025-10-08,ok,serialize order,0.0,0.0,0.0,0,0,7.2,cast from polymorphic owner pointer-like type to observer during assignment
+5e7ecede9b09e308c32ab9bdbdd4d2664db1f93e,2025-10-08,ok,deserialize order,0.0,0.0,0.0,0,0,8.3,cast from polymorphic owner pointer-like type to observer during assignment
+9bebfd4911b8ef52c5a67754ccb87a8fd5223414,2025-10-08,ok,serialize order,0.0,0.0,0.0,0,0,11.7,prepare for 5.2.5
+9bebfd4911b8ef52c5a67754ccb87a8fd5223414,2025-10-08,ok,deserialize order,0.0,0.0,0.0,0,0,14.8,prepare for 5.2.5

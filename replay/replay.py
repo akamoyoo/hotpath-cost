@@ -61,6 +61,11 @@ P = {
     "dragonbox": dict(bench="dragonbox", paths=["include"], inc=["include"], srcs=[]),
     "libdivide": dict(bench="libdivide", paths=["libdivide.h"], inc=["."], srcs=[]),
     "date": dict(bench="date", paths=["include/date/date.h"], inc=["include"], srcs=[]),
+    "fmtlog": dict(bench="fmtlog", paths=["fmtlog.h", "fmtlog-inl.h", "fmt"], inc=[".", "fmt/include"], srcs=[],
+                   submodules={"fmt": "fmt"}, flags=["-DFMTLOG_HEADER_ONLY", "-DFMT_HEADER_ONLY"], cores=2),
+    "bitsery": dict(bench="bitsery", paths=["include"], inc=["include"], srcs=[]),
+    "cereal": dict(bench="cereal", paths=["include"], inc=["include"], srcs=[]),
+    "xsimd": dict(bench="xsimd", paths=["include"], inc=["include"], srcs=[]),
 }
 CORES = [int(c) for c in os.environ.get("REPLAY_CORES", "2,4,6,8").split(",")]
 lock = threading.Lock(); free_cores = list(CORES)
@@ -83,6 +88,12 @@ def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
 def build(proj, cc, h, tree, exe, extra=()):
     """Build at the commit; C++17 first, then C++20 (newer versions of some projects need it)."""
     subprocess.run(f"git -C {TOP / 'src' / proj} archive {h} | tar -x -C {tree}", shell=True, check=True)
+    # git submodules: the commit each one is pinned to at h, taken from a local clone in src/
+    for path, clone in P[proj].get("submodules", {}).items():
+        ls = subprocess.run(["git", "-C", str(TOP / "src" / proj), "ls-tree", h, path], capture_output=True, text=True).stdout.split()
+        if len(ls) >= 3 and ls[1] == "commit":
+            (tree / path).mkdir(parents=True, exist_ok=True)
+            subprocess.run(f"git -C {TOP / 'src' / clone} archive {ls[2]} | tar -x -C {tree / path}", shell=True)
     b = subprocess.run(build_cmd(P[proj], cc, tree, exe, extra=extra), capture_output=True, text=True)
     if b.returncode:
         b2 = subprocess.run(build_cmd(P[proj], cc, tree, exe, "-std=c++20", extra), capture_output=True, text=True)
@@ -130,17 +141,25 @@ def instr_lines(t, stdout):
 
 INSTR_PCT = float(os.environ.get("REPLAY_INSTR_PCT", "3"))   # instruction changes below this are not bisected
 
-def counts_of(out, h):
+def compared_fields(proj):
+    """The count fields compared between commits. With another thread in the benchmark (cores > 1), the
+    frees counted on the calling thread depend on which thread drops the last reference first, so they
+    vary between runs of the same build; allocations and locks on the calling thread do not."""
+    f = ("alloc", "free", "lock", "first_alloc", "first_lock")
+    return tuple(k for k in f if k != "free") if P[proj].get("cores", 1) > 1 else f
+
+def counts_of(out, h, fields=("alloc", "free", "lock", "first_alloc", "first_lock")):
     f = out / f"{h}.jsonl"
     if not f.exists(): return None
     return {d["op"]: (("instr", d["instr"]),) if "instr" in d else
-            tuple(round(d[k], 2) for k in ("alloc", "free", "lock", "first_alloc", "first_lock") if k in d)
+            tuple(round(d[k], 2) for k in fields if k in d)
             for d in map(json.loads, f.read_text().splitlines())}
 
 def differ(x, y):
     for op in set(x) & set(y):
         a, b = x[op], y[op]
-        if a and a[0][0] == "instr" and b and b[0][0] == "instr":
+        is_instr = lambda v: bool(v) and isinstance(v[0], tuple) and v[0][0] == "instr"
+        if is_instr(a) and is_instr(b):
             if abs(a[0][1] - b[0][1]) * 100 >= INSTR_PCT * max(a[0][1], 1): return True
             continue
         n = min(len(a), len(b))
@@ -158,7 +177,8 @@ def refine(proj, cc, cs, j):
         ok = [i for i in done if (out / f"{cs[i][0]}.jsonl").exists()]
         todo = []
         for a, b in zip(ok, ok[1:]):
-            if b - a > 1 and differ(counts_of(out, cs[a][0]), counts_of(out, cs[b][0])):
+            fl = compared_fields(proj)
+            if b - a > 1 and differ(counts_of(out, cs[a][0], fl), counts_of(out, cs[b][0], fl)):
                 untried = [i for i in range(a + 1, b) if i not in done]
                 if untried: todo.append(untried[len(untried) // 2])
         if not todo: break

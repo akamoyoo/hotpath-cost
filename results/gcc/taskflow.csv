@@ -1,0 +1,886 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+66f2268438357da11f995a75316aa304dc6b5535,2018-08-27,build failed,,,,,,,,created taskflow folder
+015f2b91a4ae888165466fcf254ca02a68b39c89,2018-09-03,build failed,,,,,,,,modified proactive_threadpool
+5ca980bc0e2662c5e54695dd78c2faa907d91f01,2018-09-13,build failed,,,,,,,,refactored simple_threadpool added unittest for simple_threadpool
+b93349f51ed062278072b22853cec3f2218c407f,2018-10-02,build failed,,,,,,,,updated simple_threadpool2.
+a1973d94534c4e61facf4951c3b46c279ed26d76,2018-11-01,build failed,,,,,,,,fixed license
+072dd42eaba2051b04a447b4cc78f7f5926544aa,2018-11-29,build failed,,,,,,,,rename batch method
+fab982932b673dcfdbca56f071f9dd73ec358216,2018-12-19,build failed,,,,,,,,updated readme
+ec18db1c7a45c69d14b7c5a2443dea4f0e958663,2019-01-04,build failed,,,,,,,,updated graph to std::list
+dc6c165c33329ff65dfd26eff086d27bb23a3e9e,2019-01-31,build failed,,,,,,,,Merge remote-tracking branch 'refs/remotes/origin/dev' into dev
+676398c104820c28717f88c23ae9deb8f727a072,2019-02-13,build failed,,,,,,,,refactored framework
+3599a6e25a27effe79cf9e39e60ce09ec2f48ac7,2019-03-13,build failed,,,,,,,,Update framework dump
+a2679fe0dbe6d406b02cbd498576b79c3c89929d,2019-03-29,build failed,,,,,,,,updated executors
+9d38f9641290165c935b9182bf3e8ab6497ba995,2019-04-18,build failed,,,,,,,,updated workstealing
+0dc9c1646de3e33a58c0962cfc1e22a52c0e2ed1,2019-05-17,build failed,,,,,,,,updated executor
+736aef9415a395d3d3b243a2d20ad8c7f95bff97,2019-06-13,build failed,,,,,,,,updated topology pool
+a6e0eb8e6ec4bfa225959751bcf979f2c4a90277,2019-07-11,build failed,,,,,,,,updated object pool with upper size
+b6d80be70f057cd8d7594db35a88fab43a93e67c,2019-08-06,build failed,,,,,,,,Remove notifier in executor
+763c81f967ef387372a3a65ff3dce6b38ce2ff3f,2020-01-26,build failed,,,,,,,,updated function_traits
+9aa625470389eb98a87302331a6e5dbdfb648e9e,2020-02-22,build failed,,,,,,,,refactored the node
+87a08ac5fbf146d5670c127838aed349cd2ad3ea,2020-03-01,build failed,,,,,,,,Merge branch 'dev'
+e4ef7fbe1249e79d9fbec23b05c6e7f225addcba,2020-03-16,build failed,,,,,,,,updated device property
+1a6499b27944f1d5944e1a8a3f7efb0c16ec7785,2020-03-25,build failed,,,,,,,,enhanced unit tests
+688585917b59004e321b931e211945200baaa89b,2020-04-23,build failed,,,,,,,,updated executor
+8e1b019f6d06b3d649e315ec4edead0d1cb9500d,2020-06-04,build failed,,,,,,,,added explicit join in subflow
+777989d503e16219a17409322d9647ffb17f1358,2020-07-06,build failed,,,,,,,,Merge pull request #195 from tjhei/extra_semicolon
+743d8c42207107c3e152cf9def123bfa8e39f884,2020-08-13,build failed,,,,,,,,fixed warning in benchmarks
+ab4d32ff47147488b69d008d94a0acab42769206,2020-08-31,build failed,,,,,,,,added dsl.hpp
+c75c05f3d549534e8bd05d6e9afdac82829ea786,2020-10-02,ok,run(taskflow of 1 task).wait(),3.0,1.9999,3.0,3,3,6335.4,Merge pull request #234 from vedranmiletic/master
+c75c05f3d549534e8bd05d6e9afdac82829ea786,2020-10-02,ok,async(task).wait(),3.0,2.0,3.0,3,3,6625.9,Merge pull request #234 from vedranmiletic/master
+80127cd2ecd2958bda1345e26be43bb977557a9f,2020-10-14,ok,run(taskflow of 1 task).wait(),4.0,0.0652,3.0001,4,3,6046.5,Merge branch 'dev'
+80127cd2ecd2958bda1345e26be43bb977557a9f,2020-10-14,ok,async(task).wait(),3.0,0.0099,3.0,3,3,6032.8,Merge branch 'dev'
+e78f0b5e1a4ed6a441cdec0ced7e05f46d707f1c,2020-10-16,ok,run(taskflow of 1 task).wait(),4.0,2.0,3.0,4,3,8612.9,de-vertual cudaflow
+e78f0b5e1a4ed6a441cdec0ced7e05f46d707f1c,2020-10-16,ok,async(task).wait(),3.0,1.9997,3.0,3,3,8226.9,de-vertual cudaflow
+52f3cbab42ca3cae15c7206c8955700289a9d5b8,2020-10-19,ok,run(taskflow of 1 task).wait(),4.0,0.8981,3.0,4,3,10054.1,added cuda_handle
+52f3cbab42ca3cae15c7206c8955700289a9d5b8,2020-10-19,ok,async(task).wait(),3.0,1.9992,3.0,3,3,8235.1,added cuda_handle
+7b4abdec3f044824d6506da485f1faf8fbfbde53,2020-10-20,ok,run(taskflow of 1 task).wait(),4.0,1.2081,3.0,4,3,9100.3,updated cublas_error
+7b4abdec3f044824d6506da485f1faf8fbfbde53,2020-10-20,ok,async(task).wait(),3.0,1.925,3.0,3,3,8209.4,updated cublas_error
+3ddcaa0a0aeeaa3ae0b656b7e0dcc7bc6027cb41,2020-10-20,ok,run(taskflow of 1 task).wait(),4.0,1.9995,3.0,4,3,7544.0,updated cublas_flow
+3ddcaa0a0aeeaa3ae0b656b7e0dcc7bc6027cb41,2020-10-20,ok,async(task).wait(),3.0,1.9991,3.0,3,3,7430.0,updated cublas_flow
+65ff4b2039da99fdf4cb97b14dacc15bd98d7159,2020-10-20,ok,run(taskflow of 1 task).wait(),4.0,1.9998,3.0,4,3,9006.2,refactored
+65ff4b2039da99fdf4cb97b14dacc15bd98d7159,2020-10-20,ok,async(task).wait(),3.0,1.9999,3.0,3,3,8402.0,refactored
+b138779e22b89df4fdefcb3272207b25cab4d5a3,2020-10-21,ok,run(taskflow of 1 task).wait(),4.0,1.9998,3.0,4,3,7534.4,added cuda_pool
+b138779e22b89df4fdefcb3272207b25cab4d5a3,2020-10-21,ok,async(task).wait(),3.0,1.9994,3.0,3,3,7389.5,added cuda_pool
+b59eba100ec0c45fb4ab5aefa9e4cc0903068da8,2020-10-21,ok,run(taskflow of 1 task).wait(),4.0,0.0084,3.0,4,3,5895.2,update
+b59eba100ec0c45fb4ab5aefa9e4cc0903068da8,2020-10-21,ok,async(task).wait(),3.0,0.0121,3.0,3,3,5805.9,update
+732bc0d3a07fba6cd965bded3eb7d6acb1453e06,2020-10-23,ok,run(taskflow of 1 task).wait(),4.0,1.9987,3.0,4,3,8589.5,updated core and doc
+732bc0d3a07fba6cd965bded3eb7d6acb1453e06,2020-10-23,ok,async(task).wait(),3.0,1.9543,3.0,3,3,8416.0,updated core and doc
+247e70b833fac6e169e669f889a921f7125a061d,2020-10-26,ok,run(taskflow of 1 task).wait(),4.0,1.9997,3.0,4,3,8859.7,added level3.cu unittest
+247e70b833fac6e169e669f889a921f7125a061d,2020-10-26,ok,async(task).wait(),3.0,1.9998,3.0,3,3,8256.4,added level3.cu unittest
+fede2f65e20c0b2aab50a350bf38f8a8c01e02f9,2020-10-27,ok,run(taskflow of 1 task).wait(),4.0,1.9999,3.0,4,3,8360.3,updated
+fede2f65e20c0b2aab50a350bf38f8a8c01e02f9,2020-10-27,ok,async(task).wait(),3.0,1.9916,3.0,3,3,8389.5,updated
+30c316639048888c5a302124d30902194c8ff8ae,2020-10-27,ok,run(taskflow of 1 task).wait(),4.0,1.97,3.0003,4,3,7640.4,updated cublas_flow.hpp
+30c316639048888c5a302124d30902194c8ff8ae,2020-10-27,ok,async(task).wait(),3.0,1.9938,3.0,3,3,7014.6,updated cublas_flow.hpp
+9e5996f47f89bf773da0ffb4d9cf037a0a5488ed,2020-10-27,ok,run(taskflow of 1 task).wait(),4.0,1.9993,3.0,4,3,9112.2,fixed stream bug
+9e5996f47f89bf773da0ffb4d9cf037a0a5488ed,2020-10-27,ok,async(task).wait(),3.0,1.9649,3.0,3,3,9714.8,fixed stream bug
+7bd37223ec221c84561373b955cd56c7365fd972,2020-10-27,ok,run(taskflow of 1 task).wait(),4.0,1.9998,3.0,4,3,8576.8,updated cublas_flow
+7bd37223ec221c84561373b955cd56c7365fd972,2020-10-27,ok,async(task).wait(),3.0,1.9663,3.0,3,3,8717.6,updated cublas_flow
+9ee2d883ce07e6eaf04cc58c2c47b0b2454284ec,2020-10-28,ok,run(taskflow of 1 task).wait(),4.0,1.9998,3.0,4,3,7172.8,updated taskflow.hpp
+9ee2d883ce07e6eaf04cc58c2c47b0b2454284ec,2020-10-28,ok,async(task).wait(),3.0,1.9995,3.0,3,3,7220.4,updated taskflow.hpp
+641b93ceb694904c3222774139a2bca116ffe6fa,2020-11-02,ok,run(taskflow of 1 task).wait(),4.0,1.9997,3.0,4,3,7596.9,updated docs
+641b93ceb694904c3222774139a2bca116ffe6fa,2020-11-02,ok,async(task).wait(),3.0,1.9964,3.0,3,3,7536.8,updated docs
+91e0a46a2d1168ab3f5768b4c27a227dda2d553a,2020-11-09,ok,run(taskflow of 1 task).wait(),4.0,2.0,3.0,4,3,7345.4,inline per_thread in executor
+91e0a46a2d1168ab3f5768b4c27a227dda2d553a,2020-11-09,ok,async(task).wait(),3.0,1.9992,3.0,3,3,7273.9,inline per_thread in executor
+7a3b036619ca3e0f14aa87217374331286f897f1,2020-11-14,ok,run(taskflow of 1 task).wait(),4.0,1.9991,3.0,4,3,8764.0,updated docs
+7a3b036619ca3e0f14aa87217374331286f897f1,2020-11-14,ok,async(task).wait(),3.0,1.9984,3.0,3,3,8339.0,updated docs
+b550ac01e387818e770f9aa0c99a03d70d80dd8a,2020-11-16,ok,run(taskflow of 1 task).wait(),4.0,1.9987,3.0,4,3,7164.5,Merge branch 'dev'
+b550ac01e387818e770f9aa0c99a03d70d80dd8a,2020-11-16,ok,async(task).wait(),3.0,1.9992,3.0,3,3,7071.0,Merge branch 'dev'
+37db266a670e7a0b3f26ba495f67dd4be38930ad,2020-11-22,ok,run(taskflow of 1 task).wait(),4.0,0.006,3.0,4,3,6013.2,Merge pull request #249 from largerock/settting-typo
+37db266a670e7a0b3f26ba495f67dd4be38930ad,2020-11-22,ok,async(task).wait(),3.0,0.0087,3.0,3,3,5891.4,Merge pull request #249 from largerock/settting-typo
+f5690dbe5f42245bad36854b628bc542f16fcc68,2020-11-23,ok,run(taskflow of 1 task).wait(),4.0,0.0088,3.0,4,3,5935.8,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+f5690dbe5f42245bad36854b628bc542f16fcc68,2020-11-23,ok,async(task).wait(),3.0,0.0114,3.0,3,3,5847.5,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+57d0556bd8d24e93740736faaeac70b9589bd536,2020-11-26,ok,run(taskflow of 1 task).wait(),4.0,1.9992,3.0,4,3,8985.1,updated cuda_reduce
+57d0556bd8d24e93740736faaeac70b9589bd536,2020-11-26,ok,async(task).wait(),3.0,1.997,3.0,3,3,8625.3,updated cuda_reduce
+dd8be5eaa7b216e2d45b23155556a92fc6bf0546,2020-11-26,ok,run(taskflow of 1 task).wait(),4.0,2.0,3.0,4,3,8892.1,updated async tasking
+dd8be5eaa7b216e2d45b23155556a92fc6bf0546,2020-11-26,ok,async(task).wait(),3.0,1.9992,3.0,3,3,8346.3,updated async tasking
+7ac73d0b49bc0b7af02d116e551b344d68e3e1e1,2020-11-28,ok,run(taskflow of 1 task).wait(),4.0,1.9988,3.0,4,3,7225.1,enhanced performance of parallel-sort
+7ac73d0b49bc0b7af02d116e551b344d68e3e1e1,2020-11-28,ok,async(task).wait(),3.0,1.9779,3.0,3,3,7074.6,enhanced performance of parallel-sort
+43b0c6865524073d094c16e567ffe5ecf57149e4,2020-11-29,ok,run(taskflow of 1 task).wait(),4.0,1.9994,3.0,4,3,8652.7,updated core/algorithms
+43b0c6865524073d094c16e567ffe5ecf57149e4,2020-11-29,ok,async(task).wait(),3.0,1.9993,3.0,3,3,8224.5,updated core/algorithms
+4fac24e8cd61b30ca30f6e22182363645a0763bb,2020-12-01,ok,run(taskflow of 1 task).wait(),4.0,1.9992,3.0,4,3,8732.7,before merge
+4fac24e8cd61b30ca30f6e22182363645a0763bb,2020-12-01,ok,async(task).wait(),3.0,1.9913,3.0,3,3,8619.7,before merge
+20c838ba3ddd9fd3b06fd648b9c5b3b1e41848d3,2020-12-01,ok,run(taskflow of 1 task).wait(),4.0,1.9996,3.0,4,3,8936.1,Merge pull request #228 from musteresel/constraint-implementation
+20c838ba3ddd9fd3b06fd648b9c5b3b1e41848d3,2020-12-01,ok,async(task).wait(),3.0,1.9994,3.0,3,3,8538.8,Merge pull request #228 from musteresel/constraint-implementation
+e49eb4249e5ee482137ad54d2366a9d85b206971,2020-12-01,ok,run(taskflow of 1 task).wait(),4.0,1.928,3.0,4,3,7479.1,refactored semaphore
+e49eb4249e5ee482137ad54d2366a9d85b206971,2020-12-01,ok,async(task).wait(),3.0,1.9334,3.0,3,3,7094.4,refactored semaphore
+e2c06c1c1113c020e6c2d29f7d0e07d76f36a386,2020-12-02,ok,run(taskflow of 1 task).wait(),4.0,1.9995,3.0,4,3,8901.3,fixed the semaphore bug
+e2c06c1c1113c020e6c2d29f7d0e07d76f36a386,2020-12-02,ok,async(task).wait(),3.0,1.9996,3.0,3,3,8230.8,fixed the semaphore bug
+9ce4646abaa27430c99406e9445fa70ebab489f3,2020-12-02,ok,run(taskflow of 1 task).wait(),4.0,1.9984,3.0,4,3,8582.5,updated semaphore docs
+9ce4646abaa27430c99406e9445fa70ebab489f3,2020-12-02,ok,async(task).wait(),3.0,1.998,3.0,3,3,6318.9,updated semaphore docs
+80de03ae9612f4da83ee2d21cfbe597acceef3da,2020-12-05,ok,run(taskflow of 1 task).wait(),4.0,1.9998,3.0,4,3,8725.5,updated observer
+80de03ae9612f4da83ee2d21cfbe597acceef3da,2020-12-05,ok,async(task).wait(),3.0,1.9996,3.0,3,3,8308.2,updated observer
+6b05c9f8972cce2b709c0458f8c0cd195f63dd32,2020-12-05,ok,run(taskflow of 1 task).wait(),4.0,1.8222,3.0,4,3,8399.2,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+6b05c9f8972cce2b709c0458f8c0cd195f63dd32,2020-12-05,ok,async(task).wait(),3.0,1.9906,3.0,3,3,8386.1,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+34c8222cb50c8408f0192fc35aac13b3aa0c837f,2020-12-06,ok,run(taskflow of 1 task).wait(),4.0,2.0,3.0,4,3,8676.5,updated tfprof
+34c8222cb50c8408f0192fc35aac13b3aa0c837f,2020-12-06,ok,async(task).wait(),3.0,1.9996,3.0,3,3,8154.6,updated tfprof
+57bae0273e3ce2c65f4505b6d1272ae91f14ff4e,2020-12-06,ok,run(taskflow of 1 task).wait(),4.0,1.9997,3.0,4,3,8893.8,updated tfprof
+57bae0273e3ce2c65f4505b6d1272ae91f14ff4e,2020-12-06,ok,async(task).wait(),3.0,1.9999,3.0002,3,3,8437.7,updated tfprof
+f09c428088eb08c15cfc623fb60fcc89787b3d25,2020-12-08,ok,run(taskflow of 1 task).wait(),4.0,1.9993,3.0,4,3,8519.7,fixed parallel-sort warning
+f09c428088eb08c15cfc623fb60fcc89787b3d25,2020-12-08,ok,async(task).wait(),3.0,1.9974,3.0,3,3,6601.7,fixed parallel-sort warning
+0a44fd3e871a2d8f531039008b149433f9f453e4,2020-12-14,ok,run(taskflow of 1 task).wait(),4.0,1.9998,3.0,4,3,7225.3,fixed ce
+0a44fd3e871a2d8f531039008b149433f9f453e4,2020-12-14,ok,async(task).wait(),3.0,1.9995,3.0,3,3,7058.4,fixed ce
+1f44bb4625e348966901e1b43ccbcbb651378028,2020-12-16,ok,run(taskflow of 1 task).wait(),4.0,1.9995,3.0,4,3,8737.7,refactored executor
+1f44bb4625e348966901e1b43ccbcbb651378028,2020-12-16,ok,async(task).wait(),3.0,1.9956,3.0,3,3,6352.3,refactored executor
+1ea7c33ae89c133133e338e8b9c03b42e8f5d26d,2020-12-16,ok,run(taskflow of 1 task).wait(),4.0,1.9996,3.0,4,3,9013.0,Merge branch 'master' of https://github.com/taskflow/taskflow
+1ea7c33ae89c133133e338e8b9c03b42e8f5d26d,2020-12-16,ok,async(task).wait(),3.0,1.9995,3.0,3,3,8398.6,Merge branch 'master' of https://github.com/taskflow/taskflow
+68d81de9ebcf8a476c089c33d3b54f8cbe3d7e19,2020-12-16,ok,run(taskflow of 1 task).wait(),5.0,2.9995,3.0,5,3,9013.2,refactored cancelation (not working yet)
+68d81de9ebcf8a476c089c33d3b54f8cbe3d7e19,2020-12-16,ok,async(task).wait(),3.0,1.9999,3.0,3,3,8352.2,refactored cancelation (not working yet)
+7e6ab357a3f6783f14637ae2a3a76071d0f42ff5,2020-12-16,ok,run(taskflow of 1 task).wait(),5.0,3.0,3.0,5,3,8294.1,created cancellation unittest
+7e6ab357a3f6783f14637ae2a3a76071d0f42ff5,2020-12-16,ok,async(task).wait(),3.0,1.9988,3.0,3,3,8317.4,created cancellation unittest
+c6544730e5eceb94bbb3b596e8eb39b41a0305da,2020-12-17,ok,run(taskflow of 1 task).wait(),5.0,2.9999,3.0,5,3,8688.1,updated readme
+c6544730e5eceb94bbb3b596e8eb39b41a0305da,2020-12-17,ok,async(task).wait(),3.0,1.9996,3.0,3,3,8359.3,updated readme
+3be92acded6767f53eac88d2f1672e24ebbeb85e,2020-12-17,ok,run(taskflow of 1 task).wait(),5.0,2.9999,3.0,5,3,8804.3,updated ubuntu.yml
+3be92acded6767f53eac88d2f1672e24ebbeb85e,2020-12-17,ok,async(task).wait(),3.0,1.9995,3.0,3,3,8184.0,updated ubuntu.yml
+1de007a5c287b7d235dd6aab023316f0c26f5854,2020-12-17,ok,run(taskflow of 1 task).wait(),5.0,2.9992,3.0,5,3,8599.0,updated cancellation unittests and example
+1de007a5c287b7d235dd6aab023316f0c26f5854,2020-12-17,ok,async(task).wait(),3.0,1.9685,3.0,3,3,8510.0,updated cancellation unittests and example
+0a5ac544fb66ca273bea9a78b387911a9127826c,2020-12-17,ok,run(taskflow of 1 task).wait(),5.0,2.9998,3.0,5,3,8735.1,udpated docs of cancellation
+0a5ac544fb66ca273bea9a78b387911a9127826c,2020-12-17,ok,async(task).wait(),3.0,1.9997,3.0,3,3,8072.9,udpated docs of cancellation
+16ff56a4c7973ad7c72897a1694ada912b311a4e,2020-12-18,ok,run(taskflow of 1 task).wait(),5.0,2.9999,3.0,5,3,8708.8,updated async cancellation
+16ff56a4c7973ad7c72897a1694ada912b311a4e,2020-12-18,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8452.8,updated async cancellation
+f80fdbcfe79e60f21b4b7a351521f160509c45c4,2020-12-19,ok,run(taskflow of 1 task).wait(),5.0,2.9996,3.0,5,3,7643.3,updated docs for async cancellation
+f80fdbcfe79e60f21b4b7a351521f160509c45c4,2020-12-19,ok,async(task).wait(),4.0,2.9742,3.0,4,3,7759.0,updated docs for async cancellation
+2f66dde00cddeee37cdd6efb498297ff3872d495,2020-12-19,ok,run(taskflow of 1 task).wait(),5.0,2.9999,3.0,5,3,8632.8,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+2f66dde00cddeee37cdd6efb498297ff3872d495,2020-12-19,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8365.3,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+c8e90dab90d55da99e14042c72153e49bfd957c7,2020-12-20,ok,run(taskflow of 1 task).wait(),4.0312,2.9992,3.0,4,3,7225.9,updated tpg
+c8e90dab90d55da99e14042c72153e49bfd957c7,2020-12-20,ok,async(task).wait(),4.0,2.9938,3.0,4,3,7487.7,updated tpg
+9d88ad46352c211d20afd64cd0105612d7853cff,2020-12-20,ok,run(taskflow of 1 task).wait(),4.0312,1.0105,3.0,4,3,9787.9,refactored node
+9d88ad46352c211d20afd64cd0105612d7853cff,2020-12-20,ok,async(task).wait(),4.0,0.0201,3.0,4,3,9743.0,refactored node
+736cfca6225fabf92b15e2c83c437895d8ccd114,2020-12-28,ok,run(taskflow of 1 task).wait(),4.0312,2.2561,3.0,4,3,8900.5,before pull
+736cfca6225fabf92b15e2c83c437895d8ccd114,2020-12-28,ok,async(task).wait(),4.0,2.9946,3.0,4,3,6566.6,before pull
+4d1266dce6c4e9b137c6f47ed93d64bd5913992f,2020-12-28,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8928.1,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+4d1266dce6c4e9b137c6f47ed93d64bd5913992f,2020-12-28,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8549.9,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+9ad9259d893f993a4fc97d96a464954fc0ca7b8b,2020-12-28,ok,run(taskflow of 1 task).wait(),4.0312,2.8645,3.0,4,3,6395.0,refactored
+9ad9259d893f993a4fc97d96a464954fc0ca7b8b,2020-12-28,ok,async(task).wait(),4.0,2.9979,3.0,4,3,6133.3,refactored
+6b4f0f52aa530f99ee14b635061184ecf70d4d3a,2020-12-28,ok,run(taskflow of 1 task).wait(),4.0312,2.9998,3.0,4,3,8461.0,fixed the capturer bug
+6b4f0f52aa530f99ee14b635061184ecf70d4d3a,2020-12-28,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8421.3,fixed the capturer bug
+97283a11ed94effc385b870d8ac84ed00b4f77e9,2020-12-28,ok,run(taskflow of 1 task).wait(),4.0312,2.9992,3.0,4,3,8824.7,removed the inheritance of cudaFlowCapturer
+97283a11ed94effc385b870d8ac84ed00b4f77e9,2020-12-28,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8535.4,removed the inheritance of cudaFlowCapturer
+d2dcea5654cc103c4b842355ae9ef725035b4a32,2020-12-31,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,7632.6,updated docst
+d2dcea5654cc103c4b842355ae9ef725035b4a32,2020-12-31,ok,async(task).wait(),4.0,2.9971,3.0,4,3,8387.7,updated docst
+33353d2b061eecc9e3671b78e2b8bb141128a6bc,2021-01-29,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8370.0,refactored round-robin optimizer with dependency pruning heuristic
+33353d2b061eecc9e3671b78e2b8bb141128a6bc,2021-01-29,ok,async(task).wait(),4.0,2.9964,3.0,4,3,8327.0,refactored round-robin optimizer with dependency pruning heuristic
+9bf39faa41cb63241c841379dbdf494389a3a2e5,2021-02-04,ok,run(taskflow of 1 task).wait(),4.0312,2.9997,3.0,4,3,8990.0,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+9bf39faa41cb63241c841379dbdf494389a3a2e5,2021-02-04,ok,async(task).wait(),4.0,2.9977,3.0002,4,3,7457.3,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+c4a2abc548955355faae0e95e4dd1a792d9973c2,2021-02-04,ok,run(taskflow of 1 task).wait(),4.0312,1.0113,3.0,4,3,9745.9,updated cuda_graph event
+c4a2abc548955355faae0e95e4dd1a792d9973c2,2021-02-04,ok,async(task).wait(),4.0,0.0168,3.0,4,3,9661.7,updated cuda_graph event
+99f5f4388871bbe0d7eee6324abe2be12528659d,2021-02-24,ok,run(taskflow of 1 task).wait(),4.0312,2.9989,3.0,4,3,8732.2,updated serializer
+99f5f4388871bbe0d7eee6324abe2be12528659d,2021-02-24,ok,async(task).wait(),4.0,2.9943,3.0,4,3,8531.1,updated serializer
+c9c3baf7be8403c1f80b3f3e21f673fd386d8468,2021-03-01,ok,run(taskflow of 1 task).wait(),4.0312,2.9998,3.0,4,3,9497.0,fixed signed warning
+c9c3baf7be8403c1f80b3f3e21f673fd386d8468,2021-03-01,ok,async(task).wait(),4.0,2.9922,3.0,4,3,9398.5,fixed signed warning
+d00801ead009a4bd6c87a5a50f8376b0acc5cb39,2021-03-01,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8761.2,updated algorithm
+d00801ead009a4bd6c87a5a50f8376b0acc5cb39,2021-03-01,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8564.8,updated algorithm
+4f317431a3857bfab60d0b5461c0dd5124484651,2021-03-01,ok,run(taskflow of 1 task).wait(),4.0312,1.0089,3.0,4,3,5971.2,refactored optimizer
+4f317431a3857bfab60d0b5461c0dd5124484651,2021-03-01,ok,async(task).wait(),4.0,0.0126,3.0,4,3,5881.7,refactored optimizer
+09b09ca8653bd8177ab4ab591d695fd5e6fa59b3,2021-03-04,ok,run(taskflow of 1 task).wait(),4.0312,1.012,3.0,4,3,9666.6,fixed serializer warning caused by constexpr
+09b09ca8653bd8177ab4ab591d695fd5e6fa59b3,2021-03-04,ok,async(task).wait(),4.0,0.0179,3.0,4,3,9586.3,fixed serializer warning caused by constexpr
+756c09a3d6995eca469dfad74a681a6a2fbcea61,2021-03-08,ok,run(taskflow of 1 task).wait(),4.0312,2.9997,3.0,4,3,8754.6,updated contributors
+756c09a3d6995eca469dfad74a681a6a2fbcea61,2021-03-08,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8476.1,updated contributors
+da2a7ebd7b2eae4dab260d87a158bb5d90f730ca,2021-03-08,ok,run(taskflow of 1 task).wait(),4.0312,2.9905,3.0,4,3,7081.8,Merge branch 'master' of https://github.com/taskflow/taskflow
+da2a7ebd7b2eae4dab260d87a158bb5d90f730ca,2021-03-08,ok,async(task).wait(),4.0,2.9992,3.0,4,3,6921.5,Merge branch 'master' of https://github.com/taskflow/taskflow
+a49778a413d93748f04092cce7c44d156dc65015,2021-03-09,ok,run(taskflow of 1 task).wait(),4.0312,1.0108,3.0,4,3,9967.5,updated cmake
+a49778a413d93748f04092cce7c44d156dc65015,2021-03-09,ok,async(task).wait(),4.0,1.977,3.0,4,3,8673.6,updated cmake
+f10eb853e5fe82ef9c9601fccc12e31c2083e682,2021-03-09,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,9009.7,added syclflow
+f10eb853e5fe82ef9c9601fccc12e31c2083e682,2021-03-09,ok,async(task).wait(),4.0,2.9989,3.0,4,3,8406.6,added syclflow
+2e7a5671f541826c77ef75c52e8f94788deb4558,2021-03-10,ok,run(taskflow of 1 task).wait(),4.0312,1.0124,3.0,4,3,9696.5,updated syclFlow
+2e7a5671f541826c77ef75c52e8f94788deb4558,2021-03-10,ok,async(task).wait(),4.0,0.0228,3.0,4,3,9714.5,updated syclFlow
+2b79a32b097aec6d617279b2588b6969f16f91e6,2021-03-11,ok,run(taskflow of 1 task).wait(),4.0312,2.9994,3.0002,4,3,7398.6,updated docs
+2b79a32b097aec6d617279b2588b6969f16f91e6,2021-03-11,ok,async(task).wait(),4.0,2.9832,3.0001,4,3,8995.8,updated docs
+418e19b31f5dfd154fbee3f725a80670f81ef366,2021-03-11,ok,run(taskflow of 1 task).wait(),4.0312,1.0135,3.0,4,3,9727.1,updated sycl algorithms
+418e19b31f5dfd154fbee3f725a80670f81ef366,2021-03-11,ok,async(task).wait(),4.0,0.0216,3.0,4,3,9664.9,updated sycl algorithms
+f729e5f429b34197daa1e8f737712e4383ad3588,2021-03-11,ok,run(taskflow of 1 task).wait(),4.0312,2.9996,3.0,4,3,8660.6,updated sycl algorithm unittests
+f729e5f429b34197daa1e8f737712e4383ad3588,2021-03-11,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8436.3,updated sycl algorithm unittests
+3c11d2480cd6ce01575c6386b5e70a0b3c215cc6,2021-03-13,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8311.6,updated cudaflow
+3c11d2480cd6ce01575c6386b5e70a0b3c215cc6,2021-03-13,ok,async(task).wait(),4.0,2.9968,3.0,4,3,9288.9,updated cudaflow
+9ee4bd5a9435e20b1fbc8d902f5f274524c4a98a,2021-03-30,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8624.5,updated docs
+9ee4bd5a9435e20b1fbc8d902f5f274524c4a98a,2021-03-30,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8474.3,updated docs
+fb1371a9215639fd8a8587da81d7c23c1ce2f515,2021-04-13,ok,run(taskflow of 1 task).wait(),4.0312,1.0097,3.0,4,3,9847.6,updated traits
+fb1371a9215639fd8a8587da81d7c23c1ce2f515,2021-04-13,ok,async(task).wait(),4.0,0.0246,3.0,4,3,9744.5,updated traits
+6b55fa79cf1c81e471585f4195eced67fb838cf7,2021-04-20,ok,run(taskflow of 1 task).wait(),4.0312,2.9998,3.0,4,3,8256.2,moved tframe to sandbox
+6b55fa79cf1c81e471585f4195eced67fb838cf7,2021-04-20,ok,async(task).wait(),4.0,2.9937,3.0,4,3,8332.6,moved tframe to sandbox
+74d88c19193a4d4348abd0b451398830d82f1fd7,2021-04-20,ok,run(taskflow of 1 task).wait(),4.0312,2.8541,3.0,4,3,8936.4,added small vec
+74d88c19193a4d4348abd0b451398830d82f1fd7,2021-04-20,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8883.3,added small vec
+3e38094822e52b3d32a841454a035c4ea4ea1d8e,2021-04-21,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8891.6,updated docs
+3e38094822e52b3d32a841454a035c4ea4ea1d8e,2021-04-21,ok,async(task).wait(),4.0,2.9979,3.0,4,3,8483.8,updated docs
+0cded15eb3d4de73f266bbe15f91a2c68faf5642,2021-04-21,ok,run(taskflow of 1 task).wait(),4.0312,2.9908,3.0,4,3,7581.8,simplify utility
+0cded15eb3d4de73f266bbe15f91a2c68faf5642,2021-04-21,ok,async(task).wait(),4.0,2.7228,3.0,4,3,9181.2,simplify utility
+56accf750753481601002d3ea7178c9f5ad753dc,2021-04-26,ok,run(taskflow of 1 task).wait(),4.0312,2.9996,3.0,4,3,8676.7,removed explicit partitions in algorithms
+56accf750753481601002d3ea7178c9f5ad753dc,2021-04-26,ok,async(task).wait(),4.0,2.9988,3.9998,4,3,8468.8,removed explicit partitions in algorithms
+47e81f5738c340122bf9f0d907f17716cabf15b7,2021-04-26,ok,run(taskflow of 1 task).wait(),4.0312,2.9994,3.0,4,3,8852.8,updated pool
+47e81f5738c340122bf9f0d907f17716cabf15b7,2021-04-26,ok,async(task).wait(),4.0,2.9983,3.0,4,3,8590.3,updated pool
+ee07279cd8ff3d24ffa94471586bc5e854d6123f,2021-04-26,ok,run(taskflow of 1 task).wait(),4.0312,2.9969,3.0,4,3,8718.7,updated executor
+ee07279cd8ff3d24ffa94471586bc5e854d6123f,2021-04-26,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8517.1,updated executor
+7ca6064f381ec5bce0b6463fa25a98a3b77791b1,2021-04-27,ok,run(taskflow of 1 task).wait(),4.0312,1.0099,3.0,4,3,6044.8,removed constexpr in serializer
+7ca6064f381ec5bce0b6463fa25a98a3b77791b1,2021-04-27,ok,async(task).wait(),4.0,0.6539,3.0,4,3,9593.2,removed constexpr in serializer
+564a74295032ce65622bf7ff340e4ee9979cbec6,2021-04-29,ok,run(taskflow of 1 task).wait(),4.0312,2.4707,3.0,4,3,8171.3,updated cuda unittest
+564a74295032ce65622bf7ff340e4ee9979cbec6,2021-04-29,ok,async(task).wait(),4.0,2.9848,3.0,4,3,8326.3,updated cuda unittest
+21fdc36869e3c43c068e7e8c473624173d082e56,2021-05-01,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8699.5,refactored sycl algorithm
+21fdc36869e3c43c068e7e8c473624173d082e56,2021-05-01,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8703.8,refactored sycl algorithm
+b6f020a20b30f23840ba7f97d71a9a579a9bbda3,2021-05-08,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8991.4,updated reduce cuda
+b6f020a20b30f23840ba7f97d71a9a579a9bbda3,2021-05-08,ok,async(task).wait(),4.0,3.0,3.0,4,3,8584.0,updated reduce cuda
+ba835244d52df407bb51ad9353ac02e5bf0c6b3a,2021-05-10,ok,run(taskflow of 1 task).wait(),4.0312,2.9997,3.0,4,3,8948.6,updated cuda scan
+ba835244d52df407bb51ad9353ac02e5bf0c6b3a,2021-05-10,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8626.4,updated cuda scan
+e5ef2bf7de5239bf263afb98f3aeb685d9053cda,2021-05-10,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8284.5,updated unittest with scan
+e5ef2bf7de5239bf263afb98f3aeb685d9053cda,2021-05-10,ok,async(task).wait(),4.0,2.9981,3.0,4,3,8327.8,updated unittest with scan
+b1221070bee9d358c743471f6cdf551a433314ba,2021-05-12,ok,run(taskflow of 1 task).wait(),4.0312,1.0095,3.0,4,3,9368.8,updated gpu_merge
+b1221070bee9d358c743471f6cdf551a433314ba,2021-05-12,ok,async(task).wait(),4.0,0.0209,3.0,4,3,9267.7,updated gpu_merge
+cfb3bdf1140c24e736c41486d3ca9cd413122fb2,2021-05-13,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8779.4,updated cuda_srot
+cfb3bdf1140c24e736c41486d3ca9cd413122fb2,2021-05-13,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8434.7,updated cuda_srot
+1398f984610bb5f851749889efd0fd93424773ea,2021-05-13,ok,run(taskflow of 1 task).wait(),4.0312,2.9998,3.0,4,3,8668.4,updated docs
+1398f984610bb5f851749889efd0fd93424773ea,2021-05-13,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8546.1,updated docs
+f18541579d3bf7135b8d79e8f6100edf2fc86e6c,2021-05-13,ok,run(taskflow of 1 task).wait(),4.0312,1.0065,3.0,4,3,5865.3,updated docs
+f18541579d3bf7135b8d79e8f6100edf2fc86e6c,2021-05-13,ok,async(task).wait(),4.0,2.0877,3.0002,4,3,8127.8,updated docs
+8c339382bc1577abc806666efe48e4519cbc1823,2021-05-15,ok,run(taskflow of 1 task).wait(),4.0312,2.9996,3.0,4,3,8575.8,updated docs
+8c339382bc1577abc806666efe48e4519cbc1823,2021-05-15,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8429.5,updated docs
+d766e5867a4a3665272214f3b194d0bcd1d44d88,2021-05-17,ok,run(taskflow of 1 task).wait(),4.0312,2.9998,3.0,4,3,8707.2,updated docs
+d766e5867a4a3665272214f3b194d0bcd1d44d88,2021-05-17,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8485.2,updated docs
+5d1021eac93d83e7d6370925371e04a16f351f47,2021-05-18,ok,run(taskflow of 1 task).wait(),4.0312,2.9996,3.0,4,3,8762.3,updated docs
+5d1021eac93d83e7d6370925371e04a16f351f47,2021-05-18,ok,async(task).wait(),4.0,2.9976,3.0,4,3,8304.6,updated docs
+fce83110ac0751b44d4091dd4d2a7b2d0377b223,2021-05-23,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8866.5,updated movable taskflow
+fce83110ac0751b44d4091dd4d2a7b2d0377b223,2021-05-23,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8459.0,updated movable taskflow
+64838439e53e99a2d2919e5cce7ff7fdf1140fae,2021-06-10,ok,run(taskflow of 1 task).wait(),4.0312,2.9992,3.0,4,3,8751.0,fixed nvcc v11.3 comp bug
+64838439e53e99a2d2919e5cce7ff7fdf1140fae,2021-06-10,ok,async(task).wait(),4.0,2.9971,3.0,4,3,8539.1,fixed nvcc v11.3 comp bug
+b952a132d6a5380e3e76282dd6b1d9f3ab396e61,2021-06-15,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8834.3,updated cuda_sort_by_key
+b952a132d6a5380e3e76282dd6b1d9f3ab396e61,2021-06-15,ok,async(task).wait(),4.0,2.9989,3.0,4,3,8435.9,updated cuda_sort_by_key
+74c54f944fb31a0f895c09e063d0dbefef131796,2021-06-15,ok,run(taskflow of 1 task).wait(),4.0312,2.8153,3.0001,4,3,8885.2,updated merge_by_key
+74c54f944fb31a0f895c09e063d0dbefef131796,2021-06-15,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8535.6,updated merge_by_key
+eb18c50085b44ebfc75a153c3fa4a098f3d36e10,2021-06-15,ok,run(taskflow of 1 task).wait(),4.0312,2.9524,3.0,4,3,9154.5,added noop in capturer
+eb18c50085b44ebfc75a153c3fa4a098f3d36e10,2021-06-15,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8428.8,added noop in capturer
+46bc2d310552aacb58ac28bc34aa8115bb0be43e,2021-06-17,ok,run(taskflow of 1 task).wait(),4.0312,2.9988,3.0001,4,3,9019.8,updated sanitizer
+46bc2d310552aacb58ac28bc34aa8115bb0be43e,2021-06-17,ok,async(task).wait(),4.0,2.9509,3.0,4,3,8942.4,updated sanitizer
+d4de8cd62e6b32cccc2fee09009414a3c8bc9e59,2021-06-24,ok,run(taskflow of 1 task).wait(),4.0312,2.9994,3.0,4,3,8687.4,updated nonreachable_sanitizer.hpp
+d4de8cd62e6b32cccc2fee09009414a3c8bc9e59,2021-06-24,ok,async(task).wait(),4.0,2.9989,3.0,4,3,8536.4,updated nonreachable_sanitizer.hpp
+47273b42056c5912686636653cecdb644755e34a,2021-06-24,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8906.5,updated sanitizer
+47273b42056c5912686636653cecdb644755e34a,2021-06-24,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8538.1,updated sanitizer
+b3041ee7ca09a39e835c0114cdce93c2ab67f509,2021-08-06,ok,run(taskflow of 1 task).wait(),4.0312,3.0001,3.0,4,3,8737.6,updated cuda_error
+b3041ee7ca09a39e835c0114cdce93c2ab67f509,2021-08-06,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8567.0,updated cuda_error
+463099a1edc92427dd518760f45c505a4454c7e4,2021-08-19,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8866.0,fixed tsq t-san error
+463099a1edc92427dd518760f45c505a4454c7e4,2021-08-19,ok,async(task).wait(),4.0,2.9946,3.0,4,3,7961.5,fixed tsq t-san error
+52722ec914adf420b1e3d082910c1c99e457844f,2021-08-26,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8621.9,fixed a bug in cudaFlowCapturer
+52722ec914adf420b1e3d082910c1c99e457844f,2021-08-26,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8391.9,fixed a bug in cudaFlowCapturer
+360d4abd198e058aefe498685ed3fb1c0ef2fb2e,2021-08-26,ok,run(taskflow of 1 task).wait(),4.0312,1.0111,3.0,4,3,9902.1,updated executor
+360d4abd198e058aefe498685ed3fb1c0ef2fb2e,2021-08-26,ok,async(task).wait(),4.0,0.0203,3.0,4,3,9851.9,updated executor
+3a39fe560236c03e57b807c9f67e990cc02f87f6,2021-08-31,ok,run(taskflow of 1 task).wait(),4.0312,3.0,3.0,4,3,8809.0,Merge branch 'master' into dev
+3a39fe560236c03e57b807c9f67e990cc02f87f6,2021-08-31,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8648.4,Merge branch 'master' into dev
+348e5c5c38057ad53605279feec476daf2f1ea49,2021-08-31,ok,run(taskflow of 1 task).wait(),4.0312,2.9976,3.0,4,3,8695.2,updated lambda input to copy for taskflow algorithms
+348e5c5c38057ad53605279feec476daf2f1ea49,2021-08-31,ok,async(task).wait(),4.0,2.9319,3.0,4,3,8706.2,updated lambda input to copy for taskflow algorithms
+9008039a2cff2b848421953c6f085bb43948fe59,2021-09-01,ok,run(taskflow of 1 task).wait(),4.0312,2.8458,3.0,4,3,8742.3,try fixing tsan error
+9008039a2cff2b848421953c6f085bb43948fe59,2021-09-01,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8461.3,try fixing tsan error
+f30bb7febbd5ca40029a7de9ddb63e5497d1951b,2021-09-02,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,3.0,4,3,8596.1,add leak/tsan-check to ubuntu workflow
+f30bb7febbd5ca40029a7de9ddb63e5497d1951b,2021-09-02,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8413.4,add leak/tsan-check to ubuntu workflow
+83f17d471d98dff7e4f31c6924f48e65a9b56a61,2021-09-02,ok,run(taskflow of 1 task).wait(),4.0312,1.0077,4.0,4,4,5945.5,fixed data race
+83f17d471d98dff7e4f31c6924f48e65a9b56a61,2021-09-02,ok,async(task).wait(),4.0,1.8747,3.0,4,3,8647.5,fixed data race
+6e67b08642ab3923a3548c592e49dda96189fadb,2021-09-02,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,4.0,4,4,8588.7,Merge branch 'master' of https://github.com/taskflow/taskflow
+6e67b08642ab3923a3548c592e49dda96189fadb,2021-09-02,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8558.5,Merge branch 'master' of https://github.com/taskflow/taskflow
+19a66387bb13e3ed2f6d8ce0abbd010033943fb4,2021-09-02,ok,run(taskflow of 1 task).wait(),4.0312,2.8324,4.0,4,4,8777.3,updated tf::Task::data
+19a66387bb13e3ed2f6d8ce0abbd010033943fb4,2021-09-02,ok,async(task).wait(),4.0,2.9989,3.0,4,3,8438.2,updated tf::Task::data
+9c0ddf4eec5a9355c2435f42dafc5e48ada95b48,2021-09-03,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,4.0,4,4,8796.0,updated docs
+9c0ddf4eec5a9355c2435f42dafc5e48ada95b48,2021-09-03,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8519.5,updated docs
+47860c896a043765d4bf9e186002cebf1b60f1db,2021-09-06,ok,run(taskflow of 1 task).wait(),4.0312,1.0103,4.0,4,4,9774.8,Merge pull request #342 from Endilll/master
+47860c896a043765d4bf9e186002cebf1b60f1db,2021-09-06,ok,async(task).wait(),4.0,0.0248,3.0,4,3,9652.2,Merge pull request #342 from Endilll/master
+fd5a54feaf6b18953ff1e61fb2658c967b72bddb,2021-09-06,ok,run(taskflow of 1 task).wait(),4.0312,3.0,4.0,4,4,9158.0,added undefined san test
+fd5a54feaf6b18953ff1e61fb2658c967b72bddb,2021-09-06,ok,async(task).wait(),4.0,2.9994,3.0002,4,3,8473.8,added undefined san test
+76bae51a9d37eaa2040cea1e53e63c02d21c6b73,2021-09-09,ok,run(taskflow of 1 task).wait(),4.0312,3.0,4.0,4,4,8940.4,updated docs
+76bae51a9d37eaa2040cea1e53e63c02d21c6b73,2021-09-09,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8614.4,updated docs
+c61d508cfd8dfb17760183fdf7bb6310751ac127,2021-09-28,ok,run(taskflow of 1 task).wait(),4.0312,2.9996,4.0,4,4,8826.4,updated std::get with std::get_if
+c61d508cfd8dfb17760183fdf7bb6310751ac127,2021-09-28,ok,async(task).wait(),4.0,2.9976,3.0,4,3,8493.6,updated std::get with std::get_if
+4b6465efd9be6c730a9ce5cdff3a01fb497c5363,2021-09-28,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,4.0,4,4,8865.6,Merge branch 'master' into dev
+4b6465efd9be6c730a9ce5cdff3a01fb497c5363,2021-09-28,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8491.9,Merge branch 'master' into dev
+6e981b6292216255aa9c560ad15e125a3c779d95,2021-09-28,ok,run(taskflow of 1 task).wait(),4.0312,2.9994,4.0,4,4,8742.0,updated get_if
+6e981b6292216255aa9c560ad15e125a3c779d95,2021-09-28,ok,async(task).wait(),4.0,2.9943,3.0,4,3,8658.6,updated get_if
+467aca330387ac21bae56e7cf5a17d52ff68fc39,2021-09-29,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,4.0,4,4,8873.9,added pipeline prototype
+467aca330387ac21bae56e7cf5a17d52ff68fc39,2021-09-29,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8470.0,added pipeline prototype
+dc642194322d3b14f650d6ed20982af56284d4c2,2021-10-01,ok,run(taskflow of 1 task).wait(),4.0312,1.0079,4.0,4,4,5955.6,updated multi-condition task
+dc642194322d3b14f650d6ed20982af56284d4c2,2021-10-01,ok,async(task).wait(),4.0,0.0158,3.0,4,3,5861.1,updated multi-condition task
+9ee2ec9b885be49e05b2c43159ddc272a4777f62,2021-10-13,ok,run(taskflow of 1 task).wait(),4.0312,1.01,4.0,4,4,9664.5,updated pipeline skeleton
+9ee2ec9b885be49e05b2c43159ddc272a4777f62,2021-10-13,ok,async(task).wait(),4.0,0.0204,3.0,4,3,9559.4,updated pipeline skeleton
+907b456af4c7e6e425551013ccc4a5406410ac19,2021-10-13,ok,run(taskflow of 1 task).wait(),4.0312,3.0,4.0,4,4,8717.4,updated pipeline unittest
+907b456af4c7e6e425551013ccc4a5406410ac19,2021-10-13,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8384.4,updated pipeline unittest
+828313bf78cf4c1a687d731f082b748a8bd0cf1d,2021-10-15,ok,run(taskflow of 1 task).wait(),4.0312,3.0,4.0,4,4,8905.6,updated pipeline
+828313bf78cf4c1a687d731f082b748a8bd0cf1d,2021-10-15,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8758.9,updated pipeline
+5c5b8818ce48ce06fc1db555af48db4f5a04e91a,2021-10-18,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,4.0,4,4,8600.9,before merge
+5c5b8818ce48ce06fc1db555af48db4f5a04e91a,2021-10-18,ok,async(task).wait(),4.0,3.0,3.0,4,3,8531.4,before merge
+6b3290751374ac72245bdd5fa6305949592c1196,2021-10-19,ok,run(taskflow of 1 task).wait(),4.0312,2.9989,4.0,4,4,9444.2,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+6b3290751374ac72245bdd5fa6305949592c1196,2021-10-19,ok,async(task).wait(),4.0,2.9285,3.0,4,3,8984.7,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+08cd4ffd41e05801bc36676231c71b88ee3a65ab,2021-11-03,ok,run(taskflow of 1 task).wait(),4.0312,1.0092,4.0,4,4,9734.6,updated pipeline example
+08cd4ffd41e05801bc36676231c71b88ee3a65ab,2021-11-03,ok,async(task).wait(),4.0,0.0216,3.0,4,3,9679.5,updated pipeline example
+4a39aee5c0620c24fa5891ec69936b78c7106943,2021-11-23,ok,run(taskflow of 1 task).wait(),4.0312,3.0,4.0,4,4,8921.5,updated
+4a39aee5c0620c24fa5891ec69936b78c7106943,2021-11-23,ok,async(task).wait(),4.0,3.0,3.0,4,3,8810.5,updated
+b8a94a6d8ea333380c7d676c940c972c57649f46,2021-11-24,ok,run(taskflow of 1 task).wait(),4.0312,2.9999,4.0,4,4,8948.1,fixed hardware_destructive_interference_size
+b8a94a6d8ea333380c7d676c940c972c57649f46,2021-11-24,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8525.2,fixed hardware_destructive_interference_size
+4e9ae4c0c4154a6c14d7e67c019734ae832cf668,2021-11-24,ok,run(taskflow of 1 task).wait(),4.0312,3.0,4.0,4,4,8904.0,updated runtime tasking unittest
+4e9ae4c0c4154a6c14d7e67c019734ae832cf668,2021-11-24,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8570.2,updated runtime tasking unittest
+9e3734f6fa8ca5336500bc131de5f4ace2f44aec,2021-11-24,ok,run(taskflow of 1 task).wait(),4.0312,2.9568,4.0,4,4,9032.2,updated module
+9e3734f6fa8ca5336500bc131de5f4ace2f44aec,2021-11-24,ok,async(task).wait(),4.0,2.9998,3.0,4,3,9003.1,updated module
+d3f8d7a63e5b9a8801b0f27e80b7959b9a7ef928,2021-11-29,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8589.7,updated pipeline interface
+d3f8d7a63e5b9a8801b0f27e80b7959b9a7ef928,2021-11-29,ok,async(task).wait(),4.0,2.9934,3.0001,4,3,8370.3,updated pipeline interface
+2ec7d551323892cd510e9cf7327d8cd62dfee9dd,2021-12-01,ok,run(taskflow of 1 task).wait(),3.0312,2.9979,4.0,3,4,6192.1,updated pipeline interface to module
+2ec7d551323892cd510e9cf7327d8cd62dfee9dd,2021-12-01,ok,async(task).wait(),4.0,2.9161,3.0,4,3,8961.9,updated pipeline interface to module
+5e77f5daee0f1a2f187bdf49064af6c9ff025eb8,2021-12-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8417.9,updated pipeline
+5e77f5daee0f1a2f187bdf49064af6c9ff025eb8,2021-12-03,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8518.9,updated pipeline
+8ce75f9cf260edc718ccae34859942f1dceeef08,2021-12-06,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8539.5,updated parallel_transform
+8ce75f9cf260edc718ccae34859942f1dceeef08,2021-12-06,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8513.0,updated parallel_transform
+20ae7ebbfd602c6c645bdf1df03a19d50657e316,2021-12-06,ok,run(taskflow of 1 task).wait(),3.0312,2.9933,4.0,3,4,7697.1,added transform algorithm
+20ae7ebbfd602c6c645bdf1df03a19d50657e316,2021-12-06,ok,async(task).wait(),4.0,2.9955,3.0,4,3,8415.0,added transform algorithm
+9e1f08d4e42d2397215e8a0cf0655b6ab7c0d69d,2021-12-08,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8507.4,updated unittest subflow transform
+9e1f08d4e42d2397215e8a0cf0655b6ab7c0d69d,2021-12-08,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8415.5,updated unittest subflow transform
+e46376dd294f355f1d3468292f709fa7beb9471c,2021-12-10,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8721.0,fixed thread_local prob in shared library use
+e46376dd294f355f1d3468292f709fa7beb9471c,2021-12-10,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8541.8,fixed thread_local prob in shared library use
+60887d35d8e87a408c3831fd52c2909f869f80c6,2021-12-10,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8443.4,fixed perf- issue caused by cached push in sorting
+60887d35d8e87a408c3831fd52c2909f869f80c6,2021-12-10,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8521.8,fixed perf- issue caused by cached push in sorting
+7243fc910858cb4963bcbad31c1735900fcdbb57,2021-12-12,ok,run(taskflow of 1 task).wait(),3.0312,1.0069,4.0,3,4,5880.7,fixed pipeline perf issue
+7243fc910858cb4963bcbad31c1735900fcdbb57,2021-12-12,ok,async(task).wait(),4.0,0.0108,3.0,4,3,5907.8,fixed pipeline perf issue
+16fb321dd6d26e571c2b944b83bf965e9990c92e,2021-12-13,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0001,3,4,8618.0,updated pipeline code docs and benchmark
+16fb321dd6d26e571c2b944b83bf965e9990c92e,2021-12-13,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8438.9,updated pipeline code docs and benchmark
+de76e84424a8614dc955ac04ad9bce3ab3578d0c,2021-12-14,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8825.6,before pull
+de76e84424a8614dc955ac04ad9bce3ab3578d0c,2021-12-14,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8560.3,before pull
+a4e4d25b5aba63be3ec552675169c42f73fee3a2,2021-12-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9991,4.0,3,4,8677.8,updated executor with minor opt
+a4e4d25b5aba63be3ec552675169c42f73fee3a2,2021-12-21,ok,async(task).wait(),4.0,2.996,3.0,4,3,8516.4,updated executor with minor opt
+634737204f728c0092ff2b9f4473a35cd9119b55,2022-01-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9993,4.0,3,4,8729.2,updated v3.3
+634737204f728c0092ff2b9f4473a35cd9119b55,2022-01-03,ok,async(task).wait(),4.0,2.9989,3.0,4,3,7469.4,updated v3.3
+71327f5d9218277f5f152dfa28b4bfdde4c12970,2022-01-03,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8555.6,updated 3.4 in master
+71327f5d9218277f5f152dfa28b4bfdde4c12970,2022-01-03,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8477.2,updated 3.4 in master
+75454ae5a40abf1e095a2164cc555684d284bc20,2022-01-06,ok,run(taskflow of 1 task).wait(),3.0312,1.0083,4.0,3,4,5890.7,revised pipeline doc to 1D storage
+75454ae5a40abf1e095a2164cc555684d284bc20,2022-01-06,ok,async(task).wait(),4.0,0.0131,3.0,4,3,5891.4,revised pipeline doc to 1D storage
+4e650ccd555f797609999bab9727f808740efaad,2022-01-08,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8632.2,Merge branch 'master' of https://github.com/taskflow/taskflow
+4e650ccd555f797609999bab9727f808740efaad,2022-01-08,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8458.5,Merge branch 'master' of https://github.com/taskflow/taskflow
+22945872743dc6b5aa0e4cf3f373da76e16cf27e,2022-01-10,ok,run(taskflow of 1 task).wait(),3.0312,2.9993,4.0,3,4,8506.1,improved pipeline performance
+22945872743dc6b5aa0e4cf3f373da76e16cf27e,2022-01-10,ok,async(task).wait(),4.0,2.9922,3.0,4,4,8656.0,improved pipeline performance
+a7ffe9a4114dafc6a977cb74c1005f15bb57e62b,2022-01-16,ok,run(taskflow of 1 task).wait(),3.0312,1.0184,4.0,3,4,9599.4,pipeline: add tuple constructor (#377)
+a7ffe9a4114dafc6a977cb74c1005f15bb57e62b,2022-01-16,ok,async(task).wait(),4.0,0.0215,3.0,4,3,9508.7,pipeline: add tuple constructor (#377)
+bd54308666fd995cecfdc79fb919bd60bc28a968,2022-01-18,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8639.4,updated docs
+bd54308666fd995cecfdc79fb919bd60bc28a968,2022-01-18,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8655.8,updated docs
+f8990db37a9fcead38d47725d5013babcf8f9cdf,2022-01-18,ok,run(taskflow of 1 task).wait(),3.0312,2.9797,4.0002,3,4,8697.4,updated scalable pipeline docs
+f8990db37a9fcead38d47725d5013babcf8f9cdf,2022-01-18,ok,async(task).wait(),4.0,2.992,3.0,4,3,8683.5,updated scalable pipeline docs
+e7aa0e36a90b13186c1b174e968a4e34c5492617,2022-01-24,ok,run(taskflow of 1 task).wait(),3.0312,1.0106,4.0,3,4,9685.4,added tf::ScalablePipeline(lines)
+e7aa0e36a90b13186c1b174e968a4e34c5492617,2022-01-24,ok,async(task).wait(),4.0,0.0134,3.0,4,3,9696.0,added tf::ScalablePipeline(lines)
+5338817fa901b6a6f2a63fad5fb2d4c84b251c7e,2022-02-11,ok,run(taskflow of 1 task).wait(),3.0312,1.009,4.0,3,4,5898.5,Merge branch 'dev'
+5338817fa901b6a6f2a63fad5fb2d4c84b251c7e,2022-02-11,ok,async(task).wait(),4.0,0.0096,3.0,4,3,5873.3,Merge branch 'dev'
+c223ee168ab7881d8691172f8653212c86acdb46,2022-04-14,ok,run(taskflow of 1 task).wait(),3.0312,1.0083,4.0,3,4,6046.5,updated sycl
+c223ee168ab7881d8691172f8653212c86acdb46,2022-04-14,ok,async(task).wait(),4.0,0.0123,3.0,4,3,5926.1,updated sycl
+646fb55d3e0d8b2678826a7b04376f62c508f88c,2022-05-16,ok,run(taskflow of 1 task).wait(),3.0312,2.6611,4.0,3,4,8538.7,updated runtimes unittest
+646fb55d3e0d8b2678826a7b04376f62c508f88c,2022-05-16,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8451.3,updated runtimes unittest
+63c8428429ebc10f866cdc81b5bee6a8465bed37,2022-05-17,ok,run(taskflow of 1 task).wait(),3.0312,2.9986,4.0,3,4,7404.3,updated flow builder
+63c8428429ebc10f866cdc81b5bee6a8465bed37,2022-05-17,ok,async(task).wait(),4.0,2.9886,3.0,4,3,8623.3,updated flow builder
+ccd2da4faadc446db9253274f2e5808b7704b14c,2022-05-17,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8615.6,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+ccd2da4faadc446db9253274f2e5808b7704b14c,2022-05-17,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8833.9,Merge branch 'dev' of https://github.com/taskflow/taskflow into dev
+576e59bab72e6ee551c8a04fb6186895df541d51,2022-05-17,ok,run(taskflow of 1 task).wait(),3.0312,2.8892,4.0,3,4,8050.4,fixed infinite loop issue in pipeline
+576e59bab72e6ee551c8a04fb6186895df541d51,2022-05-17,ok,async(task).wait(),4.0,2.9815,3.0,4,3,8931.1,fixed infinite loop issue in pipeline
+3baaeb902d684cfef6cf849592171092d83783ec,2022-05-19,ok,run(taskflow of 1 task).wait(),3.0312,2.989,4.0001,3,4,8515.9,added runtime task support for pipeline
+3baaeb902d684cfef6cf849592171092d83783ec,2022-05-19,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8449.6,added runtime task support for pipeline
+364abfd42b8133098dac3af5a31dc1f50652d66d,2022-05-23,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8839.2,updated docs and tf::Executor::run_and_wait
+364abfd42b8133098dac3af5a31dc1f50652d66d,2022-05-23,ok,async(task).wait(),4.0,2.9945,3.0,4,3,8381.1,updated docs and tf::Executor::run_and_wait
+a41aad0f58cf611b6522ff92a3287748fcf5fdbc,2022-05-23,ok,run(taskflow of 1 task).wait(),3.0312,1.0087,4.0,3,4,9426.2,release-3.4
+a41aad0f58cf611b6522ff92a3287748fcf5fdbc,2022-05-23,ok,async(task).wait(),4.0,0.0171,3.0,4,3,9527.6,release-3.4
+f25503b35fbd8edd1db90cf9edb746a521e3b697,2022-05-25,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8522.4,fixed compilation error
+f25503b35fbd8edd1db90cf9edb746a521e3b697,2022-05-25,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8434.5,fixed compilation error
+3494fc261448fb232f550a5c3222ee20cab135a8,2022-05-27,ok,run(taskflow of 1 task).wait(),3.0312,2.9989,4.0,3,4,9313.2,updated cuda and Gsoc
+3494fc261448fb232f550a5c3222ee20cab135a8,2022-05-27,ok,async(task).wait(),4.0,2.9964,3.0,4,3,8815.5,updated cuda and Gsoc
+c8b1715abd983e42be96f4ba92eafe420abcd589,2022-06-02,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8578.5,added tf::WorkerInterface
+c8b1715abd983e42be96f4ba92eafe420abcd589,2022-06-02,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8504.8,added tf::WorkerInterface
+96620cce7cf3bb67e039dad4ecd556ba61347787,2022-06-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9981,4.0,3,4,8441.4,updated WorkerInterface
+96620cce7cf3bb67e039dad4ecd556ba61347787,2022-06-03,ok,async(task).wait(),4.0,2.9598,3.0,4,3,8836.0,updated WorkerInterface
+555a9bb110d77d7fba3b5d06244f26273e4cd517,2022-07-23,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8554.2,fix spelling mistake 'Fugure' to 'Future' (#417)
+555a9bb110d77d7fba3b5d06244f26273e4cd517,2022-07-23,ok,async(task).wait(),4.0,2.9989,3.0,4,3,8466.9,fix spelling mistake 'Fugure' to 'Future' (#417)
+1707c5662bd9eae8431f844d47586e76e008192d,2022-07-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,4.0,3,4,8553.2,support emscripten build (#422)
+1707c5662bd9eae8431f844d47586e76e008192d,2022-07-22,ok,async(task).wait(),4.0,2.9947,3.0,4,3,8585.7,support emscripten build (#422)
+b4fab70697ddeffd30e9cdb73051ce201bce57c6,2022-07-27,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8941.7,Merge branch 'dev'
+b4fab70697ddeffd30e9cdb73051ce201bce57c6,2022-07-27,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8599.1,Merge branch 'dev'
+13d9bd5260252adc19a405f9501d6ddbb4978904,2022-07-28,ok,run(taskflow of 1 task).wait(),3.0312,2.995,4.0,3,5,8346.6,updated prioritized tasking
+13d9bd5260252adc19a405f9501d6ddbb4978904,2022-07-28,ok,async(task).wait(),4.0,2.9655,3.0,4,3,8684.0,updated prioritized tasking
+d83a4e514744fd5b398cfad4dd0e68f5f6cb454e,2022-07-28,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8932.4,updated task priority doc
+d83a4e514744fd5b398cfad4dd0e68f5f6cb454e,2022-07-28,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8970.2,updated task priority doc
+a757aa58390c10cb6556685681ec7b3acbac66e9,2022-07-28,ok,run(taskflow of 1 task).wait(),3.0312,2.9978,4.0,3,4,7452.4,updated doc
+a757aa58390c10cb6556685681ec7b3acbac66e9,2022-07-28,ok,async(task).wait(),4.0,2.9992,3.0,4,3,9100.1,updated doc
+4f4f24ca50ce1885ff4aba2482df4e02610b3ebe,2022-08-11,ok,run(taskflow of 1 task).wait(),3.0312,1.4111,4.0,3,4,9607.3,optimized parallel algorithms (#427)
+4f4f24ca50ce1885ff4aba2482df4e02610b3ebe,2022-08-11,ok,async(task).wait(),4.0,3.0,3.0,4,3,8691.9,optimized parallel algorithms (#427)
+d70f92935f43679de315fde598438f71d698d0d7,2022-08-12,ok,run(taskflow of 1 task).wait(),3.0312,1.0085,4.0,3,4,5955.6,Merge branch 'dev'
+d70f92935f43679de315fde598438f71d698d0d7,2022-08-12,ok,async(task).wait(),4.0,0.0223,3.0,4,3,6002.9,Merge branch 'dev'
+fb5b8e866b9c35b7cf5dcc6c897729b435556a09,2022-08-18,ok,run(taskflow of 1 task).wait(),3.0312,1.0125,4.0,3,4,9934.1,updated quickstart
+fb5b8e866b9c35b7cf5dcc6c897729b435556a09,2022-08-18,ok,async(task).wait(),4.0,0.0242,3.0,4,3,9918.5,updated quickstart
+a6c62442d27ff066318d31ca1ffbca04eb3317b1,2022-10-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9978,4.0,3,4,6290.6,Merge branch 'dev'
+a6c62442d27ff066318d31ca1ffbca04eb3317b1,2022-10-21,ok,async(task).wait(),4.0,2.9698,3.0,4,3,8438.0,Merge branch 'dev'
+51dd834777c0f4c163b32af3b52275a8b224b303,2022-11-10,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,7163.1,updated utest
+51dd834777c0f4c163b32af3b52275a8b224b303,2022-11-10,ok,async(task).wait(),4.0,2.9739,3.0,4,3,7574.8,updated utest
+d76beb32da608cf61aeab54ebbfff7b8838ee8cc,2022-11-10,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8781.7,modified queue empty
+d76beb32da608cf61aeab54ebbfff7b8838ee8cc,2022-11-10,ok,async(task).wait(),4.0,3.0,3.0,4,3,8605.6,modified queue empty
+6de1724eb9ee98d53c3e5ac25c08963ecb394923,2022-11-11,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8763.8,removed buggy test
+6de1724eb9ee98d53c3e5ac25c08963ecb394923,2022-11-11,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8563.2,removed buggy test
+c7c63b12c7acca668eae2b4b8b6c1227efc9fb7a,2022-11-11,ok,run(taskflow of 1 task).wait(),3.0312,2.9979,4.0,3,4,6895.1,condition test
+c7c63b12c7acca668eae2b4b8b6c1227efc9fb7a,2022-11-11,ok,async(task).wait(),4.0,2.9996,3.0,4,3,6696.4,condition test
+59257c12764d0de4c03c3483a35fc298c67578af,2022-11-15,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8777.5,fixed starv bug
+59257c12764d0de4c03c3483a35fc298c67578af,2022-11-15,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8640.7,fixed starv bug
+0b8963904d24c897e9b87007b7b1202802a2c67d,2022-11-16,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8964.2,removed relaxed aotmic before leaving
+0b8963904d24c897e9b87007b7b1202802a2c67d,2022-11-16,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8865.7,removed relaxed aotmic before leaving
+a7bde2f37719b5566881f247976b9a48ea692dc4,2022-11-16,ok,run(taskflow of 1 task).wait(),3.0312,1.0087,4.0,3,4,5862.8,fixed data race
+a7bde2f37719b5566881f247976b9a48ea692dc4,2022-11-16,ok,async(task).wait(),4.0,0.0167,3.0,4,3,5890.3,fixed data race
+2e8e5034f34aa678856906741e5a5f2565ec186c,2022-11-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8801.5,added defer pipeline and refactored
+2e8e5034f34aa678856906741e5a5f2565ec186c,2022-11-22,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8562.6,added defer pipeline and refactored
+79a6706e5dc4220fb181a86200261f5a4669704e,2022-11-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8676.8,remove comments
+79a6706e5dc4220fb181a86200261f5a4669704e,2022-11-22,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8579.0,remove comments
+c787b70201d77784b204c0f95947f61b9d3a3356,2022-11-22,ok,run(taskflow of 1 task).wait(),3.0312,1.0108,4.0,3,4,9817.5,refactored
+c787b70201d77784b204c0f95947f61b9d3a3356,2022-11-22,ok,async(task).wait(),4.0,0.0255,3.0,4,3,9657.0,refactored
+d2bacaf89695b9de539d8de7e66b3dfd2a42b011,2022-11-22,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8824.9,removed std::list in deferred-pipeflow
+d2bacaf89695b9de539d8de7e66b3dfd2a42b011,2022-11-22,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8522.7,removed std::list in deferred-pipeflow
+58d21c5940981c5b2a9f4d5e9afc96d8e449a625,2022-11-29,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8702.6,Merge remote-tracking branch 'origin/dev' into dev-defer-new
+58d21c5940981c5b2a9f4d5e9afc96d8e449a625,2022-11-29,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8598.9,Merge remote-tracking branch 'origin/dev' into dev-defer-new
+228334f723dea56587ef16ecfcf2f615fca46d49,2022-11-29,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8964.5,refactored pipeline
+228334f723dea56587ef16ecfcf2f615fca46d49,2022-11-29,ok,async(task).wait(),4.0,2.9992,3.0,4,3,8547.4,refactored pipeline
+3c97c903180ccf1a882cf9afd75509c48182f315,2022-11-30,ok,run(taskflow of 1 task).wait(),3.0312,2.9939,4.0,3,4,9041.9,updated exec
+3c97c903180ccf1a882cf9afd75509c48182f315,2022-11-30,ok,async(task).wait(),4.0,2.9084,3.0,4,3,9099.9,updated exec
+6633a0919065f27b6697a8fb51ed36fbda8d384a,2022-12-04,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8886.9,added deferred_pipeline test
+6633a0919065f27b6697a8fb51ed36fbda8d384a,2022-12-04,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8584.0,added deferred_pipeline test
+c0ff903bab2271e2c69c752b26562def09f76204,2023-01-05,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8774.8,Merge branch 'dev'
+c0ff903bab2271e2c69c752b26562def09f76204,2023-01-05,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8593.2,Merge branch 'dev'
+de42cf004024909478c590b137a41e95d3cd9756,2023-03-07,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8546.8,added partitioners
+de42cf004024909478c590b137a41e95d3cd9756,2023-03-07,ok,async(task).wait(),4.0,2.9981,3.0,4,3,6552.8,added partitioners
+104e24ab398bb29b315f5cfca6376ea5e81be9dd,2023-03-14,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,9054.6,updated doc
+104e24ab398bb29b315f5cfca6376ea5e81be9dd,2023-03-14,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8382.1,updated doc
+f9201f22cd079a2eb4753c6a29e0eef3b8494b0f,2023-03-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8832.3,updated static partitioner
+f9201f22cd079a2eb4753c6a29e0eef3b8494b0f,2023-03-21,ok,async(task).wait(),4.0,3.0,3.0,4,3,8736.0,updated static partitioner
+b59a18185f219e498215494524e509994825510f,2023-03-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,9007.5,fixed leak error
+b59a18185f219e498215494524e509994825510f,2023-03-22,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8846.4,fixed leak error
+68c110ef25c635d1ea3cb923b99d2902fffd4080,2023-03-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9974,4.0,3,4,6244.4,updated sort and async test for runtime
+68c110ef25c635d1ea3cb923b99d2902fffd4080,2023-03-22,ok,async(task).wait(),4.0,2.9949,3.0,4,3,8555.3,updated sort and async test for runtime
+78da7a8a112846993a5fee5a8f9ab2ac05d942ac,2023-03-23,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8769.9,updated doc
+78da7a8a112846993a5fee5a8f9ab2ac05d942ac,2023-03-23,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8578.1,updated doc
+5c0c3f6756b0ad3e2400c0a827ada7cfa6dbe2b9,2023-03-24,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,9051.9,updated subflow to a derived class from runtime
+5c0c3f6756b0ad3e2400c0a827ada7cfa6dbe2b9,2023-03-24,ok,async(task).wait(),4.0,2.9989,3.0,4,3,8552.0,updated subflow to a derived class from runtime
+58d7c2160910d7baaf4b8cd5a8d2ff9309be1606,2023-03-24,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8871.5,Merge branch 'master' of https://github.com/taskflow/taskflow
+58d7c2160910d7baaf4b8cd5a8d2ff9309be1606,2023-03-24,ok,async(task).wait(),4.0,2.9996,3.0,4,3,8579.9,Merge branch 'master' of https://github.com/taskflow/taskflow
+cc2f9fba8ad07d345347ade9df6f51e0ab08a66f,2023-03-24,ok,run(taskflow of 1 task).wait(),3.0312,1.0126,4.0,3,4,9610.0,updated docs
+cc2f9fba8ad07d345347ade9df6f51e0ab08a66f,2023-03-24,ok,async(task).wait(),4.0,0.0213,3.0,4,3,9638.6,updated docs
+f2e874ef1e2e3aa9bd434d33c0c0dc059e690792,2023-04-05,ok,run(taskflow of 1 task).wait(),3.0312,1.0132,4.0,3,4,9571.1,updated docs
+f2e874ef1e2e3aa9bd434d33c0c0dc059e690792,2023-04-05,ok,async(task).wait(),4.0,0.0234,3.0,4,3,9646.5,updated docs
+69c242ada2151e36f6a1b270784d757e56474f49,2023-04-24,ok,run(taskflow of 1 task).wait(),3.0312,1.0123,4.0,3,4,10052.9,updated algorithms
+69c242ada2151e36f6a1b270784d757e56474f49,2023-04-24,ok,async(task).wait(),4.0,0.0205,3.0,4,3,10079.4,updated algorithms
+1797b30d4ff38966b6dd9546c1084d88ee627b9c,2023-04-25,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,9019.1,updated algorithms
+1797b30d4ff38966b6dd9546c1084d88ee627b9c,2023-04-25,ok,async(task).wait(),4.0,2.9997,3.0,4,3,8679.8,updated algorithms
+3647193431686ea966f7b82339fc46f7adb8e538,2023-04-26,ok,run(taskflow of 1 task).wait(),3.0312,2.9983,4.0,3,4,9318.6,updated dependent async
+3647193431686ea966f7b82339fc46f7adb8e538,2023-04-26,ok,async(task).wait(),4.0,2.9588,3.0,4,3,9097.8,updated dependent async
+8468a313984a8247d716f18f85a7f76d59a7aaa2,2023-04-27,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8881.6,fixed dependent async bug
+8468a313984a8247d716f18f85a7f76d59a7aaa2,2023-04-27,ok,async(task).wait(),4.0,3.0,3.0001,4,3,8655.9,fixed dependent async bug
+a62894ab266eb03be7220beb81f8192b5be823ff,2023-05-01,ok,run(taskflow of 1 task).wait(),3.0312,1.0123,4.0,3,4,10091.8,added dependent_async
+a62894ab266eb03be7220beb81f8192b5be823ff,2023-05-01,ok,async(task).wait(),4.0,0.0234,3.0,4,3,10168.4,added dependent_async
+87d6ac88103c49f9462f9344b942cb8d7cc938ff,2023-05-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8788.5,fixed MS dependent async error
+87d6ac88103c49f9462f9344b942cb8d7cc938ff,2023-05-02,ok,async(task).wait(),4.0,2.9998,3.0,4,3,8510.5,fixed MS dependent async error
+a5151541ebb337846675f89c24844d965b1ebd60,2023-05-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9983,4.0,3,4,8913.7,fixed data race
+a5151541ebb337846675f89c24844d965b1ebd60,2023-05-02,ok,async(task).wait(),4.0,2.9945,3.0,4,3,8611.1,fixed data race
+47ecd9f6ebc17494def89fd1bd2699002f39b552,2023-05-03,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8962.7,updated dependent async
+47ecd9f6ebc17494def89fd1bd2699002f39b552,2023-05-03,ok,async(task).wait(),4.0,2.9989,3.0,4,3,8564.2,updated dependent async
+6946eb4059f6c814cdce1713101616102957fb8e,2023-05-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8799.7,Merge branch 'master' into dev
+6946eb4059f6c814cdce1713101616102957fb8e,2023-05-03,ok,async(task).wait(),4.0,2.9994,3.0,4,3,8617.1,Merge branch 'master' into dev
+505a825cd1d49e81b441ae124f90ce2a2261b1c5,2023-05-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9999,4.0,3,4,8721.0,added dependent_async overloads
+505a825cd1d49e81b441ae124f90ce2a2261b1c5,2023-05-03,ok,async(task).wait(),4.0,2.9991,3.0,4,3,8686.5,added dependent_async overloads
+534f527682eecb236a3fe65cba0364993fe655bc,2023-05-05,ok,run(taskflow of 1 task).wait(),3.0312,2.9981,4.0,3,4,9125.6,updated first version of dependent async task
+534f527682eecb236a3fe65cba0364993fe655bc,2023-05-05,ok,async(task).wait(),3.0,1.993,3.0,3,3,8747.4,updated first version of dependent async task
+1402947f19420b6b48bbfe73f7dee6018d42657d,2023-05-05,ok,run(taskflow of 1 task).wait(),3.0312,1.0116,4.0,3,4,9738.4,updated documentation for dependent_async
+1402947f19420b6b48bbfe73f7dee6018d42657d,2023-05-05,ok,async(task).wait(),3.0,0.0182,3.0,3,3,9727.6,updated documentation for dependent_async
+12f8bd4e970ab27fd3dee3bffa24b5b48b54ba39,2023-05-07,ok,run(taskflow of 1 task).wait(),3.0312,1.0098,4.0,3,4,5929.9,updated 3.7.0
+12f8bd4e970ab27fd3dee3bffa24b5b48b54ba39,2023-05-07,ok,async(task).wait(),3.0,0.0147,3.0,3,3,5847.4,updated 3.7.0
+ce8ba07c57108b594c495fa8512d23ee36739e85,2023-05-09,ok,run(taskflow of 1 task).wait(),3.0312,1.0113,4.0,3,4,10062.3,fixed old async behavior in documentation
+ce8ba07c57108b594c495fa8512d23ee36739e85,2023-05-09,ok,async(task).wait(),3.0,0.0153,3.0,3,3,9896.1,fixed old async behavior in documentation
+9e4a095602a0af2d4de473214d3da9f17e17ed26,2023-05-11,ok,run(taskflow of 1 task).wait(),3.0312,1.0115,4.0,3,4,9552.5,Merge pull request #484 from gary30404/master
+9e4a095602a0af2d4de473214d3da9f17e17ed26,2023-05-11,ok,async(task).wait(),3.0,0.0201,3.0,3,3,9524.4,Merge pull request #484 from gary30404/master
+a0e218ca2c4004f719c045cf41f337b5f8595d1e,2023-06-10,ok,run(taskflow of 1 task).wait(),3.0312,1.0128,4.0,3,4,9911.5,Merge branch 'dev'
+a0e218ca2c4004f719c045cf41f337b5f8595d1e,2023-06-10,ok,async(task).wait(),3.0,0.0135,3.0,3,3,9795.7,Merge branch 'dev'
+9316d98937e992968f1fb3a5836bf3500f756df7,2023-06-13,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8968.4,updated unittest for dep_async
+9316d98937e992968f1fb3a5836bf3500f756df7,2023-06-13,ok,async(task).wait(),3.0,1.9995,3.0,3,3,8501.6,updated unittest for dep_async
+cac9509fe96a66eba58382799cec14384a133507,2023-06-13,ok,run(taskflow of 1 task).wait(),3.0312,2.9982,4.0,3,4,8720.5,updated atomic wait for id mapping
+cac9509fe96a66eba58382799cec14384a133507,2023-06-13,ok,async(task).wait(),3.0,1.9044,3.0,3,3,8311.3,updated atomic wait for id mapping
+2c60a0ede21f5ae7ebb68f237d96c57f7f12b3e6,2023-09-12,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8730.9,fixed compilation error in cuda examples
+2c60a0ede21f5ae7ebb68f237d96c57f7f12b3e6,2023-09-12,ok,async(task).wait(),3.0,1.9998,3.0,3,3,8546.6,fixed compilation error in cuda examples
+615f8d51159f1c19e3af349a6a073c8414e77488,2023-09-12,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8757.5,added Taskflow::remove_dependency
+615f8d51159f1c19e3af349a6a073c8414e77488,2023-09-12,ok,async(task).wait(),3.0,1.9998,3.0,3,3,8541.0,added Taskflow::remove_dependency
+b96523a1322f0670f5376e1053ed107bbbc83c90,2023-09-19,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,4.0,3,4,8774.1,updated first draft of exception
+b96523a1322f0670f5376e1053ed107bbbc83c90,2023-09-19,ok,async(task).wait(),3.0,1.9996,3.0,3,3,8382.4,updated first draft of exception
+008fe185d21a2df367f5e10210079133fadb8e76,2023-09-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8776.1,updated cmake to exclude exception under sanitizers
+008fe185d21a2df367f5e10210079133fadb8e76,2023-09-22,ok,async(task).wait(),3.0,1.9996,3.0,3,3,8610.5,updated cmake to exclude exception under sanitizers
+f65ca9f4e3627f62f27acc8ab5af9a59dd391604,2023-09-27,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8750.4,updated exception doc
+f65ca9f4e3627f62f27acc8ab5af9a59dd391604,2023-09-27,ok,async(task).wait(),3.0,1.9998,3.0,3,3,8510.3,updated exception doc
+c4beb762cef29f362aebd6c1c60f7efa949eed24,2023-09-27,ok,run(taskflow of 1 task).wait(),3.0312,0.0123,4.0,3,4,5861.2,fixed stream.hpp ostringstream include
+c4beb762cef29f362aebd6c1c60f7efa949eed24,2023-09-27,ok,async(task).wait(),3.0,0.0132,3.0,3,3,5789.6,fixed stream.hpp ostringstream include
+12646d7634ddd1157802e0e03825f5cf6bd1bf41,2023-09-28,ok,run(taskflow of 1 task).wait(),3.0312,2.6526,4.0001,3,4,8684.0,updated docs
+12646d7634ddd1157802e0e03825f5cf6bd1bf41,2023-09-28,ok,async(task).wait(),3.0,1.9999,3.0,3,3,8470.7,updated docs
+555b39e5a9a78e84ae2761e29fca29ef64cca5ab,2023-10-10,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,9026.2,updated -Wshadow
+555b39e5a9a78e84ae2761e29fca29ef64cca5ab,2023-10-10,ok,async(task).wait(),3.0,1.9998,3.0,3,3,8587.2,updated -Wshadow
+44dd1dd56feff68761f84430ad755ae942f78f9a,2023-10-10,ok,run(taskflow of 1 task).wait(),3.0312,0.0181,4.0,3,4,9667.2,Merge pull request #521 from fran6co/exceptions_disable
+44dd1dd56feff68761f84430ad755ae942f78f9a,2023-10-10,ok,async(task).wait(),3.0,0.0216,3.0,3,3,9470.8,Merge pull request #521 from fran6co/exceptions_disable
+7f59941aa0d188d33704665ba6432882f6c96084,2024-04-09,ok,run(taskflow of 1 task).wait(),3.0312,0.0159,4.0,3,4,9659.6,Merge pull request #571 from bangerth/typo
+7f59941aa0d188d33704665ba6432882f6c96084,2024-04-09,ok,async(task).wait(),3.0,0.0173,3.0,3,3,9472.7,Merge pull request #571 from bangerth/typo
+3c8d0bd5cddcde924207eda7018f7b2312fc3dec,2024-05-06,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8729.0,updated cmake to 3.8.0
+3c8d0bd5cddcde924207eda7018f7b2312fc3dec,2024-05-06,ok,async(task).wait(),3.0,1.9995,3.0,3,3,8353.9,updated cmake to 3.8.0
+700196d8d2c07bf4ae99d3080e56a51e38b1d691,2024-05-07,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8712.8,Merge pull request #585 from bangerth/new
+700196d8d2c07bf4ae99d3080e56a51e38b1d691,2024-05-07,ok,async(task).wait(),3.0,2.0,3.0,3,3,8576.4,Merge pull request #585 from bangerth/new
+e76b49b6f9edcb01c0a1f952cf5ebf8ad4b5726c,2024-06-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8781.5,Merge branch 'notifier'
+e76b49b6f9edcb01c0a1f952cf5ebf8ad4b5726c,2024-06-03,ok,async(task).wait(),3.0,1.9999,3.0,3,3,8680.9,Merge branch 'notifier'
+b042f700ea76abd6cf6777dbed6baf8ec4fbc48f,2024-06-03,ok,run(taskflow of 1 task).wait(),3.0312,0.0129,4.0,3,4,5962.3,merge notifier branch
+b042f700ea76abd6cf6777dbed6baf8ec4fbc48f,2024-06-03,ok,async(task).wait(),4.0,0.0116,2.0,4,2,5910.9,merge notifier branch
+b8d74ce0920a851dfa11c0437a07abe5b6a615ec,2024-06-03,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,9212.1,removed weak_ptr
+b8d74ce0920a851dfa11c0437a07abe5b6a615ec,2024-06-03,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8454.0,removed weak_ptr
+5ce24211a0d9c742a1f25c7927458c3c64406afb,2024-06-04,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8896.8,updated
+5ce24211a0d9c742a1f25c7927458c3c64406afb,2024-06-04,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8843.0,updated
+bf0f873af6eae90bc4570672ed2ef4ce8f6d1a9d,2024-06-05,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,4.0,3,4,8719.1,updated doc
+bf0f873af6eae90bc4570672ed2ef4ce8f6d1a9d,2024-06-05,ok,async(task).wait(),4.0,1.9999,2.0,4,2,8481.9,updated doc
+57e960c7e2324da2b73dd05abbd69578f0e04ec7,2024-06-07,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8939.8,back with pool
+57e960c7e2324da2b73dd05abbd69578f0e04ec7,2024-06-07,ok,async(task).wait(),3.0,2.0,3.0,3,3,8437.9,back with pool
+44642dfdc085524bea56bd1a75601e740ef334bb,2024-06-15,ok,run(taskflow of 1 task).wait(),3.0312,2.9971,4.0,3,4,7541.3,added eventcount for testing
+44642dfdc085524bea56bd1a75601e740ef334bb,2024-06-15,ok,async(task).wait(),3.0,1.9993,3.0,3,3,8876.3,added eventcount for testing
+d58f69523da21e117110213bc4ed560689a2a8f4,2024-06-15,ok,run(taskflow of 1 task).wait(),3.0312,2.6038,4.0,3,4,8908.5,fixed workflow
+d58f69523da21e117110213bc4ed560689a2a8f4,2024-06-15,ok,async(task).wait(),3.0,1.9993,3.0,3,3,8503.4,fixed workflow
+47196a3158f36e31edd867835781a0a9eecd0182,2024-06-15,ok,run(taskflow of 1 task).wait(),3.0312,2.5511,4.0,3,4,8417.6,added eventcount to window test
+47196a3158f36e31edd867835781a0a9eecd0182,2024-06-15,ok,async(task).wait(),3.0,1.9725,3.0,3,3,8420.5,added eventcount to window test
+dd9f314f70398863ed0ed90aed0f3f3997527600,2024-06-15,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8832.9,renamed notifier
+dd9f314f70398863ed0ed90aed0f3f3997527600,2024-06-15,ok,async(task).wait(),3.0,1.9998,3.0,3,3,8769.0,renamed notifier
+b61bc2e2c91636045deed7d497d9b88c19fae2ee,2024-06-15,ok,run(taskflow of 1 task).wait(),3.0312,2.9982,4.0,3,4,8584.1,stripped away atomic notifier
+b61bc2e2c91636045deed7d497d9b88c19fae2ee,2024-06-15,ok,async(task).wait(),3.0,1.9994,3.0,3,3,8537.3,stripped away atomic notifier
+a7ed4b2174466a3dcbf35e00c7fbc23f98ec02b5,2024-06-18,ok,run(taskflow of 1 task).wait(),3.0312,2.9943,4.0,3,4,7119.1,updated workflow to include atomic notifier
+a7ed4b2174466a3dcbf35e00c7fbc23f98ec02b5,2024-06-18,ok,async(task).wait(),3.0,1.989,3.0,3,3,7292.5,updated workflow to include atomic notifier
+3fbd4a61ea7107382213160e9930eed33b52fe23,2024-06-21,ok,run(taskflow of 1 task).wait(),3.0312,0.1356,4.0,3,4,9925.6,Merge branch 'master' into dev
+3fbd4a61ea7107382213160e9930eed33b52fe23,2024-06-21,ok,async(task).wait(),3.0,1.9997,3.0,3,3,8416.5,Merge branch 'master' into dev
+a66f0fdc5f89bcc1c1f4bed2b76005d86f83f013,2024-06-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8601.9,updated semaphore
+a66f0fdc5f89bcc1c1f4bed2b76005d86f83f013,2024-06-22,ok,async(task).wait(),4.0,1.9999,2.0,4,2,8479.9,updated semaphore
+b0e21bf4a65f6a512349e3d7e165df53d7bc6671,2024-06-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8749.8,fixed typo in workflow
+b0e21bf4a65f6a512349e3d7e165df53d7bc6671,2024-06-22,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8492.2,fixed typo in workflow
+2e9bb1eebc76f2fe5486ec8d4890e0bb929ccd9f,2024-06-23,ok,run(taskflow of 1 task).wait(),3.0312,0.0177,4.0,3,4,5969.8,updated workflow to v3
+2e9bb1eebc76f2fe5486ec8d4890e0bb929ccd9f,2024-06-23,ok,async(task).wait(),4.0,0.0126,2.0,4,2,5913.3,updated workflow to v3
+25cb83b6688362d4b9b41f48a072607b76ee044d,2024-06-27,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8786.6,Merge pull request #598 from tjhei/pipeline-typos
+25cb83b6688362d4b9b41f48a072607b76ee044d,2024-06-27,ok,async(task).wait(),4.0,1.9992,2.0,4,2,8668.7,Merge pull request #598 from tjhei/pipeline-typos
+95f9fa5a374553638551b4d1d85af5373d4040d7,2024-07-02,ok,run(taskflow of 1 task).wait(),3.0312,0.0201,4.0,3,4,10051.4,Merge pull request #601 from boxerab/typos
+95f9fa5a374553638551b4d1d85af5373d4040d7,2024-07-02,ok,async(task).wait(),4.0,0.0222,2.0,4,2,9897.2,Merge pull request #601 from boxerab/typos
+598fa70633c10b2ae7354b976b4976bf40502405,2024-07-07,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8546.8,Merge pull request #604 from tjhei/dox-semaphore-fix
+598fa70633c10b2ae7354b976b4976bf40502405,2024-07-07,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8653.0,Merge pull request #604 from tjhei/dox-semaphore-fix
+2516dcd755a4024f1575ece6a0744e4f561e55a0,2024-07-17,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,4.0,3,4,8573.1,Merge branch 'dev'
+2516dcd755a4024f1575ece6a0744e4f561e55a0,2024-07-17,ok,async(task).wait(),4.0,1.9965,2.0,4,2,8386.6,Merge branch 'dev'
+9823d00e119b2205943de737b9ca5f93c5cc26bd,2024-07-19,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8635.7,Merge branch 'dev'
+9823d00e119b2205943de737b9ca5f93c5cc26bd,2024-07-19,ok,async(task).wait(),4.0,1.9994,2.0,4,2,8521.3,Merge branch 'dev'
+986c092d1abc1fde0a736169aa6c7a451d68ba84,2024-08-20,ok,run(taskflow of 1 task).wait(),3.0312,0.0171,4.0,3,4,9996.8,Merge pull request #611 from LucienXian/master
+986c092d1abc1fde0a736169aa6c7a451d68ba84,2024-08-20,ok,async(task).wait(),4.0,0.015,2.0,4,2,9972.2,Merge pull request #611 from LucienXian/master
+e12a1686d7831bcce85b801adf4ce4c0e4427536,2024-08-20,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8507.9,Merge pull request #609 from blonded04/heterogeneous-distance-function
+e12a1686d7831bcce85b801adf4ce4c0e4427536,2024-08-20,ok,async(task).wait(),4.0,2.0,2.0,4,2,8631.1,Merge pull request #609 from blonded04/heterogeneous-distance-function
+a89919bcb16819e8e47aba79801aa2747c127d57,2024-09-11,ok,run(taskflow of 1 task).wait(),3.0312,0.0207,4.0,3,4,6065.4,Merge branch 'dev'
+a89919bcb16819e8e47aba79801aa2747c127d57,2024-09-11,ok,async(task).wait(),4.0,0.0179,2.0,4,2,5773.0,Merge branch 'dev'
+382d1a9955ee80bdb49d96586fd076093bec1d8a,2024-09-11,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8646.8,Merge pull request #620 from Ghost-LZW/no-exception
+382d1a9955ee80bdb49d96586fd076093bec1d8a,2024-09-11,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8336.3,Merge pull request #620 from Ghost-LZW/no-exception
+670a22afb6c0521ac614923fd65c8be15115e618,2024-09-17,ok,run(taskflow of 1 task).wait(),3.0312,0.016,4.0,3,4,9888.0,Merge pull request #625 from mosra/doc-warning-fixes
+670a22afb6c0521ac614923fd65c8be15115e618,2024-09-17,ok,async(task).wait(),4.0,0.0136,2.0,4,2,9784.7,Merge pull request #625 from mosra/doc-warning-fixes
+d1a33eeb7f39003a67862d5918777e31e5f56977,2024-09-23,ok,run(taskflow of 1 task).wait(),3.0312,0.0087,4.0,3,4,5829.9,Merge branch 'dev'
+d1a33eeb7f39003a67862d5918777e31e5f56977,2024-09-23,ok,async(task).wait(),4.0,0.0079,2.0,4,2,5760.2,Merge branch 'dev'
+5bbadaa49ef015ce2b7431878dcad69f4e302d1d,2024-09-28,build failed,,,,,,,,added freelist
+4288d9598cd67d844d080847d241ea969503750d,2024-09-28,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8354.0,fixed bug
+4288d9598cd67d844d080847d241ea969503750d,2024-09-28,ok,async(task).wait(),4.0,1.9999,2.0,4,2,8451.7,fixed bug
+a9c48aee15276b440cb9ef0d3212d5ac39cd175e,2024-09-28,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8500.8,fixed bug
+a9c48aee15276b440cb9ef0d3212d5ac39cd175e,2024-09-28,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8467.5,fixed bug
+fbe45ab117f27157e202b3798e9a076a0ac4e583,2024-09-28,ok,run(taskflow of 1 task).wait(),3.0312,0.0209,4.0,3,4,9620.2,updated sched
+fbe45ab117f27157e202b3798e9a076a0ac4e583,2024-09-28,ok,async(task).wait(),4.0,0.0157,2.0,4,2,9507.2,updated sched
+b972a059287029bd366b9794a49fe30900ec59f3,2024-09-28,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8542.8,updated TF_DEFAULT_TASK_QUEUE_LOG_SIZE
+b972a059287029bd366b9794a49fe30900ec59f3,2024-09-28,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8487.0,updated TF_DEFAULT_TASK_QUEUE_LOG_SIZE
+4104d6c2ecf11e9a0c339e9883d9399b9f92c055,2024-10-01,ok,run(taskflow of 1 task).wait(),3.0312,2.2612,4.0,3,4,8664.1,updated executor
+4104d6c2ecf11e9a0c339e9883d9399b9f92c055,2024-10-01,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8427.8,updated executor
+e3761ce577e7c80e5e4be1bb8d341950a4f5fe6d,2024-10-01,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8536.3,fixed bug in unittest
+e3761ce577e7c80e5e4be1bb8d341950a4f5fe6d,2024-10-01,ok,async(task).wait(),4.0,1.3024,2.0,4,2,8514.3,fixed bug in unittest
+d8c49c64b4ee5015a3f1c0a42748fa7a2bf5529e,2024-10-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9975,4.0,3,4,8380.5,updated docs
+d8c49c64b4ee5015a3f1c0a42748fa7a2bf5529e,2024-10-02,ok,async(task).wait(),4.0,1.9988,2.0,4,2,8378.2,updated docs
+e5c605f15a863f960db3bf9a76e9b4b95701b33f,2024-11-30,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8372.0,fixed compile error
+e5c605f15a863f960db3bf9a76e9b4b95701b33f,2024-11-30,ok,async(task).wait(),4.0,1.9994,2.0,4,2,8458.4,fixed compile error
+34c9a2255d46163e410584ab93ecfa45c8072675,2024-12-12,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8405.1,clear joined subflow
+34c9a2255d46163e410584ab93ecfa45c8072675,2024-12-12,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8357.3,clear joined subflow
+1d6f210b996795d8f4da78c3a9abfbccbeba1fcb,2024-12-15,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8278.0,removed blocking corun from find and reduce algorithms
+1d6f210b996795d8f4da78c3a9abfbccbeba1fcb,2024-12-15,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8244.3,removed blocking corun from find and reduce algorithms
+7759a3e0d4f0c0bc3575636a891395a3ad32652f,2024-12-20,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8484.9,fixed scan tsan error in macos
+7759a3e0d4f0c0bc3575636a891395a3ad32652f,2024-12-20,ok,async(task).wait(),4.0,1.9994,2.0,4,2,8367.3,fixed scan tsan error in macos
+3694f662c605d244979fe3ef4990cd205407041a,2024-12-25,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8261.4,refactored executor::_async
+3694f662c605d244979fe3ef4990cd205407041a,2024-12-25,ok,async(task).wait(),4.0,1.9994,2.0,4,2,8383.0,refactored executor::_async
+fae27111d1f4f5bd37effc560bc9b8e3781402ad,2024-12-26,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8287.3,updated tf::make_module_task
+fae27111d1f4f5bd37effc560bc9b8e3781402ad,2024-12-26,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8302.9,updated tf::make_module_task
+7e58ae45c8615f2b1111aef809912e266a5301c2,2024-12-27,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8475.0,recovered the older semaphore interface
+7e58ae45c8615f2b1111aef809912e266a5301c2,2024-12-27,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8349.5,recovered the older semaphore interface
+21b8c114b949ad3b8e049a7839d48087ac216606,2024-12-27,ok,run(taskflow of 1 task).wait(),3.0312,0.0093,4.0,3,4,6032.5,optimized semaphores
+21b8c114b949ad3b8e049a7839d48087ac216606,2024-12-27,ok,async(task).wait(),4.0,0.0078,2.0,4,2,5739.6,optimized semaphores
+a356f8c0d11ac9b0713ff17ddb6a7944a856deb8,2024-12-27,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8270.2,added exception test for semaphore
+a356f8c0d11ac9b0713ff17ddb6a7944a856deb8,2024-12-27,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8205.1,added exception test for semaphore
+3fb11a1bdd8c1820b95b73d2526b76eb5b872192,2024-12-30,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8528.6,added a few more semaphore tests
+3fb11a1bdd8c1820b95b73d2526b76eb5b872192,2024-12-30,ok,async(task).wait(),4.0,1.9999,2.0,4,2,8386.9,added a few more semaphore tests
+e32f9d6e797647d08a9667d681b7fd4b8beb9f9c,2025-01-01,ok,run(taskflow of 1 task).wait(),3.0312,0.0173,4.0,3,4,9800.0,fixed cond task sched run-n bug
+e32f9d6e797647d08a9667d681b7fd4b8beb9f9c,2025-01-01,ok,async(task).wait(),4.0,0.0153,2.0,4,2,9640.4,fixed cond task sched run-n bug
+9512faf4a31835156052ce8d2c993b0b25297c0a,2025-01-01,ok,run(taskflow of 1 task).wait(),3.0312,2.9896,4.0,3,4,8540.8,replaced libatomic with cpp20 macro test
+9512faf4a31835156052ce8d2c993b0b25297c0a,2025-01-01,ok,async(task).wait(),4.0,1.9994,2.0,4,2,8379.8,replaced libatomic with cpp20 macro test
+eb7318e5a237fa690b4a6359a1fcc0c1c8f14bee,2025-01-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8407.9,prepare v3.9 release
+eb7318e5a237fa690b4a6359a1fcc0c1c8f14bee,2025-01-02,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8421.1,prepare v3.9 release
+c6208561acaf2f2bbc8011ec5e86e92bc4a1e469,2025-01-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8131.8,tried fixing windows compiler error
+c6208561acaf2f2bbc8011ec5e86e92bc4a1e469,2025-01-02,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8286.4,tried fixing windows compiler error
+130f7952469c01eef8d7b635710bf9a8043f3172,2025-01-02,ok,run(taskflow of 1 task).wait(),3.0312,1.1331,4.0,3,4,5876.2,fixed doc error of worker interface
+130f7952469c01eef8d7b635710bf9a8043f3172,2025-01-02,ok,async(task).wait(),4.0,1.9246,2.0,4,2,7919.0,fixed doc error of worker interface
+5651ae4149f04803c5487c0389d533c94f44a1df,2025-01-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8314.6,fixed MSVC compilation error
+5651ae4149f04803c5487c0389d533c94f44a1df,2025-01-03,ok,async(task).wait(),4.0,1.9993,2.0,4,2,8175.9,fixed MSVC compilation error
+9abc14d2e005f62dd07052b31a15a2c4f4281370,2025-01-05,ok,run(taskflow of 1 task).wait(),3.0312,2.9986,4.0,3,4,8363.1,updated index range-based parallel-for algorithm
+9abc14d2e005f62dd07052b31a15a2c4f4281370,2025-01-05,ok,async(task).wait(),4.0,1.9839,2.0,4,2,8421.6,updated index range-based parallel-for algorithm
+633eab28316cd288da3acc19a5152ac23cac68f2,2025-01-06,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,4.0,3,4,8531.5,updated reduce_by_index
+633eab28316cd288da3acc19a5152ac23cac68f2,2025-01-06,ok,async(task).wait(),4.0,1.9988,2.0,4,2,8106.0,updated reduce_by_index
+4b72f659c57a362b1e03866f4cdec43d1305d717,2025-01-12,ok,run(taskflow of 1 task).wait(),3.0312,2.9989,4.0,3,4,8123.8,updated part
+4b72f659c57a362b1e03866f4cdec43d1305d717,2025-01-12,ok,async(task).wait(),4.0,1.9969,2.0,4,2,8188.5,updated part
+51518aff778e73fff6f937379f97e4304151016f,2025-02-18,ok,run(taskflow of 1 task).wait(),3.0312,2.9951,4.0,3,4,7231.1,updated utility function
+51518aff778e73fff6f937379f97e4304151016f,2025-02-18,ok,async(task).wait(),4.0,1.9965,2.0,4,2,8979.6,updated utility function
+cfc02a0586e562a0344dfc3e95a2d433e92be81e,2025-02-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0001,3,4,6816.2,Merge branch 'master' into dev
+cfc02a0586e562a0344dfc3e95a2d433e92be81e,2025-02-21,ok,async(task).wait(),4.0,1.9991,2.0,4,2,6809.6,Merge branch 'master' into dev
+2f59e5155b9d46a954804f82a49875345bfa6dff,2025-02-22,ok,run(taskflow of 1 task).wait(),3.0312,0.0131,4.0,3,4,9764.3,added test_queue unittest
+2f59e5155b9d46a954804f82a49875345bfa6dff,2025-02-22,ok,async(task).wait(),4.0,0.0115,2.0,4,2,10062.7,added test_queue unittest
+d3f249b7f10f3c7c29724f7c6f0a22c59cb30fe5,2025-02-26,ok,run(taskflow of 1 task).wait(),3.0312,2.5146,4.0,3,4,8427.9,removed atomic buffer in tsq
+d3f249b7f10f3c7c29724f7c6f0a22c59cb30fe5,2025-02-26,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8349.1,removed atomic buffer in tsq
+adbf64be52d0b6bfc2b83a23483561caad132367,2025-02-26,ok,run(taskflow of 1 task).wait(),3.0312,0.0174,4.0,3,4,10042.8,fixed tsan error of tsq
+adbf64be52d0b6bfc2b83a23483561caad132367,2025-02-26,ok,async(task).wait(),4.0,0.0129,2.0,4,2,9878.4,fixed tsan error of tsq
+64b4b031de33748981c2ca2303be76d8f7e0caf0,2025-02-26,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,4.0,3,4,8512.5,updated coprime utilities
+64b4b031de33748981c2ca2303be76d8f7e0caf0,2025-02-26,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8521.6,updated coprime utilities
+71043c12a0208b94a747d947ab1c921b7e7a7ca9,2025-02-27,ok,run(taskflow of 1 task).wait(),3.0312,2.9933,4.0,3,4,8627.9,updated freelist
+71043c12a0208b94a747d947ab1c921b7e7a7ca9,2025-02-27,ok,async(task).wait(),4.0,1.9882,2.0,4,2,8532.0,updated freelist
+ab38a7edc92517da29cc60aa0dc9291ca04331db,2025-02-28,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8525.5,updated freelist
+ab38a7edc92517da29cc60aa0dc9291ca04331db,2025-02-28,ok,async(task).wait(),4.0,2.0,2.0,4,2,8425.5,updated freelist
+014295fc81f4281ad82ac57e10670bf7739c53b9,2025-02-28,ok,run(taskflow of 1 task).wait(),3.0312,0.0123,4.0,3,4,9888.6,updated freelist
+014295fc81f4281ad82ac57e10670bf7739c53b9,2025-02-28,ok,async(task).wait(),4.0,0.0107,2.0,4,2,9797.5,updated freelist
+834db5c186da06c5b692ab3532c251fca1efc746,2025-03-01,ok,run(taskflow of 1 task).wait(),3.0312,0.018,4.0,3,4,9610.0,updated os.hpp
+834db5c186da06c5b692ab3532c251fca1efc746,2025-03-01,ok,async(task).wait(),4.0,1.6552,2.0,4,2,8671.5,updated os.hpp
+9a773175f7d70aa66ef6f66343cdf2a5b66ffe27,2025-03-08,ok,run(taskflow of 1 task).wait(),3.0312,2.9995,4.0,3,4,8334.9,minor refactor of vtm
+9a773175f7d70aa66ef6f66343cdf2a5b66ffe27,2025-03-08,ok,async(task).wait(),4.0,1.9978,2.0,4,2,8208.0,minor refactor of vtm
+0204b1eaa501a0e1cd569832f3b8769a3ba5b89e,2025-03-11,ok,run(taskflow of 1 task).wait(),3.0312,2.9983,4.0,3,4,7100.4,updated non-blocking
+0204b1eaa501a0e1cd569832f3b8769a3ba5b89e,2025-03-11,ok,async(task).wait(),4.0,1.9963,2.0,4,2,7057.9,updated non-blocking
+93255941b9d0a30b6d3780dfcefa8540b2f2acc7,2025-03-11,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,4.0,3,4,8425.7,updated docs
+93255941b9d0a30b6d3780dfcefa8540b2f2acc7,2025-03-11,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8244.3,updated docs
+52756545d8e55d0bf04b103c5424836d0f4f3cdb,2025-03-12,ok,run(taskflow of 1 task).wait(),3.0312,0.0149,4.0,3,4,9845.4,updated executort
+52756545d8e55d0bf04b103c5424836d0f4f3cdb,2025-03-12,ok,async(task).wait(),4.0,0.0147,2.0,4,2,9666.4,updated executort
+2e9b3b44ed7487da9236858b8a03869aa9ac7372,2025-03-17,ok,run(taskflow of 1 task).wait(),3.0312,0.0163,4.0,3,4,5921.3,updated smalle vector
+2e9b3b44ed7487da9236858b8a03869aa9ac7372,2025-03-17,ok,async(task).wait(),4.0,0.0085,2.0,4,2,5733.1,updated smalle vector
+69ae8ada434268925ac1529ae552094a88487a3f,2025-03-18,ok,run(taskflow of 1 task).wait(),3.0312,0.0159,4.0,3,4,9633.5,Merge pull request #671 from N3VIN/master
+69ae8ada434268925ac1529ae552094a88487a3f,2025-03-18,ok,async(task).wait(),4.0,0.0141,2.0,4,2,9504.8,Merge pull request #671 from N3VIN/master
+24fac3d1083d6e244b34b767d92a532fb99404e1,2025-03-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9992,4.0,3,4,8410.4,updated tsq and freelist
+24fac3d1083d6e244b34b767d92a532fb99404e1,2025-03-21,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8410.2,updated tsq and freelist
+e88ecfb09ea8ddb9b726cd8694387e8d6b248176,2025-03-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8377.3,updated freelist
+e88ecfb09ea8ddb9b726cd8694387e8d6b248176,2025-03-21,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8378.1,updated freelist
+de377bfa6e5db55bab1f9aca66f6404cc264d97b,2025-03-22,ok,run(taskflow of 1 task).wait(),3.0312,2.8906,4.0,3,4,7003.0,fixed macro notifier bug
+de377bfa6e5db55bab1f9aca66f6404cc264d97b,2025-03-22,ok,async(task).wait(),4.0,1.9923,2.0,4,2,6997.7,fixed macro notifier bug
+021ec58ca7af74f137c20a5f8079e682455c3fb8,2025-03-23,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8660.5,updated macos
+021ec58ca7af74f137c20a5f8079e682455c3fb8,2025-03-23,ok,async(task).wait(),4.0,1.9993,2.0,4,2,8381.2,updated macos
+9deb7939c8f6d0f0c9ee7c92d0dd6d3a34e72c44,2025-03-24,ok,run(taskflow of 1 task).wait(),3.0312,2.9988,4.0,3,4,8505.6,updated bench and worker selection
+9deb7939c8f6d0f0c9ee7c92d0dd6d3a34e72c44,2025-03-24,ok,async(task).wait(),4.0,1.9995,2.0,4,2,8503.5,updated bench and worker selection
+6b94834ad551feacfca1f1f186f91133beac15fe,2025-03-24,ok,run(taskflow of 1 task).wait(),3.0312,2.9966,4.0,3,4,8311.7,removed
+6b94834ad551feacfca1f1f186f91133beac15fe,2025-03-24,ok,async(task).wait(),4.0,1.9958,2.0,4,2,8466.3,removed
+6fdc9f193bd01887af7bd21f680a459c7098eb42,2025-03-28,ok,run(taskflow of 1 task).wait(),3.0312,2.9985,4.0,3,4,8746.2,updated cuda graph/exec
+6fdc9f193bd01887af7bd21f680a459c7098eb42,2025-03-28,ok,async(task).wait(),4.0,1.9995,2.0,4,2,6292.6,updated cuda graph/exec
+b9428668f2d9f9be913c8a8bf554f280154b55c4,2025-04-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,4.0,3,4,8556.0,merge successors and predecessors to a unified structure
+b9428668f2d9f9be913c8a8bf554f280154b55c4,2025-04-02,ok,async(task).wait(),4.0,1.9996,2.0,4,2,8434.9,merge successors and predecessors to a unified structure
+bbf04f5a29e0a9430356316b2d175e101134244b,2025-04-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,4.0,3,4,8413.9,fixed error in remove/erase after succ/pred merge
+bbf04f5a29e0a9430356316b2d175e101134244b,2025-04-02,ok,async(task).wait(),4.0,1.9995,2.0,4,2,8235.0,fixed error in remove/erase after succ/pred merge
+81e9e182511c922c7fb3cc9966e1f30da8d68fa5,2025-04-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9992,4.0,3,4,6793.1,fixed for-each compiler bug
+81e9e182511c922c7fb3cc9966e1f30da8d68fa5,2025-04-02,ok,async(task).wait(),4.0,1.9651,2.0,4,2,7007.6,fixed for-each compiler bug
+65b561b6d5914c3ac55aca230dc5ff65e1f952ea,2025-04-03,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8414.9,fixed mutable problems in algorithms
+65b561b6d5914c3ac55aca230dc5ff65e1f952ea,2025-04-03,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8384.7,fixed mutable problems in algorithms
+ba167aa6c19fca534016b990c27d6c5e0b9455c3,2025-04-04,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,4.0,3,4,8397.3,updated async
+ba167aa6c19fca534016b990c27d6c5e0b9455c3,2025-04-04,ok,async(task).wait(),4.0,1.9999,2.0,4,2,8416.7,updated async
+b1e9339664b80f80b284a10b1b21af38bdcb90a9,2025-04-07,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,4,8677.1,enable subflow to auto-clean the spawned flow
+b1e9339664b80f80b284a10b1b21af38bdcb90a9,2025-04-07,ok,async(task).wait(),4.0,1.9999,2.0,4,2,8571.9,enable subflow to auto-clean the spawned flow
+9e5a438491e1ebf0927ade914907e8dcb0b00bef,2025-04-07,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,3.0,3,3,8469.6,updated doc
+9e5a438491e1ebf0927ade914907e8dcb0b00bef,2025-04-07,ok,async(task).wait(),4.0,1.9996,2.0,4,2,8305.2,updated doc
+78147530e83af9f9fbecca920ce4771397704692,2025-04-07,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,8558.7,fixed bug in missing cancel_wait
+78147530e83af9f9fbecca920ce4771397704692,2025-04-07,ok,async(task).wait(),4.0,2.0,2.0,4,2,8561.2,fixed bug in missing cancel_wait
+09a57a9bc9c817ea5d8017e8301be89e3463d20c,2025-04-07,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,8590.2,updated async
+09a57a9bc9c817ea5d8017e8301be89e3463d20c,2025-04-07,ok,async(task).wait(),4.0,1.9996,2.0,4,2,8287.6,updated async
+575eb37f469665a2e648c45cb8f1f15cfaf91006,2025-04-08,ok,run(taskflow of 1 task).wait(),3.0312,0.0231,3.0,3,3,9660.8,attempt to fix tsan error in find-if with closure wrapper
+575eb37f469665a2e648c45cb8f1f15cfaf91006,2025-04-08,ok,async(task).wait(),4.0,0.0121,2.0,4,2,9483.1,attempt to fix tsan error in find-if with closure wrapper
+3765386b58e29f79b30d19289a98f4f09ab18749,2025-04-09,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,3.0,3,3,8455.1,added lazy string
+3765386b58e29f79b30d19289a98f4f09ab18749,2025-04-09,ok,async(task).wait(),4.0,2.0,2.0,4,2,8511.8,added lazy string
+719ae968eb4dde28522eb4f5bf883eaf57b5ff6e,2025-04-09,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,3.0,3,3,8554.2,refactored node constructor
+719ae968eb4dde28522eb4f5bf883eaf57b5ff6e,2025-04-09,ok,async(task).wait(),4.0,1.9997,2.0,4,2,8541.3,refactored node constructor
+ac4dcb7a6c49f5301a9dc6f0f5a659afd013577f,2025-04-10,ok,run(taskflow of 1 task).wait(),3.0312,2.9929,3.0,3,3,7142.4,updated doc
+ac4dcb7a6c49f5301a9dc6f0f5a659afd013577f,2025-04-10,ok,async(task).wait(),4.0,1.9919,2.0,4,2,7402.6,updated doc
+93eda270f3d5f76f051608dc3765fdd63a03e046,2025-04-15,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,3.0,3,3,9660.2,Merge branch 'dev'
+93eda270f3d5f76f051608dc3765fdd63a03e046,2025-04-15,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9573.7,Merge branch 'dev'
+5213285b92b29a25dc562f8467c82ab712601580,2025-04-17,ok,run(taskflow of 1 task).wait(),3.0312,1.6659,3.0,3,3,9913.4,updated cuda tests by removing cudaFlow and cudaFlowCapturer
+5213285b92b29a25dc562f8467c82ab712601580,2025-04-17,ok,async(task).wait(),4.0,1.9985,2.0,4,2,9295.6,updated cuda tests by removing cudaFlow and cudaFlowCapturer
+2a3770b2297f8d59e340a994aa3ad52555b38d0e,2025-04-18,ok,run(taskflow of 1 task).wait(),3.0312,3.0,3.0,3,3,9665.3,Merge pull request #680 from c8ef/master
+2a3770b2297f8d59e340a994aa3ad52555b38d0e,2025-04-18,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9554.1,Merge pull request #680 from c8ef/master
+8ce2918957d578939c9e4d00d9a85d0545c6f1ea,2025-04-18,ok,run(taskflow of 1 task).wait(),3.0312,2.9954,3.0,3,3,7529.5,refactored cudaGraph
+8ce2918957d578939c9e4d00d9a85d0545c6f1ea,2025-04-18,ok,async(task).wait(),4.0,1.9732,2.0,4,2,9174.5,refactored cudaGraph
+348ba9b4b6d00f4ba3a0887b9fcbf553b913cafd,2025-04-18,ok,run(taskflow of 1 task).wait(),3.0312,3.0,4.0,3,3,14608.9,fixed infinite steal bug
+348ba9b4b6d00f4ba3a0887b9fcbf553b913cafd,2025-04-18,ok,async(task).wait(),4.0,2.0,3.0,4,3,14429.1,fixed infinite steal bug
+8a182b598e6dcedc0a992d3cf8c60628382ba342,2025-04-19,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,9663.8,updated steal threshold
+8a182b598e6dcedc0a992d3cf8c60628382ba342,2025-04-19,ok,async(task).wait(),4.0,1.9997,2.0,4,2,9521.0,updated steal threshold
+6bffdb7c0b81d8b90f75e9280f4db94758af49a4,2025-04-19,ok,run(taskflow of 1 task).wait(),3.0312,2.0013,3.0002,3,3,9639.9,add _vtm heuristics
+6bffdb7c0b81d8b90f75e9280f4db94758af49a4,2025-04-19,ok,async(task).wait(),4.0,1.9946,2.0,4,2,9504.6,add _vtm heuristics
+23dc4090cd51cd51ca53f25d0f88e0ee0c065ee8,2025-04-19,ok,run(taskflow of 1 task).wait(),3.0312,0.0185,3.0,3,3,5915.9,updated executor
+23dc4090cd51cd51ca53f25d0f88e0ee0c065ee8,2025-04-19,ok,async(task).wait(),4.0,0.0111,2.0,4,2,5797.1,updated executor
+d920a46cb593d492a12dafb8f3082e263003b24d,2025-05-10,ok,run(taskflow of 1 task).wait(),3.0312,0.0165,3.0,3,3,6143.6,merge pull
+d920a46cb593d492a12dafb8f3082e263003b24d,2025-05-10,ok,async(task).wait(),4.0,0.0129,2.0,4,2,5759.6,merge pull
+1539773acef84f4e224ca0e5e1d6100f08247622,2025-05-12,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,9638.6,fixed skynet omp bug
+1539773acef84f4e224ca0e5e1d6100f08247622,2025-05-12,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9415.5,fixed skynet omp bug
+7b9f678e8f7ef879aebe6b5d41a609edc64fcf18,2025-05-14,ok,run(taskflow of 1 task).wait(),3.0312,2.9802,3.0002,3,3,7315.6,Merge pull request #692 from qq978358810/master
+7b9f678e8f7ef879aebe6b5d41a609edc64fcf18,2025-05-14,ok,async(task).wait(),4.0,1.9865,2.0,4,2,6430.1,Merge pull request #692 from qq978358810/master
+379128bdd10a7344980f1cce3f978278cec631d1,2025-05-16,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,9765.2,fixed bug in executor exception handling
+379128bdd10a7344980f1cce3f978278cec631d1,2025-05-16,ok,async(task).wait(),4.0,1.9997,2.0,4,2,9629.6,fixed bug in executor exception handling
+96a286658211ea8d2c2e2fa42f3a0fa85b7d00ac,2025-05-17,ok,run(taskflow of 1 task).wait(),3.0312,2.9964,3.0001,3,3,9249.4,updated doc
+96a286658211ea8d2c2e2fa42f3a0fa85b7d00ac,2025-05-17,ok,async(task).wait(),4.0,1.9896,2.0,4,2,9241.7,updated doc
+b3c1e5fd8e2d67eaead944a8d869f87e6b58bbbe,2025-05-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,3.0,3,3,9721.7,updated docs
+b3c1e5fd8e2d67eaead944a8d869f87e6b58bbbe,2025-05-21,ok,async(task).wait(),4.0,1.9998,2.0,4,2,9531.9,updated docs
+ee20d4725a46a866f5d5b6929026ab5139f9fd9a,2025-05-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,3.0,3,3,9615.6,updated for each
+ee20d4725a46a866f5d5b6929026ab5139f9fd9a,2025-05-21,ok,async(task).wait(),4.0,1.9997,2.0,4,2,9368.6,updated for each
+9846655d33125439e86bae8593299a86d346a0ff,2025-05-31,ok,run(taskflow of 1 task).wait(),3.0312,3.0,3.0,3,3,9683.2,updated for_each_subflow_task
+9846655d33125439e86bae8593299a86d346a0ff,2025-05-31,ok,async(task).wait(),4.0,1.9997,2.0,4,2,9437.2,updated for_each_subflow_task
+ff11d17ea02602e6e50c8e49296fa586d2ade8fe,2025-06-01,ok,run(taskflow of 1 task).wait(),3.0312,0.0138,3.0,3,3,5987.5,updated docs
+ff11d17ea02602e6e50c8e49296fa586d2ade8fe,2025-06-01,ok,async(task).wait(),4.0,0.0136,2.0,4,2,5854.5,updated docs
+663e9d1a7a50ac794a356308454dcc8275dc2efc,2025-06-10,ok,run(taskflow of 1 task).wait(),3.0312,3.0,3.0,3,3,9553.1,fixed dependency async error
+663e9d1a7a50ac794a356308454dcc8275dc2efc,2025-06-10,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9378.4,fixed dependency async error
+efe44a6df4c9ed5f8cb6c083f262803e8293ed02,2025-06-13,ok,run(taskflow of 1 task).wait(),3.0312,2.9987,3.0001,3,3,9261.2,updated docs
+efe44a6df4c9ed5f8cb6c083f262803e8293ed02,2025-06-13,ok,async(task).wait(),4.0,1.931,2.0,4,2,9057.9,updated docs
+54b26561ce7ea8b60373e206e3f1845f94da63de,2025-06-15,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,3.0,3,3,9740.9,updated docs
+54b26561ce7ea8b60373e206e3f1845f94da63de,2025-06-15,ok,async(task).wait(),4.0,1.9998,2.0,4,2,9583.2,updated docs
+9a615d155394a1b1a9681168506df3d0b8a8b192,2025-06-30,ok,run(taskflow of 1 task).wait(),3.0312,2.9907,3.0,3,3,9115.4,Merge pull request #707 from qq978358810/master
+9a615d155394a1b1a9681168506df3d0b8a8b192,2025-06-30,ok,async(task).wait(),4.0,1.9674,2.0,4,2,9084.8,Merge pull request #707 from qq978358810/master
+83591c4a5f55eb4f0d5760a508da34b7a11f71ee,2025-06-30,ok,run(taskflow of 1 task).wait(),3.0312,2.469,3.0,3,3,9672.7,updated remove_predecessors/_successors
+83591c4a5f55eb4f0d5760a508da34b7a11f71ee,2025-06-30,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9547.5,updated remove_predecessors/_successors
+0c423defa742f6e859cc4f3b7f996e678cf982c4,2025-07-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9982,3.0002,3,3,8641.8,updated
+0c423defa742f6e859cc4f3b7f996e678cf982c4,2025-07-21,ok,async(task).wait(),4.0,1.9988,2.0,4,2,9338.1,updated
+730f3add4ba2c353bfb26c1bf353dc4d7f18a7ea,2025-09-20,ok,run(taskflow of 1 task).wait(),3.0312,2.9994,3.0,3,3,6687.1,Merge pull request #721 from doocman/bugfix/fix-compile-errors-for-cuda-13
+730f3add4ba2c353bfb26c1bf353dc4d7f18a7ea,2025-09-20,ok,async(task).wait(),4.0,2.0,2.0,4,2,6272.0,Merge pull request #721 from doocman/bugfix/fix-compile-errors-for-cuda-13
+0d9b36729af8bd89f5357cfe31c5097a14eec139,2025-10-16,ok,run(taskflow of 1 task).wait(),3.0312,3.0,3.0,3,3,9752.3,added exception probing methods to tf::Task and tf::AsyncTask
+0d9b36729af8bd89f5357cfe31c5097a14eec139,2025-10-16,ok,async(task).wait(),4.0,1.9995,2.0,4,2,9625.4,added exception probing methods to tf::Task and tf::AsyncTask
+4eb9540a43ea7ac7edf383998cb272fa701f202e,2025-10-17,ok,run(taskflow of 1 task).wait(),3.0312,3.0,3.0,3,3,9679.9,updated bash
+4eb9540a43ea7ac7edf383998cb272fa701f202e,2025-10-17,ok,async(task).wait(),4.0,1.9998,2.0,4,2,9648.4,updated bash
+2e68cc139dbabc355222a51c90d4f6fdd49d56a1,2025-10-17,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,9683.5,updated docs
+2e68cc139dbabc355222a51c90d4f6fdd49d56a1,2025-10-17,ok,async(task).wait(),4.0,1.9998,2.0,4,2,9555.4,updated docs
+5af5cb1247c2de25890df7afa7f4bb0f959d1cf0,2025-10-21,ok,run(taskflow of 1 task).wait(),3.0312,0.0213,3.0,3,3,9510.7,updated os
+5af5cb1247c2de25890df7afa7f4bb0f959d1cf0,2025-10-21,ok,async(task).wait(),4.0,0.8017,2.0,4,2,9464.4,updated os
+ee4050a0a10dd0f7e5c46592e9df775b9abbbe63,2025-10-21,ok,run(taskflow of 1 task).wait(),3.0312,0.0205,3.0,3,3,9530.6,Merge branch 'master' into dev
+ee4050a0a10dd0f7e5c46592e9df775b9abbbe63,2025-10-21,ok,async(task).wait(),4.0,0.0217,2.0,4,2,9445.9,Merge branch 'master' into dev
+0f8442ce4f5ba31a544afaf8883b6e9e51e3773d,2025-10-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,9769.1,updated docs
+0f8442ce4f5ba31a544afaf8883b6e9e51e3773d,2025-10-21,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9617.9,updated docs
+353794a99857cf1098f6965b6387a64bb81e23ae,2025-10-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9933,3.0,3,3,6512.8,updated docs
+353794a99857cf1098f6965b6387a64bb81e23ae,2025-10-22,ok,async(task).wait(),4.0,1.9997,2.0,4,2,6415.7,updated docs
+d82ef18ef9716bd47262e3e0e2f7b8c39d1fa2e0,2025-10-23,ok,run(taskflow of 1 task).wait(),3.0312,0.0186,3.0,3,3,9540.2,added dependent-async tasks to tf::Runtime
+d82ef18ef9716bd47262e3e0e2f7b8c39d1fa2e0,2025-10-23,ok,async(task).wait(),4.0,0.0167,2.0,4,2,9474.1,added dependent-async tasks to tf::Runtime
+86d032a6beead22feb3e75e5d3d0a175beccaf7c,2025-11-23,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,9591.3,fixed the shared ptr bug in passing WorkerInterface to the Executor's constructor
+86d032a6beead22feb3e75e5d3d0a175beccaf7c,2025-11-23,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9449.8,fixed the shared ptr bug in passing WorkerInterface to the Executor's constructor
+6f0aa8284c7ae15c1c2614c2e8ba881f81835aba,2025-11-23,ok,run(taskflow of 1 task).wait(),3.0312,3.0,3.0,3,3,8591.6,Merge branch 'master' into dev
+6f0aa8284c7ae15c1c2614c2e8ba881f81835aba,2025-11-23,ok,async(task).wait(),4.0,1.9998,2.0,4,2,8494.0,Merge branch 'master' into dev
+eca6dff73e5561f53517cf4df335ffd40a5c379d,2025-11-23,ok,run(taskflow of 1 task).wait(),3.0312,0.016,3.0,3,3,10079.3,prepare release v4
+eca6dff73e5561f53517cf4df335ffd40a5c379d,2025-11-23,ok,async(task).wait(),4.0,0.011,2.0,4,2,9902.2,prepare release v4
+36f85078a5ef0d1636d9c32e3a5776c60e188d06,2025-11-24,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,3.0,3,3,9647.2,fixed compiler info in README and updated release # to 4.0.0
+36f85078a5ef0d1636d9c32e3a5776c60e188d06,2025-11-24,ok,async(task).wait(),4.0,1.9999,2.0,4,2,9567.6,fixed compiler info in README and updated release # to 4.0.0
+5656a513c3f7b64eb8c12e7cf29717496711dccf,2025-11-25,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,3.0,3,3,9611.4,replace std::function in tf::Topology with virtual function for better performance
+5656a513c3f7b64eb8c12e7cf29717496711dccf,2025-11-25,ok,async(task).wait(),4.0,2.0,2.0,4,2,9771.2,replace std::function in tf::Topology with virtual function for better performance
+4268d7f1cd4d78f4d80b9474eb437dc1fd743cd4,2025-11-29,ok,run(taskflow of 1 task).wait(),3.0312,0.0204,3.0,3,3,9498.0,Merge pull request #738 from Davide-1998/windows_fix
+4268d7f1cd4d78f4d80b9474eb437dc1fd743cd4,2025-11-29,ok,async(task).wait(),4.0,0.0225,2.0,4,2,9488.9,Merge pull request #738 from Davide-1998/windows_fix
+66850b9ce9aadf057ddb3db97a53fd03221f1d07,2025-12-01,ok,run(taskflow of 1 task).wait(),3.0312,2.4125,2.0,3,2,8750.9,"removed the waiter vector in AtomicNotifier, which is no longer needed in C++20"
+66850b9ce9aadf057ddb3db97a53fd03221f1d07,2025-12-01,ok,async(task).wait(),4.0,1.9865,1.0,4,1,8772.8,"removed the waiter vector in AtomicNotifier, which is no longer needed in C++20"
+956cafba34d5ab41f2957db41a3ff68b71bf5380,2025-12-10,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,2.0,3,2,9689.2,Merge pull request #743 from bangerth/wrap
+956cafba34d5ab41f2957db41a3ff68b71bf5380,2025-12-10,ok,async(task).wait(),4.0,2.0,1.0,4,1,9661.6,Merge pull request #743 from bangerth/wrap
+5ea67dd04c43a49b308778edb8bea72802736919,2025-12-15,ok,run(taskflow of 1 task).wait(),3.0312,2.999,2.0,3,2,9642.5,Merge branch 'dev'
+5ea67dd04c43a49b308778edb8bea72802736919,2025-12-15,ok,async(task).wait(),4.0,1.9988,1.0,4,1,9541.8,Merge branch 'dev'
+d9968570e38926ba47900cf6e7ce42df18f86114,2025-12-18,ok,run(taskflow of 1 task).wait(),3.0312,2.9988,2.0,3,2,9513.4,Merge branch 'dev'
+d9968570e38926ba47900cf6e7ce42df18f86114,2025-12-18,ok,async(task).wait(),4.0,1.9971,1.0,4,1,7362.0,Merge branch 'dev'
+076a866c5c760b93cbec601b01f44c3ff89355b8,2025-12-21,ok,run(taskflow of 1 task).wait(),3.0312,2.9997,2.0,3,2,9539.9,Merge branch 'dev'
+076a866c5c760b93cbec601b01f44c3ff89355b8,2025-12-21,ok,async(task).wait(),4.0,1.9997,1.0,4,1,9426.2,Merge branch 'dev'
+805be3392db4178c2da5e6b41607fea5e33a231f,2025-12-22,ok,run(taskflow of 1 task).wait(),3.0312,0.0174,2.0,3,2,9441.8,Merge branch 'dev'
+805be3392db4178c2da5e6b41607fea5e33a231f,2025-12-22,ok,async(task).wait(),4.0,0.0139,1.0,4,1,9391.6,Merge branch 'dev'
+bb7ee0b725032c35482c6bc94e76554435790ee0,2026-01-09,ok,run(taskflow of 1 task).wait(),3.0312,0.0211,2.0,3,2,9482.9,split notify_one and notify_all to two separate optimized implementations
+bb7ee0b725032c35482c6bc94e76554435790ee0,2026-01-09,ok,async(task).wait(),4.0,0.0126,1.0,4,1,9502.7,split notify_one and notify_all to two separate optimized implementations
+3e4060c0689433ba8316a49a3155c0958a7b5e24,2026-01-10,ok,run(taskflow of 1 task).wait(),3.0312,0.0143,2.0,3,2,9405.1,updated unittest for nonblocking notifier
+3e4060c0689433ba8316a49a3155c0958a7b5e24,2026-01-10,ok,async(task).wait(),4.0,0.0171,1.0,4,1,9361.3,updated unittest for nonblocking notifier
+fd67b5da3edff13e28c067ca11a52adddc47f605,2026-01-22,ok,run(taskflow of 1 task).wait(),3.0312,0.0126,2.0,3,2,9316.3,updated 4.1.0
+fd67b5da3edff13e28c067ca11a52adddc47f605,2026-01-22,ok,async(task).wait(),4.0,0.5203,1.0,4,1,5816.9,updated 4.1.0
+3dbd99c5c6a3b896a0917cc0473ffea6fc8f7808,2026-01-28,ok,run(taskflow of 1 task).wait(),3.0312,3.0,2.0,3,2,9539.6,added notifier tests of no-missing notification
+3dbd99c5c6a3b896a0917cc0473ffea6fc8f7808,2026-01-28,ok,async(task).wait(),4.0,1.9998,1.0,4,1,9528.3,added notifier tests of no-missing notification
+d8776bc0d3317efbf2c2376006d74a04a6eabf2a,2026-02-02,ok,run(taskflow of 1 task).wait(),3.0312,2.9942,2.0,3,2,8700.9,added video tutorials to cookbook
+d8776bc0d3317efbf2c2376006d74a04a6eabf2a,2026-02-02,ok,async(task).wait(),4.0,1.9912,1.0,4,1,8759.3,added video tutorials to cookbook
+78c62a455a5b0584d54c3a8f537e8a61d6d03bc0,2026-02-10,ok,run(taskflow of 1 task).wait(),3.0312,3.0,2.0,3,2,9416.9,updated test_notifier
+78c62a455a5b0584d54c3a8f537e8a61d6d03bc0,2026-02-10,ok,async(task).wait(),4.0,1.9999,1.0,4,1,9206.9,updated test_notifier
+0963d9f410c04c19818a682a1fd512cdf9774612,2026-02-13,ok,run(taskflow of 1 task).wait(),3.0312,2.9983,2.0,3,2,7212.8,Merge branch 'master' into dev
+0963d9f410c04c19818a682a1fd512cdf9774612,2026-02-13,ok,async(task).wait(),4.0,1.9985,1.0,4,1,7307.4,Merge branch 'master' into dev
+119a98288d5ad634d0dbefa83152fc96eb5f1263,2026-02-14,ok,run(taskflow of 1 task).wait(),3.0312,2.9289,2.0,3,2,9329.1,updated the locking mechanism of taskflow topology
+119a98288d5ad634d0dbefa83152fc96eb5f1263,2026-02-14,ok,async(task).wait(),4.0,1.9999,1.0,4,1,9349.4,updated the locking mechanism of taskflow topology
+99863a5aa51ab5e92ce6d63c04352db7a2cd2628,2026-02-14,ok,run(taskflow of 1 task).wait(),3.0312,2.5324,2.0,3,2,9370.5,updated doc to include optimized locking mechanism of taskflow topology
+99863a5aa51ab5e92ce6d63c04352db7a2cd2628,2026-02-14,ok,async(task).wait(),4.0,1.9992,1.0,4,1,9542.5,updated doc to include optimized locking mechanism of taskflow topology
+1dee2152e86005c2a11cb568c6f2ffe3079166ed,2026-02-15,ok,run(taskflow of 1 task).wait(),3.0312,2.9996,2.0,3,2,9224.7,optimized executor's memory layout by delegating worker interface to per-worker
+1dee2152e86005c2a11cb568c6f2ffe3079166ed,2026-02-15,ok,async(task).wait(),4.0,1.9997,1.0,4,1,9228.4,optimized executor's memory layout by delegating worker interface to per-worker
+ad560adab588687719c6b3cda7e299b3c1b498e1,2026-02-16,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,2.0,3,2,9708.1,optimized the async-tasking performance through per-worker taskpool
+ad560adab588687719c6b3cda7e299b3c1b498e1,2026-02-16,ok,async(task).wait(),4.0,1.9998,1.0,4,1,9457.3,optimized the async-tasking performance through per-worker taskpool
+49599c419bfa5390df01c3f1aca231c7429e465b,2026-02-18,ok,run(taskflow of 1 task).wait(),3.0312,2.9979,2.0,3,2,8376.2,Merge branch 'master' into dev
+49599c419bfa5390df01c3f1aca231c7429e465b,2026-02-18,ok,async(task).wait(),4.0,1.9993,1.0,4,1,10108.5,Merge branch 'master' into dev
+752a6c539bcfcdf87867f15a5eef5bdbd389526b,2026-02-19,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,2.0,3,2,9528.5,refactored the schedule graph algorithm
+752a6c539bcfcdf87867f15a5eef5bdbd389526b,2026-02-19,ok,async(task).wait(),4.0,1.9998,1.0,4,1,9450.2,refactored the schedule graph algorithm
+318eba82c5c4a0a2ec0cb97b79314dc318eb7b3b,2026-02-20,ok,run(taskflow of 1 task).wait(),3.0312,0.0134,2.0,3,2,6070.4,removed platform-dependent mm_pause function as it is no longer used in Taskflow
+318eba82c5c4a0a2ec0cb97b79314dc318eb7b3b,2026-02-20,ok,async(task).wait(),4.0,0.0097,1.0,4,1,5844.5,removed platform-dependent mm_pause function as it is no longer used in Taskflow
+f60e7db524923c91863815835eb2c37751601d80,2026-03-30,ok,run(taskflow of 1 task).wait(),3.0312,0.0143,2.0,3,2,9570.0,enhanced the text-based profiler report
+f60e7db524923c91863815835eb2c37751601d80,2026-03-30,ok,async(task).wait(),4.0,0.0117,1.0,4,1,9573.3,enhanced the text-based profiler report
+d15b1d8ea985ffb4651a4524677ece480d7f4c24,2026-03-31,ok,run(taskflow of 1 task).wait(),3.0312,2.9998,2.0,3,2,9281.9,fixed the compiler bug in windows caused by observer printing
+d15b1d8ea985ffb4651a4524677ece480d7f4c24,2026-03-31,ok,async(task).wait(),4.0,2.0,1.0,4,1,9443.4,fixed the compiler bug in windows caused by observer printing
+2164cda487b15c9b2811efe0871f48d1944b8fa6,2026-03-31,ok,run(taskflow of 1 task).wait(),3.0312,2.8291,2.0,3,2,10339.6,updated adopted task and tfprof summary format
+2164cda487b15c9b2811efe0871f48d1944b8fa6,2026-03-31,ok,async(task).wait(),4.0,1.8532,1.0,4,1,9764.6,updated adopted task and tfprof summary format
+e78c53b47be5a554349b7aa3b947ef1ce92a1f16,2026-03-31,ok,run(taskflow of 1 task).wait(),3.0312,2.2563,2.0,3,2,6507.3,improved work-stealing with fast path return when num_topologices is zero
+e78c53b47be5a554349b7aa3b947ef1ce92a1f16,2026-03-31,ok,async(task).wait(),4.0,1.4145,1.0,4,1,6109.8,improved work-stealing with fast path return when num_topologices is zero
+c0f8dd658ea9920a1b8b36042eca679f3c0f8d92,2026-03-31,ok,run(taskflow of 1 task).wait(),3.0312,2.4225,2.0,3,2,6463.5,optimized the use-count stroage for async tasking
+c0f8dd658ea9920a1b8b36042eca679f3c0f8d92,2026-03-31,ok,async(task).wait(),4.0,1.3316,1.0,4,1,6074.7,optimized the use-count stroage for async tasking
+c7f446aea6e1469eed4e7acfcc45cf5da5661182,2026-03-31,ok,run(taskflow of 1 task).wait(),3.0312,2.6683,2.0,3,2,11305.7,added tf::AtomicIntrusiveStack
+c7f446aea6e1469eed4e7acfcc45cf5da5661182,2026-03-31,ok,async(task).wait(),4.0,1.9814,1.0,4,1,11525.3,added tf::AtomicIntrusiveStack
+86e3699a47874e3fcdc93a31c8dd2028ae6c0c83,2026-04-01,ok,run(taskflow of 1 task).wait(),3.0312,2.9318,2.0,3,2,10197.0,fixed the data race in atomic_intrusive_stack
+86e3699a47874e3fcdc93a31c8dd2028ae6c0c83,2026-04-01,ok,async(task).wait(),4.0,1.9518,1.0,4,1,9645.0,fixed the data race in atomic_intrusive_stack
+c157c8fe775d02ad585d6d0816d7d1f812dfa198,2026-04-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9756,2.0,3,2,9517.0,up
+c157c8fe775d02ad585d6d0816d7d1f812dfa198,2026-04-03,ok,async(task).wait(),4.0,1.9709,1.0,4,1,9456.4,up
+49fec3f1d6f0c52e9871a69cb6b7b90b68ae5fc5,2026-04-03,ok,run(taskflow of 1 task).wait(),3.0312,2.9623,2.0,3,2,11653.5,updated iterator utility
+49fec3f1d6f0c52e9871a69cb6b7b90b68ae5fc5,2026-04-03,ok,async(task).wait(),4.0,1.8724,1.0,4,1,7155.9,updated iterator utility
+d5a60c473b51dc197138fb96b5687aa542a2d608,2026-04-06,ok,run(taskflow of 1 task).wait(),3.0312,2.9386,2.0,3,2,11282.3,first check-in of nd-index-range iterations
+d5a60c473b51dc197138fb96b5687aa542a2d608,2026-04-06,ok,async(task).wait(),4.0,1.9982,1.0,4,1,11508.2,first check-in of nd-index-range iterations
+29ea08143c53dba5d95bcf327becc70666058a0e,2026-04-06,ok,run(taskflow of 1 task).wait(),3.0312,2.6843,2.0,3,2,6262.0,added unittests for iterator and n-dimensional parallel-for algorithms
+29ea08143c53dba5d95bcf327becc70666058a0e,2026-04-06,ok,async(task).wait(),4.0,1.627,1.0,4,1,5809.7,added unittests for iterator and n-dimensional parallel-for algorithms
+3b7375b47b1002ee1922b4bcb1c495c66eea8954,2026-04-07,ok,run(taskflow of 1 task).wait(),3.0312,2.9,2.0,3,2,9420.0,revised the documentation of iterator and algortihms
+3b7375b47b1002ee1922b4bcb1c495c66eea8954,2026-04-07,ok,async(task).wait(),4.0,1.9669,1.0,4,1,9307.6,revised the documentation of iterator and algortihms
+ee08ed0f29e4520ec9b1d3e686ce55f02d4152c5,2026-04-09,ok,run(taskflow of 1 task).wait(),3.0312,2.4059,2.0,3,2,6894.0,updated two more examples on tsp and graph coloring
+ee08ed0f29e4520ec9b1d3e686ce55f02d4152c5,2026-04-09,ok,async(task).wait(),4.0,1.8165,1.0,4,1,6124.0,updated two more examples on tsp and graph coloring
+ae68e3e4a9f25635ee0c900727e57484d06b5fbf,2026-04-13,ok,run(taskflow of 1 task).wait(),3.0312,2.8979,2.0,3,2,10032.6,Merge pull request #781 from AndreyG/master
+ae68e3e4a9f25635ee0c900727e57484d06b5fbf,2026-04-13,ok,async(task).wait(),4.0,1.6081,1.0,4,1,8789.7,Merge pull request #781 from AndreyG/master
+6320aaa95500d00cc21f291c0a31495a4cb6c5cc,2026-04-14,ok,run(taskflow of 1 task).wait(),3.0312,0.01,2.0,3,2,9801.4,Merge pull request #783 from Hatem-707/feat-fill
+6320aaa95500d00cc21f291c0a31495a4cb6c5cc,2026-04-14,ok,async(task).wait(),4.0,0.0062,1.0,4,1,9891.6,Merge pull request #783 from Hatem-707/feat-fill
+3cfb9892a2b79f8c91cb11c549f3bb96cd6d523b,2026-04-16,ok,run(taskflow of 1 task).wait(),3.0312,2.3506,2.0,3,2,6402.9,update tfprof to a new version
+3cfb9892a2b79f8c91cb11c549f3bb96cd6d523b,2026-04-16,ok,async(task).wait(),4.0,1.4313,1.0,4,1,6236.3,update tfprof to a new version
+bb891bc71dfb8af5e97cad05fdaba772f13fb37a,2026-04-16,ok,run(taskflow of 1 task).wait(),3.0312,2.9784,2.0,3,2,9466.4,update the tfprof to include dark/light modes
+bb891bc71dfb8af5e97cad05fdaba772f13fb37a,2026-04-16,ok,async(task).wait(),4.0,1.9654,1.0,4,1,9384.0,update the tfprof to include dark/light modes
+de7dfe30594cd1f98398095b970a8320734a2382,2026-04-22,ok,run(taskflow of 1 task).wait(),3.0312,2.9447,2.0,3,2,12328.2,Merge pull request #785 from GaetanLepage/fix-gcc15-brace-init
+de7dfe30594cd1f98398095b970a8320734a2382,2026-04-22,ok,async(task).wait(),4.0,1.9209,1.0,4,1,9883.6,Merge pull request #785 from GaetanLepage/fix-gcc15-brace-init
+1bf246121a44905e4c98fb6761331b033b5599e0,2026-04-22,ok,run(taskflow of 1 task).wait(),3.0312,2.85,2.0,3,2,9676.9,Merge branch 'dev'
+1bf246121a44905e4c98fb6761331b033b5599e0,2026-04-22,ok,async(task).wait(),4.0,1.904,1.0,4,1,9438.5,Merge branch 'dev'
+74d3e9c237502c5310a0e4cf2c31a2cf95eebb20,2026-04-23,ok,run(taskflow of 1 task).wait(),3.0312,2.9773,2.0,3,2,6654.3,fixed the async name parameter bug
+74d3e9c237502c5310a0e4cf2c31a2cf95eebb20,2026-04-23,ok,async(task).wait(),4.0,1.7793,1.0,4,1,5878.6,fixed the async name parameter bug
+79b85b8ef55ea854a1b7de696ed9c7617db426a5,2026-04-25,ok,run(taskflow of 1 task).wait(),3.0312,2.815,2.0,3,2,10312.8,fixed the bug of static partitioner in MDIndexRange
+79b85b8ef55ea854a1b7de696ed9c7617db426a5,2026-04-25,ok,async(task).wait(),4.0,1.8876,1.0,4,1,9523.4,fixed the bug of static partitioner in MDIndexRange
+602a5cc10cc643d0876fc94493d821b1e993396a,2026-04-26,ok,run(taskflow of 1 task).wait(),3.0312,0.0131,2.0,3,2,9745.2,fixed the bug in scheduling MDIndexRange when dimension size is zero
+602a5cc10cc643d0876fc94493d821b1e993396a,2026-04-26,ok,async(task).wait(),4.0,0.0105,1.0,4,1,9738.7,fixed the bug in scheduling MDIndexRange when dimension size is zero
+1f4a433d287f204dbfa1085c5f1c96585e7ed9f6,2026-04-26,ok,run(taskflow of 1 task).wait(),3.0312,2.9346,2.0,3,2,9674.2,fixed MSVC compiler error with /bigobj
+1f4a433d287f204dbfa1085c5f1c96585e7ed9f6,2026-04-26,ok,async(task).wait(),4.0,1.8304,1.0,4,1,9435.1,fixed MSVC compiler error with /bigobj
+3b570854b870ba766b895c67d7b8cbcf1a5953bf,2026-04-26,ok,run(taskflow of 1 task).wait(),3.0312,2.4451,2.0,3,2,7206.2,updated for_each_by_index doc
+3b570854b870ba766b895c67d7b8cbcf1a5953bf,2026-04-26,ok,async(task).wait(),4.0,1.5849,1.0,4,1,7421.2,updated for_each_by_index doc
+11bc251ce274e7c83b3f2938d3d7353a4942fa5d,2026-04-28,ok,run(taskflow of 1 task).wait(),3.0312,0.0099,2.0,3,2,9487.0,updated slice_floor/_ceil by spliting box iteration to minimize branch
+11bc251ce274e7c83b3f2938d3d7353a4942fa5d,2026-04-28,ok,async(task).wait(),4.0,0.0074,1.0,4,1,9458.0,updated slice_floor/_ceil by spliting box iteration to minimize branch
+d9278bf9cb5bfcb8884e9e3cdd010f80590436d0,2026-04-29,ok,run(taskflow of 1 task).wait(),3.0312,2.981,2.0,3,2,12263.9,fixed windows test error in find-if
+d9278bf9cb5bfcb8884e9e3cdd010f80590436d0,2026-04-29,ok,async(task).wait(),4.0,1.996,1.0,4,1,12303.4,fixed windows test error in find-if
+a2e92047617a88e4855e1df0f1803c3f99b6c8a8,2026-04-29,ok,run(taskflow of 1 task).wait(),3.0312,2.9236,2.0,3,2,9645.4,added parallel merge
+a2e92047617a88e4855e1df0f1803c3f99b6c8a8,2026-04-29,ok,async(task).wait(),4.0,1.969,1.0,4,1,9438.4,added parallel merge
+66781c922a311b6461f3f02e151778472e9ee8c5,2026-04-29,ok,run(taskflow of 1 task).wait(),3.0312,2.4617,2.0,3,2,7629.0,fix test error in merge.hpp caused by capture by reference of local variables
+66781c922a311b6461f3f02e151778472e9ee8c5,2026-04-29,ok,async(task).wait(),4.0,1.5738,1.0,4,1,7736.2,fix test error in merge.hpp caused by capture by reference of local variables
+93c307d16051294eee8bebd8ce794e328add0385,2026-05-03,ok,run(taskflow of 1 task).wait(),3.0312,2.7593,2.0,3,2,9580.6,Merge pull request #789 from tianqiyuan520/patch-1
+93c307d16051294eee8bebd8ce794e328add0385,2026-05-03,ok,async(task).wait(),4.0,1.9195,1.0,4,1,9461.0,Merge pull request #789 from tianqiyuan520/patch-1
+d3336bf78f43bf16de11c0a613e406ce87a7d293,2026-05-24,ok,run(taskflow of 1 task).wait(),3.0312,2.9722,2.0,3,2,9853.2,Merge branch 'dev'
+d3336bf78f43bf16de11c0a613e406ce87a7d293,2026-05-24,ok,async(task).wait(),4.0,1.9647,1.0,4,1,9721.3,Merge branch 'dev'
+fe29a537690a454d93abea0ab79863c336e1b19f,2026-05-27,ok,run(taskflow of 1 task).wait(),3.0312,2.1611,2.0,3,2,6091.7,replace freelist with object pool
+fe29a537690a454d93abea0ab79863c336e1b19f,2026-05-27,ok,async(task).wait(),4.0,1.5509,1.0,4,1,6392.6,replace freelist with object pool
+ee3f8208e4564eb5c42fa07c834228d5c8549ee4,2026-06-17,ok,run(taskflow of 1 task).wait(),3.0312,2.3687,2.0,3,2,10669.2,Merge branch 'dev'
+ee3f8208e4564eb5c42fa07c834228d5c8549ee4,2026-06-17,ok,async(task).wait(),4.0,1.7273,1.0,4,1,9230.0,Merge branch 'dev'
+c58a252ab1ba55641072d00ff806e050ba786788,2026-06-27,ok,run(taskflow of 1 task).wait(),3.0312,2.841,2.0,3,2,9801.4,added emplace overloads for module tasking
+c58a252ab1ba55641072d00ff806e050ba786788,2026-06-27,ok,async(task).wait(),4.0,1.967,1.0,4,1,9459.6,added emplace overloads for module tasking
+6086074147ac2a300f1ac62220bd2e7f764b6eb4,2026-07-01,ok,run(taskflow of 1 task).wait(),3.0312,2.9349,2.0,3,2,10505.2,replaced generic template type with std::input_iterator in async task
+6086074147ac2a300f1ac62220bd2e7f764b6eb4,2026-07-01,ok,async(task).wait(),4.0,1.7448,1.0,4,1,9165.1,replaced generic template type with std::input_iterator in async task
+24436bdb3c5a47bcb2d7d9e8f654382eed70e5ed,2026-07-04,build failed,,,,,,,,fixed missing concept in async task
+20dd1c595cf4aaed8359845e605921525e182ecc,2026-07-04,ok,run(taskflow of 1 task).wait(),3.0312,2.8436,2.0,3,2,9747.5,added AsyncTaskLike concept and InputIteratorLike concept
+20dd1c595cf4aaed8359845e605921525e182ecc,2026-07-04,ok,async(task).wait(),4.0,1.9285,1.0,4,1,9656.3,added AsyncTaskLike concept and InputIteratorLike concept
+9ef284955fc0fb203760178938a07cb168f9a5cc,2026-07-05,ok,run(taskflow of 1 task).wait(),3.0312,2.9741,2.0,3,2,9483.5,added operation concepts to refactor algorithms
+9ef284955fc0fb203760178938a07cb168f9a5cc,2026-07-05,ok,async(task).wait(),4.0,1.9687,1.0,4,1,9400.5,added operation concepts to refactor algorithms
+46a9c1ab260950dcc1c50dd9ae8b1398929d370f,2026-07-06,ok,run(taskflow of 1 task).wait(),3.0312,2.8813,2.0,3,2,9931.7,fixed compile error of missing < in graph.hpp
+46a9c1ab260950dcc1c50dd9ae8b1398929d370f,2026-07-06,ok,async(task).wait(),4.0,1.9536,1.0,4,1,9545.5,fixed compile error of missing < in graph.hpp
+11445468064bfa19032e44b0953ba60930f80992,2026-07-13,ok,run(taskflow of 1 task).wait(),3.0312,0.0092,2.0,3,2,5800.5,Merge pull request #784 from pengyk/priorities
+11445468064bfa19032e44b0953ba60930f80992,2026-07-13,ok,async(task).wait(),4.0,0.0052,1.0,4,1,5757.5,Merge pull request #784 from pengyk/priorities
+ec97c0095bd10907584a3b408e181410796b48fe,2026-07-15,ok,run(taskflow of 1 task).wait(),3.0312,2.7881,2.0,3,2,10180.7,updated doc to include task priority
+ec97c0095bd10907584a3b408e181410796b48fe,2026-07-15,ok,async(task).wait(),4.0,1.9348,1.0,4,1,9545.5,updated doc to include task priority
+c4da2a49cd82f0c8ba5fad7e615a4017a38f88c5,2026-07-28,ok,run(taskflow of 1 task).wait(),3.0312,2.9151,2.0,3,2,9691.8,Merge pull request #803 from fior512/cudaGraph_constructor_SFINAE
+c4da2a49cd82f0c8ba5fad7e615a4017a38f88c5,2026-07-28,ok,async(task).wait(),4.0,1.8393,1.0,4,1,9545.4,Merge pull request #803 from fior512/cudaGraph_constructor_SFINAE
+7b5d70212b9978589bb935c44320d2e933d53122,2026-08-05,ok,run(taskflow of 1 task).wait(),3.0312,2.7189,2.0,3,2,9947.0,Merge branch 'dev'
+7b5d70212b9978589bb935c44320d2e933d53122,2026-08-05,ok,async(task).wait(),4.0,1.8381,1.0,4,1,9197.6,Merge branch 'dev'
+83f90a279aaab33fd4ce1deed00ca07819cbc8f8,2026-08-06,ok,run(taskflow of 1 task).wait(),3.0312,2.6125,2.0,3,2,6676.9,fixed reduce_by_index's bug on fast path that skip gop
+83f90a279aaab33fd4ce1deed00ca07819cbc8f8,2026-08-06,ok,async(task).wait(),4.0,1.7221,1.0,4,1,5765.2,fixed reduce_by_index's bug on fast path that skip gop
+7cf5ddb941d338d8eb0cb7dda392cfbed2466960,2026-09-13,ok,run(taskflow of 1 task).wait(),3.0312,0.0108,2.0,3,2,9564.1,added StringLike to Task::name
+7cf5ddb941d338d8eb0cb7dda392cfbed2466960,2026-09-13,ok,async(task).wait(),4.0,0.0052,1.0,4,1,6054.6,added StringLike to Task::name
+e6bf85134f49908b7711502b4905673a9b731cfb,2026-09-24,ok,run(taskflow of 1 task).wait(),3.0312,2.2685,2.0,3,2,6576.0,added unittests for testing running parallel algorithms from tf::Runtime
+e6bf85134f49908b7711502b4905673a9b731cfb,2026-09-24,ok,async(task).wait(),4.0,1.2547,1.0,4,1,5934.1,added unittests for testing running parallel algorithms from tf::Runtime
+64b6b4a85d015fc03bf0946eca227984e694da7f,2026-09-27,ok,run(taskflow of 1 task).wait(),3.0312,2.0694,2.0,3,2,6447.9,fixed the nvcc compilation error #813
+64b6b4a85d015fc03bf0946eca227984e694da7f,2026-09-27,ok,async(task).wait(),4.0,1.2462,1.0,4,1,6080.2,fixed the nvcc compilation error #813
+bbd7251d577b33a4aeff434ce5f5569b94d4cc48,2026-09-28,ok,run(taskflow of 1 task).wait(),3.0312,0.0069,2.0,3,2,5836.9,:q
+bbd7251d577b33a4aeff434ce5f5569b94d4cc48,2026-09-28,ok,async(task).wait(),4.0,0.0054,1.0,4,1,5728.9,:q
+951a3f9284e549ffca474cd504904a03679c3a89,2026-10-12,ok,run(taskflow of 1 task).wait(),3.0312,2.2224,2.0,3,2,7386.2,Merge pull request #818 from vitlav/object-pool-32bit
+951a3f9284e549ffca474cd504904a03679c3a89,2026-10-12,ok,async(task).wait(),4.0,1.4088,1.0,4,1,6780.4,Merge pull request #818 from vitlav/object-pool-32bit
+9d9cea031a7f4c8ec97179668c34ee47378e5a99,2026-10-14,ok,run(taskflow of 1 task).wait(),3.0312,2.6513,2.0,3,2,6902.9,Merge pull request #814 from Arthur031221/fix-fill-n-negative-count
+9d9cea031a7f4c8ec97179668c34ee47378e5a99,2026-10-14,ok,async(task).wait(),4.0,1.8436,1.0,4,1,6632.9,Merge pull request #814 from Arthur031221/fix-fill-n-negative-count

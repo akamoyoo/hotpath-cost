@@ -1,0 +1,592 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+0cbc7c8c044ba0ce741124985df24217afb0f73a,2014-12-05,build failed,,,,,,,,Merge pull request #39 from Cyan4973/dev
+a5358e602a526b844d6872c0b46087044651feb3,2014-12-11,build failed,,,,,,,,Merge pull request #43 from Cyan4973/dev
+e25b51de7b51101e04ceea194dd557fcc23c03ca,2014-12-19,build failed,,,,,,,,Merge pull request #47 from Cyan4973/dev
+00c3208c7a352f4136300b257b418c55f07450c8,2015-03-23,build failed,,,,,,,,Merge pull request #61 from Cyan4973/dev
+2d4fed5ed2a8e0231f98d79699d28af0142d0099,2015-03-27,build failed,,,,,,,,Merge pull request #65 from Cyan4973/dev
+7d182b816ace89d6d6d16b7aee376a9962a05caa,2015-05-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8008.8,Merge pull request #102 from Cyan4973/dev
+7d182b816ace89d6d6d16b7aee376a9962a05caa,2015-05-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1563.9,Merge pull request #102 from Cyan4973/dev
+26021db0613e94346955ea6cd49fb89594687fcc,2015-05-15,ok,compress 4 KiB,0.0,0.0,0.0,0,0,14030.5,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+26021db0613e94346955ea6cd49fb89594687fcc,2015-05-15,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,3024.5,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+91c1b9a682a8b4d6e9b5eb47194890c14480116d,2015-05-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,14066.5,Performance fix : big compression speed boost for clang (+30%)
+91c1b9a682a8b4d6e9b5eb47194890c14480116d,2015-05-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,3027.9,Performance fix : big compression speed boost for clang (+30%)
+192ee724a3478bb7d4aaebccbc1d18f9692fbb1a,2015-06-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,13947.5,Added namespace ability to xxhash
+192ee724a3478bb7d4aaebccbc1d18f9692fbb1a,2015-06-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,3042.4,Added namespace ability to xxhash
+795a2cdb1b9b9e78bcf4ee9be6c0f15f9005c090,2015-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7957.1,sligthly improved decompression speed
+795a2cdb1b9b9e78bcf4ee9be6c0f15f9005c090,2015-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1460.1,sligthly improved decompression speed
+3e579afa6d721f4086e11dd8b9db8f8601c0f6d9,2015-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8104.1,Slightly improved decompression speed Slightly decreased decompression stack usage in 64-bits mode
+3e579afa6d721f4086e11dd8b9db8f8601c0f6d9,2015-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.5,Slightly improved decompression speed Slightly decreased decompression stack usage in 64-bits mode
+00eedb37d102afe00e1c373448c114d2d5edd4b5,2015-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8031.2,minor refactor
+00eedb37d102afe00e1c373448c114d2d5edd4b5,2015-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1452.3,minor refactor
+9517bd9234f1a8978490b04719e6b704fb8e3686,2015-08-06,ok,compress 4 KiB,0.0,0.0,0.0,0,0,13183.5,minor simplification lz4_readarch()
+9517bd9234f1a8978490b04719e6b704fb8e3686,2015-08-06,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.9,minor simplification lz4_readarch()
+0f2bf0c54e59d7a926074907556cff883a47f9c5,2015-08-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8019.6,Improved performance on ARMv6
+0f2bf0c54e59d7a926074907556cff883a47f9c5,2015-08-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1458.9,Improved performance on ARMv6
+d15ac1f1a7dc0a5514849ee1ef04a5ce8d2c3e38,2015-08-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7964.4,Slightly improved compression speed on ARMv6
+d15ac1f1a7dc0a5514849ee1ef04a5ce8d2c3e38,2015-08-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1458.9,Slightly improved compression speed on ARMv6
+9aa5504f0c5ca6f2dfce4f14e87df95a4fc94321,2015-08-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7918.2,New unalign access method
+9aa5504f0c5ca6f2dfce4f14e87df95a4fc94321,2015-08-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1454.0,New unalign access method
+fb6fece7704c7747d008c0afbc79d61671dcb1d6,2015-09-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8568.1,Updated Makefile and .travis
+fb6fece7704c7747d008c0afbc79d61671dcb1d6,2015-09-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2179.7,Updated Makefile and .travis
+ff3324b8d5ca6d7144a09ce7cc5521284d741bea,2015-10-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8412.1,Fix : compiler-independent macro to remove deprecation warnings
+ff3324b8d5ca6d7144a09ce7cc5521284d741bea,2015-10-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2202.4,Fix : compiler-independent macro to remove deprecation warnings
+2c80138121550c719cb0a622f6a8a304d283960c,2015-10-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7934.2,heapmode macro option for lz4hc
+2c80138121550c719cb0a622f6a8a304d283960c,2015-10-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.9,heapmode macro option for lz4hc
+60ba8638cdd255eef787a222374bb8b11779e970,2016-02-25,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8194.2,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+60ba8638cdd255eef787a222374bb8b11779e970,2016-02-25,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1584.1,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+220e0b606a0f4b51d9df6e8b5b4496b9ba1280d1,2016-04-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8310.8,Merge pull request #194 from jzhuge/dev
+220e0b606a0f4b51d9df6e8b5b4496b9ba1280d1,2016-04-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1577.0,Merge pull request #194 from jzhuge/dev
+5bb5d6ee150d6ee90767aa3596e646839cff66ea,2016-05-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8108.6,Merge pull request #204 from irwand/dev
+5bb5d6ee150d6ee90767aa3596e646839cff66ea,2016-05-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1581.7,Merge pull request #204 from irwand/dev
+3c0332600490003b1267a9f0a51a6a315b52891e,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8069.1,minor refactoring (coding style)
+3c0332600490003b1267a9f0a51a6a315b52891e,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.4,minor refactoring (coding style)
+c77c0c1086bf55342da95a7e94021be860919771,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7872.1,minor refactoring
+c77c0c1086bf55342da95a7e94021be860919771,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1452.5,minor refactoring
+8938e10742d24db80fa7038921525286122445a9,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8132.0,minor compression speed improvement
+8938e10742d24db80fa7038921525286122445a9,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.4,minor compression speed improvement
+e27e7316dd94ed429bfe764408353cc2d958ad71,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8200.2,minor code refactoring
+e27e7316dd94ed429bfe764408353cc2d958ad71,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1455.5,minor code refactoring
+c8a573d32c3347285d09154ed6d1a55af52655bc,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8471.6,very minor decompression speed gain
+c8a573d32c3347285d09154ed6d1a55af52655bc,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1450.8,very minor decompression speed gain
+bc342ab94c9df9af8093d3b1c99be944b9685b9e,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8492.9,minor refactoring
+bc342ab94c9df9af8093d3b1c99be944b9685b9e,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1450.8,minor refactoring
+410ec81543755b8cac4bdf4736a2a140aee2efd7,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8315.6,Fixed : alignment warning
+410ec81543755b8cac4bdf4736a2a140aee2efd7,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.2,Fixed : alignment warning
+6923f3e2306fc08431a0f9e78c6e6d1177905fc2,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8199.9,Minor refactoring (code style)
+6923f3e2306fc08431a0f9e78c6e6d1177905fc2,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1454.6,Minor refactoring (code style)
+6b1600f41e039639b24f7780db8f1c26b28b1b6b,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8224.8,changed : default benchmark LZ4_decompress_safe()
+6b1600f41e039639b24f7780db8f1c26b28b1b6b,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1454.3,changed : default benchmark LZ4_decompress_safe()
+19e585cc462759427f8d125fca3278b8762b3099,2016-06-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8355.3,modified : some more deprecated functions from lz4hc.h generate warnings
+19e585cc462759427f8d125fca3278b8762b3099,2016-06-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.1,modified : some more deprecated functions from lz4hc.h generate warnings
+de69eca4754f4465d50cb413c02206b116c9c916,2016-08-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,14456.0,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+de69eca4754f4465d50cb413c02206b116c9c916,2016-08-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,3041.2,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+63d22e7a194fd4e1ef5127a3bb11550361e081aa,2016-08-20,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8532.3,minor comments clarifications
+63d22e7a194fd4e1ef5127a3bb11550361e081aa,2016-08-20,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1453.3,minor comments clarifications
+a7672dc4f91e1be2046b50ac4b14d89f5fea45f3,2016-08-20,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8396.7,minor decompression speed gains
+a7672dc4f91e1be2046b50ac4b14d89f5fea45f3,2016-08-20,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1330.7,minor decompression speed gains
+9578ff539d22807e521cb00b40fca99df49b4578,2016-08-20,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8386.9,minor refactor
+9578ff539d22807e521cb00b40fca99df49b4578,2016-08-20,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1330.5,minor refactor
+5bd3eaa481f4446b03a062d12119ef11e0f46653,2016-08-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8488.1,minor comments
+5bd3eaa481f4446b03a062d12119ef11e0f46653,2016-08-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1330.9,minor comments
+64f556e610b68e6781e05d2d6470ebf8b8dff45c,2016-09-02,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8395.1,lz4cli version number from lz4.h
+64f556e610b68e6781e05d2d6470ebf8b8dff45c,2016-09-02,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1332.0,lz4cli version number from lz4.h
+33993542af61ebaa87db3a0adbfe3661c0a5d313,2016-09-06,ok,compress 4 KiB,0.0,0.0,0.0,0,0,14204.0,removed test artefacts
+33993542af61ebaa87db3a0adbfe3661c0a5d313,2016-09-06,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2494.3,removed test artefacts
+c5cb4aa52a3efa668cf7d8fd0d9678774b699d2e,2016-09-23,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8568.1,Merge pull request #238 from kou/add-lz4lib-api
+c5cb4aa52a3efa668cf7d8fd0d9678774b699d2e,2016-09-23,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1333.3,Merge pull request #238 from kou/add-lz4lib-api
+7e112cfa5cd3dfb6d6df97e31c5d68bff4ec0713,2016-10-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,14283.8,fixes static compilation under Windows (#246)
+7e112cfa5cd3dfb6d6df97e31c5d68bff4ec0713,2016-10-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2600.3,fixes static compilation under Windows (#246)
+99d11120bdbc08202f899a0ea30d6f1914eed304,2016-11-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,14584.3,Merge pull request #249 from inikep/dev
+99d11120bdbc08202f899a0ea30d6f1914eed304,2016-11-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2573.1,Merge pull request #249 from inikep/dev
+258a5e7fa44825488fe4683f3a04c36fc944a23f,2016-11-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,6113.3,updated comments
+258a5e7fa44825488fe4683f3a04c36fc944a23f,2016-11-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1201.4,updated comments
+26dec498cf1bae39f4842e93b8bfe4d10b0395e9,2016-11-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8711.2,small compression speed improvement on 64-bits systems
+26dec498cf1bae39f4842e93b8bfe4d10b0395e9,2016-11-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2355.3,small compression speed improvement on 64-bits systems
+f878c08b76a58e083c47470284139f3006c8e746,2016-11-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,6022.4,better correctness on big-endian 64-bits platforms
+f878c08b76a58e083c47470284139f3006c8e746,2016-11-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1201.8,better correctness on big-endian 64-bits platforms
+10c5d5eee3b1afad66b3c5c6ce7640484acbad77,2016-11-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8508.8,Merge pull request #253 from terrelln/exit-code
+10c5d5eee3b1afad66b3c5c6ce7640484acbad77,2016-11-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2226.3,Merge pull request #253 from terrelln/exit-code
+207f478babe676fc000e6e655c150a03a79570b0,2016-11-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,6081.3,minor refactor
+207f478babe676fc000e6e655c150a03a79570b0,2016-11-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1201.8,minor refactor
+f6a7c6b578ea2bdfbd19e30ac7cadf4b97fcc84c,2016-11-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8204.4,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+f6a7c6b578ea2bdfbd19e30ac7cadf4b97fcc84c,2016-11-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1202.7,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+e9089bcbe453bfd97d9303fc14194ccd7a4b9d59,2016-11-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5413.5,small compression ratio and speed improvement on small files
+e9089bcbe453bfd97d9303fc14194ccd7a4b9d59,2016-11-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1202.1,small compression ratio and speed improvement on small files
+0c5e2e4d1bf7a4abed98913fd526779976214ea7,2016-11-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5557.9,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+0c5e2e4d1bf7a4abed98913fd526779976214ea7,2016-11-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1202.0,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+cd4462629e98d6c62ec147ada0d63cd389c8e5f9,2016-11-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7943.5,Merge pull request #264 from inikep/dev
+cd4462629e98d6c62ec147ada0d63cd389c8e5f9,2016-11-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2482.1,Merge pull request #264 from inikep/dev
+1f246a98992fa7035823bedf6a0b7612fc290592,2016-11-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5399.5,Fixed #178 fullbench on small input
+1f246a98992fa7035823bedf6a0b7612fc290592,2016-11-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1202.2,Fixed #178 fullbench on small input
+e528a82f012eb3e5d29fd455c00a88f39613be30,2016-11-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7918.2,Merge pull request #267 from terrelln/strict-aliasing
+e528a82f012eb3e5d29fd455c00a88f39613be30,2016-11-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2390.1,Merge pull request #267 from terrelln/strict-aliasing
+874f3e095b1d64ab3545a3f2a3f7403a44ebb3bb,2016-11-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7970.1,update code comments
+874f3e095b1d64ab3545a3f2a3f7403a44ebb3bb,2016-11-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2334.7,update code comments
+3580d9698098e8ad2ef757d1c3673aceca38c576,2016-11-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,6353.0,enabled deprecation warnings on remaining obsolete functions
+3580d9698098e8ad2ef757d1c3673aceca38c576,2016-11-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1214.3,enabled deprecation warnings on remaining obsolete functions
+bb97e8a6fdac3f3c3239411f7c6788dbbf1c5b33,2016-11-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8141.9,fixed __GNUC__ macro
+bb97e8a6fdac3f3c3239411f7c6788dbbf1c5b33,2016-11-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2335.4,fixed __GNUC__ macro
+1b24cc115595f7cd2f8f5f6de0a9d44a70bdf827,2016-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7855.5,fixed conversion warnings
+1b24cc115595f7cd2f8f5f6de0a9d44a70bdf827,2016-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2401.1,fixed conversion warnings
+fa158b4118f2d53f6e84ce6ce16aa8d3ccd8a11a,2016-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5510.8,fixed nameless union warnings
+fa158b4118f2d53f6e84ce6ce16aa8d3ccd8a11a,2016-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1201.8,fixed nameless union warnings
+0fe5c187a5fe95f5c129b1eda8d743b485fc6ff5,2016-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8003.5,fixed minor msan warning
+0fe5c187a5fe95f5c129b1eda8d743b485fc6ff5,2016-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2399.9,fixed minor msan warning
+f094f531441140f10fd461ba769f49d10f5cd581,2016-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5716.1,silence a minor msan warning
+f094f531441140f10fd461ba769f49d10f5cd581,2016-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1625.7,silence a minor msan warning
+4c5c711b7a7553def6b400df9efed5e8381e8e87,2016-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7801.4,fixed minor conversion warning
+4c5c711b7a7553def6b400df9efed5e8381e8e87,2016-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2382.4,fixed minor conversion warning
+923cf4447fdb5c5a007ff06279d79506e75bad6b,2016-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7980.4,bump version number
+923cf4447fdb5c5a007ff06279d79506e75bad6b,2016-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2443.1,bump version number
+1abecbc33c8ec5b84d2623dcbe73136aeb99db37,2016-11-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5563.5,fix 32-bits mode. Large File support for Mac OS-X in 32-bits mode Fixed potential undefined behavior Changed makefile for 32-bits mode
+1abecbc33c8ec5b84d2623dcbe73136aeb99db37,2016-11-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.7,fix 32-bits mode. Large File support for Mac OS-X in 32-bits mode Fixed potential undefined behavior Changed makefile for 32-bits mode
+8e1ea59ad6e0a91c11d6c290330cd1dfe5e5eced,2016-11-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5374.3,attempt to fix sanitize32 package dependency
+8e1ea59ad6e0a91c11d6c290330cd1dfe5e5eced,2016-11-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.5,attempt to fix sanitize32 package dependency
+a91983daa04bc0ba9330f95d3a4922c7e34d404e,2016-11-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5349.3,highly improved speed on -mx32 mode Now -mx32 is fastest mode on x64 CPU
+a91983daa04bc0ba9330f95d3a4922c7e34d404e,2016-11-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.7,highly improved speed on -mx32 mode Now -mx32 is fastest mode on x64 CPU
+19df3029e234e4c48c31377c9ef5f7c940da5106,2016-11-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5522.8,"fixed #272 (compilation fails on gcc 4.4), reported by @totaam"
+19df3029e234e4c48c31377c9ef5f7c940da5106,2016-11-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1324.1,"fixed #272 (compilation fails on gcc 4.4), reported by @totaam"
+b4db9d7e35e67f509b6d6741efddd8ec087398a2,2016-11-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5331.1,Add C++14 standard [[deprecated]] attribute
+b4db9d7e35e67f509b6d6741efddd8ec087398a2,2016-11-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.3,Add C++14 standard [[deprecated]] attribute
+151a50e16e558b9619b979ef1c0a525acc13ed92,2018-01-13,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5086.7,Merge branch 'master' into coverity_scan
+151a50e16e558b9619b979ef1c0a525acc13ed92,2018-01-13,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1476.8,Merge branch 'master' into coverity_scan
+cd63b97f963b5d079b0fe6f1a0bd3868b1d034e4,2018-01-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5230.7,Merge pull request #454 from sunpoet/dev
+cd63b97f963b5d079b0fe6f1a0bd3868b1d034e4,2018-01-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1476.2,Merge pull request #454 from sunpoet/dev
+70671ab314bd9b8091fc5d9c7b9c2681f0f75f8a,2018-01-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5216.8,Merge pull request #459 from Tyilo/clang-stdc++14
+70671ab314bd9b8091fc5d9c7b9c2681f0f75f8a,2018-01-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1476.2,Merge pull request #459 from Tyilo/clang-stdc++14
+e3f73fa6a6865ca3828a810dc9e45ff616d44681,2018-02-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5072.1,Merge pull request #461 from terrelln/docs
+e3f73fa6a6865ca3828a810dc9e45ff616d44681,2018-02-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1476.5,Merge pull request #461 from terrelln/docs
+ea25250c990769a01606dacb4149d52466b1638e,2018-02-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7434.5,fixed code comment as detected in #466
+ea25250c990769a01606dacb4149d52466b1638e,2018-02-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2670.4,fixed code comment as detected in #466
+f76ee4e267e567bbce611aecd91f41b5de3b44d5,2018-02-08,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7505.0,Merge pull request #469 from mathstuf/intel-windows-packing-selection
+f76ee4e267e567bbce611aecd91f41b5de3b44d5,2018-02-08,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2745.9,Merge pull request #469 from mathstuf/intel-windows-packing-selection
+3d3d5af4e13baab469cec4119c926e52cc3e497d,2018-02-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5054.1,Merge pull request #470 from lz4/fasterDec
+3d3d5af4e13baab469cec4119c926e52cc3e497d,2018-02-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1458.7,Merge pull request #470 from lz4/fasterDec
+d74f07974892aa5e8d1adc28b8ad9058e06fcadf,2018-02-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5055.1,update API doc regarding double-buffer strategy
+d74f07974892aa5e8d1adc28b8ad9058e06fcadf,2018-02-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1459.9,update API doc regarding double-buffer strategy
+1882b10e4192b993dd40361d4df1ef391c168911,2018-02-26,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5084.5,Merge pull request #476 from lz4/mflimit
+1882b10e4192b993dd40361d4df1ef391c168911,2018-02-26,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1459.5,Merge pull request #476 from lz4/mflimit
+ba115386fa69c148cd1b27790a8b95cd817ff172,2018-02-26,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5084.2,update code comment on LZ4 streaming interface
+ba115386fa69c148cd1b27790a8b95cd817ff172,2018-02-26,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1459.7,update code comment on LZ4 streaming interface
+39fda9a447d4dd51f395c5d94f9b63c7aec9b68b,2018-02-26,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7525.5,bumped version number to v1.8.2
+39fda9a447d4dd51f395c5d94f9b63c7aec9b68b,2018-02-26,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2924.0,bumped version number to v1.8.2
+5b67c7d1851e3530b1a45628b82fb1e06640e410,2018-03-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5276.6,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+5b67c7d1851e3530b1a45628b82fb1e06640e410,2018-03-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1459.5,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+863e24892d853ea8100c9224c8f3a0c917e055c7,2018-03-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5066.1,fix comment style
+863e24892d853ea8100c9224c8f3a0c917e055c7,2018-03-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1459.1,fix comment style
+8c763aa9009a0bbee1a943e5532761d83e99ff14,2018-03-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5083.2,Merge pull request #487 from felixhandte/better-obsoletion-comment
+8c763aa9009a0bbee1a943e5532761d83e99ff14,2018-03-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1459.8,Merge pull request #487 from felixhandte/better-obsoletion-comment
+c7b17be9384b784fe3241e5e440ca66ec6ceef3f,2018-04-06,ok,compress 4 KiB,0.0,0.0,0.0,0,0,6880.1,Merge pull request #494 from felixhandte/kill-goto
+c7b17be9384b784fe3241e5e440ca66ec6ceef3f,2018-04-06,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1458.9,Merge pull request #494 from felixhandte/kill-goto
+7b0df7cf49ffec2c9f98d2d44a2bac78717bff11,2018-04-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5127.9,Merge pull request #492 from felixhandte/avoid-prepare-in-continue
+7b0df7cf49ffec2c9f98d2d44a2bac78717bff11,2018-04-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1467.6,Merge pull request #492 from felixhandte/avoid-prepare-in-continue
+a35aba6d747854f8b0d7137c7d3dbc67f6a9fb33,2018-04-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5431.2,Merge pull request #501 from felixhandte/fix-dict-load-offset
+a35aba6d747854f8b0d7137c7d3dbc67f6a9fb33,2018-04-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1458.6,Merge pull request #501 from felixhandte/fix-dict-load-offset
+c6301479c5a85aa32d6060b3976995c1ad85a58f,2018-04-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7620.7,Merge pull request #497 from lz4/lowAddr
+c6301479c5a85aa32d6060b3976995c1ad85a58f,2018-04-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2584.9,Merge pull request #497 from lz4/lowAddr
+dede47f13b93091e23f4511482db1a150d42e3ff,2018-04-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7732.7,Merge pull request #502 from lhacc1/dev
+dede47f13b93091e23f4511482db1a150d42e3ff,2018-04-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2704.8,Merge pull request #502 from lhacc1/dev
+62d7cdcc741480842a0c217df7cb26ad3946ab32,2018-04-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7947.2,Merge pull request #503 from lz4/l120
+62d7cdcc741480842a0c217df7cb26ad3946ab32,2018-04-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2717.7,Merge pull request #503 from lz4/l120
+996d211aca5407c97b0c3736f20ae599f05f0d44,2018-04-22,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7798.1,Merge pull request #509 from svpv/clarifyFastRisks
+996d211aca5407c97b0c3736f20ae599f05f0d44,2018-04-22,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2752.3,Merge pull request #509 from svpv/clarifyFastRisks
+57cc7daf2241dc36f49ed2f42b418c6567af971c,2018-04-23,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7643.4,Merge pull request #510 from terrelln/bug-fix
+57cc7daf2241dc36f49ed2f42b418c6567af971c,2018-04-23,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2733.5,Merge pull request #510 from terrelln/bug-fix
+0c2ae72ba82e1cabf3b73909dfeb759e57bb7f9e,2018-04-23,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5107.9,Merge pull request #507 from lz4/clangPerf
+0c2ae72ba82e1cabf3b73909dfeb759e57bb7f9e,2018-04-23,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1462.2,Merge pull request #507 from lz4/clangPerf
+8c6ca6283d00d1882cfa18e6477b51c9d7e74ed4,2018-04-24,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5093.7,Merge pull request #511 from lz4/decFast
+8c6ca6283d00d1882cfa18e6477b51c9d7e74ed4,2018-04-24,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1463.9,Merge pull request #511 from lz4/decFast
+3eb3ed26e101caf2f652e6e03ad83614b6b53af0,2018-04-26,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5285.4,Merge pull request #516 from felixhandte/merge-dest-size
+3eb3ed26e101caf2f652e6e03ad83614b6b53af0,2018-04-26,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1462.6,Merge pull request #516 from felixhandte/merge-dest-size
+47d70e755e67d187da43ffe14d5ce47bf1ff04de,2018-04-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5094.6,Merge pull request #519 from lz4/fdParser
+47d70e755e67d187da43ffe14d5ce47bf1ff04de,2018-04-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1462.8,Merge pull request #519 from lz4/fdParser
+724bbcd960aa8209811c4d90f15981fdfda8bf28,2018-04-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5123.2,Merge branch 'dev' of github.com:lz4/lz4 into dev
+724bbcd960aa8209811c4d90f15981fdfda8bf28,2018-04-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1463.6,Merge branch 'dev' of github.com:lz4/lz4 into dev
+4c696613a071bc31d111bed9f9bf85e392a80901,2018-04-30,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5304.1,clarified streaming decompression function
+4c696613a071bc31d111bed9f9bf85e392a80901,2018-04-30,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1462.7,clarified streaming decompression function
+95607a749b8bbe6f9323408ddd740ef4ff248794,2018-05-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5331.1,Merge pull request #528 from lz4/complexShortcut
+95607a749b8bbe6f9323408ddd740ef4ff248794,2018-05-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1239.1,Merge pull request #528 from lz4/complexShortcut
+f3e84ffd41bb3ff10756efcf3334493639e0b395,2018-05-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5825.3,Merge pull request #529 from felixhandte/lz4f-fast-reset-for-streaming-only
+f3e84ffd41bb3ff10756efcf3334493639e0b395,2018-05-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1236.7,Merge pull request #529 from felixhandte/lz4f-fast-reset-for-streaming-only
+abb1f70e17c857790d5006012cedf08951a721a0,2018-05-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5075.3,Merge pull request #538 from lz4/frameTestError
+abb1f70e17c857790d5006012cedf08951a721a0,2018-05-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1243.5,Merge pull request #538 from lz4/frameTestError
+6a5f8d51005726b472ba8c4e350187b25b79f310,2018-05-22,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5301.8,Merge pull request #541 from felixhandte/hc-extern-c
+6a5f8d51005726b472ba8c4e350187b25b79f310,2018-05-22,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1239.8,Merge pull request #541 from felixhandte/hc-extern-c
+bfcd9c64a55a4f68dbceb08c8520bfbaefb3b025,2018-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5295.8,Merge pull request #550 from terrelln/compress-doc
+bfcd9c64a55a4f68dbceb08c8520bfbaefb3b025,2018-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1239.8,Merge pull request #550 from terrelln/compress-doc
+60b1c5e3f202aba7062775cd18f5a522a0f12d80,2018-07-30,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5091.2,Merge pull request #552 from jackluo923/dev
+60b1c5e3f202aba7062775cd18f5a522a0f12d80,2018-07-30,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1239.7,Merge pull request #552 from jackluo923/dev
+0f08c22c318356b8b9217376c3d4161c92e6ce1a,2018-09-06,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5060.3,Merge pull request #563 from lz4/docDict
+0f08c22c318356b8b9217376c3d4161c92e6ce1a,2018-09-06,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1237.5,Merge pull request #563 from lz4/docDict
+86ad9131db3fc0c1839e791d8345095487ca4dad,2018-09-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5255.1,Merge pull request #569 from lz4/circle2
+86ad9131db3fc0c1839e791d8345095487ca4dad,2018-09-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1239.2,Merge pull request #569 from lz4/circle2
+90865b80aa9ae1f19a47f8742f5bcd38f0e24b0a,2018-09-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5064.0,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+90865b80aa9ae1f19a47f8742f5bcd38f0e24b0a,2018-09-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1189.5,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+dea044a4858f27b35cd3be95ea3a4435932a458e,2018-09-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5060.5,Merge pull request #575 from lz4/apiDoc
+dea044a4858f27b35cd3be95ea3a4435932a458e,2018-09-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1189.5,Merge pull request #575 from lz4/apiDoc
+21277d27ece8fdfeebabc08721d7088dde27ccb8,2018-09-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5269.0,Merge pull request #581 from lz4/cppcheck
+21277d27ece8fdfeebabc08721d7088dde27ccb8,2018-09-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1199.4,Merge pull request #581 from lz4/cppcheck
+cb917827f95a62dffb9575a2225e55721739b162,2018-09-26,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5079.6,Merge pull request #578 from lz4/support128bit
+cb917827f95a62dffb9575a2225e55721739b162,2018-09-26,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1199.6,Merge pull request #578 from lz4/support128bit
+48cd25a4b33e2d06995c43250958a1c0c9f44831,2018-09-28,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5138.3,Merge pull request #580 from khabinov/stream-error-flag-initCheck
+48cd25a4b33e2d06995c43250958a1c0c9f44831,2018-09-28,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1200.1,Merge pull request #580 from khabinov/stream-error-flag-initCheck
+637245958f44fe9f2e45eb80eb68a627c34ab638,2018-10-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5089.3,Merge pull request #588 from khabinov/stream-dirty-followups
+637245958f44fe9f2e45eb80eb68a627c34ab638,2018-10-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1200.0,Merge pull request #588 from khabinov/stream-dirty-followups
+1b819bfd633ae285df2dfe1b0589e1ec064f2873,2018-10-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5263.3,Merge pull request #593 from felixhandte/lz4hc-publish-static
+1b819bfd633ae285df2dfe1b0589e1ec064f2873,2018-10-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1199.8,Merge pull request #593 from felixhandte/lz4hc-publish-static
+6686e7597cdf28149a78dcde1efbd91e2323a495,2018-11-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5053.4,Merge pull request #600 from antinucleon/bootcamp
+6686e7597cdf28149a78dcde1efbd91e2323a495,2018-11-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1199.7,Merge pull request #600 from antinucleon/bootcamp
+16400fb79017b1b2dd86a4a864f65930fe8586a2,2018-12-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5335.9,Merge pull request #616 from felixhandte/lz4-attach-reject-short-dicts
+16400fb79017b1b2dd86a4a864f65930fe8586a2,2018-12-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1199.7,Merge pull request #616 from felixhandte/lz4-attach-reject-short-dicts
+976cb5ca311fb12b7c733788fde47ac8fa3d1fb6,2019-02-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5058.4,Merge pull request #646 from jbms/fix-clang-optimize-attribute-ppc64le
+976cb5ca311fb12b7c733788fde47ac8fa3d1fb6,2019-02-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1199.8,Merge pull request #646 from jbms/fix-clang-optimize-attribute-ppc64le
+d85bdb4ff2c17b97ce57807035c7e5717fda694f,2019-02-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5430.5,Merge pull request #645 from djwatson/optimize_decompress_generic
+d85bdb4ff2c17b97ce57807035c7e5717fda694f,2019-02-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1230.3,Merge pull request #645 from djwatson/optimize_decompress_generic
+27a4c3c3080ed412fa2e29b903e9681dc7f5b067,2019-04-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5341.5,Merge pull request #656 from lz4/armtest
+27a4c3c3080ed412fa2e29b903e9681dc7f5b067,2019-04-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1228.9,Merge pull request #656 from lz4/armtest
+1a41b2b25ca220f560b07c6fc25dae7415273f6e,2019-04-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5299.8,Merge pull request #657 from lz4/destSize
+1a41b2b25ca220f560b07c6fc25dae7415273f6e,2019-04-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2190.3,Merge pull request #657 from lz4/destSize
+f66abc45d9b9671b889acb1e5a2506228f85548c,2019-04-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5167.8,Merge pull request #658 from lz4/_fast
+f66abc45d9b9671b889acb1e5a2506228f85548c,2019-04-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1228.5,Merge pull request #658 from lz4/_fast
+9fdc1a01184b5a6f676aba224c7cb4eac5a1e6c4,2019-04-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,4945.4,Merge pull request #659 from lz4/resetFast
+9fdc1a01184b5a6f676aba224c7cb4eac5a1e6c4,2019-04-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1231.2,Merge pull request #659 from lz4/resetFast
+db60ed19b131e59485f0a716865bd59381815145,2019-04-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,4941.2,added versions in comments
+db60ed19b131e59485f0a716865bd59381815145,2019-04-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1225.2,added versions in comments
+723ba904e2393c69d01f6730bd8b4171e6182845,2019-04-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,4954.3,Merge pull request #664 from lz4/maxdist
+723ba904e2393c69d01f6730bd8b4171e6182845,2019-04-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1227.1,Merge pull request #664 from lz4/maxdist
+780aac520b69d6369f4e3995624c37e56d75498d,2019-04-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5045.9,Merge pull request #665 from lz4/dict
+780aac520b69d6369f4e3995624c37e56d75498d,2019-04-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1224.2,Merge pull request #665 from lz4/dict
+21ff1a839afcf18e68ee7dbb0ec0d6cccb4c1be0,2019-04-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5187.8,updated doc to underline difference between block and frame
+21ff1a839afcf18e68ee7dbb0ec0d6cccb4c1be0,2019-04-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1224.9,updated doc to underline difference between block and frame
+321506974125cb3eeca89c2ca6abb5f3e9e497e2,2019-04-13,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5133.4,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+321506974125cb3eeca89c2ca6abb5f3e9e497e2,2019-04-13,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1224.1,Merge branch 'dev' of github.com:Cyan4973/lz4 into dev
+a067441f562d2c211c3a5675b9d4057218e2af09,2019-04-15,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5145.6,Merge pull request #669 from lz4/fixframe
+a067441f562d2c211c3a5675b9d4057218e2af09,2019-04-15,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1225.8,Merge pull request #669 from lz4/fixframe
+b59fd652e80f3dc494ed80cc2521f7777c85a0dd,2019-04-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5122.8,Merge pull request #674 from nrgiii/dev
+b59fd652e80f3dc494ed80cc2521f7777c85a0dd,2019-04-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1271.0,Merge pull request #674 from nrgiii/dev
+5a6d72447ae998b387794df1135023689aa89995,2019-04-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5367.4,Merge pull request #678 from lz4/decFast
+5a6d72447ae998b387794df1135023689aa89995,2019-04-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1225.8,Merge pull request #678 from lz4/decFast
+213edce4bebf6fbccb626e8b82152e04730acff7,2019-04-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5201.6,Merge pull request #682 from lz4/visual
+213edce4bebf6fbccb626e8b82152e04730acff7,2019-04-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1225.9,Merge pull request #682 from lz4/visual
+10b9e912276e45355435a45d58e24cf92d192b75,2019-04-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5281.9,Merge pull request #683 from lz4/fuzasan
+10b9e912276e45355435a45d58e24cf92d192b75,2019-04-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1265.0,Merge pull request #683 from lz4/fuzasan
+7a4e3b1fac5cd9d4ec7c8d0091329ba107ec2131,2019-04-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7807.1,bumped version number
+7a4e3b1fac5cd9d4ec7c8d0091329ba107ec2131,2019-04-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2332.3,bumped version number
+8453e071f14784b2bc132e935e14a315e54b775c,2019-04-24,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5375.5,Merge pull request #698 from lz4/tidy
+8453e071f14784b2bc132e935e14a315e54b775c,2019-04-24,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1267.2,Merge pull request #698 from lz4/tidy
+df2451479cc70e73e96466f0bc341bdac722bbe9,2019-05-13,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5302.4,Merge pull request #707 from prekageo/dev
+df2451479cc70e73e96466f0bc341bdac722bbe9,2019-05-13,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1264.5,Merge pull request #707 from prekageo/dev
+8008fdf396ae0a2d12a18bfd3fc2b033e3648fa6,2019-05-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5515.6,Merge pull request #719 from parheliamm/dev
+8008fdf396ae0a2d12a18bfd3fc2b033e3648fa6,2019-05-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1229.0,Merge pull request #719 from parheliamm/dev
+280fc0856dbc279613669a86e0f81fe0b30d6edf,2019-05-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,12369.2,Merge pull request #717 from lz4/inplace
+280fc0856dbc279613669a86e0f81fe0b30d6edf,2019-05-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1365.4,Merge pull request #717 from lz4/inplace
+348e107d99d8b482463f6eb5faf83df8f69cf1f1,2019-06-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5190.4,restored FORCE_INLINE
+348e107d99d8b482463f6eb5faf83df8f69cf1f1,2019-06-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1200.5,restored FORCE_INLINE
+1d759576b92a54a29e549bb3a4d42f0660ab4b31,2019-06-06,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5026.7,precise again that LZ4 decoder needs metadata
+1d759576b92a54a29e549bb3a4d42f0660ab4b31,2019-06-06,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1201.9,precise again that LZ4 decoder needs metadata
+8b97fcda6061a88646cfd5eeb0a8797f2d3b6845,2019-06-28,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5023.6,Merge pull request #740 from terrelln/fix2
+8b97fcda6061a88646cfd5eeb0a8797f2d3b6845,2019-06-28,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1324.6,Merge pull request #740 from terrelln/fix2
+4765da5ac48ea8406c83a58a69e78f00ecfc43f4,2019-07-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7640.7,Merge pull request #745 from lz4/bump_192
+4765da5ac48ea8406c83a58a69e78f00ecfc43f4,2019-07-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2481.8,Merge pull request #745 from lz4/bump_192
+eb6b599a50db0c144f4f8f5cd2d7e8e480c31d4e,2019-07-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5009.1,Merge pull request #749 from sylvestre/patch-1
+eb6b599a50db0c144f4f8f5cd2d7e8e480c31d4e,2019-07-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2390.8,Merge pull request #749 from sylvestre/patch-1
+81a14ccccb121281ea5a433ef677484deaef1cfb,2019-07-15,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5020.8,Merge pull request #755 from lz4/custom_distance
+81a14ccccb121281ea5a433ef677484deaef1cfb,2019-07-15,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1360.0,Merge pull request #755 from lz4/custom_distance
+7654a5a6d287e15e4c42b7d7386fbbd1b857f9e2,2019-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5236.3,Merge pull request #752 from terrelln/fuzzers
+7654a5a6d287e15e4c42b7d7386fbbd1b857f9e2,2019-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.4,Merge pull request #752 from terrelln/fuzzers
+19b099986aeccc12bb46ad207fe8de5b36bdb7bc,2019-07-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5506.8,Merge pull request #756 from terrelln/destSize
+19b099986aeccc12bb46ad207fe8de5b36bdb7bc,2019-07-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.7,Merge pull request #756 from terrelln/destSize
+316f2b6f4d74ed542af7687460af637a4901e09e,2019-07-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5453.7,Merge pull request #762 from terrelln/frame-fuzz
+316f2b6f4d74ed542af7687460af637a4901e09e,2019-07-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.7,Merge pull request #762 from terrelln/frame-fuzz
+7a516411d495ac2f86c7569cc77bdbcb62be0838,2019-07-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5264.0,Merge pull request #760 from terrelln/destSize
+7a516411d495ac2f86c7569cc77bdbcb62be0838,2019-07-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1274.6,Merge pull request #760 from terrelln/destSize
+b5b9760c80d70aaa5805c460cb61faad31cbf234,2019-08-06,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5162.9,Merge pull request #772 from lz4/offset0
+b5b9760c80d70aaa5805c460cb61faad31cbf234,2019-08-06,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.8,Merge pull request #772 from lz4/offset0
+1bcde6414a68094601ecd57a968808fdd43fb986,2019-08-08,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5376.1,Merge pull request #773 from felixhandte/attach-empty-dict-behavior-conformance
+1bcde6414a68094601ecd57a968808fdd43fb986,2019-08-08,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.1,Merge pull request #773 from felixhandte/attach-empty-dict-behavior-conformance
+dfad84ca3eca2fb89a1cdb5adf829975035827d5,2019-08-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5413.6,Merge pull request #777 from terrelln/off-by-one
+dfad84ca3eca2fb89a1cdb5adf829975035827d5,2019-08-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1324.2,Merge pull request #777 from terrelln/off-by-one
+d5ceafd4118c88e2372b0ccb35f8352f25f172a1,2019-09-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5171.4,Merge pull request #793 from nigeltao/dev
+d5ceafd4118c88e2372b0ccb35f8352f25f172a1,2019-09-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.6,Merge pull request #793 from nigeltao/dev
+e876ea092058df328a6f352e2fe34e0394637781,2019-12-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5172.7,Merge pull request #817 from lz4/windfast
+e876ea092058df328a6f352e2fe34e0394637781,2019-12-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.2,Merge pull request #817 from lz4/windfast
+cb1ee95d76b8b78e0a8965cebe1a83b6facaadb6,2020-01-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5384.1,Merge pull request #826 from wolfpld/dev
+cb1ee95d76b8b78e0a8965cebe1a83b6facaadb6,2020-01-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.9,Merge pull request #826 from wolfpld/dev
+6b12fde42a3156441a994153997018940c5d8142,2020-07-08,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5349.9,Merge pull request #884 from vectorizedio/clang-ubsan
+6b12fde42a3156441a994153997018940c5d8142,2020-07-08,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.5,Merge pull request #884 from vectorizedio/clang-ubsan
+48f9ecfb3436877b014d22280d36e7644f867140,2020-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5447.9,Merge pull request #863 from Devernua/reducing_stack_usage_in_t_alignment
+48f9ecfb3436877b014d22280d36e7644f867140,2020-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.0,Merge pull request #863 from Devernua/reducing_stack_usage_in_t_alignment
+f4054274faa24f15efedc7431fcb6914d1826220,2020-07-28,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5211.6,Merge pull request #860 from adeason/old-style-definitions
+f4054274faa24f15efedc7431fcb6914d1826220,2020-07-28,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1652.2,Merge pull request #860 from adeason/old-style-definitions
+cd5d78ebd0a75c68432a1935c8ef9eeb952275c1,2020-08-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5321.2,Merge pull request #890 from terrelln/lz4-memcpy
+cd5d78ebd0a75c68432a1935c8ef9eeb952275c1,2020-08-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1217.6,Merge pull request #890 from terrelln/lz4-memcpy
+ad14a98a0915f2bcc3cc2bbc0f2ab827fc5932c2,2020-08-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5408.4,Merge pull request #892 from felixhandte/lz4-clean-up-fast-reset
+ad14a98a0915f2bcc3cc2bbc0f2ab827fc5932c2,2020-08-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.7,Merge pull request #892 from felixhandte/lz4-clean-up-fast-reset
+b26c140a54a0d04fe71b0bfc3a24915b887308bc,2020-08-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5129.0,Merge pull request #895 from lz4/hugefast
+b26c140a54a0d04fe71b0bfc3a24915b887308bc,2020-08-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1216.7,Merge pull request #895 from lz4/hugefast
+ac65f939cd0351f2f591cbde021969426ddeb6ca,2020-08-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5306.6,Merge pull request #896 from lz4/fix832
+ac65f939cd0351f2f591cbde021969426ddeb6ca,2020-08-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1215.8,Merge pull request #896 from lz4/fix832
+f328e329b3cec38ec8316d454279b79d19c36fdd,2020-08-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7211.1,Merge branch 'fix832' into dev
+f328e329b3cec38ec8316d454279b79d19c36fdd,2020-08-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1215.9,Merge branch 'fix832' into dev
+e46fa0ff715227546daa91538d770ec57b8957f3,2020-08-24,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5391.1,Merge pull request #903 from lz4/nofastforce
+e46fa0ff715227546daa91538d770ec57b8957f3,2020-08-24,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1216.9,Merge pull request #903 from lz4/nofastforce
+b73cd37baba01229fb67a7aaae9e95fcffd09059,2020-08-26,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5291.4,Merge pull request #909 from lz4/fasterCount
+b73cd37baba01229fb67a7aaae9e95fcffd09059,2020-08-26,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1216.3,Merge pull request #909 from lz4/fasterCount
+440c8461d71a79ee927ce93077b58ad22d894d28,2020-08-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5174.7,Merge pull request #910 from lz4/extraInput
+440c8461d71a79ee927ce93077b58ad22d894d28,2020-08-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1319.9,Merge pull request #910 from lz4/extraInput
+d568a6d15cdd06d3f131adaa32299d7535772723,2020-09-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5339.6,Merge pull request #918 from lz4/usan_null
+d568a6d15cdd06d3f131adaa32299d7535772723,2020-09-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1319.9,Merge pull request #918 from lz4/usan_null
+dc27b7ae4157024384b4766e501d9ba2788ddfd3,2020-09-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5458.0,comment bug on older versions of ZSTD_compress_destSize()
+dc27b7ae4157024384b4766e501d9ba2788ddfd3,2020-09-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.1,comment bug on older versions of ZSTD_compress_destSize()
+21062b063fa7b297cd81305fa15574a00d8c00f0,2020-09-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5211.9,Merge pull request #922 from XVilka/tinycc-support
+21062b063fa7b297cd81305fa15574a00d8c00f0,2020-09-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.0,Merge pull request #922 from XVilka/tinycc-support
+8a362a8ac890b820cc16071bf190740445dfc7a2,2020-09-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5363.6,Merge pull request #921 from lz4/doubleNull
+8a362a8ac890b820cc16071bf190740445dfc7a2,2020-09-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1319.1,Merge pull request #921 from lz4/doubleNull
+78f4fdbb89e71325cedc751e1f7c2403bb43c3f4,2020-09-28,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5194.3,Merge pull request #923 from lz4/fix784
+78f4fdbb89e71325cedc751e1f7c2403bb43c3f4,2020-09-28,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1318.9,Merge pull request #923 from lz4/fix784
+293713a4fa085d73f396200d2387631b045c118e,2020-09-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5139.2,bump version number
+293713a4fa085d73f396200d2387631b045c118e,2020-09-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.6,bump version number
+0aed7314de48c90b8aeed8df16bad38b585f19fe,2020-10-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5227.9,Merge pull request #924 from lz4/safixes
+0aed7314de48c90b8aeed8df16bad38b585f19fe,2020-10-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1319.3,Merge pull request #924 from lz4/safixes
+664427aa8f6808411a2c04f003a9b364bdebe578,2020-10-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5344.1,Merge pull request #930 from remittor-pr/fix_msvc
+664427aa8f6808411a2c04f003a9b364bdebe578,2020-10-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.5,Merge pull request #930 from remittor-pr/fix_msvc
+b5e2a4acd953fd21fef2c372d9750992d454e76f,2020-11-06,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5415.4,Merge pull request #936 from lz4/alignTest
+b5e2a4acd953fd21fef2c372d9750992d454e76f,2020-11-06,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.8,Merge pull request #936 from lz4/alignTest
+79a7c940172ae066f9d72462d625fb43e7a0343a,2020-11-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5465.2,Merge pull request #940 from lz4/fix935
+79a7c940172ae066f9d72462d625fb43e7a0343a,2020-11-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.6,Merge pull request #940 from lz4/fix935
+1d02141bf8149c1f0091a4c2548cc4f28092f73a,2020-11-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5009.2,Merge pull request #941 from lz4/revertinline
+1d02141bf8149c1f0091a4c2548cc4f28092f73a,2020-11-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1319.2,Merge pull request #941 from lz4/revertinline
+c41be7e92060cfc2e5f52bcdd7f7426edd4935a4,2020-11-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5019.4,Merge pull request #942 from lz4/fix926
+c41be7e92060cfc2e5f52bcdd7f7426edd4935a4,2020-11-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.7,Merge pull request #942 from lz4/fix926
+be634559e3b6bb7bce77cc83ec2080b2bfb6c844,2020-11-08,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5166.6,update obsolete section documentation
+be634559e3b6bb7bce77cc83ec2080b2bfb6c844,2020-11-08,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.9,update obsolete section documentation
+b8cd01183f1cd255e8581b48f5225f338dfa8c39,2020-11-08,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5226.3,Merge pull request #945 from lz4/fix926
+b8cd01183f1cd255e8581b48f5225f338dfa8c39,2020-11-08,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.1,Merge pull request #945 from lz4/fix926
+9cf3f106a8dea906ff4550f749112e9e89536678,2020-11-08,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5009.1,Merge pull request #944 from lz4/fix874
+9cf3f106a8dea906ff4550f749112e9e89536678,2020-11-08,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.6,Merge pull request #944 from lz4/fix874
+9061a0a93582854cbddb64cb048ae527a0c220af,2020-11-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5336.6,Merge pull request #946 from lz4/customMem
+9061a0a93582854cbddb64cb048ae527a0c220af,2020-11-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.5,Merge pull request #946 from lz4/customMem
+581c459b4ec4bbaae518a0ef9baa552f21f9e24e,2020-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,4985.1,restrict BitScanForward() to VS2005+
+581c459b4ec4bbaae518a0ef9baa552f21f9e24e,2020-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.8,restrict BitScanForward() to VS2005+
+0bd7dafc93bae758e86260a63a3f1efb4eac1d82,2020-11-15,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5283.4,Merge pull request #953 from lz4/vs2005
+0bd7dafc93bae758e86260a63a3f1efb4eac1d82,2020-11-15,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.6,Merge pull request #953 from lz4/vs2005
+384eb158358a21f4c501cebc2cadd127cbd4fde2,2020-12-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5076.4,Merge pull request #960 from lz4/Makefile_export
+384eb158358a21f4c501cebc2cadd127cbd4fde2,2020-12-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.6,Merge pull request #960 from lz4/Makefile_export
+19304881350389911a288a73d4dafd2c9b272f1f,2021-01-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5003.1,Merge pull request #965 from ThomasWaldmann/fix-typos
+19304881350389911a288a73d4dafd2c9b272f1f,2021-01-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.8,Merge pull request #965 from ThomasWaldmann/fix-typos
+7a966c1511816b53ac93aa2f2a2ff97e036a4a60,2021-04-30,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5255.5,Merge pull request #972 from jasperla/memmove_crash
+7a966c1511816b53ac93aa2f2a2ff97e036a4a60,2021-04-30,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.4,Merge pull request #972 from jasperla/memmove_crash
+634fa2047d217f1c62222071a8313bc5e17d4509,2021-05-28,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5245.3,Merge pull request #989 from lz4/fix_nullub_lz4
+634fa2047d217f1c62222071a8313bc5e17d4509,2021-05-28,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.2,Merge pull request #989 from lz4/fix_nullub_lz4
+4f0c7e45c54b7b7e42c16defb764a01129d4a0a8,2021-06-15,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5285.1,Merge pull request #1001 from GabeNI/dev
+4f0c7e45c54b7b7e42c16defb764a01129d4a0a8,2021-06-15,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1318.2,Merge pull request #1001 from GabeNI/dev
+163db1675c0cb5c4e35266e1c1f73e119227ad30,2021-08-02,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5009.4,Merge pull request #1013 from eloj/relax-lz4-memory-usage-tunable
+163db1675c0cb5c4e35266e1c1f73e119227ad30,2021-08-02,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.0,Merge pull request #1013 from eloj/relax-lz4-memory-usage-tunable
+e78eeec86e696f318a0ad1e71d6ad50555d1c0a9,2021-08-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5185.3,Merge pull request #1017 from fanzeyi/fix-clang-cl-msvc
+e78eeec86e696f318a0ad1e71d6ad50555d1c0a9,2021-08-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.0,Merge pull request #1017 from fanzeyi/fix-clang-cl-msvc
+db57809cf189feb2dd690d55abc2884c95c6fc00,2021-11-22,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5210.7,Merge pull request #1040 from zeux/m1-fastdec
+db57809cf189feb2dd690d55abc2884c95c6fc00,2021-11-22,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.7,Merge pull request #1040 from zeux/m1-fastdec
+5cc311893f1c94fe37e4151170d5a810c51c3330,2022-01-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5390.0,Merge pull request #1054 from mcfi/patch-1
+5cc311893f1c94fe37e4151170d5a810c51c3330,2022-01-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.6,Merge pull request #1054 from mcfi/patch-1
+b3a7ca21cefc51fd425f6afeb9b87670013cf42b,2022-01-28,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5136.7,Merge pull request #1057 from lz4/lz4_unalign
+b3a7ca21cefc51fd425f6afeb9b87670013cf42b,2022-01-28,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.2,Merge pull request #1057 from lz4/lz4_unalign
+7601d57f878649eea61fa2629424e0059d1591c6,2022-01-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5106.9,Merge pull request #1061 from lz4/memory_usage
+7601d57f878649eea61fa2629424e0059d1591c6,2022-01-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.3,Merge pull request #1061 from lz4/memory_usage
+ce8ee024b240befac4ca8ab12c6cd812f4a7e38b,2022-04-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5058.7,update library version to v1.9.4
+ce8ee024b240befac4ca8ab12c6cd812f4a7e38b,2022-04-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.5,update library version to v1.9.4
+4ebe313e00aa52c837ee029ede39a0503a8a39c9,2022-06-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5336.3,Merge pull request #1093 from yawqi/partial-with-dict
+4ebe313e00aa52c837ee029ede39a0503a8a39c9,2022-06-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.5,Merge pull request #1093 from yawqi/partial-with-dict
+6fb713358b0ccb66dc5a61f99530be7e145a85b4,2022-07-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5244.7,silence a useless MSVC warning
+6fb713358b0ccb66dc5a61f99530be7e145a85b4,2022-07-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1319.1,silence a useless MSVC warning
+510dc6370610fc6f02bef963040b35d2712c4b7e,2022-07-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5361.9,Merge pull request #1104 from jonrumsey/os400-build-fix
+510dc6370610fc6f02bef963040b35d2712c4b7e,2022-07-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.1,Merge pull request #1104 from jonrumsey/os400-build-fix
+702c5b092b37be6236d042d15c4f0a05ac91e3f2,2022-07-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5257.5,Merge pull request #1109 from lz4/staticSizes
+702c5b092b37be6236d042d15c4f0a05ac91e3f2,2022-07-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1318.4,Merge pull request #1109 from lz4/staticSizes
+f294fabef6bac63d6eb0e2f8cbbf9c7d9d47e485,2022-07-13,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5240.4,Merge pull request #1110 from lz4/moreCompactStates
+f294fabef6bac63d6eb0e2f8cbbf9c7d9d47e485,2022-07-13,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1316.9,Merge pull request #1110 from lz4/moreCompactStates
+5c8bb8739eb5e503a02a1976d1ddcadb049a041d,2022-07-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5225.2,Merge pull request #1121 from lz4/decBench
+5c8bb8739eb5e503a02a1976d1ddcadb049a041d,2022-07-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1318.0,Merge pull request #1121 from lz4/decBench
+d343a3685233f3c46c20bfeb7e8674de9d8175fc,2022-07-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5290.3,Merge pull request #1123 from t-mat/memfunc-macros
+d343a3685233f3c46c20bfeb7e8674de9d8175fc,2022-07-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.3,Merge pull request #1123 from t-mat/memfunc-macros
+65603aeb7cda9ba81022570949027214d7980b57,2022-07-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5029.9,Merge pull request #1125 from dpelle/fix-typos
+65603aeb7cda9ba81022570949027214d7980b57,2022-07-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.8,Merge pull request #1125 from dpelle/fix-typos
+f7b1f6b7420822255b09acdd1b82848b12e1cda1,2022-08-03,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5038.1,Merge pull request #1128 from lz4/decompress_unsafe
+f7b1f6b7420822255b09acdd1b82848b12e1cda1,2022-08-03,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.6,Merge pull request #1128 from lz4/decompress_unsafe
+ca26930a91e5b1d47d725b1043e1f5282fd18aaf,2022-08-05,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5287.0,Merge pull request #1124 from t-mat/compile-time-purge-memalloc-func
+ca26930a91e5b1d47d725b1043e1f5282fd18aaf,2022-08-05,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.4,Merge pull request #1124 from t-mat/compile-time-purge-memalloc-func
+70b1201c5b185e2e6f82da4ceffcd5c8ad9b56a3,2022-08-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5231.6,Merge pull request #1130 from t-mat/freestanding
+70b1201c5b185e2e6f82da4ceffcd5c8ad9b56a3,2022-08-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.7,Merge pull request #1130 from t-mat/freestanding
+dee9f95fd9b65ee25858e8e602e3084cf4870b41,2022-08-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5229.5,Merge pull request #1129 from t-mat/disable-memory-alloc-add-doc
+dee9f95fd9b65ee25858e8e602e3084cf4870b41,2022-08-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.6,Merge pull request #1129 from t-mat/disable-memory-alloc-add-doc
+e691e827280453e67fdf57421bb58d6e1faf734d,2022-08-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5362.1,Merge pull request #1131 from t-mat/doc-freestanding
+e691e827280453e67fdf57421bb58d6e1faf734d,2022-08-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.6,Merge pull request #1131 from t-mat/doc-freestanding
+7fe9c69024089c4a670eff506de7ebc63adecfdb,2022-08-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5058.9,Merge pull request #1136 from t-mat/msvc-17.3
+7fe9c69024089c4a670eff506de7ebc63adecfdb,2022-08-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.8,Merge pull request #1136 from t-mat/msvc-17.3
+520330eade5db2be48ad61a659295846d37cac7e,2022-09-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5250.5,Merge pull request #1161 from lz4/byPtr
+520330eade5db2be48ad61a659295846d37cac7e,2022-09-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.9,Merge pull request #1161 from lz4/byPtr
+e84f375421c131a61d096cc5649b05119b87a7a1,2022-09-15,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5241.9,Merge pull request #1168 from lz4/benchD
+e84f375421c131a61d096cc5649b05119b87a7a1,2022-09-15,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.3,Merge pull request #1168 from lz4/benchD
+27c9530b757afe7915d0e0d1622f4d1089b66b3c,2022-09-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5033.0,Merge pull request #1163 from lz4/dict_fillOnIndex
+27c9530b757afe7915d0e0d1622f4d1089b66b3c,2022-09-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1328.4,Merge pull request #1163 from lz4/dict_fillOnIndex
+f39c0810bc5b8081bd61e2abf31500f03dc56a95,2022-09-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5232.6,Merge pull request #1169 from lz4/fix_ub485
+f39c0810bc5b8081bd61e2abf31500f03dc56a95,2022-09-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1328.0,Merge pull request #1169 from lz4/fix_ub485
+586e9a4c6db004fe6dc298b508aa364e22996bdb,2022-09-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8009.9,added code documentation on heap mode
+586e9a4c6db004fe6dc298b508aa364e22996bdb,2022-09-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2423.5,added code documentation on heap mode
+e312412c60140b3d061526499cef22e5e99d7751,2022-10-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7968.6,Merge pull request #1174 from lz4/lz4_ubnull
+e312412c60140b3d061526499cef22e5e99d7751,2022-10-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2495.9,Merge pull request #1174 from lz4/lz4_ubnull
+002a2756e501f352e5d162b3764c57cb055b346f,2022-12-02,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5104.6,Merge pull request #1188 from x4m/static_function
+002a2756e501f352e5d162b3764c57cb055b346f,2022-12-02,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.6,Merge pull request #1188 from x4m/static_function
+82435a85b7964da88aee957083d13b7f5c7bf870,2023-05-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5272.7,Merge pull request #1233 from t-mat/fix-1232
+82435a85b7964da88aee957083d13b7f5c7bf870,2023-05-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.6,Merge pull request #1233 from t-mat/fix-1232
+7075bc2990d63a731f84ea202190b84655a1fded,2023-06-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5289.1,fixed minor typo
+7075bc2990d63a731f84ea202190b84655a1fded,2023-06-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1327.3,fixed minor typo
+76106cba6fbbf8efb63d9fa90f052d384d212c56,2023-08-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5283.1,Merge pull request #1226 from Nicoshev/reduce_cpy_variable_usage
+76106cba6fbbf8efb63d9fa90f052d384d212c56,2023-08-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1211.2,Merge pull request #1226 from Nicoshev/reduce_cpy_variable_usage
+a69683fe6395d96424fefb2ead71aebea1ca4b1f,2023-09-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5284.1,Merge pull request #1224 from Nicoshev/remove_redundant_code
+a69683fe6395d96424fefb2ead71aebea1ca4b1f,2023-09-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1208.1,Merge pull request #1224 from Nicoshev/remove_redundant_code
+8c824ac7e2ef58803dc6221e07ad3d3743171625,2023-09-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5220.7,Merge pull request #1225 from Nicoshev/add_packing_support_for_msc
+8c824ac7e2ef58803dc6221e07ad3d3743171625,2023-09-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1207.6,Merge pull request #1225 from Nicoshev/add_packing_support_for_msc
+f41eb5f720afeb6eb22a307cfffc02979a60027e,2023-09-26,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5095.0,Merge pull request #1277 from lz4/fixExamples
+f41eb5f720afeb6eb22a307cfffc02979a60027e,2023-09-26,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1208.0,Merge pull request #1277 from lz4/fixExamples
+12a72d746bd76a88a81e48d5a4128d4701836f72,2023-10-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7684.0,Merge pull request #1285 from t-mat/fix/msvc-17.7
+12a72d746bd76a88a81e48d5a4128d4701836f72,2023-10-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2295.6,Merge pull request #1285 from t-mat/fix/msvc-17.7
+0e4b22ddc9751c496d7bb0077cf5f2a2870bd3c1,2023-10-20,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5244.6,updated NEWS and raised version number
+0e4b22ddc9751c496d7bb0077cf5f2a2870bd3c1,2023-10-20,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1207.8,updated NEWS and raised version number
+039ab4696526378ec0d111058b48305964284bf2,2023-10-24,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7579.2,Merge pull request #1301 from JunHe77/clang-gen
+039ab4696526378ec0d111058b48305964284bf2,2023-10-24,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2298.6,Merge pull request #1301 from JunHe77/clang-gen
+5be782a10bb1454228a19787f71aeef1bce4e6aa,2023-12-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7602.7,Merge pull request #1312 from JunHe77/rvl
+5be782a10bb1454228a19787f71aeef1bce4e6aa,2023-12-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2326.0,Merge pull request #1312 from JunHe77/rvl
+b8fd2d15309dd4e605070bd4486e26b6ef814e29,2023-12-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7657.9,Merge pull request #1314 from lz4/deprecateCommentUpdate
+b8fd2d15309dd4e605070bd4486e26b6ef814e29,2023-12-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2298.7,Merge pull request #1314 from lz4/deprecateCommentUpdate
+375b81d463a64fc89c49ac51918474a98e1dc2db,2023-12-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7521.8,Merge pull request #1308 from tristan957/glib
+375b81d463a64fc89c49ac51918474a98e1dc2db,2023-12-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2314.4,Merge pull request #1308 from tristan957/glib
+77e54ea5f900e1f56655ce65ac9cf989fad4b502,2023-12-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5308.2,Merge pull request #1322 from lz4/minor1
+77e54ea5f900e1f56655ce65ac9cf989fad4b502,2023-12-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.2,Merge pull request #1322 from lz4/minor1
+26b3b238fe96d51f0bcd4b083bd7a62e57dab2a4,2023-12-22,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5026.4,Merge pull request #1253 from ltrk2/bugfix/hashing-on-big-endian
+26b3b238fe96d51f0bcd4b083bd7a62e57dab2a4,2023-12-22,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.2,Merge pull request #1253 from ltrk2/bugfix/hashing-on-big-endian
+4d72a9efd6c6655d3d40e4ca100d6ad5815d4e8f,2023-12-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5376.7,Merge pull request #1333 from lz4/fix1308
+4d72a9efd6c6655d3d40e4ca100d6ad5815d4e8f,2023-12-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1316.0,Merge pull request #1333 from lz4/fix1308
+4b407c3f642b6bdb86c4e93268f3a921216662b7,2023-12-30,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5264.6,Merge pull request #1336 from lz4/asyncio
+4b407c3f642b6bdb86c4e93268f3a921216662b7,2023-12-30,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1312.5,Merge pull request #1336 from lz4/asyncio
+f34ecf37176d0dfa8322b33535aace0a883bbf97,2024-01-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5243.6,Merge pull request #1361 from lz4/fix_s571
+f34ecf37176d0dfa8322b33535aace0a883bbf97,2024-01-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.4,Merge pull request #1361 from lz4/fix_s571
+d219f24d84d884f18a6f515b5ee2d99d9642dbc0,2024-02-10,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5025.9,Merge pull request #1363 from lz4/level2
+d219f24d84d884f18a6f515b5ee2d99d9642dbc0,2024-02-10,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.3,Merge pull request #1363 from lz4/level2
+610c94f80802f67b59c00cac1f229e3d13b8de35,2024-02-24,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5016.2,Merge pull request #1370 from Razakhel/fix-clang-pedantic-windows
+610c94f80802f67b59c00cac1f229e3d13b8de35,2024-02-24,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.2,Merge pull request #1370 from Razakhel/fix-clang-pedantic-windows
+835d6f9a61fd843bf482efb518181853153f564d,2024-03-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7836.7,Merge pull request #1383 from jonrumsey/dev
+835d6f9a61fd843bf482efb518181853153f564d,2024-03-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2275.4,Merge pull request #1383 from jonrumsey/dev
+29cd102e09f1da4b672f5b87f9ff76a1deab69e8,2024-05-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5066.9,Merge pull request #1404 from AtariDreams/or
+29cd102e09f1da4b672f5b87f9ff76a1deab69e8,2024-05-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1312.4,Merge pull request #1404 from AtariDreams/or
+9c038e9f7dfa313610357f60477cc0a0aaf8b2ab,2024-05-07,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5265.1,Merge pull request #1403 from AtariDreams/one
+9c038e9f7dfa313610357f60477cc0a0aaf8b2ab,2024-05-07,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.8,Merge pull request #1403 from AtariDreams/one
+c537f782c44a0ced71bcf271356aef9506f1375c,2024-05-08,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5279.2,Merge pull request #1401 from Nicoshev/updateFunctionComment
+c537f782c44a0ced71bcf271356aef9506f1375c,2024-05-08,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1312.0,Merge pull request #1401 from Nicoshev/updateFunctionComment
+76c48c1e43131c282b43e02efbb9a64378fbcffa,2024-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5234.6,Merge pull request #1443 from lz4/dictAPI
+76c48c1e43131c282b43e02efbb9a64378fbcffa,2024-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1411.5,Merge pull request #1443 from lz4/dictAPI
+0642ae2f1ed513d0df38a45a77415716c082ed4c,2024-07-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5065.0,minor: document version for new entry point
+0642ae2f1ed513d0df38a45a77415716c082ed4c,2024-07-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1314.5,minor: document version for new entry point
+07c526c0afe28866cdcb7f84f4aadcebd0d63ba7,2025-01-16,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5045.2,Merge pull request #1564 from lz4/filecompress_fix
+07c526c0afe28866cdcb7f84f4aadcebd0d63ba7,2025-01-16,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.3,Merge pull request #1564 from lz4/filecompress_fix
+2719f42eb5085a3e0ede720470f96c2dd2569550,2025-04-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5326.3,removed year from header (#1605)
+2719f42eb5085a3e0ede720470f96c2dd2569550,2025-04-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.4,removed year from header (#1605)
+c99038d1bb46d9621f0c9e3ac6f0004a109eb67a,2025-04-30,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5041.1,Merge pull request #1610 from Nicoshev/dev
+c99038d1bb46d9621f0c9e3ac6f0004a109eb67a,2025-04-30,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1356.0,Merge pull request #1610 from Nicoshev/dev
+ab30556b67ef4ebc2f3aab2316aee800c630615c,2025-05-25,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5347.0,Merge pull request #1618 from lz4/feature/cmake-readability-improvements
+ab30556b67ef4ebc2f3aab2316aee800c630615c,2025-05-25,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1315.2,Merge pull request #1618 from lz4/feature/cmake-readability-improvements
+9d04141cfcfa4f1db62fb17acfabda8592075c31,2025-06-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5262.0,Merge pull request #1581 from KSSAB/dev
+9d04141cfcfa4f1db62fb17acfabda8592075c31,2025-06-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1314.5,Merge pull request #1581 from KSSAB/dev
+7d33531b521054ef028293d0038c55272a92bd79,2025-09-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5248.7,Merge pull request #1648 from Polaris-911/dev
+7d33531b521054ef028293d0038c55272a92bd79,2025-09-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1313.0,Merge pull request #1648 from Polaris-911/dev
+1519f46a3a11f312be8f5796e8fa4779140277f0,2026-02-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5017.6,Merge pull request #1713 from arpadpanyik-arm/fastdec_android
+1519f46a3a11f312be8f5796e8fa4779140277f0,2026-02-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1320.4,Merge pull request #1713 from arpadpanyik-arm/fastdec_android
+b853ce3c3a52485067584d00737d9fbc3355fbea,2026-03-02,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5077.8,Merge pull request #1716 from lz4/missing_prototypes
+b853ce3c3a52485067584d00737d9fbc3355fbea,2026-03-02,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1312.7,Merge pull request #1716 from lz4/missing_prototypes
+e0ed584814d674677226fdc795b63c1d2be61b42,2026-05-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5300.2,Merge pull request #1723 from Nicoshev/c1
+e0ed584814d674677226fdc795b63c1d2be61b42,2026-05-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1355.5,Merge pull request #1723 from Nicoshev/c1
+21c21c9395a15488dbfad164d7e95b8831dbf6bf,2026-05-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5040.5,Merge pull request #1724 from Nicoshev/d1
+21c21c9395a15488dbfad164d7e95b8831dbf6bf,2026-05-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1315.4,Merge pull request #1724 from Nicoshev/d1
+56d0d4e47aecd2ecdf515676e80d5be6f05cafb1,2026-05-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5301.9,Merge pull request #1725 from Nicoshev/c3
+56d0d4e47aecd2ecdf515676e80d5be6f05cafb1,2026-05-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1240.0,Merge pull request #1725 from Nicoshev/c3
+0774d05537f9762f838f7ab541b7765f1a729cb5,2026-06-01,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5242.9,Merge pull request #1753 from lz4/fix_read_oob
+0774d05537f9762f838f7ab541b7765f1a729cb5,2026-06-01,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1314.3,Merge pull request #1753 from lz4/fix_read_oob
+f99f48ed16f377ea9685e4b82a005882520c3865,2026-10-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5072.8,Merge pull request #1828 from lz4/reproducible_fast_stream
+f99f48ed16f377ea9685e4b82a005882520c3865,2026-10-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1315.5,Merge pull request #1828 from lz4/reproducible_fast_stream
+950c1cecda204fdb9b93ec492a1cbe5fcb5d2a76,2026-10-09,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5523.1,Merge pull request #1829 from lz4/stream_clear_table
+950c1cecda204fdb9b93ec492a1cbe5fcb5d2a76,2026-10-09,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1229.4,Merge pull request #1829 from lz4/stream_clear_table
+1ae9499d85951cfdde1f5ef2b3630bc5237ab1f8,2026-10-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5572.0,Merge pull request #1836 from lz4/attach_dict_cleared
+1ae9499d85951cfdde1f5ef2b3630bc5237ab1f8,2026-10-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1229.8,Merge pull request #1836 from lz4/attach_dict_cleared
+8ae20409bdcb36fc980b9b468867b9f8547d04bc,2026-10-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5337.3,Merge pull request #1838 from lz4/ring_buffer_margin
+8ae20409bdcb36fc980b9b468867b9f8547d04bc,2026-10-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1228.2,Merge pull request #1838 from lz4/ring_buffer_margin
+955acf7733f035e048c050428cc44ebdb2c804fc,2026-10-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8031.1,Merge pull request #1839 from lz4/compress_overlap
+955acf7733f035e048c050428cc44ebdb2c804fc,2026-10-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2528.5,Merge pull request #1839 from lz4/compress_overlap
+78bce40fe7e5867e7243437d2a069e3830bd5ded,2026-10-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5271.6,Merge pull request #1840 from lz4/ring_buffer_doc
+78bce40fe7e5867e7243437d2a069e3830bd5ded,2026-10-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.8,Merge pull request #1840 from lz4/ring_buffer_doc
+664c914a1215f98fc8fec2a9fe8f8bc8695b9bab,2026-10-12,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5297.1,lz4.h: bump version to v1.10.1
+664c914a1215f98fc8fec2a9fe8f8bc8695b9bab,2026-10-12,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.6,lz4.h: bump version to v1.10.1
+8df5fd6e7a0a7486849748b9213e5dc109e18922,2026-10-13,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5054.6,Merge pull request #1846 from lz4/loaddict_tiny_dict
+8df5fd6e7a0a7486849748b9213e5dc109e18922,2026-10-13,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1316.7,Merge pull request #1846 from lz4/loaddict_tiny_dict
+4446f084697725ecfc7088af429d1cd25124300b,2026-10-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5043.1,Merge pull request #1864 from lz4/destSize_accel
+4446f084697725ecfc7088af429d1cd25124300b,2026-10-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1314.6,Merge pull request #1864 from lz4/destSize_accel
+add0d48aa39cfb622c35427c29c5634764c6d6c5,2026-10-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5282.0,Merge pull request #1866 from lz4/simplify_tableType
+add0d48aa39cfb622c35427c29c5634764c6d6c5,2026-10-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1315.3,Merge pull request #1866 from lz4/simplify_tableType
+858c0d402f6fc20d6ca2a21c631ad6eb554d2f0e,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5297.0,Merge pull request #1871 from lz4/simplify_extState
+858c0d402f6fc20d6ca2a21c631ad6eb554d2f0e,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1229.5,Merge pull request #1871 from lz4/simplify_extState
+1a5d48635eeb7beeec01a1daa681ade185434914,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5273.5,Merge pull request #1873 from lz4/simplify_putPosition
+1a5d48635eeb7beeec01a1daa681ade185434914,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1228.9,Merge pull request #1873 from lz4/simplify_putPosition
+2880ea87de5996b5bae918d35c00f2a8715a4630,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7643.5,Merge pull request #1875 from lz4/decompress_fast_negative_size
+2880ea87de5996b5bae918d35c00f2a8715a4630,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2709.7,Merge pull request #1875 from lz4/decompress_fast_negative_size
+500e23f2c52d0ed56b9d8731c60468bc31a6aae1,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7743.5,Merge pull request #1876 from lz4/simplify_extDictCopy
+500e23f2c52d0ed56b9d8731c60468bc31a6aae1,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2720.9,Merge pull request #1876 from lz4/simplify_extDictCopy
+13b5fddd8da774b3c1b62dd6c5c586e1a27e8952,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7656.9,Merge pull request #1880 from lz4/decompress_dead_checks
+13b5fddd8da774b3c1b62dd6c5c586e1a27e8952,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2762.3,Merge pull request #1880 from lz4/decompress_dead_checks
+c6bec04d0a2ceebbd8ff236943af52a7098c9f9d,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5252.4,Merge pull request #1879 from lz4/decompress_partial_negative_srcSize
+c6bec04d0a2ceebbd8ff236943af52a7098c9f9d,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1315.5,Merge pull request #1879 from lz4/decompress_partial_negative_srcSize
+bd733c1ae6805efd33ac1100d7105046176fd89c,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5232.7,Merge pull request #1882 from lz4/decompress_fastloop_exits
+bd733c1ae6805efd33ac1100d7105046176fd89c,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1317.4,Merge pull request #1882 from lz4/decompress_fastloop_exits
+74c02718d40520f7a260665926e164099ea5828b,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5015.6,Merge pull request #1885 from lz4/decompress_nearEnd_copy
+74c02718d40520f7a260665926e164099ea5828b,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.2,Merge pull request #1885 from lz4/decompress_nearEnd_copy
+de4314af9d3483c96d351568034064deb01a6b88,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,4983.4,Merge pull request #1887 from lz4/decompress_shortcut_flow
+de4314af9d3483c96d351568034064deb01a6b88,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.5,Merge pull request #1887 from lz4/decompress_shortcut_flow
+e7c36223415219c0a18ea75e3fe2eb5d267ee667,2026-10-17,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5171.9,Merge pull request #1886 from lz4/riscv_fast_dec_loop
+e7c36223415219c0a18ea75e3fe2eb5d267ee667,2026-10-17,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.5,Merge pull request #1886 from lz4/riscv_fast_dec_loop
+8af4c50033dbf0b1a183dc8945ffb8b84cf7e414,2026-10-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5307.1,Merge pull request #1888 from lz4/decompress_ll_ml
+8af4c50033dbf0b1a183dc8945ffb8b84cf7e414,2026-10-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.8,Merge pull request #1888 from lz4/decompress_ll_ml
+07cdad5fca90145c982d9710812ac9505ac93600,2026-10-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5205.8,Merge pull request #1893 from lz4/decompress_last_literals
+07cdad5fca90145c982d9710812ac9505ac93600,2026-10-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.5,Merge pull request #1893 from lz4/decompress_last_literals
+2e61b163a46136610cae3bb3db81f17b1f9d3507,2026-10-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5248.9,Merge pull request #1894 from lz4/cli_numeric_overflow
+2e61b163a46136610cae3bb3db81f17b1f9d3507,2026-10-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.8,Merge pull request #1894 from lz4/cli_numeric_overflow
+779b3556802f61774ed7f03a72023775ffe7795a,2026-10-18,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5222.6,Merge pull request #1892 from arshsmith1/reject-negative-dictsize
+779b3556802f61774ed7f03a72023775ffe7795a,2026-10-18,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1324.0,Merge pull request #1892 from arshsmith1/reject-negative-dictsize
+023d031682f24630cf95d41b2b64608424408180,2026-10-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5033.4,Merge pull request #1895 from lz4/saveDict_negative
+023d031682f24630cf95d41b2b64608424408180,2026-10-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.0,Merge pull request #1895 from lz4/saveDict_negative
+a48e9790a20f1976466dce758d9678ef160c9dc4,2026-10-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5226.5,Merge pull request #1897 from lz4/decompress_align_loops
+a48e9790a20f1976466dce758d9678ef160c9dc4,2026-10-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1230.5,Merge pull request #1897 from lz4/decompress_align_loops
+7d3390ea392d9863af4cbc9c4dcfd0e51985e4ac,2026-10-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5030.6,Merge pull request #1898 from lz4/wildCopy64_all_targets
+7d3390ea392d9863af4cbc9c4dcfd0e51985e4ac,2026-10-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1245.1,Merge pull request #1898 from lz4/wildCopy64_all_targets
+0aea8e59bb10ebc2d3fc299030ab3d5241301862,2026-10-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7550.6,Merge pull request #1899 from lz4/decompress_shared_offset_copy
+0aea8e59bb10ebc2d3fc299030ab3d5241301862,2026-10-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2524.2,Merge pull request #1899 from lz4/decompress_shared_offset_copy
+594ec184b8c01326b81fc04c805c896bcd28d834,2026-10-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7494.8,Merge pull request #1902 from lz4/decoder_ring_margin
+594ec184b8c01326b81fc04c805c896bcd28d834,2026-10-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2611.8,Merge pull request #1902 from lz4/decoder_ring_margin
+f20d44534eb67e23d8ae4821668f81927922f485,2026-10-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7626.8,Merge pull request #1908 from lz4/cxx_modules_headers
+f20d44534eb67e23d8ae4821668f81927922f485,2026-10-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2542.5,Merge pull request #1908 from lz4/cxx_modules_headers
+3e337913ce4ebcf2a47b0d5e3119cbf8722291c1,2026-10-19,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7592.7,Merge pull request #1910 from lz4/compress_end_limits
+3e337913ce4ebcf2a47b0d5e3119cbf8722291c1,2026-10-19,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2587.1,Merge pull request #1910 from lz4/compress_end_limits
+2e12728a186560510bc2ef78f8b8d9c843d35fdc,2026-10-20,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7757.2,Merge pull request #1912 from lz4/wildcopy64_override
+2e12728a186560510bc2ef78f8b8d9c843d35fdc,2026-10-20,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2593.1,Merge pull request #1912 from lz4/wildcopy64_override
+bb93da808fc2cd4bbf61def82fef16ec908e4529,2026-10-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7572.2,Merge pull request #1924 from lz4/dictctx_copy_threshold
+bb93da808fc2cd4bbf61def82fef16ec908e4529,2026-10-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2591.1,Merge pull request #1924 from lz4/dictctx_copy_threshold
+e5ab519f109a229308ff619d6a09d0c3a01e11d1,2026-10-21,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8208.0,Merge pull request #1925 from lz4/shortcut_context_candidate
+e5ab519f109a229308ff619d6a09d0c3a01e11d1,2026-10-21,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2522.3,Merge pull request #1925 from lz4/shortcut_context_candidate
+bbbffc822bf63dd0b7ab623c19763bfbd9034d29,2026-10-22,ok,compress 4 KiB,0.0,0.0,0.0,0,0,8092.2,Merge pull request #1929 from lz4/lib_mt_proto
+bbbffc822bf63dd0b7ab623c19763bfbd9034d29,2026-10-22,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2514.0,Merge pull request #1929 from lz4/lib_mt_proto
+a9c0521b1f6276f5dbdc48c00e0239d595a7af3b,2026-10-25,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7860.2,Merge pull request #1938 from lz4/tests_layout
+a9c0521b1f6276f5dbdc48c00e0239d595a7af3b,2026-10-25,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2543.1,Merge pull request #1938 from lz4/tests_layout
+32e7126218c6aedda2cbee863bc06745e2d5c964,2026-10-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7104.2,Merge pull request #1968 from lz4/fast_nodict_match_first
+32e7126218c6aedda2cbee863bc06745e2d5c964,2026-10-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2433.1,Merge pull request #1968 from lz4/fast_nodict_match_first
+7430740e7e2045924428ae1a260e330f9e5539f5,2026-10-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,7240.1,Merge pull request #1967 from lz4/extdict_speed
+7430740e7e2045924428ae1a260e330f9e5539f5,2026-10-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2610.3,Merge pull request #1967 from lz4/extdict_speed
+6938d1d4af0721006ca37c20838d97313c3de3f1,2026-10-27,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5241.2,Merge pull request #1973 from lz4/extdict_prefix_switch
+6938d1d4af0721006ca37c20838d97313c3de3f1,2026-10-27,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,2395.0,Merge pull request #1973 from lz4/extdict_prefix_switch
+1f660d25faf35a1a1d74c11d719348fc67cc2f8b,2026-10-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5213.6,Merge pull request #1990 from lz4/hc_extended_state
+1f660d25faf35a1a1d74c11d719348fc67cc2f8b,2026-10-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1244.2,Merge pull request #1990 from lz4/hc_extended_state
+b4e61ba23cf5a3ac37445ffe50ef47db21216169,2026-10-29,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5239.8,Merge pull request #2006 from lz4/decompress_error_codes
+b4e61ba23cf5a3ac37445ffe50ef47db21216169,2026-10-29,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.2,Merge pull request #2006 from lz4/decompress_error_codes
+e46af71100e6633c66586ab609e9adacaff0b6be,2026-10-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5031.0,Merge pull request #2011 from lz4/deprecate_resetStream
+e46af71100e6633c66586ab609e9adacaff0b6be,2026-10-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.4,Merge pull request #2011 from lz4/deprecate_resetStream
+a49d3838a7debbce313f4d14617660bdaffd127c,2026-10-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5224.2,Merge pull request #2013 from lz4/v1_11_0
+a49d3838a7debbce313f4d14617660bdaffd127c,2026-10-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.9,Merge pull request #2013 from lz4/v1_11_0
+0abbf9f346b029529a7bec7c9a2e7f5595e2b5e2,2026-10-31,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5064.6,Merge pull request #2014 from lz4/remove_deprecated
+0abbf9f346b029529a7bec7c9a2e7f5595e2b5e2,2026-10-31,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.2,Merge pull request #2014 from lz4/remove_deprecated
+00bdbccc585dce07b0c1ddbb94e4351a251ebbe5,2026-11-02,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5219.3,Merge pull request #2022 from lz4/mt_determinism
+00bdbccc585dce07b0c1ddbb94e4351a251ebbe5,2026-11-02,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.8,Merge pull request #2022 from lz4/mt_determinism
+f0491dba62f308c918ff29eb8246bf76b222e962,2026-11-04,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5021.6,Merge pull request #2048 from lz4/fix_resetStreamHC_garbage
+f0491dba62f308c918ff29eb8246bf76b222e962,2026-11-04,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1323.0,Merge pull request #2048 from lz4/fix_resetStreamHC_garbage
+b4d8f950d9a0b24f4200d4d3b2b933f80be6225b,2026-11-05,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5223.2,Merge pull request #2049 from runlevel5/ppc64_fast_dec_loop
+b4d8f950d9a0b24f4200d4d3b2b933f80be6225b,2026-11-05,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1322.7,Merge pull request #2049 from runlevel5/ppc64_fast_dec_loop
+ecfa43f52a59f9cd75f1dd08ef186d2e2c8dce1c,2026-11-05,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5384.4,Merge pull request #2050 from lz4/list_block_bounds
+ecfa43f52a59f9cd75f1dd08ef186d2e2c8dce1c,2026-11-05,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.9,Merge pull request #2050 from lz4/list_block_bounds
+74dd79b73bc9cb2202c0f944da0563994462873c,2026-11-11,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5055.6,Merge pull request #2093 from lz4/decompress_dict_wildcopy
+74dd79b73bc9cb2202c0f944da0563994462873c,2026-11-11,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.2,Merge pull request #2093 from lz4/decompress_dict_wildcopy
+6b589e8053bd9c524138d78adec78fcaefa35cab,2026-11-14,ok,compress 4 KiB,0.0,0.0,0.0,0,0,5027.3,Merge pull request #2104 from lz4/inplace-margin
+6b589e8053bd9c524138d78adec78fcaefa35cab,2026-11-14,ok,decompress 4 KiB,0.0,0.0,0.0,0,0,1321.2,Merge pull request #2104 from lz4/inplace-margin

@@ -13,6 +13,8 @@ import json, sys
 from pathlib import Path
 
 TOP = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import replay as rp
 
 def main():
     proj = sys.argv[1]
@@ -25,6 +27,7 @@ def main():
         k = sys.argv.index("--instr")
         if k + 1 < len(sys.argv) and sys.argv[k + 1].replace(".", "", 1).isdigit(): ipct = float(sys.argv[k + 1])
     out = TOP / "out" / (cc + tag + ("-instr" if instr else "")) / proj
+    fields = rp.compared_fields(proj) if proj in rp.P else ("alloc", "free", "lock", "first_alloc", "first_lock")
     order = json.load(open(out / "order.json"))
     prev = None; n_ok = n_bfail = n_rfail = n_chg = 0; first = last = None
     for h, date, subj in order:
@@ -43,7 +46,7 @@ def main():
                     if abs(a["instr"] - b["instr"]) * 100 >= ipct * max(a["instr"], 1):
                         lines.append(f"    {op}: instructions {a['instr']:.0f} -> {b['instr']:.0f} ({(b['instr'] - a['instr']) * 100 / a['instr']:+.0f}%)")
                     continue
-                ch = [f"{k} {a[k]:.2f} -> {b[k]:.2f}" for k in ("alloc", "free", "lock") if abs(a[k] - b[k]) >= 0.01]
+                ch = [f"{k} {a[k]:.2f} -> {b[k]:.2f}" for k in ("alloc", "free", "lock") if k in fields and abs(a[k] - b[k]) >= 0.01]
                 ch += [f"{k} {a[k]} -> {b[k]}" for k in ("first_alloc", "first_lock") if k in a and k in b and a[k] != b[k]]
                 if pct and a["ns"] and abs(b["ns"] - a["ns"]) * 100 >= pct * a["ns"]:
                     ch.append(f"ns {a['ns']:.0f} -> {b['ns']:.0f}")
@@ -53,6 +56,7 @@ def main():
                 print(f"{h[:8]} {date} {subj[:80]}   (from {ph[:8]})")
                 print("\n".join(lines))
         prev = (h, cur)
+    if "free" not in fields: print(f"(frees not compared: the benchmark runs another thread, see replay.compared_fields)")
     print(f"{proj}: {len(order)} library commits; measured {n_ok} (from {first[1] if first else '-'} to {last[1] if last else '-'}), "
           f"build failed {n_bfail}, run failed {n_rfail}; {n_chg} measured commits changed {'instructions' if instr else 'a count'}")
     if last and instr:

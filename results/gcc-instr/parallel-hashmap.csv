@@ -1,0 +1,322 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+5170154e8df14ab19de9e797f81c1e2dd2a8f475,2019-03-16,build failed,,,,,,,,wip
+0118121ef1fb6204594393a7d33eb4fa95317df0,2019-03-17,build failed,,,,,,,,wip
+31f86eb669c02bbb1c78e324db187a95bc37ea9a,2019-03-24,build failed,,,,,,,,flat_hash_set test passing
+c043f2b363d93cb5447b353a652c794193d2635c,2019-03-25,build failed,,,,,,,,add more tests - they all pass on windows / vs2017
+0bf32c2ffc05a0418902a9c2e08ddb6e5958fbf4,2019-03-27,build failed,,,,,,,,old gnu libstd++ don't have make_unique
+3c9776a74db23a25500751abb15de612443a108e,2019-03-28,ok,find (hit),,,,,,,"make ""forward declare"" header and edit README",85.02
+3c9776a74db23a25500751abb15de612443a108e,2019-03-28,ok,find (miss),,,,,,,"make ""forward declare"" header and edit README",89.77
+3c9776a74db23a25500751abb15de612443a108e,2019-03-28,ok,insert+erase,,,,,,,"make ""forward declare"" header and edit README",218.2
+3c9776a74db23a25500751abb15de612443a108e,2019-03-28,ok,operator[] (hit),,,,,,,"make ""forward declare"" header and edit README",87.01
+a84394eeba61aeca11d650cd1f3414813e06680e,2019-03-28,ok,find (hit),,,,,,,Simplify phmap_fwd_decl.h,85.02
+a84394eeba61aeca11d650cd1f3414813e06680e,2019-03-28,ok,find (miss),,,,,,,Simplify phmap_fwd_decl.h,89.77
+a84394eeba61aeca11d650cd1f3414813e06680e,2019-03-28,ok,insert+erase,,,,,,,Simplify phmap_fwd_decl.h,218.2
+a84394eeba61aeca11d650cd1f3414813e06680e,2019-03-28,ok,operator[] (hit),,,,,,,Simplify phmap_fwd_decl.h,87.01
+2836a439891773f3e24efc274d2c05b90ee6428e,2019-03-30,ok,find (hit),,,,,,,allow easy default to absl::Hash framework,85.02
+2836a439891773f3e24efc274d2c05b90ee6428e,2019-03-30,ok,find (miss),,,,,,,allow easy default to absl::Hash framework,89.77
+2836a439891773f3e24efc274d2c05b90ee6428e,2019-03-30,ok,insert+erase,,,,,,,allow easy default to absl::Hash framework,217.98
+2836a439891773f3e24efc274d2c05b90ee6428e,2019-03-30,ok,operator[] (hit),,,,,,,allow easy default to absl::Hash framework,87.01
+80f29e993268ecabae6dc68e499004d7f138bd0a,2019-03-31,ok,find (hit),,,,,,,"improve the hash ""combine"" support.",85.02
+80f29e993268ecabae6dc68e499004d7f138bd0a,2019-03-31,ok,find (miss),,,,,,,"improve the hash ""combine"" support.",89.77
+80f29e993268ecabae6dc68e499004d7f138bd0a,2019-03-31,ok,insert+erase,,,,,,,"improve the hash ""combine"" support.",217.98
+80f29e993268ecabae6dc68e499004d7f138bd0a,2019-03-31,ok,operator[] (hit),,,,,,,"improve the hash ""combine"" support.",87.01
+cc4675b8240b4d826d5841658b85b6389c3a350f,2019-03-31,ok,find (hit),,,,,,,add comments,85.02
+cc4675b8240b4d826d5841658b85b6389c3a350f,2019-03-31,ok,find (miss),,,,,,,add comments,89.77
+cc4675b8240b4d826d5841658b85b6389c3a350f,2019-03-31,ok,insert+erase,,,,,,,add comments,217.98
+cc4675b8240b4d826d5841658b85b6389c3a350f,2019-03-31,ok,operator[] (hit),,,,,,,add comments,87.01
+d4937d99abbc9218a9eb90ec4c712c3caa6be674,2019-03-31,ok,find (hit),,,,,,,releasing version 1.0,85.02
+d4937d99abbc9218a9eb90ec4c712c3caa6be674,2019-03-31,ok,find (miss),,,,,,,releasing version 1.0,89.77
+d4937d99abbc9218a9eb90ec4c712c3caa6be674,2019-03-31,ok,insert+erase,,,,,,,releasing version 1.0,217.98
+d4937d99abbc9218a9eb90ec4c712c3caa6be674,2019-03-31,ok,operator[] (hit),,,,,,,releasing version 1.0,87.01
+d5bad0bb45944ec7ccab11dc92665e98f028e2ef,2019-03-31,ok,find (hit),,,,,,,use faster hash mixing algo using intrinsics 128 bit multiplication,68.02
+d5bad0bb45944ec7ccab11dc92665e98f028e2ef,2019-03-31,ok,find (miss),,,,,,,use faster hash mixing algo using intrinsics 128 bit multiplication,72.55
+d5bad0bb45944ec7ccab11dc92665e98f028e2ef,2019-03-31,ok,insert+erase,,,,,,,use faster hash mixing algo using intrinsics 128 bit multiplication,200.18
+d5bad0bb45944ec7ccab11dc92665e98f028e2ef,2019-03-31,ok,operator[] (hit),,,,,,,use faster hash mixing algo using intrinsics 128 bit multiplication,69.02
+efde04591992919323bba9feca15c9abba73565e,2019-04-02,ok,find (hit),,,,,,,_umul128 is not a valid intrinsic for x86 Windows. #3,68.02
+efde04591992919323bba9feca15c9abba73565e,2019-04-02,ok,find (miss),,,,,,,_umul128 is not a valid intrinsic for x86 Windows. #3,72.62
+efde04591992919323bba9feca15c9abba73565e,2019-04-02,ok,insert+erase,,,,,,,_umul128 is not a valid intrinsic for x86 Windows. #3,199.97
+efde04591992919323bba9feca15c9abba73565e,2019-04-02,ok,operator[] (hit),,,,,,,_umul128 is not a valid intrinsic for x86 Windows. #3,69.01
+7cc2644fbab7a9492a851d7d4b33b092e70df6e6,2019-04-05,ok,find (hit),,,,,,,"Always ""mix"" hash values in case poor hash values are provided.",67.02
+7cc2644fbab7a9492a851d7d4b33b092e70df6e6,2019-04-05,ok,find (miss),,,,,,,"Always ""mix"" hash values in case poor hash values are provided.",72.43
+7cc2644fbab7a9492a851d7d4b33b092e70df6e6,2019-04-05,ok,insert+erase,,,,,,,"Always ""mix"" hash values in case poor hash values are provided.",192.36
+7cc2644fbab7a9492a851d7d4b33b092e70df6e6,2019-04-05,ok,operator[] (hit),,,,,,,"Always ""mix"" hash values in case poor hash values are provided.",66.01
+2040fa3900eadce706a056a8635e3e6dfc9864aa,2019-04-06,ok,find (hit),,,,,,,fix error when building without exception support,67.02
+2040fa3900eadce706a056a8635e3e6dfc9864aa,2019-04-06,ok,find (miss),,,,,,,fix error when building without exception support,72.43
+2040fa3900eadce706a056a8635e3e6dfc9864aa,2019-04-06,ok,insert+erase,,,,,,,fix error when building without exception support,192.36
+2040fa3900eadce706a056a8635e3e6dfc9864aa,2019-04-06,ok,operator[] (hit),,,,,,,fix error when building without exception support,66.01
+c6b132827244e7f7ef07907289de1cb7967ab4e7,2019-04-06,ok,find (hit),,,,,,,remove debugging code & update nexcept clauses.,67.02
+c6b132827244e7f7ef07907289de1cb7967ab4e7,2019-04-06,ok,find (miss),,,,,,,remove debugging code & update nexcept clauses.,72.43
+c6b132827244e7f7ef07907289de1cb7967ab4e7,2019-04-06,ok,insert+erase,,,,,,,remove debugging code & update nexcept clauses.,192.36
+c6b132827244e7f7ef07907289de1cb7967ab4e7,2019-04-06,ok,operator[] (hit),,,,,,,remove debugging code & update nexcept clauses.,66.01
+6493bd35f6e50048132d0efd910b4661f25c317c,2019-04-07,build failed,,,,,,,,fix possible deadlock when using internal synchronization
+6b66c9aa36bd3c2fb573e82f52b61b372d43cb20,2019-04-07,build failed,,,,,,,,Add infrastructure for supporting different mutex types in phmap
+38f81c15bc79b3d3a5de9887f4f38cb36db0d8d1,2019-04-07,ok,find (hit),,,,,,,improve mutex support,67.02
+38f81c15bc79b3d3a5de9887f4f38cb36db0d8d1,2019-04-07,ok,find (miss),,,,,,,improve mutex support,72.43
+38f81c15bc79b3d3a5de9887f4f38cb36db0d8d1,2019-04-07,ok,insert+erase,,,,,,,improve mutex support,192.36
+38f81c15bc79b3d3a5de9887f4f38cb36db0d8d1,2019-04-07,ok,operator[] (hit),,,,,,,improve mutex support,66.01
+9216735336fd6be602b4db7465877fbac3aa6f8d,2019-04-11,ok,find (hit),,,,,,,move meminfo.h to parallel_hashmap dir.,67.02
+9216735336fd6be602b4db7465877fbac3aa6f8d,2019-04-11,ok,find (miss),,,,,,,move meminfo.h to parallel_hashmap dir.,72.43
+9216735336fd6be602b4db7465877fbac3aa6f8d,2019-04-11,ok,insert+erase,,,,,,,move meminfo.h to parallel_hashmap dir.,192.36
+9216735336fd6be602b4db7465877fbac3aa6f8d,2019-04-11,ok,operator[] (hit),,,,,,,move meminfo.h to parallel_hashmap dir.,66.01
+1a298f5ed96c55eea142400dc951eaa7b53b958b,2019-04-14,ok,find (hit),,,,,,,Fix a couple small performance issues in erase(),67.02
+1a298f5ed96c55eea142400dc951eaa7b53b958b,2019-04-14,ok,find (miss),,,,,,,Fix a couple small performance issues in erase(),72.43
+1a298f5ed96c55eea142400dc951eaa7b53b958b,2019-04-14,ok,insert+erase,,,,,,,Fix a couple small performance issues in erase(),192.58
+1a298f5ed96c55eea142400dc951eaa7b53b958b,2019-04-14,ok,operator[] (hit),,,,,,,Fix a couple small performance issues in erase(),66.01
+cc7ea9332d658272ae74f01de2c38baa53f19f39,2019-04-22,ok,find (hit),,,,,,,issue #8,67.02
+cc7ea9332d658272ae74f01de2c38baa53f19f39,2019-04-22,ok,find (miss),,,,,,,issue #8,72.43
+cc7ea9332d658272ae74f01de2c38baa53f19f39,2019-04-22,ok,insert+erase,,,,,,,issue #8,192.58
+cc7ea9332d658272ae74f01de2c38baa53f19f39,2019-04-22,ok,operator[] (hit),,,,,,,issue #8,66.01
+7c126034a572a72b5db420b9c48e1757d8a208ab,2019-04-29,ok,find (hit),,,,,,,fix bad return value,67.02
+7c126034a572a72b5db420b9c48e1757d8a208ab,2019-04-29,ok,find (miss),,,,,,,fix bad return value,72.43
+7c126034a572a72b5db420b9c48e1757d8a208ab,2019-04-29,ok,insert+erase,,,,,,,fix bad return value,192.58
+7c126034a572a72b5db420b9c48e1757d8a208ab,2019-04-29,ok,operator[] (hit),,,,,,,fix bad return value,66.01
+141c4da24ee515fcf3f6d4497c235b8c18184c86,2019-05-10,ok,find (hit),,,,,,,cleanup some build error with ICC 2019 (issue #9),67.02
+141c4da24ee515fcf3f6d4497c235b8c18184c86,2019-05-10,ok,find (miss),,,,,,,cleanup some build error with ICC 2019 (issue #9),72.43
+141c4da24ee515fcf3f6d4497c235b8c18184c86,2019-05-10,ok,insert+erase,,,,,,,cleanup some build error with ICC 2019 (issue #9),192.58
+141c4da24ee515fcf3f6d4497c235b8c18184c86,2019-05-10,ok,operator[] (hit),,,,,,,cleanup some build error with ICC 2019 (issue #9),66.01
+2585ec964a51feed33959bf3f9fc15fa250c288c,2019-05-12,ok,find (hit),,,,,,,Fix build issue with Intel compiler (issue #9),67.02
+2585ec964a51feed33959bf3f9fc15fa250c288c,2019-05-12,ok,find (miss),,,,,,,Fix build issue with Intel compiler (issue #9),72.43
+2585ec964a51feed33959bf3f9fc15fa250c288c,2019-05-12,ok,insert+erase,,,,,,,Fix build issue with Intel compiler (issue #9),192.58
+2585ec964a51feed33959bf3f9fc15fa250c288c,2019-05-12,ok,operator[] (hit),,,,,,,Fix build issue with Intel compiler (issue #9),66.01
+2f49b798851eeed027f6297b9faccb9a92dc46ab,2019-05-12,ok,find (hit),,,,,,,Fix build issue with Intel compiler (issue #9),67.02
+2f49b798851eeed027f6297b9faccb9a92dc46ab,2019-05-12,ok,find (miss),,,,,,,Fix build issue with Intel compiler (issue #9),72.43
+2f49b798851eeed027f6297b9faccb9a92dc46ab,2019-05-12,ok,insert+erase,,,,,,,Fix build issue with Intel compiler (issue #9),192.58
+2f49b798851eeed027f6297b9faccb9a92dc46ab,2019-05-12,ok,operator[] (hit),,,,,,,Fix build issue with Intel compiler (issue #9),66.01
+39c002d52a8085fdde5cb08d768d78e9fe03fee0,2019-05-25,ok,find (hit),,,,,,,std::shared_mutex support #11,67.02
+39c002d52a8085fdde5cb08d768d78e9fe03fee0,2019-05-25,ok,find (miss),,,,,,,std::shared_mutex support #11,72.43
+39c002d52a8085fdde5cb08d768d78e9fe03fee0,2019-05-25,ok,insert+erase,,,,,,,std::shared_mutex support #11,192.58
+39c002d52a8085fdde5cb08d768d78e9fe03fee0,2019-05-25,ok,operator[] (hit),,,,,,,std::shared_mutex support #11,66.01
+538f6ef31d8132e9073d6e9adb8de30b889f7a70,2019-07-21,ok,find (hit),,,,,,,Update some outdated comments,67.02
+538f6ef31d8132e9073d6e9adb8de30b889f7a70,2019-07-21,ok,find (miss),,,,,,,Update some outdated comments,72.43
+538f6ef31d8132e9073d6e9adb8de30b889f7a70,2019-07-21,ok,insert+erase,,,,,,,Update some outdated comments,192.58
+538f6ef31d8132e9073d6e9adb8de30b889f7a70,2019-07-21,ok,operator[] (hit),,,,,,,Update some outdated comments,66.01
+b45a4938ab31c1be5a9762433bdc8049903f043d,2019-07-31,build failed,,,,,,,,fix warnings - issue #21
+bccf9254d4561492705f16758061d7225703e517,2019-07-31,ok,find (hit),,,,,,,Update phmap_bits.h,67.02
+bccf9254d4561492705f16758061d7225703e517,2019-07-31,ok,find (miss),,,,,,,Update phmap_bits.h,72.43
+bccf9254d4561492705f16758061d7225703e517,2019-07-31,ok,insert+erase,,,,,,,Update phmap_bits.h,192.58
+bccf9254d4561492705f16758061d7225703e517,2019-07-31,ok,operator[] (hit),,,,,,,Update phmap_bits.h,66.01
+77ef910921011a448a6ad56bc1c7a3683b9b8e28,2019-08-25,ok,find (hit),,,,,,,"simplify load/dump code. Also don't close the archibe after dump/load, we may need to save multiple hash maps in one archive.",67.02
+77ef910921011a448a6ad56bc1c7a3683b9b8e28,2019-08-25,ok,find (miss),,,,,,,"simplify load/dump code. Also don't close the archibe after dump/load, we may need to save multiple hash maps in one archive.",72.43
+77ef910921011a448a6ad56bc1c7a3683b9b8e28,2019-08-25,ok,insert+erase,,,,,,,"simplify load/dump code. Also don't close the archibe after dump/load, we may need to save multiple hash maps in one archive.",192.58
+77ef910921011a448a6ad56bc1c7a3683b9b8e28,2019-08-25,ok,operator[] (hit),,,,,,,"simplify load/dump code. Also don't close the archibe after dump/load, we may need to save multiple hash maps in one archive.",66.01
+7a7feb2c69a61ffa8169cb61bb23034b16369dd0,2019-10-21,ok,find (hit),,,,,,,fix compilation issue on msvc when xhash is included.,67.02
+7a7feb2c69a61ffa8169cb61bb23034b16369dd0,2019-10-21,ok,find (miss),,,,,,,fix compilation issue on msvc when xhash is included.,72.43
+7a7feb2c69a61ffa8169cb61bb23034b16369dd0,2019-10-21,ok,insert+erase,,,,,,,fix compilation issue on msvc when xhash is included.,192.58
+7a7feb2c69a61ffa8169cb61bb23034b16369dd0,2019-10-21,ok,operator[] (hit),,,,,,,fix compilation issue on msvc when xhash is included.,66.01
+34951e817f70e09fa4ab6bb34ca331591dbefb57,2019-11-03,build failed,,,,,,,,add missing typename
+2399d65468e4a5f58cd28af2544041e06407a3c6,2019-11-04,ok,find (hit),,,,,,,small improvement in std::pair hashing,67.02
+2399d65468e4a5f58cd28af2544041e06407a3c6,2019-11-04,ok,find (miss),,,,,,,small improvement in std::pair hashing,72.43
+2399d65468e4a5f58cd28af2544041e06407a3c6,2019-11-04,ok,insert+erase,,,,,,,small improvement in std::pair hashing,192.58
+2399d65468e4a5f58cd28af2544041e06407a3c6,2019-11-04,ok,operator[] (hit),,,,,,,small improvement in std::pair hashing,66.01
+329922436e9515e1708375ffb0eb1240a53bff6c,2019-12-10,ok,find (hit),,,,,,,issue #37 - string_view supported when _MSVC_LANG == 201703L,67.02
+329922436e9515e1708375ffb0eb1240a53bff6c,2019-12-10,ok,find (miss),,,,,,,issue #37 - string_view supported when _MSVC_LANG == 201703L,72.43
+329922436e9515e1708375ffb0eb1240a53bff6c,2019-12-10,ok,insert+erase,,,,,,,issue #37 - string_view supported when _MSVC_LANG == 201703L,192.58
+329922436e9515e1708375ffb0eb1240a53bff6c,2019-12-10,ok,operator[] (hit),,,,,,,issue #37 - string_view supported when _MSVC_LANG == 201703L,66.01
+c15bac0dec480a3c56fd1ec83e065854d5711907,2019-12-30,ok,find (hit),,,,,,,fix compilation issue with btree tests,67.02
+c15bac0dec480a3c56fd1ec83e065854d5711907,2019-12-30,ok,find (miss),,,,,,,fix compilation issue with btree tests,72.43
+c15bac0dec480a3c56fd1ec83e065854d5711907,2019-12-30,ok,insert+erase,,,,,,,fix compilation issue with btree tests,192.58
+c15bac0dec480a3c56fd1ec83e065854d5711907,2019-12-30,ok,operator[] (hit),,,,,,,fix compilation issue with btree tests,66.01
+787e16a4f4e621fa8701d0de31405fc91d8d8c56,2019-12-31,ok,find (hit),,,,,,,cleanup a couple more warnings when building in release,67.02
+787e16a4f4e621fa8701d0de31405fc91d8d8c56,2019-12-31,ok,find (miss),,,,,,,cleanup a couple more warnings when building in release,72.43
+787e16a4f4e621fa8701d0de31405fc91d8d8c56,2019-12-31,ok,insert+erase,,,,,,,cleanup a couple more warnings when building in release,192.58
+787e16a4f4e621fa8701d0de31405fc91d8d8c56,2019-12-31,ok,operator[] (hit),,,,,,,cleanup a couple more warnings when building in release,66.01
+d6753feed0a62854af8a6c96afcdf6f67dba43f3,2019-12-31,ok,find (hit),,,,,,,Allow forward declaration for btree containers,67.02
+d6753feed0a62854af8a6c96afcdf6f67dba43f3,2019-12-31,ok,find (miss),,,,,,,Allow forward declaration for btree containers,72.43
+d6753feed0a62854af8a6c96afcdf6f67dba43f3,2019-12-31,ok,insert+erase,,,,,,,Allow forward declaration for btree containers,192.58
+d6753feed0a62854af8a6c96afcdf6f67dba43f3,2019-12-31,ok,operator[] (hit),,,,,,,Allow forward declaration for btree containers,66.01
+f30643573ee861544cbf3a856a3fb587a3b3231c,2020-03-14,build failed,,,,,,,,try to fix build issue
+b791e794ac4d8879fea1f8a58e97a4d2918352fd,2020-03-27,ok,find (hit),,,,,,,rename function name which conflicts with a #define macro from /usr/include/X11/Xos.h,67.02
+b791e794ac4d8879fea1f8a58e97a4d2918352fd,2020-03-27,ok,find (miss),,,,,,,rename function name which conflicts with a #define macro from /usr/include/X11/Xos.h,72.43
+b791e794ac4d8879fea1f8a58e97a4d2918352fd,2020-03-27,ok,insert+erase,,,,,,,rename function name which conflicts with a #define macro from /usr/include/X11/Xos.h,192.58
+b791e794ac4d8879fea1f8a58e97a4d2918352fd,2020-03-27,ok,operator[] (hit),,,,,,,rename function name which conflicts with a #define macro from /usr/include/X11/Xos.h,66.01
+afe1ded1ae843482a2626f4bbc264478c9421ee2,2020-07-09,ok,find (hit),,,,,,,"Improve subtable selection in parallel_* maps by using higher bits of the key, as suggested by @fowles - issue #53",67.02
+afe1ded1ae843482a2626f4bbc264478c9421ee2,2020-07-09,ok,find (miss),,,,,,,"Improve subtable selection in parallel_* maps by using higher bits of the key, as suggested by @fowles - issue #53",72.43
+afe1ded1ae843482a2626f4bbc264478c9421ee2,2020-07-09,ok,insert+erase,,,,,,,"Improve subtable selection in parallel_* maps by using higher bits of the key, as suggested by @fowles - issue #53",192.58
+afe1ded1ae843482a2626f4bbc264478c9421ee2,2020-07-09,ok,operator[] (hit),,,,,,,"Improve subtable selection in parallel_* maps by using higher bits of the key, as suggested by @fowles - issue #53",66.01
+37b04503db54a33562136b04755ae8a3b7904f25,2020-07-19,ok,find (hit),,,,,,,cleanup some test failures.,67.02
+37b04503db54a33562136b04755ae8a3b7904f25,2020-07-19,ok,find (miss),,,,,,,cleanup some test failures.,72.43
+37b04503db54a33562136b04755ae8a3b7904f25,2020-07-19,ok,insert+erase,,,,,,,cleanup some test failures.,192.58
+37b04503db54a33562136b04755ae8a3b7904f25,2020-07-19,ok,operator[] (hit),,,,,,,cleanup some test failures.,66.01
+339871041a05395d87ab6c21eb81dd8b0f302832,2020-08-07,ok,find (hit),,,,,,,cleanup some duplicated headers,67.02
+339871041a05395d87ab6c21eb81dd8b0f302832,2020-08-07,ok,find (miss),,,,,,,cleanup some duplicated headers,72.43
+339871041a05395d87ab6c21eb81dd8b0f302832,2020-08-07,ok,insert+erase,,,,,,,cleanup some duplicated headers,192.58
+339871041a05395d87ab6c21eb81dd8b0f302832,2020-08-07,ok,operator[] (hit),,,,,,,cleanup some duplicated headers,66.01
+16a5e67b3361be7c53f6290b42f0ae4ac7bf25f3,2020-08-10,ok,find (hit),,,,,,,Merge branch 'master' of https://github.com/greg7mdp/parallel-hashmap,67.02
+16a5e67b3361be7c53f6290b42f0ae4ac7bf25f3,2020-08-10,ok,find (miss),,,,,,,Merge branch 'master' of https://github.com/greg7mdp/parallel-hashmap,72.43
+16a5e67b3361be7c53f6290b42f0ae4ac7bf25f3,2020-08-10,ok,insert+erase,,,,,,,Merge branch 'master' of https://github.com/greg7mdp/parallel-hashmap,192.58
+16a5e67b3361be7c53f6290b42f0ae4ac7bf25f3,2020-08-10,ok,operator[] (hit),,,,,,,Merge branch 'master' of https://github.com/greg7mdp/parallel-hashmap,66.01
+535ea237419b2314070e0f79bd7e15554708d876,2020-10-02,ok,find (hit),,,,,,,issue #67,67.02
+535ea237419b2314070e0f79bd7e15554708d876,2020-10-02,ok,find (miss),,,,,,,issue #67,72.43
+535ea237419b2314070e0f79bd7e15554708d876,2020-10-02,ok,insert+erase,,,,,,,issue #67,192.58
+535ea237419b2314070e0f79bd7e15554708d876,2020-10-02,ok,operator[] (hit),,,,,,,issue #67,66.01
+7c346be97b54e4813b40184e7034e2468e1e68a4,2020-10-02,build failed,,,,,,,,issue #65 - Fix Intel compiler warning
+63db8f57515ad188a911e2c20778697dd8f3a914,2020-10-16,build failed,,,,,,,,Merge pull request #70 from bpmckinnon/master
+fde389f838b5b42263672283f9f3504a2111711c,2020-10-23,build failed,,,,,,,,add public hash() function - issue #71
+7bad77f61eeb10e7261c9911939b8bfdcfe5ab50,2020-12-28,ok,find (hit),,,,,,,Update comment - issue #79,67.02
+7bad77f61eeb10e7261c9911939b8bfdcfe5ab50,2020-12-28,ok,find (miss),,,,,,,Update comment - issue #79,72.43
+7bad77f61eeb10e7261c9911939b8bfdcfe5ab50,2020-12-28,ok,insert+erase,,,,,,,Update comment - issue #79,192.58
+7bad77f61eeb10e7261c9911939b8bfdcfe5ab50,2020-12-28,ok,operator[] (hit),,,,,,,Update comment - issue #79,66.01
+118e56fb7fb76a008216c4e8b46e02a5251e1377,2021-02-01,ok,find (hit),,,,,,,"fix couple warnings, use stable version ofg googletest",67.02
+118e56fb7fb76a008216c4e8b46e02a5251e1377,2021-02-01,ok,find (miss),,,,,,,"fix couple warnings, use stable version ofg googletest",72.43
+118e56fb7fb76a008216c4e8b46e02a5251e1377,2021-02-01,ok,insert+erase,,,,,,,"fix couple warnings, use stable version ofg googletest",192.58
+118e56fb7fb76a008216c4e8b46e02a5251e1377,2021-02-01,ok,operator[] (hit),,,,,,,"fix couple warnings, use stable version ofg googletest",66.01
+50558ca3f71c2a19f839f4fa26ad034470f4f3c6,2021-04-01,ok,find (hit),,,,,,,Merge pull request #88 from byronhe/patch-1,67.02
+50558ca3f71c2a19f839f4fa26ad034470f4f3c6,2021-04-01,ok,find (miss),,,,,,,Merge pull request #88 from byronhe/patch-1,72.43
+50558ca3f71c2a19f839f4fa26ad034470f4f3c6,2021-04-01,ok,insert+erase,,,,,,,Merge pull request #88 from byronhe/patch-1,192.58
+50558ca3f71c2a19f839f4fa26ad034470f4f3c6,2021-04-01,ok,operator[] (hit),,,,,,,Merge pull request #88 from byronhe/patch-1,66.01
+ad6bc70996138c0ede0fae945cd60e0ffc598972,2021-05-13,ok,find (hit),,,,,,,Merge pull request #96 from bpmckinnon/master,67.02
+ad6bc70996138c0ede0fae945cd60e0ffc598972,2021-05-13,ok,find (miss),,,,,,,Merge pull request #96 from bpmckinnon/master,72.43
+ad6bc70996138c0ede0fae945cd60e0ffc598972,2021-05-13,ok,insert+erase,,,,,,,Merge pull request #96 from bpmckinnon/master,192.58
+ad6bc70996138c0ede0fae945cd60e0ffc598972,2021-05-13,ok,operator[] (hit),,,,,,,Merge pull request #96 from bpmckinnon/master,66.01
+87cbc5ad5322ecadd0caf44e7d89ef7d549ffb95,2021-09-07,ok,find (hit),,,,,,,Merge pull request #108 from decster/prefetch-hash,67.02
+87cbc5ad5322ecadd0caf44e7d89ef7d549ffb95,2021-09-07,ok,find (miss),,,,,,,Merge pull request #108 from decster/prefetch-hash,72.43
+87cbc5ad5322ecadd0caf44e7d89ef7d549ffb95,2021-09-07,ok,insert+erase,,,,,,,Merge pull request #108 from decster/prefetch-hash,192.58
+87cbc5ad5322ecadd0caf44e7d89ef7d549ffb95,2021-09-07,ok,operator[] (hit),,,,,,,Merge pull request #108 from decster/prefetch-hash,66.01
+07b740bd998e361d6c37028699f0cd6253bb8b9b,2021-11-09,ok,find (hit),,,,,,,serialize.cc example doesn't seem to work with cereal #116,67.02
+07b740bd998e361d6c37028699f0cd6253bb8b9b,2021-11-09,ok,find (miss),,,,,,,serialize.cc example doesn't seem to work with cereal #116,72.43
+07b740bd998e361d6c37028699f0cd6253bb8b9b,2021-11-09,ok,insert+erase,,,,,,,serialize.cc example doesn't seem to work with cereal #116,192.58
+07b740bd998e361d6c37028699f0cd6253bb8b9b,2021-11-09,ok,operator[] (hit),,,,,,,serialize.cc example doesn't seem to work with cereal #116,66.01
+870e6eb9b529d046bf085f04ff6332e335805cb0,2021-12-26,ok,find (hit),,,,,,,Add binary dump/load cereal support for flat hash maps - Issue #120,67.02
+870e6eb9b529d046bf085f04ff6332e335805cb0,2021-12-26,ok,find (miss),,,,,,,Add binary dump/load cereal support for flat hash maps - Issue #120,72.43
+870e6eb9b529d046bf085f04ff6332e335805cb0,2021-12-26,ok,insert+erase,,,,,,,Add binary dump/load cereal support for flat hash maps - Issue #120,192.58
+870e6eb9b529d046bf085f04ff6332e335805cb0,2021-12-26,ok,operator[] (hit),,,,,,,Add binary dump/load cereal support for flat hash maps - Issue #120,66.01
+ed229ad16983db139feb54d03c7c67fd42e58ccf,2022-01-31,ok,find (hit),,,,,,,Actual fix for issue #125,67.02
+ed229ad16983db139feb54d03c7c67fd42e58ccf,2022-01-31,ok,find (miss),,,,,,,Actual fix for issue #125,72.43
+ed229ad16983db139feb54d03c7c67fd42e58ccf,2022-01-31,ok,insert+erase,,,,,,,Actual fix for issue #125,192.58
+ed229ad16983db139feb54d03c7c67fd42e58ccf,2022-01-31,ok,operator[] (hit),,,,,,,Actual fix for issue #125,66.01
+22121fa3ce90fa574e45e07dece63ce194b0d026,2022-01-31,ok,find (hit),,,,,,,Fix compilation issue redux2,67.02
+22121fa3ce90fa574e45e07dece63ce194b0d026,2022-01-31,ok,find (miss),,,,,,,Fix compilation issue redux2,72.43
+22121fa3ce90fa574e45e07dece63ce194b0d026,2022-01-31,ok,insert+erase,,,,,,,Fix compilation issue redux2,192.58
+22121fa3ce90fa574e45e07dece63ce194b0d026,2022-01-31,ok,operator[] (hit),,,,,,,Fix compilation issue redux2,66.01
+9db87533616ffd5dcd7a912a6ca24e693c428d2a,2022-02-28,ok,find (hit),,,,,,,better feature testing by using language feature macro -  issue #132,67.02
+9db87533616ffd5dcd7a912a6ca24e693c428d2a,2022-02-28,ok,find (miss),,,,,,,better feature testing by using language feature macro -  issue #132,72.43
+9db87533616ffd5dcd7a912a6ca24e693c428d2a,2022-02-28,ok,insert+erase,,,,,,,better feature testing by using language feature macro -  issue #132,192.58
+9db87533616ffd5dcd7a912a6ca24e693c428d2a,2022-02-28,ok,operator[] (hit),,,,,,,better feature testing by using language feature macro -  issue #132,66.01
+73be7c2ab267778f64c7383b7a8150788ab7e2ef,2022-03-06,ok,find (hit),,,,,,,manually merge some changes from abseil-cpp,67.02
+73be7c2ab267778f64c7383b7a8150788ab7e2ef,2022-03-06,ok,find (miss),,,,,,,manually merge some changes from abseil-cpp,72.43
+73be7c2ab267778f64c7383b7a8150788ab7e2ef,2022-03-06,ok,insert+erase,,,,,,,manually merge some changes from abseil-cpp,192.92
+73be7c2ab267778f64c7383b7a8150788ab7e2ef,2022-03-06,ok,operator[] (hit),,,,,,,manually merge some changes from abseil-cpp,66.01
+4368cd39f2869fb1efb454a1260dcf0d1511eea6,2022-04-01,ok,find (hit),,,,,,,operator=() should preserve load_factor - issue #136,67.02
+4368cd39f2869fb1efb454a1260dcf0d1511eea6,2022-04-01,ok,find (miss),,,,,,,operator=() should preserve load_factor - issue #136,72.43
+4368cd39f2869fb1efb454a1260dcf0d1511eea6,2022-04-01,ok,insert+erase,,,,,,,operator=() should preserve load_factor - issue #136,192.92
+4368cd39f2869fb1efb454a1260dcf0d1511eea6,2022-04-01,ok,operator[] (hit),,,,,,,operator=() should preserve load_factor - issue #136,66.01
+48e86db1f4ebc85145d384ba061c4f615cb3106f,2022-04-18,ok,find (hit),,,,,,,tentative fix for #138,67.02
+48e86db1f4ebc85145d384ba061c4f615cb3106f,2022-04-18,ok,find (miss),,,,,,,tentative fix for #138,72.43
+48e86db1f4ebc85145d384ba061c4f615cb3106f,2022-04-18,ok,insert+erase,,,,,,,tentative fix for #138,192.92
+48e86db1f4ebc85145d384ba061c4f615cb3106f,2022-04-18,ok,operator[] (hit),,,,,,,tentative fix for #138,66.01
+c34bb0e9a356b3c0c611d3fb6c0a5450dc5a112e,2022-06-20,ok,find (hit),,,,,,,tentative fix for issue #145,67.02
+c34bb0e9a356b3c0c611d3fb6c0a5450dc5a112e,2022-06-20,ok,find (miss),,,,,,,tentative fix for issue #145,72.43
+c34bb0e9a356b3c0c611d3fb6c0a5450dc5a112e,2022-06-20,ok,insert+erase,,,,,,,tentative fix for issue #145,192.92
+c34bb0e9a356b3c0c611d3fb6c0a5450dc5a112e,2022-06-20,ok,operator[] (hit),,,,,,,tentative fix for issue #145,66.01
+12490574554f6f302efdcdb91f67bd26e538e731,2022-07-19,ok,find (hit),,,,,,,Fix issue #158 - imperfect hash for tuple of small integers,67.02
+12490574554f6f302efdcdb91f67bd26e538e731,2022-07-19,ok,find (miss),,,,,,,Fix issue #158 - imperfect hash for tuple of small integers,72.43
+12490574554f6f302efdcdb91f67bd26e538e731,2022-07-19,ok,insert+erase,,,,,,,Fix issue #158 - imperfect hash for tuple of small integers,192.92
+12490574554f6f302efdcdb91f67bd26e538e731,2022-07-19,ok,operator[] (hit),,,,,,,Fix issue #158 - imperfect hash for tuple of small integers,66.01
+d24c47fdcef709048a9e91a8fd54eb067b46302f,2022-07-25,ok,find (hit),,,,,,,Add `with_submap` api for parallel maps allowing access to submaps under lock protection,67.02
+d24c47fdcef709048a9e91a8fd54eb067b46302f,2022-07-25,ok,find (miss),,,,,,,Add `with_submap` api for parallel maps allowing access to submaps under lock protection,72.43
+d24c47fdcef709048a9e91a8fd54eb067b46302f,2022-07-25,ok,insert+erase,,,,,,,Add `with_submap` api for parallel maps allowing access to submaps under lock protection,192.92
+d24c47fdcef709048a9e91a8fd54eb067b46302f,2022-07-25,ok,operator[] (hit),,,,,,,Add `with_submap` api for parallel maps allowing access to submaps under lock protection,66.01
+736b921c1a5336caa57476403902ec5304a780c9,2022-09-30,ok,find (hit),,,,,,,Update version numbers,67.02
+736b921c1a5336caa57476403902ec5304a780c9,2022-09-30,ok,find (miss),,,,,,,Update version numbers,72.43
+736b921c1a5336caa57476403902ec5304a780c9,2022-09-30,ok,insert+erase,,,,,,,Update version numbers,192.92
+736b921c1a5336caa57476403902ec5304a780c9,2022-09-30,ok,operator[] (hit),,,,,,,Update version numbers,66.01
+dc5bd3620efcd50d52bbb9bcdf32c4bc5637f611,2022-10-03,ok,find (hit),,,,,,,Disable assert causing duplicated hash calls when NDEBUG is not defined - issue #168,67.02
+dc5bd3620efcd50d52bbb9bcdf32c4bc5637f611,2022-10-03,ok,find (miss),,,,,,,Disable assert causing duplicated hash calls when NDEBUG is not defined - issue #168,72.43
+dc5bd3620efcd50d52bbb9bcdf32c4bc5637f611,2022-10-03,ok,insert+erase,,,,,,,Disable assert causing duplicated hash calls when NDEBUG is not defined - issue #168,192.92
+dc5bd3620efcd50d52bbb9bcdf32c4bc5637f611,2022-10-03,ok,operator[] (hit),,,,,,,Disable assert causing duplicated hash calls when NDEBUG is not defined - issue #168,66.01
+e7df60b86d8ae340061c8489969b21eabd835e77,2023-03-12,ok,find (hit),,,,,,,"Make `Throw` a macro, for platforms missing definitions for `std::*_error` types.",67.02
+e7df60b86d8ae340061c8489969b21eabd835e77,2023-03-12,ok,find (miss),,,,,,,"Make `Throw` a macro, for platforms missing definitions for `std::*_error` types.",72.43
+e7df60b86d8ae340061c8489969b21eabd835e77,2023-03-12,ok,insert+erase,,,,,,,"Make `Throw` a macro, for platforms missing definitions for `std::*_error` types.",192.92
+e7df60b86d8ae340061c8489969b21eabd835e77,2023-03-12,ok,operator[] (hit),,,,,,,"Make `Throw` a macro, for platforms missing definitions for `std::*_error` types.",66.01
+59d56923f5678e9bb9881f4a91265d99347c202f,2023-04-09,ok,find (hit),,,,,,,Add example mt_word_counter,67.02
+59d56923f5678e9bb9881f4a91265d99347c202f,2023-04-09,ok,find (miss),,,,,,,Add example mt_word_counter,72.43
+59d56923f5678e9bb9881f4a91265d99347c202f,2023-04-09,ok,insert+erase,,,,,,,Add example mt_word_counter,192.92
+59d56923f5678e9bb9881f4a91265d99347c202f,2023-04-09,ok,operator[] (hit),,,,,,,Add example mt_word_counter,66.01
+3a4f3983a1346dc0b25093d47e26bffecd2887bc,2023-04-15,ok,find (hit),,,,,,,Fix a couple return type mismatches reported by clang-tidy.,67.02
+3a4f3983a1346dc0b25093d47e26bffecd2887bc,2023-04-15,ok,find (miss),,,,,,,Fix a couple return type mismatches reported by clang-tidy.,72.43
+3a4f3983a1346dc0b25093d47e26bffecd2887bc,2023-04-15,ok,insert+erase,,,,,,,Fix a couple return type mismatches reported by clang-tidy.,192.92
+3a4f3983a1346dc0b25093d47e26bffecd2887bc,2023-04-15,ok,operator[] (hit),,,,,,,Fix a couple return type mismatches reported by clang-tidy.,66.01
+78071573aac62e34e76fe3e1ea1c747046e0a468,2023-04-15,ok,find (hit),,,,,,,Fix issue #117 - segfault when out of memory.,67.02
+78071573aac62e34e76fe3e1ea1c747046e0a468,2023-04-15,ok,find (miss),,,,,,,Fix issue #117 - segfault when out of memory.,72.43
+78071573aac62e34e76fe3e1ea1c747046e0a468,2023-04-15,ok,insert+erase,,,,,,,Fix issue #117 - segfault when out of memory.,191.92
+78071573aac62e34e76fe3e1ea1c747046e0a468,2023-04-15,ok,operator[] (hit),,,,,,,Fix issue #117 - segfault when out of memory.,64.01
+e4b6668d46183a7656490d279b26145667cff3a3,2023-04-23,ok,find (hit),,,,,,,Bump conan version,67.02
+e4b6668d46183a7656490d279b26145667cff3a3,2023-04-23,ok,find (miss),,,,,,,Bump conan version,72.43
+e4b6668d46183a7656490d279b26145667cff3a3,2023-04-23,ok,insert+erase,,,,,,,Bump conan version,191.92
+e4b6668d46183a7656490d279b26145667cff3a3,2023-04-23,ok,operator[] (hit),,,,,,,Bump conan version,64.01
+be6a2c79857c9ea76760ca6ce782e1609713428e,2023-04-23,ok,find (hit),,,,,,,Bump version to 1.3.11,67.02
+be6a2c79857c9ea76760ca6ce782e1609713428e,2023-04-23,ok,find (miss),,,,,,,Bump version to 1.3.11,72.43
+be6a2c79857c9ea76760ca6ce782e1609713428e,2023-04-23,ok,insert+erase,,,,,,,Bump version to 1.3.11,191.92
+be6a2c79857c9ea76760ca6ce782e1609713428e,2023-04-23,ok,operator[] (hit),,,,,,,Bump version to 1.3.11,64.01
+a68a9b50b0fd2ad2bbe36b0378c39a5e780c0523,2023-05-17,ok,find (hit),,,,,,,Fix unused variable warning (issue #194),67.02
+a68a9b50b0fd2ad2bbe36b0378c39a5e780c0523,2023-05-17,ok,find (miss),,,,,,,Fix unused variable warning (issue #194),72.43
+a68a9b50b0fd2ad2bbe36b0378c39a5e780c0523,2023-05-17,ok,insert+erase,,,,,,,Fix unused variable warning (issue #194),191.92
+a68a9b50b0fd2ad2bbe36b0378c39a5e780c0523,2023-05-17,ok,operator[] (hit),,,,,,,Fix unused variable warning (issue #194),64.01
+79cbd2dafd5aab3829064d1b48b71137623d8ff2,2023-06-11,ok,find (hit),,,,,,,Merge pull request #197 from ilobilo/master,67.02
+79cbd2dafd5aab3829064d1b48b71137623d8ff2,2023-06-11,ok,find (miss),,,,,,,Merge pull request #197 from ilobilo/master,72.43
+79cbd2dafd5aab3829064d1b48b71137623d8ff2,2023-06-11,ok,insert+erase,,,,,,,Merge pull request #197 from ilobilo/master,191.92
+79cbd2dafd5aab3829064d1b48b71137623d8ff2,2023-06-11,ok,operator[] (hit),,,,,,,Merge pull request #197 from ilobilo/master,64.01
+38ded9bba8d8962261848570583cc6f94a41ba98,2023-09-02,ok,find (hit),,,,,,,Simplify `clear()` and avoid iterating when values have trivial destructor.,67.02
+38ded9bba8d8962261848570583cc6f94a41ba98,2023-09-02,ok,find (miss),,,,,,,Simplify `clear()` and avoid iterating when values have trivial destructor.,72.43
+38ded9bba8d8962261848570583cc6f94a41ba98,2023-09-02,ok,insert+erase,,,,,,,Simplify `clear()` and avoid iterating when values have trivial destructor.,191.92
+38ded9bba8d8962261848570583cc6f94a41ba98,2023-09-02,ok,operator[] (hit),,,,,,,Simplify `clear()` and avoid iterating when values have trivial destructor.,64.01
+c2fabc9ac008c4ce8ef86e8c477ee3ea15cb2ab2,2023-10-01,ok,find (hit),,,,,,,Merge pull request #209 from jendrikseipp/patch-1,67.02
+c2fabc9ac008c4ce8ef86e8c477ee3ea15cb2ab2,2023-10-01,ok,find (miss),,,,,,,Merge pull request #209 from jendrikseipp/patch-1,72.43
+c2fabc9ac008c4ce8ef86e8c477ee3ea15cb2ab2,2023-10-01,ok,insert+erase,,,,,,,Merge pull request #209 from jendrikseipp/patch-1,191.92
+c2fabc9ac008c4ce8ef86e8c477ee3ea15cb2ab2,2023-10-01,ok,operator[] (hit),,,,,,,Merge pull request #209 from jendrikseipp/patch-1,64.01
+401552da80b0971f818e648621260720ad40934e,2023-10-19,ok,find (hit),,,,,,,Merge pull request #211 from bpmckinnon/OptimizeEraseIf,67.02
+401552da80b0971f818e648621260720ad40934e,2023-10-19,ok,find (miss),,,,,,,Merge pull request #211 from bpmckinnon/OptimizeEraseIf,72.43
+401552da80b0971f818e648621260720ad40934e,2023-10-19,ok,insert+erase,,,,,,,Merge pull request #211 from bpmckinnon/OptimizeEraseIf,191.92
+401552da80b0971f818e648621260720ad40934e,2023-10-19,ok,operator[] (hit),,,,,,,Merge pull request #211 from bpmckinnon/OptimizeEraseIf,64.01
+0046905791006b5a85dbf62f7a98c65987b72e68,2023-11-15,ok,find (hit),,,,,,,Merge pull request #216 from greg7mdp/try_emplace_fine_locking,67.02
+0046905791006b5a85dbf62f7a98c65987b72e68,2023-11-15,ok,find (miss),,,,,,,Merge pull request #216 from greg7mdp/try_emplace_fine_locking,72.43
+0046905791006b5a85dbf62f7a98c65987b72e68,2023-11-15,ok,insert+erase,,,,,,,Merge pull request #216 from greg7mdp/try_emplace_fine_locking,197.15
+0046905791006b5a85dbf62f7a98c65987b72e68,2023-11-15,ok,operator[] (hit),,,,,,,Merge pull request #216 from greg7mdp/try_emplace_fine_locking,67.01
+2ee44550e193031a7357d4749302261190c06b24,2023-11-18,ok,find (hit),,,,,,,Whitespace changes (cleanup),67.02
+2ee44550e193031a7357d4749302261190c06b24,2023-11-18,ok,find (miss),,,,,,,Whitespace changes (cleanup),72.43
+2ee44550e193031a7357d4749302261190c06b24,2023-11-18,ok,insert+erase,,,,,,,Whitespace changes (cleanup),197.15
+2ee44550e193031a7357d4749302261190c06b24,2023-11-18,ok,operator[] (hit),,,,,,,Whitespace changes (cleanup),67.01
+7556c955d48e396535dba54069c7fb4bd35a62b5,2023-11-29,ok,find (hit),,,,,,,"Add access to the slot in the lazy constructor.  There is a specific use case where I want to cache a pointer to the newly created lazy object.  If the capacity of the map does not change between the first and second call of my function, then I use the pointer instead of repeating the lookup. (#219)",67.02
+7556c955d48e396535dba54069c7fb4bd35a62b5,2023-11-29,ok,find (miss),,,,,,,"Add access to the slot in the lazy constructor.  There is a specific use case where I want to cache a pointer to the newly created lazy object.  If the capacity of the map does not change between the first and second call of my function, then I use the pointer instead of repeating the lookup. (#219)",72.43
+7556c955d48e396535dba54069c7fb4bd35a62b5,2023-11-29,ok,insert+erase,,,,,,,"Add access to the slot in the lazy constructor.  There is a specific use case where I want to cache a pointer to the newly created lazy object.  If the capacity of the map does not change between the first and second call of my function, then I use the pointer instead of repeating the lookup. (#219)",197.15
+7556c955d48e396535dba54069c7fb4bd35a62b5,2023-11-29,ok,operator[] (hit),,,,,,,"Add access to the slot in the lazy constructor.  There is a specific use case where I want to cache a pointer to the newly created lazy object.  If the capacity of the map does not change between the first and second call of my function, then I use the pointer instead of repeating the lookup. (#219)",67.01
+946ebad67a21212d11a0dd4deb7cdedc297d47bc,2023-12-09,ok,find (hit),,,,,,,Fix warnings with msvc. (#225),67.02
+946ebad67a21212d11a0dd4deb7cdedc297d47bc,2023-12-09,ok,find (miss),,,,,,,Fix warnings with msvc. (#225),72.43
+946ebad67a21212d11a0dd4deb7cdedc297d47bc,2023-12-09,ok,insert+erase,,,,,,,Fix warnings with msvc. (#225),197.15
+946ebad67a21212d11a0dd4deb7cdedc297d47bc,2023-12-09,ok,operator[] (hit),,,,,,,Fix warnings with msvc. (#225),67.01
+7ef2e733416953b222851f9a360d7fc72d068ee5,2024-03-16,ok,find (hit),,,,,,,"Minor changes, mostly formatting and avoiding nvcc warnings.",67.02
+7ef2e733416953b222851f9a360d7fc72d068ee5,2024-03-16,ok,find (miss),,,,,,,"Minor changes, mostly formatting and avoiding nvcc warnings.",72.43
+7ef2e733416953b222851f9a360d7fc72d068ee5,2024-03-16,ok,insert+erase,,,,,,,"Minor changes, mostly formatting and avoiding nvcc warnings.",197.15
+7ef2e733416953b222851f9a360d7fc72d068ee5,2024-03-16,ok,operator[] (hit),,,,,,,"Minor changes, mostly formatting and avoiding nvcc warnings.",67.01
+be87c4139ed827fa80920c89922369701dccd41f,2024-09-20,ok,find (hit),,,,,,,Update version to `1.4.0`,67.02
+be87c4139ed827fa80920c89922369701dccd41f,2024-09-20,ok,find (miss),,,,,,,Update version to `1.4.0`,72.43
+be87c4139ed827fa80920c89922369701dccd41f,2024-09-20,ok,insert+erase,,,,,,,Update version to `1.4.0`,197.15
+be87c4139ed827fa80920c89922369701dccd41f,2024-09-20,ok,operator[] (hit),,,,,,,Update version to `1.4.0`,67.01
+22a7f6ca7205aaa7d3929277103d5cf94c2e480c,2024-10-27,ok,find (hit),,,,,,,Update version to `1.4.1`,67.02
+22a7f6ca7205aaa7d3929277103d5cf94c2e480c,2024-10-27,ok,find (miss),,,,,,,Update version to `1.4.1`,72.43
+22a7f6ca7205aaa7d3929277103d5cf94c2e480c,2024-10-27,ok,insert+erase,,,,,,,Update version to `1.4.1`,197.15
+22a7f6ca7205aaa7d3929277103d5cf94c2e480c,2024-10-27,ok,operator[] (hit),,,,,,,Update version to `1.4.1`,67.01
+640aef361d67189e99a7d2ee2bc4e0f889071294,2024-12-14,ok,find (hit),,,,,,,Fix issue with `std::pmr::polymorphic_allocator`,67.02
+640aef361d67189e99a7d2ee2bc4e0f889071294,2024-12-14,ok,find (miss),,,,,,,Fix issue with `std::pmr::polymorphic_allocator`,72.43
+640aef361d67189e99a7d2ee2bc4e0f889071294,2024-12-14,ok,insert+erase,,,,,,,Fix issue with `std::pmr::polymorphic_allocator`,197.15
+640aef361d67189e99a7d2ee2bc4e0f889071294,2024-12-14,ok,operator[] (hit),,,,,,,Fix issue with `std::pmr::polymorphic_allocator`,67.01
+154c63489e84d5569d3b466342a2ae8fd99e4734,2025-02-09,ok,find (hit),,,,,,,"Mostly revert ""Small performance optimizations.""",67.02
+154c63489e84d5569d3b466342a2ae8fd99e4734,2025-02-09,ok,find (miss),,,,,,,"Mostly revert ""Small performance optimizations.""",72.43
+154c63489e84d5569d3b466342a2ae8fd99e4734,2025-02-09,ok,insert+erase,,,,,,,"Mostly revert ""Small performance optimizations.""",197.15
+154c63489e84d5569d3b466342a2ae8fd99e4734,2025-02-09,ok,operator[] (hit),,,,,,,"Mostly revert ""Small performance optimizations.""",68.01
+b56fe781f11d255eac62d791a1c77de6d1ad91ba,2025-08-04,ok,find (hit),,,,,,,Merge branch 'master' of github.com:greg7mdp/parallel-hashmap,67.02
+b56fe781f11d255eac62d791a1c77de6d1ad91ba,2025-08-04,ok,find (miss),,,,,,,Merge branch 'master' of github.com:greg7mdp/parallel-hashmap,72.43
+b56fe781f11d255eac62d791a1c77de6d1ad91ba,2025-08-04,ok,insert+erase,,,,,,,Merge branch 'master' of github.com:greg7mdp/parallel-hashmap,197.15
+b56fe781f11d255eac62d791a1c77de6d1ad91ba,2025-08-04,ok,operator[] (hit),,,,,,,Merge branch 'master' of github.com:greg7mdp/parallel-hashmap,68.01
+4e410c7af3f93c4928c1fc84413720a2935ecd4a,2025-10-24,ok,find (hit),,,,,,,Fix check for `arm32` so `umul` is used consistently on `gcc` and `clang` when building on `arm64`. (#290),67.02
+4e410c7af3f93c4928c1fc84413720a2935ecd4a,2025-10-24,ok,find (miss),,,,,,,Fix check for `arm32` so `umul` is used consistently on `gcc` and `clang` when building on `arm64`. (#290),72.43
+4e410c7af3f93c4928c1fc84413720a2935ecd4a,2025-10-24,ok,insert+erase,,,,,,,Fix check for `arm32` so `umul` is used consistently on `gcc` and `clang` when building on `arm64`. (#290),197.15
+4e410c7af3f93c4928c1fc84413720a2935ecd4a,2025-10-24,ok,operator[] (hit),,,,,,,Fix check for `arm32` so `umul` is used consistently on `gcc` and `clang` when building on `arm64`. (#290),68.01
+55bf3c0329a222f48689787046b62b3e997aca84,2026-09-11,ok,find (hit),,,,,,,Fix rehash(0) producing a 100%-full table (#303),67.02
+55bf3c0329a222f48689787046b62b3e997aca84,2026-09-11,ok,find (miss),,,,,,,Fix rehash(0) producing a 100%-full table (#303),72.43
+55bf3c0329a222f48689787046b62b3e997aca84,2026-09-11,ok,insert+erase,,,,,,,Fix rehash(0) producing a 100%-full table (#303),197.15
+55bf3c0329a222f48689787046b62b3e997aca84,2026-09-11,ok,operator[] (hit),,,,,,,Fix rehash(0) producing a 100%-full table (#303),68.01
+2a6e2aca3b129b907d3a108ecc562ef9ddc478b4,2026-11-05,ok,find (hit),,,,,,,Update version to 2.1.0,67.02
+2a6e2aca3b129b907d3a108ecc562ef9ddc478b4,2026-11-05,ok,find (miss),,,,,,,Update version to 2.1.0,72.43
+2a6e2aca3b129b907d3a108ecc562ef9ddc478b4,2026-11-05,ok,insert+erase,,,,,,,Update version to 2.1.0,197.15
+2a6e2aca3b129b907d3a108ecc562ef9ddc478b4,2026-11-05,ok,operator[] (hit),,,,,,,Update version to 2.1.0,68.01

@@ -1,0 +1,420 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+3c3ba6890648b7c4adcfdf082a4c3803d22f5a21,2017-09-19,ok,parse with istringstream,,,,,,,Proposal for an alternative directory structure,7331.0
+3c3ba6890648b7c4adcfdf082a4c3803d22f5a21,2017-09-19,ok,format to std::string,,,,,,,Proposal for an alternative directory structure,6399.0
+3c3ba6890648b7c4adcfdf082a4c3803d22f5a21,2017-09-19,ok,days to year_month_day,,,,,,,Proposal for an alternative directory structure,86.0
+2032fccbb7eb9f300240933921a356a437f80027,2017-10-03,ok,parse with istringstream,,,,,,,Fix valgrind warning about uninitialized variable use in to_stream(),7331.0
+2032fccbb7eb9f300240933921a356a437f80027,2017-10-03,ok,format to std::string,,,,,,,Fix valgrind warning about uninitialized variable use in to_stream(),6404.0
+2032fccbb7eb9f300240933921a356a437f80027,2017-10-03,ok,days to year_month_day,,,,,,,Fix valgrind warning about uninitialized variable use in to_stream(),86.0
+8b9f0515b5d037cb22d6e9d529b170350c10f5fa,2017-10-12,ok,parse with istringstream,,,,,,,Replacing 0 with nullptr to avoid GCC warning,7331.0
+8b9f0515b5d037cb22d6e9d529b170350c10f5fa,2017-10-12,ok,format to std::string,,,,,,,Replacing 0 with nullptr to avoid GCC warning,6404.0
+8b9f0515b5d037cb22d6e9d529b170350c10f5fa,2017-10-12,ok,days to year_month_day,,,,,,,Replacing 0 with nullptr to avoid GCC warning,86.0
+f328d8c84a96339870c9bbde34e87e436a21b7e5,2017-10-14,ok,parse with istringstream,,,,,,,Have format set exceptions(failbit | badbit),7331.0
+f328d8c84a96339870c9bbde34e87e436a21b7e5,2017-10-14,ok,format to std::string,,,,,,,Have format set exceptions(failbit | badbit),6418.0
+f328d8c84a96339870c9bbde34e87e436a21b7e5,2017-10-14,ok,days to year_month_day,,,,,,,Have format set exceptions(failbit | badbit),86.0
+66a97f907e5213287aec6cc196a551507ec59621,2017-10-15,ok,parse with istringstream,,,,,,,to_stream sets failbit if required to supply a bad name:,7331.0
+66a97f907e5213287aec6cc196a551507ec59621,2017-10-15,ok,format to std::string,,,,,,,to_stream sets failbit if required to supply a bad name:,6407.0
+66a97f907e5213287aec6cc196a551507ec59621,2017-10-15,ok,days to year_month_day,,,,,,,to_stream sets failbit if required to supply a bad name:,86.0
+ec514101a64165b6103a33999f2db9bd5f23c8b0,2017-11-15,ok,parse with istringstream,,,,,,,minor patches to build on Windows with MSVC v140_clang_c2 and LLVM-vs2014,7331.0
+ec514101a64165b6103a33999f2db9bd5f23c8b0,2017-11-15,ok,format to std::string,,,,,,,minor patches to build on Windows with MSVC v140_clang_c2 and LLVM-vs2014,6407.0
+ec514101a64165b6103a33999f2db9bd5f23c8b0,2017-11-15,ok,days to year_month_day,,,,,,,minor patches to build on Windows with MSVC v140_clang_c2 and LLVM-vs2014,86.0
+4832ea0ddb844ee9752bde42a6ce1441bc5ae09e,2017-11-17,ok,parse with istringstream,,,,,,,Move HAS_STRING_VIEW to date.h,7331.0
+4832ea0ddb844ee9752bde42a6ce1441bc5ae09e,2017-11-17,ok,format to std::string,,,,,,,Move HAS_STRING_VIEW to date.h,6407.0
+4832ea0ddb844ee9752bde42a6ce1441bc5ae09e,2017-11-17,ok,days to year_month_day,,,,,,,Move HAS_STRING_VIEW to date.h,86.0
+f4b12ab0233d5f31a915d52ac819eb88fcb5eb05,2017-11-20,ok,parse with istringstream,,,,,,,Adjust HAS_CHRONO_ROUNDING macro for MSVC with v140_clang_c2 and LLVM-vs2014,7331.0
+f4b12ab0233d5f31a915d52ac819eb88fcb5eb05,2017-11-20,ok,format to std::string,,,,,,,Adjust HAS_CHRONO_ROUNDING macro for MSVC with v140_clang_c2 and LLVM-vs2014,6407.0
+f4b12ab0233d5f31a915d52ac819eb88fcb5eb05,2017-11-20,ok,days to year_month_day,,,,,,,Adjust HAS_CHRONO_ROUNDING macro for MSVC with v140_clang_c2 and LLVM-vs2014,86.0
+9ca582d9dab91a59bdd4c399b903def0f675efdb,2017-11-20,ok,parse with istringstream,,,,,,,Silence GCC conversion warning for bitfields,7331.0
+9ca582d9dab91a59bdd4c399b903def0f675efdb,2017-11-20,ok,format to std::string,,,,,,,Silence GCC conversion warning for bitfields,6407.0
+9ca582d9dab91a59bdd4c399b903def0f675efdb,2017-11-20,ok,days to year_month_day,,,,,,,Silence GCC conversion warning for bitfields,86.0
+c286981b3bf83c79554769df68b27415cee68d77,2017-11-21,ok,parse with istringstream,,,,,,,Fix improper application of GCC diagnostic suppression,7331.0
+c286981b3bf83c79554769df68b27415cee68d77,2017-11-21,ok,format to std::string,,,,,,,Fix improper application of GCC diagnostic suppression,6407.0
+c286981b3bf83c79554769df68b27415cee68d77,2017-11-21,ok,days to year_month_day,,,,,,,Fix improper application of GCC diagnostic suppression,86.0
+1902b8e8fb03a7c41316fa80c589a51aa3923aa9,2017-11-30,ok,parse with istringstream,,,,,,,Range check year on parse,7335.0
+1902b8e8fb03a7c41316fa80c589a51aa3923aa9,2017-11-30,ok,format to std::string,,,,,,,Range check year on parse,6407.0
+1902b8e8fb03a7c41316fa80c589a51aa3923aa9,2017-11-30,ok,days to year_month_day,,,,,,,Range check year on parse,86.0
+443a29df531a5e093409e3974f84362a12b03cac,2017-11-30,ok,parse with istringstream,,,,,,,Improve range check on year,7335.0
+443a29df531a5e093409e3974f84362a12b03cac,2017-11-30,ok,format to std::string,,,,,,,Improve range check on year,6407.0
+443a29df531a5e093409e3974f84362a12b03cac,2017-11-30,ok,days to year_month_day,,,,,,,Improve range check on year,86.0
+b49bdc3ca782571f1b044d20a6037f8fbbd08730,2017-12-06,ok,parse with istringstream,,,,,,,Add missing include <memory> for unique_ptr,7335.0
+b49bdc3ca782571f1b044d20a6037f8fbbd08730,2017-12-06,ok,format to std::string,,,,,,,Add missing include <memory> for unique_ptr,6407.0
+b49bdc3ca782571f1b044d20a6037f8fbbd08730,2017-12-06,ok,days to year_month_day,,,,,,,Add missing include <memory> for unique_ptr,86.0
+2b6ee6378c62b2f10b1515ea39bcb49579b56034,2018-01-04,ok,parse with istringstream,,,,,,,minutes fix,7335.0
+2b6ee6378c62b2f10b1515ea39bcb49579b56034,2018-01-04,ok,format to std::string,,,,,,,minutes fix,6407.0
+2b6ee6378c62b2f10b1515ea39bcb49579b56034,2018-01-04,ok,days to year_month_day,,,,,,,minutes fix,86.0
+ca4036a4b0ffdb0bb4f38066c01ccf70c67f8088,2018-02-21,ok,parse with istringstream,,,,,,,Explicitly qualify std::string. Having a global scope `string` type shall not break the compilation anymore.,7335.0
+ca4036a4b0ffdb0bb4f38066c01ccf70c67f8088,2018-02-21,ok,format to std::string,,,,,,,Explicitly qualify std::string. Having a global scope `string` type shall not break the compilation anymore.,6407.0
+ca4036a4b0ffdb0bb4f38066c01ccf70c67f8088,2018-02-21,ok,days to year_month_day,,,,,,,Explicitly qualify std::string. Having a global scope `string` type shall not break the compilation anymore.,86.0
+43d8a4eab0294ecd95834627d20f23030fea7e8d,2018-03-02,ok,parse with istringstream,,,,,,,Range check minutes under parse,7309.0
+43d8a4eab0294ecd95834627d20f23030fea7e8d,2018-03-02,ok,format to std::string,,,,,,,Range check minutes under parse,6407.0
+43d8a4eab0294ecd95834627d20f23030fea7e8d,2018-03-02,ok,days to year_month_day,,,,,,,Range check minutes under parse,86.0
+0bde4ba8c8eea1ade240f0249972594e486af3fe,2018-03-03,ok,parse with istringstream,,,,,,,Make the parsing of minutes optional under the flag %z,7309.0
+0bde4ba8c8eea1ade240f0249972594e486af3fe,2018-03-03,ok,format to std::string,,,,,,,Make the parsing of minutes optional under the flag %z,6407.0
+0bde4ba8c8eea1ade240f0249972594e486af3fe,2018-03-03,ok,days to year_month_day,,,,,,,Make the parsing of minutes optional under the flag %z,86.0
+1e8ab50f82290807db29f81a7add34c1e96d088e,2018-03-14,ok,parse with istringstream,,,,,,,Test modifications for standardization,7309.0
+1e8ab50f82290807db29f81a7add34c1e96d088e,2018-03-14,ok,format to std::string,,,,,,,Test modifications for standardization,6414.0
+1e8ab50f82290807db29f81a7add34c1e96d088e,2018-03-14,ok,days to year_month_day,,,,,,,Test modifications for standardization,86.0
+700489e4755b1aff811f9a10248f2078ce25594c,2018-03-18,ok,parse with istringstream,,,,,,,Introduced full weekday and month names,7309.0
+700489e4755b1aff811f9a10248f2078ce25594c,2018-03-18,ok,format to std::string,,,,,,,Introduced full weekday and month names,6414.0
+700489e4755b1aff811f9a10248f2078ce25594c,2018-03-18,ok,days to year_month_day,,,,,,,Introduced full weekday and month names,86.0
+0125d330ab3aa288fb42397c7adadf48cb07ee43,2018-03-31,ok,parse with istringstream,,,,,,,Correct to_stream/from_stream handling of stream data,7673.0
+0125d330ab3aa288fb42397c7adadf48cb07ee43,2018-03-31,ok,format to std::string,,,,,,,Correct to_stream/from_stream handling of stream data,6773.0
+0125d330ab3aa288fb42397c7adadf48cb07ee43,2018-03-31,ok,days to year_month_day,,,,,,,Correct to_stream/from_stream handling of stream data,86.0
+1d9e49ea2138b2cde32d2e2b5dab6686526f017d,2018-04-06,ok,parse with istringstream,,,,,,,to_stream sets failbit if unable to format,7670.0
+1d9e49ea2138b2cde32d2e2b5dab6686526f017d,2018-04-06,ok,format to std::string,,,,,,,to_stream sets failbit if unable to format,6807.0
+1d9e49ea2138b2cde32d2e2b5dab6686526f017d,2018-04-06,ok,days to year_month_day,,,,,,,to_stream sets failbit if unable to format,86.0
+cdb4b276d973bf2875aa3fc516b4a73dc306476b,2018-04-07,ok,parse with istringstream,,,,,,,Allow duplicate parsing into the same fields,7678.0
+cdb4b276d973bf2875aa3fc516b4a73dc306476b,2018-04-07,ok,format to std::string,,,,,,,Allow duplicate parsing into the same fields,6807.0
+cdb4b276d973bf2875aa3fc516b4a73dc306476b,2018-04-07,ok,days to year_month_day,,,,,,,Allow duplicate parsing into the same fields,86.0
+b48a18a1d9f5e36cdfe109069d59671947aa07e3,2018-04-08,ok,parse with istringstream,,,,,,,More fixes to allow duplicate parsing,7767.0
+b48a18a1d9f5e36cdfe109069d59671947aa07e3,2018-04-08,ok,format to std::string,,,,,,,More fixes to allow duplicate parsing,6807.0
+b48a18a1d9f5e36cdfe109069d59671947aa07e3,2018-04-08,ok,days to year_month_day,,,,,,,More fixes to allow duplicate parsing,86.0
+e5c69d84ab5db3e06170b8eedec1d87841c7fb22,2018-04-09,ok,parse with istringstream,,,,,,,Fix constexpr issue for VS2015,7767.0
+e5c69d84ab5db3e06170b8eedec1d87841c7fb22,2018-04-09,ok,format to std::string,,,,,,,Fix constexpr issue for VS2015,6807.0
+e5c69d84ab5db3e06170b8eedec1d87841c7fb22,2018-04-09,ok,days to year_month_day,,,,,,,Fix constexpr issue for VS2015,86.0
+d53db7a1cb61dc2651374e5b9660ed07e6d28358,2018-04-15,ok,parse with istringstream,,,,,,,And yet more fixes to allow duplicate flags on parse,7917.0
+d53db7a1cb61dc2651374e5b9660ed07e6d28358,2018-04-15,ok,format to std::string,,,,,,,And yet more fixes to allow duplicate flags on parse,6802.0
+d53db7a1cb61dc2651374e5b9660ed07e6d28358,2018-04-15,ok,days to year_month_day,,,,,,,And yet more fixes to allow duplicate flags on parse,86.0
+973bd393bc52911405eaed23e425ef595e204324,2018-04-18,ok,parse with istringstream,,,,,,,Respect and minimize tie/flush in from/to_stream,7926.0
+973bd393bc52911405eaed23e425ef595e204324,2018-04-18,ok,format to std::string,,,,,,,Respect and minimize tie/flush in from/to_stream,6869.0
+973bd393bc52911405eaed23e425ef595e204324,2018-04-18,ok,days to year_month_day,,,,,,,Respect and minimize tie/flush in from/to_stream,86.0
+9d0bcdb63f7daa0d614322c73568810f44aa4571,2018-04-18,ok,parse with istringstream,,,,,,,Fix deduction error in parse where only offset is requested,7926.0
+9d0bcdb63f7daa0d614322c73568810f44aa4571,2018-04-18,ok,format to std::string,,,,,,,Fix deduction error in parse where only offset is requested,6869.0
+9d0bcdb63f7daa0d614322c73568810f44aa4571,2018-04-18,ok,days to year_month_day,,,,,,,Fix deduction error in parse where only offset is requested,86.0
+a91ceefb4e594648540cc0a3c00611cd962989f9,2018-04-23,ok,parse with istringstream,,,,,,,Allow %H %M and %S to deal with negative durations,7926.0
+a91ceefb4e594648540cc0a3c00611cd962989f9,2018-04-23,ok,format to std::string,,,,,,,Allow %H %M and %S to deal with negative durations,6911.0
+a91ceefb4e594648540cc0a3c00611cd962989f9,2018-04-23,ok,days to year_month_day,,,,,,,Allow %H %M and %S to deal with negative durations,86.0
+5d15157bbb980817b532b2b96d8b19964204ab78,2018-05-05,ok,parse with istringstream,,,,,,,Fix bug for parsing negative offsets of less than 1h,7926.0
+5d15157bbb980817b532b2b96d8b19964204ab78,2018-05-05,ok,format to std::string,,,,,,,Fix bug for parsing negative offsets of less than 1h,6911.0
+5d15157bbb980817b532b2b96d8b19964204ab78,2018-05-05,ok,days to year_month_day,,,,,,,Fix bug for parsing negative offsets of less than 1h,86.0
+328cecaa567e8b9da5dfcbcb4de9a550496bb55b,2018-05-06,ok,parse with istringstream,,,,,,,Fixed addition of multi-year duration to year_month.,7926.0
+328cecaa567e8b9da5dfcbcb4de9a550496bb55b,2018-05-06,ok,format to std::string,,,,,,,Fixed addition of multi-year duration to year_month.,6911.0
+328cecaa567e8b9da5dfcbcb4de9a550496bb55b,2018-05-06,ok,days to year_month_day,,,,,,,Fixed addition of multi-year duration to year_month.,86.0
+f33e179936d43aa55447f8b33b161638dd6b48a1,2018-05-25,ok,parse with istringstream,,,,,,,Eliminate use of uninitialized offset.,7928.0
+f33e179936d43aa55447f8b33b161638dd6b48a1,2018-05-25,ok,format to std::string,,,,,,,Eliminate use of uninitialized offset.,6911.0
+f33e179936d43aa55447f8b33b161638dd6b48a1,2018-05-25,ok,days to year_month_day,,,,,,,Eliminate use of uninitialized offset.,86.0
+1fdda81a30177e9b37563ef78f9c66c250e70271,2018-05-21,ok,parse with istringstream,,,,,,,fixed build with latest VS2017 v15.7.1; toolset MSVC 14.14,7928.0
+1fdda81a30177e9b37563ef78f9c66c250e70271,2018-05-21,ok,format to std::string,,,,,,,fixed build with latest VS2017 v15.7.1; toolset MSVC 14.14,6911.0
+1fdda81a30177e9b37563ef78f9c66c250e70271,2018-05-21,ok,days to year_month_day,,,,,,,fixed build with latest VS2017 v15.7.1; toolset MSVC 14.14,86.0
+40b83654b6d44a8d2775aa06aabe4771384f7522,2018-06-02,ok,parse with istringstream,,,,,,,[API BREAKING] Remove conversion from weekday to unsigned,7928.0
+40b83654b6d44a8d2775aa06aabe4771384f7522,2018-06-02,ok,format to std::string,,,,,,,[API BREAKING] Remove conversion from weekday to unsigned,6911.0
+40b83654b6d44a8d2775aa06aabe4771384f7522,2018-06-02,ok,days to year_month_day,,,,,,,[API BREAKING] Remove conversion from weekday to unsigned,86.0
+be2ec2310bad8cf39d60cb757c7320c91303a24d,2018-06-03,ok,parse with istringstream,,,,,,,Emphasize Sunday over sun in the implementation,7928.0
+be2ec2310bad8cf39d60cb757c7320c91303a24d,2018-06-03,ok,format to std::string,,,,,,,Emphasize Sunday over sun in the implementation,6911.0
+be2ec2310bad8cf39d60cb757c7320c91303a24d,2018-06-03,ok,days to year_month_day,,,,,,,Emphasize Sunday over sun in the implementation,86.0
+48baa942fc2957917230baddd169f8d6326ec29d,2018-06-06,ok,parse with istringstream,,,,,,,Use uncaught_exceptions in C++17,7928.0
+48baa942fc2957917230baddd169f8d6326ec29d,2018-06-06,ok,format to std::string,,,,,,,Use uncaught_exceptions in C++17,6911.0
+48baa942fc2957917230baddd169f8d6326ec29d,2018-06-06,ok,days to year_month_day,,,,,,,Use uncaught_exceptions in C++17,86.0
+c7b69d949a8fd7426eed0b0e96ee4a7f57259c3c,2018-06-08,ok,parse with istringstream,,,,,,,Change the encoding for an invalid weekday from 7 to 8,7931.0
+c7b69d949a8fd7426eed0b0e96ee4a7f57259c3c,2018-06-08,ok,format to std::string,,,,,,,Change the encoding for an invalid weekday from 7 to 8,6911.0
+c7b69d949a8fd7426eed0b0e96ee4a7f57259c3c,2018-06-08,ok,days to year_month_day,,,,,,,Change the encoding for an invalid weekday from 7 to 8,86.0
+3eac2d376e7fb8b1c3ec4cee6426dc23fac8edcb,2018-06-09,ok,parse with istringstream,,,,,,,"Revert ""Fixed addition of multi-year duration to year_month.""",7931.0
+3eac2d376e7fb8b1c3ec4cee6426dc23fac8edcb,2018-06-09,ok,format to std::string,,,,,,,"Revert ""Fixed addition of multi-year duration to year_month.""",6911.0
+3eac2d376e7fb8b1c3ec4cee6426dc23fac8edcb,2018-06-09,ok,days to year_month_day,,,,,,,"Revert ""Fixed addition of multi-year duration to year_month.""",86.0
+0e3e84fd562ecdbc60d9a3a6d0dfe8bd6f813db1,2018-06-09,ok,parse with istringstream,,,,,,,Used suggested Tim Song implementation,7931.0
+0e3e84fd562ecdbc60d9a3a6d0dfe8bd6f813db1,2018-06-09,ok,format to std::string,,,,,,,Used suggested Tim Song implementation,6911.0
+0e3e84fd562ecdbc60d9a3a6d0dfe8bd6f813db1,2018-06-09,ok,days to year_month_day,,,,,,,Used suggested Tim Song implementation,86.0
+d4fb7eb76d0a56e9e5a8aa63d3131bf0d66251c3,2018-06-10,ok,parse with istringstream,,,,,,,Put unspecified_month_disambiguator in namespace detail,7931.0
+d4fb7eb76d0a56e9e5a8aa63d3131bf0d66251c3,2018-06-10,ok,format to std::string,,,,,,,Put unspecified_month_disambiguator in namespace detail,6911.0
+d4fb7eb76d0a56e9e5a8aa63d3131bf0d66251c3,2018-06-10,ok,days to year_month_day,,,,,,,Put unspecified_month_disambiguator in namespace detail,86.0
+07876e443372adba0321be0dc1ba3e61ce93dd15,2018-03-06,ok,parse with istringstream,,,,,,,"Character classification functions (isspace, isalnum) are undefined for signed chars",7941.0
+07876e443372adba0321be0dc1ba3e61ce93dd15,2018-03-06,ok,format to std::string,,,,,,,"Character classification functions (isspace, isalnum) are undefined for signed chars",6911.0
+07876e443372adba0321be0dc1ba3e61ce93dd15,2018-03-06,ok,days to year_month_day,,,,,,,"Character classification functions (isspace, isalnum) are undefined for signed chars",86.0
+d50970b32ae34defa849cc01856fa5ee28cd60a7,2018-06-12,ok,parse with istringstream,,,,,,,Some backwards compatibility fixes for VS-2013,7941.0
+d50970b32ae34defa849cc01856fa5ee28cd60a7,2018-06-12,ok,format to std::string,,,,,,,Some backwards compatibility fixes for VS-2013,6911.0
+d50970b32ae34defa849cc01856fa5ee28cd60a7,2018-06-12,ok,days to year_month_day,,,,,,,Some backwards compatibility fixes for VS-2013,86.0
+2d282e35fa18119d6d9396813da2cc4ad29a9d5a,2018-06-16,ok,parse with istringstream,,,,,,,Use string_literal for C++11 when possible,7941.0
+2d282e35fa18119d6d9396813da2cc4ad29a9d5a,2018-06-16,ok,format to std::string,,,,,,,Use string_literal for C++11 when possible,6911.0
+2d282e35fa18119d6d9396813da2cc4ad29a9d5a,2018-06-16,ok,days to year_month_day,,,,,,,Use string_literal for C++11 when possible,86.0
+f46885e63294e0bfe7e59417bcb77b869265ccf2,2018-06-20,ok,parse with istringstream,,,,,,,Suffix d for days duration (#354),7941.0
+f46885e63294e0bfe7e59417bcb77b869265ccf2,2018-06-20,ok,format to std::string,,,,,,,Suffix d for days duration (#354),6911.0
+f46885e63294e0bfe7e59417bcb77b869265ccf2,2018-06-20,ok,days to year_month_day,,,,,,,Suffix d for days duration (#354),86.0
+1b32e316db1a091bbe8a1caa33c401c0df81295a,2018-06-21,ok,parse with istringstream,,,,,,,Workaround MSVC 19.14.26431 parsing bug (#355),7941.0
+1b32e316db1a091bbe8a1caa33c401c0df81295a,2018-06-21,ok,format to std::string,,,,,,,Workaround MSVC 19.14.26431 parsing bug (#355),6911.0
+1b32e316db1a091bbe8a1caa33c401c0df81295a,2018-06-21,ok,days to year_month_day,,,,,,,Workaround MSVC 19.14.26431 parsing bug (#355),86.0
+de6a03d337dcd617a121254f700979086889c0a4,2018-06-27,ok,parse with istringstream,,,,,,,Set _SILENCE_CXX17_UNCAUGHT_EXCEPTION_DEPRECATION_WARNING for VS,7941.0
+de6a03d337dcd617a121254f700979086889c0a4,2018-06-27,ok,format to std::string,,,,,,,Set _SILENCE_CXX17_UNCAUGHT_EXCEPTION_DEPRECATION_WARNING for VS,6911.0
+de6a03d337dcd617a121254f700979086889c0a4,2018-06-27,ok,days to year_month_day,,,,,,,Set _SILENCE_CXX17_UNCAUGHT_EXCEPTION_DEPRECATION_WARNING for VS,86.0
+39d67306659435f45f56753b19ac7e84f9cc0fb9,2018-07-01,ok,parse with istringstream,,,,,,,Silence shadow warnings,7941.0
+39d67306659435f45f56753b19ac7e84f9cc0fb9,2018-07-01,ok,format to std::string,,,,,,,Silence shadow warnings,6911.0
+39d67306659435f45f56753b19ac7e84f9cc0fb9,2018-07-01,ok,days to year_month_day,,,,,,,Silence shadow warnings,86.0
+69e9cd612febc65817b309aa328126f29c8257ec,2018-09-26,ok,parse with istringstream,,,,,,,Prefer using std::string that using namespace std and unqualified string (#386),7941.0
+69e9cd612febc65817b309aa328126f29c8257ec,2018-09-26,ok,format to std::string,,,,,,,Prefer using std::string that using namespace std and unqualified string (#386),6911.0
+69e9cd612febc65817b309aa328126f29c8257ec,2018-09-26,ok,days to year_month_day,,,,,,,Prefer using std::string that using namespace std and unqualified string (#386),86.0
+591f572b670d27311361b9b6b933cbcfced55560,2018-09-26,ok,parse with istringstream,,,,,,,Allow %j to parse and format durations,7945.0
+591f572b670d27311361b9b6b933cbcfced55560,2018-09-26,ok,format to std::string,,,,,,,Allow %j to parse and format durations,6911.0
+591f572b670d27311361b9b6b933cbcfced55560,2018-09-26,ok,days to year_month_day,,,,,,,Allow %j to parse and format durations,86.0
+90d0440884de8423f5ab63247bcbe5adfcff2941,2019-01-19,ok,parse with istringstream,,,,,,,Introduce %q and %Q to_stream formatting flags,7945.0
+90d0440884de8423f5ab63247bcbe5adfcff2941,2019-01-19,ok,format to std::string,,,,,,,Introduce %q and %Q to_stream formatting flags,6912.0
+90d0440884de8423f5ab63247bcbe5adfcff2941,2019-01-19,ok,days to year_month_day,,,,,,,Introduce %q and %Q to_stream formatting flags,86.0
+4e7e76b98125e162e5f0b9e3961668b635122b56,2019-01-19,ok,parse with istringstream,,,,,,,add c_encoding and iso_encoding weekday functions (#380),7945.0
+4e7e76b98125e162e5f0b9e3961668b635122b56,2019-01-19,ok,format to std::string,,,,,,,add c_encoding and iso_encoding weekday functions (#380),6912.0
+4e7e76b98125e162e5f0b9e3961668b635122b56,2019-01-19,ok,days to year_month_day,,,,,,,add c_encoding and iso_encoding weekday functions (#380),86.0
+9cb0013aef072bb25e42ff33c8364c6b7e56cd66,2019-02-02,ok,parse with istringstream,,,,,,,Update time_of_day to be more consistent ... the needs of formatting.,7948.0
+9cb0013aef072bb25e42ff33c8364c6b7e56cd66,2019-02-02,ok,format to std::string,,,,,,,Update time_of_day to be more consistent ... the needs of formatting.,6912.0
+9cb0013aef072bb25e42ff33c8364c6b7e56cd66,2019-02-02,ok,days to year_month_day,,,,,,,Update time_of_day to be more consistent ... the needs of formatting.,86.0
+09a19a09f4d0da3f5edd734197d2740882d8040d,2019-02-03,ok,parse with istringstream,,,,,,,Further consolidate time_of_day logic,7948.0
+09a19a09f4d0da3f5edd734197d2740882d8040d,2019-02-03,ok,format to std::string,,,,,,,Further consolidate time_of_day logic,6912.0
+09a19a09f4d0da3f5edd734197d2740882d8040d,2019-02-03,ok,days to year_month_day,,,,,,,Further consolidate time_of_day logic,86.0
+5a62c405e0e6d3b71fe9e5e5fa1726abff2865e0,2019-02-03,ok,parse with istringstream,,,,,,,Remove unneeded make_precision,7948.0
+5a62c405e0e6d3b71fe9e5e5fa1726abff2865e0,2019-02-03,ok,format to std::string,,,,,,,Remove unneeded make_precision,6912.0
+5a62c405e0e6d3b71fe9e5e5fa1726abff2865e0,2019-02-03,ok,days to year_month_day,,,,,,,Remove unneeded make_precision,86.0
+16077472af2f7167101b50849326ac5fff891c00,2019-02-20,ok,parse with istringstream,,,,,,,Rename is_leap_second to get_leap_second_info,7948.0
+16077472af2f7167101b50849326ac5fff891c00,2019-02-20,ok,format to std::string,,,,,,,Rename is_leap_second to get_leap_second_info,6912.0
+16077472af2f7167101b50849326ac5fff891c00,2019-02-20,ok,days to year_month_day,,,,,,,Rename is_leap_second to get_leap_second_info,86.0
+b5d025ea2f03cebad25a9e293ebe3781b08dc113,2019-03-19,ok,parse with istringstream,,,,,,,Align time_of_day with hh_mm_ss Per committee review,7944.0
+b5d025ea2f03cebad25a9e293ebe3781b08dc113,2019-03-19,ok,format to std::string,,,,,,,Align time_of_day with hh_mm_ss Per committee review,6907.0
+b5d025ea2f03cebad25a9e293ebe3781b08dc113,2019-03-19,ok,days to year_month_day,,,,,,,Align time_of_day with hh_mm_ss Per committee review,86.0
+cb7ca96f688fc239cd060b359e93c9a0bb342950,2019-03-19,ok,parse with istringstream,,,,,,,Protect weekday_from_days from signed overflow Found by static analyzer. This change makes weekday_from_days slightly more efficient.,7945.0
+cb7ca96f688fc239cd060b359e93c9a0bb342950,2019-03-19,ok,format to std::string,,,,,,,Protect weekday_from_days from signed overflow Found by static analyzer. This change makes weekday_from_days slightly more efficient.,6907.0
+cb7ca96f688fc239cd060b359e93c9a0bb342950,2019-03-19,ok,days to year_month_day,,,,,,,Protect weekday_from_days from signed overflow Found by static analyzer. This change makes weekday_from_days slightly more efficient.,86.0
+5ba1c1ad8514362dba596f228eb20eb13f63d948,2018-09-19,ok,parse with istringstream,,,,,,,HAS_UNCAUGHT_EXCEPTIONS definition.,7945.0
+5ba1c1ad8514362dba596f228eb20eb13f63d948,2018-09-19,ok,format to std::string,,,,,,,HAS_UNCAUGHT_EXCEPTIONS definition.,6907.0
+5ba1c1ad8514362dba596f228eb20eb13f63d948,2018-09-19,ok,days to year_month_day,,,,,,,HAS_UNCAUGHT_EXCEPTIONS definition.,86.0
+d5e96f099182f3a7a763d86c48fab0598d1b65e6,2019-03-20,ok,parse with istringstream,,,,,,,Suppress VS-15 warning about concerning conditional expression is constant Thanks to https://github.com/ujos for the report.,7945.0
+d5e96f099182f3a7a763d86c48fab0598d1b65e6,2019-03-20,ok,format to std::string,,,,,,,Suppress VS-15 warning about concerning conditional expression is constant Thanks to https://github.com/ujos for the report.,6907.0
+d5e96f099182f3a7a763d86c48fab0598d1b65e6,2019-03-20,ok,days to year_month_day,,,,,,,Suppress VS-15 warning about concerning conditional expression is constant Thanks to https://github.com/ujos for the report.,86.0
+8b69087d354ec07f847b3b0d931d53d25f44241e,2019-03-21,ok,parse with istringstream,,,,,,,Fix up constexpr of changed weekday_from_days,7945.0
+8b69087d354ec07f847b3b0d931d53d25f44241e,2019-03-21,ok,format to std::string,,,,,,,Fix up constexpr of changed weekday_from_days,6907.0
+8b69087d354ec07f847b3b0d931d53d25f44241e,2019-03-21,ok,days to year_month_day,,,,,,,Fix up constexpr of changed weekday_from_days,86.0
+9dc96fd9b5e4e1e7885aa80dc24a3ceb407c3730,2019-03-26,ok,parse with istringstream,,,,,,,Silence warning Fixes #337,7945.0
+9dc96fd9b5e4e1e7885aa80dc24a3ceb407c3730,2019-03-26,ok,format to std::string,,,,,,,Silence warning Fixes #337,6907.0
+9dc96fd9b5e4e1e7885aa80dc24a3ceb407c3730,2019-03-26,ok,days to year_month_day,,,,,,,Silence warning Fixes #337,86.0
+8a563041fa65146531249ed557a6839809488521,2019-04-05,ok,parse with istringstream,,,,,,,Adjust HAS_STRING_VIEW for VS,7945.0
+8a563041fa65146531249ed557a6839809488521,2019-04-05,ok,format to std::string,,,,,,,Adjust HAS_STRING_VIEW for VS,6907.0
+8a563041fa65146531249ed557a6839809488521,2019-04-05,ok,days to year_month_day,,,,,,,Adjust HAS_STRING_VIEW for VS,86.0
+44215f6781c8e3a7aa84a5a32ca77d7d7d58040c,2019-05-19,ok,parse with istringstream,,,,,,,"Eschew using directives in headers, even at function scope.",7945.0
+44215f6781c8e3a7aa84a5a32ca77d7d7d58040c,2019-05-19,ok,format to std::string,,,,,,,"Eschew using directives in headers, even at function scope.",6907.0
+44215f6781c8e3a7aa84a5a32ca77d7d7d58040c,2019-05-19,ok,days to year_month_day,,,,,,,"Eschew using directives in headers, even at function scope.",86.0
+a029f1105d27b95c58bade4538c3238a199d86d1,2019-05-19,build failed,,,,,,,,Conditionally set _SILENCE_CXX17_UNCAUGHT_EXCEPTION_DEPRECATION_WARNING
+7817ebf45ad062753f969a1b41e7402900ebfcb6,2019-05-20,ok,parse with istringstream,,,,,,,Update date.h (#451),7945.0
+7817ebf45ad062753f969a1b41e7402900ebfcb6,2019-05-20,ok,format to std::string,,,,,,,Update date.h (#451),6907.0
+7817ebf45ad062753f969a1b41e7402900ebfcb6,2019-05-20,ok,days to year_month_day,,,,,,,Update date.h (#451),86.0
+27d1e1e54e4d120f421710df2040f54d51527c21,2019-05-28,ok,parse with istringstream,,,,,,,Removed undefined behavioir from year_mont_day_last::day (#456),7945.0
+27d1e1e54e4d120f421710df2040f54d51527c21,2019-05-28,ok,format to std::string,,,,,,,Removed undefined behavioir from year_mont_day_last::day (#456),6907.0
+27d1e1e54e4d120f421710df2040f54d51527c21,2019-05-28,ok,days to year_month_day,,,,,,,Removed undefined behavioir from year_mont_day_last::day (#456),86.0
+09d90a8b5edb6475542cea67d3d0efd7bf37ee78,2018-11-01,ok,parse with istringstream,,,,,,,Fix operator<< for years with non C locale,7945.0
+09d90a8b5edb6475542cea67d3d0efd7bf37ee78,2018-11-01,ok,format to std::string,,,,,,,Fix operator<< for years with non C locale,7214.0
+09d90a8b5edb6475542cea67d3d0efd7bf37ee78,2018-11-01,ok,days to year_month_day,,,,,,,Fix operator<< for years with non C locale,86.0
+c0e7b4e2f7007f3e62381af3691d8d4952e0b54e,2019-05-30,ok,parse with istringstream,,,,,,,Make date.h compatible with g++-4.7,7945.0
+c0e7b4e2f7007f3e62381af3691d8d4952e0b54e,2019-05-30,ok,format to std::string,,,,,,,Make date.h compatible with g++-4.7,7214.0
+c0e7b4e2f7007f3e62381af3691d8d4952e0b54e,2019-05-30,ok,days to year_month_day,,,,,,,Make date.h compatible with g++-4.7,86.0
+dca8ddc65919be7df60c0ba3bec43160fed106c7,2019-06-10,ok,parse with istringstream,,,,,,,Replace computed value with standard macro,7945.0
+dca8ddc65919be7df60c0ba3bec43160fed106c7,2019-06-10,ok,format to std::string,,,,,,,Replace computed value with standard macro,7214.0
+dca8ddc65919be7df60c0ba3bec43160fed106c7,2019-06-10,ok,days to year_month_day,,,,,,,Replace computed value with standard macro,86.0
+141ba85614489c03e3a4a791f7af48eab8f660fa,2019-08-23,ok,parse with istringstream,,,,,,,Fix space-matches 0 spaces at end of format string,7969.0
+141ba85614489c03e3a4a791f7af48eab8f660fa,2019-08-23,ok,format to std::string,,,,,,,Fix space-matches 0 spaces at end of format string,7214.0
+141ba85614489c03e3a4a791f7af48eab8f660fa,2019-08-23,ok,days to year_month_day,,,,,,,Fix space-matches 0 spaces at end of format string,86.0
+cb4bf26fc7e80a1285d4a704990988e6c2d44103,2019-08-13,ok,parse with istringstream,,,,,,,Fix compilation error with GCC 5,7969.0
+cb4bf26fc7e80a1285d4a704990988e6c2d44103,2019-08-13,ok,format to std::string,,,,,,,Fix compilation error with GCC 5,7214.0
+cb4bf26fc7e80a1285d4a704990988e6c2d44103,2019-08-13,ok,days to year_month_day,,,,,,,Fix compilation error with GCC 5,86.0
+d21333f6364340832599ac3f70a189ea53953326,2019-09-02,ok,parse with istringstream,,,,,,,Fixes #484,7969.0
+d21333f6364340832599ac3f70a189ea53953326,2019-09-02,ok,format to std::string,,,,,,,Fixes #484,7214.0
+d21333f6364340832599ac3f70a189ea53953326,2019-09-02,ok,days to year_month_day,,,,,,,Fixes #484,86.0
+44344000f0fa32e66787d6d2c9ff5ddfd3605df7,2019-09-12,ok,parse with istringstream,,,,,,,Fix MSVC C++ version detection,7969.0
+44344000f0fa32e66787d6d2c9ff5ddfd3605df7,2019-09-12,ok,format to std::string,,,,,,,Fix MSVC C++ version detection,7214.0
+44344000f0fa32e66787d6d2c9ff5ddfd3605df7,2019-09-12,ok,days to year_month_day,,,,,,,Fix MSVC C++ version detection,86.0
+a5c4b4ebf8a192c6914b861b33579014a7e7d98a,2019-09-17,ok,parse with istringstream,,,,,,,Protect is_am and make12 from ADL,7969.0
+a5c4b4ebf8a192c6914b861b33579014a7e7d98a,2019-09-17,ok,format to std::string,,,,,,,Protect is_am and make12 from ADL,7214.0
+a5c4b4ebf8a192c6914b861b33579014a7e7d98a,2019-09-17,ok,days to year_month_day,,,,,,,Protect is_am and make12 from ADL,86.0
+96ffe23f72e2d24fa8a25564be6d5dce62cd5c38,2019-10-21,ok,parse with istringstream,,,,,,,Replace INTMAX_MAX with numeric_limits,7969.0
+96ffe23f72e2d24fa8a25564be6d5dce62cd5c38,2019-10-21,ok,format to std::string,,,,,,,Replace INTMAX_MAX with numeric_limits,7214.0
+96ffe23f72e2d24fa8a25564be6d5dce62cd5c38,2019-10-21,ok,days to year_month_day,,,,,,,Replace INTMAX_MAX with numeric_limits,86.0
+67e272a54e605174f32caba36a2b8c0937aea7a3,2019-10-24,ok,parse with istringstream,,,,,,,change the order in hh_mm_ss::to_duration() to have correct result on Windows for cases when h is 2147483647 hours and m and s are all 0 (#501),7966.0
+67e272a54e605174f32caba36a2b8c0937aea7a3,2019-10-24,ok,format to std::string,,,,,,,change the order in hh_mm_ss::to_duration() to have correct result on Windows for cases when h is 2147483647 hours and m and s are all 0 (#501),7211.0
+67e272a54e605174f32caba36a2b8c0937aea7a3,2019-10-24,ok,days to year_month_day,,,,,,,change the order in hh_mm_ss::to_duration() to have correct result on Windows for cases when h is 2147483647 hours and m and s are all 0 (#501),86.0
+018a50bcd08bd6a6c5347444785392990fd6bc40,2019-11-20,ok,parse with istringstream,,,,,,,Work around for a NVCC compiler bug,7966.0
+018a50bcd08bd6a6c5347444785392990fd6bc40,2019-11-20,ok,format to std::string,,,,,,,Work around for a NVCC compiler bug,7211.0
+018a50bcd08bd6a6c5347444785392990fd6bc40,2019-11-20,ok,days to year_month_day,,,,,,,Work around for a NVCC compiler bug,86.0
+48433b9892ac5741f8d4d8753beb76e49c57f7c8,2019-12-05,ok,parse with istringstream,,,,,,,Update date.h (#518),7966.0
+48433b9892ac5741f8d4d8753beb76e49c57f7c8,2019-12-05,ok,format to std::string,,,,,,,Update date.h (#518),7211.0
+48433b9892ac5741f8d4d8753beb76e49c57f7c8,2019-12-05,ok,days to year_month_day,,,,,,,Update date.h (#518),86.0
+a1843097862aacb752a81a7e98231e9d9464a645,2020-01-01,ok,parse with istringstream,,,,,,,Fix unwanted localization of integral grouping,7966.0
+a1843097862aacb752a81a7e98231e9d9464a645,2020-01-01,ok,format to std::string,,,,,,,Fix unwanted localization of integral grouping,8575.0
+a1843097862aacb752a81a7e98231e9d9464a645,2020-01-01,ok,days to year_month_day,,,,,,,Fix unwanted localization of integral grouping,86.0
+9502bc27a3b32fa5759ea82a76c22551620ebcd2,2020-01-11,ok,parse with istringstream,,,,,,,Update Date.h (#529),7966.0
+9502bc27a3b32fa5759ea82a76c22551620ebcd2,2020-01-11,ok,format to std::string,,,,,,,Update Date.h (#529),8575.0
+9502bc27a3b32fa5759ea82a76c22551620ebcd2,2020-01-11,ok,days to year_month_day,,,,,,,Update Date.h (#529),86.0
+a2fdba1adcb076bf9a8343c07524afdf09aa8dcc,2020-03-30,ok,parse with istringstream,,,,,,,__GNUC_MINOR -> __GNUC_MINOR__,7966.0
+a2fdba1adcb076bf9a8343c07524afdf09aa8dcc,2020-03-30,ok,format to std::string,,,,,,,__GNUC_MINOR -> __GNUC_MINOR__,8575.0
+a2fdba1adcb076bf9a8343c07524afdf09aa8dcc,2020-03-30,ok,days to year_month_day,,,,,,,__GNUC_MINOR -> __GNUC_MINOR__,86.0
+e12095f26fd523d13e7cffbc87b79775ce2a6f53,2020-04-18,ok,parse with istringstream,,,,,,,Revert change for floating point reps in decimal_format_seconds,7966.0
+e12095f26fd523d13e7cffbc87b79775ce2a6f53,2020-04-18,ok,format to std::string,,,,,,,Revert change for floating point reps in decimal_format_seconds,8575.0
+e12095f26fd523d13e7cffbc87b79775ce2a6f53,2020-04-18,ok,days to year_month_day,,,,,,,Revert change for floating point reps in decimal_format_seconds,86.0
+cac99da8dc88be719a728dc1b597b0ac307c1800,2020-06-02,ok,parse with istringstream,,,,,,,For traits in constexpr context use ::value,7966.0
+cac99da8dc88be719a728dc1b597b0ac307c1800,2020-06-02,ok,format to std::string,,,,,,,For traits in constexpr context use ::value,8575.0
+cac99da8dc88be719a728dc1b597b0ac307c1800,2020-06-02,ok,days to year_month_day,,,,,,,For traits in constexpr context use ::value,86.0
+fe2f9c7eacae8cbe4633d9821581e7caebfc40e9,2020-07-07,ok,parse with istringstream,,,,,,,Change constexpr to CONSTDATA,7966.0
+fe2f9c7eacae8cbe4633d9821581e7caebfc40e9,2020-07-07,ok,format to std::string,,,,,,,Change constexpr to CONSTDATA,8575.0
+fe2f9c7eacae8cbe4633d9821581e7caebfc40e9,2020-07-07,ok,days to year_month_day,,,,,,,Change constexpr to CONSTDATA,86.0
+6952fb50a6a04c1b3682c56e1f1e26578f3bec1e,2020-07-08,ok,parse with istringstream,,,,,,,Correct the value for not_a_year,7965.0
+6952fb50a6a04c1b3682c56e1f1e26578f3bec1e,2020-07-08,ok,format to std::string,,,,,,,Correct the value for not_a_year,8575.0
+6952fb50a6a04c1b3682c56e1f1e26578f3bec1e,2020-07-08,ok,days to year_month_day,,,,,,,Correct the value for not_a_year,86.0
+057b441cebc0c9f3c79a1383d068497f1d487d88,2020-08-20,ok,parse with istringstream,,,,,,,Use LLONG_MAX instead of std::numeric_limits<long long>::max() when constexpr is absent,7965.0
+057b441cebc0c9f3c79a1383d068497f1d487d88,2020-08-20,ok,format to std::string,,,,,,,Use LLONG_MAX instead of std::numeric_limits<long long>::max() when constexpr is absent,8575.0
+057b441cebc0c9f3c79a1383d068497f1d487d88,2020-08-20,ok,days to year_month_day,,,,,,,Use LLONG_MAX instead of std::numeric_limits<long long>::max() when constexpr is absent,86.0
+5e184888990d68a563533461edffc94b3be8b934,2020-09-05,ok,parse with istringstream,,,,,,,Fix subtle bug in fractional_width,7965.0
+5e184888990d68a563533461edffc94b3be8b934,2020-09-05,ok,format to std::string,,,,,,,Fix subtle bug in fractional_width,8575.0
+5e184888990d68a563533461edffc94b3be8b934,2020-09-05,ok,days to year_month_day,,,,,,,Fix subtle bug in fractional_width,86.0
+7848566815ae45ed4bfe26e738476e44451b109e,2020-10-02,ok,parse with istringstream,,,,,,,Fix a parse error for Visual Studio,7965.0
+7848566815ae45ed4bfe26e738476e44451b109e,2020-10-02,ok,format to std::string,,,,,,,Fix a parse error for Visual Studio,8575.0
+7848566815ae45ed4bfe26e738476e44451b109e,2020-10-02,ok,days to year_month_day,,,,,,,Fix a parse error for Visual Studio,86.0
+215cacff5621cbe6a88e24540f3fb7968c7e3b79,2020-10-25,ok,parse with istringstream,,,,,,,Change all uses of round to detail::round_i,7965.0
+215cacff5621cbe6a88e24540f3fb7968c7e3b79,2020-10-25,ok,format to std::string,,,,,,,Change all uses of round to detail::round_i,8575.0
+215cacff5621cbe6a88e24540f3fb7968c7e3b79,2020-10-25,ok,days to year_month_day,,,,,,,Change all uses of round to detail::round_i,86.0
+97246a638a6d8f0269f4555c5e31106a86e3fd94,2020-11-10,ok,parse with istringstream,,,,,,,Silence lossy conversion warning Fixes #620,7965.0
+97246a638a6d8f0269f4555c5e31106a86e3fd94,2020-11-10,ok,format to std::string,,,,,,,Silence lossy conversion warning Fixes #620,8575.0
+97246a638a6d8f0269f4555c5e31106a86e3fd94,2020-11-10,ok,days to year_month_day,,,,,,,Silence lossy conversion warning Fixes #620,86.0
+26fc2bd372419591b8cc05fb763d59eb08f34185,2021-01-05,ok,parse with istringstream,,,,,,,Fix read_long_double with respect to decimal_point: *  Respect locale settings when ONLY_C_LOCALE=0 *  Do not respect locale settings when ONLY_C_LOCALE=1 Fixes #637,7660.0
+26fc2bd372419591b8cc05fb763d59eb08f34185,2021-01-05,ok,format to std::string,,,,,,,Fix read_long_double with respect to decimal_point: *  Respect locale settings when ONLY_C_LOCALE=0 *  Do not respect locale settings when ONLY_C_LOCALE=1 Fixes #637,8575.0
+26fc2bd372419591b8cc05fb763d59eb08f34185,2021-01-05,ok,days to year_month_day,,,,,,,Fix read_long_double with respect to decimal_point: *  Respect locale settings when ONLY_C_LOCALE=0 *  Do not respect locale settings when ONLY_C_LOCALE=1 Fixes #637,86.0
+1c285d654525b8fec157116419fa43233ff7e8d3,2021-02-24,ok,parse with istringstream,,,,,,,Cast to `unsigned char` before calling `toupper()` (#648),7660.0
+1c285d654525b8fec157116419fa43233ff7e8d3,2021-02-24,ok,format to std::string,,,,,,,Cast to `unsigned char` before calling `toupper()` (#648),8575.0
+1c285d654525b8fec157116419fa43233ff7e8d3,2021-02-24,ok,days to year_month_day,,,,,,,Cast to `unsigned char` before calling `toupper()` (#648),86.0
+0e08b942c80f7beedea78af5e834ae37da40555e,2021-03-11,ok,parse with istringstream,,,,,,,Correct the streaming output of year_month_day,7660.0
+0e08b942c80f7beedea78af5e834ae37da40555e,2021-03-11,ok,format to std::string,,,,,,,Correct the streaming output of year_month_day,8575.0
+0e08b942c80f7beedea78af5e834ae37da40555e,2021-03-11,ok,days to year_month_day,,,,,,,Correct the streaming output of year_month_day,86.0
+654b97091fed77395d471c1644d5eb27f95bf5d6,2021-03-21,ok,parse with istringstream,,,,,,,Change default on C++17 to uncaught_exceptions,7660.0
+654b97091fed77395d471c1644d5eb27f95bf5d6,2021-03-21,ok,format to std::string,,,,,,,Change default on C++17 to uncaught_exceptions,8575.0
+654b97091fed77395d471c1644d5eb27f95bf5d6,2021-03-21,ok,days to year_month_day,,,,,,,Change default on C++17 to uncaught_exceptions,86.0
+b5b765f928e98af7ef4e3bac343426d1b0e95117,2021-03-31,ok,parse with istringstream,,,,,,,Clean up calendrical streaming operators for invalid values,7660.0
+b5b765f928e98af7ef4e3bac343426d1b0e95117,2021-03-31,ok,format to std::string,,,,,,,Clean up calendrical streaming operators for invalid values,8589.0
+b5b765f928e98af7ef4e3bac343426d1b0e95117,2021-03-31,ok,days to year_month_day,,,,,,,Clean up calendrical streaming operators for invalid values,86.0
+9a9a42db74df6320e7896282c9d2fe64cf3a674c,2021-04-06,ok,parse with istringstream,,,,,,,Enable streaming output operator for floating-point-based time_points,7660.0
+9a9a42db74df6320e7896282c9d2fe64cf3a674c,2021-04-06,ok,format to std::string,,,,,,,Enable streaming output operator for floating-point-based time_points,8589.0
+9a9a42db74df6320e7896282c9d2fe64cf3a674c,2021-04-06,ok,days to year_month_day,,,,,,,Enable streaming output operator for floating-point-based time_points,86.0
+ac6ca2a095729b5a5160fe7d9678f29a4afe9e26,2021-04-15,ok,parse with istringstream,,,,,,,Add is_clock_v,7660.0
+ac6ca2a095729b5a5160fe7d9678f29a4afe9e26,2021-04-15,ok,format to std::string,,,,,,,Add is_clock_v,8589.0
+ac6ca2a095729b5a5160fe7d9678f29a4afe9e26,2021-04-15,ok,days to year_month_day,,,,,,,Add is_clock_v,86.0
+2ef74cb41a31dcd03b39dd5e9bf8b340669f48a4,2021-04-16,ok,parse with istringstream,,,,,,,"If %I is used without %p, mark the ambiguity with failbit",7660.0
+2ef74cb41a31dcd03b39dd5e9bf8b340669f48a4,2021-04-16,ok,format to std::string,,,,,,,"If %I is used without %p, mark the ambiguity with failbit",8589.0
+2ef74cb41a31dcd03b39dd5e9bf8b340669f48a4,2021-04-16,ok,days to year_month_day,,,,,,,"If %I is used without %p, mark the ambiguity with failbit",86.0
+e23c15bb3626515ce915e08b3d14b4dfeaa73a39,2021-05-19,build failed,,,,,,,,Add string_view overloads to parse functions
+2f4411312b29f656d2b30479a6b6f2fc787e62e0,2021-05-19,ok,parse with istringstream,,,,,,,Add extra parse_manip constructor to avoid ambiguity,7652.0
+2f4411312b29f656d2b30479a6b6f2fc787e62e0,2021-05-19,ok,format to std::string,,,,,,,Add extra parse_manip constructor to avoid ambiguity,8589.0
+2f4411312b29f656d2b30479a6b6f2fc787e62e0,2021-05-19,ok,days to year_month_day,,,,,,,Add extra parse_manip constructor to avoid ambiguity,86.0
+38267fa1efd2f45cef6cd6db99d45c3596ab160f,2021-05-20,ok,parse with istringstream,,,,,,,Template basic_string_view on Traits in parse overloads,7652.0
+38267fa1efd2f45cef6cd6db99d45c3596ab160f,2021-05-20,ok,format to std::string,,,,,,,Template basic_string_view on Traits in parse overloads,8589.0
+38267fa1efd2f45cef6cd6db99d45c3596ab160f,2021-05-20,ok,days to year_month_day,,,,,,,Template basic_string_view on Traits in parse overloads,86.0
+8f95c598c931c7a955720bfecbf01337978c69e0,2021-05-27,ok,parse with istringstream,,,,,,,[Pedantic] Use named constants in place of literals,7652.0
+8f95c598c931c7a955720bfecbf01337978c69e0,2021-05-27,ok,format to std::string,,,,,,,[Pedantic] Use named constants in place of literals,8589.0
+8f95c598c931c7a955720bfecbf01337978c69e0,2021-05-27,ok,days to year_month_day,,,,,,,[Pedantic] Use named constants in place of literals,86.0
+8c126525cca26fe16c1280e3d6d315583fd29cfb,2021-05-31,ok,parse with istringstream,,,,,,,call from_stream explicitly from date namespace (#677),7652.0
+8c126525cca26fe16c1280e3d6d315583fd29cfb,2021-05-31,ok,format to std::string,,,,,,,call from_stream explicitly from date namespace (#677),8589.0
+8c126525cca26fe16c1280e3d6d315583fd29cfb,2021-05-31,ok,days to year_month_day,,,,,,,call from_stream explicitly from date namespace (#677),86.0
+fb2554a7e00b24d23838b57a4db4121e148edb5c,2021-06-02,ok,parse with istringstream,,,,,,,Give gcc 4.8 a hand in constructing fields Fixes #678,7652.0
+fb2554a7e00b24d23838b57a4db4121e148edb5c,2021-06-02,ok,format to std::string,,,,,,,Give gcc 4.8 a hand in constructing fields Fixes #678,8589.0
+fb2554a7e00b24d23838b57a4db4121e148edb5c,2021-06-02,ok,days to year_month_day,,,,,,,Give gcc 4.8 a hand in constructing fields Fixes #678,86.0
+383214dea6cbe78b968ccdaeb84a9c84949771c2,2021-07-25,ok,parse with istringstream,,,,,,,Remove string_view overloads of parse,7652.0
+383214dea6cbe78b968ccdaeb84a9c84949771c2,2021-07-25,ok,format to std::string,,,,,,,Remove string_view overloads of parse,8589.0
+383214dea6cbe78b968ccdaeb84a9c84949771c2,2021-07-25,ok,days to year_month_day,,,,,,,Remove string_view overloads of parse,86.0
+d57d764707050fa85fc3a6f824c666ed4550b1b4,2021-07-25,ok,parse with istringstream,,,,,,,Round when parsing seconds instead of duration_cast.,7652.0
+d57d764707050fa85fc3a6f824c666ed4550b1b4,2021-07-25,ok,format to std::string,,,,,,,Round when parsing seconds instead of duration_cast.,8589.0
+d57d764707050fa85fc3a6f824c666ed4550b1b4,2021-07-25,ok,days to year_month_day,,,,,,,Round when parsing seconds instead of duration_cast.,86.0
+b0adc5467792a2108c89158e154208c17f1be726,2021-08-17,ok,parse with istringstream,,,,,,,static_cast to silent warning implict conversion (#693),7652.0
+b0adc5467792a2108c89158e154208c17f1be726,2021-08-17,ok,format to std::string,,,,,,,static_cast to silent warning implict conversion (#693),8589.0
+b0adc5467792a2108c89158e154208c17f1be726,2021-08-17,ok,days to year_month_day,,,,,,,static_cast to silent warning implict conversion (#693),86.0
+e1aa4837e0adb6b426672a87fcd85690d6600531,2021-08-31,ok,parse with istringstream,,,,,,,Avoid signed integral overflow in to_stream Fixes: #696,7652.0
+e1aa4837e0adb6b426672a87fcd85690d6600531,2021-08-31,ok,format to std::string,,,,,,,Avoid signed integral overflow in to_stream Fixes: #696,8594.0
+e1aa4837e0adb6b426672a87fcd85690d6600531,2021-08-31,ok,days to year_month_day,,,,,,,Avoid signed integral overflow in to_stream Fixes: #696,86.0
+28b5106d4ca911d1e6682c83b03058ae68934eae,2021-09-01,ok,parse with istringstream,,,,,,,Fix uninitialized values (#698),7655.0
+28b5106d4ca911d1e6682c83b03058ae68934eae,2021-09-01,ok,format to std::string,,,,,,,Fix uninitialized values (#698),8594.0
+28b5106d4ca911d1e6682c83b03058ae68934eae,2021-09-01,ok,days to year_month_day,,,,,,,Fix uninitialized values (#698),86.0
+2c035f8def89d72ef9638fb6378d95914d3fb951,2022-08-12,ok,parse with istringstream,,,,,,,Fix abs(duration) to work with non-normalized ratios,7655.0
+2c035f8def89d72ef9638fb6378d95914d3fb951,2022-08-12,ok,format to std::string,,,,,,,Fix abs(duration) to work with non-normalized ratios,8594.0
+2c035f8def89d72ef9638fb6378d95914d3fb951,2022-08-12,ok,days to year_month_day,,,,,,,Fix abs(duration) to work with non-normalized ratios,86.0
+c82b776f28e1802ef1b46e95dcade7d5c80a0373,2022-08-12,ok,parse with istringstream,,,,,,,Tweak sys_time streaming operator to work better year and month precision time_points.,7655.0
+c82b776f28e1802ef1b46e95dcade7d5c80a0373,2022-08-12,ok,format to std::string,,,,,,,Tweak sys_time streaming operator to work better year and month precision time_points.,8594.0
+c82b776f28e1802ef1b46e95dcade7d5c80a0373,2022-08-12,ok,days to year_month_day,,,,,,,Tweak sys_time streaming operator to work better year and month precision time_points.,86.0
+0ef86f1ced8788cf06f712e4ffbcb1cd74dacf65,2023-12-11,ok,parse with istringstream,,,,,,,Set not_a_century to something outside the domain of centuries for a year.,7654.0
+0ef86f1ced8788cf06f712e4ffbcb1cd74dacf65,2023-12-11,ok,format to std::string,,,,,,,Set not_a_century to something outside the domain of centuries for a year.,8594.0
+0ef86f1ced8788cf06f712e4ffbcb1cd74dacf65,2023-12-11,ok,days to year_month_day,,,,,,,Set not_a_century to something outside the domain of centuries for a year.,86.0
+ab37c362e35267d6dee02cb47760f9e9c669d3be,2023-12-11,ok,parse with istringstream,,,,,,,Count sign as part of the character count.,7654.0
+ab37c362e35267d6dee02cb47760f9e9c669d3be,2023-12-11,ok,format to std::string,,,,,,,Count sign as part of the character count.,8594.0
+ab37c362e35267d6dee02cb47760f9e9c669d3be,2023-12-11,ok,days to year_month_day,,,,,,,Count sign as part of the character count.,86.0
+5d225951ff24e6802d5026cb85d5b5a95b1a2476,2023-12-19,ok,parse with istringstream,,,,,,,Count sign as part of the character count : part 2,7654.0
+5d225951ff24e6802d5026cb85d5b5a95b1a2476,2023-12-19,ok,format to std::string,,,,,,,Count sign as part of the character count : part 2,8594.0
+5d225951ff24e6802d5026cb85d5b5a95b1a2476,2023-12-19,ok,days to year_month_day,,,,,,,Count sign as part of the character count : part 2,86.0
+0e65940a7fbc4ed617a1ee111a60311eccbead9a,2024-03-16,ok,parse with istringstream,,,,,,,workaround for gcc bug 106757,7654.0
+0e65940a7fbc4ed617a1ee111a60311eccbead9a,2024-03-16,ok,format to std::string,,,,,,,workaround for gcc bug 106757,8594.0
+0e65940a7fbc4ed617a1ee111a60311eccbead9a,2024-03-16,ok,days to year_month_day,,,,,,,workaround for gcc bug 106757,86.0
+575fc23c3c9750929ccce65956857ad064443755,2024-04-15,ok,parse with istringstream,,,,,,,Restrict mention of -Wstringop-overflow to gcc >= 11,7654.0
+575fc23c3c9750929ccce65956857ad064443755,2024-04-15,ok,format to std::string,,,,,,,Restrict mention of -Wstringop-overflow to gcc >= 11,8594.0
+575fc23c3c9750929ccce65956857ad064443755,2024-04-15,ok,days to year_month_day,,,,,,,Restrict mention of -Wstringop-overflow to gcc >= 11,86.0
+cd3c57932f7f3906c5876b8f04e2ff6b20d2070b,2024-04-15,ok,parse with istringstream,,,,,,,Eliminate dead code. * fixes #822,7654.0
+cd3c57932f7f3906c5876b8f04e2ff6b20d2070b,2024-04-15,ok,format to std::string,,,,,,,Eliminate dead code. * fixes #822,8594.0
+cd3c57932f7f3906c5876b8f04e2ff6b20d2070b,2024-04-15,ok,days to year_month_day,,,,,,,Eliminate dead code. * fixes #822,86.0
+8a932116795f4046ba8ed79ce33717c7331a1490,2024-05-08,ok,parse with istringstream,,,,,,,#826 Build fix for ambiguity with >= libc++ 17,7654.0
+8a932116795f4046ba8ed79ce33717c7331a1490,2024-05-08,ok,format to std::string,,,,,,,#826 Build fix for ambiguity with >= libc++ 17,8594.0
+8a932116795f4046ba8ed79ce33717c7331a1490,2024-05-08,ok,days to year_month_day,,,,,,,#826 Build fix for ambiguity with >= libc++ 17,86.0
+f079e3568c9c42f20bd40209b5667f030147069a,2024-11-22,ok,parse with istringstream,,,,,,,MSVC has different two-phase lookup rules than gcc and clang. Trying to make everyone happy.,7654.0
+f079e3568c9c42f20bd40209b5667f030147069a,2024-11-22,ok,format to std::string,,,,,,,MSVC has different two-phase lookup rules than gcc and clang. Trying to make everyone happy.,8594.0
+f079e3568c9c42f20bd40209b5667f030147069a,2024-11-22,ok,days to year_month_day,,,,,,,MSVC has different two-phase lookup rules than gcc and clang. Trying to make everyone happy.,86.0
+b8d166b4b08b99891ab3941755d387167d38429c,2025-03-02,ok,parse with istringstream,,,,,,,remove deprecated whitespace,7654.0
+b8d166b4b08b99891ab3941755d387167d38429c,2025-03-02,ok,format to std::string,,,,,,,remove deprecated whitespace,8594.0
+b8d166b4b08b99891ab3941755d387167d38429c,2025-03-02,ok,days to year_month_day,,,,,,,remove deprecated whitespace,86.0
+32ecb2ad24699963f6c58d74d74bcd8bf7e830a9,2025-03-11,ok,parse with istringstream,,,,,,,Use `ru{}` in favor of `rs{}` where it makes sense,7462.0
+32ecb2ad24699963f6c58d74d74bcd8bf7e830a9,2025-03-11,ok,format to std::string,,,,,,,Use `ru{}` in favor of `rs{}` where it makes sense,8594.0
+32ecb2ad24699963f6c58d74d74bcd8bf7e830a9,2025-03-11,ok,days to year_month_day,,,,,,,Use `ru{}` in favor of `rs{}` where it makes sense,86.0
+0b336657b1805154373d64d00292c38b213db9dc,2025-03-17,ok,parse with istringstream,,,,,,,Don't negate `toff` if we've already failed,7461.0
+0b336657b1805154373d64d00292c38b213db9dc,2025-03-17,ok,format to std::string,,,,,,,Don't negate `toff` if we've already failed,8594.0
+0b336657b1805154373d64d00292c38b213db9dc,2025-03-17,ok,days to year_month_day,,,,,,,Don't negate `toff` if we've already failed,86.0
+229c6876c6f1e7c80907604f79c07d507f9f9dbb,2025-06-27,ok,parse with istringstream,,,,,,,compatible for c++11 but GCC < (#884),7461.0
+229c6876c6f1e7c80907604f79c07d507f9f9dbb,2025-06-27,ok,format to std::string,,,,,,,compatible for c++11 but GCC < (#884),8594.0
+229c6876c6f1e7c80907604f79c07d507f9f9dbb,2025-06-27,ok,days to year_month_day,,,,,,,compatible for c++11 but GCC < (#884),86.0
+e32a0d809c3d3c4797826825dc2d0b287281e3b2,2025-07-04,ok,parse with istringstream,,,,,,,"Fix parse of sys_time with supplied offset, but no offset parse",7467.0
+e32a0d809c3d3c4797826825dc2d0b287281e3b2,2025-07-04,ok,format to std::string,,,,,,,"Fix parse of sys_time with supplied offset, but no offset parse",8594.0
+e32a0d809c3d3c4797826825dc2d0b287281e3b2,2025-07-04,ok,days to year_month_day,,,,,,,"Fix parse of sys_time with supplied offset, but no offset parse",86.0
+a5db3aecec580bc78b6c01c118f2628676769b69,2025-08-13,ok,parse with istringstream,,,,,,,fix: OPERATOR_LITERAL Wdeprecated-literal-operator (#890),7467.0
+a5db3aecec580bc78b6c01c118f2628676769b69,2025-08-13,ok,format to std::string,,,,,,,fix: OPERATOR_LITERAL Wdeprecated-literal-operator (#890),8594.0
+a5db3aecec580bc78b6c01c118f2628676769b69,2025-08-13,ok,days to year_month_day,,,,,,,fix: OPERATOR_LITERAL Wdeprecated-literal-operator (#890),86.0
+b2e917ce6ca8dc11403772f6161b8f69f808c38b,2025-12-01,ok,parse with istringstream,,,,,,,Bring leap_second up to spec * Adds value() member function.,7467.0
+b2e917ce6ca8dc11403772f6161b8f69f808c38b,2025-12-01,ok,format to std::string,,,,,,,Bring leap_second up to spec * Adds value() member function.,8594.0
+b2e917ce6ca8dc11403772f6161b8f69f808c38b,2025-12-01,ok,days to year_month_day,,,,,,,Bring leap_second up to spec * Adds value() member function.,86.0
+1a70f8c8a8893fd06fdedb9d1b9e73d6c114bf99,2026-03-26,ok,parse with istringstream,,,,,,,Prevent overflow when using 32 bit minutes,7467.0
+1a70f8c8a8893fd06fdedb9d1b9e73d6c114bf99,2026-03-26,ok,format to std::string,,,,,,,Prevent overflow when using 32 bit minutes,8594.0
+1a70f8c8a8893fd06fdedb9d1b9e73d6c114bf99,2026-03-26,ok,days to year_month_day,,,,,,,Prevent overflow when using 32 bit minutes,86.0
+229fe90c99a7aa81cb94a302f18d174d60856e32,2026-08-06,ok,parse with istringstream,,,,,,,Limit parse width modifier to 2 digits,7468.0
+229fe90c99a7aa81cb94a302f18d174d60856e32,2026-08-06,ok,format to std::string,,,,,,,Limit parse width modifier to 2 digits,8594.0
+229fe90c99a7aa81cb94a302f18d174d60856e32,2026-08-06,ok,days to year_month_day,,,,,,,Limit parse width modifier to 2 digits,86.0
+a90fd4d34ae0eaf15ad3e3e2fc7019631ca57613,2026-08-15,ok,parse with istringstream,,,,,,,fix: do not stream %X when time-of-day is absent (#393) (#920),7468.0
+a90fd4d34ae0eaf15ad3e3e2fc7019631ca57613,2026-08-15,ok,format to std::string,,,,,,,fix: do not stream %X when time-of-day is absent (#393) (#920),8594.0
+a90fd4d34ae0eaf15ad3e3e2fc7019631ca57613,2026-08-15,ok,days to year_month_day,,,,,,,fix: do not stream %X when time-of-day is absent (#393) (#920),86.0
+4bb501c01b0fad72a94adce9936fbfe155f155d7,2026-08-20,ok,parse with istringstream,,,,,,,Remove dependence on long double from parsing seconds,6766.0
+4bb501c01b0fad72a94adce9936fbfe155f155d7,2026-08-20,ok,format to std::string,,,,,,,Remove dependence on long double from parsing seconds,8594.0
+4bb501c01b0fad72a94adce9936fbfe155f155d7,2026-08-20,ok,days to year_month_day,,,,,,,Remove dependence on long double from parsing seconds,86.0
+1985470684aaca52051a6a5b1919c946ded6087b,2026-08-27,ok,parse with istringstream,,,,,,,Fix wrong time zone displayed with %c on some locales. (#922),6766.0
+1985470684aaca52051a6a5b1919c946ded6087b,2026-08-27,ok,format to std::string,,,,,,,Fix wrong time zone displayed with %c on some locales. (#922),8594.0
+1985470684aaca52051a6a5b1919c946ded6087b,2026-08-27,ok,days to year_month_day,,,,,,,Fix wrong time zone displayed with %c on some locales. (#922),86.0
+4ccff92e229262e66fba100aeab7157a7117c112,2026-08-26,ok,parse with istringstream,,,,,,,Minor tweaks to read_seconds,6754.0
+4ccff92e229262e66fba100aeab7157a7117c112,2026-08-26,ok,format to std::string,,,,,,,Minor tweaks to read_seconds,8594.0
+4ccff92e229262e66fba100aeab7157a7117c112,2026-08-26,ok,days to year_month_day,,,,,,,Minor tweaks to read_seconds,86.0
+bd779ac5d2cfc791a0d7b5370039764b50e06604,2026-10-04,ok,parse with istringstream,,,,,,,Fix %p (AM/PM) parsing when extracting sys_time (#923),6746.0
+bd779ac5d2cfc791a0d7b5370039764b50e06604,2026-10-04,ok,format to std::string,,,,,,,Fix %p (AM/PM) parsing when extracting sys_time (#923),8594.0
+bd779ac5d2cfc791a0d7b5370039764b50e06604,2026-10-04,ok,days to year_month_day,,,,,,,Fix %p (AM/PM) parsing when extracting sys_time (#923),86.0
+43d052df84ab7ed0abfde93c6cc0074da042bdc5,2026-10-03,ok,parse with istringstream,,,,,,,Fix consistency of 12-hour and 24-hour parsing (#925),6746.0
+43d052df84ab7ed0abfde93c6cc0074da042bdc5,2026-10-03,ok,format to std::string,,,,,,,Fix consistency of 12-hour and 24-hour parsing (#925),8594.0
+43d052df84ab7ed0abfde93c6cc0074da042bdc5,2026-10-03,ok,days to year_month_day,,,,,,,Fix consistency of 12-hour and 24-hour parsing (#925),86.0
+94844323dd580552bc1d8ad84ab8c0395d91f1f0,2026-10-17,ok,parse with istringstream,,,,,,,Fix %D for negative years (#926),6746.0
+94844323dd580552bc1d8ad84ab8c0395d91f1f0,2026-10-17,ok,format to std::string,,,,,,,Fix %D for negative years (#926),8594.0
+94844323dd580552bc1d8ad84ab8c0395d91f1f0,2026-10-17,ok,days to year_month_day,,,,,,,Fix %D for negative years (#926),86.0
+7f548696c104c22133f850a2cd8cff8cc93eb1f9,2026-10-17,ok,parse with istringstream,,,,,,,Fix %F zero-filling before the minus sign of a negative year (#927),6746.0
+7f548696c104c22133f850a2cd8cff8cc93eb1f9,2026-10-17,ok,format to std::string,,,,,,,Fix %F zero-filling before the minus sign of a negative year (#927),8594.0
+7f548696c104c22133f850a2cd8cff8cc93eb1f9,2026-10-17,ok,days to year_month_day,,,,,,,Fix %F zero-filling before the minus sign of a negative year (#927),86.0
+3c53a4e8211288d9041ab47e8769ac20f30d2bc8,2026-10-17,ok,parse with istringstream,,,,,,,Add date:: qualifier to use of from_stream in several places,6746.0
+3c53a4e8211288d9041ab47e8769ac20f30d2bc8,2026-10-17,ok,format to std::string,,,,,,,Add date:: qualifier to use of from_stream in several places,8594.0
+3c53a4e8211288d9041ab47e8769ac20f30d2bc8,2026-10-17,ok,days to year_month_day,,,,,,,Add date:: qualifier to use of from_stream in several places,86.0
+af65278cd2c014493d7a2d2f9da995ff39f29d33,2026-10-19,ok,parse with istringstream,,,,,,,Put a single minus sign in front of negative durations (#930),6746.0
+af65278cd2c014493d7a2d2f9da995ff39f29d33,2026-10-19,ok,format to std::string,,,,,,,Put a single minus sign in front of negative durations (#930),8596.0
+af65278cd2c014493d7a2d2f9da995ff39f29d33,2026-10-19,ok,days to year_month_day,,,,,,,Put a single minus sign in front of negative durations (#930),86.0
+0444fd9d0f5ecf70d790bbe7bdf5bf314834f05a,2026-10-20,ok,parse with istringstream,,,,,,,"fix out-of-range ctype calls in from_stream, ptz and tz.cpp (#931)",6746.0
+0444fd9d0f5ecf70d790bbe7bdf5bf314834f05a,2026-10-20,ok,format to std::string,,,,,,,"fix out-of-range ctype calls in from_stream, ptz and tz.cpp (#931)",8596.0
+0444fd9d0f5ecf70d790bbe7bdf5bf314834f05a,2026-10-20,ok,days to year_month_day,,,,,,,"fix out-of-range ctype calls in from_stream, ptz and tz.cpp (#931)",86.0
+1a45e1a5d783f08bb5d8cb0a54f03ad13a4fb28e,2026-10-27,ok,parse with istringstream,,,,,,,don't truncate wide characters in from_stream digit and keyword checks (#937),6746.0
+1a45e1a5d783f08bb5d8cb0a54f03ad13a4fb28e,2026-10-27,ok,format to std::string,,,,,,,don't truncate wide characters in from_stream digit and keyword checks (#937),8596.0
+1a45e1a5d783f08bb5d8cb0a54f03ad13a4fb28e,2026-10-27,ok,days to year_month_day,,,,,,,don't truncate wide characters in from_stream digit and keyword checks (#937),86.0
+f2259912504104b49351a4fa6c5fac05b9792ffd,2026-10-29,ok,parse with istringstream,,,,,,,reject a %j day of year that falls outside the parsed %Y (#942),6744.0
+f2259912504104b49351a4fa6c5fac05b9792ffd,2026-10-29,ok,format to std::string,,,,,,,reject a %j day of year that falls outside the parsed %Y (#942),8596.0
+f2259912504104b49351a4fa6c5fac05b9792ffd,2026-10-29,ok,days to year_month_day,,,,,,,reject a %j day of year that falls outside the parsed %Y (#942),86.0
+06cd3210093aeeed904705fdb473db2f3694cf0a,2026-10-30,ok,parse with istringstream,,,,,,,reject %z offsets whose minutes are 60 or more (#945),6743.0
+06cd3210093aeeed904705fdb473db2f3694cf0a,2026-10-30,ok,format to std::string,,,,,,,reject %z offsets whose minutes are 60 or more (#945),8596.0
+06cd3210093aeeed904705fdb473db2f3694cf0a,2026-10-30,ok,days to year_month_day,,,,,,,reject %z offsets whose minutes are 60 or more (#945),86.0

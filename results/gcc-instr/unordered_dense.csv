@@ -1,0 +1,447 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+be005a36935a4ea9c17ce8191e755cada908033b,2022-06-24,build failed,,,,,,,,initial commit
+b7f832a18662b6267a65ebab218790c45c77f29c,2022-06-25,build failed,,,,,,,,relatively untested erase
+2dfbe13e1fb6fbba6e4a2236bc8b0494be00a24e,2022-06-25,build failed,,,,,,,,iter impl
+30d2c80fdfe23a83bb7e4ed562ca2baa5813fc61,2022-06-25,build failed,,,,,,,,emplace
+0f811b0a4400a6342109638c34ed5f66a6e47057,2022-06-26,build failed,,,,,,,,detect avalanching hash
+ded9200aff1d3658371945c2ad632186fb92a5db,2022-06-27,build failed,,,,,,,,reduce load factor because we can afford it
+c3677155741a1663c7b819798ca9d97aba4f4ece,2022-06-27,build failed,,,,,,,,"lots of tests added, nicely split public & private section"
+6bd6da26ee64357515d1fc9140b395043b840b40,2022-06-27,build failed,,,,,,,,all ctors are now supported
+098eff0b4f163c9152273e1a04f3e088fd0468c5,2022-06-28,build failed,,,,,,,,fix memory leak (found with address sanitizer)
+e3d8bafb77438ba9f9eb3da84384c955129a60ab,2022-06-30,build failed,,,,,,,,more API
+e4db75e43fbcff1f309a94bbbcf3268c442f5deb,2022-06-30,ok,find (hit),,,,,,,set works,72.09
+e4db75e43fbcff1f309a94bbbcf3268c442f5deb,2022-06-30,ok,find (miss),,,,,,,set works,84.05
+e4db75e43fbcff1f309a94bbbcf3268c442f5deb,2022-06-30,ok,insert+erase,,,,,,,set works,321.15
+e4db75e43fbcff1f309a94bbbcf3268c442f5deb,2022-06-30,ok,operator[] (hit),,,,,,,set works,85.3
+102d404c180a8ec1e3df5c34eeab0fd2156c9e8d,2022-07-01,ok,find (hit),,,,,,,clang-format,72.09
+102d404c180a8ec1e3df5c34eeab0fd2156c9e8d,2022-07-01,ok,find (miss),,,,,,,clang-format,84.05
+102d404c180a8ec1e3df5c34eeab0fd2156c9e8d,2022-07-01,ok,insert+erase,,,,,,,clang-format,321.15
+102d404c180a8ec1e3df5c34eeab0fd2156c9e8d,2022-07-01,ok,operator[] (hit),,,,,,,clang-format,85.3
+b062ef18a3e61cfd90bcaf6a21dadda08aaeacab,2022-07-01,ok,find (hit),,,,,,,optional PMR,72.09
+b062ef18a3e61cfd90bcaf6a21dadda08aaeacab,2022-07-01,ok,find (miss),,,,,,,optional PMR,84.05
+b062ef18a3e61cfd90bcaf6a21dadda08aaeacab,2022-07-01,ok,insert+erase,,,,,,,optional PMR,321.15
+b062ef18a3e61cfd90bcaf6a21dadda08aaeacab,2022-07-01,ok,operator[] (hit),,,,,,,optional PMR,85.3
+51a802ab495b76d48696f05989f242db9bf056b5,2022-07-04,ok,find (hit),,,,,,,"minor cleanups, more compact code",72.09
+51a802ab495b76d48696f05989f242db9bf056b5,2022-07-04,ok,find (miss),,,,,,,"minor cleanups, more compact code",84.05
+51a802ab495b76d48696f05989f242db9bf056b5,2022-07-04,ok,insert+erase,,,,,,,"minor cleanups, more compact code",321.15
+51a802ab495b76d48696f05989f242db9bf056b5,2022-07-04,ok,operator[] (hit),,,,,,,"minor cleanups, more compact code",85.3
+cbe87773ee6f14520dcfa60ec456843bfadbaf25,2022-07-08,ok,find (hit),,,,,,,Updated semver 1.0.1 for MSVC fix,72.09
+cbe87773ee6f14520dcfa60ec456843bfadbaf25,2022-07-08,ok,find (miss),,,,,,,Updated semver 1.0.1 for MSVC fix,84.05
+cbe87773ee6f14520dcfa60ec456843bfadbaf25,2022-07-08,ok,insert+erase,,,,,,,Updated semver 1.0.1 for MSVC fix,321.15
+cbe87773ee6f14520dcfa60ec456843bfadbaf25,2022-07-08,ok,operator[] (hit),,,,,,,Updated semver 1.0.1 for MSVC fix,85.3
+d2aa16be73644f129a91b24be0ae2d932ae407c9,2022-07-15,ok,find (hit),,,,,,,add fuzz corpus for string,72.09
+d2aa16be73644f129a91b24be0ae2d932ae407c9,2022-07-15,ok,find (miss),,,,,,,add fuzz corpus for string,84.05
+d2aa16be73644f129a91b24be0ae2d932ae407c9,2022-07-15,ok,insert+erase,,,,,,,add fuzz corpus for string,322.15
+d2aa16be73644f129a91b24be0ae2d932ae407c9,2022-07-15,ok,operator[] (hit),,,,,,,add fuzz corpus for string,85.3
+92fd708eded2ebb0d53d4dc806191b7cbf0d528a,2022-07-17,ok,find (hit),,,,,,,deduction guides don't work,72.09
+92fd708eded2ebb0d53d4dc806191b7cbf0d528a,2022-07-17,ok,find (miss),,,,,,,deduction guides don't work,84.05
+92fd708eded2ebb0d53d4dc806191b7cbf0d528a,2022-07-17,ok,insert+erase,,,,,,,deduction guides don't work,322.15
+92fd708eded2ebb0d53d4dc806191b7cbf0d528a,2022-07-17,ok,operator[] (hit),,,,,,,deduction guides don't work,85.3
+0ed0ddb1c324edd26a8c58c89c8262a17a15d39b,2022-07-17,ok,find (hit),,,,,,,slightly faster emplace,71.09
+0ed0ddb1c324edd26a8c58c89c8262a17a15d39b,2022-07-17,ok,find (miss),,,,,,,slightly faster emplace,83.05
+0ed0ddb1c324edd26a8c58c89c8262a17a15d39b,2022-07-17,ok,insert+erase,,,,,,,slightly faster emplace,322.15
+0ed0ddb1c324edd26a8c58c89c8262a17a15d39b,2022-07-17,ok,operator[] (hit),,,,,,,slightly faster emplace,85.3
+6fa4cac6489247fb18132d4ca0387c4fe1596b23,2022-07-18,ok,find (hit),,,,,,,"up version to 1.0.3, minor speedup for g++",71.09
+6fa4cac6489247fb18132d4ca0387c4fe1596b23,2022-07-18,ok,find (miss),,,,,,,"up version to 1.0.3, minor speedup for g++",83.05
+6fa4cac6489247fb18132d4ca0387c4fe1596b23,2022-07-18,ok,insert+erase,,,,,,,"up version to 1.0.3, minor speedup for g++",322.15
+6fa4cac6489247fb18132d4ca0387c4fe1596b23,2022-07-18,ok,operator[] (hit),,,,,,,"up version to 1.0.3, minor speedup for g++",82.71
+a8a1488779f73665dabdf0fbf814b07f475fbe5f,2022-07-18,ok,find (hit),,,,,,,"less instructions, just about the same speed",69.55
+a8a1488779f73665dabdf0fbf814b07f475fbe5f,2022-07-18,ok,find (miss),,,,,,,"less instructions, just about the same speed",76.98
+a8a1488779f73665dabdf0fbf814b07f475fbe5f,2022-07-18,ok,insert+erase,,,,,,,"less instructions, just about the same speed",322.15
+a8a1488779f73665dabdf0fbf814b07f475fbe5f,2022-07-18,ok,operator[] (hit),,,,,,,"less instructions, just about the same speed",82.71
+18708c1826c669c9239f7d1deb40cda2a0fa9e2c,2022-07-19,ok,find (hit),,,,,,,fix #12,69.55
+18708c1826c669c9239f7d1deb40cda2a0fa9e2c,2022-07-19,ok,find (miss),,,,,,,fix #12,76.98
+18708c1826c669c9239f7d1deb40cda2a0fa9e2c,2022-07-19,ok,insert+erase,,,,,,,fix #12,322.15
+18708c1826c669c9239f7d1deb40cda2a0fa9e2c,2022-07-19,ok,operator[] (hit),,,,,,,fix #12,82.71
+782a055c4fdb7587383d2b316ab680f86be7d539,2022-07-29,ok,find (hit),,,,,,,new API: values() and extract(),69.55
+782a055c4fdb7587383d2b316ab680f86be7d539,2022-07-29,ok,find (miss),,,,,,,new API: values() and extract(),76.98
+782a055c4fdb7587383d2b316ab680f86be7d539,2022-07-29,ok,insert+erase,,,,,,,new API: values() and extract(),322.15
+782a055c4fdb7587383d2b316ab680f86be7d539,2022-07-29,ok,operator[] (hit),,,,,,,new API: values() and extract(),82.71
+a6423a7f96dd49cbce78316891498b413df090b4,2022-08-01,ok,find (hit),,,,,,,Change buckets from pointers to indexing,73.06
+a6423a7f96dd49cbce78316891498b413df090b4,2022-08-01,ok,find (miss),,,,,,,Change buckets from pointers to indexing,81.55
+a6423a7f96dd49cbce78316891498b413df090b4,2022-08-01,ok,insert+erase,,,,,,,Change buckets from pointers to indexing,340.25
+a6423a7f96dd49cbce78316891498b413df090b4,2022-08-01,ok,operator[] (hit),,,,,,,Change buckets from pointers to indexing,85.89
+94156450d991515faa07ccd3823a2592c000e49f,2022-08-02,ok,find (hit),,,,,,,Merge pull request #17 from martinus/2022-08-custom-bucket-types,73.06
+94156450d991515faa07ccd3823a2592c000e49f,2022-08-02,ok,find (miss),,,,,,,Merge pull request #17 from martinus/2022-08-custom-bucket-types,81.55
+94156450d991515faa07ccd3823a2592c000e49f,2022-08-02,ok,insert+erase,,,,,,,Merge pull request #17 from martinus/2022-08-custom-bucket-types,340.25
+94156450d991515faa07ccd3823a2592c000e49f,2022-08-02,ok,operator[] (hit),,,,,,,Merge pull request #17 from martinus/2022-08-custom-bucket-types,85.89
+1f50c22690c0f47fd67e00cb3366e52e41b71424,2022-08-15,ok,find (hit),,,,,,,Merge pull request #20 from martinus/2022-07-allocator-or-container,73.06
+1f50c22690c0f47fd67e00cb3366e52e41b71424,2022-08-15,ok,find (miss),,,,,,,Merge pull request #20 from martinus/2022-07-allocator-or-container,81.55
+1f50c22690c0f47fd67e00cb3366e52e41b71424,2022-08-15,ok,insert+erase,,,,,,,Merge pull request #20 from martinus/2022-07-allocator-or-container,340.25
+1f50c22690c0f47fd67e00cb3366e52e41b71424,2022-08-15,ok,operator[] (hit),,,,,,,Merge pull request #20 from martinus/2022-07-allocator-or-container,85.89
+8b0c88390bce04da3a4f33ba98583ad4b593f1db,2022-08-15,ok,find (hit),,,,,,,Merge pull request #21 from martinus/2022-08-small-bucket,74.85
+8b0c88390bce04da3a4f33ba98583ad4b593f1db,2022-08-15,ok,find (miss),,,,,,,Merge pull request #21 from martinus/2022-08-small-bucket,86.12
+8b0c88390bce04da3a4f33ba98583ad4b593f1db,2022-08-15,ok,insert+erase,,,,,,,Merge pull request #21 from martinus/2022-08-small-bucket,362.71
+8b0c88390bce04da3a4f33ba98583ad4b593f1db,2022-08-15,ok,operator[] (hit),,,,,,,Merge pull request #21 from martinus/2022-08-small-bucket,87.48
+9673aa502374866c12d73d953fed19da2f5d255c,2022-08-25,ok,find (hit),,,,,,,"Enable consistent .clang-tidy style style, fix all style warnings",74.85
+9673aa502374866c12d73d953fed19da2f5d255c,2022-08-25,ok,find (miss),,,,,,,"Enable consistent .clang-tidy style style, fix all style warnings",86.12
+9673aa502374866c12d73d953fed19da2f5d255c,2022-08-25,ok,insert+erase,,,,,,,"Enable consistent .clang-tidy style style, fix all style warnings",362.71
+9673aa502374866c12d73d953fed19da2f5d255c,2022-08-25,ok,operator[] (hit),,,,,,,"Enable consistent .clang-tidy style style, fix all style warnings",87.48
+a3cee713bf27a6b1ad26941cda89fe84c44012c9,2022-09-24,ok,find (hit),,,,,,,fix: change contains() return type from size_to to bool,74.85
+a3cee713bf27a6b1ad26941cda89fe84c44012c9,2022-09-24,ok,find (miss),,,,,,,fix: change contains() return type from size_to to bool,86.12
+a3cee713bf27a6b1ad26941cda89fe84c44012c9,2022-09-24,ok,insert+erase,,,,,,,fix: change contains() return type from size_to to bool,362.71
+a3cee713bf27a6b1ad26941cda89fe84c44012c9,2022-09-24,ok,operator[] (hit),,,,,,,fix: change contains() return type from size_to to bool,87.48
+bf7336568fce3993d0fdb136a9b8599f46d8fb40,2022-11-20,ok,find (hit),,,,,,,Use reserve() in table's constructor,74.85
+bf7336568fce3993d0fdb136a9b8599f46d8fb40,2022-11-20,ok,find (miss),,,,,,,Use reserve() in table's constructor,86.12
+bf7336568fce3993d0fdb136a9b8599f46d8fb40,2022-11-20,ok,insert+erase,,,,,,,Use reserve() in table's constructor,362.71
+bf7336568fce3993d0fdb136a9b8599f46d8fb40,2022-11-20,ok,operator[] (hit),,,,,,,Use reserve() in table's constructor,87.48
+6f6cce0264a20fd4db18e0ad18db228b9a29341d,2022-12-17,ok,find (hit),,,,,,,bump version to 3.0.0 due to incompatible API change for set,74.85
+6f6cce0264a20fd4db18e0ad18db228b9a29341d,2022-12-17,ok,find (miss),,,,,,,bump version to 3.0.0 due to incompatible API change for set,86.12
+6f6cce0264a20fd4db18e0ad18db228b9a29341d,2022-12-17,ok,insert+erase,,,,,,,bump version to 3.0.0 due to incompatible API change for set,362.71
+6f6cce0264a20fd4db18e0ad18db228b9a29341d,2022-12-17,ok,operator[] (hit),,,,,,,bump version to 3.0.0 due to incompatible API change for set,87.48
+2d8a192afe115827996a6cd6d5db5e2400292767,2022-12-11,ok,find (hit),,,,,,,add libc++ compatibility by checking for <experimental/memory_resource>,74.85
+2d8a192afe115827996a6cd6d5db5e2400292767,2022-12-11,ok,find (miss),,,,,,,add libc++ compatibility by checking for <experimental/memory_resource>,86.12
+2d8a192afe115827996a6cd6d5db5e2400292767,2022-12-11,ok,insert+erase,,,,,,,add libc++ compatibility by checking for <experimental/memory_resource>,362.71
+2d8a192afe115827996a6cd6d5db5e2400292767,2022-12-11,ok,operator[] (hit),,,,,,,add libc++ compatibility by checking for <experimental/memory_resource>,87.48
+81c5b32f6ed693a9f6c31a130e76ca24aa9bcc66,2023-01-21,ok,find (hit),,,,,,,Steal robin hood's method of checking for exceptions,74.85
+81c5b32f6ed693a9f6c31a130e76ca24aa9bcc66,2023-01-21,ok,find (miss),,,,,,,Steal robin hood's method of checking for exceptions,86.12
+81c5b32f6ed693a9f6c31a130e76ca24aa9bcc66,2023-01-21,ok,insert+erase,,,,,,,Steal robin hood's method of checking for exceptions,362.71
+81c5b32f6ed693a9f6c31a130e76ca24aa9bcc66,2023-01-21,ok,operator[] (hit),,,,,,,Steal robin hood's method of checking for exceptions,87.48
+a3fea4afc6ecfab0bbfd401aded786a72a8e2b3b,2023-02-23,ok,find (hit),,,,,,,Fix min/max macro compilation error,74.85
+a3fea4afc6ecfab0bbfd401aded786a72a8e2b3b,2023-02-23,ok,find (miss),,,,,,,Fix min/max macro compilation error,86.12
+a3fea4afc6ecfab0bbfd401aded786a72a8e2b3b,2023-02-23,ok,insert+erase,,,,,,,Fix min/max macro compilation error,362.71
+a3fea4afc6ecfab0bbfd401aded786a72a8e2b3b,2023-02-23,ok,operator[] (hit),,,,,,,Fix min/max macro compilation error,87.48
+e88dd1ce6e9dc5b3fe84a7d93ac1d7f6f7653dbf,2023-05-21,ok,find (hit),,,,,,,Bump version to 4.0.1 for the bugfix,74.85
+e88dd1ce6e9dc5b3fe84a7d93ac1d7f6f7653dbf,2023-05-21,ok,find (miss),,,,,,,Bump version to 4.0.1 for the bugfix,86.12
+e88dd1ce6e9dc5b3fe84a7d93ac1d7f6f7653dbf,2023-05-21,ok,insert+erase,,,,,,,Bump version to 4.0.1 for the bugfix,362.71
+e88dd1ce6e9dc5b3fe84a7d93ac1d7f6f7653dbf,2023-05-21,ok,operator[] (hit),,,,,,,Bump version to 4.0.1 for the bugfix,87.48
+dcf85c09fe2254f13e680de1f29a008afeb85680,2023-07-16,ok,find (hit),,,,,,,fix memory leak in move-assignment with different allocators,74.85
+dcf85c09fe2254f13e680de1f29a008afeb85680,2023-07-16,ok,find (miss),,,,,,,fix memory leak in move-assignment with different allocators,86.12
+dcf85c09fe2254f13e680de1f29a008afeb85680,2023-07-16,ok,insert+erase,,,,,,,fix memory leak in move-assignment with different allocators,362.71
+dcf85c09fe2254f13e680de1f29a008afeb85680,2023-07-16,ok,operator[] (hit),,,,,,,fix memory leak in move-assignment with different allocators,87.48
+6eb678272b69777dadf0d46ce2d888c6cc2308da,2023-08-27,ok,find (hit),,,,,,,bump version to 4.1.1,74.85
+6eb678272b69777dadf0d46ce2d888c6cc2308da,2023-08-27,ok,find (miss),,,,,,,bump version to 4.1.1,86.12
+6eb678272b69777dadf0d46ce2d888c6cc2308da,2023-08-27,ok,insert+erase,,,,,,,bump version to 4.1.1,362.71
+6eb678272b69777dadf0d46ce2d888c6cc2308da,2023-08-27,ok,operator[] (hit),,,,,,,bump version to 4.1.1,87.48
+fcf98a0f0629c563d8cf0c245292aa9205e68b23,2023-12-11,ok,find (hit),,,,,,,clang-format,74.85
+fcf98a0f0629c563d8cf0c245292aa9205e68b23,2023-12-11,ok,find (miss),,,,,,,clang-format,86.12
+fcf98a0f0629c563d8cf0c245292aa9205e68b23,2023-12-11,ok,insert+erase,,,,,,,clang-format,362.71
+fcf98a0f0629c563d8cf0c245292aa9205e68b23,2023-12-11,ok,operator[] (hit),,,,,,,clang-format,87.48
+dc4c34381f7c65b87353fc06bf7d3fc19a243ce7,2023-12-14,ok,find (hit),,,,,,,"For try_emplace / operator[], only reallocate buckets when actual insert occurs",74.85
+dc4c34381f7c65b87353fc06bf7d3fc19a243ce7,2023-12-14,ok,find (miss),,,,,,,"For try_emplace / operator[], only reallocate buckets when actual insert occurs",86.12
+dc4c34381f7c65b87353fc06bf7d3fc19a243ce7,2023-12-14,ok,insert+erase,,,,,,,"For try_emplace / operator[], only reallocate buckets when actual insert occurs",364.06
+dc4c34381f7c65b87353fc06bf7d3fc19a243ce7,2023-12-14,ok,operator[] (hit),,,,,,,"For try_emplace / operator[], only reallocate buckets when actual insert occurs",79.89
+335e66cae95064251488dee3a4db663d8ede32f0,2023-12-14,ok,find (hit),,,,,,,bump version to 4.2.0,74.85
+335e66cae95064251488dee3a4db663d8ede32f0,2023-12-14,ok,find (miss),,,,,,,bump version to 4.2.0,86.12
+335e66cae95064251488dee3a4db663d8ede32f0,2023-12-14,ok,insert+erase,,,,,,,bump version to 4.2.0,364.06
+335e66cae95064251488dee3a4db663d8ede32f0,2023-12-14,ok,operator[] (hit),,,,,,,bump version to 4.2.0,79.89
+6f94f87e66169ab2e93e4f6882176a1bed9dcbd7,2023-12-17,ok,find (hit),,,,,,,bump version to 4.3.0,74.85
+6f94f87e66169ab2e93e4f6882176a1bed9dcbd7,2023-12-17,ok,find (miss),,,,,,,bump version to 4.3.0,86.12
+6f94f87e66169ab2e93e4f6882176a1bed9dcbd7,2023-12-17,ok,insert+erase,,,,,,,bump version to 4.3.0,364.06
+6f94f87e66169ab2e93e4f6882176a1bed9dcbd7,2023-12-17,ok,operator[] (hit),,,,,,,bump version to 4.3.0,79.89
+58eb6bc2395e9925c00b5c85f90b0ad85568f5fa,2023-12-22,ok,find (hit),,,,,,,Add extract(key) and extract(it) API.,74.85
+58eb6bc2395e9925c00b5c85f90b0ad85568f5fa,2023-12-22,ok,find (miss),,,,,,,Add extract(key) and extract(it) API.,86.12
+58eb6bc2395e9925c00b5c85f90b0ad85568f5fa,2023-12-22,ok,insert+erase,,,,,,,Add extract(key) and extract(it) API.,364.06
+58eb6bc2395e9925c00b5c85f90b0ad85568f5fa,2023-12-22,ok,operator[] (hit),,,,,,,Add extract(key) and extract(it) API.,79.89
+064a245ea0e2267e974d0b092bfa97f69fe313df,2024-10-05,ok,find (hit),,,,,,,"update all dependencies, add file for reentrant test",74.85
+064a245ea0e2267e974d0b092bfa97f69fe313df,2024-10-05,ok,find (miss),,,,,,,"update all dependencies, add file for reentrant test",86.12
+064a245ea0e2267e974d0b092bfa97f69fe313df,2024-10-05,ok,insert+erase,,,,,,,"update all dependencies, add file for reentrant test",364.06
+064a245ea0e2267e974d0b092bfa97f69fe313df,2024-10-05,ok,operator[] (hit),,,,,,,"update all dependencies, add file for reentrant test",79.89
+6d20fbb1526a04d762d6b47feece1b966053fe46,2024-03-06,ok,find (hit),,,,,,,segment_map: Also segment the bucket array,76.14
+6d20fbb1526a04d762d6b47feece1b966053fe46,2024-03-06,ok,find (miss),,,,,,,segment_map: Also segment the bucket array,88.12
+6d20fbb1526a04d762d6b47feece1b966053fe46,2024-03-06,ok,insert+erase,,,,,,,segment_map: Also segment the bucket array,375.79
+6d20fbb1526a04d762d6b47feece1b966053fe46,2024-03-06,ok,operator[] (hit),,,,,,,segment_map: Also segment the bucket array,84.65
+9fb78471787ae0cf4709fecda2786bcd0056b3f2,2024-03-21,ok,find (hit),,,,,,,segment_map: Allow also specifying a custom container for the bucket array,76.14
+9fb78471787ae0cf4709fecda2786bcd0056b3f2,2024-03-21,ok,find (miss),,,,,,,segment_map: Allow also specifying a custom container for the bucket array,88.12
+9fb78471787ae0cf4709fecda2786bcd0056b3f2,2024-03-21,ok,insert+erase,,,,,,,segment_map: Allow also specifying a custom container for the bucket array,375.79
+9fb78471787ae0cf4709fecda2786bcd0056b3f2,2024-03-21,ok,operator[] (hit),,,,,,,segment_map: Allow also specifying a custom container for the bucket array,84.65
+67e8d7bd432f027cf898696de579ff3b229643cf,2024-12-03,ok,find (hit),,,,,,,clang-format version 19.1.4 updates,76.14
+67e8d7bd432f027cf898696de579ff3b229643cf,2024-12-03,ok,find (miss),,,,,,,clang-format version 19.1.4 updates,88.12
+67e8d7bd432f027cf898696de579ff3b229643cf,2024-12-03,ok,insert+erase,,,,,,,clang-format version 19.1.4 updates,375.79
+67e8d7bd432f027cf898696de579ff3b229643cf,2024-12-03,ok,operator[] (hit),,,,,,,clang-format version 19.1.4 updates,84.65
+5dbcfc7650839bafcb79b486694da9f6a79eee87,2025-03-19,ok,find (hit),,,,,,,implement resize functions,76.14
+5dbcfc7650839bafcb79b486694da9f6a79eee87,2025-03-19,ok,find (miss),,,,,,,implement resize functions,88.12
+5dbcfc7650839bafcb79b486694da9f6a79eee87,2025-03-19,ok,insert+erase,,,,,,,implement resize functions,375.79
+5dbcfc7650839bafcb79b486694da9f6a79eee87,2025-03-19,ok,operator[] (hit),,,,,,,implement resize functions,84.65
+70c4c79719938e13dec265689b349734fc32ff3c,2025-03-30,ok,find (hit),,,,,,,"Fixed compiler error C2061 in VS2022 syntax error: identifier 'T'""",76.14
+70c4c79719938e13dec265689b349734fc32ff3c,2025-03-30,ok,find (miss),,,,,,,"Fixed compiler error C2061 in VS2022 syntax error: identifier 'T'""",88.12
+70c4c79719938e13dec265689b349734fc32ff3c,2025-03-30,ok,insert+erase,,,,,,,"Fixed compiler error C2061 in VS2022 syntax error: identifier 'T'""",375.79
+70c4c79719938e13dec265689b349734fc32ff3c,2025-03-30,ok,operator[] (hit),,,,,,,"Fixed compiler error C2061 in VS2022 syntax error: identifier 'T'""",84.65
+0314c5f3ca1a37dd1318dbff506c38ee91fb76c2,2024-12-10,ok,find (hit),,,,,,,"Fix MinGW build with _WIN32_WINNT<0x600, GCC>=13, model=win32",76.14
+0314c5f3ca1a37dd1318dbff506c38ee91fb76c2,2024-12-10,ok,find (miss),,,,,,,"Fix MinGW build with _WIN32_WINNT<0x600, GCC>=13, model=win32",88.12
+0314c5f3ca1a37dd1318dbff506c38ee91fb76c2,2024-12-10,ok,insert+erase,,,,,,,"Fix MinGW build with _WIN32_WINNT<0x600, GCC>=13, model=win32",375.79
+0314c5f3ca1a37dd1318dbff506c38ee91fb76c2,2024-12-10,ok,operator[] (hit),,,,,,,"Fix MinGW build with _WIN32_WINNT<0x600, GCC>=13, model=win32",84.65
+a3a17f01e8d946ea66f4f3ac8a423bf504d1628a,2024-12-08,ok,find (hit),,,,,,,Add support for c++20 likely/unlikely attributes,74.96
+a3a17f01e8d946ea66f4f3ac8a423bf504d1628a,2024-12-08,ok,find (miss),,,,,,,Add support for c++20 likely/unlikely attributes,85.12
+a3a17f01e8d946ea66f4f3ac8a423bf504d1628a,2024-12-08,ok,insert+erase,,,,,,,Add support for c++20 likely/unlikely attributes,371.79
+a3a17f01e8d946ea66f4f3ac8a423bf504d1628a,2024-12-08,ok,operator[] (hit),,,,,,,Add support for c++20 likely/unlikely attributes,84.65
+43fa2f36be1347ce8a14a93c8c7225d6e36fbe89,2025-10-07,ok,find (hit),,,,,,,Refactor type aliasing to remove unnecessary typename qualifiers in unordered_dense.h,74.96
+43fa2f36be1347ce8a14a93c8c7225d6e36fbe89,2025-10-07,ok,find (miss),,,,,,,Refactor type aliasing to remove unnecessary typename qualifiers in unordered_dense.h,85.12
+43fa2f36be1347ce8a14a93c8c7225d6e36fbe89,2025-10-07,ok,insert+erase,,,,,,,Refactor type aliasing to remove unnecessary typename qualifiers in unordered_dense.h,371.79
+43fa2f36be1347ce8a14a93c8c7225d6e36fbe89,2025-10-07,ok,operator[] (hit),,,,,,,Refactor type aliasing to remove unnecessary typename qualifiers in unordered_dense.h,84.65
+48b9d3920321cd184f220d7e0f62b9d8f5ca04c9,2025-10-26,ok,find (hit),,,,,,,support C++23 import std on unordered_dense module,74.96
+48b9d3920321cd184f220d7e0f62b9d8f5ca04c9,2025-10-26,ok,find (miss),,,,,,,support C++23 import std on unordered_dense module,85.12
+48b9d3920321cd184f220d7e0f62b9d8f5ca04c9,2025-10-26,ok,insert+erase,,,,,,,support C++23 import std on unordered_dense module,371.79
+48b9d3920321cd184f220d7e0f62b9d8f5ca04c9,2025-10-26,ok,operator[] (hit),,,,,,,support C++23 import std on unordered_dense module,84.65
+3b454f0ebe5c50369e05fb43c37d5ef0b9eae972,2025-10-27,ok,find (hit),,,,,,,"bump version to 4.8.0, update stl.h in linter script",74.96
+3b454f0ebe5c50369e05fb43c37d5ef0b9eae972,2025-10-27,ok,find (miss),,,,,,,"bump version to 4.8.0, update stl.h in linter script",85.12
+3b454f0ebe5c50369e05fb43c37d5ef0b9eae972,2025-10-27,ok,insert+erase,,,,,,,"bump version to 4.8.0, update stl.h in linter script",371.79
+3b454f0ebe5c50369e05fb43c37d5ef0b9eae972,2025-10-27,ok,operator[] (hit),,,,,,,"bump version to 4.8.0, update stl.h in linter script",84.65
+7b55cab8418da1603496462ce3ccdb4cb1dc3368,2026-02-01,ok,find (hit),,,,,,,fix macOS clang complaints about signedness,74.96
+7b55cab8418da1603496462ce3ccdb4cb1dc3368,2026-02-01,ok,find (miss),,,,,,,fix macOS clang complaints about signedness,85.12
+7b55cab8418da1603496462ce3ccdb4cb1dc3368,2026-02-01,ok,insert+erase,,,,,,,fix macOS clang complaints about signedness,371.79
+7b55cab8418da1603496462ce3ccdb4cb1dc3368,2026-02-01,ok,operator[] (hit),,,,,,,fix macOS clang complaints about signedness,84.65
+e246b5aa55e8653e84c6013d123df44e54529343,2026-07-02,ok,find (hit),,,,,,,"Speed up hashing, probing, and erase",71.16
+e246b5aa55e8653e84c6013d123df44e54529343,2026-07-02,ok,find (miss),,,,,,,"Speed up hashing, probing, and erase",79.55
+e246b5aa55e8653e84c6013d123df44e54529343,2026-07-02,ok,insert+erase,,,,,,,"Speed up hashing, probing, and erase",344.44
+e246b5aa55e8653e84c6013d123df44e54529343,2026-07-02,ok,operator[] (hit),,,,,,,"Speed up hashing, probing, and erase",78.3
+dac97663fd54098a824ea7241499b8f71b907db3,2026-07-03,ok,find (hit),,,,,,,wyhash: independent tail lane for inputs > 48 bytes,71.16
+dac97663fd54098a824ea7241499b8f71b907db3,2026-07-03,ok,find (miss),,,,,,,wyhash: independent tail lane for inputs > 48 bytes,79.55
+dac97663fd54098a824ea7241499b8f71b907db3,2026-07-03,ok,insert+erase,,,,,,,wyhash: independent tail lane for inputs > 48 bytes,344.44
+dac97663fd54098a824ea7241499b8f71b907db3,2026-07-03,ok,operator[] (hit),,,,,,,wyhash: independent tail lane for inputs > 48 bytes,78.3
+defa41e40345d35806025b0fc99055d319728c24,2026-05-22,ok,find (hit),,,,,,,Fix C4163 warning when target is ARM64EC,71.16
+defa41e40345d35806025b0fc99055d319728c24,2026-05-22,ok,find (miss),,,,,,,Fix C4163 warning when target is ARM64EC,79.55
+defa41e40345d35806025b0fc99055d319728c24,2026-05-22,ok,insert+erase,,,,,,,Fix C4163 warning when target is ARM64EC,344.44
+defa41e40345d35806025b0fc99055d319728c24,2026-05-22,ok,operator[] (hit),,,,,,,Fix C4163 warning when target is ARM64EC,78.3
+d1bb3a8104a810dc52656f1c979d0c6638df48fb,2026-08-05,ok,find (hit),,,,,,,Leave a map that was extracted from actually usable,71.16
+d1bb3a8104a810dc52656f1c979d0c6638df48fb,2026-08-05,ok,find (miss),,,,,,,Leave a map that was extracted from actually usable,79.55
+d1bb3a8104a810dc52656f1c979d0c6638df48fb,2026-08-05,ok,insert+erase,,,,,,,Leave a map that was extracted from actually usable,344.44
+d1bb3a8104a810dc52656f1c979d0c6638df48fb,2026-08-05,ok,operator[] (hit),,,,,,,Leave a map that was extracted from actually usable,78.3
+32e4d984753f3a5646c5c06e6a8c6b6d7d8b4b9d,2026-08-05,ok,find (hit),,,,,,,"Actually enforce clang-format, at a version that cannot move under us",71.16
+32e4d984753f3a5646c5c06e6a8c6b6d7d8b4b9d,2026-08-05,ok,find (miss),,,,,,,"Actually enforce clang-format, at a version that cannot move under us",79.55
+32e4d984753f3a5646c5c06e6a8c6b6d7d8b4b9d,2026-08-05,ok,insert+erase,,,,,,,"Actually enforce clang-format, at a version that cannot move under us",344.44
+32e4d984753f3a5646c5c06e6a8c6b6d7d8b4b9d,2026-08-05,ok,operator[] (hit),,,,,,,"Actually enforce clang-format, at a version that cannot move under us",78.3
+136fed5020edbbf71f14b91e19b948bc683042d3,2026-08-06,ok,find (hit),,,,,,,Fix allocator handling in segmented_vector,71.16
+136fed5020edbbf71f14b91e19b948bc683042d3,2026-08-06,ok,find (miss),,,,,,,Fix allocator handling in segmented_vector,79.55
+136fed5020edbbf71f14b91e19b948bc683042d3,2026-08-06,ok,insert+erase,,,,,,,Fix allocator handling in segmented_vector,344.8
+136fed5020edbbf71f14b91e19b948bc683042d3,2026-08-06,ok,operator[] (hit),,,,,,,Fix allocator handling in segmented_vector,78.3
+30ec70c58ffa5877ec7dc728c615315d7f2dbd43,2026-08-06,ok,find (hit),,,,,,,"Answer the allocator questions for the buckets too, and for swap",71.16
+30ec70c58ffa5877ec7dc728c615315d7f2dbd43,2026-08-06,ok,find (miss),,,,,,,"Answer the allocator questions for the buckets too, and for swap",79.55
+30ec70c58ffa5877ec7dc728c615315d7f2dbd43,2026-08-06,ok,insert+erase,,,,,,,"Answer the allocator questions for the buckets too, and for swap",347.8
+30ec70c58ffa5877ec7dc728c615315d7f2dbd43,2026-08-06,ok,operator[] (hit),,,,,,,"Answer the allocator questions for the buckets too, and for swap",80.3
+8d0e17e015057e611fd7619aae212de402d15c20,2026-08-06,ok,find (hit),,,,,,,Build the new bucket array before releasing the old one,71.16
+8d0e17e015057e611fd7619aae212de402d15c20,2026-08-06,ok,find (miss),,,,,,,Build the new bucket array before releasing the old one,79.55
+8d0e17e015057e611fd7619aae212de402d15c20,2026-08-06,ok,insert+erase,,,,,,,Build the new bucket array before releasing the old one,347.44
+8d0e17e015057e611fd7619aae212de402d15c20,2026-08-06,ok,operator[] (hit),,,,,,,Build the new bucket array before releasing the old one,80.3
+c3afac2bebe1d05e016ff2935f4b61e5ee34b4d4,2026-08-06,ok,find (hit),,,,,,,Read the avalanching marker the way Boost reads it,71.16
+c3afac2bebe1d05e016ff2935f4b61e5ee34b4d4,2026-08-06,ok,find (miss),,,,,,,Read the avalanching marker the way Boost reads it,79.55
+c3afac2bebe1d05e016ff2935f4b61e5ee34b4d4,2026-08-06,ok,insert+erase,,,,,,,Read the avalanching marker the way Boost reads it,347.44
+c3afac2bebe1d05e016ff2935f4b61e5ee34b4d4,2026-08-06,ok,operator[] (hit),,,,,,,Read the avalanching marker the way Boost reads it,80.3
+c4d143b6bbe7c4b2b5700fc26c96ef90d11cb66e,2026-08-10,ok,find (hit),,,,,,,bump version to 4.9.1,71.16
+c4d143b6bbe7c4b2b5700fc26c96ef90d11cb66e,2026-08-10,ok,find (miss),,,,,,,bump version to 4.9.1,79.55
+c4d143b6bbe7c4b2b5700fc26c96ef90d11cb66e,2026-08-10,ok,insert+erase,,,,,,,bump version to 4.9.1,347.44
+c4d143b6bbe7c4b2b5700fc26c96ef90d11cb66e,2026-08-10,ok,operator[] (hit),,,,,,,bump version to 4.9.1,80.3
+d363483c5bb1131d1e13b4178d150b237d62ddf9,2026-08-15,ok,find (hit),,,,,,,Apply the cleanups four review passes agreed on,71.16
+d363483c5bb1131d1e13b4178d150b237d62ddf9,2026-08-15,ok,find (miss),,,,,,,Apply the cleanups four review passes agreed on,79.55
+d363483c5bb1131d1e13b4178d150b237d62ddf9,2026-08-15,ok,insert+erase,,,,,,,Apply the cleanups four review passes agreed on,347.44
+d363483c5bb1131d1e13b4178d150b237d62ddf9,2026-08-15,ok,operator[] (hit),,,,,,,Apply the cleanups four review passes agreed on,80.3
+aa9af528227ab8eb84e40191b7b862715ecad8bb,2026-08-16,ok,find (hit),,,,,,,bump version to 4.9.2,71.16
+aa9af528227ab8eb84e40191b7b862715ecad8bb,2026-08-16,ok,find (miss),,,,,,,bump version to 4.9.2,79.55
+aa9af528227ab8eb84e40191b7b862715ecad8bb,2026-08-16,ok,insert+erase,,,,,,,bump version to 4.9.2,347.44
+aa9af528227ab8eb84e40191b7b862715ecad8bb,2026-08-16,ok,operator[] (hit),,,,,,,bump version to 4.9.2,80.3
+d7ba0898ea398a574892f6885ec07d8c0fdbd92c,2026-09-02,ok,find (hit),,,,,,,"Probe four buckets at once with SSE2, deciding on the lowest lane",115.0
+d7ba0898ea398a574892f6885ec07d8c0fdbd92c,2026-09-02,ok,find (miss),,,,,,,"Probe four buckets at once with SSE2, deciding on the lowest lane",108.97
+d7ba0898ea398a574892f6885ec07d8c0fdbd92c,2026-09-02,ok,insert+erase,,,,,,,"Probe four buckets at once with SSE2, deciding on the lowest lane",380.65
+d7ba0898ea398a574892f6885ec07d8c0fdbd92c,2026-09-02,ok,operator[] (hit),,,,,,,"Probe four buckets at once with SSE2, deciding on the lowest lane",125.96
+11c3fcf9eb3d8b081b9ee81e29e14c2b9a7e3535,2026-09-02,ok,find (hit),,,,,,,Apply the cleanups four review passes agreed on,114.14
+11c3fcf9eb3d8b081b9ee81e29e14c2b9a7e3535,2026-09-02,ok,find (miss),,,,,,,Apply the cleanups four review passes agreed on,108.11
+11c3fcf9eb3d8b081b9ee81e29e14c2b9a7e3535,2026-09-02,ok,insert+erase,,,,,,,Apply the cleanups four review passes agreed on,413.01
+11c3fcf9eb3d8b081b9ee81e29e14c2b9a7e3535,2026-09-02,ok,operator[] (hit),,,,,,,Apply the cleanups four review passes agreed on,121.1
+f81533259325a1b3b5fbc331e518d6deaeaa0443,2026-09-02,ok,find (hit),,,,,,,Enter the six-lane hash block only when it can run twice,114.14
+f81533259325a1b3b5fbc331e518d6deaeaa0443,2026-09-02,ok,find (miss),,,,,,,Enter the six-lane hash block only when it can run twice,108.11
+f81533259325a1b3b5fbc331e518d6deaeaa0443,2026-09-02,ok,insert+erase,,,,,,,Enter the six-lane hash block only when it can run twice,413.01
+f81533259325a1b3b5fbc331e518d6deaeaa0443,2026-09-02,ok,operator[] (hit),,,,,,,Enter the six-lane hash block only when it can run twice,121.1
+b87a158cba0d3e676ce3446ce25553ff0c7846d9,2026-09-02,ok,find (hit),,,,,,,Satisfy the linters on the vector shift,114.14
+b87a158cba0d3e676ce3446ce25553ff0c7846d9,2026-09-02,ok,find (miss),,,,,,,Satisfy the linters on the vector shift,108.11
+b87a158cba0d3e676ce3446ce25553ff0c7846d9,2026-09-02,ok,insert+erase,,,,,,,Satisfy the linters on the vector shift,424.26
+b87a158cba0d3e676ce3446ce25553ff0c7846d9,2026-09-02,ok,operator[] (hit),,,,,,,Satisfy the linters on the vector shift,121.1
+adc537d3386af750c68da561e70f1c6aefbb8366,2026-09-02,ok,find (hit),,,,,,,"Shift four buckets at once when erasing, the mirror of placing",114.14
+adc537d3386af750c68da561e70f1c6aefbb8366,2026-09-02,ok,find (miss),,,,,,,"Shift four buckets at once when erasing, the mirror of placing",108.11
+adc537d3386af750c68da561e70f1c6aefbb8366,2026-09-02,ok,insert+erase,,,,,,,"Shift four buckets at once when erasing, the mirror of placing",446.87
+adc537d3386af750c68da561e70f1c6aefbb8366,2026-09-02,ok,operator[] (hit),,,,,,,"Shift four buckets at once when erasing, the mirror of placing",121.1
+671a8c4ad30d0424cab4d55a83a1ad12b7798f35,2026-09-03,ok,find (hit),,,,,,,bump version to 4.11.0,114.14
+671a8c4ad30d0424cab4d55a83a1ad12b7798f35,2026-09-03,ok,find (miss),,,,,,,bump version to 4.11.0,108.11
+671a8c4ad30d0424cab4d55a83a1ad12b7798f35,2026-09-03,ok,insert+erase,,,,,,,bump version to 4.11.0,446.87
+671a8c4ad30d0424cab4d55a83a1ad12b7798f35,2026-09-03,ok,operator[] (hit),,,,,,,bump version to 4.11.0,121.1
+25ca971ceb2776bcdd843fd540619cc449e80847,2026-09-04,ok,find (hit),,,,,,,Satisfy clang-tidy and the 32 bit legs,114.14
+25ca971ceb2776bcdd843fd540619cc449e80847,2026-09-04,ok,find (miss),,,,,,,Satisfy clang-tidy and the 32 bit legs,108.11
+25ca971ceb2776bcdd843fd540619cc449e80847,2026-09-04,ok,insert+erase,,,,,,,Satisfy clang-tidy and the 32 bit legs,446.87
+25ca971ceb2776bcdd843fd540619cc449e80847,2026-09-04,ok,operator[] (hit),,,,,,,Satisfy clang-tidy and the 32 bit legs,121.1
+722b1ac81aba76a2ebd0d1eb4db9476a8e2390e1,2026-09-05,ok,find (hit),,,,,,,Compare eight fingerprints per word where there is no SSE2,114.14
+722b1ac81aba76a2ebd0d1eb4db9476a8e2390e1,2026-09-05,ok,find (miss),,,,,,,Compare eight fingerprints per word where there is no SSE2,108.11
+722b1ac81aba76a2ebd0d1eb4db9476a8e2390e1,2026-09-05,ok,insert+erase,,,,,,,Compare eight fingerprints per word where there is no SSE2,446.87
+722b1ac81aba76a2ebd0d1eb4db9476a8e2390e1,2026-09-05,ok,operator[] (hit),,,,,,,Compare eight fingerprints per word where there is no SSE2,121.1
+617aa130624b485ca4209f239fa30ad26c565d76,2026-09-05,ok,find (hit),,,,,,,Remove the robin hood index; the group index is the only one,91.1
+617aa130624b485ca4209f239fa30ad26c565d76,2026-09-05,ok,find (miss),,,,,,,Remove the robin hood index; the group index is the only one,87.57
+617aa130624b485ca4209f239fa30ad26c565d76,2026-09-05,ok,insert+erase,,,,,,,Remove the robin hood index; the group index is the only one,224.97
+617aa130624b485ca4209f239fa30ad26c565d76,2026-09-05,ok,operator[] (hit),,,,,,,Remove the robin hood index; the group index is the only one,90.05
+a7b66ab84bd0ba13415a9f4c41a607b98fb9b84e,2026-09-05,ok,find (hit),,,,,,,"Say what churn actually costs the index, which is not nothing",91.1
+a7b66ab84bd0ba13415a9f4c41a607b98fb9b84e,2026-09-05,ok,find (miss),,,,,,,"Say what churn actually costs the index, which is not nothing",87.57
+a7b66ab84bd0ba13415a9f4c41a607b98fb9b84e,2026-09-05,ok,insert+erase,,,,,,,"Say what churn actually costs the index, which is not nothing",224.97
+a7b66ab84bd0ba13415a9f4c41a607b98fb9b84e,2026-09-05,ok,operator[] (hit),,,,,,,"Say what churn actually costs the index, which is not nothing",90.05
+4856ead708a8c237f38c01bf7b2dc15d9c618296,2026-09-05,ok,find (hit),,,,,,,Stop describing a probe that reads four buckets,91.1
+4856ead708a8c237f38c01bf7b2dc15d9c618296,2026-09-05,ok,find (miss),,,,,,,Stop describing a probe that reads four buckets,87.57
+4856ead708a8c237f38c01bf7b2dc15d9c618296,2026-09-05,ok,insert+erase,,,,,,,Stop describing a probe that reads four buckets,224.97
+4856ead708a8c237f38c01bf7b2dc15d9c618296,2026-09-05,ok,operator[] (hit),,,,,,,Stop describing a probe that reads four buckets,90.05
+3dc1404080cc16703975d3445d056d216b5a5278,2026-09-05,ok,find (hit),,,,,,,"Force do_place_element inline, which clang would not do on its own",91.1
+3dc1404080cc16703975d3445d056d216b5a5278,2026-09-05,ok,find (miss),,,,,,,"Force do_place_element inline, which clang would not do on its own",87.57
+3dc1404080cc16703975d3445d056d216b5a5278,2026-09-05,ok,insert+erase,,,,,,,"Force do_place_element inline, which clang would not do on its own",223.97
+3dc1404080cc16703975d3445d056d216b5a5278,2026-09-05,ok,operator[] (hit),,,,,,,"Force do_place_element inline, which clang would not do on its own",100.05
+49a531bd6ae7368ed5d8590820317807d003957e,2026-09-05,ok,find (hit),,,,,,,Bound the miss probe so a hostile hash cannot make a lookup loop forever,91.1
+49a531bd6ae7368ed5d8590820317807d003957e,2026-09-05,ok,find (miss),,,,,,,Bound the miss probe so a hostile hash cannot make a lookup loop forever,88.76
+49a531bd6ae7368ed5d8590820317807d003957e,2026-09-05,ok,insert+erase,,,,,,,Bound the miss probe so a hostile hash cannot make a lookup loop forever,219.4
+49a531bd6ae7368ed5d8590820317807d003957e,2026-09-05,ok,operator[] (hit),,,,,,,Bound the miss probe so a hostile hash cannot make a lookup loop forever,100.05
+89c4848f3772f5cf4b68ff08425dd494aa40f8c6,2026-09-05,ok,find (hit),,,,,,,Build the fingerprint word from a table: five instructions off every probe,88.1
+89c4848f3772f5cf4b68ff08425dd494aa40f8c6,2026-09-05,ok,find (miss),,,,,,,Build the fingerprint word from a table: five instructions off every probe,85.76
+89c4848f3772f5cf4b68ff08425dd494aa40f8c6,2026-09-05,ok,insert+erase,,,,,,,Build the fingerprint word from a table: five instructions off every probe,213.61
+89c4848f3772f5cf4b68ff08425dd494aa40f8c6,2026-09-05,ok,operator[] (hit),,,,,,,Build the fingerprint word from a table: five instructions off every probe,97.05
+1b58e2265bda7e1dbbb9ceceb468c8de348ab996,2026-09-05,ok,find (hit),,,,,,,"Build the fingerprint table with a named constexpr function, for clang-tidy 18",88.1
+1b58e2265bda7e1dbbb9ceceb468c8de348ab996,2026-09-05,ok,find (miss),,,,,,,"Build the fingerprint table with a named constexpr function, for clang-tidy 18",85.76
+1b58e2265bda7e1dbbb9ceceb468c8de348ab996,2026-09-05,ok,insert+erase,,,,,,,"Build the fingerprint table with a named constexpr function, for clang-tidy 18",213.61
+1b58e2265bda7e1dbbb9ceceb468c8de348ab996,2026-09-05,ok,operator[] (hit),,,,,,,"Build the fingerprint table with a named constexpr function, for clang-tidy 18",97.05
+09c1aab4bbcb83387bfb690edfc2ca941650587e,2026-09-05,ok,find (hit),,,,,,,Compare a group's sixteen fingerprints with NEON on AArch64,88.1
+09c1aab4bbcb83387bfb690edfc2ca941650587e,2026-09-05,ok,find (miss),,,,,,,Compare a group's sixteen fingerprints with NEON on AArch64,85.76
+09c1aab4bbcb83387bfb690edfc2ca941650587e,2026-09-05,ok,insert+erase,,,,,,,Compare a group's sixteen fingerprints with NEON on AArch64,219.03
+09c1aab4bbcb83387bfb690edfc2ca941650587e,2026-09-05,ok,operator[] (hit),,,,,,,Compare a group's sixteen fingerprints with NEON on AArch64,98.04
+3bbefb24aff5561cd42827132a4b55bedab6d639,2026-09-06,ok,find (hit),,,,,,,"Give MSVC a prefetch, which it never had",88.1
+3bbefb24aff5561cd42827132a4b55bedab6d639,2026-09-06,ok,find (miss),,,,,,,"Give MSVC a prefetch, which it never had",85.76
+3bbefb24aff5561cd42827132a4b55bedab6d639,2026-09-06,ok,insert+erase,,,,,,,"Give MSVC a prefetch, which it never had",219.03
+3bbefb24aff5561cd42827132a4b55bedab6d639,2026-09-06,ok,operator[] (hit),,,,,,,"Give MSVC a prefetch, which it never had",98.04
+8472a5d9ab51f8a23b6a25e8aed27de60d0a0d2d,2026-09-06,ok,find (hit),,,,,,,"Merge each group's value indices into its own block, which is 2% and one array",75.08
+8472a5d9ab51f8a23b6a25e8aed27de60d0a0d2d,2026-09-06,ok,find (miss),,,,,,,"Merge each group's value indices into its own block, which is 2% and one array",79.39
+8472a5d9ab51f8a23b6a25e8aed27de60d0a0d2d,2026-09-06,ok,insert+erase,,,,,,,"Merge each group's value indices into its own block, which is 2% and one array",211.88
+8472a5d9ab51f8a23b6a25e8aed27de60d0a0d2d,2026-09-06,ok,operator[] (hit),,,,,,,"Merge each group's value indices into its own block, which is 2% and one array",96.03
+602391e7a59667d31fc6b968d7e51805cda3247f,2026-09-06,ok,find (hit),,,,,,,Pipeline the rehash loop: hash sixteen ahead and prefetch the group,75.08
+602391e7a59667d31fc6b968d7e51805cda3247f,2026-09-06,ok,find (miss),,,,,,,Pipeline the rehash loop: hash sixteen ahead and prefetch the group,79.39
+602391e7a59667d31fc6b968d7e51805cda3247f,2026-09-06,ok,insert+erase,,,,,,,Pipeline the rehash loop: hash sixteen ahead and prefetch the group,211.88
+602391e7a59667d31fc6b968d7e51805cda3247f,2026-09-06,ok,operator[] (hit),,,,,,,Pipeline the rehash loop: hash sixteen ahead and prefetch the group,96.03
+5bdbd589ab89d96a8af2cb0562b3d6adc9f191ee,2026-09-06,ok,find (hit),,,,,,,"A hit inside a write moves itself home, taking the churn drift back",75.08
+5bdbd589ab89d96a8af2cb0562b3d6adc9f191ee,2026-09-06,ok,find (miss),,,,,,,"A hit inside a write moves itself home, taking the churn drift back",79.39
+5bdbd589ab89d96a8af2cb0562b3d6adc9f191ee,2026-09-06,ok,insert+erase,,,,,,,"A hit inside a write moves itself home, taking the churn drift back",211.54
+5bdbd589ab89d96a8af2cb0562b3d6adc9f191ee,2026-09-06,ok,operator[] (hit),,,,,,,"A hit inside a write moves itself home, taking the churn drift back",107.04
+e59235b231b0cb571025c6ba059e0336dbdf2bd9,2026-09-06,ok,find (hit),,,,,,,"Measure move_home properly, and it is a tenth off a miss, not half",75.08
+e59235b231b0cb571025c6ba059e0336dbdf2bd9,2026-09-06,ok,find (miss),,,,,,,"Measure move_home properly, and it is a tenth off a miss, not half",79.39
+e59235b231b0cb571025c6ba059e0336dbdf2bd9,2026-09-06,ok,insert+erase,,,,,,,"Measure move_home properly, and it is a tenth off a miss, not half",213.93
+e59235b231b0cb571025c6ba059e0336dbdf2bd9,2026-09-06,ok,operator[] (hit),,,,,,,"Measure move_home properly, and it is a tenth off a miss, not half",109.04
+bb2d85245c9b115bc9ac6caccf5bac5e14de9660,2026-09-08,ok,find (hit),,,,,,,"Stop force-inlining do_place_element, which is now a loss on both compilers",75.08
+bb2d85245c9b115bc9ac6caccf5bac5e14de9660,2026-09-08,ok,find (miss),,,,,,,"Stop force-inlining do_place_element, which is now a loss on both compilers",79.39
+bb2d85245c9b115bc9ac6caccf5bac5e14de9660,2026-09-08,ok,insert+erase,,,,,,,"Stop force-inlining do_place_element, which is now a loss on both compilers",214.93
+bb2d85245c9b115bc9ac6caccf5bac5e14de9660,2026-09-08,ok,operator[] (hit),,,,,,,"Stop force-inlining do_place_element, which is now a loss on both compilers",109.04
+9dcaead971e33bfe7236b28f8494e03b83190052,2026-09-11,ok,find (hit),,,,,,,"Add prefetch(key), which hands back the hash it had to compute",75.08
+9dcaead971e33bfe7236b28f8494e03b83190052,2026-09-11,ok,find (miss),,,,,,,"Add prefetch(key), which hands back the hash it had to compute",79.39
+9dcaead971e33bfe7236b28f8494e03b83190052,2026-09-11,ok,insert+erase,,,,,,,"Add prefetch(key), which hands back the hash it had to compute",213.93
+9dcaead971e33bfe7236b28f8494e03b83190052,2026-09-11,ok,operator[] (hit),,,,,,,"Add prefetch(key), which hands back the hash it had to compute",109.04
+dd21bfa73ad6a36d2f7e68ae97b74c30b1a88351,2026-09-11,ok,find (hit),,,,,,,"Forward the callable, and give the wrapping lambda a return type",75.08
+dd21bfa73ad6a36d2f7e68ae97b74c30b1a88351,2026-09-11,ok,find (miss),,,,,,,"Forward the callable, and give the wrapping lambda a return type",79.39
+dd21bfa73ad6a36d2f7e68ae97b74c30b1a88351,2026-09-11,ok,insert+erase,,,,,,,"Forward the callable, and give the wrapping lambda a return type",213.93
+dd21bfa73ad6a36d2f7e68ae97b74c30b1a88351,2026-09-11,ok,operator[] (hit),,,,,,,"Forward the callable, and give the wrapping lambda a return type",109.04
+61b6dcbcc6b1ccf3e4f1b48fb489a917e2ada679,2026-09-11,ok,find (hit),,,,,,,Apply the cleanup review,75.08
+61b6dcbcc6b1ccf3e4f1b48fb489a917e2ada679,2026-09-11,ok,find (miss),,,,,,,Apply the cleanup review,79.39
+61b6dcbcc6b1ccf3e4f1b48fb489a917e2ada679,2026-09-11,ok,insert+erase,,,,,,,Apply the cleanup review,213.93
+61b6dcbcc6b1ccf3e4f1b48fb489a917e2ada679,2026-09-11,ok,operator[] (hit),,,,,,,Apply the cleanup review,109.04
+d438d0b0c4fc25f0e7248b0c2a691782def2095b,2026-09-11,ok,find (hit),,,,,,,Record that the shared pipelining helper costs more than the duplication,75.08
+d438d0b0c4fc25f0e7248b0c2a691782def2095b,2026-09-11,ok,find (miss),,,,,,,Record that the shared pipelining helper costs more than the duplication,79.39
+d438d0b0c4fc25f0e7248b0c2a691782def2095b,2026-09-11,ok,insert+erase,,,,,,,Record that the shared pipelining helper costs more than the duplication,213.93
+d438d0b0c4fc25f0e7248b0c2a691782def2095b,2026-09-11,ok,operator[] (hit),,,,,,,Record that the shared pipelining helper costs more than the duplication,108.04
+c59b3267e86aa9ebab9863e9af28f2d96c5c03ba,2026-09-11,ok,find (hit),,,,,,,"And the range insert's lambda, for consistency",75.08
+c59b3267e86aa9ebab9863e9af28f2d96c5c03ba,2026-09-11,ok,find (miss),,,,,,,"And the range insert's lambda, for consistency",79.39
+c59b3267e86aa9ebab9863e9af28f2d96c5c03ba,2026-09-11,ok,insert+erase,,,,,,,"And the range insert's lambda, for consistency",213.93
+c59b3267e86aa9ebab9863e9af28f2d96c5c03ba,2026-09-11,ok,operator[] (hit),,,,,,,"And the range insert's lambda, for consistency",108.04
+f4d97d0be3b0caad8937678fea02108d8a392ea1,2026-09-11,ok,find (hit),,,,,,,"Gate replace() on index bytes, not footprint, and correct the write-up",75.08
+f4d97d0be3b0caad8937678fea02108d8a392ea1,2026-09-11,ok,find (miss),,,,,,,"Gate replace() on index bytes, not footprint, and correct the write-up",79.39
+f4d97d0be3b0caad8937678fea02108d8a392ea1,2026-09-11,ok,insert+erase,,,,,,,"Gate replace() on index bytes, not footprint, and correct the write-up",213.93
+f4d97d0be3b0caad8937678fea02108d8a392ea1,2026-09-11,ok,operator[] (hit),,,,,,,"Gate replace() on index bytes, not footprint, and correct the write-up",108.04
+1fe08c1e8fbdd9ec68079a3bcb0b59c6437027dc,2026-09-11,ok,find (hit),,,,,,,"Walk the source with cursors, and re-fit merge's pipeline gate",75.08
+1fe08c1e8fbdd9ec68079a3bcb0b59c6437027dc,2026-09-11,ok,find (miss),,,,,,,"Walk the source with cursors, and re-fit merge's pipeline gate",79.39
+1fe08c1e8fbdd9ec68079a3bcb0b59c6437027dc,2026-09-11,ok,insert+erase,,,,,,,"Walk the source with cursors, and re-fit merge's pipeline gate",213.93
+1fe08c1e8fbdd9ec68079a3bcb0b59c6437027dc,2026-09-11,ok,operator[] (hit),,,,,,,"Walk the source with cursors, and re-fit merge's pipeline gate",108.04
+ad0f1443dc7e64b3debd92ae3aae8d62d35795b9,2026-09-11,ok,find (hit),,,,,,,"simplify: cover all four container shapes, drop a weaker duplicate",75.08
+ad0f1443dc7e64b3debd92ae3aae8d62d35795b9,2026-09-11,ok,find (miss),,,,,,,"simplify: cover all four container shapes, drop a weaker duplicate",79.39
+ad0f1443dc7e64b3debd92ae3aae8d62d35795b9,2026-09-11,ok,insert+erase,,,,,,,"simplify: cover all four container shapes, drop a weaker duplicate",213.93
+ad0f1443dc7e64b3debd92ae3aae8d62d35795b9,2026-09-11,ok,operator[] (hit),,,,,,,"simplify: cover all four container shapes, drop a weaker duplicate",108.04
+958cca99b33897adaf9d70c0c97dded22c0a28c6,2026-09-12,ok,find (hit),,,,,,,"prefetch_index: the two lines after the one being read, clamped into the block",75.08
+958cca99b33897adaf9d70c0c97dded22c0a28c6,2026-09-12,ok,find (miss),,,,,,,"prefetch_index: the two lines after the one being read, clamped into the block",79.39
+958cca99b33897adaf9d70c0c97dded22c0a28c6,2026-09-12,ok,insert+erase,,,,,,,"prefetch_index: the two lines after the one being read, clamped into the block",213.73
+958cca99b33897adaf9d70c0c97dded22c0a28c6,2026-09-12,ok,operator[] (hit),,,,,,,"prefetch_index: the two lines after the one being read, clamped into the block",108.04
+064bd74397ff5ffc4287c9878803a83addd97b0b,2026-09-12,ok,find (hit),,,,,,,"simplify: one rule for both prefetch helpers, and say what was measured",75.08
+064bd74397ff5ffc4287c9878803a83addd97b0b,2026-09-12,ok,find (miss),,,,,,,"simplify: one rule for both prefetch helpers, and say what was measured",79.39
+064bd74397ff5ffc4287c9878803a83addd97b0b,2026-09-12,ok,insert+erase,,,,,,,"simplify: one rule for both prefetch helpers, and say what was measured",213.73
+064bd74397ff5ffc4287c9878803a83addd97b0b,2026-09-12,ok,operator[] (hit),,,,,,,"simplify: one rule for both prefetch helpers, and say what was measured",108.04
+d702d654a2809b2bb495bc6dbdf861adc7d49aa0,2026-09-12,ok,find (hit),,,,,,,"Carry the group and the lane, not a slot number packed out of them",75.08
+d702d654a2809b2bb495bc6dbdf861adc7d49aa0,2026-09-12,ok,find (miss),,,,,,,"Carry the group and the lane, not a slot number packed out of them",79.39
+d702d654a2809b2bb495bc6dbdf861adc7d49aa0,2026-09-12,ok,insert+erase,,,,,,,"Carry the group and the lane, not a slot number packed out of them",200.82
+d702d654a2809b2bb495bc6dbdf861adc7d49aa0,2026-09-12,ok,operator[] (hit),,,,,,,"Carry the group and the lane, not a slot number packed out of them",101.04
+dc49e4ee595de6faa5571744576d65ac0cb8345a,2026-09-12,ok,find (hit),,,,,,,"Add an opt-in huge page allocator, and measure it across the size axis",75.08
+dc49e4ee595de6faa5571744576d65ac0cb8345a,2026-09-12,ok,find (miss),,,,,,,"Add an opt-in huge page allocator, and measure it across the size axis",79.39
+dc49e4ee595de6faa5571744576d65ac0cb8345a,2026-09-12,ok,insert+erase,,,,,,,"Add an opt-in huge page allocator, and measure it across the size axis",200.82
+dc49e4ee595de6faa5571744576d65ac0cb8345a,2026-09-12,ok,operator[] (hit),,,,,,,"Add an opt-in huge page allocator, and measure it across the size axis",101.04
+6c600fa7818f0cdef8519dd76256cdeedd95f5d3,2026-09-12,ok,find (hit),,,,,,,"/simplify: test the parameter that could actually break, and stop saying it three times",75.08
+6c600fa7818f0cdef8519dd76256cdeedd95f5d3,2026-09-12,ok,find (miss),,,,,,,"/simplify: test the parameter that could actually break, and stop saying it three times",79.39
+6c600fa7818f0cdef8519dd76256cdeedd95f5d3,2026-09-12,ok,insert+erase,,,,,,,"/simplify: test the parameter that could actually break, and stop saying it three times",200.82
+6c600fa7818f0cdef8519dd76256cdeedd95f5d3,2026-09-12,ok,operator[] (hit),,,,,,,"/simplify: test the parameter that could actually break, and stop saying it three times",101.04
+1bc8b3d1ffb528b5b4610ecea733499ee5c18f81,2026-09-13,ok,find (hit),,,,,,,"/simplify: stop the split from saying the same thing twice, and name the map on every page",75.08
+1bc8b3d1ffb528b5b4610ecea733499ee5c18f81,2026-09-13,ok,find (miss),,,,,,,"/simplify: stop the split from saying the same thing twice, and name the map on every page",79.39
+1bc8b3d1ffb528b5b4610ecea733499ee5c18f81,2026-09-13,ok,insert+erase,,,,,,,"/simplify: stop the split from saying the same thing twice, and name the map on every page",200.82
+1bc8b3d1ffb528b5b4610ecea733499ee5c18f81,2026-09-13,ok,operator[] (hit),,,,,,,"/simplify: stop the split from saying the same thing twice, and name the map on every page",101.04
+760cfb829243e09e564752b35faae0e4625ef861,2026-09-17,ok,find (hit),,,,,,,"index: add index_bytes(), which bucket_count() * sizeof(bucket_type) no longer gives",75.08
+760cfb829243e09e564752b35faae0e4625ef861,2026-09-17,ok,find (miss),,,,,,,"index: add index_bytes(), which bucket_count() * sizeof(bucket_type) no longer gives",79.39
+760cfb829243e09e564752b35faae0e4625ef861,2026-09-17,ok,insert+erase,,,,,,,"index: add index_bytes(), which bucket_count() * sizeof(bucket_type) no longer gives",200.82
+760cfb829243e09e564752b35faae0e4625ef861,2026-09-17,ok,operator[] (hit),,,,,,,"index: add index_bytes(), which bucket_count() * sizeof(bucket_type) no longer gives",101.04
+b7cf409efee3a4419191bb3db29054b2ff6dc02d,2026-09-26,ok,find (hit),,,,,,,release: 5.1.0,75.08
+b7cf409efee3a4419191bb3db29054b2ff6dc02d,2026-09-26,ok,find (miss),,,,,,,release: 5.1.0,79.39
+b7cf409efee3a4419191bb3db29054b2ff6dc02d,2026-09-26,ok,insert+erase,,,,,,,release: 5.1.0,200.82
+b7cf409efee3a4419191bb3db29054b2ff6dc02d,2026-09-26,ok,operator[] (hit),,,,,,,release: 5.1.0,101.04
+de1a9e36cd739f59318c1787a387995d4f73ae8a,2026-09-26,ok,find (hit),,,,,,,"try_emplace: return a hit in the home group, and place a miss there, before any call",75.08
+de1a9e36cd739f59318c1787a387995d4f73ae8a,2026-09-26,ok,find (miss),,,,,,,"try_emplace: return a hit in the home group, and place a miss there, before any call",79.39
+de1a9e36cd739f59318c1787a387995d4f73ae8a,2026-09-26,ok,insert+erase,,,,,,,"try_emplace: return a hit in the home group, and place a miss there, before any call",200.82
+de1a9e36cd739f59318c1787a387995d4f73ae8a,2026-09-26,ok,operator[] (hit),,,,,,,"try_emplace: return a hit in the home group, and place a miss there, before any call",80.04
+e6088e23fceb689bb85c4b93c211537ae02d9b2c,2026-09-26,ok,find (hit),,,,,,,"try_emplace: one probe() overload, one placement of a new key, comments that match",75.08
+e6088e23fceb689bb85c4b93c211537ae02d9b2c,2026-09-26,ok,find (miss),,,,,,,"try_emplace: one probe() overload, one placement of a new key, comments that match",79.39
+e6088e23fceb689bb85c4b93c211537ae02d9b2c,2026-09-26,ok,insert+erase,,,,,,,"try_emplace: one probe() overload, one placement of a new key, comments that match",200.82
+e6088e23fceb689bb85c4b93c211537ae02d9b2c,2026-09-26,ok,operator[] (hit),,,,,,,"try_emplace: one probe() overload, one placement of a new key, comments that match",80.04
+3c243769472a637a5c383acd11af695e81e4733a,2026-09-26,ok,find (hit),,,,,,,try_emplace: test for an empty table once on a miss,75.08
+3c243769472a637a5c383acd11af695e81e4733a,2026-09-26,ok,find (miss),,,,,,,try_emplace: test for an empty table once on a miss,79.39
+3c243769472a637a5c383acd11af695e81e4733a,2026-09-26,ok,insert+erase,,,,,,,try_emplace: test for an empty table once on a miss,200.82
+3c243769472a637a5c383acd11af695e81e4733a,2026-09-26,ok,operator[] (hit),,,,,,,try_emplace: test for an empty table once on a miss,82.04
+8ea5c8e21aa05a56ff594f6039241fa57e0bee97,2026-09-27,ok,find (hit),,,,,,,"insert, emplace: look the key up first when the arguments already are the value",75.08
+8ea5c8e21aa05a56ff594f6039241fa57e0bee97,2026-09-27,ok,find (miss),,,,,,,"insert, emplace: look the key up first when the arguments already are the value",79.39
+8ea5c8e21aa05a56ff594f6039241fa57e0bee97,2026-09-27,ok,insert+erase,,,,,,,"insert, emplace: look the key up first when the arguments already are the value",211.72
+8ea5c8e21aa05a56ff594f6039241fa57e0bee97,2026-09-27,ok,operator[] (hit),,,,,,,"insert, emplace: look the key up first when the arguments already are the value",82.04
+2d8bc5695f76081dc9b7f93504b03de40c6a5ee2,2026-09-27,ok,find (hit),,,,,,,insert: call the part after a home-group miss again under clang,75.08
+2d8bc5695f76081dc9b7f93504b03de40c6a5ee2,2026-09-27,ok,find (miss),,,,,,,insert: call the part after a home-group miss again under clang,79.39
+2d8bc5695f76081dc9b7f93504b03de40c6a5ee2,2026-09-27,ok,insert+erase,,,,,,,insert: call the part after a home-group miss again under clang,211.72
+2d8bc5695f76081dc9b7f93504b03de40c6a5ee2,2026-09-27,ok,operator[] (hit),,,,,,,insert: call the part after a home-group miss again under clang,82.04
+66591020aee982223fbbfdae879e343d342e9c45,2026-09-27,ok,find (hit),,,,,,,"bench: the caller corpus, the check for anything an insert inlines into its caller",75.08
+66591020aee982223fbbfdae879e343d342e9c45,2026-09-27,ok,find (miss),,,,,,,"bench: the caller corpus, the check for anything an insert inlines into its caller",79.39
+66591020aee982223fbbfdae879e343d342e9c45,2026-09-27,ok,insert+erase,,,,,,,"bench: the caller corpus, the check for anything an insert inlines into its caller",211.72
+66591020aee982223fbbfdae879e343d342e9c45,2026-09-27,ok,operator[] (hit),,,,,,,"bench: the caller corpus, the check for anything an insert inlines into its caller",82.04
+5d9416dd6e49d8fc1c7849e620694f77c1fe5a6a,2026-09-27,ok,find (hit),,,,,,,"insert: one shape for every compiler, picked by a search over sixteen",75.08
+5d9416dd6e49d8fc1c7849e620694f77c1fe5a6a,2026-09-27,ok,find (miss),,,,,,,"insert: one shape for every compiler, picked by a search over sixteen",79.39
+5d9416dd6e49d8fc1c7849e620694f77c1fe5a6a,2026-09-27,ok,insert+erase,,,,,,,"insert: one shape for every compiler, picked by a search over sixteen",247.57
+5d9416dd6e49d8fc1c7849e620694f77c1fe5a6a,2026-09-27,ok,operator[] (hit),,,,,,,"insert: one shape for every compiler, picked by a search over sixteen",63.04
+50584995d4aae2621e8b1259734e01f848a14bdb,2026-09-27,ok,find (hit),,,,,,,hash_bytes: the clang-tidy findings on the word reads,75.08
+50584995d4aae2621e8b1259734e01f848a14bdb,2026-09-27,ok,find (miss),,,,,,,hash_bytes: the clang-tidy findings on the word reads,79.39
+50584995d4aae2621e8b1259734e01f848a14bdb,2026-09-27,ok,insert+erase,,,,,,,hash_bytes: the clang-tidy findings on the word reads,247.57
+50584995d4aae2621e8b1259734e01f848a14bdb,2026-09-27,ok,operator[] (hit),,,,,,,hash_bytes: the clang-tidy findings on the word reads,63.04
+38525c754e1c0707ce8fd8925f4c498eca9f9969,2026-09-27,ok,find (hit),,,,,,,"index: an empty table reads a shared sentinel, so lookups drop their empty() test",71.07
+38525c754e1c0707ce8fd8925f4c498eca9f9969,2026-09-27,ok,find (miss),,,,,,,"index: an empty table reads a shared sentinel, so lookups drop their empty() test",71.45
+38525c754e1c0707ce8fd8925f4c498eca9f9969,2026-09-27,ok,insert+erase,,,,,,,"index: an empty table reads a shared sentinel, so lookups drop their empty() test",234.67
+38525c754e1c0707ce8fd8925f4c498eca9f9969,2026-09-27,ok,operator[] (hit),,,,,,,"index: an empty table reads a shared sentinel, so lookups drop their empty() test",61.04
+882bde041c9c1f5bf60d7bc56bd898336f37cd98,2026-09-27,ok,find (hit),,,,,,,"index: simplify the sentinel, one per group type, and drop the empty() tests it made redundant",71.07
+882bde041c9c1f5bf60d7bc56bd898336f37cd98,2026-09-27,ok,find (miss),,,,,,,"index: simplify the sentinel, one per group type, and drop the empty() tests it made redundant",71.45
+882bde041c9c1f5bf60d7bc56bd898336f37cd98,2026-09-27,ok,insert+erase,,,,,,,"index: simplify the sentinel, one per group type, and drop the empty() tests it made redundant",230.44
+882bde041c9c1f5bf60d7bc56bd898336f37cd98,2026-09-27,ok,operator[] (hit),,,,,,,"index: simplify the sentinel, one per group type, and drop the empty() tests it made redundant",61.04
+489b41a93f81511711f2ec6b613231f08d45f45e,2026-10-02,ok,find (hit),,,,,,,"notes: a segmented_map's segment size against its page, and exact-page segments rejected",71.07
+489b41a93f81511711f2ec6b613231f08d45f45e,2026-10-02,ok,find (miss),,,,,,,"notes: a segmented_map's segment size against its page, and exact-page segments rejected",71.45
+489b41a93f81511711f2ec6b613231f08d45f45e,2026-10-02,ok,insert+erase,,,,,,,"notes: a segmented_map's segment size against its page, and exact-page segments rejected",229.44
+489b41a93f81511711f2ec6b613231f08d45f45e,2026-10-02,ok,operator[] (hit),,,,,,,"notes: a segmented_map's segment size against its page, and exact-page segments rejected",61.04
+94a45f66f779f065a2cd68000120f4743e4dac4a,2026-10-02,ok,find (hit),,,,,,,"mapped_view.h: simplify after review, and one exception type for bytes that do not describe a table",71.07
+94a45f66f779f065a2cd68000120f4743e4dac4a,2026-10-02,ok,find (miss),,,,,,,"mapped_view.h: simplify after review, and one exception type for bytes that do not describe a table",71.45
+94a45f66f779f065a2cd68000120f4743e4dac4a,2026-10-02,ok,insert+erase,,,,,,,"mapped_view.h: simplify after review, and one exception type for bytes that do not describe a table",229.44
+94a45f66f779f065a2cd68000120f4743e4dac4a,2026-10-02,ok,operator[] (hit),,,,,,,"mapped_view.h: simplify after review, and one exception type for bytes that do not describe a table",61.04
+358ec91d2441e9eae1d526c96599d7e9f63eccd8,2026-10-02,ok,find (hit),,,,,,,"mapped_view: cleanups after review, and the round trip's unmapped check only where /proc/self/maps exists",71.07
+358ec91d2441e9eae1d526c96599d7e9f63eccd8,2026-10-02,ok,find (miss),,,,,,,"mapped_view: cleanups after review, and the round trip's unmapped check only where /proc/self/maps exists",71.45
+358ec91d2441e9eae1d526c96599d7e9f63eccd8,2026-10-02,ok,insert+erase,,,,,,,"mapped_view: cleanups after review, and the round trip's unmapped check only where /proc/self/maps exists",229.44
+358ec91d2441e9eae1d526c96599d7e9f63eccd8,2026-10-02,ok,operator[] (hit),,,,,,,"mapped_view: cleanups after review, and the round trip's unmapped check only where /proc/self/maps exists",61.04
+c164976d1426d623d87b98833ff60c7263fde4e1,2026-10-04,ok,find (hit),,,,,,,release: 5.3.1,71.07
+c164976d1426d623d87b98833ff60c7263fde4e1,2026-10-04,ok,find (miss),,,,,,,release: 5.3.1,71.45
+c164976d1426d623d87b98833ff60c7263fde4e1,2026-10-04,ok,insert+erase,,,,,,,release: 5.3.1,229.44
+c164976d1426d623d87b98833ff60c7263fde4e1,2026-10-04,ok,operator[] (hit),,,,,,,release: 5.3.1,61.04
+32e3d4bc64f4b43e8b6122037243cac51fd3bc9e,2026-11-09,ok,find (hit),,,,,,,"clear() empties each entry by its own walk when the table holds fewer than one entry per 16 groups, so it costs what the table holds and not the largest size it had",71.07
+32e3d4bc64f4b43e8b6122037243cac51fd3bc9e,2026-11-09,ok,find (miss),,,,,,,"clear() empties each entry by its own walk when the table holds fewer than one entry per 16 groups, so it costs what the table holds and not the largest size it had",71.45
+32e3d4bc64f4b43e8b6122037243cac51fd3bc9e,2026-11-09,ok,insert+erase,,,,,,,"clear() empties each entry by its own walk when the table holds fewer than one entry per 16 groups, so it costs what the table holds and not the largest size it had",229.44
+32e3d4bc64f4b43e8b6122037243cac51fd3bc9e,2026-11-09,ok,operator[] (hit),,,,,,,"clear() empties each entry by its own walk when the table holds fewer than one entry per 16 groups, so it costs what the table holds and not the largest size it had",61.04
+bcc2bb5801fb920a1df06a2ee205b93b2514964e,2026-11-11,ok,find (hit),,,,,,,"notes: clear(clear_mode::sparse) re-measured on the 7950X, the threshold of 16 groups per entry stays `scripts/ab/clear_sparse.sh -r origin/main`, three passes each under clang 22.1.8 and gcc 16.2.1, pinned to core 2. A cell's median moves 1.2-2.0% between passes, against 14-33% on the two shared hosts.",71.07
+bcc2bb5801fb920a1df06a2ee205b93b2514964e,2026-11-11,ok,find (miss),,,,,,,"notes: clear(clear_mode::sparse) re-measured on the 7950X, the threshold of 16 groups per entry stays `scripts/ab/clear_sparse.sh -r origin/main`, three passes each under clang 22.1.8 and gcc 16.2.1, pinned to core 2. A cell's median moves 1.2-2.0% between passes, against 14-33% on the two shared hosts.",71.45
+bcc2bb5801fb920a1df06a2ee205b93b2514964e,2026-11-11,ok,insert+erase,,,,,,,"notes: clear(clear_mode::sparse) re-measured on the 7950X, the threshold of 16 groups per entry stays `scripts/ab/clear_sparse.sh -r origin/main`, three passes each under clang 22.1.8 and gcc 16.2.1, pinned to core 2. A cell's median moves 1.2-2.0% between passes, against 14-33% on the two shared hosts.",229.44
+bcc2bb5801fb920a1df06a2ee205b93b2514964e,2026-11-11,ok,operator[] (hit),,,,,,,"notes: clear(clear_mode::sparse) re-measured on the 7950X, the threshold of 16 groups per entry stays `scripts/ab/clear_sparse.sh -r origin/main`, three passes each under clang 22.1.8 and gcc 16.2.1, pinned to core 2. A cell's median moves 1.2-2.0% between passes, against 14-33% on the two shared hosts.",61.04

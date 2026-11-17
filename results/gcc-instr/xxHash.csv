@@ -1,0 +1,475 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+ab856b12b872edc56a26871534fcba4a841579d9,2012-04-30,build failed,,,,,,,,initial release
+e3fca4f187350cc88816ed354aec7129544fb65b,2012-12-18,build failed,,,,,,,,Corrected : issue with providing a wrong hash for input of size between 4GB+1 et 4GB+15 bytes Corrected : macro to define hardware 32-bits swap with GCC Thanks to Adrien Grand for both issues raised.
+7c14a4041154157018b48aef0acf275d4164c41b,2013-12-05,build failed,,,,,,,,Corrected : aligned input detection on strict-align CPU (issue 15)
+d54caef13199c89c885c6fedc5f8e40206bf3cce,2014-10-03,build failed,,,,,,,,Merge pull request #8 from Cyan4973/dev
+ebde2748a747f65c3a535b9a2d7c55221cf26382,2016-01-02,build failed,,,,,,,,stricter compliance with strict aliasing gcc warnings
+88ecbf17497b0b5d80d53061ad2194a9688390fd,2016-01-04,build failed,,,,,,,,minor namespace tweak
+599514c151001a330f9ac12418d3692d18c63556,2016-01-07,build failed,,,,,,,,Updated header guard (#46)
+8485beac0693c496a25d67c79cbf4b47c6545d17,2016-02-19,build failed,,,,,,,,update lib version
+5062cb111b44ba6ee5a990948865574124eee25e,2016-06-06,build failed,,,,,,,,"changed XXH_PRIVATE_API to XXH_INCLUDE_BODY now includes `xxhash.h` instead of `xxhash.c`, which feels more natural"
+9f5e95eedfebdf5ce303b1101638e0e4dad48f9a,2016-06-21,build failed,,,,,,,,introduced `XXH*_copyState()` (#69)
+61c628549feb14559884fd30610adac69eab8e97,2016-08-06,build failed,,,,,,,,Implemented @stbrumme suggestion in #79
+465bc74408c590f6ea71cff1187e16d1a3d3d712,2016-08-11,build failed,,,,,,,,"refactored code, for better separation between xxh32 and xxh64 (unfinished)"
+894a1aec60bc839ddd7b8350f26a6a9db40a4739,2017-09-23,build failed,,,,,,,,fixed : do not write into state.reserved
+9231e6d8ed60e4818cd8a9e3d361d06a19dc45dc,2018-03-13,build failed,,,,,,,,added build macro XXH_INLINE_ALL
+375d401bd4a4eba07ee75d6e627546052cb5b0ec,2019-03-15,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #174 from Cyan4973/xxh3,40.0
+375d401bd4a4eba07ee75d6e627546052cb5b0ec,2019-03-15,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #174 from Cyan4973/xxh3,70.0
+375d401bd4a4eba07ee75d6e627546052cb5b0ec,2019-03-15,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #174 from Cyan4973/xxh3,402.0
+375d401bd4a4eba07ee75d6e627546052cb5b0ec,2019-03-15,ok,XXH64 64 B,,,,,,,Merge pull request #174 from Cyan4973/xxh3,158.0
+375d401bd4a4eba07ee75d6e627546052cb5b0ec,2019-03-15,ok,XXH64 1024 B,,,,,,,Merge pull request #174 from Cyan4973/xxh3,968.0
+f3e08d7ea9286c2d68ae80607d4120550ee4c7ed,2019-03-16,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #181 from LambdAurora/dev,40.0
+f3e08d7ea9286c2d68ae80607d4120550ee4c7ed,2019-03-16,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #181 from LambdAurora/dev,70.0
+f3e08d7ea9286c2d68ae80607d4120550ee4c7ed,2019-03-16,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #181 from LambdAurora/dev,402.0
+f3e08d7ea9286c2d68ae80607d4120550ee4c7ed,2019-03-16,ok,XXH64 64 B,,,,,,,Merge pull request #181 from LambdAurora/dev,158.0
+f3e08d7ea9286c2d68ae80607d4120550ee4c7ed,2019-03-16,ok,XXH64 1024 B,,,,,,,Merge pull request #181 from LambdAurora/dev,968.0
+db5419496d59d7c1bef33bfafeb3f1b0ee8ef14b,2019-04-22,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #196 from HaydnTrigg/dev,40.0
+db5419496d59d7c1bef33bfafeb3f1b0ee8ef14b,2019-04-22,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #196 from HaydnTrigg/dev,70.0
+db5419496d59d7c1bef33bfafeb3f1b0ee8ef14b,2019-04-22,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #196 from HaydnTrigg/dev,402.0
+db5419496d59d7c1bef33bfafeb3f1b0ee8ef14b,2019-04-22,ok,XXH64 64 B,,,,,,,Merge pull request #196 from HaydnTrigg/dev,158.0
+db5419496d59d7c1bef33bfafeb3f1b0ee8ef14b,2019-04-22,ok,XXH64 1024 B,,,,,,,Merge pull request #196 from HaydnTrigg/dev,968.0
+b2e3f3328efc24ef0b83659c9db9c9fff6c8d6ba,2019-04-25,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #198 from Cyan4973/xxh3,47.0
+b2e3f3328efc24ef0b83659c9db9c9fff6c8d6ba,2019-04-25,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #198 from Cyan4973/xxh3,76.0
+b2e3f3328efc24ef0b83659c9db9c9fff6c8d6ba,2019-04-25,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #198 from Cyan4973/xxh3,436.0
+b2e3f3328efc24ef0b83659c9db9c9fff6c8d6ba,2019-04-25,ok,XXH64 64 B,,,,,,,Merge pull request #198 from Cyan4973/xxh3,158.0
+b2e3f3328efc24ef0b83659c9db9c9fff6c8d6ba,2019-04-25,ok,XXH64 1024 B,,,,,,,Merge pull request #198 from Cyan4973/xxh3,968.0
+0c6a4d38e5e9bcb553fe75208be3b527962b7b59,2019-05-06,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #203 from dnbaker/master,47.0
+0c6a4d38e5e9bcb553fe75208be3b527962b7b59,2019-05-06,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #203 from dnbaker/master,76.0
+0c6a4d38e5e9bcb553fe75208be3b527962b7b59,2019-05-06,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #203 from dnbaker/master,436.0
+0c6a4d38e5e9bcb553fe75208be3b527962b7b59,2019-05-06,ok,XXH64 64 B,,,,,,,Merge pull request #203 from dnbaker/master,158.0
+0c6a4d38e5e9bcb553fe75208be3b527962b7b59,2019-05-06,ok,XXH64 1024 B,,,,,,,Merge pull request #203 from dnbaker/master,968.0
+c27666acebdf867ad882e35e0e8bf3fc2dc25f89,2019-06-10,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #213 from aras-p/msvc-sse2-x86,47.0
+c27666acebdf867ad882e35e0e8bf3fc2dc25f89,2019-06-10,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #213 from aras-p/msvc-sse2-x86,76.0
+c27666acebdf867ad882e35e0e8bf3fc2dc25f89,2019-06-10,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #213 from aras-p/msvc-sse2-x86,437.0
+c27666acebdf867ad882e35e0e8bf3fc2dc25f89,2019-06-10,ok,XXH64 64 B,,,,,,,Merge pull request #213 from aras-p/msvc-sse2-x86,158.0
+c27666acebdf867ad882e35e0e8bf3fc2dc25f89,2019-06-10,ok,XXH64 1024 B,,,,,,,Merge pull request #213 from aras-p/msvc-sse2-x86,968.0
+69ecf5fab2c67c4edd6edc885fc3946a4fd6b154,2019-06-10,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #214 from orivej/align,47.0
+69ecf5fab2c67c4edd6edc885fc3946a4fd6b154,2019-06-10,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #214 from orivej/align,76.0
+69ecf5fab2c67c4edd6edc885fc3946a4fd6b154,2019-06-10,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #214 from orivej/align,437.0
+69ecf5fab2c67c4edd6edc885fc3946a4fd6b154,2019-06-10,ok,XXH64 64 B,,,,,,,Merge pull request #214 from orivej/align,158.0
+69ecf5fab2c67c4edd6edc885fc3946a4fd6b154,2019-06-10,ok,XXH64 1024 B,,,,,,,Merge pull request #214 from orivej/align,968.0
+726a8577d85b6f7c877793d4c28c61143902b36a,2019-06-12,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #215 from Cyan4973/wsecret,40.0
+726a8577d85b6f7c877793d4c28c61143902b36a,2019-06-12,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #215 from Cyan4973/wsecret,77.0
+726a8577d85b6f7c877793d4c28c61143902b36a,2019-06-12,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #215 from Cyan4973/wsecret,386.0
+726a8577d85b6f7c877793d4c28c61143902b36a,2019-06-12,ok,XXH64 64 B,,,,,,,Merge pull request #215 from Cyan4973/wsecret,158.0
+726a8577d85b6f7c877793d4c28c61143902b36a,2019-06-12,ok,XXH64 1024 B,,,,,,,Merge pull request #215 from Cyan4973/wsecret,968.0
+ac897bec29daa5d176db45d0bba4cf01f59ea45b,2019-06-13,ok,XXH3_64bits 16 B,,,,,,,alignment hint for auto-vectorizer,40.0
+ac897bec29daa5d176db45d0bba4cf01f59ea45b,2019-06-13,ok,XXH3_64bits 64 B,,,,,,,alignment hint for auto-vectorizer,77.0
+ac897bec29daa5d176db45d0bba4cf01f59ea45b,2019-06-13,ok,XXH3_64bits 1024 B,,,,,,,alignment hint for auto-vectorizer,386.0
+ac897bec29daa5d176db45d0bba4cf01f59ea45b,2019-06-13,ok,XXH64 64 B,,,,,,,alignment hint for auto-vectorizer,158.0
+ac897bec29daa5d176db45d0bba4cf01f59ea45b,2019-06-13,ok,XXH64 1024 B,,,,,,,alignment hint for auto-vectorizer,968.0
+d5e42a6947ca968eb232657b4d705986223b4798,2019-06-14,ok,XXH3_64bits 16 B,,,,,,,improved performance for most compilers,40.0
+d5e42a6947ca968eb232657b4d705986223b4798,2019-06-14,ok,XXH3_64bits 64 B,,,,,,,improved performance for most compilers,77.0
+d5e42a6947ca968eb232657b4d705986223b4798,2019-06-14,ok,XXH3_64bits 1024 B,,,,,,,improved performance for most compilers,386.0
+d5e42a6947ca968eb232657b4d705986223b4798,2019-06-14,ok,XXH64 64 B,,,,,,,improved performance for most compilers,158.0
+d5e42a6947ca968eb232657b4d705986223b4798,2019-06-14,ok,XXH64 1024 B,,,,,,,improved performance for most compilers,968.0
+e70204fedcfc5f737fea559bc9f437344737fa69,2019-06-18,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #218 from Cyan4973/bijective,40.0
+e70204fedcfc5f737fea559bc9f437344737fa69,2019-06-18,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #218 from Cyan4973/bijective,77.0
+e70204fedcfc5f737fea559bc9f437344737fa69,2019-06-18,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #218 from Cyan4973/bijective,388.0
+e70204fedcfc5f737fea559bc9f437344737fa69,2019-06-18,ok,XXH64 64 B,,,,,,,Merge pull request #218 from Cyan4973/bijective,158.0
+e70204fedcfc5f737fea559bc9f437344737fa69,2019-06-18,ok,XXH64 1024 B,,,,,,,Merge pull request #218 from Cyan4973/bijective,968.0
+fcc977ba19dfb56cd70c134ee67684696b85b55a,2019-07-03,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #223 from aras-p/xxh3stream128,40.0
+fcc977ba19dfb56cd70c134ee67684696b85b55a,2019-07-03,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #223 from aras-p/xxh3stream128,77.0
+fcc977ba19dfb56cd70c134ee67684696b85b55a,2019-07-03,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #223 from aras-p/xxh3stream128,388.0
+fcc977ba19dfb56cd70c134ee67684696b85b55a,2019-07-03,ok,XXH64 64 B,,,,,,,Merge pull request #223 from aras-p/xxh3stream128,158.0
+fcc977ba19dfb56cd70c134ee67684696b85b55a,2019-07-03,ok,XXH64 1024 B,,,,,,,Merge pull request #223 from aras-p/xxh3stream128,968.0
+81410ce8430e22715b830bc0168ac11c32fd5246,2019-07-17,ok,XXH3_64bits 16 B,,,,,,,"minor refactoring, for clarity",40.0
+81410ce8430e22715b830bc0168ac11c32fd5246,2019-07-17,ok,XXH3_64bits 64 B,,,,,,,"minor refactoring, for clarity",77.0
+81410ce8430e22715b830bc0168ac11c32fd5246,2019-07-17,ok,XXH3_64bits 1024 B,,,,,,,"minor refactoring, for clarity",388.0
+81410ce8430e22715b830bc0168ac11c32fd5246,2019-07-17,ok,XXH64 64 B,,,,,,,"minor refactoring, for clarity",158.0
+81410ce8430e22715b830bc0168ac11c32fd5246,2019-07-17,ok,XXH64 1024 B,,,,,,,"minor refactoring, for clarity",968.0
+42de47b0b57a5eaea511606670fd74ec11b5e44a,2019-07-26,ok,XXH3_64bits 16 B,,,,,,,updated documentation,40.0
+42de47b0b57a5eaea511606670fd74ec11b5e44a,2019-07-26,ok,XXH3_64bits 64 B,,,,,,,updated documentation,77.0
+42de47b0b57a5eaea511606670fd74ec11b5e44a,2019-07-26,ok,XXH3_64bits 1024 B,,,,,,,updated documentation,388.0
+42de47b0b57a5eaea511606670fd74ec11b5e44a,2019-07-26,ok,XXH64 64 B,,,,,,,updated documentation,158.0
+42de47b0b57a5eaea511606670fd74ec11b5e44a,2019-07-26,ok,XXH64 1024 B,,,,,,,updated documentation,968.0
+dfd1bf117c816e4774adc1e1cdcb1687c0f7913c,2019-08-15,ok,XXH3_64bits 16 B,,,,,,,added comments on VSX code path,40.0
+dfd1bf117c816e4774adc1e1cdcb1687c0f7913c,2019-08-15,ok,XXH3_64bits 64 B,,,,,,,added comments on VSX code path,77.0
+dfd1bf117c816e4774adc1e1cdcb1687c0f7913c,2019-08-15,ok,XXH3_64bits 1024 B,,,,,,,added comments on VSX code path,388.0
+dfd1bf117c816e4774adc1e1cdcb1687c0f7913c,2019-08-15,ok,XXH64 64 B,,,,,,,added comments on VSX code path,158.0
+dfd1bf117c816e4774adc1e1cdcb1687c0f7913c,2019-08-15,ok,XXH64 1024 B,,,,,,,added comments on VSX code path,968.0
+1ce04e37a1b7673e85548fee9964e7e6e94f0333,2019-09-16,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #254 from easyaspi314/multalign,40.0
+1ce04e37a1b7673e85548fee9964e7e6e94f0333,2019-09-16,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #254 from easyaspi314/multalign,77.0
+1ce04e37a1b7673e85548fee9964e7e6e94f0333,2019-09-16,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #254 from easyaspi314/multalign,388.0
+1ce04e37a1b7673e85548fee9964e7e6e94f0333,2019-09-16,ok,XXH64 64 B,,,,,,,Merge pull request #254 from easyaspi314/multalign,158.0
+1ce04e37a1b7673e85548fee9964e7e6e94f0333,2019-09-16,ok,XXH64 1024 B,,,,,,,Merge pull request #254 from easyaspi314/multalign,968.0
+3df9e91856efde4a13f5f491f907e448b9a0372d,2019-10-01,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #264 from easyaspi314/voidptrfix,40.0
+3df9e91856efde4a13f5f491f907e448b9a0372d,2019-10-01,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #264 from easyaspi314/voidptrfix,77.0
+3df9e91856efde4a13f5f491f907e448b9a0372d,2019-10-01,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #264 from easyaspi314/voidptrfix,388.0
+3df9e91856efde4a13f5f491f907e448b9a0372d,2019-10-01,ok,XXH64 64 B,,,,,,,Merge pull request #264 from easyaspi314/voidptrfix,158.0
+3df9e91856efde4a13f5f491f907e448b9a0372d,2019-10-01,ok,XXH64 1024 B,,,,,,,Merge pull request #264 from easyaspi314/voidptrfix,968.0
+71a8150b6f88cf7bd75bc68a68b247feae61388b,2019-10-03,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #267 from easyaspi314/main_loop_cleanup,40.0
+71a8150b6f88cf7bd75bc68a68b247feae61388b,2019-10-03,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #267 from easyaspi314/main_loop_cleanup,77.0
+71a8150b6f88cf7bd75bc68a68b247feae61388b,2019-10-03,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #267 from easyaspi314/main_loop_cleanup,388.0
+71a8150b6f88cf7bd75bc68a68b247feae61388b,2019-10-03,ok,XXH64 64 B,,,,,,,Merge pull request #267 from easyaspi314/main_loop_cleanup,158.0
+71a8150b6f88cf7bd75bc68a68b247feae61388b,2019-10-03,ok,XXH64 1024 B,,,,,,,Merge pull request #267 from easyaspi314/main_loop_cleanup,968.0
+8dab0315ac6e288e764fdaa1d50a49497b25bf3e,2019-10-07,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #271 from easyaspi314/typedefs,40.0
+8dab0315ac6e288e764fdaa1d50a49497b25bf3e,2019-10-07,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #271 from easyaspi314/typedefs,77.0
+8dab0315ac6e288e764fdaa1d50a49497b25bf3e,2019-10-07,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #271 from easyaspi314/typedefs,388.0
+8dab0315ac6e288e764fdaa1d50a49497b25bf3e,2019-10-07,ok,XXH64 64 B,,,,,,,Merge pull request #271 from easyaspi314/typedefs,158.0
+8dab0315ac6e288e764fdaa1d50a49497b25bf3e,2019-10-07,ok,XXH64 1024 B,,,,,,,Merge pull request #271 from easyaspi314/typedefs,968.0
+c996521986a99e4c52e239e187d310338dd107af,2019-10-07,ok,XXH3_64bits 16 B,,,,,,,reuse XXHnn_hasht_t definitions,40.0
+c996521986a99e4c52e239e187d310338dd107af,2019-10-07,ok,XXH3_64bits 64 B,,,,,,,reuse XXHnn_hasht_t definitions,77.0
+c996521986a99e4c52e239e187d310338dd107af,2019-10-07,ok,XXH3_64bits 1024 B,,,,,,,reuse XXHnn_hasht_t definitions,388.0
+c996521986a99e4c52e239e187d310338dd107af,2019-10-07,ok,XXH64 64 B,,,,,,,reuse XXHnn_hasht_t definitions,158.0
+c996521986a99e4c52e239e187d310338dd107af,2019-10-07,ok,XXH64 1024 B,,,,,,,reuse XXHnn_hasht_t definitions,968.0
+1cc96340532f65f606661ac6dc0837397a129b37,2019-10-08,ok,XXH3_64bits 16 B,,,,,,,improve speed for large inputs,40.0
+1cc96340532f65f606661ac6dc0837397a129b37,2019-10-08,ok,XXH3_64bits 64 B,,,,,,,improve speed for large inputs,77.0
+1cc96340532f65f606661ac6dc0837397a129b37,2019-10-08,ok,XXH3_64bits 1024 B,,,,,,,improve speed for large inputs,404.0
+1cc96340532f65f606661ac6dc0837397a129b37,2019-10-08,ok,XXH64 64 B,,,,,,,improve speed for large inputs,158.0
+1cc96340532f65f606661ac6dc0837397a129b37,2019-10-08,ok,XXH64 1024 B,,,,,,,improve speed for large inputs,968.0
+c173142da05c13d4f8c5c03995a564d595a83d59,2019-12-03,ok,XXH3_64bits 16 B,,,,,,,removed ===== comment separators,40.0
+c173142da05c13d4f8c5c03995a564d595a83d59,2019-12-03,ok,XXH3_64bits 64 B,,,,,,,removed ===== comment separators,77.0
+c173142da05c13d4f8c5c03995a564d595a83d59,2019-12-03,ok,XXH3_64bits 1024 B,,,,,,,removed ===== comment separators,404.0
+c173142da05c13d4f8c5c03995a564d595a83d59,2019-12-03,ok,XXH64 64 B,,,,,,,removed ===== comment separators,158.0
+c173142da05c13d4f8c5c03995a564d595a83d59,2019-12-03,ok,XXH64 1024 B,,,,,,,removed ===== comment separators,968.0
+99077eca582de008e780cafac409e95e1c02c7ea,2020-02-12,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #301 from Cyan4973/s390x,40.0
+99077eca582de008e780cafac409e95e1c02c7ea,2020-02-12,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #301 from Cyan4973/s390x,77.0
+99077eca582de008e780cafac409e95e1c02c7ea,2020-02-12,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #301 from Cyan4973/s390x,404.0
+99077eca582de008e780cafac409e95e1c02c7ea,2020-02-12,ok,XXH64 64 B,,,,,,,Merge pull request #301 from Cyan4973/s390x,158.0
+99077eca582de008e780cafac409e95e1c02c7ea,2020-02-12,ok,XXH64 1024 B,,,,,,,Merge pull request #301 from Cyan4973/s390x,968.0
+71f0f6ffd3a2f6ecc1e4359858311a08a5595d8b,2020-02-24,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #308 from Cyan4973/mul32len8test,40.0
+71f0f6ffd3a2f6ecc1e4359858311a08a5595d8b,2020-02-24,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #308 from Cyan4973/mul32len8test,77.0
+71f0f6ffd3a2f6ecc1e4359858311a08a5595d8b,2020-02-24,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #308 from Cyan4973/mul32len8test,404.0
+71f0f6ffd3a2f6ecc1e4359858311a08a5595d8b,2020-02-24,ok,XXH64 64 B,,,,,,,Merge pull request #308 from Cyan4973/mul32len8test,158.0
+71f0f6ffd3a2f6ecc1e4359858311a08a5595d8b,2020-02-24,ok,XXH64 1024 B,,,,,,,Merge pull request #308 from Cyan4973/mul32len8test,968.0
+2b8da00df1a1277586a5743c1b3de5c74bac4503,2020-02-27,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #313 from easyaspi314/documentation,39.0
+2b8da00df1a1277586a5743c1b3de5c74bac4503,2020-02-27,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #313 from easyaspi314/documentation,76.0
+2b8da00df1a1277586a5743c1b3de5c74bac4503,2020-02-27,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #313 from easyaspi314/documentation,405.0
+2b8da00df1a1277586a5743c1b3de5c74bac4503,2020-02-27,ok,XXH64 64 B,,,,,,,Merge pull request #313 from easyaspi314/documentation,158.0
+2b8da00df1a1277586a5743c1b3de5c74bac4503,2020-02-27,ok,XXH64 1024 B,,,,,,,Merge pull request #313 from easyaspi314/documentation,968.0
+002fcb22195c23acbec2ab761057f95bcfcc2c8e,2020-02-28,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #314 from Cyan4973/xxh128_len9to16,39.0
+002fcb22195c23acbec2ab761057f95bcfcc2c8e,2020-02-28,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #314 from Cyan4973/xxh128_len9to16,76.0
+002fcb22195c23acbec2ab761057f95bcfcc2c8e,2020-02-28,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #314 from Cyan4973/xxh128_len9to16,405.0
+002fcb22195c23acbec2ab761057f95bcfcc2c8e,2020-02-28,ok,XXH64 64 B,,,,,,,Merge pull request #314 from Cyan4973/xxh128_len9to16,158.0
+002fcb22195c23acbec2ab761057f95bcfcc2c8e,2020-02-28,ok,XXH64 1024 B,,,,,,,Merge pull request #314 from Cyan4973/xxh128_len9to16,968.0
+152d50900b56a858eeebcc62911a971da5075bda,2020-02-28,ok,XXH3_64bits 16 B,,,,,,,xxh3 len[9-16] : minor quality improvement,41.0
+152d50900b56a858eeebcc62911a971da5075bda,2020-02-28,ok,XXH3_64bits 64 B,,,,,,,xxh3 len[9-16] : minor quality improvement,76.0
+152d50900b56a858eeebcc62911a971da5075bda,2020-02-28,ok,XXH3_64bits 1024 B,,,,,,,xxh3 len[9-16] : minor quality improvement,405.0
+152d50900b56a858eeebcc62911a971da5075bda,2020-02-28,ok,XXH64 64 B,,,,,,,xxh3 len[9-16] : minor quality improvement,158.0
+152d50900b56a858eeebcc62911a971da5075bda,2020-02-28,ok,XXH64 1024 B,,,,,,,xxh3 len[9-16] : minor quality improvement,968.0
+1740ae0d05436307bc30361bbbfba51a623a96bd,2020-03-01,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #316 from Cyan4973/doubleSecret,41.0
+1740ae0d05436307bc30361bbbfba51a623a96bd,2020-03-01,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #316 from Cyan4973/doubleSecret,76.0
+1740ae0d05436307bc30361bbbfba51a623a96bd,2020-03-01,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #316 from Cyan4973/doubleSecret,405.0
+1740ae0d05436307bc30361bbbfba51a623a96bd,2020-03-01,ok,XXH64 64 B,,,,,,,Merge pull request #316 from Cyan4973/doubleSecret,158.0
+1740ae0d05436307bc30361bbbfba51a623a96bd,2020-03-01,ok,XXH64 1024 B,,,,,,,Merge pull request #316 from Cyan4973/doubleSecret,968.0
+a14c4a83b3078fec2213f3c1514c74e51f414de9,2020-03-03,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #320 from Cyan4973/xxh3_len4_8,41.0
+a14c4a83b3078fec2213f3c1514c74e51f414de9,2020-03-03,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #320 from Cyan4973/xxh3_len4_8,76.0
+a14c4a83b3078fec2213f3c1514c74e51f414de9,2020-03-03,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #320 from Cyan4973/xxh3_len4_8,405.0
+a14c4a83b3078fec2213f3c1514c74e51f414de9,2020-03-03,ok,XXH64 64 B,,,,,,,Merge pull request #320 from Cyan4973/xxh3_len4_8,158.0
+a14c4a83b3078fec2213f3c1514c74e51f414de9,2020-03-03,ok,XXH64 1024 B,,,,,,,Merge pull request #320 from Cyan4973/xxh3_len4_8,968.0
+24b8aea8003737451deb83509fa2297359690d70,2020-03-04,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #325 from Cyan4973/xxh128v18,41.0
+24b8aea8003737451deb83509fa2297359690d70,2020-03-04,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #325 from Cyan4973/xxh128v18,76.0
+24b8aea8003737451deb83509fa2297359690d70,2020-03-04,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #325 from Cyan4973/xxh128v18,405.0
+24b8aea8003737451deb83509fa2297359690d70,2020-03-04,ok,XXH64 64 B,,,,,,,Merge pull request #325 from Cyan4973/xxh128v18,158.0
+24b8aea8003737451deb83509fa2297359690d70,2020-03-04,ok,XXH64 1024 B,,,,,,,Merge pull request #325 from Cyan4973/xxh128v18,968.0
+1dc959b74d6e4c3952156e7aa4f46f3ff76c1e4a,2020-03-09,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #332 from easyaspi314/documentation-v2,41.0
+1dc959b74d6e4c3952156e7aa4f46f3ff76c1e4a,2020-03-09,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #332 from easyaspi314/documentation-v2,76.0
+1dc959b74d6e4c3952156e7aa4f46f3ff76c1e4a,2020-03-09,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #332 from easyaspi314/documentation-v2,405.0
+1dc959b74d6e4c3952156e7aa4f46f3ff76c1e4a,2020-03-09,ok,XXH64 64 B,,,,,,,Merge pull request #332 from easyaspi314/documentation-v2,158.0
+1dc959b74d6e4c3952156e7aa4f46f3ff76c1e4a,2020-03-09,ok,XXH64 1024 B,,,,,,,Merge pull request #332 from easyaspi314/documentation-v2,968.0
+3e6c039a87fe245c407ae2479aff714522f221bf,2020-03-16,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #338 from easyaspi314/fix-warnings,41.0
+3e6c039a87fe245c407ae2479aff714522f221bf,2020-03-16,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #338 from easyaspi314/fix-warnings,76.0
+3e6c039a87fe245c407ae2479aff714522f221bf,2020-03-16,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #338 from easyaspi314/fix-warnings,405.0
+3e6c039a87fe245c407ae2479aff714522f221bf,2020-03-16,ok,XXH64 64 B,,,,,,,Merge pull request #338 from easyaspi314/fix-warnings,158.0
+3e6c039a87fe245c407ae2479aff714522f221bf,2020-03-16,ok,XXH64 1024 B,,,,,,,Merge pull request #338 from easyaspi314/fix-warnings,968.0
+7fc2b540470de98d5ad70e327d4400a5c9420cbf,2020-03-16,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #337 from easyaspi314/arm-speed-hax,41.0
+7fc2b540470de98d5ad70e327d4400a5c9420cbf,2020-03-16,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #337 from easyaspi314/arm-speed-hax,76.0
+7fc2b540470de98d5ad70e327d4400a5c9420cbf,2020-03-16,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #337 from easyaspi314/arm-speed-hax,422.0
+7fc2b540470de98d5ad70e327d4400a5c9420cbf,2020-03-16,ok,XXH64 64 B,,,,,,,Merge pull request #337 from easyaspi314/arm-speed-hax,158.0
+7fc2b540470de98d5ad70e327d4400a5c9420cbf,2020-03-16,ok,XXH64 1024 B,,,,,,,Merge pull request #337 from easyaspi314/arm-speed-hax,968.0
+294c403110b9237c0907aed7c33236529d130fd7,2020-04-07,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #347 from gzm55/work/avx512,41.0
+294c403110b9237c0907aed7c33236529d130fd7,2020-04-07,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #347 from gzm55/work/avx512,76.0
+294c403110b9237c0907aed7c33236529d130fd7,2020-04-07,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #347 from gzm55/work/avx512,422.0
+294c403110b9237c0907aed7c33236529d130fd7,2020-04-07,ok,XXH64 64 B,,,,,,,Merge pull request #347 from gzm55/work/avx512,158.0
+294c403110b9237c0907aed7c33236529d130fd7,2020-04-07,ok,XXH64 1024 B,,,,,,,Merge pull request #347 from gzm55/work/avx512,968.0
+ceed8a715309e0b81a62767606542fd2bfaed3c9,2020-05-27,ok,XXH3_64bits 16 B,,,,,,,simplified XXH_PREFETCH_DIST logic (#375),41.0
+ceed8a715309e0b81a62767606542fd2bfaed3c9,2020-05-27,ok,XXH3_64bits 64 B,,,,,,,simplified XXH_PREFETCH_DIST logic (#375),76.0
+ceed8a715309e0b81a62767606542fd2bfaed3c9,2020-05-27,ok,XXH3_64bits 1024 B,,,,,,,simplified XXH_PREFETCH_DIST logic (#375),422.0
+ceed8a715309e0b81a62767606542fd2bfaed3c9,2020-05-27,ok,XXH64 64 B,,,,,,,simplified XXH_PREFETCH_DIST logic (#375),158.0
+ceed8a715309e0b81a62767606542fd2bfaed3c9,2020-05-27,ok,XXH64 1024 B,,,,,,,simplified XXH_PREFETCH_DIST logic (#375),968.0
+27e33ac1740a2bf233804c242e83b74e4af92dc1,2020-06-11,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #386 from Cyan4973/kdf,41.0
+27e33ac1740a2bf233804c242e83b74e4af92dc1,2020-06-11,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #386 from Cyan4973/kdf,76.0
+27e33ac1740a2bf233804c242e83b74e4af92dc1,2020-06-11,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #386 from Cyan4973/kdf,422.0
+27e33ac1740a2bf233804c242e83b74e4af92dc1,2020-06-11,ok,XXH64 64 B,,,,,,,Merge pull request #386 from Cyan4973/kdf,158.0
+27e33ac1740a2bf233804c242e83b74e4af92dc1,2020-06-11,ok,XXH64 1024 B,,,,,,,Merge pull request #386 from Cyan4973/kdf,968.0
+f41dc60ff1eadbf246806f22fea318bc44a0db35,2020-06-24,ok,XXH3_64bits 16 B,,,,,,,updated comments on _withSecret() variants,41.0
+f41dc60ff1eadbf246806f22fea318bc44a0db35,2020-06-24,ok,XXH3_64bits 64 B,,,,,,,updated comments on _withSecret() variants,76.0
+f41dc60ff1eadbf246806f22fea318bc44a0db35,2020-06-24,ok,XXH3_64bits 1024 B,,,,,,,updated comments on _withSecret() variants,422.0
+f41dc60ff1eadbf246806f22fea318bc44a0db35,2020-06-24,ok,XXH64 64 B,,,,,,,updated comments on _withSecret() variants,158.0
+f41dc60ff1eadbf246806f22fea318bc44a0db35,2020-06-24,ok,XXH64 1024 B,,,,,,,updated comments on _withSecret() variants,968.0
+b694f972ddec758a07e7813a0e1897d5bdfc220b,2020-07-05,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #417 from Cyan4973/shuffle_avx512,41.0
+b694f972ddec758a07e7813a0e1897d5bdfc220b,2020-07-05,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #417 from Cyan4973/shuffle_avx512,76.0
+b694f972ddec758a07e7813a0e1897d5bdfc220b,2020-07-05,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #417 from Cyan4973/shuffle_avx512,417.0
+b694f972ddec758a07e7813a0e1897d5bdfc220b,2020-07-05,ok,XXH64 64 B,,,,,,,Merge pull request #417 from Cyan4973/shuffle_avx512,158.0
+b694f972ddec758a07e7813a0e1897d5bdfc220b,2020-07-05,ok,XXH64 1024 B,,,,,,,Merge pull request #417 from Cyan4973/shuffle_avx512,968.0
+316683659c99449fdb6537107d9626208ba89565,2020-07-23,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #434 from Cyan4973/xxh3_merge,41.0
+316683659c99449fdb6537107d9626208ba89565,2020-07-23,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #434 from Cyan4973/xxh3_merge,76.0
+316683659c99449fdb6537107d9626208ba89565,2020-07-23,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #434 from Cyan4973/xxh3_merge,417.0
+316683659c99449fdb6537107d9626208ba89565,2020-07-23,ok,XXH64 64 B,,,,,,,Merge pull request #434 from Cyan4973/xxh3_merge,158.0
+316683659c99449fdb6537107d9626208ba89565,2020-07-23,ok,XXH64 1024 B,,,,,,,Merge pull request #434 from Cyan4973/xxh3_merge,968.0
+7ee691763bf55669217d8b74846e4992a558fe9c,2020-09-15,ok,XXH3_64bits 16 B,,,,,,,refactor xxh3 presentation in code comments,41.0
+7ee691763bf55669217d8b74846e4992a558fe9c,2020-09-15,ok,XXH3_64bits 64 B,,,,,,,refactor xxh3 presentation in code comments,76.0
+7ee691763bf55669217d8b74846e4992a558fe9c,2020-09-15,ok,XXH3_64bits 1024 B,,,,,,,refactor xxh3 presentation in code comments,417.0
+7ee691763bf55669217d8b74846e4992a558fe9c,2020-09-15,ok,XXH64 64 B,,,,,,,refactor xxh3 presentation in code comments,158.0
+7ee691763bf55669217d8b74846e4992a558fe9c,2020-09-15,ok,XXH64 1024 B,,,,,,,refactor xxh3 presentation in code comments,968.0
+2b9f6fa95163230efc66e7b9e613e08245afaead,2020-11-12,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #472 from jonsykkel/patch-1,41.0
+2b9f6fa95163230efc66e7b9e613e08245afaead,2020-11-12,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #472 from jonsykkel/patch-1,76.0
+2b9f6fa95163230efc66e7b9e613e08245afaead,2020-11-12,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #472 from jonsykkel/patch-1,417.0
+2b9f6fa95163230efc66e7b9e613e08245afaead,2020-11-12,ok,XXH64 64 B,,,,,,,Merge pull request #472 from jonsykkel/patch-1,158.0
+2b9f6fa95163230efc66e7b9e613e08245afaead,2020-11-12,ok,XXH64 1024 B,,,,,,,Merge pull request #472 from jonsykkel/patch-1,968.0
+6e0bd01284322dd12c04d60c470b4f8633870609,2021-01-07,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #489 from ThomasWaldmann/fix-typos,41.0
+6e0bd01284322dd12c04d60c470b4f8633870609,2021-01-07,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #489 from ThomasWaldmann/fix-typos,76.0
+6e0bd01284322dd12c04d60c470b4f8633870609,2021-01-07,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #489 from ThomasWaldmann/fix-typos,417.0
+6e0bd01284322dd12c04d60c470b4f8633870609,2021-01-07,ok,XXH64 64 B,,,,,,,Merge pull request #489 from ThomasWaldmann/fix-typos,158.0
+6e0bd01284322dd12c04d60c470b4f8633870609,2021-01-07,ok,XXH64 1024 B,,,,,,,Merge pull request #489 from ThomasWaldmann/fix-typos,968.0
+2e83f6335392f0dcd76bceaf8975cf21c950bf27,2021-02-22,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #502 from nealrichardson/nealrichardson-patch-1,41.0
+2e83f6335392f0dcd76bceaf8975cf21c950bf27,2021-02-22,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #502 from nealrichardson/nealrichardson-patch-1,76.0
+2e83f6335392f0dcd76bceaf8975cf21c950bf27,2021-02-22,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #502 from nealrichardson/nealrichardson-patch-1,417.0
+2e83f6335392f0dcd76bceaf8975cf21c950bf27,2021-02-22,ok,XXH64 64 B,,,,,,,Merge pull request #502 from nealrichardson/nealrichardson-patch-1,158.0
+2e83f6335392f0dcd76bceaf8975cf21c950bf27,2021-02-22,ok,XXH64 1024 B,,,,,,,Merge pull request #502 from nealrichardson/nealrichardson-patch-1,968.0
+7bf3d9f331d0b7d0f5856ae1894e0314e2b304c2,2021-03-26,ok,XXH3_64bits 16 B,,,,,,,removed XXH64's switch finalizer (#521),41.0
+7bf3d9f331d0b7d0f5856ae1894e0314e2b304c2,2021-03-26,ok,XXH3_64bits 64 B,,,,,,,removed XXH64's switch finalizer (#521),76.0
+7bf3d9f331d0b7d0f5856ae1894e0314e2b304c2,2021-03-26,ok,XXH3_64bits 1024 B,,,,,,,removed XXH64's switch finalizer (#521),417.0
+7bf3d9f331d0b7d0f5856ae1894e0314e2b304c2,2021-03-26,ok,XXH64 64 B,,,,,,,removed XXH64's switch finalizer (#521),161.0
+7bf3d9f331d0b7d0f5856ae1894e0314e2b304c2,2021-03-26,ok,XXH64 1024 B,,,,,,,removed XXH64's switch finalizer (#521),971.0
+c0e86bc030cfd5ae08d529acac0a8b8a7c5252e6,2021-04-20,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #523 from Cyan4973/NO_XXH3,41.0
+c0e86bc030cfd5ae08d529acac0a8b8a7c5252e6,2021-04-20,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #523 from Cyan4973/NO_XXH3,76.0
+c0e86bc030cfd5ae08d529acac0a8b8a7c5252e6,2021-04-20,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #523 from Cyan4973/NO_XXH3,417.0
+c0e86bc030cfd5ae08d529acac0a8b8a7c5252e6,2021-04-20,ok,XXH64 64 B,,,,,,,Merge pull request #523 from Cyan4973/NO_XXH3,161.0
+c0e86bc030cfd5ae08d529acac0a8b8a7c5252e6,2021-04-20,ok,XXH64 1024 B,,,,,,,Merge pull request #523 from Cyan4973/NO_XXH3,971.0
+b2482d23e2f6e23c5a7b3302f74880bd89910efe,2021-05-25,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #531 from t-mat/fix-usan,41.0
+b2482d23e2f6e23c5a7b3302f74880bd89910efe,2021-05-25,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #531 from t-mat/fix-usan,76.0
+b2482d23e2f6e23c5a7b3302f74880bd89910efe,2021-05-25,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #531 from t-mat/fix-usan,417.0
+b2482d23e2f6e23c5a7b3302f74880bd89910efe,2021-05-25,ok,XXH64 64 B,,,,,,,Merge pull request #531 from t-mat/fix-usan,167.0
+b2482d23e2f6e23c5a7b3302f74880bd89910efe,2021-05-25,ok,XXH64 1024 B,,,,,,,Merge pull request #531 from t-mat/fix-usan,977.0
+f257e949ea3d6d7475c114ace5382f9cc544be1c,2021-06-27,ok,XXH3_64bits 16 B,,,,,,,updated version number to v0.8.1,41.0
+f257e949ea3d6d7475c114ace5382f9cc544be1c,2021-06-27,ok,XXH3_64bits 64 B,,,,,,,updated version number to v0.8.1,76.0
+f257e949ea3d6d7475c114ace5382f9cc544be1c,2021-06-27,ok,XXH3_64bits 1024 B,,,,,,,updated version number to v0.8.1,417.0
+f257e949ea3d6d7475c114ace5382f9cc544be1c,2021-06-27,ok,XXH64 64 B,,,,,,,updated version number to v0.8.1,167.0
+f257e949ea3d6d7475c114ace5382f9cc544be1c,2021-06-27,ok,XXH64 1024 B,,,,,,,updated version number to v0.8.1,977.0
+be534ed8c9fa677f18f230735c114373b1ed7d34,2021-08-11,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #551 from pdillinger/negate_signed,41.0
+be534ed8c9fa677f18f230735c114373b1ed7d34,2021-08-11,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #551 from pdillinger/negate_signed,76.0
+be534ed8c9fa677f18f230735c114373b1ed7d34,2021-08-11,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #551 from pdillinger/negate_signed,417.0
+be534ed8c9fa677f18f230735c114373b1ed7d34,2021-08-11,ok,XXH64 64 B,,,,,,,Merge pull request #551 from pdillinger/negate_signed,167.0
+be534ed8c9fa677f18f230735c114373b1ed7d34,2021-08-11,ok,XXH64 1024 B,,,,,,,Merge pull request #551 from pdillinger/negate_signed,977.0
+f87aec4a7adea9973c0be5690cb34cd9f839edd7,2021-08-21,ok,XXH3_64bits 16 B,,,,,,,minor cleaning,41.0
+f87aec4a7adea9973c0be5690cb34cd9f839edd7,2021-08-21,ok,XXH3_64bits 64 B,,,,,,,minor cleaning,76.0
+f87aec4a7adea9973c0be5690cb34cd9f839edd7,2021-08-21,ok,XXH3_64bits 1024 B,,,,,,,minor cleaning,417.0
+f87aec4a7adea9973c0be5690cb34cd9f839edd7,2021-08-21,ok,XXH64 64 B,,,,,,,minor cleaning,167.0
+f87aec4a7adea9973c0be5690cb34cd9f839edd7,2021-08-21,ok,XXH64 1024 B,,,,,,,minor cleaning,977.0
+047d5661af07d107a61c64a07b1383237d554fb3,2021-08-23,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #573 from Cyan4973/namespace_inline,41.0
+047d5661af07d107a61c64a07b1383237d554fb3,2021-08-23,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #573 from Cyan4973/namespace_inline,76.0
+047d5661af07d107a61c64a07b1383237d554fb3,2021-08-23,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #573 from Cyan4973/namespace_inline,417.0
+047d5661af07d107a61c64a07b1383237d554fb3,2021-08-23,ok,XXH64 64 B,,,,,,,Merge pull request #573 from Cyan4973/namespace_inline,167.0
+047d5661af07d107a61c64a07b1383237d554fb3,2021-08-23,ok,XXH64 1024 B,,,,,,,Merge pull request #573 from Cyan4973/namespace_inline,977.0
+b36d27c1694dec661b5c7dddf6ad85c2fa2711df,2021-08-25,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #576 from t-mat/avx-cast-via-void,41.0
+b36d27c1694dec661b5c7dddf6ad85c2fa2711df,2021-08-25,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #576 from t-mat/avx-cast-via-void,76.0
+b36d27c1694dec661b5c7dddf6ad85c2fa2711df,2021-08-25,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #576 from t-mat/avx-cast-via-void,417.0
+b36d27c1694dec661b5c7dddf6ad85c2fa2711df,2021-08-25,ok,XXH64 64 B,,,,,,,Merge pull request #576 from t-mat/avx-cast-via-void,167.0
+b36d27c1694dec661b5c7dddf6ad85c2fa2711df,2021-08-25,ok,XXH64 1024 B,,,,,,,Merge pull request #576 from t-mat/avx-cast-via-void,977.0
+df5d63917e0ea553065e9b39429ded3a520b3de9,2021-08-31,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #585 from t-mat/fix-xxh-align,41.0
+df5d63917e0ea553065e9b39429ded3a520b3de9,2021-08-31,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #585 from t-mat/fix-xxh-align,76.0
+df5d63917e0ea553065e9b39429ded3a520b3de9,2021-08-31,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #585 from t-mat/fix-xxh-align,417.0
+df5d63917e0ea553065e9b39429ded3a520b3de9,2021-08-31,ok,XXH64 64 B,,,,,,,Merge pull request #585 from t-mat/fix-xxh-align,167.0
+df5d63917e0ea553065e9b39429ded3a520b3de9,2021-08-31,ok,XXH64 1024 B,,,,,,,Merge pull request #585 from t-mat/fix-xxh-align,977.0
+7ddad92ae552de99db01c3e7cf8d678009e91ceb,2021-11-23,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #598 from easyaspi314/msvc-arm,41.0
+7ddad92ae552de99db01c3e7cf8d678009e91ceb,2021-11-23,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #598 from easyaspi314/msvc-arm,76.0
+7ddad92ae552de99db01c3e7cf8d678009e91ceb,2021-11-23,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #598 from easyaspi314/msvc-arm,417.0
+7ddad92ae552de99db01c3e7cf8d678009e91ceb,2021-11-23,ok,XXH64 64 B,,,,,,,Merge pull request #598 from easyaspi314/msvc-arm,167.0
+7ddad92ae552de99db01c3e7cf8d678009e91ceb,2021-11-23,ok,XXH64 1024 B,,,,,,,Merge pull request #598 from easyaspi314/msvc-arm,977.0
+cba92a7cd3debba222f90daca83a03925abeede0,2021-11-25,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #599 from Cyan4973/accept_null,41.0
+cba92a7cd3debba222f90daca83a03925abeede0,2021-11-25,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #599 from Cyan4973/accept_null,76.0
+cba92a7cd3debba222f90daca83a03925abeede0,2021-11-25,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #599 from Cyan4973/accept_null,417.0
+cba92a7cd3debba222f90daca83a03925abeede0,2021-11-25,ok,XXH64 64 B,,,,,,,Merge pull request #599 from Cyan4973/accept_null,158.0
+cba92a7cd3debba222f90daca83a03925abeede0,2021-11-25,ok,XXH64 1024 B,,,,,,,Merge pull request #599 from Cyan4973/accept_null,968.0
+b1681934c9fb3d849c4c42b6a93894b70f3dca47,2021-11-25,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #601 from Cyan4973/wdoc,41.0
+b1681934c9fb3d849c4c42b6a93894b70f3dca47,2021-11-25,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #601 from Cyan4973/wdoc,76.0
+b1681934c9fb3d849c4c42b6a93894b70f3dca47,2021-11-25,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #601 from Cyan4973/wdoc,417.0
+b1681934c9fb3d849c4c42b6a93894b70f3dca47,2021-11-25,ok,XXH64 64 B,,,,,,,Merge pull request #601 from Cyan4973/wdoc,158.0
+b1681934c9fb3d849c4c42b6a93894b70f3dca47,2021-11-25,ok,XXH64 1024 B,,,,,,,Merge pull request #601 from Cyan4973/wdoc,968.0
+d8bcc2450297160216afd3c7a6fff653139880e8,2021-11-25,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #604 from Cyan4973/msvc_clang_novec,41.0
+d8bcc2450297160216afd3c7a6fff653139880e8,2021-11-25,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #604 from Cyan4973/msvc_clang_novec,76.0
+d8bcc2450297160216afd3c7a6fff653139880e8,2021-11-25,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #604 from Cyan4973/msvc_clang_novec,417.0
+d8bcc2450297160216afd3c7a6fff653139880e8,2021-11-25,ok,XXH64 64 B,,,,,,,Merge pull request #604 from Cyan4973/msvc_clang_novec,158.0
+d8bcc2450297160216afd3c7a6fff653139880e8,2021-11-25,ok,XXH64 1024 B,,,,,,,Merge pull request #604 from Cyan4973/msvc_clang_novec,968.0
+c43b8c79e5cd5046877593b26f567491ad26d91f,2021-11-27,ok,XXH3_64bits 16 B,,,,,,,xxhash: all invocations of memcpy() via XXH_memcpy() shim,42.0
+c43b8c79e5cd5046877593b26f567491ad26d91f,2021-11-27,ok,XXH3_64bits 64 B,,,,,,,xxhash: all invocations of memcpy() via XXH_memcpy() shim,77.0
+c43b8c79e5cd5046877593b26f567491ad26d91f,2021-11-27,ok,XXH3_64bits 1024 B,,,,,,,xxhash: all invocations of memcpy() via XXH_memcpy() shim,418.0
+c43b8c79e5cd5046877593b26f567491ad26d91f,2021-11-27,ok,XXH64 64 B,,,,,,,xxhash: all invocations of memcpy() via XXH_memcpy() shim,158.0
+c43b8c79e5cd5046877593b26f567491ad26d91f,2021-11-27,ok,XXH64 1024 B,,,,,,,xxhash: all invocations of memcpy() via XXH_memcpy() shim,968.0
+81785694f814164861dc7336811ac981771ace49,2021-11-28,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #616 from Cyan4973/XXH32_ENDJMP,42.0
+81785694f814164861dc7336811ac981771ace49,2021-11-28,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #616 from Cyan4973/XXH32_ENDJMP,77.0
+81785694f814164861dc7336811ac981771ace49,2021-11-28,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #616 from Cyan4973/XXH32_ENDJMP,418.0
+81785694f814164861dc7336811ac981771ace49,2021-11-28,ok,XXH64 64 B,,,,,,,Merge pull request #616 from Cyan4973/XXH32_ENDJMP,158.0
+81785694f814164861dc7336811ac981771ace49,2021-11-28,ok,XXH64 1024 B,,,,,,,Merge pull request #616 from Cyan4973/XXH32_ENDJMP,968.0
+56ac11efc5f0c3b8e2ee9bbf3582c82a2cabb5c5,2021-11-30,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #631 from ellert/rhel7-ppc64le,42.0
+56ac11efc5f0c3b8e2ee9bbf3582c82a2cabb5c5,2021-11-30,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #631 from ellert/rhel7-ppc64le,77.0
+56ac11efc5f0c3b8e2ee9bbf3582c82a2cabb5c5,2021-11-30,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #631 from ellert/rhel7-ppc64le,418.0
+56ac11efc5f0c3b8e2ee9bbf3582c82a2cabb5c5,2021-11-30,ok,XXH64 64 B,,,,,,,Merge pull request #631 from ellert/rhel7-ppc64le,158.0
+56ac11efc5f0c3b8e2ee9bbf3582c82a2cabb5c5,2021-11-30,ok,XXH64 1024 B,,,,,,,Merge pull request #631 from ellert/rhel7-ppc64le,968.0
+c4716aed7042f263d48a84aa3254a9370900631e,2021-12-02,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #639 from Cyan4973/fix627,42.0
+c4716aed7042f263d48a84aa3254a9370900631e,2021-12-02,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #639 from Cyan4973/fix627,77.0
+c4716aed7042f263d48a84aa3254a9370900631e,2021-12-02,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #639 from Cyan4973/fix627,418.0
+c4716aed7042f263d48a84aa3254a9370900631e,2021-12-02,ok,XXH64 64 B,,,,,,,Merge pull request #639 from Cyan4973/fix627,158.0
+c4716aed7042f263d48a84aa3254a9370900631e,2021-12-02,ok,XXH64 1024 B,,,,,,,Merge pull request #639 from Cyan4973/fix627,968.0
+f035303b8a86c1db9be70cbb638678ef6ef4cb2d,2021-12-08,ok,XXH3_64bits 16 B,,,,,,,updated copyright years,41.0
+f035303b8a86c1db9be70cbb638678ef6ef4cb2d,2021-12-08,ok,XXH3_64bits 64 B,,,,,,,updated copyright years,76.0
+f035303b8a86c1db9be70cbb638678ef6ef4cb2d,2021-12-08,ok,XXH3_64bits 1024 B,,,,,,,updated copyright years,417.0
+f035303b8a86c1db9be70cbb638678ef6ef4cb2d,2021-12-08,ok,XXH64 64 B,,,,,,,updated copyright years,158.0
+f035303b8a86c1db9be70cbb638678ef6ef4cb2d,2021-12-08,ok,XXH64 1024 B,,,,,,,updated copyright years,968.0
+30720342fdbe65a2e27fb89b5350b517bc6eb2fd,2021-12-11,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #657 from Cyan4973/const_f,41.0
+30720342fdbe65a2e27fb89b5350b517bc6eb2fd,2021-12-11,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #657 from Cyan4973/const_f,76.0
+30720342fdbe65a2e27fb89b5350b517bc6eb2fd,2021-12-11,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #657 from Cyan4973/const_f,417.0
+30720342fdbe65a2e27fb89b5350b517bc6eb2fd,2021-12-11,ok,XXH64 64 B,,,,,,,Merge pull request #657 from Cyan4973/const_f,158.0
+30720342fdbe65a2e27fb89b5350b517bc6eb2fd,2021-12-11,ok,XXH64 1024 B,,,,,,,Merge pull request #657 from Cyan4973/const_f,968.0
+0e163593f89fada061f6e64a8be2f9b3c32d6fa4,2021-12-21,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #662 from easyaspi314/c_attr,41.0
+0e163593f89fada061f6e64a8be2f9b3c32d6fa4,2021-12-21,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #662 from easyaspi314/c_attr,76.0
+0e163593f89fada061f6e64a8be2f9b3c32d6fa4,2021-12-21,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #662 from easyaspi314/c_attr,417.0
+0e163593f89fada061f6e64a8be2f9b3c32d6fa4,2021-12-21,ok,XXH64 64 B,,,,,,,Merge pull request #662 from easyaspi314/c_attr,158.0
+0e163593f89fada061f6e64a8be2f9b3c32d6fa4,2021-12-21,ok,XXH64 1024 B,,,,,,,Merge pull request #662 from easyaspi314/c_attr,968.0
+cc8f0d0ceb3b789bba4321504718168982ad59fd,2022-05-05,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #708 from MaxiBoether/dev,41.0
+cc8f0d0ceb3b789bba4321504718168982ad59fd,2022-05-05,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #708 from MaxiBoether/dev,76.0
+cc8f0d0ceb3b789bba4321504718168982ad59fd,2022-05-05,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #708 from MaxiBoether/dev,417.0
+cc8f0d0ceb3b789bba4321504718168982ad59fd,2022-05-05,ok,XXH64 64 B,,,,,,,Merge pull request #708 from MaxiBoether/dev,158.0
+cc8f0d0ceb3b789bba4321504718168982ad59fd,2022-05-05,ok,XXH64 1024 B,,,,,,,Merge pull request #708 from MaxiBoether/dev,968.0
+c420b5971f506de66babd6b88188f67207138432,2022-09-07,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #734 from dougallj/neon-opt,41.0
+c420b5971f506de66babd6b88188f67207138432,2022-09-07,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #734 from dougallj/neon-opt,76.0
+c420b5971f506de66babd6b88188f67207138432,2022-09-07,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #734 from dougallj/neon-opt,417.0
+c420b5971f506de66babd6b88188f67207138432,2022-09-07,ok,XXH64 64 B,,,,,,,Merge pull request #734 from dougallj/neon-opt,158.0
+c420b5971f506de66babd6b88188f67207138432,2022-09-07,ok,XXH64 1024 B,,,,,,,Merge pull request #734 from dougallj/neon-opt,968.0
+86e1f8e8ab00ca327ccb7f4d75aea62b70c7ac57,2022-12-02,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #754 from goldsteinn/dev,42.0
+86e1f8e8ab00ca327ccb7f4d75aea62b70c7ac57,2022-12-02,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #754 from goldsteinn/dev,74.0
+86e1f8e8ab00ca327ccb7f4d75aea62b70c7ac57,2022-12-02,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #754 from goldsteinn/dev,417.0
+86e1f8e8ab00ca327ccb7f4d75aea62b70c7ac57,2022-12-02,ok,XXH64 64 B,,,,,,,Merge pull request #754 from goldsteinn/dev,158.0
+86e1f8e8ab00ca327ccb7f4d75aea62b70c7ac57,2022-12-02,ok,XXH64 1024 B,,,,,,,Merge pull request #754 from goldsteinn/dev,968.0
+4ebd833a2b2b0bd3059c8c7ac428de849e48b925,2022-12-29,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #778 from DimitriPapadopoulos/http,42.0
+4ebd833a2b2b0bd3059c8c7ac428de849e48b925,2022-12-29,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #778 from DimitriPapadopoulos/http,74.0
+4ebd833a2b2b0bd3059c8c7ac428de849e48b925,2022-12-29,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #778 from DimitriPapadopoulos/http,417.0
+4ebd833a2b2b0bd3059c8c7ac428de849e48b925,2022-12-29,ok,XXH64 64 B,,,,,,,Merge pull request #778 from DimitriPapadopoulos/http,158.0
+4ebd833a2b2b0bd3059c8c7ac428de849e48b925,2022-12-29,ok,XXH64 1024 B,,,,,,,Merge pull request #778 from DimitriPapadopoulos/http,968.0
+fe98d2b0d72aed9c3137b44e1df6cad12631b615,2023-01-13,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #782 from goldsteinn/dev,41.0
+fe98d2b0d72aed9c3137b44e1df6cad12631b615,2023-01-13,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #782 from goldsteinn/dev,75.0
+fe98d2b0d72aed9c3137b44e1df6cad12631b615,2023-01-13,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #782 from goldsteinn/dev,417.0
+fe98d2b0d72aed9c3137b44e1df6cad12631b615,2023-01-13,ok,XXH64 64 B,,,,,,,Merge pull request #782 from goldsteinn/dev,163.0
+fe98d2b0d72aed9c3137b44e1df6cad12631b615,2023-01-13,ok,XXH64 1024 B,,,,,,,Merge pull request #782 from goldsteinn/dev,973.0
+1dc3a5c76e4a0c24c241dcc5d4970be30f2be82d,2023-01-25,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #785 from hzhuang1/barrier_01,41.0
+1dc3a5c76e4a0c24c241dcc5d4970be30f2be82d,2023-01-25,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #785 from hzhuang1/barrier_01,75.0
+1dc3a5c76e4a0c24c241dcc5d4970be30f2be82d,2023-01-25,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #785 from hzhuang1/barrier_01,417.0
+1dc3a5c76e4a0c24c241dcc5d4970be30f2be82d,2023-01-25,ok,XXH64 64 B,,,,,,,Merge pull request #785 from hzhuang1/barrier_01,163.0
+1dc3a5c76e4a0c24c241dcc5d4970be30f2be82d,2023-01-25,ok,XXH64 1024 B,,,,,,,Merge pull request #785 from hzhuang1/barrier_01,973.0
+2b328a10983d232364ceda15df1d33531b5f0eb5,2023-02-27,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #805 from easyaspi314/xxh3_update_rewrite,41.0
+2b328a10983d232364ceda15df1d33531b5f0eb5,2023-02-27,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #805 from easyaspi314/xxh3_update_rewrite,75.0
+2b328a10983d232364ceda15df1d33531b5f0eb5,2023-02-27,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #805 from easyaspi314/xxh3_update_rewrite,417.0
+2b328a10983d232364ceda15df1d33531b5f0eb5,2023-02-27,ok,XXH64 64 B,,,,,,,Merge pull request #805 from easyaspi314/xxh3_update_rewrite,163.0
+2b328a10983d232364ceda15df1d33531b5f0eb5,2023-02-27,ok,XXH64 1024 B,,,,,,,Merge pull request #805 from easyaspi314/xxh3_update_rewrite,973.0
+449372ca8e0d1584d534dc82fe7d81ab75cfd6b4,2023-03-09,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #804 from easyaspi314/gcc12-Og,41.0
+449372ca8e0d1584d534dc82fe7d81ab75cfd6b4,2023-03-09,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #804 from easyaspi314/gcc12-Og,75.0
+449372ca8e0d1584d534dc82fe7d81ab75cfd6b4,2023-03-09,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #804 from easyaspi314/gcc12-Og,417.0
+449372ca8e0d1584d534dc82fe7d81ab75cfd6b4,2023-03-09,ok,XXH64 64 B,,,,,,,Merge pull request #804 from easyaspi314/gcc12-Og,163.0
+449372ca8e0d1584d534dc82fe7d81ab75cfd6b4,2023-03-09,ok,XXH64 1024 B,,,,,,,Merge pull request #804 from easyaspi314/gcc12-Og,973.0
+dfd76172682a2d06542c02ab8ece32cb57a60e08,2023-06-30,ok,XXH3_64bits 16 B,,,,,,,update version number to v0.8.2,41.0
+dfd76172682a2d06542c02ab8ece32cb57a60e08,2023-06-30,ok,XXH3_64bits 64 B,,,,,,,update version number to v0.8.2,75.0
+dfd76172682a2d06542c02ab8ece32cb57a60e08,2023-06-30,ok,XXH3_64bits 1024 B,,,,,,,update version number to v0.8.2,417.0
+dfd76172682a2d06542c02ab8ece32cb57a60e08,2023-06-30,ok,XXH64 64 B,,,,,,,update version number to v0.8.2,163.0
+dfd76172682a2d06542c02ab8ece32cb57a60e08,2023-06-30,ok,XXH64 1024 B,,,,,,,update version number to v0.8.2,973.0
+c234b940f0215c92949a095ead35299dfe8209d4,2023-07-09,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #825 from easyaspi314/wasm128,41.0
+c234b940f0215c92949a095ead35299dfe8209d4,2023-07-09,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #825 from easyaspi314/wasm128,75.0
+c234b940f0215c92949a095ead35299dfe8209d4,2023-07-09,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #825 from easyaspi314/wasm128,417.0
+c234b940f0215c92949a095ead35299dfe8209d4,2023-07-09,ok,XXH64 64 B,,,,,,,Merge pull request #825 from easyaspi314/wasm128,163.0
+c234b940f0215c92949a095ead35299dfe8209d4,2023-07-09,ok,XXH64 1024 B,,,,,,,Merge pull request #825 from easyaspi314/wasm128,973.0
+9e1cf4e6dffae3f204db08379f99bf3af23286fb,2023-07-16,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #867 from t-mat/fix/intel-compiler-assert,41.0
+9e1cf4e6dffae3f204db08379f99bf3af23286fb,2023-07-16,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #867 from t-mat/fix/intel-compiler-assert,75.0
+9e1cf4e6dffae3f204db08379f99bf3af23286fb,2023-07-16,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #867 from t-mat/fix/intel-compiler-assert,417.0
+9e1cf4e6dffae3f204db08379f99bf3af23286fb,2023-07-16,ok,XXH64 64 B,,,,,,,Merge pull request #867 from t-mat/fix/intel-compiler-assert,163.0
+9e1cf4e6dffae3f204db08379f99bf3af23286fb,2023-07-16,ok,XXH64 1024 B,,,,,,,Merge pull request #867 from t-mat/fix/intel-compiler-assert,973.0
+cf5c65576bd20b58fc39e18429f4c5adc96a3139,2023-07-31,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #877 from dwsteele/dev-copyright-year,41.0
+cf5c65576bd20b58fc39e18429f4c5adc96a3139,2023-07-31,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #877 from dwsteele/dev-copyright-year,76.0
+cf5c65576bd20b58fc39e18429f4c5adc96a3139,2023-07-31,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #877 from dwsteele/dev-copyright-year,417.0
+cf5c65576bd20b58fc39e18429f4c5adc96a3139,2023-07-31,ok,XXH64 64 B,,,,,,,Merge pull request #877 from dwsteele/dev-copyright-year,163.0
+cf5c65576bd20b58fc39e18429f4c5adc96a3139,2023-07-31,ok,XXH64 1024 B,,,,,,,Merge pull request #877 from dwsteele/dev-copyright-year,973.0
+da79cc1229e1e26e2c017aa28fb3873f7012e689,2024-03-07,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #924 from Cyan4973/xxh64_noVector,41.0
+da79cc1229e1e26e2c017aa28fb3873f7012e689,2024-03-07,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #924 from Cyan4973/xxh64_noVector,76.0
+da79cc1229e1e26e2c017aa28fb3873f7012e689,2024-03-07,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #924 from Cyan4973/xxh64_noVector,417.0
+da79cc1229e1e26e2c017aa28fb3873f7012e689,2024-03-07,ok,XXH64 64 B,,,,,,,Merge pull request #924 from Cyan4973/xxh64_noVector,163.0
+da79cc1229e1e26e2c017aa28fb3873f7012e689,2024-03-07,ok,XXH64 1024 B,,,,,,,Merge pull request #924 from Cyan4973/xxh64_noVector,973.0
+a9b2f1811534c5cbb8a7a702192c919ac320e4bb,2024-05-07,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #894 from hltj/dev,41.0
+a9b2f1811534c5cbb8a7a702192c919ac320e4bb,2024-05-07,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #894 from hltj/dev,76.0
+a9b2f1811534c5cbb8a7a702192c919ac320e4bb,2024-05-07,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #894 from hltj/dev,417.0
+a9b2f1811534c5cbb8a7a702192c919ac320e4bb,2024-05-07,ok,XXH64 64 B,,,,,,,Merge pull request #894 from hltj/dev,163.0
+a9b2f1811534c5cbb8a7a702192c919ac320e4bb,2024-05-07,ok,XXH64 1024 B,,,,,,,Merge pull request #894 from hltj/dev,973.0
+f6699925368a7ecd2c9902b0d961a7ae5c4ed10d,2024-10-07,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #970 from Cyan4973/visual_c11,41.0
+f6699925368a7ecd2c9902b0d961a7ae5c4ed10d,2024-10-07,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #970 from Cyan4973/visual_c11,76.0
+f6699925368a7ecd2c9902b0d961a7ae5c4ed10d,2024-10-07,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #970 from Cyan4973/visual_c11,417.0
+f6699925368a7ecd2c9902b0d961a7ae5c4ed10d,2024-10-07,ok,XXH64 64 B,,,,,,,Merge pull request #970 from Cyan4973/visual_c11,163.0
+f6699925368a7ecd2c9902b0d961a7ae5c4ed10d,2024-10-07,ok,XXH64 1024 B,,,,,,,Merge pull request #970 from Cyan4973/visual_c11,973.0
+cf9e2dc589c897f5a944c9bed829db5872a209d6,2024-12-26,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #986 from Cyan4973/autovec_x86,41.0
+cf9e2dc589c897f5a944c9bed829db5872a209d6,2024-12-26,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #986 from Cyan4973/autovec_x86,76.0
+cf9e2dc589c897f5a944c9bed829db5872a209d6,2024-12-26,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #986 from Cyan4973/autovec_x86,417.0
+cf9e2dc589c897f5a944c9bed829db5872a209d6,2024-12-26,ok,XXH64 64 B,,,,,,,Merge pull request #986 from Cyan4973/autovec_x86,163.0
+cf9e2dc589c897f5a944c9bed829db5872a209d6,2024-12-26,ok,XXH64 1024 B,,,,,,,Merge pull request #986 from Cyan4973/autovec_x86,973.0
+f5a0b6fa8f76c9ea83e78a69942e80058a561125,2025-01-22,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1004 from Cyan4973/usan_fix,41.0
+f5a0b6fa8f76c9ea83e78a69942e80058a561125,2025-01-22,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1004 from Cyan4973/usan_fix,76.0
+f5a0b6fa8f76c9ea83e78a69942e80058a561125,2025-01-22,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1004 from Cyan4973/usan_fix,417.0
+f5a0b6fa8f76c9ea83e78a69942e80058a561125,2025-01-22,ok,XXH64 64 B,,,,,,,Merge pull request #1004 from Cyan4973/usan_fix,163.0
+f5a0b6fa8f76c9ea83e78a69942e80058a561125,2025-01-22,ok,XXH64 1024 B,,,,,,,Merge pull request #1004 from Cyan4973/usan_fix,973.0
+081ddab37b6a1bdce37e01c96f0881e41ca93358,2025-01-29,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1007 from Cyan4973/no_externc_guard,41.0
+081ddab37b6a1bdce37e01c96f0881e41ca93358,2025-01-29,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1007 from Cyan4973/no_externc_guard,76.0
+081ddab37b6a1bdce37e01c96f0881e41ca93358,2025-01-29,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1007 from Cyan4973/no_externc_guard,417.0
+081ddab37b6a1bdce37e01c96f0881e41ca93358,2025-01-29,ok,XXH64 64 B,,,,,,,Merge pull request #1007 from Cyan4973/no_externc_guard,163.0
+081ddab37b6a1bdce37e01c96f0881e41ca93358,2025-01-29,ok,XXH64 1024 B,,,,,,,Merge pull request #1007 from Cyan4973/no_externc_guard,973.0
+a83692aaf1ee9dde8d39dfe8cdbbdc78a8b88fea,2025-06-15,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1043 from zijianli1234/dev,41.0
+a83692aaf1ee9dde8d39dfe8cdbbdc78a8b88fea,2025-06-15,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1043 from zijianli1234/dev,76.0
+a83692aaf1ee9dde8d39dfe8cdbbdc78a8b88fea,2025-06-15,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1043 from zijianli1234/dev,417.0
+a83692aaf1ee9dde8d39dfe8cdbbdc78a8b88fea,2025-06-15,ok,XXH64 64 B,,,,,,,Merge pull request #1043 from zijianli1234/dev,163.0
+a83692aaf1ee9dde8d39dfe8cdbbdc78a8b88fea,2025-06-15,ok,XXH64 1024 B,,,,,,,Merge pull request #1043 from zijianli1234/dev,973.0
+55d9c43608e39b2acd7d9a9cc3df424f812b6642,2025-07-19,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1049 from zijianli1234/dev,41.0
+55d9c43608e39b2acd7d9a9cc3df424f812b6642,2025-07-19,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1049 from zijianli1234/dev,76.0
+55d9c43608e39b2acd7d9a9cc3df424f812b6642,2025-07-19,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1049 from zijianli1234/dev,417.0
+55d9c43608e39b2acd7d9a9cc3df424f812b6642,2025-07-19,ok,XXH64 64 B,,,,,,,Merge pull request #1049 from zijianli1234/dev,163.0
+55d9c43608e39b2acd7d9a9cc3df424f812b6642,2025-07-19,ok,XXH64 1024 B,,,,,,,Merge pull request #1049 from zijianli1234/dev,973.0
+7b2c67f3d1d940aca00a4df895b7f97062dd8cc4,2025-12-02,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1082 from pps83/dev-fix-XXH_INLINE_ALL,41.0
+7b2c67f3d1d940aca00a4df895b7f97062dd8cc4,2025-12-02,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1082 from pps83/dev-fix-XXH_INLINE_ALL,76.0
+7b2c67f3d1d940aca00a4df895b7f97062dd8cc4,2025-12-02,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1082 from pps83/dev-fix-XXH_INLINE_ALL,417.0
+7b2c67f3d1d940aca00a4df895b7f97062dd8cc4,2025-12-02,ok,XXH64 64 B,,,,,,,Merge pull request #1082 from pps83/dev-fix-XXH_INLINE_ALL,163.0
+7b2c67f3d1d940aca00a4df895b7f97062dd8cc4,2025-12-02,ok,XXH64 1024 B,,,,,,,Merge pull request #1082 from pps83/dev-fix-XXH_INLINE_ALL,973.0
+ef167a2c34d6d660fc2d14f800cda879b4ca8d38,2026-09-14,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1101 from NexusXe/dev,41.0
+ef167a2c34d6d660fc2d14f800cda879b4ca8d38,2026-09-14,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1101 from NexusXe/dev,76.0
+ef167a2c34d6d660fc2d14f800cda879b4ca8d38,2026-09-14,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1101 from NexusXe/dev,417.0
+ef167a2c34d6d660fc2d14f800cda879b4ca8d38,2026-09-14,ok,XXH64 64 B,,,,,,,Merge pull request #1101 from NexusXe/dev,163.0
+ef167a2c34d6d660fc2d14f800cda879b4ca8d38,2026-09-14,ok,XXH64 1024 B,,,,,,,Merge pull request #1101 from NexusXe/dev,973.0
+6cc7b4b56f5190f288a58642fd24ba62ec56bb3d,2026-09-18,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1150 from Cyan4973/fix/xxh3-collision-doc,41.0
+6cc7b4b56f5190f288a58642fd24ba62ec56bb3d,2026-09-18,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1150 from Cyan4973/fix/xxh3-collision-doc,76.0
+6cc7b4b56f5190f288a58642fd24ba62ec56bb3d,2026-09-18,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1150 from Cyan4973/fix/xxh3-collision-doc,417.0
+6cc7b4b56f5190f288a58642fd24ba62ec56bb3d,2026-09-18,ok,XXH64 64 B,,,,,,,Merge pull request #1150 from Cyan4973/fix/xxh3-collision-doc,163.0
+6cc7b4b56f5190f288a58642fd24ba62ec56bb3d,2026-09-18,ok,XXH64 1024 B,,,,,,,Merge pull request #1150 from Cyan4973/fix/xxh3-collision-doc,973.0
+e51c341f61e15dceb130b364b364187c80d1f7ea,2026-10-21,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1177 from Cyan4973/fix/xxh32-stream-sse2-autovec,41.0
+e51c341f61e15dceb130b364b364187c80d1f7ea,2026-10-21,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1177 from Cyan4973/fix/xxh32-stream-sse2-autovec,76.0
+e51c341f61e15dceb130b364b364187c80d1f7ea,2026-10-21,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1177 from Cyan4973/fix/xxh32-stream-sse2-autovec,417.0
+e51c341f61e15dceb130b364b364187c80d1f7ea,2026-10-21,ok,XXH64 64 B,,,,,,,Merge pull request #1177 from Cyan4973/fix/xxh32-stream-sse2-autovec,163.0
+e51c341f61e15dceb130b364b364187c80d1f7ea,2026-10-21,ok,XXH64 1024 B,,,,,,,Merge pull request #1177 from Cyan4973/fix/xxh32-stream-sse2-autovec,973.0
+d9dfb8203cd67c576f1d46965ef5c0e48582196d,2026-10-21,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1178 from Cyan4973/fix/xxh-accs-in-registers,41.0
+d9dfb8203cd67c576f1d46965ef5c0e48582196d,2026-10-21,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1178 from Cyan4973/fix/xxh-accs-in-registers,76.0
+d9dfb8203cd67c576f1d46965ef5c0e48582196d,2026-10-21,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1178 from Cyan4973/fix/xxh-accs-in-registers,417.0
+d9dfb8203cd67c576f1d46965ef5c0e48582196d,2026-10-21,ok,XXH64 64 B,,,,,,,Merge pull request #1178 from Cyan4973/fix/xxh-accs-in-registers,149.0
+d9dfb8203cd67c576f1d46965ef5c0e48582196d,2026-10-21,ok,XXH64 1024 B,,,,,,,Merge pull request #1178 from Cyan4973/fix/xxh-accs-in-registers,839.0
+215108c62f84a9a94d1e821800b29963f544a602,2026-10-25,ok,XXH3_64bits 16 B,,,,,,,fix Visual Studio builds with XXH_NO_STREAM or XXH_NO_STDLIB,41.0
+215108c62f84a9a94d1e821800b29963f544a602,2026-10-25,ok,XXH3_64bits 64 B,,,,,,,fix Visual Studio builds with XXH_NO_STREAM or XXH_NO_STDLIB,76.0
+215108c62f84a9a94d1e821800b29963f544a602,2026-10-25,ok,XXH3_64bits 1024 B,,,,,,,fix Visual Studio builds with XXH_NO_STREAM or XXH_NO_STDLIB,417.0
+215108c62f84a9a94d1e821800b29963f544a602,2026-10-25,ok,XXH64 64 B,,,,,,,fix Visual Studio builds with XXH_NO_STREAM or XXH_NO_STDLIB,149.0
+215108c62f84a9a94d1e821800b29963f544a602,2026-10-25,ok,XXH64 1024 B,,,,,,,fix Visual Studio builds with XXH_NO_STREAM or XXH_NO_STDLIB,839.0
+ac5f56aa1fa41b9f5022b3b49c797c0ba32ee436,2026-10-27,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1188 from Cyan4973/split/xxh3-64-128,41.0
+ac5f56aa1fa41b9f5022b3b49c797c0ba32ee436,2026-10-27,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1188 from Cyan4973/split/xxh3-64-128,76.0
+ac5f56aa1fa41b9f5022b3b49c797c0ba32ee436,2026-10-27,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1188 from Cyan4973/split/xxh3-64-128,417.0
+ac5f56aa1fa41b9f5022b3b49c797c0ba32ee436,2026-10-27,ok,XXH64 64 B,,,,,,,Merge pull request #1188 from Cyan4973/split/xxh3-64-128,149.0
+ac5f56aa1fa41b9f5022b3b49c797c0ba32ee436,2026-10-27,ok,XXH64 1024 B,,,,,,,Merge pull request #1188 from Cyan4973/split/xxh3-64-128,839.0
+ec5a92fec8fcdb7ade8b80b5d8029ccc08967a1e,2026-10-28,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1194 from Cyan4973/port/rvv-acc-registers,41.0
+ec5a92fec8fcdb7ade8b80b5d8029ccc08967a1e,2026-10-28,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1194 from Cyan4973/port/rvv-acc-registers,76.0
+ec5a92fec8fcdb7ade8b80b5d8029ccc08967a1e,2026-10-28,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1194 from Cyan4973/port/rvv-acc-registers,417.0
+ec5a92fec8fcdb7ade8b80b5d8029ccc08967a1e,2026-10-28,ok,XXH64 64 B,,,,,,,Merge pull request #1194 from Cyan4973/port/rvv-acc-registers,149.0
+ec5a92fec8fcdb7ade8b80b5d8029ccc08967a1e,2026-10-28,ok,XXH64 1024 B,,,,,,,Merge pull request #1194 from Cyan4973/port/rvv-acc-registers,839.0
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH3_64bits 16 B,,,,,,,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170,41.0
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH3_64bits 64 B,,,,,,,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170,76.0
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH3_64bits 1024 B,,,,,,,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170,417.0
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH64 64 B,,,,,,,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170,149.0
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH64 1024 B,,,,,,,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170,839.0

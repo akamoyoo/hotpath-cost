@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 5170154e8df14ab19de9e797f81c1e2dd2a8f475,2019-03-16,build failed,,,,,,,,wip
 213cc4b68987f8a35e7eab31bf6f7ddde5f3276b,2019-03-17,build failed,,,,,,,,wip
 64cb1d59a67c0b50017f07d66195408ef03248f8,2019-03-17,build failed,,,,,,,,wip

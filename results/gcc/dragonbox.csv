@@ -1,0 +1,603 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+f4521c8e972b1292e6c64c5066995178e9396e4c,2020-09-24,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.9,Merge pull request #3 from friendlyanon/master
+f4521c8e972b1292e6c64c5066995178e9396e4c,2020-09-24,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,27.4,Merge pull request #3 from friendlyanon/master
+f4521c8e972b1292e6c64c5066995178e9396e4c,2020-09-24,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,28.5,Merge pull request #3 from friendlyanon/master
+148a0b7ba464691a3f6c63c9b913a99e030956f7,2020-09-27,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Clean up floor-log routines
+148a0b7ba464691a3f6c63c9b913a99e030956f7,2020-09-27,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Clean up floor-log routines
+148a0b7ba464691a3f6c63c9b913a99e030956f7,2020-09-27,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Clean up floor-log routines
+2bc30d2b405fbd2a53eecaeae1bb91ad0b9e69a5,2020-09-28,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,27.0,Fix bug in countr_zero fallback implementation
+2bc30d2b405fbd2a53eecaeae1bb91ad0b9e69a5,2020-09-28,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Fix bug in countr_zero fallback implementation
+2bc30d2b405fbd2a53eecaeae1bb91ad0b9e69a5,2020-09-28,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Fix bug in countr_zero fallback implementation
+3ed24feb639cae7ffb879fa875bb0966f12c0777,2020-09-29,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.5,Merge pull request #6 from yumeyao/master
+3ed24feb639cae7ffb879fa875bb0966f12c0777,2020-09-29,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.4,Merge pull request #6 from yumeyao/master
+3ed24feb639cae7ffb879fa875bb0966f12c0777,2020-09-29,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,22.9,Merge pull request #6 from yumeyao/master
+6fc655e2215b4638ab376cb04f4af35462d3cc79,2020-09-29,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,27.1,Merge pull request #7 from friendlyanon/master
+6fc655e2215b4638ab376cb04f4af35462d3cc79,2020-09-29,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,20.8,Merge pull request #7 from friendlyanon/master
+6fc655e2215b4638ab376cb04f4af35462d3cc79,2020-09-29,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Merge pull request #7 from friendlyanon/master
+76566ea97c0b202fbe203ef0612f6030ea0c49ae,2020-10-01,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Fix many errors introduced by recent commits (hopefully all errors)
+76566ea97c0b202fbe203ef0612f6030ea0c49ae,2020-10-01,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Fix many errors introduced by recent commits (hopefully all errors)
+76566ea97c0b202fbe203ef0612f6030ea0c49ae,2020-10-01,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Fix many errors introduced by recent commits (hopefully all errors)
+9ff468de8ac86662d3de5a6adc7c17baee4b0a2c,2020-10-01,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Patch condition for using __emulu
+9ff468de8ac86662d3de5a6adc7c17baee4b0a2c,2020-10-01,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Patch condition for using __emulu
+9ff468de8ac86662d3de5a6adc7c17baee4b0a2c,2020-10-01,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Patch condition for using __emulu
+2c1ec3bde38e544d671390edc371d66ba89e66c4,2020-10-03,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Rename some include guards
+2c1ec3bde38e544d671390edc371d66ba89e66c4,2020-10-03,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Rename some include guards
+2c1ec3bde38e544d671390edc371d66ba89e66c4,2020-10-03,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Rename some include guards
+2e7f7f8f25477e3c11c0eed961a31fb3f3ef29dd,2020-10-13,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,37.1,Improve portability
+2e7f7f8f25477e3c11c0eed961a31fb3f3ef29dd,2020-10-13,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.3,Improve portability
+2e7f7f8f25477e3c11c0eed961a31fb3f3ef29dd,2020-10-13,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,28.7,Improve portability
+aa9904b7c41a266f70ee627d639de9af109e60e6,2021-01-08,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Fix errors in countr_zero (see #11)
+aa9904b7c41a266f70ee627d639de9af109e60e6,2021-01-08,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Fix errors in countr_zero (see #11)
+aa9904b7c41a266f70ee627d639de9af109e60e6,2021-01-08,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Fix errors in countr_zero (see #11)
+dfa24289437797cb9794ecea05cb2c710c6b99de,2021-01-08,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,47.9,Fix an error in countr_zero (#11)
+dfa24289437797cb9794ecea05cb2c710c6b99de,2021-01-08,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,30.2,Fix an error in countr_zero (#11)
+dfa24289437797cb9794ecea05cb2c710c6b99de,2021-01-08,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.4,Fix an error in countr_zero (#11)
+f54d97cbf787b97d3e45897b827d188d4e5ee3dd,2021-01-08,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Remove wrong comments
+f54d97cbf787b97d3e45897b827d188d4e5ee3dd,2021-01-08,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Remove wrong comments
+f54d97cbf787b97d3e45897b827d188d4e5ee3dd,2021-01-08,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Remove wrong comments
+657fc9bb0c1020916b03f698d0ac2a67985e89e8,2021-03-13,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,25.9,Address compiler warnings
+657fc9bb0c1020916b03f698d0ac2a67985e89e8,2021-03-13,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Address compiler warnings
+657fc9bb0c1020916b03f698d0ac2a67985e89e8,2021-03-13,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Address compiler warnings
+37a34371cb7f7cb1a9d9a017f9c6eb8ec90bc1fe,2021-03-13,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.9,Better align the changes to other code
+37a34371cb7f7cb1a9d9a017f9c6eb8ec90bc1fe,2021-03-13,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,28.0,Better align the changes to other code
+37a34371cb7f7cb1a9d9a017f9c6eb8ec90bc1fe,2021-03-13,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,27.8,Better align the changes to other code
+a87bb6f62dda5d00ae5d63227300fd314015914b,2021-03-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.8,Fix sign mismatch
+a87bb6f62dda5d00ae5d63227300fd314015914b,2021-03-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.1,Fix sign mismatch
+a87bb6f62dda5d00ae5d63227300fd314015914b,2021-03-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,28.7,Fix sign mismatch
+7a9e6c420ec27407f0c4c46ab6baf4ce435f5954,2021-04-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,28.4,static constexpr globals to inline constexpr
+7a9e6c420ec27407f0c4c46ab6baf4ce435f5954,2021-04-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,20.8,static constexpr globals to inline constexpr
+7a9e6c420ec27407f0c4c46ab6baf4ce435f5954,2021-04-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,static constexpr globals to inline constexpr
+e65f6b037fc2c20251b194d65a0f534612eb1c1b,2021-04-26,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.1,immintrin.h is not used now
+e65f6b037fc2c20251b194d65a0f534612eb1c1b,2021-04-26,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,immintrin.h is not used now
+e65f6b037fc2c20251b194d65a0f534612eb1c1b,2021-04-26,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,immintrin.h is not used now
+4032d671c375ac2475bc9a41b042b72d2a646c60,2021-04-26,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.5,Relax the criteria for using intrinsics
+4032d671c375ac2475bc9a41b042b72d2a646c60,2021-04-26,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Relax the criteria for using intrinsics
+4032d671c375ac2475bc9a41b042b72d2a646c60,2021-04-26,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Relax the criteria for using intrinsics
+9a6309defadebf350650fb5d9bb26fe259ebdd68,2021-05-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Fix https://github.com/jk-jeon/dragonbox/issues/16
+9a6309defadebf350650fb5d9bb26fe259ebdd68,2021-05-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Fix https://github.com/jk-jeon/dragonbox/issues/16
+9a6309defadebf350650fb5d9bb26fe259ebdd68,2021-05-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Fix https://github.com/jk-jeon/dragonbox/issues/16
+77427c4d1115da6584442a9a08d97997f66e3da0,2021-05-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Remove non-ASCII characters
+77427c4d1115da6584442a9a08d97997f66e3da0,2021-05-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Remove non-ASCII characters
+77427c4d1115da6584442a9a08d97997f66e3da0,2021-05-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.6,Remove non-ASCII characters
+8718e773c320aeed654d7c4d3891854e20910c7e,2021-05-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.2,Optimize trailing zero removal routine
+8718e773c320aeed654d7c4d3891854e20910c7e,2021-05-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Optimize trailing zero removal routine
+8718e773c320aeed654d7c4d3891854e20910c7e,2021-05-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Optimize trailing zero removal routine
+a78ac836e2ed06e412b5145803a397868f2f3485,2021-05-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,33.8,Remove unused variable
+a78ac836e2ed06e412b5145803a397868f2f3485,2021-05-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Remove unused variable
+a78ac836e2ed06e412b5145803a397868f2f3485,2021-05-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Remove unused variable
+222efefb130a1c3cc0a25a9d37e15c4497f35f83,2021-05-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.3,Enhance comments
+222efefb130a1c3cc0a25a9d37e15c4497f35f83,2021-05-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.8,Enhance comments
+222efefb130a1c3cc0a25a9d37e15c4497f35f83,2021-05-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.7,Enhance comments
+4e3998b05b01eec5f23febbb70f36c59898d5737,2021-05-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.3,Address https://github.com/jk-jeon/dragonbox/issues/18
+4e3998b05b01eec5f23febbb70f36c59898d5737,2021-05-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.7,Address https://github.com/jk-jeon/dragonbox/issues/18
+4e3998b05b01eec5f23febbb70f36c59898d5737,2021-05-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Address https://github.com/jk-jeon/dragonbox/issues/18
+62f6f845e718d5f7ef2c1cb830b9d0e808110e69,2021-05-21,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.4,Add a static assert
+62f6f845e718d5f7ef2c1cb830b9d0e808110e69,2021-05-21,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.2,Add a static assert
+62f6f845e718d5f7ef2c1cb830b9d0e808110e69,2021-05-21,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Add a static assert
+6b23ce0cd604e15e7ab871ed70a283e82bd713c5,2021-05-21,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.4,Bug fix (nearest_to_odd rounding mode)
+6b23ce0cd604e15e7ab871ed70a283e82bd713c5,2021-05-21,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.2,Bug fix (nearest_to_odd rounding mode)
+6b23ce0cd604e15e7ab871ed70a283e82bd713c5,2021-05-21,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Bug fix (nearest_to_odd rounding mode)
+d49a5cbc7a7035b0d1bbe30630d70017f6559a6b,2021-05-21,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.4,Fix comments
+d49a5cbc7a7035b0d1bbe30630d70017f6559a6b,2021-05-21,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.2,Fix comments
+d49a5cbc7a7035b0d1bbe30630d70017f6559a6b,2021-05-21,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Fix comments
+a5f72053298af54ecbf336703d419d98b120406c,2021-05-21,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.7,Interface overhaul
+a5f72053298af54ecbf336703d419d98b120406c,2021-05-21,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.6,Interface overhaul
+a5f72053298af54ecbf336703d419d98b120406c,2021-05-21,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Interface overhaul
+68a16f8fe0ad507b433cc9934fab1109ed4a7d2f,2021-05-22,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.5,Interface overhaul
+68a16f8fe0ad507b433cc9934fab1109ed4a7d2f,2021-05-22,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Interface overhaul
+68a16f8fe0ad507b433cc9934fab1109ed4a7d2f,2021-05-22,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.8,Interface overhaul
+49f7f526138f58c76f895cd270616d674ed6f7c6,2021-05-22,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.5,Change to_chars implementation Now it is to_chars rather than to_decimal who performs the trailing-zero removal
+49f7f526138f58c76f895cd270616d674ed6f7c6,2021-05-22,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Change to_chars implementation Now it is to_chars rather than to_decimal who performs the trailing-zero removal
+49f7f526138f58c76f895cd270616d674ed6f7c6,2021-05-22,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Change to_chars implementation Now it is to_chars rather than to_decimal who performs the trailing-zero removal
+226368e4c3e5ca2d5fb82c0bf8f24646612992ee,2021-05-22,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.5,"For float, cutting trailing zeros in to_decimal is better"
+226368e4c3e5ca2d5fb82c0bf8f24646612992ee,2021-05-22,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.8,"For float, cutting trailing zeros in to_decimal is better"
+226368e4c3e5ca2d5fb82c0bf8f24646612992ee,2021-05-22,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.8,"For float, cutting trailing zeros in to_decimal is better"
+ac9d03b730593348c21d9a87ab0a9e4ac9d30c58,2021-05-22,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.6,Edit copyright notice
+ac9d03b730593348c21d9a87ab0a9e4ac9d30c58,2021-05-22,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.4,Edit copyright notice
+ac9d03b730593348c21d9a87ab0a9e4ac9d30c58,2021-05-22,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.8,Edit copyright notice
+80d6af2e0dc532131b63da05088d3e159525ca2e,2021-05-22,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,19.5,Add an assertion for input validation. Should have no real effect.
+80d6af2e0dc532131b63da05088d3e159525ca2e,2021-05-22,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.5,Add an assertion for input validation. Should have no real effect.
+80d6af2e0dc532131b63da05088d3e159525ca2e,2021-05-22,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.8,Add an assertion for input validation. Should have no real effect.
+b6cc3f272d1711ab8d36cd87f5374a0b5678782f,2021-05-27,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,31.5,Fix a bug for right_closed_directed rounding mode
+b6cc3f272d1711ab8d36cd87f5374a0b5678782f,2021-05-27,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Fix a bug for right_closed_directed rounding mode
+b6cc3f272d1711ab8d36cd87f5374a0b5678782f,2021-05-27,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Fix a bug for right_closed_directed rounding mode
+0d40afb18af18dc188b9e0239dceb27102aedeb9,2021-05-27,build failed,,,,,,,,"Change the function call boundary Now the inner implementation function does not deal with normal/subnormal, shorter/normal interval casings."
+b5b4f65a83da14019bcec7ae31965216215a3e10,2021-05-28,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.3,Eliminated std::forward and unnecessary universal references
+b5b4f65a83da14019bcec7ae31965216215a3e10,2021-05-28,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.8,Eliminated std::forward and unnecessary universal references
+b5b4f65a83da14019bcec7ae31965216215a3e10,2021-05-28,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Eliminated std::forward and unnecessary universal references
+445d6f7a8894ba140bd53500c9cb4cd9e62a3f54,2021-09-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.9,Adapt clang-format
+445d6f7a8894ba140bd53500c9cb4cd9e62a3f54,2021-09-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.6,Adapt clang-format
+445d6f7a8894ba140bd53500c9cb4cd9e62a3f54,2021-09-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Adapt clang-format
+6d3b4c3ed451b54a10a4395ee68b3ef8dd45db2c,2021-09-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.0,Fix nonsensical comments
+6d3b4c3ed451b54a10a4395ee68b3ef8dd45db2c,2021-09-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.2,Fix nonsensical comments
+6d3b4c3ed451b54a10a4395ee68b3ef8dd45db2c,2021-09-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Fix nonsensical comments
+14c02bd1bcdf0b69820b6431b4e38751511bb807,2021-09-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.5,Remove UB Covnerting a unsigned int into int resulting overflow is UB
+14c02bd1bcdf0b69820b6431b4e38751511bb807,2021-09-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.4,Remove UB Covnerting a unsigned int into int resulting overflow is UB
+14c02bd1bcdf0b69820b6431b4e38751511bb807,2021-09-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,26.2,Remove UB Covnerting a unsigned int into int resulting overflow is UB
+8bf4a117a0ebd2ee7ba165952efb5f19166c5903,2021-09-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,31.0,Improve comments a little bit
+8bf4a117a0ebd2ee7ba165952efb5f19166c5903,2021-09-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,24.7,Improve comments a little bit
+8bf4a117a0ebd2ee7ba165952efb5f19166c5903,2021-09-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,24.8,Improve comments a little bit
+a54232b9c5f036a9669d2271b51ed12115c6bd01,2021-09-29,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,30.7,Merge pull request #22 from yotann/master
+a54232b9c5f036a9669d2271b51ed12115c6bd01,2021-09-29,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,24.9,Merge pull request #22 from yotann/master
+a54232b9c5f036a9669d2271b51ed12115c6bd01,2021-09-29,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,23.9,Merge pull request #22 from yotann/master
+f3764d5a2d825d57c07bf55e6d707c8444f129f8,2021-10-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.2,Change divtable from SOA-style into AOS-style Because it makes more sense
+f3764d5a2d825d57c07bf55e6d707c8444f129f8,2021-10-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.8,Change divtable from SOA-style into AOS-style Because it makes more sense
+f3764d5a2d825d57c07bf55e6d707c8444f129f8,2021-10-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.1,Change divtable from SOA-style into AOS-style Because it makes more sense
+5a69978343aa1dfa41bf40fb396b8d7427058c3d,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.1,Reduced usages of __int128 __int128 seems to generate worse code
+5a69978343aa1dfa41bf40fb396b8d7427058c3d,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Reduced usages of __int128 __int128 seems to generate worse code
+5a69978343aa1dfa41bf40fb396b8d7427058c3d,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Reduced usages of __int128 __int128 seems to generate worse code
+d9b2664dcde40e0e162f5f4c582fbb56f8943547,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.1,Optimize check_divisibility_and_divide_by_pow10
+d9b2664dcde40e0e162f5f4c582fbb56f8943547,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.2,Optimize check_divisibility_and_divide_by_pow10
+d9b2664dcde40e0e162f5f4c582fbb56f8943547,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,25.2,Optimize check_divisibility_and_divide_by_pow10
+2a33d79e1ce6f2045edacd79c8f087ffd10e1323,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,34.9,"Optimize break_rounding_tie Now the policy classes do not actually round, rather, it returns a boolean flag for if they may want to round"
+2a33d79e1ce6f2045edacd79c8f087ffd10e1323,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.9,"Optimize break_rounding_tie Now the policy classes do not actually round, rather, it returns a boolean flag for if they may want to round"
+2a33d79e1ce6f2045edacd79c8f087ffd10e1323,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,26.6,"Optimize break_rounding_tie Now the policy classes do not actually round, rather, it returns a boolean flag for if they may want to round"
+e26c8d7363eb0ad9753b56a9699dea194784eb5e,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.9,Optimize/simplify remove_trailing_zeros
+e26c8d7363eb0ad9753b56a9699dea194784eb5e,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.5,Optimize/simplify remove_trailing_zeros
+e26c8d7363eb0ad9753b56a9699dea194784eb5e,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.5,Optimize/simplify remove_trailing_zeros
+2db8656d1c4ff599fd642c9cb1a42338bb809da7,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,30.9,Fix typo
+2db8656d1c4ff599fd642c9cb1a42338bb809da7,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,24.4,Fix typo
+2db8656d1c4ff599fd642c9cb1a42338bb809da7,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,24.7,Fix typo
+39d32f1d2617477e956c32342062f0d784bbfe1b,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,31.4,Fix typo
+39d32f1d2617477e956c32342062f0d784bbfe1b,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.8,Fix typo
+39d32f1d2617477e956c32342062f0d784bbfe1b,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,25.0,Fix typo
+aad99d5200508411153353cb26adcbd7ecf94ba5,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.1,Silence MSVC warning by defining JKJ_DRAGONBOX_HAS_BUILTIN
+aad99d5200508411153353cb26adcbd7ecf94ba5,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.0,Silence MSVC warning by defining JKJ_DRAGONBOX_HAS_BUILTIN
+aad99d5200508411153353cb26adcbd7ecf94ba5,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,25.8,Silence MSVC warning by defining JKJ_DRAGONBOX_HAS_BUILTIN
+648591a42eff1889c76bad8f458ebb54c68da0e1,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.7,Fix a bug introduced by commit 2a33d79e1ce6f2045edacd79c8f087ffd10e1323
+648591a42eff1889c76bad8f458ebb54c68da0e1,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.9,Fix a bug introduced by commit 2a33d79e1ce6f2045edacd79c8f087ffd10e1323
+648591a42eff1889c76bad8f458ebb54c68da0e1,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,26.2,Fix a bug introduced by commit 2a33d79e1ce6f2045edacd79c8f087ffd10e1323
+99fd14ba9b434c6ac7a5818aa72dd65a0716f282,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,33.1,Fix the bug introduced by the commit e26c8d7363eb0ad9753b56a9699dea194784eb5e
+99fd14ba9b434c6ac7a5818aa72dd65a0716f282,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,26.0,Fix the bug introduced by the commit e26c8d7363eb0ad9753b56a9699dea194784eb5e
+99fd14ba9b434c6ac7a5818aa72dd65a0716f282,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,26.1,Fix the bug introduced by the commit e26c8d7363eb0ad9753b56a9699dea194784eb5e
+11aae947498536b54470c52ef5511fff4c4be62a,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.7,Improve comments on ROR
+11aae947498536b54470c52ef5511fff4c4be62a,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.6,Improve comments on ROR
+11aae947498536b54470c52ef5511fff4c4be62a,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,26.1,Improve comments on ROR
+12310e74ccba15abfe9956ccf3b8657934f47e1b,2021-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.2,Remove unused param name
+12310e74ccba15abfe9956ccf3b8657934f47e1b,2021-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.1,Remove unused param name
+12310e74ccba15abfe9956ccf3b8657934f47e1b,2021-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,27.1,Remove unused param name
+ab23f7aaa2ba82eb3b71a3ac8c280fcab8f2f6a2,2021-11-06,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,31.6,Simplify remove_trailing_zeros further
+ab23f7aaa2ba82eb3b71a3ac8c280fcab8f2f6a2,2021-11-06,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,26.7,Simplify remove_trailing_zeros further
+ab23f7aaa2ba82eb3b71a3ac8c280fcab8f2f6a2,2021-11-06,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,25.8,Simplify remove_trailing_zeros further
+9868af7242d4c2e24bd5324d15587d4eb9016d2c,2022-01-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.1,Fix typo in comment
+9868af7242d4c2e24bd5324d15587d4eb9016d2c,2022-01-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.8,Fix typo in comment
+9868af7242d4c2e24bd5324d15587d4eb9016d2c,2022-01-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Fix typo in comment
+ac5788dab176f78a322644b235302cb03ed84f7a,2022-01-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.6,Adapt new table generation scheme
+ac5788dab176f78a322644b235302cb03ed84f7a,2022-01-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,26.6,Adapt new table generation scheme
+ac5788dab176f78a322644b235302cb03ed84f7a,2022-01-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Adapt new table generation scheme
+3c0f1c6ff885914d6983ce55b40cf526acc7a8b0,2022-01-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.9,Eliminate integer checks
+3c0f1c6ff885914d6983ce55b40cf526acc7a8b0,2022-01-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.6,Eliminate integer checks
+3c0f1c6ff885914d6983ce55b40cf526acc7a8b0,2022-01-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Eliminate integer checks
+ec688b1afdb8933afe9ecc4057f45b7528227425,2022-01-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,25.3,Remove now-unused stuffs
+ec688b1afdb8933afe9ecc4057f45b7528227425,2022-01-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.4,Remove now-unused stuffs
+ec688b1afdb8933afe9ecc4057f45b7528227425,2022-01-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Remove now-unused stuffs
+8a1c13d7159abb939549a8d2ed44168a942c6ae3,2022-01-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,27.6,Change header guards convention
+8a1c13d7159abb939549a8d2ed44168a942c6ae3,2022-01-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.4,Change header guards convention
+8a1c13d7159abb939549a8d2ed44168a942c6ae3,2022-01-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.0,Change header guards convention
+4150375bd2e1c5a6842ecf2d68fd8bb6f8353388,2022-01-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.4,Right-shift for signed integers is implementation-defined See https://github.com/fmtlib/fmt/issues/2709
+4150375bd2e1c5a6842ecf2d68fd8bb6f8353388,2022-01-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Right-shift for signed integers is implementation-defined See https://github.com/fmtlib/fmt/issues/2709
+4150375bd2e1c5a6842ecf2d68fd8bb6f8353388,2022-01-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Right-shift for signed integers is implementation-defined See https://github.com/fmtlib/fmt/issues/2709
+30d9e4eb88b4ea02ea5f7def9a81ba7e6e8184f5,2022-01-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.6,Simplify check_divisibility_and_divide_by_pow10. Apply the integer check idea from Schubfach.
+30d9e4eb88b4ea02ea5f7def9a81ba7e6e8184f5,2022-01-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Simplify check_divisibility_and_divide_by_pow10. Apply the integer check idea from Schubfach.
+30d9e4eb88b4ea02ea5f7def9a81ba7e6e8184f5,2022-01-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.1,Simplify check_divisibility_and_divide_by_pow10. Apply the integer check idea from Schubfach.
+369cd0bcf64a4e9772df75c746ecf8b16aa53179,2022-01-12,build failed,,,,,,,,Improve comments and other conventions
+4a3402db713d60ed41ffef2ee25fb6e6b3ffc3ef,2022-01-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,26.5,Fix error
+4a3402db713d60ed41ffef2ee25fb6e6b3ffc3ef,2022-01-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.1,Fix error
+4a3402db713d60ed41ffef2ee25fb6e6b3ffc3ef,2022-01-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.3,Fix error
+d7e8e307cbfc57f955e0a4609b5d34d7d871f042,2022-01-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,38.5,Fix errors
+d7e8e307cbfc57f955e0a4609b5d34d7d871f042,2022-01-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Fix errors
+d7e8e307cbfc57f955e0a4609b5d34d7d871f042,2022-01-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Fix errors
+259787da991c675292e76cec1d8bf804291d756b,2022-01-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,33.8,Simplify compressed cache policy
+259787da991c675292e76cec1d8bf804291d756b,2022-01-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.3,Simplify compressed cache policy
+259787da991c675292e76cec1d8bf804291d756b,2022-01-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,26.0,Simplify compressed cache policy
+8c484269a89bd7e5085e3a7cd534656069603e91,2022-01-18,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.4,Include missed cases
+8c484269a89bd7e5085e3a7cd534656069603e91,2022-01-18,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Include missed cases
+8c484269a89bd7e5085e3a7cd534656069603e91,2022-01-18,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Include missed cases
+812646d3765e4fd69aff1cd020689784aface871,2022-01-18,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,25.2,Improve comments
+812646d3765e4fd69aff1cd020689784aface871,2022-01-18,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.9,Improve comments
+812646d3765e4fd69aff1cd020689784aface871,2022-01-18,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Improve comments
+2ee871047934a8bffcfb0ce24549bcf91185c750,2022-01-18,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.4,Improve comments
+2ee871047934a8bffcfb0ce24549bcf91185c750,2022-01-18,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.7,Improve comments
+2ee871047934a8bffcfb0ce24549bcf91185c750,2022-01-18,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.7,Improve comments
+4cece761af901cdcc26e41f253613228aaf4bc81,2022-01-25,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.4,Even more simplified version of check_divisibility_and_divide_by_pow10
+4cece761af901cdcc26e41f253613228aaf4bc81,2022-01-25,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.8,Even more simplified version of check_divisibility_and_divide_by_pow10
+4cece761af901cdcc26e41f253613228aaf4bc81,2022-01-25,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.8,Even more simplified version of check_divisibility_and_divide_by_pow10
+2537b74025470090ae3fa403b6fb00e823e2e115,2022-02-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,25.5,Further simplify check_divisibility_and_divide_by_pow10
+2537b74025470090ae3fa403b6fb00e823e2e115,2022-02-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.4,Further simplify check_divisibility_and_divide_by_pow10
+2537b74025470090ae3fa403b6fb00e823e2e115,2022-02-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.8,Further simplify check_divisibility_and_divide_by_pow10
+cd533cde74e8dc28efb60c141fdacc88271a2e07,2022-02-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.4,Both binary32 and binary64 remove trailing zeros
+cd533cde74e8dc28efb60c141fdacc88271a2e07,2022-02-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.8,Both binary32 and binary64 remove trailing zeros
+cd533cde74e8dc28efb60c141fdacc88271a2e07,2022-02-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.8,Both binary32 and binary64 remove trailing zeros
+83d5df3ed76fe780c4fbb14d1fce32f1e3ea1893,2022-02-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.2,"Reflect the new paper, simplify things"
+83d5df3ed76fe780c4fbb14d1fce32f1e3ea1893,2022-02-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.7,"Reflect the new paper, simplify things"
+83d5df3ed76fe780c4fbb14d1fce32f1e3ea1893,2022-02-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,"Reflect the new paper, simplify things"
+fe2e5c1ebb99597889824f7617df0d029ffd7fac,2022-02-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.1,Rename beta_minus_1 to beta to reflect the  new paper
+fe2e5c1ebb99597889824f7617df0d029ffd7fac,2022-02-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.2,Rename beta_minus_1 to beta to reflect the  new paper
+fe2e5c1ebb99597889824f7617df0d029ffd7fac,2022-02-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Rename beta_minus_1 to beta to reflect the  new paper
+5ddb8bcfceba3d5b6e3aed3f445780f92e193c1b,2022-02-08,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.8,Add more const; reformat
+5ddb8bcfceba3d5b6e3aed3f445780f92e193c1b,2022-02-08,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.2,Add more const; reformat
+5ddb8bcfceba3d5b6e3aed3f445780f92e193c1b,2022-02-08,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.2,Add more const; reformat
+5ca7e3d2b6e5303a265481626d643fdda6385add,2022-02-08,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.5,Change the order of condition evaluations
+5ca7e3d2b6e5303a265481626d643fdda6385add,2022-02-08,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.3,Change the order of condition evaluations
+5ca7e3d2b6e5303a265481626d643fdda6385add,2022-02-08,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Change the order of condition evaluations
+d4f164bd4c2e1f6fa0de16d4611f1749b27df336,2022-02-21,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.9,Improve comment
+d4f164bd4c2e1f6fa0de16d4611f1749b27df336,2022-02-21,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.2,Improve comment
+d4f164bd4c2e1f6fa0de16d4611f1749b27df336,2022-02-21,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Improve comment
+478edcc4ff276a1d332a6fb5e673d1924b0938d3,2022-02-22,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.6,Fix ABI overhead issue
+478edcc4ff276a1d332a6fb5e673d1924b0938d3,2022-02-22,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.6,Fix ABI overhead issue
+478edcc4ff276a1d332a6fb5e673d1924b0938d3,2022-02-22,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Fix ABI overhead issue
+ba65f0ef350777a2f9136a08d7696932cc62776f,2022-02-22,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.5,Add missing copyright notice
+ba65f0ef350777a2f9136a08d7696932cc62776f,2022-02-22,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.3,Add missing copyright notice
+ba65f0ef350777a2f9136a08d7696932cc62776f,2022-02-22,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.4,Add missing copyright notice
+57d9b60cba29bde2d04e93ba1769582ccc48541e,2022-02-24,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.8,Fix a bug
+57d9b60cba29bde2d04e93ba1769582ccc48541e,2022-02-24,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.4,Fix a bug
+57d9b60cba29bde2d04e93ba1769582ccc48541e,2022-02-24,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Fix a bug
+9c26179a9c4368db9f7703879e3b2e34aa0e29c2,2022-02-26,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.5,Fix https://github.com/jk-jeon/dragonbox/issues/27
+9c26179a9c4368db9f7703879e3b2e34aa0e29c2,2022-02-26,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.1,Fix https://github.com/jk-jeon/dragonbox/issues/27
+9c26179a9c4368db9f7703879e3b2e34aa0e29c2,2022-02-26,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.2,Fix https://github.com/jk-jeon/dragonbox/issues/27
+fc6b42c41543afecb3f70398d2178982e4c0ce01,2022-06-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.3,Merge pull request #29 from striezel-stash/fix-typos
+fc6b42c41543afecb3f70398d2178982e4c0ce01,2022-06-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.6,Merge pull request #29 from striezel-stash/fix-typos
+fc6b42c41543afecb3f70398d2178982e4c0ce01,2022-06-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Merge pull request #29 from striezel-stash/fix-typos
+ca530e22dc900c53f6d1ebba04233824b6568b9d,2022-07-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,17.3,Fix formatting error
+ca530e22dc900c53f6d1ebba04233824b6568b9d,2022-07-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,14.6,Fix formatting error
+ca530e22dc900c53f6d1ebba04233824b6568b9d,2022-07-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,14.6,Fix formatting error
+c5e4e7af2e8940c52d68be346ac972ae96198ce0,2022-07-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.5,Address https://github.com/jk-jeon/dragonbox/issues/31 and replace several branches with bitwise op's
+c5e4e7af2e8940c52d68be346ac972ae96198ce0,2022-07-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Address https://github.com/jk-jeon/dragonbox/issues/31 and replace several branches with bitwise op's
+c5e4e7af2e8940c52d68be346ac972ae96198ce0,2022-07-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Address https://github.com/jk-jeon/dragonbox/issues/31 and replace several branches with bitwise op's
+998858b6117802b6ff86be95c79ca681dbec162e,2022-07-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.5,Remove unused constants
+998858b6117802b6ff86be95c79ca681dbec162e,2022-07-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Remove unused constants
+998858b6117802b6ff86be95c79ca681dbec162e,2022-07-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Remove unused constants
+23a3c75cff1eea64a73a7d4c8093931b27660f14,2022-08-31,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.5,Implement the idea suggested in https://github.com/jk-jeon/dragonbox/issues/32
+23a3c75cff1eea64a73a7d4c8093931b27660f14,2022-08-31,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Implement the idea suggested in https://github.com/jk-jeon/dragonbox/issues/32
+23a3c75cff1eea64a73a7d4c8093931b27660f14,2022-08-31,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Implement the idea suggested in https://github.com/jk-jeon/dragonbox/issues/32
+b7697b69c097c1ec874a14cdc26a4afa415115c8,2022-08-31,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.4,Mark more functions as JKJ_FORCEINLINE
+b7697b69c097c1ec874a14cdc26a4afa415115c8,2022-08-31,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.2,Mark more functions as JKJ_FORCEINLINE
+b7697b69c097c1ec874a14cdc26a4afa415115c8,2022-08-31,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.4,Mark more functions as JKJ_FORCEINLINE
+34a6cdf99d4afe18008877627dabe1f5bf238e1a,2023-04-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.5,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+34a6cdf99d4afe18008877627dabe1f5bf238e1a,2023-04-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+34a6cdf99d4afe18008877627dabe1f5bf238e1a,2023-04-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+c11b0fb2d20ec7ab0da5b2c2cba40603d4ff97fa,2023-06-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,19.1,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+c11b0fb2d20ec7ab0da5b2c2cba40603d4ff97fa,2023-06-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.4,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+c11b0fb2d20ec7ab0da5b2c2cba40603d4ff97fa,2023-06-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.3,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+fdde9cac33c5980df5ac6abd7e824b006fc879d2,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.5,Improve the overall consistency
+fdde9cac33c5980df5ac6abd7e824b006fc879d2,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Improve the overall consistency
+fdde9cac33c5980df5ac6abd7e824b006fc879d2,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Improve the overall consistency
+59694aaf9fd6f8e132d2cdbb9b5ae76bd3595fd9,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.1,"Enforced the specifier order ""static constexpr"""
+59694aaf9fd6f8e132d2cdbb9b5ae76bd3595fd9,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.2,"Enforced the specifier order ""static constexpr"""
+59694aaf9fd6f8e132d2cdbb9b5ae76bd3595fd9,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.4,"Enforced the specifier order ""static constexpr"""
+3a10f61348de0db9a6193ee9f02307f4742f907c,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,16.2,"Revert the change ""JKJ_CONSTEXPR20 implies inline"", because there are functions marked both as JKJ_FORCEINLINE and JKJ_CONSTEXPR20"
+3a10f61348de0db9a6193ee9f02307f4742f907c,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.8,"Revert the change ""JKJ_CONSTEXPR20 implies inline"", because there are functions marked both as JKJ_FORCEINLINE and JKJ_CONSTEXPR20"
+3a10f61348de0db9a6193ee9f02307f4742f907c,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.8,"Revert the change ""JKJ_CONSTEXPR20 implies inline"", because there are functions marked both as JKJ_FORCEINLINE and JKJ_CONSTEXPR20"
+9c19c4248df211e7a8f75e3d04e83e474be6a9e7,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Solve the UB issue (see https://github.com/jk-jeon/dragonbox/issues/41)
+9c19c4248df211e7a8f75e3d04e83e474be6a9e7,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.1,Solve the UB issue (see https://github.com/jk-jeon/dragonbox/issues/41)
+9c19c4248df211e7a8f75e3d04e83e474be6a9e7,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,19.2,Solve the UB issue (see https://github.com/jk-jeon/dragonbox/issues/41)
+acc834556568afe25fb16cdcf578139bd88884f9,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.9,Small tweak on include path
+acc834556568afe25fb16cdcf578139bd88884f9,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.3,Small tweak on include path
+acc834556568afe25fb16cdcf578139bd88884f9,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.5,Small tweak on include path
+a3e69cf214eda81c211f1575126d6367fa026038,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.3,Correct the function call boundary
+a3e69cf214eda81c211f1575126d6367fa026038,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.8,Correct the function call boundary
+a3e69cf214eda81c211f1575126d6367fa026038,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Correct the function call boundary
+c90e18c3c5e233d60d4bb7328c5c63a7bf5ae362,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Replace all terse static_assert
+c90e18c3c5e233d60d4bb7328c5c63a7bf5ae362,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,Replace all terse static_assert
+c90e18c3c5e233d60d4bb7328c5c63a7bf5ae362,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Replace all terse static_assert
+76fdc2aa1e8dfcf41a9ecda5e0af07bfa45ff8e4,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.3,Replace all inline constexpr with a new macro JKJ_POLICY_VARIABLE
+76fdc2aa1e8dfcf41a9ecda5e0af07bfa45ff8e4,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.8,Replace all inline constexpr with a new macro JKJ_POLICY_VARIABLE
+76fdc2aa1e8dfcf41a9ecda5e0af07bfa45ff8e4,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Replace all inline constexpr with a new macro JKJ_POLICY_VARIABLE
+d24d693f7c345072a2b40103c009b7bbf9b8eb1b,2023-08-11,build failed,,,,,,,,Replace all occasions of structured bindings
+2986165bd2aa83a606bef1adc01690b4c77cc39a,2023-08-11,build failed,,,,,,,,Add some missing JKJ_CONSTEXPR20 decorations
+3372371e4d7a31d027bbb53ee5358194ba1b89ae,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Fix typos
+3372371e4d7a31d027bbb53ee5358194ba1b89ae,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,Fix typos
+3372371e4d7a31d027bbb53ee5358194ba1b89ae,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Fix typos
+051488b654de965bd2988264fb24c513888c0e5a,2023-08-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.3,Add C++11-compatible constexpr table building
+051488b654de965bd2988264fb24c513888c0e5a,2023-08-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.8,Add C++11-compatible constexpr table building
+051488b654de965bd2988264fb24c513888c0e5a,2023-08-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.8,Add C++11-compatible constexpr table building
+9656e25374b44014c231cb0fb455e73a98c3d732,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Changed some constexpr functions into C++11-compatible form
+9656e25374b44014c231cb0fb455e73a98c3d732,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,Changed some constexpr functions into C++11-compatible form
+9656e25374b44014c231cb0fb455e73a98c3d732,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Changed some constexpr functions into C++11-compatible form
+a1c15fd4b79e58f3038469e418c753b39164fe2d,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.5,Fix a bug for the 32-bit mode
+a1c15fd4b79e58f3038469e418c753b39164fe2d,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.2,Fix a bug for the 32-bit mode
+a1c15fd4b79e58f3038469e418c753b39164fe2d,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Fix a bug for the 32-bit mode
+5f0391a0d74ff7b7bc9a1751c400fcd5bbe46ec3,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.3,Reduce some more constexpr functions into C++11-compatible form
+5f0391a0d74ff7b7bc9a1751c400fcd5bbe46ec3,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.8,Reduce some more constexpr functions into C++11-compatible form
+5f0391a0d74ff7b7bc9a1751c400fcd5bbe46ec3,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Reduce some more constexpr functions into C++11-compatible form
+29fe10ac7725dec777ea6b560702ebebc02f648f,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.9,Replace some C++11-incompatible constexpr's with JKJ_CONSTEXPR14
+29fe10ac7725dec777ea6b560702ebebc02f648f,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,Replace some C++11-incompatible constexpr's with JKJ_CONSTEXPR14
+29fe10ac7725dec777ea6b560702ebebc02f648f,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Replace some C++11-incompatible constexpr's with JKJ_CONSTEXPR14
+e335cd1e8b6296d98ea1537ca386b1b5b9b93ed8,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.2,Turn explicit specializations of cache holders into partial specializations
+e335cd1e8b6296d98ea1537ca386b1b5b9b93ed8,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,28.9,Turn explicit specializations of cache holders into partial specializations
+e335cd1e8b6296d98ea1537ca386b1b5b9b93ed8,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.5,Turn explicit specializations of cache holders into partial specializations
+45fd312b8dfdf60be4ba92648cf5c9acd2c631fd,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,33.9,Rename/reorder language feature detection code
+45fd312b8dfdf60be4ba92648cf5c9acd2c631fd,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,28.9,Rename/reorder language feature detection code
+45fd312b8dfdf60be4ba92648cf5c9acd2c631fd,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.3,Rename/reorder language feature detection code
+1cd943654d532205a899aff497eb747d9bb38209,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.3,Add namespace-scope declarations for cache tables when inline constexpr is not supported
+1cd943654d532205a899aff497eb747d9bb38209,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.8,Add namespace-scope declarations for cache tables when inline constexpr is not supported
+1cd943654d532205a899aff497eb747d9bb38209,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Add namespace-scope declarations for cache tables when inline constexpr is not supported
+21e75a74a3f975af04ce8543fd82dccb7a1d82af,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.3,Removed another instance of C++11-incompatible constexpr
+21e75a74a3f975af04ce8543fd82dccb7a1d82af,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.8,Removed another instance of C++11-incompatible constexpr
+21e75a74a3f975af04ce8543fd82dccb7a1d82af,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,24.4,Removed another instance of C++11-incompatible constexpr
+c78f07a883e3502fa8c8679c37b8c1405a2eae5f,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,"Revert ""Removed another instance of C++11-incompatible constexpr"""
+c78f07a883e3502fa8c8679c37b8c1405a2eae5f,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,"Revert ""Removed another instance of C++11-incompatible constexpr"""
+c78f07a883e3502fa8c8679c37b8c1405a2eae5f,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,"Revert ""Removed another instance of C++11-incompatible constexpr"""
+b0ba75e929a1c0bc0854c5129fbdcb0bdb7248dc,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.3,Removed another instance of C++11-incompatible constexpr
+b0ba75e929a1c0bc0854c5129fbdcb0bdb7248dc,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.1,Removed another instance of C++11-incompatible constexpr
+b0ba75e929a1c0bc0854c5129fbdcb0bdb7248dc,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.2,Removed another instance of C++11-incompatible constexpr
+818d27498b57cdb84f275e4baf8fd4716dfc98ae,2023-08-14,build failed,,,,,,,,Eliminate most of if constexpr usages
+639dea219d73a4a2156dcf6deddfb0676d3fd32c,2023-08-14,build failed,,,,,,,,Work around a weird compile error
+518845e49dcc9485219194e28caab7892f9f36f7,2023-08-14,build failed,,,,,,,,"Replaced all instances of ""XXX_v"""
+f305ab6fbb476bfade2b603f19ef56a24b88a0b2,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Fix a mistake
+f305ab6fbb476bfade2b603f19ef56a24b88a0b2,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,Fix a mistake
+f305ab6fbb476bfade2b603f19ef56a24b88a0b2,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Fix a mistake
+5e1a5e3a9c41a5161f406e05c29da5e3a08f2529,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.4,Fix a wrong constexpr specifier
+5e1a5e3a9c41a5161f406e05c29da5e3a08f2529,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.8,Fix a wrong constexpr specifier
+5e1a5e3a9c41a5161f406e05c29da5e3a08f2529,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Fix a wrong constexpr specifier
+638d62ed1cc91e1c0fe8a50d9ddbc94fa8db6d3a,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.9,Remove yet another instance of if constexpr
+638d62ed1cc91e1c0fe8a50d9ddbc94fa8db6d3a,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,Remove yet another instance of if constexpr
+638d62ed1cc91e1c0fe8a50d9ddbc94fa8db6d3a,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Remove yet another instance of if constexpr
+04c6af2b73c570c84d9ff6d7db040ceabd06ed4a,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.9,First draft for C++11-compatible version
+04c6af2b73c570c84d9ff6d7db040ceabd06ed4a,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,First draft for C++11-compatible version
+04c6af2b73c570c84d9ff6d7db040ceabd06ed4a,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,First draft for C++11-compatible version
+730e85f306caeadaca4cfd9be66bf04971b6891a,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.9,Fix some more instances of C++11-incompatibilities
+730e85f306caeadaca4cfd9be66bf04971b6891a,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.9,Fix some more instances of C++11-incompatibilities
+730e85f306caeadaca4cfd9be66bf04971b6891a,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Fix some more instances of C++11-incompatibilities
+5753a178ae1ca96ad8548224c1fc666aa8ba126c,2023-08-14,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.3,Fix a small error
+5753a178ae1ca96ad8548224c1fc666aa8ba126c,2023-08-14,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.8,Fix a small error
+5753a178ae1ca96ad8548224c1fc666aa8ba126c,2023-08-14,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,Fix a small error
+a931f36c30fc7d842f8ba18ee67974eec5e746ae,2023-10-31,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.5,Fix https://github.com/jk-jeon/dragonbox/issues/48
+a931f36c30fc7d842f8ba18ee67974eec5e746ae,2023-10-31,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,28.1,Fix https://github.com/jk-jeon/dragonbox/issues/48
+a931f36c30fc7d842f8ba18ee67974eec5e746ae,2023-10-31,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,28.2,Fix https://github.com/jk-jeon/dragonbox/issues/48
+5cf1d3f92f837272517e8e9e13cf9c6162c2e964,2023-10-31,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,34.0,Fix C++11 compatibility issue introduced by the previous commit
+5cf1d3f92f837272517e8e9e13cf9c6162c2e964,2023-10-31,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,26.6,Fix C++11 compatibility issue introduced by the previous commit
+5cf1d3f92f837272517e8e9e13cf9c6162c2e964,2023-10-31,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,Fix C++11 compatibility issue introduced by the previous commit
+9a7e3fcc7a9796f814f49353fa6aff2637b044c7,2023-11-03,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.3,Fix a remaining C++11 compatibility issue
+9a7e3fcc7a9796f814f49353fa6aff2637b044c7,2023-11-03,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.3,Fix a remaining C++11 compatibility issue
+9a7e3fcc7a9796f814f49353fa6aff2637b044c7,2023-11-03,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.9,Fix a remaining C++11 compatibility issue
+b5ba69256b00d35f3f3df79042600fdf41098f88,2023-11-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.4,Fix a C++11 compatibility issue
+b5ba69256b00d35f3f3df79042600fdf41098f88,2023-11-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.1,Fix a C++11 compatibility issue
+b5ba69256b00d35f3f3df79042600fdf41098f88,2023-11-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,Fix a C++11 compatibility issue
+e70197f6dfa5232bf8b948a200580ef724c25eb2,2024-01-31,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.1,Improve comments on policy_holder building
+e70197f6dfa5232bf8b948a200580ef724c25eb2,2024-01-31,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.0,Improve comments on policy_holder building
+e70197f6dfa5232bf8b948a200580ef724c25eb2,2024-01-31,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,Improve comments on policy_holder building
+74bbf54da08c842f6fc4dce39598d264ce358ee1,2024-02-13,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.4,Improve paper/comments according to https://github.com/jk-jeon/dragonbox/issues/56
+74bbf54da08c842f6fc4dce39598d264ce358ee1,2024-02-13,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.9,Improve paper/comments according to https://github.com/jk-jeon/dragonbox/issues/56
+74bbf54da08c842f6fc4dce39598d264ce358ee1,2024-02-13,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,Improve paper/comments according to https://github.com/jk-jeon/dragonbox/issues/56
+e60a6bc2ad99d80e02f3e618bcba2110e9ba240c,2024-03-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,"Improve compatibility (1) Replace std::uintXX_t by std::uint_leastXX_t, apply UINTXX_C when needed, and add XX-bit masking if necessary, removing the assumption of integers being XX-bits (but didn't touch the table entries; should fix the table generator for that) (2) Apply the change discussed in https://github.com/jk-jeon/dragonbox/discussions/57 (3) Remove remaining C++14/17 feature usages from to_chars. (4) Simplify dragonbox_to_chars.cpp"
+e60a6bc2ad99d80e02f3e618bcba2110e9ba240c,2024-03-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.1,"Improve compatibility (1) Replace std::uintXX_t by std::uint_leastXX_t, apply UINTXX_C when needed, and add XX-bit masking if necessary, removing the assumption of integers being XX-bits (but didn't touch the table entries; should fix the table generator for that) (2) Apply the change discussed in https://github.com/jk-jeon/dragonbox/discussions/57 (3) Remove remaining C++14/17 feature usages from to_chars. (4) Simplify dragonbox_to_chars.cpp"
+e60a6bc2ad99d80e02f3e618bcba2110e9ba240c,2024-03-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,"Improve compatibility (1) Replace std::uintXX_t by std::uint_leastXX_t, apply UINTXX_C when needed, and add XX-bit masking if necessary, removing the assumption of integers being XX-bits (but didn't touch the table entries; should fix the table generator for that) (2) Apply the change discussed in https://github.com/jk-jeon/dragonbox/discussions/57 (3) Remove remaining C++14/17 feature usages from to_chars. (4) Simplify dragonbox_to_chars.cpp"
+74b5daccf51022535eedc7d2d65889d8f917f8ea,2024-03-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,34.2,Cache generator now encloses constants inside UINT64_C; and other small fixes for cache generator
+74b5daccf51022535eedc7d2d65889d8f917f8ea,2024-03-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,27.5,Cache generator now encloses constants inside UINT64_C; and other small fixes for cache generator
+74b5daccf51022535eedc7d2d65889d8f917f8ea,2024-03-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,28.8,Cache generator now encloses constants inside UINT64_C; and other small fixes for cache generator
+5918e0faaf7e1b97682dde4ea196dada51ebd877,2024-03-13,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,26.0,Make it possible to specialize compressed_cache_detail for other formats than IEEE-754 binary64
+5918e0faaf7e1b97682dde4ea196dada51ebd877,2024-03-13,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.9,Make it possible to specialize compressed_cache_detail for other formats than IEEE-754 binary64
+5918e0faaf7e1b97682dde4ea196dada51ebd877,2024-03-13,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,Make it possible to specialize compressed_cache_detail for other formats than IEEE-754 binary64
+8c48ec33c9d4c387a1ef85543f4e71a433ae42ed,2024-03-18,build failed,,,,,,,,Make core implementation routines independent from the actual float types and traits types Now they are parameterized by the float format type and the carrier type
+ae7c3cea9f7ac49c6633b651b15eb8f1cf3c56d5,2024-03-18,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,40.9,Workaround showding template warning
+ae7c3cea9f7ac49c6633b651b15eb8f1cf3c56d5,2024-03-18,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,28.4,Workaround showding template warning
+ae7c3cea9f7ac49c6633b651b15eb8f1cf3c56d5,2024-03-18,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,Workaround showding template warning
+96ec64bb97f5ac4fc428694394f661c78972905b,2024-03-18,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.2,Simplify compressed cache detail
+96ec64bb97f5ac4fc428694394f661c78972905b,2024-03-18,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.3,Simplify compressed cache detail
+96ec64bb97f5ac4fc428694394f661c78972905b,2024-03-18,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,Simplify compressed cache detail
+799437bfa1b5d9930b7947e678ee484712be0819,2024-03-18,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,25.8,Missing periods in comments
+799437bfa1b5d9930b7947e678ee484712be0819,2024-03-18,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,20.8,Missing periods in comments
+799437bfa1b5d9930b7947e678ee484712be0819,2024-03-18,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,19.3,Missing periods in comments
+09c474e9c7b68f3e9dd9f4d748568db030a11b0a,2024-03-28,build failed,,,,,,,,Major overhaul of implementation
+7e132a6612d646a4f2a9709c4c03043e64056057,2024-03-28,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.3,Add missing typename
+7e132a6612d646a4f2a9709c4c03043e64056057,2024-03-28,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.6,Add missing typename
+7e132a6612d646a4f2a9709c4c03043e64056057,2024-03-28,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Add missing typename
+30d295f167b293fed2641bb34dab82cadf408e4c,2024-03-28,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.9,Fix wrong bit_cast/is_constant_evaluateed usage logic
+30d295f167b293fed2641bb34dab82cadf408e4c,2024-03-28,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,31.4,Fix wrong bit_cast/is_constant_evaluateed usage logic
+30d295f167b293fed2641bb34dab82cadf408e4c,2024-03-28,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.7,Fix wrong bit_cast/is_constant_evaluateed usage logic
+2f05a7d1575c40c0b2f686fa66a5d4e6083e8a8e,2024-03-28,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.6,Remove an unused parameter
+2f05a7d1575c40c0b2f686fa66a5d4e6083e8a8e,2024-03-28,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,30.8,Remove an unused parameter
+2f05a7d1575c40c0b2f686fa66a5d4e6083e8a8e,2024-03-28,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,31.3,Remove an unused parameter
+6de96ce91dcf89ac043df4c3b75eac65ca1a8d4f,2024-03-30,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.6,MSVC-related optimization & better static check
+6de96ce91dcf89ac043df4c3b75eac65ca1a8d4f,2024-03-30,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,30.8,MSVC-related optimization & better static check
+6de96ce91dcf89ac043df4c3b75eac65ca1a8d4f,2024-03-30,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,31.6,MSVC-related optimization & better static check
+000eb420f5d5dd52e3a3861aae3b7ffd66f9a22e,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.0,Fix some warnings
+000eb420f5d5dd52e3a3861aae3b7ffd66f9a22e,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,31.3,Fix some warnings
+000eb420f5d5dd52e3a3861aae3b7ffd66f9a22e,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.9,Fix some warnings
+9be45d358ac45b2e9897d49afbaaf4f9031b2a4e,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,37.0,Avoid unsigned overflow when computing the full-bit mask
+9be45d358ac45b2e9897d49afbaaf4f9031b2a4e,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,31.1,Avoid unsigned overflow when computing the full-bit mask
+9be45d358ac45b2e9897d49afbaaf4f9031b2a4e,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,31.7,Avoid unsigned overflow when computing the full-bit mask
+4a0f7ef53f1a84ea471cca7c17334f7c9a99b9e9,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,24.5,Remove unneeded forward declaration
+4a0f7ef53f1a84ea471cca7c17334f7c9a99b9e9,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.7,Remove unneeded forward declaration
+4a0f7ef53f1a84ea471cca7c17334f7c9a99b9e9,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,19.0,Remove unneeded forward declaration
+da191846f3c89ea7c9a4bb5f7c134d569aefcc09,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,"Revert ""Remove unneeded forward declaration"""
+da191846f3c89ea7c9a4bb5f7c134d569aefcc09,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.8,"Revert ""Remove unneeded forward declaration"""
+da191846f3c89ea7c9a4bb5f7c134d569aefcc09,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,"Revert ""Remove unneeded forward declaration"""
+d563935d1ca03ad254b0c9eac824df165765c600,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.8,Remove unneeded forward declaration
+d563935d1ca03ad254b0c9eac824df165765c600,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.4,Remove unneeded forward declaration
+d563935d1ca03ad254b0c9eac824df165765c600,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Remove unneeded forward declaration
+8bdd174ad263ad05d9972c4508691c94886a966d,2024-04-02,build failed,,,,,,,,Move policy implementations out of the detail namespace to support user-provided extension of them
+c468bd481af96f658930b7000ef94059dcd0a9a8,2024-04-02,build failed,,,,,,,,Add comment about the dummy parameter for the cache holders
+2a93df469caa988b485394f8395b9400017cf83e,2024-04-02,build failed,,,,,,,,Remove the namespace policy_impl
+543ee1fd6ffe28c90fd9e4b12602e27556d85ad7,2024-04-02,build failed,,,,,,,,policy_impl namespace is now removed
+91b028894896ea9f4550d400860957d135dcace3,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,24.4,"Add ""jkj::dragonbox: "" header to static_assert messages; add """" into a remaining terse static_assert"
+91b028894896ea9f4550d400860957d135dcace3,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.6,"Add ""jkj::dragonbox: "" header to static_assert messages; add """" into a remaining terse static_assert"
+91b028894896ea9f4550d400860957d135dcace3,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,"Add ""jkj::dragonbox: "" header to static_assert messages; add """" into a remaining terse static_assert"
+4e2e846bace609bd36f07f8ff705f36ef88c7fda,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Workaround for MSVC generating needless copy
+4e2e846bace609bd36f07f8ff705f36ef88c7fda,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.8,Workaround for MSVC generating needless copy
+4e2e846bace609bd36f07f8ff705f36ef88c7fda,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Workaround for MSVC generating needless copy
+6d75a1d965ffcf6f70e090e2fb89bd37ee9ffe79,2024-04-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Guard against MSVC only; clang-cl doesn't need to be there
+6d75a1d965ffcf6f70e090e2fb89bd37ee9ffe79,2024-04-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.8,Guard against MSVC only; clang-cl doesn't need to be there
+6d75a1d965ffcf6f70e090e2fb89bd37ee9ffe79,2024-04-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Guard against MSVC only; clang-cl doesn't need to be there
+b158a5d7062c301236aa566ad3e81f6fa90b65c1,2024-04-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Fix copy-paste errors for some of the (rarley used) policies
+b158a5d7062c301236aa566ad3e81f6fa90b65c1,2024-04-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.8,Fix copy-paste errors for some of the (rarley used) policies
+b158a5d7062c301236aa566ad3e81f6fa90b65c1,2024-04-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Fix copy-paste errors for some of the (rarley used) policies
+7c56c6cb74babc00e0b0f4a30daa60ad55978068,2024-04-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Move trailing zero removal routine into the policy class
+7c56c6cb74babc00e0b0f4a30daa60ad55978068,2024-04-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.2,Move trailing zero removal routine into the policy class
+7c56c6cb74babc00e0b0f4a30daa60ad55978068,2024-04-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.3,Move trailing zero removal routine into the policy class
+d20ee3dc942d4c6bfd347127552b27d86554a87f,2024-04-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.2,Fix a potential (but never materialized) UB
+d20ee3dc942d4c6bfd347127552b27d86554a87f,2024-04-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,30.2,Fix a potential (but never materialized) UB
+d20ee3dc942d4c6bfd347127552b27d86554a87f,2024-04-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Fix a potential (but never materialized) UB
+1d5e82a3f068381105cf56b9125eb72b8dec9241,2024-04-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.2,Resolve https://github.com/jk-jeon/dragonbox/issues/60
+1d5e82a3f068381105cf56b9125eb72b8dec9241,2024-04-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.2,Resolve https://github.com/jk-jeon/dragonbox/issues/60
+1d5e82a3f068381105cf56b9125eb72b8dec9241,2024-04-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.2,Resolve https://github.com/jk-jeon/dragonbox/issues/60
+f05785f3759b31cb6dc71cb2e7b985a131c4e234,2024-04-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.3,Remove unnecessary type repetition
+f05785f3759b31cb6dc71cb2e7b985a131c4e234,2024-04-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,30.8,Remove unnecessary type repetition
+f05785f3759b31cb6dc71cb2e7b985a131c4e234,2024-04-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,31.1,Remove unnecessary type repetition
+0b0df9b66781a3320a2bbd93defa215e7f3b20ac,2024-04-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.7,Do not need std::is_base_of anymore
+0b0df9b66781a3320a2bbd93defa215e7f3b20ac,2024-04-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.6,Do not need std::is_base_of anymore
+0b0df9b66781a3320a2bbd93defa215e7f3b20ac,2024-04-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.0,Do not need std::is_base_of anymore
+3469a6cbe015e6ec177c8c99614b768ec52bb552,2024-04-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,34.6,Fix some C++11 compatibility problems
+3469a6cbe015e6ec177c8c99614b768ec52bb552,2024-04-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.1,Fix some C++11 compatibility problems
+3469a6cbe015e6ec177c8c99614b768ec52bb552,2024-04-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.4,Fix some C++11 compatibility problems
+27d34b8f7f59925f099950eb4c06bab0c6af84e4,2024-04-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,34.1,Fix some possible warnings
+27d34b8f7f59925f099950eb4c06bab0c6af84e4,2024-04-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,28.6,Fix some possible warnings
+27d34b8f7f59925f099950eb4c06bab0c6af84e4,2024-04-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.0,Fix some possible warnings
+95fb4884f733b44112b62cd0c75ffe1f1c6fbf4f,2024-04-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.2,Improve divide_by_pow10
+95fb4884f733b44112b62cd0c75ffe1f1c6fbf4f,2024-04-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.9,Improve divide_by_pow10
+95fb4884f733b44112b62cd0c75ffe1f1c6fbf4f,2024-04-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.4,Improve divide_by_pow10
+5494d2b6921b2be32ae4461b0577cc982fa888ef,2024-04-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.4,Add some more const's
+5494d2b6921b2be32ae4461b0577cc982fa888ef,2024-04-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.4,Add some more const's
+5494d2b6921b2be32ae4461b0577cc982fa888ef,2024-04-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.5,Add some more const's
+ad07c8c841304925a1a5da0a6dcfe2bede9d4dd1,2024-04-05,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.3,Remove a reliance on uint_least64_t being exactly 64-bits
+ad07c8c841304925a1a5da0a6dcfe2bede9d4dd1,2024-04-05,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.2,Remove a reliance on uint_least64_t being exactly 64-bits
+ad07c8c841304925a1a5da0a6dcfe2bede9d4dd1,2024-04-05,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.3,Remove a reliance on uint_least64_t being exactly 64-bits
+3b1663c581efa3bb93ea8b7a2a690df9a6c6c4bb,2024-04-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.8,Add compressed cache for binary32
+3b1663c581efa3bb93ea8b7a2a690df9a6c6c4bb,2024-04-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.1,Add compressed cache for binary32
+3b1663c581efa3bb93ea8b7a2a690df9a6c6c4bb,2024-04-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Add compressed cache for binary32
+9ebf75ec82b6db884f8adf45cd767d972a295cb8,2024-04-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.6,Some minor improvements
+9ebf75ec82b6db884f8adf45cd767d972a295cb8,2024-04-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,30.2,Some minor improvements
+9ebf75ec82b6db884f8adf45cd767d972a295cb8,2024-04-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.2,Some minor improvements
+f7bac9cb2942aee13944b5610f3c3ad816e88039,2024-04-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.6,Manually replace division by mul-shift for compressed cache case (to leverage upper bound on k)
+f7bac9cb2942aee13944b5610f3c3ad816e88039,2024-04-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,30.2,Manually replace division by mul-shift for compressed cache case (to leverage upper bound on k)
+f7bac9cb2942aee13944b5610f3c3ad816e88039,2024-04-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.6,Manually replace division by mul-shift for compressed cache case (to leverage upper bound on k)
+bbb24df5229fcf81936259354a4a2d5f8f8d398b,2024-04-12,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.3,No need to multiply by 5^7; 5^6 should be sufficient
+bbb24df5229fcf81936259354a4a2d5f8f8d398b,2024-04-12,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.3,No need to multiply by 5^7; 5^6 should be sufficient
+bbb24df5229fcf81936259354a4a2d5f8f8d398b,2024-04-12,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.8,No need to multiply by 5^7; 5^6 should be sufficient
+2998f970d87dd96f630ad592d3292401221d942d,2024-04-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.4,"Try to address https://github.com/jk-jeon/dragonbox/issues/61, and also add a path for ICC"
+2998f970d87dd96f630ad592d3292401221d942d,2024-04-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,26.9,"Try to address https://github.com/jk-jeon/dragonbox/issues/61, and also add a path for ICC"
+2998f970d87dd96f630ad592d3292401221d942d,2024-04-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,27.5,"Try to address https://github.com/jk-jeon/dragonbox/issues/61, and also add a path for ICC"
+f6990b8fdcfe4684ddd2c02793c1436e8c6f2c82,2024-04-15,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,31.8,std:: should be stdr::
+f6990b8fdcfe4684ddd2c02793c1436e8c6f2c82,2024-04-15,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,26.3,std:: should be stdr::
+f6990b8fdcfe4684ddd2c02793c1436e8c6f2c82,2024-04-15,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,27.2,std:: should be stdr::
+6d6931eeb974cba277f9e1025c72b7dafff52da3,2024-04-19,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,32.6,Add a comment on ICC handling for adc
+6d6931eeb974cba277f9e1025c72b7dafff52da3,2024-04-19,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,26.5,Add a comment on ICC handling for adc
+6d6931eeb974cba277f9e1025c72b7dafff52da3,2024-04-19,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,27.1,Add a comment on ICC handling for adc
+40bb9c9d9a8205a9ace5f839f0ce71d0261d2b52,2024-04-19,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.3,Remove explicit dependence on the format for determining kappa
+40bb9c9d9a8205a9ace5f839f0ce71d0261d2b52,2024-04-19,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.3,Remove explicit dependence on the format for determining kappa
+40bb9c9d9a8205a9ace5f839f0ce71d0261d2b52,2024-04-19,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.5,Remove explicit dependence on the format for determining kappa
+85c6e7fd73aaddd0816eb6e5e59b5464ebff8856,2024-04-24,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.6,Introduce a custom std::array
+85c6e7fd73aaddd0816eb6e5e59b5464ebff8856,2024-04-24,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.1,Introduce a custom std::array
+85c6e7fd73aaddd0816eb6e5e59b5464ebff8856,2024-04-24,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.5,Introduce a custom std::array
+015bf3ddd90b5ff86ded328b312a193987e1d783,2024-04-26,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,23.4,Try to align the amount of shift to 8-bit boundary
+015bf3ddd90b5ff86ded328b312a193987e1d783,2024-04-26,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.3,Try to align the amount of shift to 8-bit boundary
+015bf3ddd90b5ff86ded328b312a193987e1d783,2024-04-26,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.4,Try to align the amount of shift to 8-bit boundary
+7e957d51dd28bffc37594acc34e2236a33391fc4,2024-05-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,19.1,Overhaul for preparing an option for more compact codegen
+7e957d51dd28bffc37594acc34e2236a33391fc4,2024-05-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.3,Overhaul for preparing an option for more compact codegen
+7e957d51dd28bffc37594acc34e2236a33391fc4,2024-05-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.3,Overhaul for preparing an option for more compact codegen
+035cb82f98d56ffe44afcb67ed57ed079c43030b,2024-05-03,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,33.4,"Properly implement preferred integer types policies (match (default), prefer-32, minimal)"
+035cb82f98d56ffe44afcb67ed57ed079c43030b,2024-05-03,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.0,"Properly implement preferred integer types policies (match (default), prefer-32, minimal)"
+035cb82f98d56ffe44afcb67ed57ed079c43030b,2024-05-03,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.0,"Properly implement preferred integer types policies (match (default), prefer-32, minimal)"
+9cba70cae5f57d2d2e2cc0e349327604c1f4f907,2024-05-03,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.0,A few tweaks & add tests for new fast divisions
+9cba70cae5f57d2d2e2cc0e349327604c1f4f907,2024-05-03,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.2,A few tweaks & add tests for new fast divisions
+9cba70cae5f57d2d2e2cc0e349327604c1f4f907,2024-05-03,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.9,A few tweaks & add tests for new fast divisions
+bde5ab82a458fb9c68c4c298f842d4b6a661c92d,2024-05-04,build failed,,,,,,,,Shift amount corrections (alpha & beta) are now done in std::uint_fast8_t
+d0e363486505b0429c09bbd09cf98c41ad1ee8dc,2024-05-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,19.3,Fix typo
+d0e363486505b0429c09bbd09cf98c41ad1ee8dc,2024-05-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.5,Fix typo
+d0e363486505b0429c09bbd09cf98c41ad1ee8dc,2024-05-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.1,Fix typo
+7ce54f7df4ffbb0907a978888743a570b5422c3e,2024-05-04,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.6,Make compressed cache recovery leverage the bound on the decimal exponent; make static_assert C++11-compatible; add another static_assert for validation
+7ce54f7df4ffbb0907a978888743a570b5422c3e,2024-05-04,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.6,Make compressed cache recovery leverage the bound on the decimal exponent; make static_assert C++11-compatible; add another static_assert for validation
+7ce54f7df4ffbb0907a978888743a570b5422c3e,2024-05-04,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,30.1,Make compressed cache recovery leverage the bound on the decimal exponent; make static_assert C++11-compatible; add another static_assert for validation
+c10c3403848191014aebcad333f134ca19df2c8f,2024-05-06,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.8,Shift amount correction is now done in a type specified by preferred_integer_types policy; we may need to change the default exponent int type later for better performance
+c10c3403848191014aebcad333f134ca19df2c8f,2024-05-06,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.7,Shift amount correction is now done in a type specified by preferred_integer_types policy; we may need to change the default exponent int type later for better performance
+c10c3403848191014aebcad333f134ca19df2c8f,2024-05-06,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.8,Shift amount correction is now done in a type specified by preferred_integer_types policy; we may need to change the default exponent int type later for better performance
+e25ee774aef2ee56c925cfa75e3958fe9637ae32,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.8,Small improvements
+e25ee774aef2ee56c925cfa75e3958fe9637ae32,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,18.7,Small improvements
+e25ee774aef2ee56c925cfa75e3958fe9637ae32,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.8,Small improvements
+f87b64d7f32e4bbde6281ebd07ee14d928b44a90,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,18.4,Replace several uint_least32_t by uint_fast32_t
+f87b64d7f32e4bbde6281ebd07ee14d928b44a90,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.8,Replace several uint_least32_t by uint_fast32_t
+f87b64d7f32e4bbde6281ebd07ee14d928b44a90,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.8,Replace several uint_least32_t by uint_fast32_t
+0c38567835ec49ed5987b53c6780cad150a0375f,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,21.8,Small consistency improvements + bug fix for compute_right_closed_directed
+0c38567835ec49ed5987b53c6780cad150a0375f,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,15.8,Small consistency improvements + bug fix for compute_right_closed_directed
+0c38567835ec49ed5987b53c6780cad150a0375f,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,15.8,Small consistency improvements + bug fix for compute_right_closed_directed
+ff9d375b4e0771556c5ef0bd94fe49505c6cd765,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,27.8,"Improve trailing zero removal; add new policy remove_compact (same as remove, but supposedly smaller code size)"
+ff9d375b4e0771556c5ef0bd94fe49505c6cd765,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.0,"Improve trailing zero removal; add new policy remove_compact (same as remove, but supposedly smaller code size)"
+ff9d375b4e0771556c5ef0bd94fe49505c6cd765,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,"Improve trailing zero removal; add new policy remove_compact (same as remove, but supposedly smaller code size)"
+19703c7118351360fbc0f295dc6b1a48d6d2e517,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,28.0,Replace std:: with detail::stdr::
+19703c7118351360fbc0f295dc6b1a48d6d2e517,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.1,Replace std:: with detail::stdr::
+19703c7118351360fbc0f295dc6b1a48d6d2e517,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Replace std:: with detail::stdr::
+7d7e5894df7c02578fc3fbb44f0ae6a8b5489b00,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,39.9,More generic max_output_string_length
+7d7e5894df7c02578fc3fbb44f0ae6a8b5489b00,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.1,More generic max_output_string_length
+7d7e5894df7c02578fc3fbb44f0ae6a8b5489b00,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.7,More generic max_output_string_length
+0d273a163a6751c5462c5262f7b22fa4a2992deb,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,30.9,Make to_chars constexpr
+0d273a163a6751c5462c5262f7b22fa4a2992deb,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,20.9,Make to_chars constexpr
+0d273a163a6751c5462c5262f7b22fa4a2992deb,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,19.9,Make to_chars constexpr
+7962a9a5074dbddd08c5bff261b359bf1841c2d5,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,29.5,No reason to call remove_compact; just call remove
+7962a9a5074dbddd08c5bff261b359bf1841c2d5,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,17.9,No reason to call remove_compact; just call remove
+7962a9a5074dbddd08c5bff261b359bf1841c2d5,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,18.2,No reason to call remove_compact; just call remove
+32ebc1f9d763b3194d209b80919e82fbe827e690,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.6,Fix bug in to_chars_naive & add new policy kind
+32ebc1f9d763b3194d209b80919e82fbe827e690,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.1,Fix bug in to_chars_naive & add new policy kind
+32ebc1f9d763b3194d209b80919e82fbe827e690,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Fix bug in to_chars_naive & add new policy kind
+37b8090646422b6a8056ef947cafe58ab6776f0b,2024-05-07,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,38.0,Fix a regression for MSVC
+37b8090646422b6a8056ef947cafe58ab6776f0b,2024-05-07,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.1,Fix a regression for MSVC
+37b8090646422b6a8056ef947cafe58ab6776f0b,2024-05-07,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.2,Fix a regression for MSVC
+35f242900aec9911e9cf45aa7bac1acbb306dc51,2024-05-24,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.6,Fix short circuit bug
+35f242900aec9911e9cf45aa7bac1acbb306dc51,2024-05-24,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.1,Fix short circuit bug
+35f242900aec9911e9cf45aa7bac1acbb306dc51,2024-05-24,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Fix short circuit bug
+fe0e5fe9e934fadd1ee9cc36b20bcef44fe740dd,2024-08-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.5,Merge pull request #66 from tobybell/fix-u32c-macro
+fe0e5fe9e934fadd1ee9cc36b20bcef44fe740dd,2024-08-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.0,Merge pull request #66 from tobybell/fix-u32c-macro
+fe0e5fe9e934fadd1ee9cc36b20bcef44fe740dd,2024-08-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Merge pull request #66 from tobybell/fix-u32c-macro
+2fa48263580f327de9c2a853023f28f6d1b62382,2024-09-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,28.0,Fix an outdated comment
+2fa48263580f327de9c2a853023f28f6d1b62382,2024-09-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.0,Fix an outdated comment
+2fa48263580f327de9c2a853023f28f6d1b62382,2024-09-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Fix an outdated comment
+39902e6244f459b3f4851ae6763dfa09df6faf3b,2024-10-28,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.5,Fix min/max macro issue (see https://github.com/jk-jeon/dragonbox/issues/68)
+39902e6244f459b3f4851ae6763dfa09df6faf3b,2024-10-28,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.1,Fix min/max macro issue (see https://github.com/jk-jeon/dragonbox/issues/68)
+39902e6244f459b3f4851ae6763dfa09df6faf3b,2024-10-28,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Fix min/max macro issue (see https://github.com/jk-jeon/dragonbox/issues/68)
+6c7c925b571d54486b9ffae8d9d18a822801cbda,2024-10-28,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,28.0,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+6c7c925b571d54486b9ffae8d9d18a822801cbda,2024-10-28,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.0,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+6c7c925b571d54486b9ffae8d9d18a822801cbda,2024-10-28,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Merge branch 'master' of https://github.com/jk-jeon/dragonbox
+4739f47c5fc272bebc6e7ccc1ed09cc182ff58cf,2025-09-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,28.1,Fix some conversion warnings
+4739f47c5fc272bebc6e7ccc1ed09cc182ff58cf,2025-09-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.0,Fix some conversion warnings
+4739f47c5fc272bebc6e7ccc1ed09cc182ff58cf,2025-09-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Fix some conversion warnings
+f6a74b11380c2132bf59b2063db3cee848c46020,2025-09-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,28.0,Change size_t into DecimalExponentType in remove_trailing_zeros
+f6a74b11380c2132bf59b2063db3cee848c46020,2025-09-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.3,Change size_t into DecimalExponentType in remove_trailing_zeros
+f6a74b11380c2132bf59b2063db3cee848c46020,2025-09-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.3,Change size_t into DecimalExponentType in remove_trailing_zeros
+afd950bcf56762fb293f324122f9b5f2e5a575a3,2025-09-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.6,Add assert to ensure no overflow.
+afd950bcf56762fb293f324122f9b5f2e5a575a3,2025-09-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.1,Add assert to ensure no overflow.
+afd950bcf56762fb293f324122f9b5f2e5a575a3,2025-09-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Add assert to ensure no overflow.
+5011fd324b7d05d0243d761512c63f281b453630,2025-09-02,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,28.0,Add config macro for replacing the top-namespace
+5011fd324b7d05d0243d761512c63f281b453630,2025-09-02,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.0,Add config macro for replacing the top-namespace
+5011fd324b7d05d0243d761512c63f281b453630,2025-09-02,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.1,Add config macro for replacing the top-namespace
+3287030ad9d3001a4e68f01b69c40b59d1547316,2025-09-03,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,22.5,Replace umul128 by umul96 in compressed cache handling of binary32
+3287030ad9d3001a4e68f01b69c40b59d1547316,2025-09-03,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.4,Replace umul128 by umul96 in compressed cache handling of binary32
+3287030ad9d3001a4e68f01b69c40b59d1547316,2025-09-03,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,16.4,Replace umul128 by umul96 in compressed cache handling of binary32
+292ad408d7d62aa56e7e1a2fae5523c5cb8c3f0b,2025-09-03,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,27.9,Eliminate a subtraction from compressed cache handling - Achieved via replacing log2_pow10 by log2_pow5
+292ad408d7d62aa56e7e1a2fae5523c5cb8c3f0b,2025-09-03,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,19.2,Eliminate a subtraction from compressed cache handling - Achieved via replacing log2_pow10 by log2_pow5
+292ad408d7d62aa56e7e1a2fae5523c5cb8c3f0b,2025-09-03,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,17.9,Eliminate a subtraction from compressed cache handling - Achieved via replacing log2_pow10 by log2_pow5
+f22745d08baecea3de586b632f58f58054987c70,2025-09-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,40.1,Improve compact digit generation
+f22745d08baecea3de586b632f58f58054987c70,2025-09-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.1,Improve compact digit generation
+f22745d08baecea3de586b632f58f58054987c70,2025-09-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.8,Improve compact digit generation
+4e890873e26c6b86b96f5b75e5cddbd046c8d4a2,2025-09-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,40.1,Fix errors from the previous commit
+4e890873e26c6b86b96f5b75e5cddbd046c8d4a2,2025-09-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.6,Fix errors from the previous commit
+4e890873e26c6b86b96f5b75e5cddbd046c8d4a2,2025-09-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.5,Fix errors from the previous commit
+565e78883e5cc65b1affaf8327f30080c7d81f94,2025-09-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,38.5,Cleanup code from the previous commit
+565e78883e5cc65b1affaf8327f30080c7d81f94,2025-09-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,28.8,Cleanup code from the previous commit
+565e78883e5cc65b1affaf8327f30080c7d81f94,2025-09-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.3,Cleanup code from the previous commit
+76679d4c66769d18c9f8d79f76d9faa06a311cad,2025-09-10,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,39.1,Improve comments
+76679d4c66769d18c9f8d79f76d9faa06a311cad,2025-09-10,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,29.0,Improve comments
+76679d4c66769d18c9f8d79f76d9faa06a311cad,2025-09-10,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,29.4,Improve comments
+21bac329db254980640f02464b8176e56fa8591a,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.2,Add JKJ_READ_STATIC_DATA config macro
+21bac329db254980640f02464b8176e56fa8591a,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.3,Add JKJ_READ_STATIC_DATA config macro
+21bac329db254980640f02464b8176e56fa8591a,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,25.6,Add JKJ_READ_STATIC_DATA config macro
+457dddd2240df8492dfc63a9033d560d08b1126f,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,36.8,Remove conditional noexcept handling
+457dddd2240df8492dfc63a9033d560d08b1126f,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.6,Remove conditional noexcept handling
+457dddd2240df8492dfc63a9033d560d08b1126f,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,25.9,Remove conditional noexcept handling
+68b9997ccb39c9816c15e241241d15a0dffc2156,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,35.4,Replace arithmetic shifts by unsigned shifts
+68b9997ccb39c9816c15e241241d15a0dffc2156,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,25.6,Replace arithmetic shifts by unsigned shifts
+68b9997ccb39c9816c15e241241d15a0dffc2156,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,25.9,Replace arithmetic shifts by unsigned shifts
+69c1cb42b1a99ec41a1323f897ad6e930c2f7031,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,25.6,Add #include of config header
+69c1cb42b1a99ec41a1323f897ad6e930c2f7031,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.4,Add #include of config header
+69c1cb42b1a99ec41a1323f897ad6e930c2f7031,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Add #include of config header
+e0e57e0eb085192782e9d9f45655e646f1344560,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,24.4,Move the actual definition of max_output_string_length into a template struct to prepare C++11-compatibility patch
+e0e57e0eb085192782e9d9f45655e646f1344560,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Move the actual definition of max_output_string_length into a template struct to prepare C++11-compatibility patch
+e0e57e0eb085192782e9d9f45655e646f1344560,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Move the actual definition of max_output_string_length into a template struct to prepare C++11-compatibility patch
+149a7edc0bb8446625f47fece456f6b65fc0f941,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.7,Preprocessing hack for reusing macro definitions
+149a7edc0bb8446625f47fece456f6b65fc0f941,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Preprocessing hack for reusing macro definitions
+149a7edc0bb8446625f47fece456f6b65fc0f941,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Preprocessing hack for reusing macro definitions
+f51fa33ef1fbee0d82361232f536766deb00f047,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,26.6,Add variable templates feature detection and hide max_output_string_length in C++11
+f51fa33ef1fbee0d82361232f536766deb00f047,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,16.4,Add variable templates feature detection and hide max_output_string_length in C++11
+f51fa33ef1fbee0d82361232f536766deb00f047,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Add variable templates feature detection and hide max_output_string_length in C++11
+beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44,2025-09-11,ok,to_decimal(187.25),0.0,0.0,0.0,0,0,20.4,Improve comments
+beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44,2025-09-11,ok,to_decimal(0.1 + 0.2),0.0,0.0,0.0,0,0,13.9,Improve comments
+beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44,2025-09-11,ok,to_decimal(1.2345678901234567e-5),0.0,0.0,0.0,0,0,13.9,Improve comments

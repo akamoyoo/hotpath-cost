@@ -2,6 +2,7 @@
 """Where does a compiler gap come from? Machine-code facts of one entry function across builds.
 
   gap.py PROJECT ENTRY [--commit H] [--builds gcc:-O2,gcc:-O3,gcc15:-O2,gcc15:-O3,clang:-O2,clang:-O3]
+  gap.py PROJECT ENTRY --commits A,B [--builds gcc:-O2]      the same facts for two commits, one build
 
 ENTRY is a substring of the entry function's name (for example `fix_write_new_order`). For each build
 the benchmark is compiled at the commit (default: the latest library commit) and disassembled. For the
@@ -75,25 +76,32 @@ def main():
     commit = subprocess.run(["git", "-C", str(rp.TOP / "src" / proj), "rev-parse", commit], capture_output=True, text=True, check=True).stdout.strip()
     spec = sys.argv[sys.argv.index("--builds") + 1] if "--builds" in sys.argv else "gcc:-O2,gcc:-O3,gcc15:-O2,gcc15:-O3,clang:-O2,clang:-O3"
     builds = [tuple(b.split(":")) for b in spec.split(",")]
+    full = lambda c: subprocess.run(["git", "-C", str(rp.TOP / "src" / proj), "rev-parse", c], capture_output=True, text=True, check=True).stdout.strip()
+    if "--commits" in sys.argv:   # one build, two commits
+        cs = sys.argv[sys.argv.index("--commits") + 1].split(",")
+        cc, opt = builds[0] if "--builds" in sys.argv else ("gcc", "-O2")
+        jobs = [(f"{c[:8]} {cc} {opt}", cc, opt, full(c)) for c in cs]
+    else:
+        jobs = [(f"{cc} {opt}", cc, opt, commit) for cc, opt in builds]
     rows = []
     with tempfile.TemporaryDirectory() as t:
         t = Path(t)
-        for cc, opt in builds:
-            d = t / f"{cc}{opt}"; d.mkdir(); exe = d / "x"
+        for k, (name, cc, opt, c) in enumerate(jobs):
+            d = t / f"b{k}"; d.mkdir(); exe = d / "x"
             rp.OPT = opt
-            b = rp.build(proj, cc, commit, d, exe)
-            if b.returncode: print(f"{cc} {opt}: build failed"); continue
+            b = rp.build(proj, cc, c, d, exe)
+            if b.returncode: print(f"{name}: build failed"); continue
             funcs = disasm(exe)
             cands = [g for g in funcs if g.startswith("hp_entry::") and want in g]
             entry = next((g for g in cands if "[clone" not in g), cands[0] if cands else None)
             if entry is None: sys.exit(f"no entry function containing {want!r}")
             facts, outline = tree_facts(funcs, entry)
-            rows.append((f"{cc} {opt}", facts, outline, matrix_ns(proj, cc, opt)))
-    print(f"{proj} {commit[:8]}, entry containing {want!r}\n")
+            rows.append((name, facts, outline, matrix_ns(proj, cc, opt) if "--commits" not in sys.argv else {}))
+    print(f"{proj} {commit[:8] if '--commits' not in sys.argv else 'two commits'}, entry containing {want!r}\n")
     keys = ["instructions", "call sites", "divisions", "256-bit vector", "backward jumps"]
-    print(f"{'build':14}" + "".join(f"{k:>16}" for k in keys) + "   out-of-line library functions")
+    print(f"{'build':26}" + "".join(f"{k:>16}" for k in keys) + "   out-of-line library functions")
     for name, f, outline, ns in rows:
-        print(f"{name:14}" + "".join(f"{f[k]:>16}" for k in keys) + f"   {len(outline)}")
+        print(f"{name:26}" + "".join(f"{f[k]:>16}" for k in keys) + f"   {len(outline)}")
     if rows and rows[0][3]:
         print("\nmedian ns per call in the compiler matrix:")
         ops = list(rows[0][3])

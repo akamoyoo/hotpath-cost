@@ -1,0 +1,347 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+ce7d0ebf5d0ef7b098a60d10399a0de866f012bd,2018-02-01,ok,parse + read px,22.0,22.0,0.0,22,0,2277.6,Merge pull request #944 from theodelrieu/fix/cmake_install
+ce7d0ebf5d0ef7b098a60d10399a0de866f012bd,2018-02-01,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,Merge pull request #944 from theodelrieu/fix/cmake_install
+ce7d0ebf5d0ef7b098a60d10399a0de866f012bd,2018-02-01,ok,dump to std::string,5.0,5.0,0.0,5,0,860.9,Merge pull request #944 from theodelrieu/fix/cmake_install
+d2d65bb25be2f0c270428334ecdb9dfa2d6a2339,2018-03-07,ok,parse + read px,22.0,22.0,0.0,22,0,4662.7,:recycle: refined SFINAE to fix some warnings
+d2d65bb25be2f0c270428334ecdb9dfa2d6a2339,2018-03-07,ok,read px of a parsed object,0.0,0.0,0.0,0,0,37.7,:recycle: refined SFINAE to fix some warnings
+d2d65bb25be2f0c270428334ecdb9dfa2d6a2339,2018-03-07,ok,dump to std::string,5.0,5.0,0.0,5,0,1714.1,:recycle: refined SFINAE to fix some warnings
+1c6b332dcdaff5d5d7ccdf8e11f847f91217523d,2018-05-26,ok,parse + read px,22.0,22.0,0.0,22,0,2195.7,:ok_hand: mitigating cppcheck bug #1101
+1c6b332dcdaff5d5d7ccdf8e11f847f91217523d,2018-05-26,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,:ok_hand: mitigating cppcheck bug #1101
+1c6b332dcdaff5d5d7ccdf8e11f847f91217523d,2018-05-26,ok,dump to std::string,5.0,5.0,0.0,5,0,870.6,:ok_hand: mitigating cppcheck bug #1101
+cf9299d222d4b5db2601c7f591b605d02470da93,2018-05-27,ok,parse + read px,25.0,25.0,0.0,25,0,5381.0,Merge branch 'feature/sax2' into develop #971
+cf9299d222d4b5db2601c7f591b605d02470da93,2018-05-27,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.3,Merge branch 'feature/sax2' into develop #971
+cf9299d222d4b5db2601c7f591b605d02470da93,2018-05-27,ok,dump to std::string,5.0,5.0,0.0,5,0,1946.7,Merge branch 'feature/sax2' into develop #971
+db03d09312be0bdb7986d66e7fac7d704e5d1f71,2018-05-27,ok,parse + read px,25.0,25.0,0.0,25,0,5479.6,Merge branch 'feature/key_ref' into develop (fixes #1098)
+db03d09312be0bdb7986d66e7fac7d704e5d1f71,2018-05-27,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.2,Merge branch 'feature/key_ref' into develop (fixes #1098)
+db03d09312be0bdb7986d66e7fac7d704e5d1f71,2018-05-27,ok,dump to std::string,5.0,5.0,0.0,5,0,2019.2,Merge branch 'feature/key_ref' into develop (fixes #1098)
+e5a67fc3f80d50569cdecec0c0cb2c9fd864905d,2018-05-28,ok,parse + read px,25.0,25.0,0.0,25,0,5387.8,Merge branch 'develop' of https://github.com/nlohmann/json into develop
+e5a67fc3f80d50569cdecec0c0cb2c9fd864905d,2018-05-28,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.5,Merge branch 'develop' of https://github.com/nlohmann/json into develop
+e5a67fc3f80d50569cdecec0c0cb2c9fd864905d,2018-05-28,ok,dump to std::string,5.0,5.0,0.0,5,0,1843.4,Merge branch 'develop' of https://github.com/nlohmann/json into develop
+85f35a1d5968fc556a054cb8be881b3d00aa4f66,2018-06-22,ok,parse + read px,25.0,25.0,0.0,25,0,5177.7,:memo: documentation fix
+85f35a1d5968fc556a054cb8be881b3d00aa4f66,2018-06-22,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.2,:memo: documentation fix
+85f35a1d5968fc556a054cb8be881b3d00aa4f66,2018-06-22,ok,dump to std::string,5.0,5.0,0.0,5,0,1956.0,:memo: documentation fix
+bf348ca8a4d50cdfb91047acec3ef761e0a9d52f,2018-06-23,ok,parse + read px,25.0,25.0,0.0,25,0,2501.0,Merge pull request #1028 from gracicot/develop
+bf348ca8a4d50cdfb91047acec3ef761e0a9d52f,2018-06-23,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,Merge pull request #1028 from gracicot/develop
+bf348ca8a4d50cdfb91047acec3ef761e0a9d52f,2018-06-23,ok,dump to std::string,5.0,5.0,0.0,5,0,921.3,Merge pull request #1028 from gracicot/develop
+3ac2d81a958a78d0cf08475d73f7453aa7041c7e,2018-08-14,ok,parse + read px,25.0,25.0,0.0,25,0,5304.7,:hammer: fixed a MinGW error #1193
+3ac2d81a958a78d0cf08475d73f7453aa7041c7e,2018-08-14,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,:hammer: fixed a MinGW error #1193
+3ac2d81a958a78d0cf08475d73f7453aa7041c7e,2018-08-14,ok,dump to std::string,5.0,5.0,0.0,5,0,1034.6,:hammer: fixed a MinGW error #1193
+04597c3a668e190afb412c5f6ca45117b20d3bc0,2018-08-24,ok,parse + read px,25.0,25.0,0.0,25,0,2557.8,Merge pull request #1214 from devsisters/fix-1213
+04597c3a668e190afb412c5f6ca45117b20d3bc0,2018-08-24,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,Merge pull request #1214 from devsisters/fix-1213
+04597c3a668e190afb412c5f6ca45117b20d3bc0,2018-08-24,ok,dump to std::string,5.0,5.0,0.0,5,0,1786.0,Merge pull request #1214 from devsisters/fix-1213
+910a895027b674df1366a473f4e6817683595eac,2018-09-29,ok,parse + read px,25.0,25.0,0.0,25,0,5190.1,Merge pull request #1238 from theodelrieu/fix/1237
+910a895027b674df1366a473f4e6817683595eac,2018-09-29,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.7,Merge pull request #1238 from theodelrieu/fix/1237
+910a895027b674df1366a473f4e6817683595eac,2018-09-29,ok,dump to std::string,5.0,5.0,0.0,5,0,1920.6,Merge pull request #1238 from theodelrieu/fix/1237
+037e93f5c09805c84460c91abee40d479d1512a6,2018-10-27,ok,parse + read px,25.0,25.0,0.0,25,0,4528.5,Merge pull request #1320 from nlohmann/julian-becker-feature/bson
+037e93f5c09805c84460c91abee40d479d1512a6,2018-10-27,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,Merge pull request #1320 from nlohmann/julian-becker-feature/bson
+037e93f5c09805c84460c91abee40d479d1512a6,2018-10-27,ok,dump to std::string,5.0,5.0,0.0,5,0,901.4,Merge pull request #1320 from nlohmann/julian-becker-feature/bson
+2f73a4d1f343f69e54ef374a8c96cd252bfac0c3,2018-10-31,ok,parse + read px,25.0,25.0,0.0,25,0,2709.1,:rotating_light: fixed a linter warning
+2f73a4d1f343f69e54ef374a8c96cd252bfac0c3,2018-10-31,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,:rotating_light: fixed a linter warning
+2f73a4d1f343f69e54ef374a8c96cd252bfac0c3,2018-10-31,ok,dump to std::string,5.0,5.0,0.0,5,0,906.1,:rotating_light: fixed a linter warning
+1107f8cd8235378aa32014d5789a8b36ff58cd06,2018-12-21,ok,parse + read px,25.0,25.0,0.0,25,0,2697.3,:memo: updated documentation for items() function
+1107f8cd8235378aa32014d5789a8b36ff58cd06,2018-12-21,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,:memo: updated documentation for items() function
+1107f8cd8235378aa32014d5789a8b36ff58cd06,2018-12-21,ok,dump to std::string,5.0,5.0,0.0,5,0,901.3,:memo: updated documentation for items() function
+b9a39b38bfd0e4554042a54d068852ef11323d67,2019-01-19,ok,parse + read px,25.0,25.0,0.0,25,0,2706.6,Merge pull request #1434 from pboettch/develop
+b9a39b38bfd0e4554042a54d068852ef11323d67,2019-01-19,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,Merge pull request #1434 from pboettch/develop
+b9a39b38bfd0e4554042a54d068852ef11323d67,2019-01-19,ok,dump to std::string,5.0,5.0,0.0,5,0,874.8,Merge pull request #1434 from pboettch/develop
+c983b67112d999e0c45b3c31720d0d71eee433bb,2019-03-11,ok,parse + read px,25.0,25.0,0.0,25,0,2898.0,Merge pull request #1469 from garethsb-sony/json_pointer-append
+c983b67112d999e0c45b3c31720d0d71eee433bb,2019-03-11,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,Merge pull request #1469 from garethsb-sony/json_pointer-append
+c983b67112d999e0c45b3c31720d0d71eee433bb,2019-03-11,ok,dump to std::string,5.0,5.0,0.0,5,0,943.7,Merge pull request #1469 from garethsb-sony/json_pointer-append
+8d3f4f21bcd846429bb38cdf3c91c3bd89e1f193,2019-03-18,build failed,,,,,,,,:hammer: clean up
+9d6ab9014f59e345701a3906d1defc80c4506d10,2019-03-20,ok,parse + read px,25.0,25.0,0.0,25,0,2697.7,:checkered_flag: fixed a compilation error in MSVC #1531
+9d6ab9014f59e345701a3906d1defc80c4506d10,2019-03-20,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,:checkered_flag: fixed a compilation error in MSVC #1531
+9d6ab9014f59e345701a3906d1defc80c4506d10,2019-03-20,ok,dump to std::string,5.0,5.0,0.0,5,0,943.5,:checkered_flag: fixed a compilation error in MSVC #1531
+104c5c19964124eceb742fbd84ee63ef0ac0d37d,2019-07-09,ok,parse + read px,25.0,25.0,0.0,25,0,2621.8,Merge branch 'feature/json_pointer_contains' into develop
+104c5c19964124eceb742fbd84ee63ef0ac0d37d,2019-07-09,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.5,Merge branch 'feature/json_pointer_contains' into develop
+104c5c19964124eceb742fbd84ee63ef0ac0d37d,2019-07-09,ok,dump to std::string,5.0,5.0,0.0,5,0,897.1,Merge branch 'feature/json_pointer_contains' into develop
+dae0fe79afcfb4f41674b522a7d3e39c8524c7dd,2019-10-03,ok,parse + read px,25.0,25.0,0.0,25,0,2651.7,Merge pull request #1769 from chris0x44/json_pointer
+dae0fe79afcfb4f41674b522a7d3e39c8524c7dd,2019-10-03,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,Merge pull request #1769 from chris0x44/json_pointer
+dae0fe79afcfb4f41674b522a7d3e39c8524c7dd,2019-10-03,ok,dump to std::string,5.0,5.0,0.0,5,0,898.9,Merge pull request #1769 from chris0x44/json_pointer
+a1828bbf570d644db6d6c8f550cd447fc4f62737,2019-11-01,ok,parse + read px,25.0,25.0,0.0,25,0,5926.1,Merge pull request #1806 from cbegue/develop
+a1828bbf570d644db6d6c8f550cd447fc4f62737,2019-11-01,ok,read px of a parsed object,0.0,0.0,0.0,0,0,37.9,Merge pull request #1806 from cbegue/develop
+a1828bbf570d644db6d6c8f550cd447fc4f62737,2019-11-01,ok,dump to std::string,5.0,5.0,0.0,5,0,2010.7,Merge pull request #1806 from cbegue/develop
+62dada05caafcdc93da3ff3a583efe740bee89ab,2019-11-05,ok,parse + read px,25.0,25.0,0.0,25,0,5621.6,:bug: fix conversion to std::valarray
+62dada05caafcdc93da3ff3a583efe740bee89ab,2019-11-05,ok,read px of a parsed object,0.0,0.0,0.0,0,0,37.9,:bug: fix conversion to std::valarray
+62dada05caafcdc93da3ff3a583efe740bee89ab,2019-11-05,ok,dump to std::string,5.0,5.0,0.0,5,0,1962.7,:bug: fix conversion to std::valarray
+d98bf0278d6f59a58271425963a8422ff48fe249,2019-11-06,ok,parse + read px,25.0,25.0,0.0,25,0,2674.9,Merge branch 'release/3.7.1' into develop
+d98bf0278d6f59a58271425963a8422ff48fe249,2019-11-06,ok,read px of a parsed object,0.0,0.0,0.0,0,0,22.6,Merge branch 'release/3.7.1' into develop
+d98bf0278d6f59a58271425963a8422ff48fe249,2019-11-06,ok,dump to std::string,5.0,5.0,0.0,5,0,904.1,Merge branch 'release/3.7.1' into develop
+0a513a35cb9373d36b5132fd197c3edd0bbd76d1,2019-11-10,ok,parse + read px,26.0,26.0,0.0,26,0,3089.0,Merge pull request #1436 from nickaein/iterate-on-destruction
+0a513a35cb9373d36b5132fd197c3edd0bbd76d1,2019-11-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,22.2,Merge pull request #1436 from nickaein/iterate-on-destruction
+0a513a35cb9373d36b5132fd197c3edd0bbd76d1,2019-11-10,ok,dump to std::string,5.0,5.0,0.0,5,0,896.6,Merge pull request #1436 from nickaein/iterate-on-destruction
+299feb13e768c704d2d02b451a9d73fa105c1446,2020-04-10,ok,parse + read px,26.0,26.0,0.0,26,0,2913.3,Merge pull request #1958 from t-b/add-zc-flag-for-msvc
+299feb13e768c704d2d02b451a9d73fa105c1446,2020-04-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.6,Merge pull request #1958 from t-b/add-zc-flag-for-msvc
+299feb13e768c704d2d02b451a9d73fa105c1446,2020-04-10,ok,dump to std::string,5.0,5.0,0.0,5,0,895.5,Merge pull request #1958 from t-b/add-zc-flag-for-msvc
+3bc9e053c9009490ce1b6c0098ec88583519de5f,2020-04-17,ok,parse + read px,26.0,26.0,0.0,26,0,2951.3,Merge pull request #1969 from dota17/dota17-warning
+3bc9e053c9009490ce1b6c0098ec88583519de5f,2020-04-17,ok,read px of a parsed object,0.0,0.0,0.0,0,0,20.9,Merge pull request #1969 from dota17/dota17-warning
+3bc9e053c9009490ce1b6c0098ec88583519de5f,2020-04-17,ok,dump to std::string,5.0,5.0,0.0,5,0,898.1,Merge pull request #1969 from dota17/dota17-warning
+db013c942887d11798ce77cea6e7df75f6a6c2cf,2020-04-29,ok,parse + read px,26.0,26.0,0.0,26,0,5870.4,Merge pull request #2071 from nlohmann/issue2067
+db013c942887d11798ce77cea6e7df75f6a6c2cf,2020-04-29,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.1,Merge pull request #2071 from nlohmann/issue2067
+db013c942887d11798ce77cea6e7df75f6a6c2cf,2020-04-29,ok,dump to std::string,5.0,5.0,0.0,5,0,1938.7,Merge pull request #2071 from nlohmann/issue2067
+9265ca7a080548681dc54fadf2d51689451e4ad4,2020-05-13,ok,parse + read px,26.0,26.0,0.0,26,0,2830.7,Merge pull request #2099 from nlohmann/issue2082
+9265ca7a080548681dc54fadf2d51689451e4ad4,2020-05-13,ok,read px of a parsed object,0.0,0.0,0.0,0,0,20.6,Merge pull request #2099 from nlohmann/issue2082
+9265ca7a080548681dc54fadf2d51689451e4ad4,2020-05-13,ok,dump to std::string,5.0,5.0,0.0,5,0,892.6,Merge pull request #2099 from nlohmann/issue2082
+d7b032f565701aff9c05ed8c93a8de80b8323b3c,2020-05-13,ok,parse + read px,26.0,26.0,0.0,26,0,6024.6,:white_check_mark: add tests to improve coverage
+d7b032f565701aff9c05ed8c93a8de80b8323b3c,2020-05-13,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.7,:white_check_mark: add tests to improve coverage
+d7b032f565701aff9c05ed8c93a8de80b8323b3c,2020-05-13,ok,dump to std::string,5.0,5.0,0.0,5,0,2057.1,:white_check_mark: add tests to improve coverage
+0857140839e3209feef19e655fc9bb9d6d98cc5a,2020-05-14,ok,parse + read px,25.0,25.0,0.0,25,0,2641.7,Merge pull request #1950 from FrancoisChabot/issues/1457
+0857140839e3209feef19e655fc9bb9d6d98cc5a,2020-05-14,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.0,Merge pull request #1950 from FrancoisChabot/issues/1457
+0857140839e3209feef19e655fc9bb9d6d98cc5a,2020-05-14,ok,dump to std::string,5.0,5.0,0.0,5,0,888.2,Merge pull request #1950 from FrancoisChabot/issues/1457
+d70d06ae41d7b3241e16d366b3b67b5aebd39e9e,2020-05-27,ok,parse + read px,25.0,25.0,0.0,25,0,5390.3,Merge pull request #2137 from dota17/MSC_VER
+d70d06ae41d7b3241e16d366b3b67b5aebd39e9e,2020-05-27,ok,read px of a parsed object,0.0,0.0,0.0,0,0,28.5,Merge pull request #2137 from dota17/MSC_VER
+d70d06ae41d7b3241e16d366b3b67b5aebd39e9e,2020-05-27,ok,dump to std::string,5.0,5.0,0.0,5,0,1865.9,Merge pull request #2137 from dota17/MSC_VER
+74c6e4295ff0f996baa6e4e8905db4203d023216,2020-06-20,ok,parse + read px,25.0,25.0,0.0,25,0,2765.2,Merge pull request #2201 from nlohmann/issue2196
+74c6e4295ff0f996baa6e4e8905db4203d023216,2020-06-20,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.2,Merge pull request #2201 from nlohmann/issue2196
+74c6e4295ff0f996baa6e4e8905db4203d023216,2020-06-20,ok,dump to std::string,5.0,5.0,0.0,5,0,869.0,Merge pull request #2201 from nlohmann/issue2196
+b04dc055b2b1191be3b041688adb77cdc0335f44,2020-07-06,ok,parse + read px,25.0,25.0,0.0,25,0,2694.6,Merge pull request #2233 from nlohmann/issue2175
+b04dc055b2b1191be3b041688adb77cdc0335f44,2020-07-06,ok,read px of a parsed object,0.0,0.0,0.0,0,0,22.4,Merge pull request #2233 from nlohmann/issue2175
+b04dc055b2b1191be3b041688adb77cdc0335f44,2020-07-06,ok,dump to std::string,5.0,5.0,0.0,5,0,878.4,Merge pull request #2233 from nlohmann/issue2175
+b1da58b76b015b216f95700be0b6409dcd455cd9,2020-07-19,ok,parse + read px,25.0,25.0,0.0,25,0,2803.4,Merge pull request #2282 from nlohmann/missing_sax_check
+b1da58b76b015b216f95700be0b6409dcd455cd9,2020-07-19,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,Merge pull request #2282 from nlohmann/missing_sax_check
+b1da58b76b015b216f95700be0b6409dcd455cd9,2020-07-19,ok,dump to std::string,5.0,5.0,0.0,5,0,905.0,Merge pull request #2282 from nlohmann/missing_sax_check
+67ed63b19651723e68e141b43c96b944858b673a,2020-07-26,ok,parse + read px,25.0,25.0,0.0,25,0,2741.9,Merge pull request #2312 from nlohmann/docs
+67ed63b19651723e68e141b43c96b944858b673a,2020-07-26,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,Merge pull request #2312 from nlohmann/docs
+67ed63b19651723e68e141b43c96b944858b673a,2020-07-26,ok,dump to std::string,5.0,5.0,0.0,5,0,885.3,Merge pull request #2312 from nlohmann/docs
+6030a110510d029b71cc7a827e9ad7efedd3a9db,2020-08-26,ok,parse + read px,25.0,25.0,0.0,25,0,2756.6,Merge pull request #2367 from nlohmann/hedley14
+6030a110510d029b71cc7a827e9ad7efedd3a9db,2020-08-26,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,Merge pull request #2367 from nlohmann/hedley14
+6030a110510d029b71cc7a827e9ad7efedd3a9db,2020-08-26,ok,dump to std::string,5.0,5.0,0.0,5,0,882.4,Merge pull request #2367 from nlohmann/hedley14
+a8398a7151df6fd22691afc80fdc0f8af4d63829,2020-12-30,ok,parse + read px,25.0,25.0,0.0,25,0,2789.9,Merge pull request #2550 from nlohmann/std_bytes
+a8398a7151df6fd22691afc80fdc0f8af4d63829,2020-12-30,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.4,Merge pull request #2550 from nlohmann/std_bytes
+a8398a7151df6fd22691afc80fdc0f8af4d63829,2020-12-30,ok,dump to std::string,5.0,5.0,0.0,5,0,885.9,Merge pull request #2550 from nlohmann/std_bytes
+a34e011e24beece3b69397a03fdc650546f052c3,2021-04-25,ok,parse + read px,25.0,25.0,0.0,25,0,2804.1,Merge pull request #2576 from AnthonyVH/non_default_constructable_stl_containers
+a34e011e24beece3b69397a03fdc650546f052c3,2021-04-25,ok,read px of a parsed object,0.0,0.0,0.0,0,0,21.8,Merge pull request #2576 from AnthonyVH/non_default_constructable_stl_containers
+a34e011e24beece3b69397a03fdc650546f052c3,2021-04-25,ok,dump to std::string,5.0,5.0,0.0,5,0,877.4,Merge pull request #2576 from AnthonyVH/non_default_constructable_stl_containers
+7066ab128f139047e15fb545488a368b8f9dc1a0,2021-07-19,ok,parse + read px,25.0,25.0,0.0,25,0,2836.2,:art: reindent code
+7066ab128f139047e15fb545488a368b8f9dc1a0,2021-07-19,ok,read px of a parsed object,0.0,0.0,0.0,0,0,22.1,:art: reindent code
+7066ab128f139047e15fb545488a368b8f9dc1a0,2021-07-19,ok,dump to std::string,5.0,5.0,0.0,5,0,873.6,:art: reindent code
+5cf5ccd1086ab09e9a2702a79433ed5c8b0ae03c,2021-08-18,ok,parse + read px,25.0,25.0,0.0,25,0,2808.3,Merge pull request #2948 from nlohmann/missing_header
+5cf5ccd1086ab09e9a2702a79433ed5c8b0ae03c,2021-08-18,ok,read px of a parsed object,0.0,0.0,0.0,0,0,22.0,Merge pull request #2948 from nlohmann/missing_header
+5cf5ccd1086ab09e9a2702a79433ed5c8b0ae03c,2021-08-18,ok,dump to std::string,5.0,5.0,0.0,5,0,976.3,Merge pull request #2948 from nlohmann/missing_header
+4b1cb9eee129632abc4fa684688691568e26c9e9,2021-10-08,ok,parse + read px,25.0,25.0,0.0,25,0,5477.8,Merge branch 'release/3.10.3' into develop
+4b1cb9eee129632abc4fa684688691568e26c9e9,2021-10-08,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.0,Merge branch 'release/3.10.3' into develop
+4b1cb9eee129632abc4fa684688691568e26c9e9,2021-10-08,ok,dump to std::string,5.0,5.0,0.0,5,0,1885.1,Merge branch 'release/3.10.3' into develop
+825d3230d1f31448be906d3242cad9c3e4044733,2021-12-17,ok,parse + read px,25.0,25.0,0.0,25,0,5413.9,Fix: Warning for shadowed variables (#3188) (#3193)
+825d3230d1f31448be906d3242cad9c3e4044733,2021-12-17,ok,read px of a parsed object,0.0,0.0,0.0,0,0,41.4,Fix: Warning for shadowed variables (#3188) (#3193)
+825d3230d1f31448be906d3242cad9c3e4044733,2021-12-17,ok,dump to std::string,5.0,5.0,0.0,5,0,1820.9,Fix: Warning for shadowed variables (#3188) (#3193)
+0fd95d2e28dd739434ab3733d5bf86b2ff942035,2022-03-07,ok,parse + read px,25.0,25.0,0.0,25,0,5650.9,Fix ordered_map ctor with initializer_list (#3370)
+0fd95d2e28dd739434ab3733d5bf86b2ff942035,2022-03-07,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.0,Fix ordered_map ctor with initializer_list (#3370)
+0fd95d2e28dd739434ab3733d5bf86b2ff942035,2022-03-07,ok,dump to std::string,5.0,5.0,0.0,5,0,1890.6,Fix ordered_map ctor with initializer_list (#3370)
+1deeb434c679e7908875ce4ce0ce4583071ecc74,2022-04-12,ok,parse + read px,25.0,25.0,0.0,25,0,5256.3,Exclude std::any from implicit conversion (fixes #3428) (#3437)
+1deeb434c679e7908875ce4ce0ce4583071ecc74,2022-04-12,ok,read px of a parsed object,0.0,0.0,0.0,0,0,22.2,Exclude std::any from implicit conversion (fixes #3428) (#3437)
+1deeb434c679e7908875ce4ce0ce4583071ecc74,2022-04-12,ok,dump to std::string,5.0,5.0,0.0,5,0,877.7,Exclude std::any from implicit conversion (fixes #3428) (#3437)
+6ff2ea3aed110c17c2a4d9180dd5d422e1dfe6d0,2022-05-19,ok,parse + read px,25.0,25.0,0.0,25,0,5628.0,:goal_net: add assertion for invariant in SAX-DOM parser (#3498)
+6ff2ea3aed110c17c2a4d9180dd5d422e1dfe6d0,2022-05-19,ok,read px of a parsed object,0.0,0.0,0.0,0,0,79.8,:goal_net: add assertion for invariant in SAX-DOM parser (#3498)
+6ff2ea3aed110c17c2a4d9180dd5d422e1dfe6d0,2022-05-19,ok,dump to std::string,5.0,5.0,0.0,5,0,1864.6,:goal_net: add assertion for invariant in SAX-DOM parser (#3498)
+e80945da2cecab8ed1b6a35c4784614801222d58,2022-06-14,ok,parse + read px,25.0,25.0,0.0,25,0,2763.2,CI: Enable 32bit unit test (3) (#3532)
+e80945da2cecab8ed1b6a35c4784614801222d58,2022-06-14,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.9,CI: Enable 32bit unit test (3) (#3532)
+e80945da2cecab8ed1b6a35c4784614801222d58,2022-06-14,ok,dump to std::string,5.0,5.0,0.0,5,0,878.6,CI: Enable 32bit unit test (3) (#3532)
+a87c1885cb784ea5b884ed6dd1c96e39b7b4ec64,2022-07-28,ok,parse + read px,25.0,25.0,0.0,25,0,2732.8,Re-add value_type detection to distinguish string types (#3604)
+a87c1885cb784ea5b884ed6dd1c96e39b7b4ec64,2022-07-28,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.4,Re-add value_type detection to distinguish string types (#3604)
+a87c1885cb784ea5b884ed6dd1c96e39b7b4ec64,2022-07-28,ok,dump to std::string,5.0,5.0,0.0,5,0,883.5,Re-add value_type detection to distinguish string types (#3604)
+32242022f74083f3c7bd4ead638cbea33d978f8f,2022-08-03,ok,parse + read px,25.0,25.0,0.0,25,0,2748.1,Minor BJData fixes (#3637)
+32242022f74083f3c7bd4ead638cbea33d978f8f,2022-08-03,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.8,Minor BJData fixes (#3637)
+32242022f74083f3c7bd4ead638cbea33d978f8f,2022-08-03,ok,dump to std::string,5.0,5.0,0.0,5,0,935.1,Minor BJData fixes (#3637)
+f7973f46d61ad2eb8106c66d668c839db7101416,2022-08-27,ok,parse + read px,25.0,25.0,0.0,25,0,2760.2,Use official Clang/GCC containers (#3703)
+f7973f46d61ad2eb8106c66d668c839db7101416,2022-08-27,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.4,Use official Clang/GCC containers (#3703)
+f7973f46d61ad2eb8106c66d668c839db7101416,2022-08-27,ok,dump to std::string,5.0,5.0,0.0,5,0,880.8,Use official Clang/GCC containers (#3703)
+836b7beca4b62e2a99465edef44066b7401fd704,2023-09-07,ok,parse + read px,25.0,25.0,0.0,25,0,5435.1,"Fix CI, again (#4083)"
+836b7beca4b62e2a99465edef44066b7401fd704,2023-09-07,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.7,"Fix CI, again (#4083)"
+836b7beca4b62e2a99465edef44066b7401fd704,2023-09-07,ok,dump to std::string,5.0,5.0,0.0,5,0,1902.7,"Fix CI, again (#4083)"
+9cca280a4d0ccf0c08f47a99aa71d1b0e52f8d03,2023-11-28,ok,parse + read px,25.0,25.0,0.0,25,0,5564.0,JSON for Modern C++ 3.11.3 (#4222)
+9cca280a4d0ccf0c08f47a99aa71d1b0e52f8d03,2023-11-28,ok,read px of a parsed object,0.0,0.0,0.0,0,0,72.1,JSON for Modern C++ 3.11.3 (#4222)
+9cca280a4d0ccf0c08f47a99aa71d1b0e52f8d03,2023-11-28,ok,dump to std::string,5.0,5.0,0.0,5,0,1874.5,JSON for Modern C++ 3.11.3 (#4222)
+378e091795a70fced276cd882bd8a6a428668fe5,2024-11-20,ok,parse + read px,25.0,25.0,0.0,25,0,5477.6,Fix weak-vtables warning (#4500)
+378e091795a70fced276cd882bd8a6a428668fe5,2024-11-20,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.9,Fix weak-vtables warning (#4500)
+378e091795a70fced276cd882bd8a6a428668fe5,2024-11-20,ok,dump to std::string,5.0,5.0,0.0,5,0,1804.0,Fix weak-vtables warning (#4500)
+30cd44df95bc638cff65a0352f8576194f3b8b9b,2024-12-17,ok,parse + read px,25.0,25.0,0.0,25,0,2735.3,Clean up CI (#4553)
+30cd44df95bc638cff65a0352f8576194f3b8b9b,2024-12-17,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.3,Clean up CI (#4553)
+30cd44df95bc638cff65a0352f8576194f3b8b9b,2024-12-17,ok,dump to std::string,5.0,5.0,0.0,5,0,876.0,Clean up CI (#4553)
+2e50d5b2f3a5286127b713e3b17b62d0a00548f8,2025-01-07,ok,parse + read px,25.0,25.0,0.0,25,0,2763.2,BJData optimized binary array type (#4513)
+2e50d5b2f3a5286127b713e3b17b62d0a00548f8,2025-01-07,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.4,BJData optimized binary array type (#4513)
+2e50d5b2f3a5286127b713e3b17b62d0a00548f8,2025-01-07,ok,dump to std::string,5.0,5.0,0.0,5,0,855.9,BJData optimized binary array type (#4513)
+11aa5f944d17ed5b96250ca133bf33c5ca8b0161,2025-04-04,ok,parse + read px,25.0,25.0,0.0,25,0,5496.7,Make std::filesystem::path conversion to/from UTF-8 encoded string explicit (#4631)
+11aa5f944d17ed5b96250ca133bf33c5ca8b0161,2025-04-04,ok,read px of a parsed object,0.0,0.0,0.0,0,0,70.5,Make std::filesystem::path conversion to/from UTF-8 encoded string explicit (#4631)
+11aa5f944d17ed5b96250ca133bf33c5ca8b0161,2025-04-04,ok,dump to std::string,5.0,5.0,0.0,5,0,1777.3,Make std::filesystem::path conversion to/from UTF-8 encoded string explicit (#4631)
+eef76c200e1d5b88a2cf0b5264756c4a020a88db,2025-04-28,ok,parse + read px,25.0,25.0,0.0,25,0,2733.7,Make library work with C++20 modules (#4764)
+eef76c200e1d5b88a2cf0b5264756c4a020a88db,2025-04-28,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.3,Make library work with C++20 modules (#4764)
+eef76c200e1d5b88a2cf0b5264756c4a020a88db,2025-04-28,ok,dump to std::string,5.0,5.0,0.0,5,0,860.4,Make library work with C++20 modules (#4764)
+efcf9efb4f804fedb0a66f5218c850198d616637,2025-08-03,ok,parse + read px,25.0,25.0,0.0,25,0,5485.2,Fixes #4854 Explicitly handle nullptr in sax_parse (#4873)
+efcf9efb4f804fedb0a66f5218c850198d616637,2025-08-03,ok,read px of a parsed object,0.0,0.0,0.0,0,0,76.9,Fixes #4854 Explicitly handle nullptr in sax_parse (#4873)
+efcf9efb4f804fedb0a66f5218c850198d616637,2025-08-03,ok,dump to std::string,5.0,5.0,0.0,5,0,1777.7,Fixes #4854 Explicitly handle nullptr in sax_parse (#4873)
+5ed07097faa6c50199c4a3b66e5ed37d4fbfccc2,2026-01-13,ok,parse + read px,25.0,25.0,0.0,25,0,5459.1,Fix -Wtautological-constant-out-of-range-compare in serializer (#5050)
+5ed07097faa6c50199c4a3b66e5ed37d4fbfccc2,2026-01-13,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.1,Fix -Wtautological-constant-out-of-range-compare in serializer (#5050)
+5ed07097faa6c50199c4a3b66e5ed37d4fbfccc2,2026-01-13,ok,dump to std::string,5.0,5.0,0.0,5,0,1801.0,Fix -Wtautological-constant-out-of-range-compare in serializer (#5050)
+bb5404bb86160ac0c1e56d852ba345c48dbd7f33,2026-05-15,ok,parse + read px,25.0,25.0,0.0,25,0,5580.8,Fix GCC C++20 modules compilation #5103 (#5164)
+bb5404bb86160ac0c1e56d852ba345c48dbd7f33,2026-05-15,ok,read px of a parsed object,0.0,0.0,0.0,0,0,70.9,Fix GCC C++20 modules compilation #5103 (#5164)
+bb5404bb86160ac0c1e56d852ba345c48dbd7f33,2026-05-15,ok,dump to std::string,5.0,5.0,0.0,5,0,1854.4,Fix GCC C++20 modules compilation #5103 (#5164)
+adf78d3a761381f1633129dc6f69e40fbd4120cf,2026-06-30,ok,parse + read px,25.0,25.0,0.0,25,0,5542.6,Minor: unique_ptr template resolution workaround for MSVC (#5215)
+adf78d3a761381f1633129dc6f69e40fbd4120cf,2026-06-30,ok,read px of a parsed object,0.0,0.0,0.0,0,0,74.9,Minor: unique_ptr template resolution workaround for MSVC (#5215)
+adf78d3a761381f1633129dc6f69e40fbd4120cf,2026-06-30,ok,dump to std::string,5.0,5.0,0.0,5,0,1815.0,Minor: unique_ptr template resolution workaround for MSVC (#5215)
+31dd15b258d10835023d939d65372c878897229c,2026-07-02,ok,parse + read px,25.0,25.0,0.0,25,0,5646.4,Fix ambiguous static_cast (#5221)
+31dd15b258d10835023d939d65372c878897229c,2026-07-02,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.5,Fix ambiguous static_cast (#5221)
+31dd15b258d10835023d939d65372c878897229c,2026-07-02,ok,dump to std::string,5.0,5.0,0.0,5,0,1853.7,Fix ambiguous static_cast (#5221)
+eed15870002d50d7b2f858292ed6fb3d0c2f0e25,2026-07-05,ok,parse + read px,19.0,19.0,0.0,19,0,4917.4,Reconstruct lexer diagnostics lazily for seekable input (#120) (#5234)
+eed15870002d50d7b2f858292ed6fb3d0c2f0e25,2026-07-05,ok,read px of a parsed object,0.0,0.0,0.0,0,0,73.7,Reconstruct lexer diagnostics lazily for seekable input (#120) (#5234)
+eed15870002d50d7b2f858292ed6fb3d0c2f0e25,2026-07-05,ok,dump to std::string,5.0,5.0,0.0,5,0,1856.8,Reconstruct lexer diagnostics lazily for seekable input (#120) (#5234)
+83c87cb9e087d81717c5ac7c50fac694bcb82ad7,2026-07-05,ok,parse + read px,19.0,19.0,0.0,19,0,4964.2,Read binary strings/blobs in bulk chunks with a memcpy fast path (#5233)
+83c87cb9e087d81717c5ac7c50fac694bcb82ad7,2026-07-05,ok,read px of a parsed object,0.0,0.0,0.0,0,0,73.6,Read binary strings/blobs in bulk chunks with a memcpy fast path (#5233)
+83c87cb9e087d81717c5ac7c50fac694bcb82ad7,2026-07-05,ok,dump to std::string,5.0,5.0,0.0,5,0,1858.3,Read binary strings/blobs in bulk chunks with a memcpy fast path (#5233)
+acf076a677c161643e64d8f83fd02624fd8c4bd3,2026-07-06,ok,parse + read px,19.0,19.0,0.0,19,0,2450.3,Fix ADL leak of nlohmann::detail through basic_json's default base class (#5238)
+acf076a677c161643e64d8f83fd02624fd8c4bd3,2026-07-06,ok,read px of a parsed object,0.0,0.0,0.0,0,0,79.9,Fix ADL leak of nlohmann::detail through basic_json's default base class (#5238)
+acf076a677c161643e64d8f83fd02624fd8c4bd3,2026-07-06,ok,dump to std::string,5.0,5.0,0.0,5,0,1830.8,Fix ADL leak of nlohmann::detail through basic_json's default base class (#5238)
+366f3d26e50932095c5e4838438116e49e68ffbe,2026-07-08,ok,parse + read px,19.0,19.0,0.0,19,0,2304.1,Replace snprintf with a branch-free writer for \uXXXX escapes (#5235)
+366f3d26e50932095c5e4838438116e49e68ffbe,2026-07-08,ok,read px of a parsed object,0.0,0.0,0.0,0,0,41.0,Replace snprintf with a branch-free writer for \uXXXX escapes (#5235)
+366f3d26e50932095c5e4838438116e49e68ffbe,2026-07-08,ok,dump to std::string,5.0,5.0,0.0,5,0,862.6,Replace snprintf with a branch-free writer for \uXXXX escapes (#5235)
+3565f40229515411177c196ec912a06307802ed6,2026-07-21,ok,parse + read px,19.0,19.0,0.0,19,0,2307.7,reject negative UBJSON/BJData string length (#5284)
+3565f40229515411177c196ec912a06307802ed6,2026-07-21,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.4,reject negative UBJSON/BJData string length (#5284)
+3565f40229515411177c196ec912a06307802ed6,2026-07-21,ok,dump to std::string,5.0,5.0,0.0,5,0,869.3,reject negative UBJSON/BJData string length (#5284)
+585929bff958e6106c6bf5adbdf4aab506f5a9ab,2026-08-03,ok,parse + read px,19.0,19.0,0.0,19,0,4642.7,Fix Clang deprecation warning for json_pointer operator== with ordered_json (#5289)
+585929bff958e6106c6bf5adbdf4aab506f5a9ab,2026-08-03,ok,read px of a parsed object,0.0,0.0,0.0,0,0,74.7,Fix Clang deprecation warning for json_pointer operator== with ordered_json (#5289)
+585929bff958e6106c6bf5adbdf4aab506f5a9ab,2026-08-03,ok,dump to std::string,5.0,5.0,0.0,5,0,1721.2,Fix Clang deprecation warning for json_pointer operator== with ordered_json (#5289)
+2f025f401ed362e9d47ef6f6da0cfb719c6e9da7,2026-08-25,ok,parse + read px,19.0,19.0,0.0,19,0,2401.3,Throw other_error.502 when UBJSON use_type is set without use_size (#5380)
+2f025f401ed362e9d47ef6f6da0cfb719c6e9da7,2026-08-25,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.3,Throw other_error.502 when UBJSON use_type is set without use_size (#5380)
+2f025f401ed362e9d47ef6f6da0cfb719c6e9da7,2026-08-25,ok,dump to std::string,5.0,5.0,0.0,5,0,892.6,Throw other_error.502 when UBJSON use_type is set without use_size (#5380)
+8c38e270b59ecd28d4d6c5a6cf4dd3f0df90a04a,2026-09-09,ok,parse + read px,19.0,19.0,0.0,19,0,4648.5,Reject JSON Patch move when from is a proper prefix of path (#5497)
+8c38e270b59ecd28d4d6c5a6cf4dd3f0df90a04a,2026-09-09,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.7,Reject JSON Patch move when from is a proper prefix of path (#5497)
+8c38e270b59ecd28d4d6c5a6cf4dd3f0df90a04a,2026-09-09,ok,dump to std::string,5.0,5.0,0.0,5,0,1812.2,Reject JSON Patch move when from is a proper prefix of path (#5497)
+3e2de322265763088f4aff5c50f3f07857e70e44,2026-09-10,ok,parse + read px,19.0,19.0,0.0,19,0,4655.8,Remove unused iomanip include (#5516)
+3e2de322265763088f4aff5c50f3f07857e70e44,2026-09-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.0,Remove unused iomanip include (#5516)
+3e2de322265763088f4aff5c50f3f07857e70e44,2026-09-10,ok,dump to std::string,5.0,5.0,0.0,5,0,1743.5,Remove unused iomanip include (#5516)
+d69fb8654d837b1c19ab130c136757bdecbc447b,2026-09-10,ok,parse + read px,19.0,19.0,0.0,19,0,2390.5,Return the parsed value by move from from_cbor() and friends (#5501)
+d69fb8654d837b1c19ab130c136757bdecbc447b,2026-09-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,41.2,Return the parsed value by move from from_cbor() and friends (#5501)
+d69fb8654d837b1c19ab130c136757bdecbc447b,2026-09-10,ok,dump to std::string,5.0,5.0,0.0,5,0,910.3,Return the parsed value by move from from_cbor() and friends (#5501)
+4a93aa4e2fa4bda7194795e4b810a25f1ff6f4fd,2026-09-10,ok,parse + read px,18.0,18.0,0.0,18,0,4280.6,"Speed up parsing of contiguous input (numbers, strings, UTF-8) (#5283)"
+4a93aa4e2fa4bda7194795e4b810a25f1ff6f4fd,2026-09-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,80.6,"Speed up parsing of contiguous input (numbers, strings, UTF-8) (#5283)"
+4a93aa4e2fa4bda7194795e4b810a25f1ff6f4fd,2026-09-10,ok,dump to std::string,5.0,5.0,0.0,5,0,1880.0,"Speed up parsing of contiguous input (numbers, strings, UTF-8) (#5283)"
+bfb07786cd7eb841a6d9030bcd822d3b1c4d3b56,2026-09-10,ok,parse + read px,18.0,18.0,0.0,18,0,1959.3,Fix to_bjdata() silently truncating out-of-range _ArrayData_ elements (#5473)
+bfb07786cd7eb841a6d9030bcd822d3b1c4d3b56,2026-09-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.3,Fix to_bjdata() silently truncating out-of-range _ArrayData_ elements (#5473)
+bfb07786cd7eb841a6d9030bcd822d3b1c4d3b56,2026-09-10,ok,dump to std::string,5.0,5.0,0.0,5,0,1784.1,Fix to_bjdata() silently truncating out-of-range _ArrayData_ elements (#5473)
+ff80ed329564c51b8b7e1203db2b114ce7815b42,2026-09-11,ok,parse + read px,18.0,18.0,0.0,18,0,1879.8,"Speed up dump(), and keep it from overflowing the stack (#5285)"
+ff80ed329564c51b8b7e1203db2b114ce7815b42,2026-09-11,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.7,"Speed up dump(), and keep it from overflowing the stack (#5285)"
+ff80ed329564c51b8b7e1203db2b114ce7815b42,2026-09-11,ok,dump to std::string,2.0,2.0,0.0,2,0,598.5,"Speed up dump(), and keep it from overflowing the stack (#5285)"
+da42a627dc81ba90b790bf3b7a35c7d6780205b5,2026-09-11,ok,parse + read px,18.0,18.0,0.0,18,0,3985.2,Stop dump() from heap-allocating its output adapter per call (#5449)
+da42a627dc81ba90b790bf3b7a35c7d6780205b5,2026-09-11,ok,read px of a parsed object,0.0,0.0,0.0,0,0,77.1,Stop dump() from heap-allocating its output adapter per call (#5449)
+da42a627dc81ba90b790bf3b7a35c7d6780205b5,2026-09-11,ok,dump to std::string,1.0,1.0,0.0,1,0,1097.0,Stop dump() from heap-allocating its output adapter per call (#5449)
+aa391dc0a56f8409e2e7aca6e7c9a9d766d44ce8,2026-09-11,ok,parse + read px,18.0,18.0,0.0,18,0,4143.1,Fix two develop CI regressions: dump() nodiscard warning and binary-reader const-correctness (#5520)
+aa391dc0a56f8409e2e7aca6e7c9a9d766d44ce8,2026-09-11,ok,read px of a parsed object,0.0,0.0,0.0,0,0,75.4,Fix two develop CI regressions: dump() nodiscard warning and binary-reader const-correctness (#5520)
+aa391dc0a56f8409e2e7aca6e7c9a9d766d44ce8,2026-09-11,ok,dump to std::string,1.0,1.0,0.0,1,0,1103.0,Fix two develop CI regressions: dump() nodiscard warning and binary-reader const-correctness (#5520)
+a2b19d6158d4346bb3b02b4351d21cf7584debba,2026-09-22,ok,parse + read px,18.0,18.0,0.0,18,0,1899.5,Honor allow_exceptions=false for excessive array/object size (out_of_range.408) (#5467)
+a2b19d6158d4346bb3b02b4351d21cf7584debba,2026-09-22,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.3,Honor allow_exceptions=false for excessive array/object size (out_of_range.408) (#5467)
+a2b19d6158d4346bb3b02b4351d21cf7584debba,2026-09-22,ok,dump to std::string,1.0,1.0,0.0,1,0,556.7,Honor allow_exceptions=false for excessive array/object size (out_of_range.408) (#5467)
+4daca40d7b03d05d1af730003f826c1ff91a90e8,2026-09-24,ok,parse + read px,18.0,18.0,0.0,18,0,1902.5,Merge deeply nested objects without recursing per nesting level (#5547)
+4daca40d7b03d05d1af730003f826c1ff91a90e8,2026-09-24,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.8,Merge deeply nested objects without recursing per nesting level (#5547)
+4daca40d7b03d05d1af730003f826c1ff91a90e8,2026-09-24,ok,dump to std::string,1.0,1.0,0.0,1,0,557.0,Merge deeply nested objects without recursing per nesting level (#5547)
+fe4a544c7eb9ca44b63d683cf8e6593380f4c1ad,2026-09-27,ok,parse + read px,18.0,18.0,0.0,18,0,1982.2,handled when size exceed uint32 (#5515)
+fe4a544c7eb9ca44b63d683cf8e6593380f4c1ad,2026-09-27,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.0,handled when size exceed uint32 (#5515)
+fe4a544c7eb9ca44b63d683cf8e6593380f4c1ad,2026-09-27,ok,dump to std::string,1.0,1.0,0.0,1,0,579.1,handled when size exceed uint32 (#5515)
+65af260117cebe1106e963209e3fb0215a318e1d,2026-09-30,ok,parse + read px,18.0,18.0,0.0,18,0,1914.0,Move instead of deep-copy ordered_json values when an object grows (#5609)
+65af260117cebe1106e963209e3fb0215a318e1d,2026-09-30,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.6,Move instead of deep-copy ordered_json values when an object grows (#5609)
+65af260117cebe1106e963209e3fb0215a318e1d,2026-09-30,ok,dump to std::string,1.0,1.0,0.0,1,0,547.3,Move instead of deep-copy ordered_json values when an object grows (#5609)
+e444a662762420681487f369aa5fc8565de8366f,2026-09-30,ok,parse + read px,18.0,18.0,0.0,18,0,1964.5,Copy values before inserting an initializer list into an array (#5693)
+e444a662762420681487f369aa5fc8565de8366f,2026-09-30,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.6,Copy values before inserting an initializer list into an array (#5693)
+e444a662762420681487f369aa5fc8565de8366f,2026-09-30,ok,dump to std::string,1.0,1.0,0.0,1,0,546.7,Copy values before inserting an initializer list into an array (#5693)
+2ea6d8c127b73453237d842e5cbe0b904bd02344,2026-09-30,ok,parse + read px,18.0,18.0,0.0,18,0,4110.3,Require the found key to equal the looked-up key when comparing objects (#5720)
+2ea6d8c127b73453237d842e5cbe0b904bd02344,2026-09-30,ok,read px of a parsed object,0.0,0.0,0.0,0,0,73.3,Require the found key to equal the looked-up key when comparing objects (#5720)
+2ea6d8c127b73453237d842e5cbe0b904bd02344,2026-09-30,ok,dump to std::string,1.0,1.0,0.0,1,0,1095.9,Require the found key to equal the looked-up key when comparing objects (#5720)
+a32f61eb98a27cbf2b9186780d46da2f996054eb,2026-09-30,ok,parse + read px,18.0,18.0,0.0,18,0,3935.9,Fix update() and merge_patch() when the argument is *this or one of its members (#5678)
+a32f61eb98a27cbf2b9186780d46da2f996054eb,2026-09-30,ok,read px of a parsed object,0.0,0.0,0.0,0,0,80.2,Fix update() and merge_patch() when the argument is *this or one of its members (#5678)
+a32f61eb98a27cbf2b9186780d46da2f996054eb,2026-09-30,ok,dump to std::string,1.0,1.0,0.0,1,0,1098.3,Fix update() and merge_patch() when the argument is *this or one of its members (#5678)
+df27cc3d4cdf9ecb9337524c2af7752967ebf4ca,2026-10-04,ok,parse + read px,18.0,18.0,0.0,18,0,1944.3,Add scalar-on-left overloads for legacy discarded comparisons in C++20 (#5682)
+df27cc3d4cdf9ecb9337524c2af7752967ebf4ca,2026-10-04,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.2,Add scalar-on-left overloads for legacy discarded comparisons in C++20 (#5682)
+df27cc3d4cdf9ecb9337524c2af7752967ebf4ca,2026-10-04,ok,dump to std::string,1.0,1.0,0.0,1,0,537.1,Add scalar-on-left overloads for legacy discarded comparisons in C++20 (#5682)
+c5650eaa3c91c3ff145e055c4937ee7411cc03d2,2026-10-04,ok,parse + read px,18.0,18.0,0.0,18,0,1876.2,Reject malformed UTF-16/UTF-32 units in wide-string input (#5704)
+c5650eaa3c91c3ff145e055c4937ee7411cc03d2,2026-10-04,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.6,Reject malformed UTF-16/UTF-32 units in wide-string input (#5704)
+c5650eaa3c91c3ff145e055c4937ee7411cc03d2,2026-10-04,ok,dump to std::string,1.0,1.0,0.0,1,0,513.4,Reject malformed UTF-16/UTF-32 units in wide-string input (#5704)
+5379e04ce4f820580afba6c4513f1424b511de76,2026-10-06,ok,parse + read px,18.0,18.0,0.0,18,0,1870.5,Throw type_error.321 when serializing discarded values to binary formats (#5761)
+5379e04ce4f820580afba6c4513f1424b511de76,2026-10-06,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.6,Throw type_error.321 when serializing discarded values to binary formats (#5761)
+5379e04ce4f820580afba6c4513f1424b511de76,2026-10-06,ok,dump to std::string,1.0,1.0,0.0,1,0,536.0,Throw type_error.321 when serializing discarded values to binary formats (#5761)
+0a365865f9338ee7a35b3f7d22ed7f808b75385d,2026-10-06,ok,parse + read px,17.0,17.0,0.0,17,0,3711.4,Make basic_json destruction allocation-free and non-recursive (#5762)
+0a365865f9338ee7a35b3f7d22ed7f808b75385d,2026-10-06,ok,read px of a parsed object,0.0,0.0,0.0,0,0,74.9,Make basic_json destruction allocation-free and non-recursive (#5762)
+0a365865f9338ee7a35b3f7d22ed7f808b75385d,2026-10-06,ok,dump to std::string,1.0,1.0,0.0,1,0,1040.9,Make basic_json destruction allocation-free and non-recursive (#5762)
+5ecb704f6b930bd5925d3f268444f0630a829ead,2026-10-06,ok,parse + read px,17.0,17.0,0.0,17,0,4010.5,Speedup; check for the expected separator before the lexer's token switch (#5592)
+5ecb704f6b930bd5925d3f268444f0630a829ead,2026-10-06,ok,read px of a parsed object,0.0,0.0,0.0,0,0,86.4,Speedup; check for the expected separator before the lexer's token switch (#5592)
+5ecb704f6b930bd5925d3f268444f0630a829ead,2026-10-06,ok,dump to std::string,1.0,1.0,0.0,1,0,1094.3,Speedup; check for the expected separator before the lexer's token switch (#5592)
+6d4543e743a30d7330b6a6afcd13751207df2998,2026-10-06,ok,parse + read px,17.0,17.0,0.0,17,0,4014.9,Fix destroy() for ObjectTypes without reverse iteration (#5767)
+6d4543e743a30d7330b6a6afcd13751207df2998,2026-10-06,ok,read px of a parsed object,0.0,0.0,0.0,0,0,91.7,Fix destroy() for ObjectTypes without reverse iteration (#5767)
+6d4543e743a30d7330b6a6afcd13751207df2998,2026-10-06,ok,dump to std::string,1.0,1.0,0.0,1,0,1120.9,Fix destroy() for ObjectTypes without reverse iteration (#5767)
+69874e4544f2a129069ebef8d47eee40ef8c1483,2026-10-07,ok,parse + read px,17.0,17.0,0.0,17,0,3713.5,Fix NUL bytes in UBJSON/BJData high-precision numbers (#5760)
+69874e4544f2a129069ebef8d47eee40ef8c1483,2026-10-07,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.2,Fix NUL bytes in UBJSON/BJData high-precision numbers (#5760)
+69874e4544f2a129069ebef8d47eee40ef8c1483,2026-10-07,ok,dump to std::string,1.0,1.0,0.0,1,0,519.9,Fix NUL bytes in UBJSON/BJData high-precision numbers (#5760)
+24dd7c63f0ef18a0323d8750975728bd8f4ccd41,2026-10-07,ok,parse + read px,17.0,17.0,0.0,17,0,1829.5,Re-amalgamate after #5740 (#5777)
+24dd7c63f0ef18a0323d8750975728bd8f4ccd41,2026-10-07,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.3,Re-amalgamate after #5740 (#5777)
+24dd7c63f0ef18a0323d8750975728bd8f4ccd41,2026-10-07,ok,dump to std::string,1.0,1.0,0.0,1,0,525.3,Re-amalgamate after #5740 (#5777)
+2913e9643383b8078b9f6d5572401081047ea28e,2026-10-09,ok,parse + read px,17.0,17.0,0.0,17,0,1864.8,Unflatten in time and memory linear in the pointer depth (#5793)
+2913e9643383b8078b9f6d5572401081047ea28e,2026-10-09,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.2,Unflatten in time and memory linear in the pointer depth (#5793)
+2913e9643383b8078b9f6d5572401081047ea28e,2026-10-09,ok,dump to std::string,1.0,1.0,0.0,1,0,541.7,Unflatten in time and memory linear in the pointer depth (#5793)
+5b4c8f9b005f4593ab434d90da317c0b4cdbe6fd,2026-10-14,ok,parse + read px,17.0,17.0,0.0,17,0,3591.9,"Speed up the lexer: own float parser, string scan, and \u table (#5738)"
+5b4c8f9b005f4593ab434d90da317c0b4cdbe6fd,2026-10-14,ok,read px of a parsed object,0.0,0.0,0.0,0,0,67.2,"Speed up the lexer: own float parser, string scan, and \u table (#5738)"
+5b4c8f9b005f4593ab434d90da317c0b4cdbe6fd,2026-10-14,ok,dump to std::string,1.0,1.0,0.0,1,0,1027.9,"Speed up the lexer: own float parser, string scan, and \u table (#5738)"
+4f115126414cbe60380d142659d308a53fa66d79,2026-10-15,ok,parse + read px,17.0,17.0,0.0,17,0,3404.5,"Speed up container destruction, iterator access and diff() (#5835)"
+4f115126414cbe60380d142659d308a53fa66d79,2026-10-15,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.1,"Speed up container destruction, iterator access and diff() (#5835)"
+4f115126414cbe60380d142659d308a53fa66d79,2026-10-15,ok,dump to std::string,1.0,1.0,0.0,1,0,882.5,"Speed up container destruction, iterator access and diff() (#5835)"
+cc8334113c8672433bf2d656ef60d14cd57867c4,2026-10-19,ok,parse + read px,17.0,17.0,0.0,17,0,3381.7,Do not use Qt's keyword macros as identifiers (#5866)
+cc8334113c8672433bf2d656ef60d14cd57867c4,2026-10-19,ok,read px of a parsed object,0.0,0.0,0.0,0,0,70.6,Do not use Qt's keyword macros as identifiers (#5866)
+cc8334113c8672433bf2d656ef60d14cd57867c4,2026-10-19,ok,dump to std::string,1.0,1.0,0.0,1,0,881.1,Do not use Qt's keyword macros as identifiers (#5866)
+0cbe95ffa2fcd0c3db9b6621d6581dee38d0e8d2,2026-10-21,ok,parse + read px,17.0,17.0,0.0,17,0,3391.5,"Speed up writing CBOR and MessagePack, above all integer arrays (#5824)"
+0cbe95ffa2fcd0c3db9b6621d6581dee38d0e8d2,2026-10-21,ok,read px of a parsed object,0.0,0.0,0.0,0,0,69.1,"Speed up writing CBOR and MessagePack, above all integer arrays (#5824)"
+0cbe95ffa2fcd0c3db9b6621d6581dee38d0e8d2,2026-10-21,ok,dump to std::string,1.0,1.0,0.0,1,0,883.1,"Speed up writing CBOR and MessagePack, above all integer arrays (#5824)"
+5e13f834c16ddcfa12b10495cf48d6087d665343,2026-10-21,ok,parse + read px,17.0,17.0,0.0,17,0,3446.0,Copy the text of float tokens only when a SAX handler asks for it (#5852)
+5e13f834c16ddcfa12b10495cf48d6087d665343,2026-10-21,ok,read px of a parsed object,0.0,0.0,0.0,0,0,72.0,Copy the text of float tokens only when a SAX handler asks for it (#5852)
+5e13f834c16ddcfa12b10495cf48d6087d665343,2026-10-21,ok,dump to std::string,1.0,1.0,0.0,1,0,895.7,Copy the text of float tokens only when a SAX handler asks for it (#5852)
+e9970066c552605170fd3bc40bfaf3d9b0e5310c,2026-10-21,ok,parse + read px,17.0,17.0,0.0,17,0,3414.5,"Scan strings with SSE2, SSSE3, or NEON (#5853)"
+e9970066c552605170fd3bc40bfaf3d9b0e5310c,2026-10-21,ok,read px of a parsed object,0.0,0.0,0.0,0,0,73.1,"Scan strings with SSE2, SSSE3, or NEON (#5853)"
+e9970066c552605170fd3bc40bfaf3d9b0e5310c,2026-10-21,ok,dump to std::string,1.0,1.0,0.0,1,0,931.6,"Scan strings with SSE2, SSSE3, or NEON (#5853)"
+fa37b952df2f6da3178e549e56123800336e242a,2026-10-21,ok,parse + read px,18.0,18.0,0.0,18,0,3024.9,Match literals without a stack array and keep parser states in bytes (#5854)
+fa37b952df2f6da3178e549e56123800336e242a,2026-10-21,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.3,Match literals without a stack array and keep parser states in bytes (#5854)
+fa37b952df2f6da3178e549e56123800336e242a,2026-10-21,ok,dump to std::string,1.0,1.0,0.0,1,0,411.2,Match literals without a stack array and keep parser states in bytes (#5854)
+9bf531436fe96b10cf04bac27f57b7bc5c811266,2026-10-21,ok,parse + read px,18.0,18.0,0.0,18,0,3109.4,"Speed up flatten(), unflatten(), diff() and patch() (#5861)"
+9bf531436fe96b10cf04bac27f57b7bc5c811266,2026-10-21,ok,read px of a parsed object,0.0,0.0,0.0,0,0,70.2,"Speed up flatten(), unflatten(), diff() and patch() (#5861)"
+9bf531436fe96b10cf04bac27f57b7bc5c811266,2026-10-21,ok,dump to std::string,1.0,1.0,0.0,1,0,725.9,"Speed up flatten(), unflatten(), diff() and patch() (#5861)"
+6fa14d8f9566d4a09973e1b3888669a230047ce5,2026-10-23,ok,parse + read px,18.0,18.0,0.0,18,0,1686.4,Write binary formats through reserved sink space and number runs (#5885)
+6fa14d8f9566d4a09973e1b3888669a230047ce5,2026-10-23,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.5,Write binary formats through reserved sink space and number runs (#5885)
+6fa14d8f9566d4a09973e1b3888669a230047ce5,2026-10-23,ok,dump to std::string,1.0,1.0,0.0,1,0,295.3,Write binary formats through reserved sink space and number runs (#5885)
+dd7686a26937acfafcdaf7c1c484798c1dedefc8,2026-10-24,ok,parse + read px,18.0,18.0,0.0,18,0,3253.3,"json_view: faster reading, indexing and C-stream parsing (#5888)"
+dd7686a26937acfafcdaf7c1c484798c1dedefc8,2026-10-24,ok,read px of a parsed object,0.0,0.0,0.0,0,0,74.7,"json_view: faster reading, indexing and C-stream parsing (#5888)"
+dd7686a26937acfafcdaf7c1c484798c1dedefc8,2026-10-24,ok,dump to std::string,1.0,1.0,0.0,1,0,610.3,"json_view: faster reading, indexing and C-stream parsing (#5888)"
+9c50bdd140d80744ebfa8dd7e850794f2cce50e3,2026-10-24,ok,parse + read px,15.0,15.0,0.0,15,0,3003.2,Make the DOM parser cheaper per container and per member (#5882)
+9c50bdd140d80744ebfa8dd7e850794f2cce50e3,2026-10-24,ok,read px of a parsed object,0.0,0.0,0.0,0,0,74.1,Make the DOM parser cheaper per container and per member (#5882)
+9c50bdd140d80744ebfa8dd7e850794f2cce50e3,2026-10-24,ok,dump to std::string,1.0,1.0,0.0,1,0,610.1,Make the DOM parser cheaper per container and per member (#5882)
+01139dc19292887aaf2c2ceb439448023d124c97,2026-10-24,ok,parse + read px,15.0,15.0,0.0,15,0,2941.8,Silence an Infer false positive in json_view materialize (#5905)
+01139dc19292887aaf2c2ceb439448023d124c97,2026-10-24,ok,read px of a parsed object,0.0,0.0,0.0,0,0,71.0,Silence an Infer false positive in json_view materialize (#5905)
+01139dc19292887aaf2c2ceb439448023d124c97,2026-10-24,ok,dump to std::string,1.0,1.0,0.0,1,0,578.8,Silence an Infer false positive in json_view materialize (#5905)
+731f1b5bfb06527fcf10b4f62291ed363472974e,2026-10-26,ok,parse + read px,15.0,15.0,0.0,15,0,2950.0,"json_view: view_mode enum instead of bool Editable, node_kind for node::kind (#5919)"
+731f1b5bfb06527fcf10b4f62291ed363472974e,2026-10-26,ok,read px of a parsed object,0.0,0.0,0.0,0,0,67.7,"json_view: view_mode enum instead of bool Editable, node_kind for node::kind (#5919)"
+731f1b5bfb06527fcf10b4f62291ed363472974e,2026-10-26,ok,dump to std::string,1.0,1.0,0.0,1,0,574.0,"json_view: view_mode enum instead of bool Editable, node_kind for node::kind (#5919)"
+0115bb47b362867add4615aeb8d4aa68f9f142b9,2026-10-30,ok,parse + read px,15.0,15.0,0.0,15,0,1417.5,Name the source and license of adapted code in the file comments (#5965)
+0115bb47b362867add4615aeb8d4aa68f9f142b9,2026-10-30,ok,read px of a parsed object,0.0,0.0,0.0,0,0,40.5,Name the source and license of adapted code in the file comments (#5965)
+0115bb47b362867add4615aeb8d4aa68f9f142b9,2026-10-30,ok,dump to std::string,1.0,1.0,0.0,1,0,275.3,Name the source and license of adapted code in the file comments (#5965)
+6c3ab966d3b086657301ca14c54d5839b38c3e8d,2026-11-01,ok,parse + read px,15.0,15.0,0.0,15,0,1443.7,CBOR reader: read runs of scalar array elements in one loop (#5975)
+6c3ab966d3b086657301ca14c54d5839b38c3e8d,2026-11-01,ok,read px of a parsed object,0.0,0.0,0.0,0,0,37.6,CBOR reader: read runs of scalar array elements in one loop (#5975)
+6c3ab966d3b086657301ca14c54d5839b38c3e8d,2026-11-01,ok,dump to std::string,1.0,1.0,0.0,1,0,276.5,CBOR reader: read runs of scalar array elements in one loop (#5975)
+03d408aafa4260f82b2340c88684c25698d36aac,2026-11-02,ok,parse + read px,15.0,15.0,0.0,15,0,1458.6,JSON_DIAGNOSTIC_POSITIONS: comparing a value-initialized iterator throws instead of crashing (#6003)
+03d408aafa4260f82b2340c88684c25698d36aac,2026-11-02,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.5,JSON_DIAGNOSTIC_POSITIONS: comparing a value-initialized iterator throws instead of crashing (#6003)
+03d408aafa4260f82b2340c88684c25698d36aac,2026-11-02,ok,dump to std::string,1.0,1.0,0.0,1,0,272.3,JSON_DIAGNOSTIC_POSITIONS: comparing a value-initialized iterator throws instead of crashing (#6003)
+100f676b3e9d85cedbf90e2995cadf9473b6b0e5,2026-11-02,ok,parse + read px,15.0,15.0,0.0,15,0,1451.2,Restore the two commits of #6005 that the stack merge dropped (fixes the build of develop) (#6012)
+100f676b3e9d85cedbf90e2995cadf9473b6b0e5,2026-11-02,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.8,Restore the two commits of #6005 that the stack merge dropped (fixes the build of develop) (#6012)
+100f676b3e9d85cedbf90e2995cadf9473b6b0e5,2026-11-02,ok,dump to std::string,1.0,1.0,0.0,1,0,275.8,Restore the two commits of #6005 that the stack merge dropped (fixes the build of develop) (#6012)
+e48800f09d6f5e31320371da7ebdda7f7c6e911e,2026-11-04,ok,parse + read px,15.0,15.0,0.0,15,0,2970.9,Binary reader and writer: remove checks that invariants make dead (#6001)
+e48800f09d6f5e31320371da7ebdda7f7c6e911e,2026-11-04,ok,read px of a parsed object,0.0,0.0,0.0,0,0,73.5,Binary reader and writer: remove checks that invariants make dead (#6001)
+e48800f09d6f5e31320371da7ebdda7f7c6e911e,2026-11-04,ok,dump to std::string,1.0,1.0,0.0,1,0,582.2,Binary reader and writer: remove checks that invariants make dead (#6001)
+7757de3a58e23534486bf4f16827ad26154cc9a4,2026-11-09,ok,parse + read px,15.0,15.0,0.0,15,0,2739.7,Iterator: test for objects before arrays (#6039)
+7757de3a58e23534486bf4f16827ad26154cc9a4,2026-11-09,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.4,Iterator: test for objects before arrays (#6039)
+7757de3a58e23534486bf4f16827ad26154cc9a4,2026-11-09,ok,dump to std::string,1.0,1.0,0.0,1,0,289.4,Iterator: test for objects before arrays (#6039)
+33f15727ceba56b10ca18153272adff46e031116,2026-11-10,ok,parse + read px,14.0,14.0,0.0,14,0,2564.8,Parse JSON in one block of memory with a fused pointer-based parser (#6031)
+33f15727ceba56b10ca18153272adff46e031116,2026-11-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,75.4,Parse JSON in one block of memory with a fused pointer-based parser (#6031)
+33f15727ceba56b10ca18153272adff46e031116,2026-11-10,ok,dump to std::string,1.0,1.0,0.0,1,0,605.3,Parse JSON in one block of memory with a fused pointer-based parser (#6031)
+5901d861ff3b864cdd98eb386322b5679986f462,2026-11-10,ok,parse + read px,14.0,14.0,0.0,14,0,1251.2,json_view: keep tokens without an integer digit out of the float batch (#6049)
+5901d861ff3b864cdd98eb386322b5679986f462,2026-11-10,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.2,json_view: keep tokens without an integer digit out of the float batch (#6049)
+5901d861ff3b864cdd98eb386322b5679986f462,2026-11-10,ok,dump to std::string,1.0,1.0,0.0,1,0,277.4,json_view: keep tokens without an integer digit out of the float batch (#6049)
+1dae5a66b1f8ee780f16ecad92a4e8cbe0fc8f1b,2026-11-11,ok,parse + read px,14.0,14.0,0.0,14,0,1192.2,Add JSON_RECURSION_DEPTH_LIMIT to set how deep value walks recurse (#6081)
+1dae5a66b1f8ee780f16ecad92a4e8cbe0fc8f1b,2026-11-11,ok,read px of a parsed object,0.0,0.0,0.0,0,0,39.3,Add JSON_RECURSION_DEPTH_LIMIT to set how deep value walks recurse (#6081)
+1dae5a66b1f8ee780f16ecad92a4e8cbe0fc8f1b,2026-11-11,ok,dump to std::string,1.0,1.0,0.0,1,0,264.2,Add JSON_RECURSION_DEPTH_LIMIT to set how deep value walks recurse (#6081)
+99adff001df759b9859a737a922d0dd9fcc798cc,2026-11-15,ok,parse + read px,14.0,14.0,0.0,14,0,1326.3,Make unflatten() linear in the length of the keys (#6076)
+99adff001df759b9859a737a922d0dd9fcc798cc,2026-11-15,ok,read px of a parsed object,0.0,0.0,0.0,0,0,36.7,Make unflatten() linear in the length of the keys (#6076)
+99adff001df759b9859a737a922d0dd9fcc798cc,2026-11-15,ok,dump to std::string,1.0,1.0,0.0,1,0,334.9,Make unflatten() linear in the length of the keys (#6076)
+abbc29963a3fa7652127a57a9e2a4494ec5b8a6e,2026-11-15,ok,parse + read px,14.0,14.0,0.0,14,0,1202.4,Keep only the beginning and the end of a long token for error messages (#6121)
+abbc29963a3fa7652127a57a9e2a4494ec5b8a6e,2026-11-15,ok,read px of a parsed object,0.0,0.0,0.0,0,0,38.8,Keep only the beginning and the end of a long token for error messages (#6121)
+abbc29963a3fa7652127a57a9e2a4494ec5b8a6e,2026-11-15,ok,dump to std::string,1.0,1.0,0.0,1,0,267.3,Keep only the beginning and the end of a long token for error messages (#6121)

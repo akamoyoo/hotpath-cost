@@ -1,13 +1,13 @@
 # Results
 
-All eighteen libraries, then the compiler matrix. Paths are relative to the repository root. Per-commit data: `results/<build>/<library>.csv`; the matrix as Markdown: `results/matrix.md`.
+All libraries, then the compiler matrix. Paths are relative to the repository root. Per-commit data: `results/<build>/<library>.csv`; the matrix as Markdown: `results/matrix.md`.
 
 ## What was found
 
-Eighteen libraries, 13,246 library commits in their first-parent histories, 2,050 of them measured.
-Thirteen libraries were measured at every library commit where the driver compiles. quill was sampled
-every fifth commit, spdlog every 30th, fmt every 50th, simdjson every 4th and Eigen every 100th, and
-every interval whose counts differed was bisected. Built with GCC 13.3, `-O2 -march=x86-64-v3`. Per-commit data:
+Twenty-five libraries, 15,986 library commits in their first-parent histories, 3,409 of them measured.
+Eighteen of them were measured at every library commit where the driver compiles. quill was sampled
+every fifth commit, spdlog every 30th, fmt every 50th, simdjson every 4th, Eigen every 100th, json every
+10th and Taskflow every 15th, and every interval whose counts differed was bisected. Built with GCC 13.3, `-O2 -march=x86-64-v3`. Per-commit data:
 `results/gcc/<library>.csv`.
 
 | library | measured | count changes | what changed |
@@ -30,6 +30,13 @@ every interval whose counts differed was bisected. Built with GCC 13.3, `-O2 -ma
 | [fast_float](https://github.com/fastfloat/fast_float) (number parsing) | 212 of 213 | 0 | 0 and 0 |
 | [xxHash](https://github.com/Cyan4973/xxHash) (hashing) | 290 of 346 | 0 | 0 and 0 |
 | [Eigen](https://gitlab.com/libeigen/eigen) (linear algebra, fixed sizes) | 39 of 5,408, sampled | 0 | 0 and 0 |
+| [nlohmann/json](https://github.com/nlohmann/json) (JSON) | 115 of 822, bisected | 11 | allocations to parse one 90-byte message: 22 (2018), up to 26, down to 14 in 2026; one step back within that work (`fa37b952`, 17 -> 18); `dump()`: 5 -> 1 |
+| [Taskflow](https://github.com/taskflow/taskflow) (task scheduling) | 428 of 1,069, bisected | 20 | submit and wait: 3 to 5 allocations and 2 to 4 locks per call over the history; now 3 and 2 (`run`), 4 and 1 (`async`) |
+| [pdqsort](https://github.com/orlp/pdqsort) (sorting) | 25 of 37 | 0 | 0 and 0 |
+| [lz4](https://github.com/lz4/lz4) (compression) | 293 of 298 | 0 | 0 and 0 |
+| [dragonbox](https://github.com/jk-jeon/dragonbox) (double to decimal) | 196 of 210 | 0 | 0 and 0 |
+| [libdivide](https://github.com/ridiculousfish/libdivide) (division by a run-time constant) | 163 of 163 | 0 | 0 and 0; 64 divisions in 115 ns against 670 with the hardware divider |
+| [date](https://github.com/HowardHinnant/date) (time stamps) | 139 of 141 | 0 | parsing through `istringstream` and formatting: 2 allocations each, throughout |
 
 "Measured" counts the commits at which the fixed benchmark driver compiles and runs; older versions
 with a different API are not measured. The quiet rows are results too: these libraries keep their

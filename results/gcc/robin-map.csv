@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 29e001269bcb6908d55b7323dff5e36a5a8f26d1,2018-09-16,ok,find (hit),0.0,0.0,0.0,0,0,30.7,Move headers from tsl to include/tsl for coherence with other C++ projects.
 29e001269bcb6908d55b7323dff5e36a5a8f26d1,2018-09-16,ok,find (miss),0.0,0.0,0.0,0,0,37.1,Move headers from tsl to include/tsl for coherence with other C++ projects.
 29e001269bcb6908d55b7323dff5e36a5a8f26d1,2018-09-16,ok,insert+erase,0.0,0.0,0.0,0,0,71.9,Move headers from tsl to include/tsl for coherence with other C++ projects.

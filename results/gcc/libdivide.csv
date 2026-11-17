@@ -1,0 +1,327 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+98de9654673512bbe80c19ba0f62c2ce7fa34f84,2011-08-30,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,193.6,Initial libdivide import
+98de9654673512bbe80c19ba0f62c2ce7fa34f84,2011-08-30,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Initial libdivide import
+40a6e2569a37672a4822c69808f8390fc24ecf50,2014-07-08,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.9,Merge pull request #5 from kasper93/master
+40a6e2569a37672a4822c69808f8390fc24ecf50,2014-07-08,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Merge pull request #5 from kasper93/master
+a20a1c85c3b623f8c36f4b9608c24bd5a540ae17,2014-07-16,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.9,Merge pull request #6 from kasper93/master
+a20a1c85c3b623f8c36f4b9608c24bd5a540ae17,2014-07-16,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Merge pull request #6 from kasper93/master
+55788bfcd1ee79a74fccd0db7dc385790630418b,2016-03-19,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Change default constructor to leave divider unitialized
+55788bfcd1ee79a74fccd0db7dc385790630418b,2016-03-19,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Change default constructor to leave divider unitialized
+7df75555408170f7ffd05707a0cb70725a9a69f6,2016-03-19,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.9,Implement libdivide_u32_recover
+7df75555408170f7ffd05707a0cb70725a9a69f6,2016-03-19,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Implement libdivide_u32_recover
+485a9adcfc6396e4c290b2bfba34a397464a11d5,2016-03-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.9,Implement libdivide_u64_recover
+485a9adcfc6396e4c290b2bfba34a397464a11d5,2016-03-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Implement libdivide_u64_recover
+b4d24cf223dde1dea29824f63b610e404342d050,2016-03-22,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Implement libdivide_s32_recover
+b4d24cf223dde1dea29824f63b610e404342d050,2016-03-22,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Implement libdivide_s32_recover
+5636d8c7f4514d2cceeb9a2b3c4c204a779463a8,2016-03-22,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Implement libdivide_s64_recover
+5636d8c7f4514d2cceeb9a2b3c4c204a779463a8,2016-03-22,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Implement libdivide_s64_recover
+02a6bf76b2b4fff20798f213769723392c4f4cfd,2016-03-22,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.1,Remove a dead libdivide_get_0000FFFF function
+02a6bf76b2b4fff20798f213769723392c4f4cfd,2016-03-22,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Remove a dead libdivide_get_0000FFFF function
+9473c28215f090b1c8694be0dad8a79a6f93a568,2016-03-23,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.1,Incorporate BranchFree variant into C++ API and tests
+9473c28215f090b1c8694be0dad8a79a6f93a568,2016-03-23,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Incorporate BranchFree variant into C++ API and tests
+29f62d465cd3e3e75cd5085d8c3ac5a140088a0d,2016-03-23,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.9,Untangle a lot of the C++ template maze
+29f62d465cd3e3e75cd5085d8c3ac5a140088a0d,2016-03-23,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Untangle a lot of the C++ template maze
+61192407e8859d337351ce8c6bfae2c144477680,2016-03-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Mark LIBDIVIDE_API as inline
+61192407e8859d337351ce8c6bfae2c144477680,2016-03-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Mark LIBDIVIDE_API as inline
+dc1932b08c4bdef0ca5cb72c84b3a8161d837008,2016-03-29,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Enable int128_t path in libdivide_128_div_128_to_64
+dc1932b08c4bdef0ca5cb72c84b3a8161d837008,2016-03-29,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Enable int128_t path in libdivide_128_div_128_to_64
+2589bc90629204a8c4d6b38439d6e06bad997b7e,2016-04-03,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Fix HAS_INT128_T
+2589bc90629204a8c4d6b38439d6e06bad997b7e,2016-04-03,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix HAS_INT128_T
+a22fbcf37d70a1352b6ac14674fda0c1e8f691ad,2016-04-09,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Update Visual C++ project and fix some VC++ warnings
+a22fbcf37d70a1352b6ac14674fda0c1e8f691ad,2016-04-09,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Update Visual C++ project and fix some VC++ warnings
+3ce3e505162a039b120d468507a3db81a3cc0873,2016-04-09,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.1,Try to make clang complain less
+3ce3e505162a039b120d468507a3db81a3cc0873,2016-04-09,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Try to make clang complain less
+5a0e110570fcc9a8df4c9a1a2688fe4716f67b7b,2016-04-09,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Try once again to defeat VC++ warnings
+5a0e110570fcc9a8df4c9a1a2688fe4716f67b7b,2016-04-09,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Try once again to defeat VC++ warnings
+4b3409c59ab0e932dc00bf09b3c0ad481e54c55f,2016-04-09,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,189.7,Remove a dead comment
+4b3409c59ab0e932dc00bf09b3c0ad481e54c55f,2016-04-09,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Remove a dead comment
+0a7f9953ceb2275e938506920e1a6e9c9e7ee9f9,2016-04-09,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Fix some indentation
+0a7f9953ceb2275e938506920e1a6e9c9e7ee9f9,2016-04-09,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix some indentation
+d47dce63ba15f449ad519badedc8fbac8b558d4e,2016-04-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Use *= -1 instead of negation to defeat a VC++ warning
+d47dce63ba15f449ad519badedc8fbac8b558d4e,2016-04-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Use *= -1 instead of negation to defeat a VC++ warning
+c029708c52bf5b8a736f08f451a35625fcc922b9,2016-07-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.1,Merge branch 'branchfree'
+c029708c52bf5b8a736f08f451a35625fcc922b9,2016-07-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Merge branch 'branchfree'
+6ec462ed5fad71058f6133db4eb7bae6871eaf8a,2016-08-05,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.1,Merge pull request #22 from kimwalisch/MSVC-intrinsics
+6ec462ed5fad71058f6133db4eb7bae6871eaf8a,2016-08-05,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Merge pull request #22 from kimwalisch/MSVC-intrinsics
+02aca43c49e6e58011f6bf4c784dccc7de6ff9c6,2016-08-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.1,Merge pull request #25 from kimwalisch/master
+02aca43c49e6e58011f6bf4c784dccc7de6ff9c6,2016-08-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Merge pull request #25 from kimwalisch/master
+9a75de496db33d03ebe5f943b386a0a37724eeb9,2016-08-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.1,Fix incorrect macro usage
+9a75de496db33d03ebe5f943b386a0a37724eeb9,2016-08-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix incorrect macro usage
+f615ddbb0abd4885ad1e1afcc388d846df6be1a3,2016-08-07,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,205.0,Remove unused code
+f615ddbb0abd4885ad1e1afcc388d846df6be1a3,2016-08-07,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Remove unused code
+dbf72f645d4851c1a748a4e5f99b0e27ab0b3e2e,2016-08-07,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.1,Get rid of silly defines
+dbf72f645d4851c1a748a4e5f99b0e27ab0b3e2e,2016-08-07,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Get rid of silly defines
+bb32013999749b9dd84647fa09663f35fd2d7adf,2017-02-22,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.1,Align comments
+bb32013999749b9dd84647fa09663f35fd2d7adf,2017-02-22,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Align comments
+c7e9717e1a15ab3494933ac80d0e369c0613f905,2017-05-13,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.7,Add Boost license as an option to libdivide licensing
+c7e9717e1a15ab3494933ac80d0e369c0613f905,2017-05-13,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Add Boost license as an option to libdivide licensing
+947f8b28f5c7b74f1b4ad835ef5c14c89bc85e41,2017-06-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.8,Pack divider structs
+947f8b28f5c7b74f1b4ad835ef5c14c89bc85e41,2017-06-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Pack divider structs
+f16aa8a2742583c426f6294d30a5cfeb8b568e22,2017-07-04,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.1,Remove whitespace
+f16aa8a2742583c426f6294d30a5cfeb8b568e22,2017-07-04,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Remove whitespace
+910c0127516d33f6d61621266b427bc7f1caf9f0,2018-01-15,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.8,Silence clang++ warnings
+910c0127516d33f6d61621266b427bc7f1caf9f0,2018-01-15,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Silence clang++ warnings
+cfb99a7498fb3f07e2876ee50abc27a65eae8bce,2018-01-16,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.8,Use #ifdef instead of #if
+cfb99a7498fb3f07e2876ee50abc27a65eae8bce,2018-01-16,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Use #ifdef instead of #if
+8614144c714bce81836ac7537958ec75c4d514f3,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,197.8,Minor u64 recover speedup
+8614144c714bce81836ac7537958ec75c4d514f3,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Minor u64 recover speedup
+16c9729e77045f048f129eb7337abed3aec5bc1e,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.8,Refactor mullhi functions
+16c9729e77045f048f129eb7337abed3aec5bc1e,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Refactor mullhi functions
+335ab43ab829f8b2641e5834bdb6a692751323d7,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.6,Refactor divider class
+335ab43ab829f8b2641e5834bdb6a692751323d7,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Refactor divider class
+279da5357ce7575c59bd1e8357688f1abc712b27,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.8,Refactor libdivide_128_div_64_to_64()
+279da5357ce7575c59bd1e8357688f1abc712b27,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Refactor libdivide_128_div_64_to_64()
+23dcbc95a81594f340d25c6e5d089d2ccb8ced32,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.9,Add include guards
+23dcbc95a81594f340d25c6e5d089d2ccb8ced32,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Add include guards
+1bb8374fb727fba65e59975dfa902fd30a7a15f7,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.6,Remove workaround for ancient compiler
+1bb8374fb727fba65e59975dfa902fd30a7a15f7,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Remove workaround for ancient compiler
+5444a28225147789ecc39447399724f795f83f94,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.8,Add libdivide::branchfree_divider<T> for C++11 or later
+5444a28225147789ecc39447399724f795f83f94,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Add libdivide::branchfree_divider<T> for C++11 or later
+d17ed02339a20a8787467f9b09e9c0842a33d35b,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.2,Consistent pointer formatting
+d17ed02339a20a8787467f9b09e9c0842a33d35b,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Consistent pointer formatting
+5e2c8b7c8e711f760103232f011a9b069207924a,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.6,ICC workaround not needed anymore
+5e2c8b7c8e711f760103232f011a9b069207924a,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,ICC workaround not needed anymore
+525cc6d21edac2397285f62dadad257d3b108423,2018-01-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,131.8,Fix typo
+525cc6d21edac2397285f62dadad257d3b108423,2018-01-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Fix typo
+1a77776a3eff73335ac83e1ddaeb3794d30f4078,2018-01-18,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.8,Merge pull request #38 from kimwalisch/master
+1a77776a3eff73335ac83e1ddaeb3794d30f4078,2018-01-18,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Merge pull request #38 from kimwalisch/master
+c28e1bc70e6ddac77f261073a9af4130a696cfee,2018-01-18,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.9,Silence compiler warning
+c28e1bc70e6ddac77f261073a9af4130a696cfee,2018-01-18,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Silence compiler warning
+3eb33fb8e62da1131425ad50abfe5c25efef0ef7,2018-01-18,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.8,Remove unused header
+3eb33fb8e62da1131425ad50abfe5c25efef0ef7,2018-01-18,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.5,Remove unused header
+f30ead0eec082fb8b53374135c147edc815a8923,2018-01-18,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.9,Refactor C++ templates
+f30ead0eec082fb8b53374135c147edc815a8923,2018-01-18,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Refactor C++ templates
+76c9f2b587113ab41386bc9deae4f23a3e732ba3,2018-01-18,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Don't print path in error message
+76c9f2b587113ab41386bc9deae4f23a3e732ba3,2018-01-18,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Don't print path in error message
+944ae0ebfd245b256ff907ea21fc5ac32e7a6e8f,2018-01-19,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.9,Further simplify C++ templates
+944ae0ebfd245b256ff907ea21fc5ac32e7a6e8f,2018-01-19,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Further simplify C++ templates
+70eb1ed6670783555a4443ca316b19334c7788dd,2018-01-19,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,133.4,Fix line endings
+70eb1ed6670783555a4443ca316b19334c7788dd,2018-01-19,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,643.4,Fix line endings
+bbe51b89d7f4e3c984352ec1f73a1349e461ac4d,2018-01-19,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,194.1,Refactor divider macros
+bbe51b89d7f4e3c984352ec1f73a1349e461ac4d,2018-01-19,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,643.6,Refactor divider macros
+97e4e6f5b937ca568b3059a71b3a6291d7ddfe87,2018-01-19,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.8,Add overloads for /= operator
+97e4e6f5b937ca568b3059a71b3a6291d7ddfe87,2018-01-19,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Add overloads for /= operator
+4b4dd82b1b5d7f08b18a1e9cb250bf4cd6b9ef73,2018-01-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.4,MSVC workaround for branchfree_divider
+4b4dd82b1b5d7f08b18a1e9cb250bf4cd6b9ef73,2018-01-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,MSVC workaround for branchfree_divider
+0458956a81025fc0a97c35731aa08d9581d9388a,2018-01-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.9,Simplify C++ template macros
+0458956a81025fc0a97c35731aa08d9581d9388a,2018-01-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Simplify C++ template macros
+7d8a4c7bf1984101d509d5c0b5901573d083623f,2018-06-10,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.1,Fix -Wshift-count-overflow on avr CPU architecture #41
+7d8a4c7bf1984101d509d5c0b5901573d083623f,2018-06-10,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Fix -Wshift-count-overflow on avr CPU architecture #41
+9012a551a651accc7db230cc44e9672c181a7191,2018-06-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.9,Correct -Wshadow warning
+9012a551a651accc7db230cc44e9672c181a7191,2018-06-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Correct -Wshadow warning
+3d4d95cc7513538fb673781e0c52508edbd54f91,2019-05-27,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.8,Fix bug in libdivide_128_div_64_to_64()
+3d4d95cc7513538fb673781e0c52508edbd54f91,2019-05-27,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Fix bug in libdivide_128_div_64_to_64()
+5e545305783b867367915e4820b2a78062f9a3c3,2019-05-27,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.5,Improve libdivide_128_div_64_to_64()
+5e545305783b867367915e4820b2a78062f9a3c3,2019-05-27,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,656.6,Improve libdivide_128_div_64_to_64()
+0f14ecdc4d84f7de0c0cf437dfa887c779903eef,2019-05-27,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,178.9,Add LIBDIVIDE_VERSION macro
+0f14ecdc4d84f7de0c0cf437dfa887c779903eef,2019-05-27,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,652.7,Add LIBDIVIDE_VERSION macro
+be3dac42a25b6c7a0d5d3ca18003c35c27632bbf,2019-05-27,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,187.9,Fix -Wignored-attributes warning
+be3dac42a25b6c7a0d5d3ca18003c35c27632bbf,2019-05-27,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,652.6,Fix -Wignored-attributes warning
+fd37f6228ddf21f3a7a8df9252e9fd24d3fe4a5d,2019-05-27,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.8,Update copyright year
+fd37f6228ddf21f3a7a8df9252e9fd24d3fe4a5d,2019-05-27,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Update copyright year
+e901a60c8b5cebd309b172c3fed5a60d72569506,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,202.2,Clean up SSE2 code
+e901a60c8b5cebd309b172c3fed5a60d72569506,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,657.4,Clean up SSE2 code
+5ec28c31b6238d2f9f1e959fd91efce3109e5e1c,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.1,Rename template parameters
+5ec28c31b6238d2f9f1e959fd91efce3109e5e1c,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.4,Rename template parameters
+34b11ebde21ecf1d428ae872570bcece581d6ec4,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.8,Clean up macros
+34b11ebde21ecf1d428ae872570bcece581d6ec4,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.0,Clean up macros
+1ed2b64cd5172692e0fa7a0977bde89bd672fb46,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,200.6,Properly format if statements
+1ed2b64cd5172692e0fa7a0977bde89bd672fb46,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Properly format if statements
+bf940de9df3d9c734e80a37e72c658d9d4475dd4,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,189.4,Fix namespace indentation
+bf940de9df3d9c734e80a37e72c658d9d4475dd4,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Fix namespace indentation
+7fe548720495e2a8802f2976bda51d7a6d9fc6e1,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.1,Fix indentation
+7fe548720495e2a8802f2976bda51d7a6d9fc6e1,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Fix indentation
+e0ae0fa1ee3fdd8dd278ae17831f340f4833eff7,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.9,Optimize libdivide_128_div_64_to_64() using _udiv128
+e0ae0fa1ee3fdd8dd278ae17831f340f4833eff7,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Optimize libdivide_128_div_64_to_64() using _udiv128
+e3fa9bdd87f8706a8a727278aad40e8b102ce099,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.5,Optimize libdivide_128_div_64_to_64() using __uint128_t
+e3fa9bdd87f8706a8a727278aad40e8b102ce099,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Optimize libdivide_128_div_64_to_64() using __uint128_t
+038cd6f46cef7ace1666df052462dd672e90fb67,2019-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.9,Correctly format curly braces
+038cd6f46cef7ace1666df052462dd672e90fb67,2019-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Correctly format curly braces
+07931e9cb670311ba67cd6a16fdbcb67bb97a592,2019-05-29,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Fix MSVC ARM 64-bit bug
+07931e9cb670311ba67cd6a16fdbcb67bb97a592,2019-05-29,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Fix MSVC ARM 64-bit bug
+d94c0ca45ab8fed0929bfef5692cc6bf0a06669a,2019-05-29,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.8,Get rid of MSVC workaround for SSE2
+d94c0ca45ab8fed0929bfef5692cc6bf0a06669a,2019-05-29,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Get rid of MSVC workaround for SSE2
+9e7562cdca6bc069aec89d6387826f315140dab2,2019-06-03,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,198.9,Cleanup SSE2 code
+9e7562cdca6bc069aec89d6387826f315140dab2,2019-06-03,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,698.4,Cleanup SSE2 code
+191d40b178481bf35a8e74bba0e40d842b350518,2019-06-03,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.6,Remove comment
+191d40b178481bf35a8e74bba0e40d842b350518,2019-06-03,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.5,Remove comment
+bf79e0e4c44ad2191ac1b81ad5a4908d567da926,2019-06-03,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,181.5,Fast libdivide_mullhi_u64_flat_vector()
+bf79e0e4c44ad2191ac1b81ad5a4908d567da926,2019-06-03,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Fast libdivide_mullhi_u64_flat_vector()
+c532f5d26e7b1ac23dedcaf0d1eec2a9f21abe17,2019-06-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.7,Port SSE2 code to AVX2 & AVX512 (#47)
+c532f5d26e7b1ac23dedcaf0d1eec2a9f21abe17,2019-06-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,651.3,Port SSE2 code to AVX2 & AVX512 (#47)
+805310ed098b95f7d90f16521198bc9aaf55b72e,2019-06-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,203.2,Remove libdivide's unswitch functionality (#48)
+805310ed098b95f7d90f16521198bc9aaf55b72e,2019-06-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Remove libdivide's unswitch functionality (#48)
+d2082d1f06328b84586d8e2776c4a350d1dadaec,2019-06-07,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.6,Operator /= should return reference
+d2082d1f06328b84586d8e2776c4a350d1dadaec,2019-06-07,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Operator /= should return reference
+c691095687f693b3d4b7d3f43b465f8abcb9704a,2019-06-07,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,209.4,Fix operator /=
+c691095687f693b3d4b7d3f43b465f8abcb9704a,2019-06-07,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Fix operator /=
+e82e9fe65c9db1fff04bbb8fb82a39b097a06287,2019-06-08,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.8,Remove empty line
+e82e9fe65c9db1fff04bbb8fb82a39b097a06287,2019-06-08,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Remove empty line
+8a8f8fc5d795f9ef11db03721e77b97821d9345a,2019-06-10,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,110.8,_udiv128() not supported by clang-cl & icl
+8a8f8fc5d795f9ef11db03721e77b97821d9345a,2019-06-10,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.6,_udiv128() not supported by clang-cl & icl
+3f06c56114ce503aee31f99019ed18935030431e,2019-06-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,178.3,Don't mix uint32_t & uint64_t
+3f06c56114ce503aee31f99019ed18935030431e,2019-06-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Don't mix uint32_t & uint64_t
+c9625b8dd2549570c42a8979ad8425df4d49c0bf,2019-06-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,201.5,Remove unnecessary casts
+c9625b8dd2549570c42a8979ad8425df4d49c0bf,2019-06-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Remove unnecessary casts
+dd07e8d84192942c29a1f41e02aa41bf23350583,2019-06-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.6,Minor cleanups
+dd07e8d84192942c29a1f41e02aa41bf23350583,2019-06-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,656.8,Minor cleanups
+941a059ed7066cadc118464d371cabf284623677,2019-06-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.0,Remove empty spaces
+941a059ed7066cadc118464d371cabf284623677,2019-06-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.1,Remove empty spaces
+20ecf02d3fe0815ce2eedb9876455078023c9134,2019-06-12,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.0,Merge branch 'master' of https://github.com/ridiculousfish/libdivide
+20ecf02d3fe0815ce2eedb9876455078023c9134,2019-06-12,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Merge branch 'master' of https://github.com/ridiculousfish/libdivide
+0464eb892ac2aefba52fbca41f8f4c6b9a98b995,2019-06-12,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.8,Simplify inline usage
+0464eb892ac2aefba52fbca41f8f4c6b9a98b995,2019-06-12,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,648.7,Simplify inline usage
+4a1d5a7008af7f401f8f39c2f44f3dd0116a9839,2019-06-13,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,112.9,Support +-1 divider for signed branchfree
+4a1d5a7008af7f401f8f39c2f44f3dd0116a9839,2019-06-13,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Support +-1 divider for signed branchfree
+2eed5de4d545bc17747ee9f3c5600b1c3ddcde16,2019-06-14,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,111.4,Simplify more bitmask
+2eed5de4d545bc17747ee9f3c5600b1c3ddcde16,2019-06-14,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,647.2,Simplify more bitmask
+24221996a082774bd486b04f329a1cdd1a80c8df,2019-06-14,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Speed up unsigned branchfull divider
+24221996a082774bd486b04f329a1cdd1a80c8df,2019-06-14,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Speed up unsigned branchfull divider
+d41bbf06a1024367ec0c6a7dc2ef01acd5cd668d,2019-06-15,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,Fix undefined behaviour
+d41bbf06a1024367ec0c6a7dc2ef01acd5cd668d,2019-06-15,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix undefined behaviour
+13f56b38131ad04e7552fc45fa5e925fec514fb6,2019-06-16,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Fix clang-cl linker issue
+13f56b38131ad04e7552fc45fa5e925fec514fb6,2019-06-16,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix clang-cl linker issue
+4f201b90a6d1ad0a12b06e7a6ba2f0c2846e44a6,2019-06-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Fix undefined behavior
+4f201b90a6d1ad0a12b06e7a6ba2f0c2846e44a6,2019-06-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix undefined behavior
+6ecc46f509c3ffef4b9791c0103e9bd06c0a1bfb,2019-06-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Remove unnecessary macros
+6ecc46f509c3ffef4b9791c0103e9bd06c0a1bfb,2019-06-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Remove unnecessary macros
+86ccc4d24c8d8fca8f61a3d505ffeb0e1009f5ff,2019-06-20,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,196.3,Simplify C++ templates
+86ccc4d24c8d8fca8f61a3d505ffeb0e1009f5ff,2019-06-20,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Simplify C++ templates
+5196fd1818092d5ea2eabda72c671947b8638038,2019-06-20,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Rename function parameters
+5196fd1818092d5ea2eabda72c671947b8638038,2019-06-20,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Rename function parameters
+faf8a3f1df842c9314a4fc67a603b23eb7f3fd38,2019-06-20,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Update documentation
+faf8a3f1df842c9314a4fc67a603b23eb7f3fd38,2019-06-20,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Update documentation
+75a285da6ca8e14ec6538afd2e4ee90e743621bd,2019-06-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.2,Simplify DISPATCHER_GEN() macro
+75a285da6ca8e14ec6538afd2e4ee90e743621bd,2019-06-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Simplify DISPATCHER_GEN() macro
+6e2a429fd67177251a1152816f7499b1bfb0daf9,2019-06-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,208.7,Get rid of LIBDIVIDE_API macro
+6e2a429fd67177251a1152816f7499b1bfb0daf9,2019-06-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,724.6,Get rid of LIBDIVIDE_API macro
+d1b0fde6fdb5389c1960083b5f7aeba3cea04491,2019-06-22,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Rename function parameters
+d1b0fde6fdb5389c1960083b5f7aeba3cea04491,2019-06-22,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Rename function parameters
+623f9be3e406712be192e75833019f790aef8a51,2019-08-12,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Support size_t divider
+623f9be3e406712be192e75833019f790aef8a51,2019-08-12,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Support size_t divider
+c23f0e4058990d45011722e0f3232a00db53b5e6,2019-08-12,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Increase version number to 3.0
+c23f0e4058990d45011722e0f3232a00db53b5e6,2019-08-12,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Increase version number to 3.0
+c2ee2836445b21136c0c101861fa0759a3b64cfa,2019-12-10,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Accelerate counting of leading zeros
+c2ee2836445b21136c0c101861fa0759a3b64cfa,2019-12-10,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Accelerate counting of leading zeros
+cf75de4f83ec213749825a00f70747a8ff019860,2020-07-08,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.1,Change exit to abort
+cf75de4f83ec213749825a00f70747a8ff019860,2020-07-08,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,692.4,Change exit to abort
+8e9bf1764b5480e368fe70258a97a94844236572,2021-03-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.9,Reimplement vectorized high-multiplies
+8e9bf1764b5480e368fe70258a97a94844236572,2021-03-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,646.9,Reimplement vectorized high-multiplies
+78fc01dc8cbd358b4c7d66e002828470a3a61718,2021-03-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.1,Allow using all vector types simultaneously
+78fc01dc8cbd358b4c7d66e002828470a3a61718,2021-03-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,646.9,Allow using all vector types simultaneously
+eb6933e67dad04bec3f729c5ae262fd5c03f6551,2021-03-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.1,Add a .clang-format and apply it
+eb6933e67dad04bec3f729c5ae262fd5c03f6551,2021-03-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,647.2,Add a .clang-format and apply it
+c8edb8557fd14704a64ba1c3c43827454220b249,2021-03-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,194.1,Do not use __uint128_t in 128_div_64_to_64
+c8edb8557fd14704a64ba1c3c43827454220b249,2021-03-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,715.8,Do not use __uint128_t in 128_div_64_to_64
+1746e5d5c8b057d7bc80f561b3d507655ad194f7,2021-03-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.1,Add support for NEON intrinsics
+1746e5d5c8b057d7bc80f561b3d507655ad194f7,2021-03-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,646.3,Add support for NEON intrinsics
+e94eecf1a769793d230f58772b17f3e2979668bb,2021-03-08,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.0,Reapply clang-format
+e94eecf1a769793d230f58772b17f3e2979668bb,2021-03-08,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,647.2,Reapply clang-format
+57678d0119707d85e8a6190df53748c758769cdf,2021-03-12,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.1,Give up on /Z__cplusplus option to detect C++11 with VC++
+57678d0119707d85e8a6190df53748c758769cdf,2021-03-12,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,647.2,Give up on /Z__cplusplus option to detect C++11 with VC++
+61ae9cb48e6f17526e78202c8dc319f6f1dd2302,2021-04-02,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.7,Mark most functions as forced-inline
+61ae9cb48e6f17526e78202c8dc319f6f1dd2302,2021-04-02,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Mark most functions as forced-inline
+56bb4961b61a9e18fe4d05c3747691b1345b29b3,2021-04-09,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,116.1,Increase version to 4.0
+56bb4961b61a9e18fe4d05c3747691b1345b29b3,2021-04-09,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.2,Increase version to 4.0
+0e65ccd032748c7b4c54eb89b3a859c7e00029fc,2021-04-29,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,116.4,Reimplement 128 bit narrowing divide
+0e65ccd032748c7b4c54eb89b3a859c7e00029fc,2021-04-29,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Reimplement 128 bit narrowing divide
+10ba9826646625101397c1203a9ca2622f14eba6,2021-05-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,192.3,AVR support
+10ba9826646625101397c1203a9ca2622f14eba6,2021-05-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,659.4,AVR support
+5691c3adb07bb0d81de46d4a50478562e860dec6,2021-06-02,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,116.0,AVR int is only 16 bits
+5691c3adb07bb0d81de46d4a50478562e860dec6,2021-06-02,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,AVR int is only 16 bits
+f011b0e95a245e16a3b5e045e37e7a6c67e77496,2021-07-01,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,116.5,Add 16 bit support (#75)
+f011b0e95a245e16a3b5e045e37e7a6c67e77496,2021-07-01,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.1,Add 16 bit support (#75)
+3c231c1754425bc6312318eb1e737e3b7fdf6a78,2021-07-05,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,114.8,Fix function declaration. (#78)
+3c231c1754425bc6312318eb1e737e3b7fdf6a78,2021-07-05,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.0,Fix function declaration. (#78)
+a551b6cc0bc168418e04d6d411ba9c8b3ac9f9da,2021-07-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.9,Add a C99 test program (#79)
+a551b6cc0bc168418e04d6d411ba9c8b3ac9f9da,2021-07-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,660.2,Add a C99 test program (#79)
+ef645e200bea6fb27318e8e4393892c1bfc7e9a3,2021-07-07,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,Apply LIBDIVIDE_INLINE to all functions (#81)
+ef645e200bea6fb27318e8e4393892c1bfc7e9a3,2021-07-07,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Apply LIBDIVIDE_INLINE to all functions (#81)
+8c401c8ebe42992d807444e0d78b2875b221ecad,2021-07-08,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Constant division macros (#76)
+8c401c8ebe42992d807444e0d78b2875b221ecad,2021-07-08,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Constant division macros (#76)
+3295059386397940e4f53e5f69a3559020d3664d,2021-07-13,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,213.9,Bump version to 5.0
+3295059386397940e4f53e5f69a3559020d3664d,2021-07-13,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Bump version to 5.0
+26cf1abd54ce983ab9d56005f853e22bf4990311,2021-07-13,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,150.1,Make the cmake & CI builds use the same settings (#82)
+26cf1abd54ce983ab9d56005f853e22bf4990311,2021-07-13,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Make the cmake & CI builds use the same settings (#82)
+d02d31383f1c53cc3cb4c9043c4838bb43b63dbf,2022-02-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,213.0,Fix GCC vector alignment and aliasing issues (#93)
+d02d31383f1c53cc3cb4c9043c4838bb43b63dbf,2022-02-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,766.5,Fix GCC vector alignment and aliasing issues (#93)
+322c1f5fab7624aa1d6cc0509c0a33a1a2e9a69d,2022-02-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Simplify some comments
+322c1f5fab7624aa1d6cc0509c0a33a1a2e9a69d,2022-02-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Simplify some comments
+5731cec39bbdf8e185cf8d9895c558feb25765e8,2022-02-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.2,clang-format the main files
+5731cec39bbdf8e185cf8d9895c558feb25765e8,2022-02-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,clang-format the main files
+eee14df7eb7688050cb9f30eff8bf09b26b69222,2022-02-11,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,"Revert ""clang-format the main files"""
+eee14df7eb7688050cb9f30eff8bf09b26b69222,2022-02-11,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,"Revert ""clang-format the main files"""
+1978f27f712c4125c0d4dc3707f51fcf82fa1a93,2022-02-12,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,213.3,Implement 16-bit SSE2 & AVX2 vector division (#94)
+1978f27f712c4125c0d4dc3707f51fcf82fa1a93,2022-02-12,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,766.4,Implement 16-bit SSE2 & AVX2 vector division (#94)
+3382ea6ee670b1735769114bce11493791b5efcd,2022-05-20,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,209.3,clang-format all files
+3382ea6ee670b1735769114bce11493791b5efcd,2022-05-20,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,723.4,clang-format all files
+603a16047ae8445a44d833b3b9cb75938637dffd,2022-05-19,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,Ensure that primitive integer types work again
+603a16047ae8445a44d833b3b9cb75938637dffd,2022-05-19,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Ensure that primitive integer types work again
+a6bf644aa5f933b769204b7d02298d8f753d1732,2022-05-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.2,Migrate some detail bits into detail namespace
+a6bf644aa5f933b769204b7d02298d8f753d1732,2022-05-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Migrate some detail bits into detail namespace
+c6ff27ac6526b2542dc914dffeb11499fcb002fb,2022-06-07,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Try to fix the MSVC build
+c6ff27ac6526b2542dc914dffeb11499fcb002fb,2022-06-07,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,769.5,Try to fix the MSVC build
+3bd34388573681ce563348cdf04fe15d24770d04,2022-10-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,212.2,Fix GCC unused function warning
+3bd34388573681ce563348cdf04fe15d24770d04,2022-10-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix GCC unused function warning
+fa020f3b3e7ab3e80a2b23ab70bad0f46dbab795,2024-06-18,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,divider::operator==: compile fix (#113)
+fa020f3b3e7ab3e80a2b23ab70bad0f46dbab795,2024-06-18,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,716.6,divider::operator==: compile fix (#113)
+b9c0dd16e4da05478b42ff32b40c53953e375856,2024-06-29,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,mark default constructor for divider as constexpr
+b9c0dd16e4da05478b42ff32b40c53953e375856,2024-06-29,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.7,mark default constructor for divider as constexpr
+f3036bad0c4c01a1bfe14bac9de21de23c923d37,2024-07-30,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,214.0,Include <cstddef> for std::nullptr_t
+f3036bad0c4c01a1bfe14bac9de21de23c923d37,2024-07-30,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Include <cstddef> for std::nullptr_t
+37a5061f98c4136fc36170abc6cd5d982ad054ed,2024-07-30,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Get rid of STL
+37a5061f98c4136fc36170abc6cd5d982ad054ed,2024-07-30,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,771.9,Get rid of STL
+d6f035fa99d2a4b28322e739113b2678c0d4d81c,2024-07-30,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,GCC AVR does not support NULL
+d6f035fa99d2a4b28322e739113b2678c0d4d81c,2024-07-30,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,GCC AVR does not support NULL
+cbb7b3f4270707df17bfa1d03e32644020307322,2024-09-23,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Add _do_raw functions for 32 & 64 bit types (#119)
+cbb7b3f4270707df17bfa1d03e32644020307322,2024-09-23,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,768.6,Add _do_raw functions for 32 & 64 bit types (#119)
+e72d8272fef23d9cbec3039fd313258be336e514,2024-10-17,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,Add GitHub Actions (#122)
+e72d8272fef23d9cbec3039fd313258be336e514,2024-10-17,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,748.5,Add GitHub Actions (#122)
+af1db190fe740f33e08a0b541146cda85dbd5006,2024-11-04,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,211.7,Automate release process (#124)
+af1db190fe740f33e08a0b541146cda85dbd5006,2024-11-04,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,722.6,Automate release process (#124)
+ee070a852249b19e24450e678feb6d78cf17dbcf,2025-01-25,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,199.1,Auto increment version to 5.1.1
+ee070a852249b19e24450e678feb6d78cf17dbcf,2025-01-25,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Auto increment version to 5.1.1
+2f8e870535279ecc53bedb8a2da654ff62929237,2025-01-25,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,214.1,Fix copy/paste bug in release GH action (#128)
+2f8e870535279ecc53bedb8a2da654ff62929237,2025-01-25,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix copy/paste bug in release GH action (#128)
+66190e9daa603cabe95d99f09fb79b5c186d0417,2025-01-25,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,200.3,Auto increment version to 5.2.0
+66190e9daa603cabe95d99f09fb79b5c186d0417,2025-01-25,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,737.0,Auto increment version to 5.2.0
+552fca81c857853832218ca09cdb0cb79987c9f9,2025-03-07,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.2,Silenced sign-conversion warning
+552fca81c857853832218ca09cdb0cb79987c9f9,2025-03-07,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Silenced sign-conversion warning
+c6b4017091502761162535050c52cd03f5d36fd2,2025-03-15,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.2,Fix check for __umulh/__mulh intrinsics
+c6b4017091502761162535050c52cd03f5d36fd2,2025-03-15,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Fix check for __umulh/__mulh intrinsics
+70d2a450f6ad107c61e0f1c3c275230891ac960a,2025-03-15,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,Define LIBDIVIDE_INLINE as __forceinline for ms compiler
+70d2a450f6ad107c61e0f1c3c275230891ac960a,2025-03-15,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Define LIBDIVIDE_INLINE as __forceinline for ms compiler
+498d751ba7f4d9c0cd48ed1cf21d6ed6639a1006,2025-03-28,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,117.3,Use pragma warning push/pop only with msvc
+498d751ba7f4d9c0cd48ed1cf21d6ed6639a1006,2025-03-28,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Use pragma warning push/pop only with msvc
+5307a324f9c0af61c231246f8a31b0e5fc36a7a2,2025-03-15,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,204.9,Use __builtin_clz/__builtin_clzll implementation for ms compiler
+5307a324f9c0af61c231246f8a31b0e5fc36a7a2,2025-03-15,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Use __builtin_clz/__builtin_clzll implementation for ms compiler
+6fceb1a1a08a0ee3bb01e8968acbf9740268de48,2025-03-31,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,194.5,Merge pull request #137 from kimwalisch/fix_divq_warning
+6fceb1a1a08a0ee3bb01e8968acbf9740268de48,2025-03-31,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,725.7,Merge pull request #137 from kimwalisch/fix_divq_warning
+bbb68f1c7706424c53245a66e063163c1489bcae,2025-04-01,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,202.1,Avoid casting for unrelated types (#140)
+bbb68f1c7706424c53245a66e063163c1489bcae,2025-04-01,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,718.7,Avoid casting for unrelated types (#140)
+c179d8178f1b509921e52508edf4db9ce7ccb3a5,2025-04-03,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Make __builtin_clz/__builtin_clzll constexpr to match gcc/clang (#136)
+c179d8178f1b509921e52508edf4db9ce7ccb3a5,2025-04-03,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Make __builtin_clz/__builtin_clzll constexpr to match gcc/clang (#136)
+31f1e427c81594c193157c30e4f8a755aa07e63c,2025-04-04,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Preserve order of params when calling libdivide_mullhi (#144)
+31f1e427c81594c193157c30e4f8a755aa07e63c,2025-04-04,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Preserve order of params when calling libdivide_mullhi (#144)
+a7b5cde289f7ba2e4de4f6b7849bbab13a898bf4,2025-04-04,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,206.3,Add missing function specifiers to match their declaration (#143)
+a7b5cde289f7ba2e4de4f6b7849bbab13a898bf4,2025-04-04,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,700.9,Add missing function specifiers to match their declaration (#143)
+99fad0357585310a0190fc1f54786ae343550c46,2025-04-04,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,212.3,Simplify LIBDIVIDE_CONSTEXPR check (#142)
+99fad0357585310a0190fc1f54786ae343550c46,2025-04-04,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Simplify LIBDIVIDE_CONSTEXPR check (#142)
+8f8dd49cb761adfb13c2504b3f50d8e9db34f853,2025-05-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,Update libdivide.h to support `-ffreestanding` targets
+8f8dd49cb761adfb13c2504b3f50d8e9db34f853,2025-05-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Update libdivide.h to support `-ffreestanding` targets
+f3029ffb7eeec14e7b3cb35999491b3e31237db7,2025-12-21,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Rename UINT26 section to UINT16 in libdivide.h (#152)
+f3029ffb7eeec14e7b3cb35999491b3e31237db7,2025-12-21,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Rename UINT26 section to UINT16 in libdivide.h (#152)
+2a6440f69aec303e7f30002369a0febd47763a78,2026-02-13,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,190.2,Cleanup `__builtin_clz()` for MSVC (#155)
+2a6440f69aec303e7f30002369a0febd47763a78,2026-02-13,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Cleanup `__builtin_clz()` for MSVC (#155)
+3816ea44bd530253beb76294591dffda258119cd,2026-02-16,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,200.9,Auto increment version to 5.3.0
+3816ea44bd530253beb76294591dffda258119cd,2026-02-16,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Auto increment version to 5.3.0
+c2d2be3f2fc52031f054dac2cc529b0e4e6fbff0,2026-02-24,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.4,Faster remainder computation
+c2d2be3f2fc52031f054dac2cc529b0e4e6fbff0,2026-02-24,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Faster remainder computation
+60c15d9c4035d18762bfd3a0feefe30407eb5858,2026-05-03,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Add ARM SVE support
+60c15d9c4035d18762bfd3a0feefe30407eb5858,2026-05-03,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Add ARM SVE support
+dda2dfb6a68b69903e3980b6fe1191ce5449dffa,2026-05-12,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.5,SVE and SVE2 optimizations (#159)
+dda2dfb6a68b69903e3980b6fe1191ce5449dffa,2026-05-12,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,669.9,SVE and SVE2 optimizations (#159)
+40040eb2b4aea6365942fad2128f1ba1e4c1e550,2026-09-05,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.2,Use predicated negate for SVE signed division (#169)
+40040eb2b4aea6365942fad2128f1ba1e4c1e550,2026-09-05,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.4,Use predicated negate for SVE signed division (#169)
+ea0fb1ad79a116cd561595c930bcaf33147b3e6c,2026-09-06,ok,"64 divisions, libdivide",0.0,0.0,0.0,0,0,115.3,Auto increment version to 5.4.0
+ea0fb1ad79a116cd561595c930bcaf33147b3e6c,2026-09-06,ok,"64 divisions, hardware",0.0,0.0,0.0,0,0,670.5,Auto increment version to 5.4.0

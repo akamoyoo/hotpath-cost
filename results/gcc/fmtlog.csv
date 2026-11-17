@@ -1,0 +1,62 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+a11af3dbff6e863c008df129ff1c7bfec62cc08a,2021-05-03,ok,"logi(int, double)",0.0,0.0,0.0,3,3,20.5,add files
+a11af3dbff6e863c008df129ff1c7bfec62cc08a,2021-05-03,ok,logd below level,0.0,0.0,0.0,0,0,3.5,add files
+b7c370afc90b99e63e9ab6b238f87baefb316e4f,2021-05-03,ok,"logi(int, double)",0.0,0.0,0.0,3,3,19.0,add LICENSE comment
+b7c370afc90b99e63e9ab6b238f87baefb316e4f,2021-05-03,ok,logd below level,0.0,0.0,0.0,0,0,3.5,add LICENSE comment
+c35de4e0dea9c43cd9992abb9f1cba8816df78b1,2021-05-05,ok,"logi(int, double)",0.0,0.0,0.0,3,3,18.9,support windows
+c35de4e0dea9c43cd9992abb9f1cba8816df78b1,2021-05-05,ok,logd below level,0.0,0.0,0.0,0,0,3.5,support windows
+6dd803bba022463954f61c7dcdea238163e4cbf0,2021-05-09,ok,"logi(int, double)",0.0,0.0,0.0,3,3,19.8,fix a potential bug about date going back
+6dd803bba022463954f61c7dcdea238163e4cbf0,2021-05-09,ok,logd below level,0.0,0.0,0.0,0,0,3.5,fix a potential bug about date going back
+692db5eba53a4147402361bca54cc258a0a651f4,2021-05-09,ok,"logi(int, double)",0.0,0.0,0.0,2,2,20.6,optimize static info memory usage; optimize threadbuffer mutex holding time
+692db5eba53a4147402361bca54cc258a0a651f4,2021-05-09,ok,logd below level,0.0,0.0,0.0,0,0,3.5,optimize static info memory usage; optimize threadbuffer mutex holding time
+731633be67128e3d80c1ddd75fac34bc34df9683,2021-05-09,ok,"logi(int, double)",0.0,0.0,0.0,2,2,20.6,"make logId uint32_t instead of int, as I believe it's more elegant to handle"
+731633be67128e3d80c1ddd75fac34bc34df9683,2021-05-09,ok,logd below level,0.0,0.0,0.0,0,0,3.5,"make logId uint32_t instead of int, as I believe it's more elegant to handle"
+239f5a95c7e1fe8a30efb42e288899639e667089,2021-05-09,ok,"logi(int, double)",0.0,0.0,0.0,2,2,16.8,make windows wait more time in tscns::calibrate() as its system time is in 100 ns precision(Linux is 1 ns)
+239f5a95c7e1fe8a30efb42e288899639e667089,2021-05-09,ok,logd below level,0.0,0.0,0.0,0,0,2.5,make windows wait more time in tscns::calibrate() as its system time is in 100 ns precision(Linux is 1 ns)
+519acf2cddbf9b8ff031e064d75a82c0b789d08e,2021-05-10,ok,"logi(int, double)",0.0,0.0,0.0,2,2,20.8,adjust memory fence
+519acf2cddbf9b8ff031e064d75a82c0b789d08e,2021-05-10,ok,logd below level,0.0,0.0,0.0,0,0,3.5,adjust memory fence
+9605ecb4f292cb9722053cdb8d3616ec42ca578c,2021-05-14,build failed,,,,,,,,"support pointer args, including raw ptr, shared_ptr and unique_ptr"
+e1b4f348cdeb54eb737ce9dda2b0b7fbc66f05cd,2021-05-17,build failed,,,,,,,,add setTscGhz
+4dc329a4495a3a1088ddca79eb62a10273a11f61,2021-05-20,build failed,,,,,,,,make ts int64_t instead of uint64_t
+ab0dff04e9160ffde720e29e7861a194697e0371,2021-05-20,ok,"logi(int, double)",0.0,0.0,0.0,2,2,18.9,update fmt submodule version
+ab0dff04e9160ffde720e29e7861a194697e0371,2021-05-20,ok,logd below level,0.0,0.0,0.0,0,0,3.5,update fmt submodule version
+84d50f619e2b62a7d408a229526084f12f986119,2021-05-25,ok,"logi(int, double)",0.0,0.0,0.0,2,2,19.8,add setFlushBufSize()
+84d50f619e2b62a7d408a229526084f12f986119,2021-05-25,ok,logd below level,0.0,0.0,0.0,0,0,3.5,add setFlushBufSize()
+42c8aadb81559be45b5c423e89b919e8c7b90068,2021-07-01,ok,"logi(int, double)",0.0,0.0,0.0,2,2,19.2,upgrade fmtlib to 8.0.0
+42c8aadb81559be45b5c423e89b919e8c7b90068,2021-07-01,ok,logd below level,0.0,0.0,0.0,0,0,3.5,upgrade fmtlib to 8.0.0
+a44cbed55cef7619be3ce717e75fd7f3b205d5b8,2021-07-01,ok,"logi(int, double)",0.0,0.0,0.0,2,2,11.6,upgrade fmt to 8.0.0
+a44cbed55cef7619be3ce717e75fd7f3b205d5b8,2021-07-01,ok,logd below level,0.0,0.0,0.0,0,0,2.5,upgrade fmt to 8.0.0
+cb3799c3fa3c9e77df1670f269d79ee759a4017e,2021-07-06,ok,"logi(int, double)",0.0,0.0,0.0,2,2,10.3,Improve flushing for un-managed fp such as stdout; upgrade fmt to 8.0.1
+cb3799c3fa3c9e77df1670f269d79ee759a4017e,2021-07-06,ok,logd below level,0.0,0.0,0.0,0,0,2.5,Improve flushing for un-managed fp such as stdout; upgrade fmt to 8.0.1
+659fe7bc5e5153285360c84a50c0f5f5f7a97e0a,2021-07-06,ok,"logi(int, double)",0.0,0.0,0.0,2,2,18.8,add ios header
+659fe7bc5e5153285360c84a50c0f5f5f7a97e0a,2021-07-06,ok,logd below level,0.0,0.0,0.0,0,0,3.5,add ios header
+6d90d70a2ca3c20882fbd99eac42205541524714,2021-08-05,ok,"logi(int, double)",0.0,0.0,0.0,2,2,20.2,flush log file when it's closed
+6d90d70a2ca3c20882fbd99eac42205541524714,2021-08-05,ok,logd below level,0.0,0.0,0.0,0,0,3.4,flush log file when it's closed
+42e687c8f6d385545899b063989e0889f08f4188,2021-08-10,ok,"logi(int, double)",0.0,0.0,0.0,2,2,11.2,Major feature: output log in time order among different threads
+42e687c8f6d385545899b063989e0889f08f4188,2021-08-10,ok,logd below level,0.0,0.0,0.0,0,0,2.5,Major feature: output log in time order among different threads
+4c063ab4bb25d37a26cf66dcdcb99b93b81c3a4a,2021-11-05,ok,"logi(int, double)",0.0,0.0,0.0,2,2,10.3,minor change for fixing a clang compiling error
+4c063ab4bb25d37a26cf66dcdcb99b93b81c3a4a,2021-11-05,ok,logd below level,0.0,0.0,0.0,0,0,2.5,minor change for fixing a clang compiling error
+dba71e02f4ef191c50507979bb986c20d2914bf8,2021-11-15,ok,"logi(int, double)",0.0,0.0,0.0,2,2,11.7,fix a vs2019 compiling error
+dba71e02f4ef191c50507979bb986c20d2914bf8,2021-11-15,ok,logd below level,0.0,0.0,0.0,0,0,2.5,fix a vs2019 compiling error
+caa4384860c62d56ad5981481e0c0330cf39ec01,2021-11-29,ok,"logi(int, double)",0.0,0.0,0.0,2,2,17.5,add param logFilePos for logCB
+caa4384860c62d56ad5981481e0c0330cf39ec01,2021-11-29,ok,logd below level,0.0,0.0,0.0,0,0,2.5,add param logFilePos for logCB
+e2b4546fe90a0ea00e196a0ddd45bfbf3ebb9b0a,2021-12-07,ok,"logi(int, double)",0.0,0.0,0.0,2,2,10.0,fix a clang warning
+e2b4546fe90a0ea00e196a0ddd45bfbf3ebb9b0a,2021-12-07,ok,logd below level,0.0,0.0,0.0,0,0,2.5,fix a clang warning
+1d92ad9d994488b3e74fd0b684194eced47ebf6c,2022-01-05,ok,"logi(int, double)",0.0,0.0,0.0,2,2,16.5,optimize latency and code size; upgrade fmtlib to 8.1.0
+1d92ad9d994488b3e74fd0b684194eced47ebf6c,2022-01-05,ok,logd below level,0.0,0.0,0.0,0,0,3.5,optimize latency and code size; upgrade fmtlib to 8.1.0
+686df5aa0446babede8b71ceb3b55cdd632c45d0,2022-01-06,ok,"logi(int, double)",0.0,0.0,0.0,2,2,11.7,fix a compiling error
+686df5aa0446babede8b71ceb3b55cdd632c45d0,2022-01-06,ok,logd below level,0.0,0.0,0.0,0,0,2.2,fix a compiling error
+c87ebeb24fa55820307eef9e9041a3fc9c527103,2022-01-10,ok,"logi(int, double)",0.0,0.0,0.0,2,2,22.1,add noexcept to functions
+c87ebeb24fa55820307eef9e9041a3fc9c527103,2022-01-10,ok,logd below level,0.0,0.0,0.0,0,0,3.5,add noexcept to functions
+d7e66eee3747e33adba37f219fe57c455853d38e,2022-01-13,ok,"logi(int, double)",0.0,0.0,0.0,2,2,21.9,fix an issue on copy aligned objects
+d7e66eee3747e33adba37f219fe57c455853d38e,2022-01-13,ok,logd below level,0.0,0.0,0.0,0,0,3.5,fix an issue on copy aligned objects
+c8ce0e365cbf7e27bc0fda86ae29706915b0408d,2022-01-14,ok,"logi(int, double)",0.0,0.0,0.0,2,2,20.8,relax some use of noexcept
+c8ce0e365cbf7e27bc0fda86ae29706915b0408d,2022-01-14,ok,logd below level,0.0,0.0,0.0,0,0,3.5,relax some use of noexcept
+8aa7fd884d60d8a15b5b1e925a576934c6ff80c2,2022-01-18,ok,"logi(int, double)",0.0,0.0,0.0,2,2,21.7,"make format string type consistent with fmt::format/print, and stop using FMT_STRING"
+8aa7fd884d60d8a15b5b1e925a576934c6ff80c2,2022-01-18,ok,logd below level,0.0,0.0,0.0,0,0,3.5,"make format string type consistent with fmt::format/print, and stop using FMT_STRING"
+bc3dfe4a2498e5eb0e065dc0322771f2e30d983e,2022-01-19,ok,"logi(int, double)",0.0,0.0,0.0,2,2,21.6,fix an bug about FMTLOG_BLOCK
+bc3dfe4a2498e5eb0e065dc0322771f2e30d983e,2022-01-19,ok,logd below level,0.0,0.0,0.0,0,0,3.5,fix an bug about FMTLOG_BLOCK
+ce33b6295388fe088a0b05d99628b0f47aaf23c7,2022-02-07,ok,"logi(int, double)",0.0,0.0,0.0,2,2,21.8,upgrade fmtlib to 8.1.1; Support compile option -fno-exceptions
+ce33b6295388fe088a0b05d99628b0f47aaf23c7,2022-02-07,ok,logd below level,0.0,0.0,0.0,0,0,3.5,upgrade fmtlib to 8.1.1; Support compile option -fno-exceptions
+308b2317d4e9c21d3b203d104007fde127dcdbfa,2025-02-13,ok,"logi(int, double)",0.0,0.0,0.0,2,2,26.3,upgrade fmtlib to 11.1.3
+308b2317d4e9c21d3b203d104007fde127dcdbfa,2025-02-13,ok,logd below level,0.0,0.0,0.0,0,0,2.6,upgrade fmtlib to 11.1.3

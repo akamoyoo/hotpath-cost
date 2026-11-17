@@ -92,7 +92,7 @@ head names the new line.
 ## Reproduce
 
 ```
-./fetch.sh                                   # clone the eighteen libraries into src/ (full history)
+./fetch.sh                                   # clone the libraries into src/ (full history)
 (cd static && cmake -S . -B build -G Ninja -DLLVM_DIR=<llvm>/lib/cmake/llvm -DCMAKE_CXX_COMPILER=<llvm>/bin/clang++ \
    && ninja -C build && FX_LLVM_BIN=<llvm>/bin python3 tests/run_tests.py)     # the static analyser and its tests
 LLVM_BIN=<llvm>/bin CXX_CLANG=<llvm>/bin/clang++ replay/combine.py liquibook 25b0c5ec   # both views

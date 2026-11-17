@@ -1,0 +1,63 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+2cf9095b702f24243ef53707e02acbf9450a41de,2015-02-22,build failed,,,,,,,,initial commit
+e5c6b866efb8d3f10cd8feb72c5bf0f376b2e936,2015-02-24,build failed,,,,,,,,"final tweakings to algorithm, removed floating point dependency"
+0ac8045dcb72342ef3758d6480d7e4b51a663bbd,2015-02-27,build failed,,,,,,,,"small changes to code, moved profiling code"
+6a0cdb51248d8be26934be42cd67d0ff2b351b64,2015-03-02,build failed,,,,,,,,fixed logic bug
+af62b29fad75cdfbacb09fcb83dfcf4471c76846,2015-03-02,build failed,,,,,,,,no need for PDQSORT_USE_MOVE anymore
+0bf37772783c5938d6ef3e6c5217908a78979e84,2015-03-02,build failed,,,,,,,,std: typo
+1f8d16f0b4d15d295ba09631c3f5f02c40b2cc7e,2015-03-02,build failed,,,,,,,,renamed depth to bad_allowed and move conditional
+f292dacb748b89c0a11ab84c726b6968bf612a92,2015-03-03,build failed,,,,,,,,tiny readme and comment update
+9a27f0c4fdf8156a7b83aa15c73173a5ec0e6fff,2015-03-04,build failed,,,,,,,,added license and simplified bench a tiny bit
+2b907cccac9f999eaace0862198815b35769e362,2015-03-16,build failed,,,,,,,,added empty check
+2cfcccb9a40c75534411024f2bfd5e2b9d57986e,2015-04-09,ok,256 uint64,,,,,,,Added missing <functional> include for std::less.,14674.0
+2cfcccb9a40c75534411024f2bfd5e2b9d57986e,2015-04-09,ok,64 double,,,,,,,Added missing <functional> include for std::less.,3211.0
+52079361b758d86cabee3342b42ea6f0b1b69e0c,2015-04-10,ok,256 uint64,,,,,,,Use iter_swap.,14674.0
+52079361b758d86cabee3342b42ea6f0b1b69e0c,2015-04-10,ok,64 double,,,,,,,Use iter_swap.,3211.0
+551be63ce7d0c7bdd4fb2a098363e465895b3d4f,2015-04-11,ok,256 uint64,,,,,,,Fixed decrement before begin.,15410.0
+551be63ce7d0c7bdd4fb2a098363e465895b3d4f,2015-04-11,ok,64 double,,,,,,,Fixed decrement before begin.,3437.0
+ef83eed997ea3c537a8e47fc15d61fb423e14966,2015-04-12,ok,256 uint64,,,,,,,Minor aestethic change.,15410.0
+ef83eed997ea3c537a8e47fc15d61fb423e14966,2015-04-12,ok,64 double,,,,,,,Minor aestethic change.,3437.0
+033279adddc296c27750578ca371086ca05f71b3,2015-04-12,ok,256 uint64,,,,,,,Move limit increment ouf of inner loop.,15410.0
+033279adddc296c27750578ca371086ca05f71b3,2015-04-12,ok,64 double,,,,,,,Move limit increment ouf of inner loop.,3437.0
+f9f942f488e72445dc06e5f26b5902d182dd95cb,2015-08-10,ok,256 uint64,,,,,,,Removed unused typedef.,15410.0
+f9f942f488e72445dc06e5f26b5902d182dd95cb,2015-08-10,ok,64 double,,,,,,,Removed unused typedef.,3437.0
+fd99c13fcfcd3b34fea0e954689cb83c048610d9,2015-08-13,ok,256 uint64,,,,,,,Spelling error in comment.,15410.0
+fd99c13fcfcd3b34fea0e954689cb83c048610d9,2015-08-13,ok,64 double,,,,,,,Spelling error in comment.,3437.0
+32e4195b0db6b79d47f70b5012abbb5f25d89bbe,2015-08-16,ok,256 uint64,,,,,,,Spelling error in comment.,15410.0
+32e4195b0db6b79d47f70b5012abbb5f25d89bbe,2015-08-16,ok,64 double,,,,,,,Spelling error in comment.,3437.0
+aae88a49ec9ae59728e82e1abc4f512c6479d957,2015-09-11,ok,256 uint64,,,,,,,Even more spelling.,15410.0
+aae88a49ec9ae59728e82e1abc4f512c6479d957,2015-09-11,ok,64 double,,,,,,,Even more spelling.,3437.0
+c4626f9901616c51f5a2cf569d9bb38f58753022,2016-05-14,ok,256 uint64,,,,,,,"Fixed the tiniest performance bug, and slightly cleaner code.",15592.0
+c4626f9901616c51f5a2cf569d9bb38f58753022,2016-05-14,ok,64 double,,,,,,,"Fixed the tiniest performance bug, and slightly cleaner code.",3462.0
+19cc8e336bdba9b01f2ca56fab7595207c48ec5e,2016-05-14,ok,256 uint64,,,,,,,Fixed tiny documentation error.,15592.0
+19cc8e336bdba9b01f2ca56fab7595207c48ec5e,2016-05-14,ok,64 double,,,,,,,Fixed tiny documentation error.,3462.0
+99b6afbeb375b2538ae020195392dc3da743167e,2016-07-05,build failed,,,,,,,,Experimental promising version using block quicksort.
+488547d91465bd03c2fbb5cc4fdcb05543c2b7b0,2016-07-05,build failed,,,,,,,,Forgot inline.
+ce79eb75c35442e0ac681b2408d3106a8498a6e3,2016-07-09,ok,256 uint64,,,,,,,Better handling of final block and std::uintptr_t.,19048.0
+ce79eb75c35442e0ac681b2408d3106a8498a6e3,2016-07-09,ok,64 double,,,,,,,Better handling of final block and std::uintptr_t.,3600.0
+0aa9e3317c3e53d4ef8cfccfd83db413d245978c,2016-07-27,ok,256 uint64,,,,,,,Even better handling of final elements.,23369.0
+0aa9e3317c3e53d4ef8cfccfd83db413d245978c,2016-07-27,ok,64 double,,,,,,,Even better handling of final elements.,4691.0
+8f9873b93787d492db6f00345c87f70f62afc2dd,2016-08-26,ok,256 uint64,,,,,,,Unsigned char as loop variables to silence warning int -> unsigned char.,25356.0
+8f9873b93787d492db6f00345c87f70f62afc2dd,2016-08-26,ok,64 double,,,,,,,Unsigned char as loop variables to silence warning int -> unsigned char.,5027.0
+58d53979c104c2ce4ed2a20f2ad370cf573ef0d8,2016-12-14,ok,256 uint64,,,,,,,"Updated pdqsort iterator handling to be more efficient with std::deque, and added Tukey's ninther.",24889.0
+58d53979c104c2ce4ed2a20f2ad370cf573ef0d8,2016-12-14,ok,64 double,,,,,,,"Updated pdqsort iterator handling to be more efficient with std::deque, and added Tukey's ninther.",4764.0
+70087ef00cd6c371c76e48f881296275802e79d2,2016-12-14,ok,256 uint64,,,,,,,Micro-optimization for offsets_r.,25338.0
+70087ef00cd6c371c76e48f881296275802e79d2,2016-12-14,ok,64 double,,,,,,,Micro-optimization for offsets_r.,4845.0
+0ed2f14b69b404829dcbcef6f17206a94c98ed2d,2016-12-30,ok,256 uint64,,,,,,,Micro-optimization for comparison operators that have a branch.,26251.0
+0ed2f14b69b404829dcbcef6f17206a94c98ed2d,2016-12-30,ok,64 double,,,,,,,Micro-optimization for comparison operators that have a branch.,4847.0
+a0ff43294953e726afce2f06a9fe5b06958963d0,2017-01-27,ok,256 uint64,,,,,,,"We now only use branchless partitioning for branchless comparison operators. If this is not detected automatically, call pdqsort_branchless.",24238.0
+a0ff43294953e726afce2f06a9fe5b06958963d0,2017-01-27,ok,64 double,,,,,,,"We now only use branchless partitioning for branchless comparison operators. If this is not detected automatically, call pdqsort_branchless.",4845.0
+9828e2d0594719bd0e9245387d5da29621bc4834,2017-02-22,ok,256 uint64,,,,,,,Always include <iterator>.,24238.0
+9828e2d0594719bd0e9245387d5da29621bc4834,2017-02-22,ok,64 double,,,,,,,Always include <iterator>.,4845.0
+478d87dbac57695ac98e8116eef00c9f56ef33a8,2017-02-22,ok,256 uint64,,,,,,,Don't double include <iterator>.,24238.0
+478d87dbac57695ac98e8116eef00c9f56ef33a8,2017-02-22,ok,64 double,,,,,,,Don't double include <iterator>.,4845.0
+699937e64678e6575dec6e63371a035ad376653c,2017-05-27,ok,256 uint64,,,,,,,Fix for non default constructible Iter.,24237.0
+699937e64678e6575dec6e63371a035ad376653c,2017-05-27,ok,64 double,,,,,,,Fix for non default constructible Iter.,4845.0
+fb061b031fb1aba956e28d0d8b5d4fde81b62494,2017-06-18,ok,256 uint64,,,,,,,Some compilers without C++11 define UINTPTR_MAX but don't actually provide std::uintptr_t.,24237.0
+fb061b031fb1aba956e28d0d8b5d4fde81b62494,2017-06-18,ok,64 double,,,,,,,Some compilers without C++11 define UINTPTR_MAX but don't actually provide std::uintptr_t.,4845.0
+978bc36a9bd4143a54b2551cfd9ce8a6afd6d04c,2020-02-09,ok,256 uint64,,,,,,,Fix conversion warnings.,24033.0
+978bc36a9bd4143a54b2551cfd9ce8a6afd6d04c,2020-02-09,ok,64 double,,,,,,,Fix conversion warnings.,4808.0
+2dc2bbdcb7a090e28a626c178ea1b31a51ca0485,2021-03-14,ok,256 uint64,,,,,,,Fixed overflow and simplified block partition logic.,21911.0
+2dc2bbdcb7a090e28a626c178ea1b31a51ca0485,2021-03-14,ok,64 double,,,,,,,Fixed overflow and simplified block partition logic.,4482.0
+b1ef26a55cdb60d236a5cb199c4234c704f46726,2021-03-14,ok,256 uint64,,,,,,,Updated license year.,21911.0
+b1ef26a55cdb60d236a5cb199c4234c704f46726,2021-03-14,ok,64 double,,,,,,,Updated license year.,4482.0

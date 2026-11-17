@@ -1,6 +1,6 @@
 # Cases
 
-The four cases behind the summary in the [README](../README.md), and the static and run-time views of the same commits. Paths are relative to the repository root.
+The five cases behind the summary in the [README](../README.md), and the static and run-time views of the same commits. Paths are relative to the repository root.
 
 ## Case 1: Liquibook 2.0.0 allocates twice more per order
 
@@ -168,6 +168,39 @@ transfers dominate, and the wall time was the same within run-to-run variation (
 versions). In one of the two complete runs of the script, two of the clang rows (patched, and bypass
 off) came out about twice as slow as in every other run of the same binaries. The table is from the
 run that agrees with fifteen separate runs of each binary.
+
+## Case 5: Eigen 5's 4x4 Cholesky solve is 1.5x slower with GCC
+
+Found by the instruction replay, not by a benchmark of releases. Eigen's history, sampled every 100th
+commit and bisected on instructions per call:
+
+```
+28c3b26d 2025-04-12 masked load/store framework   (from cebe0911)
+    4x4 Cholesky solve: instructions 548 -> 732 (+34%)
+```
+
+Timed alternately, nine rounds on one core, `x = A.llt().solve(b)` for a `Matrix4d` (`cases/eigen/run.sh`):
+
+| | before (`cebe0911`) | after (`28c3b26d`) | ratio |
+|---|---:|---:|---:|
+| GCC 13 `-O2` | 206.0 ns | 307.4 ns | 1.49 |
+| GCC 15 `-O2` | 159.9 ns | 224.0 ns | 1.40 |
+| clang 21 `-O2` | 204.5 ns | 226.2 ns | 1.11 |
+
+(The absolute times differ between runs because the machine was not idle; the two commits were always
+timed in alternation, so the ratios are comparable.) Between the releases a user would upgrade across,
+3.4.1 to 5.0.1, the same operation is 1.48x slower with GCC (149.9 against 222.1 ns) and 1.08x with clang,
+while a 256-element dot product became 22 % faster. At the latest commit it is still 1.30x slower than
+before the change with GCC.
+
+`gap.py eigen eg_solve4 --commits cebe0911,28c3b26d` shows where: the solve's code grows from 361 to 540
+instructions and 17 to 52 256-bit vector instructions, and a new out-of-line function appears,
+`dense_assignment_loop_impl<...>` for the update `A.col(k).tail(rs) -= A.bottomLeftCorner(rs, k) *
+A.row(k).head(k).transpose()` of the in-place factorisation. The blocks are of a fixed 4x4 matrix but
+have run-time sizes of 1 to 3 elements. After the change, that update is a generic loop, not inlined,
+built on the new masked-segment loads and stores (`Core/arch/AVX/PacketMath.h`); before it, the whole
+solve was inlined into 361 instructions. Probably the masking costs more than it saves on vectors this
+short; that was not measured separately. Not reported upstream yet (Eigen's tracker is on GitLab).
 
 ## Static and run-time, side by side
 

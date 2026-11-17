@@ -1,4 +1,4 @@
-commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
 b00053247ceb7fc3d95bbdc9b250ddaa4436313d,2018-02-10,build failed,,,,,,,,Merge the std branch
 acb469ae2e18bf35a56f534e53a680890948bfbd,2018-03-12,build failed,,,,,,,,Fixed UTF8/16 converters to support empty string input
 ca31ca13f1893e8f79bff0336b07cef392e96650,2018-04-30,build failed,,,,,,,,Fixed arg_formatter_base::write_pointer to not mutate the format specs.
