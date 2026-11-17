@@ -1,7 +1,7 @@
 #!/bin/bash
 # hffix at its latest commit: the original header and three patched variants (patch.py), each built with
 # every compiler at -O2 and -O3. Checks that every variant writes the same bytes as the original
-# (same_bytes.cpp), then times the benchmark of replay/bench/hffix.cpp three times on one core.
+# (same_bytes.cpp), then times the workload replay/workloads/hffix.cpp three times on one core.
 #   cases/hffix/run.sh [CORE]          compilers from CXX_GCC, CXX_GCC15, CXX_CLANG
 set -eu
 cd "$(dirname "$0")/../.."
@@ -20,7 +20,7 @@ for cc in gcc13 gcc15 clang21; do for v in orig inline fast both; do
 done; done
 echo "== timing (ns per call, median of 3 runs on core $CORE)"
 for cc in gcc13 gcc15 clang21; do for o in O2 O3; do for v in orig inline fast both; do
-  ${CXXS[$cc]} -std=c++17 -$o -DNDEBUG -pthread -march=x86-64-v3 -w -I"$W/$v" -Ireplay/drivers/hffix replay/bench/hffix.cpp -o "$W/b-$cc-$o-$v" -ldl
+  ${CXXS[$cc]} -std=c++17 -$o -DNDEBUG -pthread -march=x86-64-v3 -w -I"$W/$v" -Ireplay/drivers/hffix replay/workloads/hffix.cpp -o "$W/b-$cc-$o-$v" -ldl
 done; done; done
 for r in 1 2 3; do for b in "$W"/b-*; do
   taskset -c "$CORE" "$b" | python3 -c "import sys,json,os; [print(os.path.basename('$b'), d['op'], d['ns']) for d in map(json.loads, sys.stdin)]"

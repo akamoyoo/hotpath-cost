@@ -1,6 +1,6 @@
 # Cases
 
-The six cases behind the summary in the [README](../README.md), and the static and run-time views of the same commits. Paths are relative to the repository root.
+The six findings behind the summary in the [README](../README.md), with the commands that produce them, and the static and run-time views of the same commits. Paths are relative to the repository root.
 
 ## Case 1: Liquibook 2.0.0 allocates twice more per order
 
@@ -74,7 +74,7 @@ to v1.17.0).
 ## Case 3: the same FIX encoder, 2.8x apart between compilers
 
 hffix writes and reads FIX messages without allocating, and its counts never changed. Its latency
-depends strongly on the compiler. Encoding one New Order Single message (`replay/bench/hffix.cpp`),
+depends strongly on the compiler. Encoding one New Order Single message (`replay/workloads/hffix.cpp`),
 ns per call, median of three interleaved runs on one idle core:
 
 | | GCC 13 | GCC 15 | clang 21 |
@@ -171,7 +171,7 @@ run that agrees with fifteen separate runs of each binary.
 
 ## Case 5: Eigen 5's 4x4 Cholesky solve is 1.5x slower with GCC
 
-Found by the instruction replay, not by a benchmark of releases. Eigen's history, sampled every 100th
+Found by the instruction replay, not by timing releases. Eigen's history, sampled every 100th
 commit and bisected on instructions per call:
 
 ```
@@ -205,8 +205,8 @@ short; that was not measured separately. Not reported upstream yet (Eigen's trac
 ## Case 6: a random order flow reaches the paths, and finds an out-of-bounds write in Liquibook
 
 The static analysis listed 21 allocation sites, not marked cold, reachable from adding an order to
-Liquibook's book with conditions. The fixed benchmark (resting orders, added and cancelled) reaches 5.
-An exploration benchmark (`replay/bench/liquibook_explore.cpp`) replays a seeded random flow instead:
+Liquibook's book with conditions. The fixed workload (resting orders, added and cancelled) reaches 5.
+An exploration workload (`replay/workloads/liquibook_explore.cpp`) replays a seeded random flow instead:
 resting and crossing limit orders, market orders, stop orders, all-or-none, immediate-or-cancel and
 fill-or-kill orders, cancels and replaces. `replay/combine.py liquibook-explore 2427613b32`:
 
@@ -242,14 +242,14 @@ allocation and the exploration was looking for allocations the static analysis p
 
 ## Static and run-time, side by side
 
-The counts say what a benchmark does; they cannot see a path it does not take. A static analysis sees
+The counts say what a workload does; they cannot see a path it does not take. A static analysis sees
 every path but can only say "may". `replay/combine.py` runs both on the same commit, with clang for
-both: `fn-effects` (`static/`) on the driver, and the benchmark
+both: `fn-effects` (`static/`) on the driver, and the workload
 with call-stack recording. It then matches the two lists of allocation and lock sites per entry
 function, in three groups:
 
 - **exercised**: both agree, with the run-time count per call;
-- **not exercised**: reachable according to the static analysis, never reached by the benchmark, with
+- **not exercised**: reachable according to the static analysis, never reached by the workload, with
   the analysis' hot/cold tag;
 - **static miss**: reached at run time, absent from the static result.
 
@@ -271,10 +271,10 @@ after the fix (dd5ada8)
 ```
 
 The static list is the same before and after; the fix moved one site from "exercised" to "not
-exercised". The 22 hot sites the benchmark never reaches are on paths a benchmark of resting orders
+exercised". The 22 hot sites the workload never reaches are on paths a workload of resting orders
 does not take: stop orders (`order_book.h:557-580`), matching of all-or-none orders (`769-919`),
 creating a trade (`1008`), and growth of the callback vector beyond its reserved 16 entries
-(`397-427`). Each is a place where an order allocates in production that this benchmark would not
+(`397-427`). Each is a place where an order allocates in production that this workload would not
 show.
 
 concurrentqueue, `try_enqueue` without a token (latest commit): all four run-time events of the first

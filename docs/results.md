@@ -1,6 +1,6 @@
-# Results
+# The libraries
 
-All libraries, then the compiler matrix. Paths are relative to the repository root. Per-commit data: `results/<build>/<library>.csv`; the matrix as Markdown: `results/matrix.md`.
+What the tool reported for every library it was applied to, then the compiler matrix. Paths are relative to the repository root. Per-commit data: `results/<build>/<library>.csv`; the matrix as Markdown: `results/matrix.md`.
 
 ## What was found
 
@@ -19,7 +19,7 @@ bisected. Built with GCC 13.3, `-O2 -march=x86-64-v3`. Per-commit data:
 | [simdjson](https://github.com/simdjson/simdjson) | 53 of 272, bisected | 3 | first parse with a new parser: 6, then 10, then 11, then 6 allocations again (buffers); 0 per parse after it throughout |
 | [quill](https://github.com/odygrd/quill) (logger) | 125 of 333 | 0 | `LOG_INFO`: 0 allocations, 0 locks, first call included |
 | [fmt](https://github.com/fmtlib/fmt) | 61 of 3,407 | 0 | `format_to(memory_buffer)`: 0; `fmt::format` of a 41-character string: 1 (the `std::string` itself) |
-| [atomic_queue](https://github.com/max0x7ba/atomic_queue) | 116 of 119 | 0 | 0 and 0 (`3ae8dff` crashes the benchmark) |
+| [atomic_queue](https://github.com/max0x7ba/atomic_queue) | 116 of 119 | 0 | 0 and 0 (`3ae8dff` crashes the workload) |
 | [SPSCQueue](https://github.com/rigtorp/SPSCQueue) | 22 of 22 | 0 | 0 and 0 |
 | [MPMCQueue](https://github.com/rigtorp/MPMCQueue) | 7 of 7 | 0 | 0 and 0; but GCC's build is 1.7x slower than clang's on the uncontended path, fixed by a four-line change (case 4) |
 | [hffix](https://github.com/jamesdbrock/hffix) (FIX) | 15 of 69 | 0 | 0 and 0; but the encoder is 2.8x apart between compilers and levels (case 3) |
@@ -43,7 +43,7 @@ bisected. Built with GCC 13.3, `-O2 -march=x86-64-v3`. Per-commit data:
 | [cereal](https://github.com/USCiLab/cereal) (serialization) | 17 of 143, sampled | 1 | through `std::stringstream`: 2 allocations to serialize, 1 to deserialize; 4 -> 2 for serializing in 2013 |
 | [xsimd](https://github.com/xtensor-stack/xsimd) (SIMD) | 15 of 859, sampled | 0 | 0 and 0 |
 
-"Measured" counts the commits at which the fixed benchmark driver compiles and runs; older versions
+"Measured" counts the commits at which the fixed workload compiles and runs; older versions
 with a different API are not measured. The quiet rows are results too: these libraries keep their
 hot path at zero allocations and locks, and over every measured commit nothing slipped in. For the
 numerical and hashing libraries the counts are zero by design; what differs there is time, which the

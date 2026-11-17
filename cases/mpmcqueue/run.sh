@@ -2,7 +2,7 @@
 # rigtorp/MPMCQueue at its latest commit, original and patched (patch.py), with every compiler, plus
 # clang without its 64-bit division bypass (-Xclang -target-feature -Xclang -idivq-to-divl). Checks the
 # patched queue with a 4x4-thread stress test, prints the divisions in try_push, and times
-# replay/bench/mpmcqueue.cpp three times on one core.
+# replay/workloads/mpmcqueue.cpp three times on one core.
 #   cases/mpmcqueue/run.sh [CORE]          compilers from CXX_GCC, CXX_GCC15, CXX_CLANG
 set -eu
 cd "$(dirname "$0")/../.."
@@ -17,9 +17,9 @@ for cc in gcc13 clang21; do for v in orig patched; do
   ${CXXS[$cc]} $F -I"$W/$v" cases/mpmcqueue/stress.cpp -o "$W/st"; echo "$cc $v: $("$W/st")"
 done; done
 for cc in gcc13 gcc15 clang21; do for v in orig patched; do
-  ${CXXS[$cc]} $F -I"$W/$v" -Ireplay/drivers/mpmcqueue replay/bench/mpmcqueue.cpp -o "$W/b-$cc-$v" -ldl
+  ${CXXS[$cc]} $F -I"$W/$v" -Ireplay/drivers/mpmcqueue replay/workloads/mpmcqueue.cpp -o "$W/b-$cc-$v" -ldl
 done; done
-${CXXS[clang21]} $F -Xclang -target-feature -Xclang -idivq-to-divl -I"$W/orig" -Ireplay/drivers/mpmcqueue replay/bench/mpmcqueue.cpp -o "$W/b-clang21-orig-nobypass" -ldl
+${CXXS[clang21]} $F -Xclang -target-feature -Xclang -idivq-to-divl -I"$W/orig" -Ireplay/drivers/mpmcqueue replay/workloads/mpmcqueue.cpp -o "$W/b-clang21-orig-nobypass" -ldl
 echo "== divisions in try_push (div instructions; clang's bypass adds a 32-bit div next to each 64-bit one)"
 for b in "$W"/b-*; do
   echo "$(basename "$b"): $(objdump -d --no-show-raw-insn "$b" | awk '/<_ZN8hp_entry13mpmc_try_push/{p=1} p&&/^$/{exit} p' | grep -c div)"

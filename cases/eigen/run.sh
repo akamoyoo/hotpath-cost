@@ -1,5 +1,5 @@
 #!/bin/bash
-# Eigen's 4x4 Cholesky solve (replay/bench/eigen.cpp, eg_solve4): instructions per call around the
+# Eigen's 4x4 Cholesky solve (replay/workloads/eigen.cpp, eg_solve4): instructions per call around the
 # commit that introduced the masked load/store framework, the time of the two commits and of the two
 # releases under each compiler, and the machine-code facts of the two commits.
 #   cases/eigen/run.sh [CORE]    (VALGRIND, VALGRIND_INC, CXX_GCC15, CXX_CLANG as for replay/)

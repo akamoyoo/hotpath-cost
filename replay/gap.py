@@ -5,7 +5,7 @@
   gap.py PROJECT ENTRY --commits A,B [--builds gcc:-O2]      the same facts for two commits, one build
 
 ENTRY is a substring of the entry function's name (for example `fix_write_new_order`). For each build
-the benchmark is compiled at the commit (default: the latest library commit) and disassembled. For the
+the workload is compiled at the commit (default: the latest library commit) and disassembled. For the
 entry and every function of the program it reaches by direct calls, the tool counts instructions,
 call sites, divisions, 256-bit vector instructions and loops (backward jumps), and lists the functions
 that stay out of line. The median ns of the compiler matrix is shown when replay/matrix.sh has run.

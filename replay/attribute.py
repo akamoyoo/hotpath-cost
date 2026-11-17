@@ -3,7 +3,7 @@
 
   attribute.py PROJECT COMMIT [--cc gcc|gcc15|clang] [--all-frames] [--json]
 
-Builds the benchmark at COMMIT with -g, runs every operation with call-stack recording on
+Builds the workload at COMMIT with -g, runs every operation with call-stack recording on
 (COUNTS_TRACE=1): its first call, then 1000 more calls after the timed loop. Prints each distinct stack
 with its count per call, symbolized with addr2line (inlined frames included). Standard-library frames
 are left out unless --all-frames is given. --json prints the events with every frame instead.
@@ -13,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import replay as rp
 
-SKIP = ("/c++/", "bits/", "counts.h", "bench_common.h", "libc-start", "csu/", "??:")
+SKIP = ("/c++/", "bits/", "counts.h", "workload.h", "libc-start", "csu/", "??:")
 
 def trace(proj, h, cc="gcc"):
     """Events of one traced run: dicts with op, phase ('first call' or 'steady state'), kind ('alloc' or
@@ -22,7 +22,7 @@ def trace(proj, h, cc="gcc"):
     full = subprocess.run(["git", "-C", str(rp.TOP / "src" / proj), "rev-parse", h], capture_output=True, text=True, check=True).stdout.strip()
     events = []
     with tempfile.TemporaryDirectory() as t:
-        t = Path(t); exe = t / "_bench_exe"
+        t = Path(t); exe = t / "_workload_exe"
         b = rp.build(proj, cc, full, t, exe, extra=("-g",))
         if b.returncode: raise RuntimeError(b.stderr[:3000])
         cmd = ["taskset", "-c", ",".join(map(str, rp.CORES[:rp.P[proj].get("cores", 1)])), str(exe)]

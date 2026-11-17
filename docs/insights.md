@@ -20,13 +20,13 @@ difference in the code. Timing has no such property:
 - Instruction counts of the same build repeat exactly: fast_float's four parses took 155, 97, 239 and
   198 instructions in each of three runs.
 
-Exactness has one limit: it holds for work that the calling thread does itself. In a benchmark with
+Exactness has one limit: it holds for work that the calling thread does itself. In a workload with
 a worker thread (Taskflow's executor), frees counted on the calling thread vary between runs of the
 same build, from 1.4 to 2.8 per call, because either thread may drop the last reference first. A first
 replay of Taskflow's history reported 260 "changes", nearly all of them that. Allocations and locks
 on the calling thread did repeat (with a rare 3.99 instead of 4.00 locks per call), and without frees
 the history shows 20 changes, which match their commits ("removed the waiter vector in
-AtomicNotifier": one lock fewer per call). The replay no longer compares frees when the benchmark has
+AtomicNotifier": one lock fewer per call). The replay no longer compares frees when the workload has
 another thread.
 
 So the replay finds changes with counts and puts a price on them by timing only the two commits
@@ -99,10 +99,10 @@ both before and after the fix that removed an allocation from every order: the f
 call and only makes it a no-op. The run-time count is the only thing that tells the versions apart
 (4 against 2 allocations per add+cancel).
 
-The run-time count sees only the paths the benchmark takes. For the same Liquibook operation, the
-static analysis lists 22 sites, not marked cold, that the benchmark never reaches: stop orders,
+The run-time count sees only the paths the workload takes. For the same Liquibook operation, the
+static analysis lists 22 sites, not marked cold, that the workload never reaches: stop orders,
 matching of all-or-none orders, trade creation and growth of the callback vector. Each is a place
-where an order allocates in production that the benchmark does not show.
+where an order allocates in production that the workload does not show.
 
 Matching the two is where the work is (`replay/combine.py`). A first version matched only the
 innermost frame of each run-time stack and reported two "static misses" in concurrentqueue that were
@@ -110,11 +110,11 @@ not misses: the static analysis records an inlined callee's site at its caller's
 run-time stack had lost a frame to a tail call. With those rules, every allocation and lock seen at
 run time in the measured Liquibook and concurrentqueue operations matches a static site.
 
-## 6. The static view tells the benchmark where to go
+## 6. The static view tells the workload where to go
 
-The list of sites a benchmark never reaches is a list of targets. For Liquibook, a seeded random order
+The list of sites a workload never reaches is a list of targets. For Liquibook, a seeded random order
 flow written to reach them (all order types, cancels and replaces, every action prepared before
-measurement) exercised 13 of the 21 sites not marked cold, against 5 for the fixed benchmark; the rest
+measurement) exercised 13 of the 21 sites not marked cold, against 5 for the fixed workload; the rest
 were the growth of a vector beyond its reserved size and an error path. It also found a bug the tool was
 not looking for: one of the exercised "allocations" was `__cxa_allocate_exception`, an exception thrown
 inside the book during ordinary order flow. Reduced to ten orders and traced, it was an out-of-bounds

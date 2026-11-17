@@ -56,7 +56,7 @@ def main():
                 print(f"{h[:8]} {date} {subj[:80]}   (from {ph[:8]})")
                 print("\n".join(lines))
         prev = (h, cur)
-    if "free" not in fields: print(f"(frees not compared: the benchmark runs another thread, see replay.compared_fields)")
+    if "free" not in fields: print(f"(frees not compared: the workload runs another thread, see replay.compared_fields)")
     print(f"{proj}: {len(order)} library commits; measured {n_ok} (from {first[1] if first else '-'} to {last[1] if last else '-'}), "
           f"build failed {n_bfail}, run failed {n_rfail}; {n_chg} measured commits changed {'instructions' if instr else 'a count'}")
     if last and instr:

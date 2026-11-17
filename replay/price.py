@@ -3,7 +3,7 @@
 
   price.py PROJECT A B [--cc gcc|gcc15|clang] [--rounds N] [--core C]
 
-Builds the benchmark at commits A and B, then runs them alternately (A, B, A, B, ...) for N rounds
+Builds the workload at commits A and B, then runs them alternately (A, B, A, B, ...) for N rounds
 (default 5) pinned to one core, and prints per operation the median ns of each, the spread between
 rounds, and the ratio B/A. Run it on an otherwise idle machine, on a core whose hyperthread sibling is
 idle: the counts and instruction metrics find a change; this tells whether it costs time.

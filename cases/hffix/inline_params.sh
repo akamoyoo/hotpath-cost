@@ -12,7 +12,7 @@ ALL="--param=max-inline-insns-auto=30 --param=early-inlining-insns=14 --param=in
 V=("-O2" "-O2 --param=max-inline-insns-auto=30" "-O2 --param=early-inlining-insns=14" "-O2 --param=inline-min-speedup=15"
    "-O2 --param=max-inline-insns-single=200" "-O2 --param=inline-heuristics-hint-percent=600" "-O2 $ALL" "-O3")
 for i in "${!V[@]}"; do
-  $CXX -std=c++17 ${V[$i]} -DNDEBUG -pthread -march=x86-64-v3 -w -I"$W/include" -Ireplay/drivers/hffix replay/bench/hffix.cpp -o "$W/b$i" -ldl
+  $CXX -std=c++17 ${V[$i]} -DNDEBUG -pthread -march=x86-64-v3 -w -I"$W/include" -Ireplay/drivers/hffix replay/workloads/hffix.cpp -o "$W/b$i" -ldl
 done
 for r in 1 2 3; do for i in "${!V[@]}"; do
   echo "$i $(taskset -c "$CORE" "$W/b$i" | head -1 | python3 -c 'import sys,json;print(json.loads(sys.stdin.read())["ns"])')"

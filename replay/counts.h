@@ -1,5 +1,5 @@
 // Per-thread counts of heap operations and mutex acquisitions, for counting what one library operation
-// does. Include in exactly one translation unit of a benchmark executable: the definitions below replace
+// does. Include in exactly one translation unit of a workload executable: the definitions below replace
 // glibc's malloc family and pthread_mutex_lock for the whole process (libstdc++'s operator new included).
 #pragma once
 #include <dlfcn.h>

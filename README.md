@@ -1,15 +1,28 @@
 # hotpath-cost
 
-**What does the hot path of a C++ library cost: which allocations and locks can it reach, how many does
-one call actually perform, at which commit did that change, and how fast is it under each compiler?**
+**An analysis tool for the hot paths of C++ code.** Point it at an operation that has to be cheap
+(adding an order, logging a message, parsing a quote, pushing to a queue) and it answers:
+
+- **What can it do?** Every allocation, lock, system call and throw the operation can reach, through
+  everything it calls, with the call chain, from a static analysis of the whole program on LLVM IR.
+  No annotations.
+- **What does it do?** How many allocations and locks one call actually performs, counted exactly,
+  and the source line each one comes from.
+- **When did that change?** The commit, found by replaying the library's history and bisecting on
+  these exact counts, or on the number of instructions a call executes.
+- **What does the workload miss?** The paths the static analysis can reach and the run-time view never
+  saw, and a random exploration that goes after them.
+- **Why is it faster with another compiler?** The machine-code facts behind a gap between GCC and clang
+  or `-O2` and `-O3`: helpers left out of line, extra divisions, vector code in one build only.
 
 A refactoring, a dependency update or a compiler upgrade can add an allocation or a lock to a hot path,
-or make it slower. It passes review and tests, and timing every commit is too noisy to see it. This
-repository measures it over the whole history of real libraries, and is built on what that taught us.
+or make it slower. It passes review and tests, and timing every commit is too noisy to see it. The
+tool works on existing code, unmodified, and every answer it gives names the commit and the line.
 
-## What we learned
+## What we learned building it
 
-Over 17,133 commits of 29 open-source low-latency and numerical C++ libraries ([evidence](docs/insights.md)):
+The tool was applied to 17,133 commits of 29 open-source low-latency and numerical C++ libraries, and
+each of these lessons changed how it works ([evidence](docs/insights.md)):
 
 1. **Count, don't time.** Allocations, locks and executed instructions per call are exact and
    repeat on every run; per-commit timings jumped 2x between builds with identical machine code.
@@ -23,30 +36,29 @@ Over 17,133 commits of 29 open-source low-latency and numerical C++ libraries ([
    be timed with every compiler, because a fix for one compiler can slow another.
 5. **The static and the run-time view each see what the other cannot.** Only counts told apart two
    Liquibook versions that may both allocate; only the static view named the 22 allocating paths that
-   the benchmark never took.
-6. **The static view tells the benchmark where to go.** A random order flow written to reach the
+   the workload never took.
+6. **The static view tells the workload where to go.** A random order flow written to reach the
    sites the analysis listed raised Liquibook's coverage from 5 to 13 of 21, and turned up a
    memory-corruption bug on the way.
 7. **Costs enter through refactorings, come back, and stay unreleased.** A lock removed in 2016 came
    back for six releases; an extra allocation per order is in a library's last release; none was
    caught by tests.
 
-## The tool
+## How it is organised
 
-- **`static/`: what can happen.** `fn-effects`, an analyser on LLVM, infers for every function,
-  without annotations, whether it may or always allocates, locks, enters the kernel or throws,
-  counting everything it calls ([static/README.md](static/README.md)).
-- **`replay/`: what does happen, commit by commit.** A fixed benchmark per library, built at every
-  commit (or a sample, then bisected): allocations, frees and mutex locks per call (`replay.py`),
-  executed instructions per call under callgrind (`--metric instr`), the line each event comes from
-  (`attribute.py`), and the price of a change (`price.py`).
-- **Compilers.** Latency under GCC 13, GCC 15 and clang 21 at `-O2` and `-O3` (`matrix.sh`), and the
-  machine-code facts behind a gap: out-of-line helpers, divisions, vector instructions (`gap.py`).
-- **Both views together.** `combine.py` matches the static sites of one commit against its run-time
-  stacks: exercised, never exercised, or missed by the analysis.
-- **Exploration.** An optional benchmark per library replays a seeded random sequence of realistic
-  operations, so that `combine.py` can show how many of the static sites it reaches
-  (`replay/bench/liquibook_explore.cpp`).
+- **`static/`**: `fn-effects`, the LLVM-based analyser: for every function, whether it may or always
+  allocates, locks, enters the kernel or throws, and what each answer rests on
+  ([static/README.md](static/README.md)).
+- **`replay/`**: the run-time half. A small workload per library calls its hot operations through
+  out-of-line entry functions. `replay.py` builds it at any commit and counts allocations, frees and
+  locks per call (or, with `--metric instr`, instructions per call under callgrind); `diff.py` and
+  `--refine` find and bisect changes; `attribute.py` names the line; `price.py` times two commits
+  against each other.
+- **`replay/combine.py`**: both views of one commit, matched site by site: exercised, never exercised,
+  or missed by the analysis. Exploration workloads (`replay/workloads/<lib>_explore.cpp`) replay a
+  seeded random sequence of realistic operations to reach what a fixed workload does not.
+- **`replay/gap.py`** and **`replay/matrix.sh`**: compiler and level comparisons.
+- **[AGENTS.md](AGENTS.md)**: how a coding agent runs the tool and reads its results.
 
 ## Example
 
@@ -70,10 +82,10 @@ $ replay/combine.py liquibook dd5ada83          # the fix, never released
 ```
 
 The static list is the same before and after: both versions *may* allocate in `callback_now`. Only the
-run-time count tells them apart. In the other direction, the 22 hot sites that this benchmark never
+run-time count tells them apart. In the other direction, the 22 hot sites that this workload never
 reaches are on paths it does not take, such as stop orders and all-or-none matching.
 
-## Cases
+## What it found
 
 The six cases behind most of the lessons above ([all libraries](docs/results.md)).
 
@@ -133,7 +145,7 @@ updates. Not yet reported upstream.
 **6. A random order flow reaches the hidden paths, and finds an out-of-bounds write in Liquibook**
 ([details](docs/cases.md#case-6-a-random-order-flow-reaches-the-paths-and-finds-an-out-of-bounds-write-in-liquibook)).
 Of the 21 allocation sites the static analysis lists for adding an order with conditions, the fixed
-benchmark reaches 5 and a seeded random order flow 13. One of them was `__cxa_allocate_exception`: the
+workload reaches 5 and a seeded random order flow 13. One of them was `__cxa_allocate_exception`: the
 book threw "Unexpected ignore_ask_fill_qty_" in ordinary order flow. Reduced to ten orders, it came
 down to `Depth::find_level` returning a past-the-end pointer instead of `nullptr`, so fills of a
 triggered stop order overwrite the members after the price levels
@@ -142,7 +154,7 @@ triggered stop order overwrite the members after the price levels
 
 **Static and run time agree.** On every measured operation of Liquibook and concurrentqueue, every
 allocation and lock seen at run time matches a site of the static analysis (no static miss), and the
-static analysis lists the paths the benchmarks never take ([details](docs/cases.md#static-and-run-time-side-by-side)).
+static analysis lists the paths the workloads never take ([details](docs/cases.md#static-and-run-time-side-by-side)).
 
 ## Use
 
@@ -159,7 +171,7 @@ replay/gap.py hffix fix_write_new_order            # why one compiler is faster 
 ```
 
 For a change under review, measuring the merge base and the head is enough:
-`replay/replay.py LIB --commits BASE,HEAD`. To add a library, write a driver and a benchmark (see
+`replay/replay.py LIB --commits BASE,HEAD`. To add a library, write a driver and a workload (see
 [docs/method.md](docs/method.md#using-it-on-another-library)).
 
 ## Documents
@@ -174,7 +186,7 @@ For a change under review, measuring the merge base and the head is enough:
 
 ## Limits
 
-- Counts cover the paths the benchmarks take; the static half covers the rest, and can only say "may".
+- Counts cover the paths the workloads take; the static half covers the rest, and can only say "may".
 - Only the primitives in `replay/counts.h` are counted (the malloc family and `pthread_mutex_lock`).
 - Timings come from one machine (Haswell, Ubuntu 24.04). They are medians of interleaved rounds on an
   idle core, and are compared only within one table.

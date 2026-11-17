@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Replay a library's history with exact per-operation counts.
 
-At first-parent commits that changed the library, build replay/bench/<bench>.cpp against that commit
+At first-parent commits that changed the library, build replay/workloads/<workload>.cpp against that commit
 and run it. Each run reports, per operation: heap allocations, frees and mutex locks per call (exact,
 counted on the calling thread), the same for the very first call, and the median ns per call.
 
@@ -31,8 +31,8 @@ METRIC = sys.argv[sys.argv.index("--metric") + 1] if "--metric" in sys.argv else
 VALGRIND = os.environ.get("VALGRIND", "valgrind")
 VALGRIND_INC = os.environ.get("VALGRIND_INC", "")   # directory holding valgrind/callgrind.h
 
-# drv: replay/drivers/<drv>/main.cpp holds the entry functions, replay/bench/<drv>.cpp the measurement;
-# bench only: replay/bench/<bench>.cpp holds both.
+# drv: replay/drivers/<drv>/main.cpp holds the entry functions, replay/workloads/<drv>.cpp the workload that
+# calls them; workload only: replay/workloads/<workload>.cpp holds both.
 P = {
     "liquibook": dict(drv="liquibook", paths=["src/book", "src/simple"], inc=["src"], srcs=["src/simple/simple_order.cpp"]),
     "quill": dict(drv="quill", paths=["include"], inc=["include"], srcs=[], cores=2),
@@ -42,34 +42,43 @@ P = {
     "SPSCQueue": dict(drv="spscqueue", paths=["include"], inc=["include"], srcs=[]),
     "MPMCQueue": dict(drv="mpmcqueue", paths=["include"], inc=["include"], srcs=[]),
     "hffix": dict(drv="hffix", paths=["include"], inc=["include"], srcs=[]),
-    "spdlog": dict(bench="spdlog", paths=["include"], inc=["include"], srcs=[]),
-    "fmt": dict(bench="fmt", paths=["include"], inc=["include"], srcs=[]),
-    "simdjson": dict(bench="simdjson", paths=["singleheader/simdjson.h", "singleheader/simdjson.cpp"],
+    "spdlog": dict(workload="spdlog", paths=["include"], inc=["include"], srcs=[]),
+    "fmt": dict(workload="fmt", paths=["include"], inc=["include"], srcs=[]),
+    "simdjson": dict(workload="simdjson", paths=["singleheader/simdjson.h", "singleheader/simdjson.cpp"],
                      inc=["singleheader"], srcs=["singleheader/simdjson.cpp"]),
-    "unordered_dense": dict(bench="unordered_dense", paths=["include"], inc=["include"], srcs=[]),
-    "robin-map": dict(bench="robin-map", paths=["include"], inc=["include"], srcs=[]),
-    "parallel-hashmap": dict(bench="parallel-hashmap", paths=["parallel_hashmap"], inc=["."], srcs=[]),
-    "robin-hood-hashing": dict(bench="robin-hood-hashing", paths=["src/include"], inc=["src/include"], srcs=[]),
-    "fast_float": dict(bench="fast_float", paths=["include"], inc=["include"], srcs=[]),
-    "xxHash": dict(bench="xxHash", paths=["xxhash.h", "xxh3.h"], inc=["."], srcs=[]),
-    "readerwriterqueue": dict(bench="readerwriterqueue", paths=["readerwriterqueue.h", "atomicops.h"], inc=["."], srcs=[]),
-    "eigen": dict(bench="eigen", paths=["Eigen"], inc=["."], srcs=[]),
-    "json": dict(bench="json", paths=["single_include"], inc=["single_include"], srcs=[]),
-    "taskflow": dict(bench="taskflow", paths=["taskflow"], inc=["."], srcs=[], cores=2),
-    "pdqsort": dict(bench="pdqsort", paths=["pdqsort.h"], inc=["."], srcs=[]),
-    "lz4": dict(bench="lz4", paths=["lib/lz4.c", "lib/lz4.h"], inc=["lib"], srcs=[]),
-    "dragonbox": dict(bench="dragonbox", paths=["include"], inc=["include"], srcs=[]),
-    "libdivide": dict(bench="libdivide", paths=["libdivide.h"], inc=["."], srcs=[]),
-    "date": dict(bench="date", paths=["include/date/date.h"], inc=["include"], srcs=[]),
-    # A random order flow on the same driver, to reach the paths a fixed benchmark does not take
+    "unordered_dense": dict(workload="unordered_dense", paths=["include"], inc=["include"], srcs=[]),
+    "robin-map": dict(workload="robin-map", paths=["include"], inc=["include"], srcs=[]),
+    "parallel-hashmap": dict(workload="parallel-hashmap", paths=["parallel_hashmap"], inc=["."], srcs=[]),
+    "robin-hood-hashing": dict(workload="robin-hood-hashing", paths=["src/include"], inc=["src/include"], srcs=[]),
+    "fast_float": dict(workload="fast_float", paths=["include"], inc=["include"], srcs=[]),
+    "xxHash": dict(workload="xxHash", paths=["xxhash.h", "xxh3.h"], inc=["."], srcs=[]),
+    "readerwriterqueue": dict(workload="readerwriterqueue", paths=["readerwriterqueue.h", "atomicops.h"], inc=["."], srcs=[]),
+    "eigen": dict(workload="eigen", paths=["Eigen"], inc=["."], srcs=[]),
+    "json": dict(workload="json", paths=["single_include"], inc=["single_include"], srcs=[]),
+    "taskflow": dict(workload="taskflow", paths=["taskflow"], inc=["."], srcs=[], cores=2),
+    "pdqsort": dict(workload="pdqsort", paths=["pdqsort.h"], inc=["."], srcs=[]),
+    "lz4": dict(workload="lz4", paths=["lib/lz4.c", "lib/lz4.h"], inc=["lib"], srcs=[]),
+    "dragonbox": dict(workload="dragonbox", paths=["include"], inc=["include"], srcs=[]),
+    "libdivide": dict(workload="libdivide", paths=["libdivide.h"], inc=["."], srcs=[]),
+    "date": dict(workload="date", paths=["include/date/date.h"], inc=["include"], srcs=[]),
+    # A random order flow on the same driver, to reach the paths a fixed workload does not take
     # (src/liquibook-explore is a link to src/liquibook; fetch.sh makes it).
-    "liquibook-explore": dict(drv="liquibook", bench="liquibook_explore", paths=["src/book", "src/simple"], inc=["src"],
+    "liquibook-explore": dict(drv="liquibook", workload="liquibook_explore", paths=["src/book", "src/simple"], inc=["src"],
                               srcs=["src/simple/simple_order.cpp"]),
-    "fmtlog": dict(bench="fmtlog", paths=["fmtlog.h", "fmtlog-inl.h", "fmt"], inc=[".", "fmt/include"], srcs=[],
+    "fmtlog": dict(workload="fmtlog", paths=["fmtlog.h", "fmtlog-inl.h", "fmt"], inc=[".", "fmt/include"], srcs=[],
                    submodules={"fmt": "fmt"}, flags=["-DFMTLOG_HEADER_ONLY", "-DFMT_HEADER_ONLY"], cores=2),
-    "bitsery": dict(bench="bitsery", paths=["include"], inc=["include"], srcs=[]),
-    "cereal": dict(bench="cereal", paths=["include"], inc=["include"], srcs=[]),
-    "xsimd": dict(bench="xsimd", paths=["include"], inc=["include"], srcs=[]),
+    "bitsery": dict(workload="bitsery", paths=["include"], inc=["include"], srcs=[]),
+    "cereal": dict(workload="cereal", paths=["include"], inc=["include"], srcs=[]),
+    "xsimd": dict(workload="xsimd", paths=["include"], inc=["include"], srcs=[]),
+    "yyjson": dict(workload="yyjson", paths=["src"], inc=["src"], srcs=[]),
+    "glaze": dict(workload="glaze", paths=["include"], inc=["include"], srcs=[], std="c++23"),
+    "rapidjson": dict(workload="rapidjson", paths=["include"], inc=["include"], srcs=[]),
+    "gtl": dict(workload="gtl", paths=["include"], inc=["include"], srcs=[]),
+    "emhash": dict(workload="emhash", paths=["include", "hash_table8.hpp"], inc=["include/emhash", "."], srcs=[]),
+    "abseil": dict(workload="abseil", paths=["absl/container", "absl/hash"], inc=["."],
+                   srcs=["absl/container/internal/raw_hash_set.cc", "absl/hash/internal/hash.cc",
+                         "absl/hash/internal/city.cc", "absl/base/internal/raw_logging.cc"]),
+    "highway": dict(workload="highway", paths=["hwy"], inc=["."], srcs=[]),
 }
 CORES = [int(c) for c in os.environ.get("REPLAY_CORES", "2,4,6,8").split(",")]
 lock = threading.Lock(); free_cores = list(CORES)
@@ -83,14 +92,15 @@ def outdir(proj, cc):
     return TOP / "out" / (cc + TAG + ("-instr" if METRIC == "instr" else "")) / proj
 
 def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
-    bench = HERE / "bench" / f"{cfg.get('bench') or cfg['drv']}.cpp"
+    workload = HERE / "workloads" / f"{cfg.get('workload') or cfg['drv']}.cpp"
     drv = [f"-I{HERE / 'drivers' / cfg['drv']}"] if "drv" in cfg else []
     return [CXX[cc], std, OPT, "-DNDEBUG", "-pthread", "-march=x86-64-v3", "-w", *extra,
             *[f"-I{tree / i}" for i in cfg["inc"]], *drv, *cfg.get("flags", []),
-            str(bench), *[str(tree / s) for s in cfg["srcs"]], "-o", str(exe), "-ldl"]
+            str(workload), *[str(tree / s) for s in cfg["srcs"]], "-o", str(exe), "-ldl"]
 
 def build(proj, cc, h, tree, exe, extra=()):
-    """Build at the commit; C++17 first, then C++20 (newer versions of some projects need it)."""
+    """Build at the commit; C++17 first, then C++20 (newer versions of some projects need it), unless the
+    project sets its own standard ("std" in P)."""
     subprocess.run(f"git -C {TOP / 'src' / proj} archive {h} | tar -x -C {tree}", shell=True, check=True)
     # git submodules: the commit each one is pinned to at h, taken from a local clone in src/
     for path, clone in P[proj].get("submodules", {}).items():
@@ -98,8 +108,9 @@ def build(proj, cc, h, tree, exe, extra=()):
         if len(ls) >= 3 and ls[1] == "commit":
             (tree / path).mkdir(parents=True, exist_ok=True)
             subprocess.run(f"git -C {TOP / 'src' / clone} archive {ls[2]} | tar -x -C {tree / path}", shell=True)
-    b = subprocess.run(build_cmd(P[proj], cc, tree, exe, extra=extra), capture_output=True, text=True)
-    if b.returncode:
+    std0 = "-std=" + P[proj].get("std", "c++17")   # a project may need a newer standard throughout
+    b = subprocess.run(build_cmd(P[proj], cc, tree, exe, std0, extra), capture_output=True, text=True)
+    if b.returncode and std0 == "-std=c++17":
         b2 = subprocess.run(build_cmd(P[proj], cc, tree, exe, "-std=c++20", extra), capture_output=True, text=True)
         if b2.returncode == 0: b = b2
     return b
@@ -108,7 +119,7 @@ def one(proj, cc, h):
     out = outdir(proj, cc); res = out / f"{h}.jsonl"; fail = out / f"{h}.fail"
     if res.exists() or fail.exists(): return h, "cached"
     with tempfile.TemporaryDirectory() as t:
-        t = Path(t); exe = t / "_bench_exe"
+        t = Path(t); exe = t / "_workload_exe"
         extra = ("-DREPLAY_INSTR", *([f"-I{VALGRIND_INC}"] if VALGRIND_INC else [])) if METRIC == "instr" else ()
         b = build(proj, cc, h, t, exe, extra=extra)
         if b.returncode:
@@ -146,7 +157,7 @@ def instr_lines(t, stdout):
 INSTR_PCT = float(os.environ.get("REPLAY_INSTR_PCT", "3"))   # instruction changes below this are not bisected
 
 def compared_fields(proj):
-    """The count fields compared between commits. With another thread in the benchmark (cores > 1), the
+    """The count fields compared between commits. With another thread in the workload (cores > 1), the
     frees counted on the calling thread depend on which thread drops the last reference first, so they
     vary between runs of the same build; allocations and locks on the calling thread do not."""
     f = ("alloc", "free", "lock", "first_alloc", "first_lock")
@@ -198,7 +209,7 @@ def main():
     cs = commits(proj)
     json.dump(cs, open(out / "order.json", "w"))
     if len(CORES) < P[proj].get("cores", 1):
-        sys.exit(f"{proj}: the benchmark runs {P[proj]['cores']} threads; give as many cores in REPLAY_CORES")
+        sys.exit(f"{proj}: the workload runs {P[proj]['cores']} threads; give as many cores in REPLAY_CORES")
     j = max(1, min(j, len(CORES) // P[proj].get("cores", 1)))
     if "--refine" in sys.argv:
         return refine(proj, cc, cs, j)

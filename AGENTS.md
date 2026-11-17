@@ -1,17 +1,16 @@
 # Instructions for coding agents
 
-How to use hotpath-cost to answer questions about the cost of a C++ hot path. Read `README.md` for
-what the tool found and why it works this way; this file is about doing the work and reporting it
-correctly.
+How to use hotpath-cost to answer questions about the cost of a C++ hot path, and how to read what it
+prints. `README.md` says what the tool is and what it found; `docs/insights.md` why it works this way.
 
 ## What the tool can answer
 
 | question | command | exact? |
 |---|---|---|
-| Did this change add an allocation or a lock to a hot operation? | `replay/replay.py LIB --commits BASE,HEAD` then `replay/diff.py LIB` | yes, for the paths the benchmark takes |
+| Did this change add an allocation or a lock to a hot operation? | `replay/replay.py LIB --commits BASE,HEAD` then `replay/diff.py LIB` | yes, for the paths the workload takes |
 | Which line does it come from? | `replay/attribute.py LIB COMMIT` | yes |
 | When in the history did it start or stop? | `replay/replay.py LIB --stride N`, then `--refine`, then `diff.py` | yes, among commits that build |
-| Which allocating or locking paths does the benchmark never take? | `replay/combine.py LIB COMMIT` | static: "may", not "will" |
+| Which allocating or locking paths does the workload never take? | `replay/combine.py LIB COMMIT` | static: "may", not "will" |
 | May this function allocate, lock or enter the kernel, on any path? | `static/fn-effects ... --functions` (see `static/README.md`) | depends on the evidence level printed |
 | Does the compiler or the optimisation level change the latency? | `replay/matrix.sh 3`, then `replay/matrix_table.py` | only on an idle machine, see below |
 | Did a commit change the work done per call (for code that never allocates)? | `replay/replay.py LIB --metric instr`, then `replay/diff.py LIB --instr 5` | yes: instructions per call under callgrind |
@@ -55,18 +54,18 @@ at the number of divisions, then at 256-bit vector instructions. Confirm the cau
 source and timing every compiler with `cases/*/run.sh`-style scripts; a fix for one compiler can slow
 another.
 
-**Find which paths the benchmark misses.** Run `replay/combine.py LIB COMMIT` and report the "not
+**Find which paths the workload misses.** Run `replay/combine.py LIB COMMIT` and report the "not
 exercised" sites that are not marked cold. Each is a place that may allocate or lock in production and
-that the benchmark does not show. Report "static miss" lines as possible defects of the static analysis,
+that the workload does not show. Report "static miss" lines as possible defects of the static analysis,
 after checking them as described under "Matching".
 
-**Reach the paths the benchmark misses.** For a library with an exploration benchmark
-(`replay/bench/<lib>_explore.cpp`, configured as `<lib>-explore` in `P`, on the same clone through a
-link in `src/`), run `replay/combine.py <lib>-explore COMMIT`. The benchmark replays a seeded random
+**Reach the paths the workload misses.** For a library with an exploration workload
+(`replay/workloads/<lib>_explore.cpp`, configured as `<lib>-explore` in `P`, on the same clone through a
+link in `src/`), run `replay/combine.py <lib>-explore COMMIT`. The workload replays a seeded random
 sequence of realistic operations; the report counts, per entry, how many of the static sites it
 exercised. To write one for another library, prepare every action and object before `run_ops` so that
 only the library's own allocations are counted, and call the same driver entries as the fixed
-benchmark (add an entry when a path needs a parameter the existing ones fix, such as order conditions).
+workload (add an entry when a path needs a parameter the existing ones fix, such as order conditions).
 An event in an exploration run that is reached only through `__cxa_allocate_exception` is an exception
 thrown by the library during normal-looking use; look at the full stack with
 `attribute.py <lib>-explore COMMIT --cc clang --json`.
@@ -77,11 +76,11 @@ commit means the commits in between do not build with the driver: report an inte
 `git log -S'<the line>'` on the attributed line to name the commit.
 
 **Add a library.** Write `replay/drivers/LIB/main.cpp` (operations as `HP_ENTRY` functions with
-opaque arguments, and a `main`) and `replay/bench/LIB.cpp` (calls them through `run_ops`), or one
-self-contained `replay/bench/LIB.cpp`. Add an entry to `P` in `replay/replay.py`: the paths whose
+opaque arguments, and a `main`) and `replay/workloads/LIB.cpp` (calls them through `run_ops`), or one
+self-contained `replay/workloads/LIB.cpp`. Add an entry to `P` in `replay/replay.py`: the paths whose
 commits matter, the include directories, extra sources and flags. Check the latest commit first
 (`--commits <head>`), then the whole history. If older commits fail with missing standard types
-(`uint64_t`, `std::string`, `std::numeric_limits`), include those headers in the benchmark before the
+(`uint64_t`, `std::string`, `std::numeric_limits`), include those headers in the workload before the
 library's header; older headers relied on transitive includes.
 
 ## Reading the results
@@ -93,18 +92,20 @@ library's header; older headers relied on transitive includes.
   CPU N and N+20). The load on other cores changed one build's time by 40 %, and per-commit timings
   from parallel replays jumped by 2x between commits whose machine code was identical. Report the
   median and the spread between rounds, and call a difference real only if it repeats in every round.
-- **Benchmarks with another thread** (a logger's backend, an executor's worker; `cores > 1` in `P`):
+- **Workloads with another thread** (a logger's backend, an executor's worker; `cores > 1` in `P`):
   frees counted on the calling thread depend on which thread drops the last reference, and vary between
   runs of the same build (Taskflow: 1.4 to 2.8 per call), so `diff.py` and `--refine` do not compare
   them. Locks can vary slightly too (Taskflow `348ba9b4`: 3.99 to 4.00 per call); treat a change smaller
   than one per call there as possible noise and rerun both commits.
-- **First-call counts** include one-time set-up and depend on which operation the benchmark runs
+- **First-call counts** include one-time set-up and depend on which operation the workload runs
   first. Say "first call" explicitly when reporting them.
 - **Static verdicts.** `may` means some path reaches the primitive, not that it runs. `never` and
   `always` are guarantees only at the evidence levels `static/README.md` lists as guarantees.
 - **Matching** (`combine.py`) prints how each run-time site was matched: `line`, `caller` (the static
   site is recorded at the line of an inlined callee's caller), `tail` (the run-time stack lost a frame
-  to a tail call), `library` (inside a standard-library function). Before calling something a static
+  to a tail call), `library` (inside a standard-library function), and last `function` (the innermost
+  frame is in the function that holds the static site, at another line: an inlined frame came back
+  without its name). Before calling something a static
   miss, look at the full stack (`attribute.py LIB COMMIT --cc clang --json`) and the static sites of
   the functions on it.
 - **A machine-code difference is not a cost.** Measure before reporting one as a regression.
@@ -112,9 +113,8 @@ library's header; older headers relied on transitive includes.
 ## Known pitfalls
 
 - clang's `mm_malloc.h` declares `posix_memalign` without `noexcept`, which conflicts with
-  `replay/counts.h`; a benchmark that includes `<random>` or intrinsics headers hits it with clang.
-- quill's benchmark has a backend thread and needs two cores in `REPLAY_CORES`.
+  `replay/counts.h`; a workload that includes `<random>` or intrinsics headers hits it with clang.
+- quill's workload has a backend thread and needs two cores in `REPLAY_CORES`.
 - A process may contain only one quill `FrontendOptions` type.
-- GCC builds under ThreadSanitizer can be too slow for large tests; the clang build is faster.
 - `replay.py` caches results per commit in `out/`: delete that commit's `.jsonl` or `.fail` file after
-  changing a benchmark.
+  changing a workload.

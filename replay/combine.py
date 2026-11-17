@@ -6,13 +6,13 @@
 Runs, on the same commit and with clang for both:
   - fn-effects (static/, the LLVM-based analyser of this repository) on the driver: for every entry
     function, the allocation and mutex sites it can reach, with the analysis' hot/cold tag;
-  - the benchmark with call-stack recording (attribute.py): the allocations and locks that happen.
+  - the workload with call-stack recording (attribute.py): the allocations and locks that happen.
 
 Sites are matched by the innermost frame in the library's own source (file and line). A site the
 static analysis places inside a standard-library function that was not inlined has no library line;
 it is matched by the library function that calls it. Each site ends up in one of three groups:
   exercised      static and run time agree; the run-time count per call is given
-  not exercised  reachable according to the static analysis, never reached by the benchmark
+  not exercised  reachable according to the static analysis, never reached by the workload
   static miss    reached at run time, absent from the static result (a gap in the analysis)
 
 Environment: FN_EFFECTS (path of the fn-effects script; default: static/fn-effects, whose plugin must be

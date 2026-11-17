@@ -1,25 +1,25 @@
-# Method
+# How the tool works
 
-How the measurements are made, what did not work, what is not claimed, and how to reproduce everything. Paths are relative to the repository root. See also [AGENTS.md](../AGENTS.md) for task recipes and [static/README.md](../static/README.md) for the static analyser.
+How each part of the tool works, what did not work, what the tool does not claim, and how to reproduce every number in these documents. Paths are relative to the repository root. See also [AGENTS.md](../AGENTS.md) for task recipes and [static/README.md](../static/README.md) for the static analyser.
 
 ## How it works
 
 - `static/` is the LLVM pass plugin and its driver; `static/README.md` describes its rules, evidence
   levels, assumptions and tests.
 - `replay/counts.h` replaces `malloc`, `calloc`, `realloc`, `free`, `aligned_alloc`, `memalign`,
-  `posix_memalign` and `pthread_mutex_lock` in the benchmark executable (libstdc++'s `operator new`
+  `posix_memalign` and `pthread_mutex_lock` in the workload executable (libstdc++'s `operator new`
   and `std::mutex` go through them) and counts per thread. With `COUNTS_TRACE=1` it records the
   return addresses of each event.
-- `replay/bench_common.h` runs each operation once (the first-call counts), warms it up, then counts
+- `replay/workload.h` runs each operation once (the first-call counts), warms it up, then counts
   and times it in batches of 100 calls.
 - `replay/drivers/<lib>/main.cpp` defines the operations as out-of-line entry functions with opaque
-  arguments; `replay/bench/<lib>.cpp` is the measurement for each library.
-- `replay/replay.py` builds the benchmark against a commit (`git archive`, nothing is installed),
+  arguments; `replay/workloads/<lib>.cpp` is the measurement for each library.
+- `replay/replay.py` builds the workload against a commit (`git archive`, nothing is installed),
   runs it pinned to a core, and stores one JSON line per operation. `--stride` samples, `--refine`
   bisects. `replay/diff.py` prints the changes; `replay/attribute.py` the stacks;
   `replay/matrix.sh` and `replay/matrix_table.py` the compiler matrix.
-- `--metric instr` builds the benchmark with `-DREPLAY_INSTR` and runs it under valgrind's callgrind.
-  For each operation, `bench_common.h` zeroes callgrind's statistics, runs the operation 20,000 times
+- `--metric instr` builds the workload with `-DREPLAY_INSTR` and runs it under valgrind's callgrind.
+  For each operation, `workload.h` zeroes callgrind's statistics, runs the operation 20,000 times
   with nothing else in the loop, and dumps the statistics under the operation's name; `replay.py`
   divides. The result is exact: the same build gives the same count on every run. `diff.py --instr PCT`
   reports changes of PCT percent or more, and `--refine` bisects them (`REPLAY_INSTR_PCT`, default 3).
@@ -29,14 +29,14 @@ How the measurements are made, what did not work, what is not claimed, and how t
   call sites, divisions, 256-bit vector instructions and backward jumps, and lists helpers that stay
   out of line in some builds only, with their call sites.
 - `replay/combine.py` runs `static/fn-effects` on a library's driver and `attribute.py` on its
-  benchmark at the same commit, both with clang, and matches the sites as described in
+  workload at the same commit, both with clang, and matches the sites as described in
   [cases.md](cases.md#static-and-run-time-side-by-side).
 
 ## Using it on another library
 
 A library needs two files: `replay/drivers/<lib>/main.cpp` with its hot operations as `HP_ENTRY`
-functions, and `replay/bench/<lib>.cpp`, which calls them through `run_ops` (or one self-contained
-benchmark file, as for spdlog). Then add an entry to `P` in `replay/replay.py` that names the paths
+functions, and `replay/workloads/<lib>.cpp`, which calls them through `run_ops` (or one self-contained
+workload file, as for spdlog). Then add an entry to `P` in `replay/replay.py` that names the paths
 whose commits matter and the include directories. For a change under review, measuring the merge
 base and the head is enough: the counts either differ or they do not, and `attribute.py` on the
 head names the new line.
@@ -55,12 +55,12 @@ head names the new line.
   `reserve` call and makes it a no-op when the capacity suffices. Only run-time counts tell the
   versions apart. In the other direction, the static report at `25b0c5e` has every function of the
   run-time allocation stacks that its (clang) build keeps out of line as "may allocate", and it also
-  covers paths the benchmark never runs, such as an order that trades or a queue that is full. The two answer different questions.
+  covers paths the workload never runs, such as an order that trades or a queue that is full. The two answer different questions.
 - **Timing every commit.** In the per-commit data, fast_float's parse time halves at one merge and
   doubles again at the next (`e3af1066`, `a7fbcb0a`), and readerwriterqueue alternates between 8 and
   14 ns eleven times. The two fast_float builds have the same machine code instruction for
   instruction, and timed alternately on an idle core they take the same time (14.9 and 14.9 ns).
-  The jumps came from the load of the parallel replay. Throughput benchmarks varied by more than
+  The jumps came from the load of the parallel replay. Throughput timings varied by more than
   20 % between identical runs.
   One build of hffix's checksum took 109 ns or 155 ns on the same idle core depending on how busy
   the other cores were; the encoder took up to 55 % longer on a core whose hyperthread sibling was busy. Timings in
@@ -70,11 +70,11 @@ head names the new line.
 ## What is not claimed
 
 - **Counts are for the operations in the drivers, on the paths they take.** An allocation on a path
-  the benchmark does not exercise (an error path, a full queue, a crossing order) is not counted.
+  the workload does not exercise (an error path, a full queue, a crossing order) is not counted.
 - **Allocation and lock primitives outside the list above are not counted**: `mmap`, `futex` used
   directly, spin locks, `new` replaced by the library's own allocator. The first-call counts include
   one-time initialisation of whatever the process does first, so they depend on the order of the
-  operations in the benchmark.
+  operations in the workload.
 - **"Pinned to a commit" means pinned among the commits that compile with the driver.** When the
   commits next to a change do not compile, the change lies in an interval, as in case 1; the source
   line, not the replay, then names the commit. Bisection finds a change that persists; a change that

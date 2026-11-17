@@ -12,7 +12,7 @@ for k in $(seq 1 "$ROUNDS"); do
            readerwriterqueue unordered_dense robin-map parallel-hashmap robin-hood-hashing fast_float xxHash eigen; do
     H=$(python3 -c "import sys;sys.path.insert(0,'replay');import replay as r;print(r.commits('$p')[-1][0])")
     for cc in gcc gcc15 clang; do for o in -O2 -O3; do
-      # quill's benchmark has a backend thread: it gets the first two cores of REPLAY_CORES
+      # quill's workload has a backend thread: it gets the first two cores of REPLAY_CORES
       REPLAY_OPT=$o REPLAY_TAG=-m$o-r$k python3 replay/replay.py $p --cc $cc --commits ${H:0:12} -j 1 | sed "s/^/round $k $p $cc $o /"
     done; done
   done
