@@ -121,6 +121,11 @@ inside the book during ordinary order flow. Reduced to ten orders and traced, it
 write in `Depth::find_level` (case 6 in `cases.md`). Counting allocations made the exception visible;
 the static list made the exploration go where it was.
 
+The same holds for concurrentqueue: a random sequence of enqueue and dequeue bursts reached the block
+allocation the analysis listed for `enqueue`, and showed that since 2022 the queue frees and
+reallocates a block per 32 elements whenever its length goes beyond its initial capacity and back
+(case 7). A fixed enqueue-dequeue pair never leaves the initial capacity and never sees it.
+
 A random flow is enough here because the operations of an order book are few and cheap to generate.
 It does not need a fuzzing framework: a fixed seed keeps each run reproducible, and the existing call
 stack recording and matching attribute everything it reaches.
@@ -137,6 +142,10 @@ stack recording and matching attribute everything it reaches.
   release tag sits between the two commits, and there is no later release.
 - concurrentqueue's first `try_enqueue` on each thread has taken a mutex since a 2022 fix for a
   use-after-free: a cost paid for correctness, visible only on the first call.
+
+- concurrentqueue has, since a 2022 commit, freed each block allocated beyond its initial capacity as
+  soon as it is empty, and allocated it again on the next burst: deliberate, documented, and switched
+  off by a trait, but invisible to a workload that stays within capacity.
 
 - Eigen's 4x4 Cholesky solve became 1.5x slower with GCC in April 2025, inside a 1,363-line commit
   that added a masked load/store framework. It shipped in 5.0.0 and 5.0.1 and is still there at the

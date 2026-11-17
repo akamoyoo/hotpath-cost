@@ -240,6 +240,46 @@ no longer throws. Reported and fixed upstream:
 The tool was built to count allocations; this was a correctness bug, found because an exception is an
 allocation and the exploration was looking for allocations the static analysis predicted.
 
+## Case 7: concurrentqueue frees and reallocates its blocks under a varying load
+
+concurrentqueue's fixed workload (one enqueue, one dequeue) never allocates after the first call: the
+queue never holds more than its initial capacity. The static analysis lists six allocation sites
+reachable from `enqueue`, among them `requisition_block`'s `create<Block>()` (`concurrentqueue.h:3138`).
+An exploration workload (`replay/workloads/concurrentqueue_explore.cpp`) goes after them with a seeded
+random sequence of bursts on one thread: enqueue and try_enqueue bursts of 1 to 3,000 elements, with and
+without a producer token, and as many dequeue bursts, on a queue created with capacity 64. The queue's
+length wanders up and down instead of growing.
+
+`replay/combine.py concurrentqueue-explore 36c5755`: the block allocation is exercised, 1.05 times per
+burst, and nothing is a static miss. Replayed at every library commit, the count changes once:
+
+```
+9c44f36d                       random bursts: alloc 0.13, free 0.00 per burst
+a15a7236 2022-01-25            random bursts: alloc 1.05, free 1.05 per burst
+         "Made implicit producers free dynamically allocated blocks all the way back to the heap by
+          default (see issue #279)"
+```
+
+Before that commit, a block emptied by a dequeue went back to the queue's free list and the next
+enqueue burst reused it; 0.13 allocations per burst are the queue growing to its largest length so
+far. Since then, a block that was allocated beyond the initial capacity is freed as soon as it is
+empty, and allocated again by the next burst that needs it: a `malloc` and a `free` per 32 elements,
+in the steady state. This is deliberate and documented: the trait `RECYCLE_ALLOCATED_BLOCKS` (default
+`false`) restores the old behaviour, and a queue sized for its peak never allocates. It is the kind of
+cost the tool is for: invisible to a workload that stays within capacity, introduced by one commit,
+and switched off by one line, once it is known.
+
+The other five sites are the creation of an implicit producer for a thread (its block index, its entry
+in the producer hash, the thread-exit callback). A single-threaded flow reaches them once, before
+measurement; they are documented: `try_enqueue` "does not allocate memory (except for one-time implicit
+producer)".
+
+Two things in the tool came from this case. The first version of the flow only grew the queue, and its
+"steady-state" allocations were growth; exploration workloads now keep the structure in a steady
+state. And a cached result of that first version was compared with the second, which showed a change
+at a commit that only removed `static` from inline functions; cached results now carry a fingerprint
+of the workload and are set aside when it changes.
+
 ## Static and run-time, side by side
 
 The counts say what a workload does; they cannot see a path it does not take. A static analysis sees

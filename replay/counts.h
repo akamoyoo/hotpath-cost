@@ -16,20 +16,20 @@ extern "C" void *__libc_memalign(size_t, size_t);
 struct Counts { uint64_t alloc = 0, free = 0, lock = 0; };
 static thread_local Counts tl_counts;
 // Attribution: while tl_trace is set, each allocation and lock on this thread records its return
-// addresses (up to 12 frames) into a fixed table; trace_dump() prints them symbolized, most frequent first.
+// addresses (up to 32 frames) into a fixed table; trace_dump() prints them symbolized, most frequent first.
 #include <execinfo.h>
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
-struct TraceRec { void *pc[12]; int n; char kind; uint64_t count; };
+struct TraceRec { void *pc[32]; int n; char kind; uint64_t count; };
 static TraceRec g_trace[256]; static int g_ntrace = 0;
 static thread_local bool tl_trace = false, tl_in_trace = false;
 static void trace_hit(char kind) {
   if (!tl_trace || tl_in_trace) return;
   tl_in_trace = true;
-  void *pc[14]; int n = backtrace(pc, 14);
+  void *pc[34]; int n = backtrace(pc, 34);
   int m = n > 2 ? n - 2 : 0; void **p = pc + 2;   // drop trace_hit and the wrapper
-  if (m > 12) m = 12;
+  if (m > 32) m = 32;
   int i = 0;
   for (; i < g_ntrace; i++)
     if (g_trace[i].kind == kind && g_trace[i].n == m && !memcmp(g_trace[i].pc, p, m * sizeof(void *))) break;

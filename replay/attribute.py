@@ -23,7 +23,7 @@ def trace(proj, h, cc="gcc"):
     events = []
     with tempfile.TemporaryDirectory() as t:
         t = Path(t); exe = t / "_workload_exe"
-        b = rp.build(proj, cc, full, t, exe, extra=("-g",))
+        b = rp.build(proj, cc, full, t, exe, extra=("-g", "-DHP_ENTRY_KEEP_FRAME"))
         if b.returncode: raise RuntimeError(b.stderr[:3000])
         cmd = ["taskset", "-c", ",".join(map(str, rp.CORES[:rp.P[proj].get("cores", 1)])), str(exe)]
         r = subprocess.run(cmd, capture_output=True, text=True, env=dict(os.environ, COUNTS_TRACE="1"), timeout=900)

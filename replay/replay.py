@@ -65,6 +65,9 @@ P = {
     # (src/liquibook-explore is a link to src/liquibook; fetch.sh makes it).
     "liquibook-explore": dict(drv="liquibook", workload="liquibook_explore", paths=["src/book", "src/simple"], inc=["src"],
                               srcs=["src/simple/simple_order.cpp"]),
+    "concurrentqueue-explore": dict(drv="concurrentqueue", workload="concurrentqueue_explore",
+                                    paths=["concurrentqueue.h", "blockingconcurrentqueue.h", "lightweightsemaphore.h"],
+                                    inc=["."], srcs=[], flags=["-DMOODYCAMEL_CPP11_THREAD_LOCAL_SUPPORTED"]),
     "fmtlog": dict(workload="fmtlog", paths=["fmtlog.h", "fmtlog-inl.h", "fmt"], inc=[".", "fmt/include"], srcs=[],
                    submodules={"fmt": "fmt"}, flags=["-DFMTLOG_HEADER_ONLY", "-DFMT_HEADER_ONLY"], cores=2),
     "bitsery": dict(workload="bitsery", paths=["include"], inc=["include"], srcs=[]),
@@ -90,6 +93,32 @@ def commits(proj):
 
 def outdir(proj, cc):
     return TOP / "out" / (cc + TAG + ("-instr" if METRIC == "instr" else "")) / proj
+
+def fingerprint(proj, cc):
+    """A hash of everything besides the library commit that a cached result depends on: the workload, its
+    driver, the shared headers, the project's configuration, the compiler and the options."""
+    import hashlib
+    cfg = P[proj]; h = hashlib.sha256()
+    files = [HERE / "workloads" / f"{cfg.get('workload') or cfg['drv']}.cpp", HERE / "workload.h", HERE / "counts.h"]
+    files += sorted((HERE / "workloads").glob("*.h"))
+    if "drv" in cfg: files += sorted(p for p in (HERE / "drivers" / cfg["drv"]).rglob("*") if p.is_file())
+    files += [HERE / "drivers" / "hp_entry.h"]
+    for f in files:
+        if f.exists(): h.update(f.name.encode()); h.update(f.read_bytes())
+    h.update(repr(sorted(cfg.items())).encode()); h.update(f"{CXX[cc]} {OPT} {METRIC}".encode())
+    return h.hexdigest()[:16]
+
+def check_cache(proj, cc):
+    """Set cached results aside when the workload, driver or configuration changed since they were made,
+    so a changed workload is never compared with results of the old one."""
+    out = outdir(proj, cc); fp_file = out / "fingerprint"; now = fingerprint(proj, cc)
+    old = fp_file.read_text().strip() if fp_file.exists() else None
+    cached = list(out.glob("*.jsonl")) + list(out.glob("*.fail"))
+    if old is not None and old != now and cached:
+        stale = out / f"stale-{old}"; stale.mkdir(exist_ok=True)
+        for f in cached: f.rename(stale / f.name)
+        print(f"{proj}: the workload or its configuration changed; {len(cached)} cached results moved to {stale}", flush=True)
+    fp_file.write_text(now + "\n")
 
 def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
     workload = HERE / "workloads" / f"{cfg.get('workload') or cfg['drv']}.cpp"
@@ -206,6 +235,7 @@ def main():
     cc = sys.argv[sys.argv.index("--cc") + 1] if "--cc" in sys.argv else "gcc"
     j = int(sys.argv[sys.argv.index("-j") + 1]) if "-j" in sys.argv else len(CORES)
     out = outdir(proj, cc); out.mkdir(parents=True, exist_ok=True)
+    check_cache(proj, cc)
     cs = commits(proj)
     json.dump(cs, open(out / "order.json", "w"))
     if len(CORES) < P[proj].get("cores", 1):

@@ -116,5 +116,14 @@ library's header; older headers relied on transitive includes.
   `replay/counts.h`; a workload that includes `<random>` or intrinsics headers hits it with clang.
 - quill's workload has a backend thread and needs two cores in `REPLAY_CORES`.
 - A process may contain only one quill `FrontendOptions` type.
-- `replay.py` caches results per commit in `out/`: delete that commit's `.jsonl` or `.fail` file after
-  changing a workload.
+- `replay.py` caches results per commit in `out/`, together with a fingerprint of the workload, its
+  driver, the shared headers and the project's entry in `P`. When any of them changes, the old results
+  are moved to `stale-<fingerprint>/` and the next run measures again. Changes elsewhere (the compiler
+  binary itself, an environment variable a workload reads) are not seen: delete the directory then.
+- Entry functions must be declared with `HP_ENTRY` (`replay/drivers/hp_entry.h`). An entry that ends in
+  a call is compiled as a tail call and disappears from the run-time stack; `attribute.py` and
+  `combine.py` build with `-DHP_ENTRY_KEEP_FRAME`, which keeps the frame. Without it, events of that entry
+  are not attributed.
+- Stacks are recorded 32 frames deep. An event whose entry function is deeper than that is not attributed.
+- Exploration workloads should keep the data structure in a steady state (as many removals as
+  insertions); one that only grows reports the growth as its steady-state cost.

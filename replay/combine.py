@@ -107,6 +107,16 @@ def dynamic_sites(proj, h):
         rec["steady" if e["phase"] == "steady state" else "first"] += e["per_call"]
     return out
 
+def bare_name(fn):
+    """The unqualified name of a function without template arguments or parameters, as it is written at a
+    call site: 'requisition_block' for 'ns::Queue<T>::requisition_block<(Mode)0>(...)'."""
+    out, depth = [], 0
+    for ch in short(fn):
+        if ch == "<": depth += 1
+        elif ch == ">": depth -= 1
+        elif depth == 0: out.append(ch)
+    return "".join(out).split("::")[-1].strip()
+
 def match(kind, user, stack, s, by_fn, source):
     """The static site a run-time event corresponds to, and by which rule:
       line     the innermost library frame is the static site's line
@@ -121,8 +131,8 @@ def match(kind, user, stack, s, by_fn, source):
     if (kind, "line", user[1]) in s: return (kind, "line", user[1]), "line"
     text = source(user[1])
     for (k, fn), key in by_fn.items():
-        name = short(fn).split("::")[-1]
-        if k == kind and name and re.search(r"\b" + re.escape(name) + r"\s*\(", text or ""):
+        name = bare_name(fn)
+        if k == kind and name and re.search(r"\b" + re.escape(name) + r"\s*(<[^;(){}]*>)?\s*\(", text or ""):
             return key, "tail"
     for fn, loc in stack[1:]:
         if (kind, "line", loc) in s: return (kind, "line", loc), "caller"

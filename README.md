@@ -39,7 +39,8 @@ each of these lessons changed how it works ([evidence](docs/insights.md)):
    the workload never took.
 6. **The static view tells the workload where to go.** A random order flow written to reach the
    sites the analysis listed raised Liquibook's coverage from 5 to 13 of 21, and turned up a
-   memory-corruption bug on the way.
+   memory-corruption bug on the way; random bursts on concurrentqueue showed it freeing and
+   reallocating its blocks whenever its length crosses its initial capacity.
 7. **Costs enter through refactorings, come back, and stay unreleased.** A lock removed in 2016 came
    back for six releases; an extra allocation per order is in a library's last release; none was
    caught by tests.
@@ -177,7 +178,7 @@ For a change under review, measuring the merge base and the head is enough:
 ## Documents
 
 - [docs/insights.md](docs/insights.md): the lessons above, with their evidence.
-- [docs/cases.md](docs/cases.md): the four cases, and the matching of static and run-time sites.
+- [docs/cases.md](docs/cases.md): the cases, and the matching of static and run-time sites.
 - [docs/results.md](docs/results.md): all libraries, and the compiler matrix.
 - [docs/method.md](docs/method.md): how it works, what did not work, what is not claimed, how to
   reproduce every number.
