@@ -47,16 +47,59 @@ reaches are on paths it does not take, such as stop orders and all-or-none match
 ## What it found
 
 Over 13,246 commits of eighteen open-source low-latency libraries (order book, queues, loggers, FIX,
-JSON, formatting, hash maps, number parsing, hashing, linear algebra):
+JSON, formatting, hash maps, number parsing, hashing, linear algebra). Fourteen never changed their
+allocation and lock counts over their measured history ([all results](docs/results.md)). The four
+cases below are the ones that did change, or whose latency depends on the compiler.
 
-| | finding | |
-|---|---|---|
-| Liquibook | release 2.0.0 allocates twice as often per order as the code just after it; the fix was never released | [case 1](docs/cases.md#case-1-liquibook-200-allocates-twice-more-per-order) |
-| spdlog | a mutex lock removed in 2016 came back in v1.0 to v1.3; a per-thread first-message allocation shipped in eight releases, pinned to the commits that added and removed it | [case 2](docs/cases.md#case-2-spdlog-a-lock-that-came-back-and-a-first-call-allocation-fixed-upstream) |
-| hffix | the FIX encoder is 2.8x apart across compilers and levels: GCC `-O2` does not inline the helper that converts constant tags | [case 3](docs/cases.md#case-3-the-same-fix-encoder-28x-apart-between-compilers), [hffix#63](https://github.com/jamesdbrock/hffix/issues/63) |
-| MPMCQueue | 1.7x slower with GCC than clang: two 64-bit divisions per operation; a four-line change makes both faster | [case 4](docs/cases.md#case-4-mpmcqueue-a-64-bit-division-that-clang-shortens-and-gcc-repeats), [MPMCQueue#58](https://github.com/rigtorp/MPMCQueue/pull/58) |
-| static vs run time | the two views agree on every allocation and lock of the measured Liquibook and concurrentqueue operations | [cases](docs/cases.md#static-and-run-time-side-by-side) |
-| fourteen of the eighteen | counts never changed over their measured history (hffix and MPMCQueue among them: their findings are about time) | [results](docs/results.md) |
+**1. Liquibook's last release allocates twice as often per order** ([details](docs/cases.md#case-1-liquibook-200-allocates-twice-more-per-order)).
+Allocations per add+cancel, counted at every library commit:
+
+```
+25b0c5ec 2017-02-22  add+cancel: alloc 1.00 -> 4.00    order_book.h:1049, a fresh vector on every add and cancel
+dd5ada83 2017-02-22  add+cancel: alloc 4.00 -> 2.00    "avoid reallocating callbacks vector"
+```
+
+Tag `2.0.0` contains the first commit and not the second, and no later release exists. Price: 433 against
+383 ns per add+cancel.
+
+**2. spdlog: a lock that came back, and a first-message allocation** ([details](docs/cases.md#case-2-spdlog-a-lock-that-came-back-and-a-first-call-allocation-fixed-upstream)).
+Sampled every 30 of 1,856 commits, then bisected; every change is pinned to a single commit:
+
+```
+38456118 2016-12-31  null sink: lock 1 -> 0 per message
+0c19bdd7 2018-06-24  null sink: lock 0 -> 1 per message     (a refactoring; v1.0.0 to v1.3.1)
+cf152e60 2019-06-27  null sink: lock 1 -> 0 per message
+1253a57d 2024-03-29  first message of a thread: alloc 10 -> 11   (MDC thread-local map; v1.14.0 to v1.17.0)
+bfa795e5 2026-10-24  first message of a thread: alloc 11 -> 10   (fixed upstream)
+```
+
+**3. The same FIX encoder is 2.8x apart between compilers** ([details](docs/cases.md#case-3-the-same-fix-encoder-28x-apart-between-compilers), [hffix#63](https://github.com/jamesdbrock/hffix/issues/63)).
+Encoding one order in hffix, ns:
+
+| | GCC 13 | GCC 15 | clang 21 |
+|---|---:|---:|---:|
+| -O2 | 384 | 301 | 342 |
+| -O3 | 178 | 137 | 344 |
+
+At GCC `-O2`, `details::itoa` stays out of line (14 calls per message), so constant tags such as 54 are
+converted to ASCII at run time. GCC's `-O3` inlining parameters alone recover 123 of the 207 ns.
+
+**4. MPMCQueue is 1.7x slower with GCC; four lines fix it for every compiler** ([details](docs/cases.md#case-4-mpmcqueue-a-64-bit-division-that-clang-shortens-and-gcc-repeats), [PR #58](https://github.com/rigtorp/MPMCQueue/pull/58)).
+`try_push`+`try_pop`, ns:
+
+| | before | after |
+|---|---:|---:|
+| GCC 13 | 52.5 | 29.6 |
+| clang 21 | 30.3 | 26.6 |
+| clang 21, slow-division bypass off | 47.7 | |
+
+GCC divides by the capacity twice per operation, because the atomic compare-and-swap forces the
+capacity to be reloaded. LLVM hides the cost with its 64-bit division bypass. The change computes the
+quotient once.
+
+**Static and run time agree.** On every measured operation of Liquibook and concurrentqueue, every
+allocation and lock seen at run time matches a site of the static analysis (no static miss), and the
+static analysis lists the paths the benchmarks never take ([details](docs/cases.md#static-and-run-time-side-by-side)).
 
 ## Use
 
