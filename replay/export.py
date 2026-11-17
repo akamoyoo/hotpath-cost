@@ -4,7 +4,7 @@ per commit that failed to build or run), in first-parent order.
 
   export.py [BUILD ...]        default: every directory under out/
 """
-import csv, json, sys
+import csv, json, re, sys
 from pathlib import Path
 
 TOP = Path(__file__).resolve().parent.parent
@@ -15,7 +15,9 @@ def main():
         for proj in sorted(p for p in (TOP / "out" / b).iterdir() if p.is_dir()):
             order = proj / "order.json"
             if not order.exists(): continue
-            dst = TOP / "results" / b / f"{proj.name}.csv"; dst.parent.mkdir(parents=True, exist_ok=True)
+            # compiler-matrix rounds (out/<cc>-m<opt>-r<k>/) go to results/matrix/, the replays to results/<build>/
+            dst = TOP / "results" / ("matrix" if "-m-" in b or re.search(r"-m-?O", b) else "") / b / f"{proj.name}.csv"
+            dst.parent.mkdir(parents=True, exist_ok=True)
             n = 0
             with open(dst, "w", newline="") as f:
                 w = csv.writer(f)

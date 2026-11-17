@@ -200,7 +200,13 @@ A.row(k).head(k).transpose()` of the in-place factorisation. The blocks are of a
 have run-time sizes of 1 to 3 elements. After the change, that update is a generic loop, not inlined,
 built on the new masked-segment loads and stores (`Core/arch/AVX/PacketMath.h`); before it, the whole
 solve was inlined into 361 instructions. Probably the masking costs more than it saves on vectors this
-short; that was not measured separately. Not reported upstream yet (Eigen's tracker is on GitLab).
+short; that was not measured separately.
+
+Eigen's issue [#3206](https://gitlab.com/libeigen/eigen/-/issues/3206) already lists small LLT among the
+cases to look at; the bisection and the timings above were added there as a comment, with one experiment
+that did not close the gap (dropping the `CoeffReadCost < HugeCost` condition of !3277's scalar-tail rule
+gives GCC about 5 % and makes clang slower for 3x3 and 6x6). Master at the time (`8d4a5a84`) was still
+1.30x slower than before `28c3b26d` with GCC.
 
 ## Case 6: a random order flow reaches the paths, and finds an out-of-bounds write in Liquibook
 

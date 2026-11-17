@@ -121,4 +121,4 @@ CXX_GCC15=g++-15 CXX_CLANG=clang++-21 cases/mpmcqueue/run.sh 2
 Requirements: Linux x86-64 with glibc, git, Python 3, GCC (13 used here), `taskset`, `addr2line`;
 LLVM 21 with CMake and Ninja for the static half and `combine.py`; optionally GCC 15 and Clang 21
 for the matrix. `results/` holds the per-commit measurements behind
-the tables (`results/<build>/<library>.csv`, `results/matrix.md`), as produced by these commands.
+the tables (`results/<build>/<library>.csv`, `results/matrix/matrix.md`), as produced by these commands.

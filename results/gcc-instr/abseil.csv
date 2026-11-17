@@ -1,0 +1,815 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+c2e754829628d1e9b7a16b3389cfdace76950fdf,2017-09-19,build failed,,,,,,,,Initial Commit
+5b535401665cc6aa96d54a5c9b0901153d97210f,2018-04-18,build failed,,,,,,,,"  - ed0ba496fe01eb8edfa86beade8a37768e7c12ef Updates the API for Exception Safety testing to use build... by Abseil Team <absl-team@google.com>   - c4b7a4e517c9404932c45f2f9f92eb7dc694e45d Internal change by Abseil Team <absl-team@google.com>   - 76c78ed9385f65d881511645446e0bb8ababf6ec Add missing ABSL_PREDICT_FALSE to one of FixedArray::at()... by Abseil Team <absl-team@google.com>   - 1204fb1c46f007dd9dfb7d9abf3e96c58835d193 Internal change. by Greg Falcon <gfalcon@google.com>   - f1f47c98a026bc5e425ae83ff4a2eb391bbd3d9b Add internal-only functionality to examine the stack, to ... by Derek Mauro <dmauro@google.com>   - 30d63097cd268d912f917526f6511005580465c4 fix typo by Abseil Team <absl-team@google.com>   - 942d7efa6cf54cd248ca57dcaf3c245188b52a76 Remove unnecessary semicolons from comment examples. by Abseil Team <absl-team@google.com>   - 7db0669cf23a06d934d3ed8c76aee4e4e23b7e04 Remove malloc_hook and malloc_extension from our internal... by Greg Falcon <gfalcon@google.com>   - 0190f1063d101b1ded355019df2e1d325931f6c7 Make the maximum length of a string view equal difference... by Abseil Team <absl-team@google.com>   - c8ae37cbce29449b02115a0ebd435ddc3d7ab062 Add namespace qualification. by Shaindel Schwartz <shaindel@google.com>   - ff70afe2e6e3dd39f51ce9829e3e1f18231bf4d7 Fix internal/direct_mmap.h for non-linux builds. by Greg Falcon <gfalcon@google.com>"
+2125e6444a9de9e41f21ecdc674dd7d8759c149d,2018-08-01,build failed,,,,,,,,Export of internal Abseil changes. -- ac7508120c60dfe689c40929e416b6a486f83ee3 by Gennadiy Rozental <rogeeff@google.com>:
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,find (hit),,,,,,,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:,70.02
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,find (miss),,,,,,,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:,74.52
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,insert+erase,,,,,,,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:,193.48
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,operator[] (hit),,,,,,,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:,71.01
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,find (hit),,,,,,,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:,70.02
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,find (miss),,,,,,,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:,74.52
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,insert+erase,,,,,,,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:,193.48
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,operator[] (hit),,,,,,,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:,71.01
+111ca7060a6ff50115ca85b59f6b5d8c8c5e9105,2018-12-16,ok,find (hit),,,,,,,Export of internal Abseil changes. -- a2adbf75201f6b7feba929f77dfc4f87f9c1110b by Abseil Team <absl-team@google.com>:,70.02
+111ca7060a6ff50115ca85b59f6b5d8c8c5e9105,2018-12-16,ok,find (miss),,,,,,,Export of internal Abseil changes. -- a2adbf75201f6b7feba929f77dfc4f87f9c1110b by Abseil Team <absl-team@google.com>:,74.52
+111ca7060a6ff50115ca85b59f6b5d8c8c5e9105,2018-12-16,ok,insert+erase,,,,,,,Export of internal Abseil changes. -- a2adbf75201f6b7feba929f77dfc4f87f9c1110b by Abseil Team <absl-team@google.com>:,193.48
+111ca7060a6ff50115ca85b59f6b5d8c8c5e9105,2018-12-16,ok,operator[] (hit),,,,,,,Export of internal Abseil changes. -- a2adbf75201f6b7feba929f77dfc4f87f9c1110b by Abseil Team <absl-team@google.com>:,71.01
+968a34ffdaadd7db062a9621dfbdf8b2d16e05af,2018-12-20,run failed,,,,,,,,Export of internal Abseil changes. -- 7fa1107161a03dac53fb84c2b06d8092616c7b13 by Abseil Team <absl-team@google.com>:
+01b471d9f3ebef27f5aaca14b66509099fa8cd6c,2018-12-26,run failed,,,,,,,,Export of internal Abseil changes. -- ffe1bf0e5f98c77cf4193f24ae9ce94d16a72c6e by Alex Strelnikov <strel@google.com>:
+b16aeb6756bdab08cdf12d40baab5b51f7d15b16,2019-01-07,build failed,,,,,,,,Export of internal Abseil changes. -- 5f1cf6547231f1b1daad6d1b785df6b0b999b3c9 by Samuel Benzaquen <sbenza@google.com>:
+018b4db1d73ec8238e6dc4b17fd9e1fd7468d0ed,2019-01-09,build failed,,,,,,,,Export of internal Abseil changes. -- fd86c60bac6c41f1629ce1ab7dc1c8edff398a59 by Alex Strelnikov <strel@google.com>:
+66f9becbb98ecc083f4db349b4b1e0ca9de93b15,2019-01-10,build failed,,,,,,,,Export of internal Abseil changes. -- da7b6d9d43b2951a3487bbfd41aa2ee96b2813ef by Derek Mauro <dmauro@google.com>:
+5eea0f713c14ac17788b83e496f11903f8e2bbb0,2019-01-11,build failed,,,,,,,,Export of internal Abseil changes. -- 70b243f160a2f0f222066f62e06cc4346aea683d by Gennadiy Civil <misterg@google.com>:
+5e6a78131f7bd5940218462c07d88cdefdd75dbe,2019-01-15,build failed,,,,,,,,Export of internal Abseil changes. -- 4a492de32dd1e02c5c3600bfdb36da7af7855210 by Samuel Benzaquen <sbenza@google.com>:
+efccc502606bed768e50a6cd5806d8eb13e4e935,2019-01-17,build failed,,,,,,,,Export of internal Abseil changes. -- b7d4f72ebb8a052cb2c6dfbfb628200eb64585c5 by CJ Johnson <johnsoncj@google.com>:
+0b1e6d417b414aad9282e32e8c49c719edeb63c1,2019-01-18,build failed,,,,,,,,Export of internal Abseil changes. -- 461c1b6eb19490429db3bc6dd10ee32df9429cd7 by Samuel Benzaquen <sbenza@google.com>:
+0dffca4e36791c7beeda04da10460b534283948a,2019-01-24,build failed,,,,,,,,Export of internal Abseil changes. -- 5804cc13b413412988248835459b90cd15ec43d9 by Abseil Team <absl-team@google.com>:
+5e0dcf72c64fae912184d2e0de87195fe8f0a425,2019-01-25,build failed,,,,,,,,Export of internal Abseil changes. -- a9115ecdf91183528f677fbbd9294652ab68c35f by CJ Johnson <johnsoncj@google.com>:
+540e2537b92cd4abfae6ceddfe24304345461f32,2019-01-28,build failed,,,,,,,,Export of internal Abseil changes. -- 8c420997e7a08b9e7e24afa32d6e37cb2bfa2c12 by Abseil Team <absl-team@google.com>:
+a4cb1c8ba61531a63f9d309eea01ac1d43d8371d,2019-01-30,build failed,,,,,,,,Export of internal Abseil changes. -- 6fdf24a197b964f9bacbebd0ceca305aef1654fc by Shaindel Schwartz <shaindel@google.com>:
+d78310fe5a82f2e0e6e16509ef8079c8d7e4674e,2019-01-30,build failed,,,,,,,,Export of internal Abseil changes. -- 2c12ae8d6cbb8cbeb3ff446393578dd0d6d0cf8c by Andy Getzendanner <durandal@google.com>:
+2901ec32a919311384d6ad4194e2d927c06831f7,2019-02-07,build failed,,,,,,,,Export of internal Abseil changes. -- 5da9755667df37e38ccaf6938c9f408e294110bb by Shaindel Schwartz <shaindel@google.com>:
+426eaa4aa44e4580418bee46c1bd13911151bfb1,2019-02-12,build failed,,,,,,,,Export of internal Abseil changes. -- 0c2e865b4611eda0b43e64c177ac34540f059be2 by Mark Barolak <mbar@google.com>:
+93d155bc4414f6c121bb1f19dba9fdb27c8943bc,2019-02-19,build failed,,,,,,,,Export of internal Abseil changes. -- 3d20ce6cd6541579abecaba169d4b8716d511272 by Jon Cohen <cohenjon@google.com>:
+308ce31528a7edfa39f5f6d36142278a0ae1bf45,2019-02-25,build failed,,,,,,,,Export of internal Abseil changes. -- e4e4a3460b64ba0571be217b04ec286bfac6b6bf by Tom Manshreck <shreck@google.com>:
+b312c3cb53a0aad75a85ac2bf57c4a614fbd48d4,2019-02-26,build failed,,,,,,,,Export of internal Abseil changes. -- 4501f16edb0939be6165df74c70a421d3a959aa5 by Jon Cohen <cohenjon@google.com>:
+419f3184f8ebcdb23105295eadd2a569f3351eb9,2019-02-28,build failed,,,,,,,,Export of internal Abseil changes. -- 92e1bd6dc9e64163659028b640427d6d8573e41c by Abseil Team <absl-team@google.com>:
+9fdf5e5b805412cb2a2e624d3e9a11588120465f,2019-03-04,build failed,,,,,,,,Export of internal Abseil changes. -- 425305bdac5c84a2b7b61d65aee90e4d9d1c29a0 by Abseil Team <absl-team@google.com>:
+febc5ee6a92d0eb7dac1fceaa6c648cf6521b4dc,2019-03-06,build failed,,,,,,,,Export of internal Abseil changes. -- f9f068aa8a260dc576398e47b8e4540902e41358 by Derek Mauro <dmauro@google.com>:
+38b704384cd2f17590b3922b97744be0b43622c9,2019-03-08,build failed,,,,,,,,Changed HTTP URLs to HTTPS where possible (#270)
+88a152ae747c3c42dc9167d46c590929b048d436,2019-03-08,build failed,,,,,,,,Export of internal Abseil changes. -- 5dc8d7504b7c11710b19365a6582c288c8992366 by Derek Mauro <dmauro@google.com>:
+256be563447a315f2a7993ec669460ba475fa86a,2019-03-12,build failed,,,,,,,,Export of internal Abseil changes. -- 00d42e3d5433aaf29c2ed293520b2ba178ae8bdb by Greg Falcon <gfalcon@google.com>:
+7c7754fb3ed9ffb57d35fe8658f3ba4d73a31e72,2019-03-13,build failed,,,,,,,,Export of internal Abseil changes. -- 89b5e681db1d4f0b039daebb86c49bda77c8931b by Tom Manshreck <shreck@google.com>:
+bf29470384a101b307873b26d358433138c857fc,2019-03-19,build failed,,,,,,,,Export of internal Abseil changes. -- bdce7e57e9e886eff1114d0266781b443f7ec639 by Derek Mauro <dmauro@google.com>:
+eab2078b53c9e3d9d240135c09d27e3393acb50a,2019-03-22,build failed,,,,,,,,Export of internal Abseil changes. -- 8b7c3bc2fb69608e9b2389b1be0b0de840a4c59d by Derek Mauro <dmauro@google.com>:
+5b65c4af5107176555b23a638e5947686410ac1f,2019-03-27,build failed,,,,,,,,Export of internal Abseil changes. -- f6c627ce4470a814adc377947b58346eef69a4c9 by Jon Cohen <cohenjon@google.com>:
+2c8421e1c6cef0da9e8a20b01c15256ec9ec116d,2019-03-28,build failed,,,,,,,,Export of internal Abseil changes. -- fcf9d3facb12451964ad1850073cbfb6f9739379 by CJ Johnson <johnsoncj@google.com>:
+93dfcf74cb5fccae3da07897d8613ae6cab958a0,2019-04-01,build failed,,,,,,,,Export of internal Abseil changes. -- 855576faf9556573fd74c2874b290d8feb6565d5 by Gennadiy Rozental <rogeeff@google.com>:
+666fc1266bccfd8e6eaaa084e7b42580bb8eb199,2019-04-04,build failed,,,,,,,,Export of internal Abseil changes. -- bc89d3221e3927d08881d75eeee0e8db862300fa by Benjamin Barenblat <bbaren@google.com>:
+6cc6ac44e065b9e8975fadfd6ccb99cbcf89aac4,2019-04-05,build failed,,,,,,,,Export of internal Abseil changes. -- 4a7dc9bd72a50f493671ea3ae2a571462cb70fc4 by Jon Cohen <cohenjon@google.com>:
+dbae8764fbd429bf7d7745e24bcf73962177a7c0,2019-04-09,build failed,,,,,,,,Export of internal Abseil changes. -- 3f04cd3c25a99df91ff913977b8c5b343532db5d by Abseil Team <absl-team@google.com>:
+0b545b460141b882b244a1efcef7621d59278160,2019-04-11,build failed,,,,,,,,Export of internal Abseil changes. -- 421902a6ea836e4e59bed86eed68ab9ed992295a by Shaindel Schwartz <shaindel@google.com>:
+d902eb869bcfacc1bad14933ed9af4bed006d481,2019-04-16,build failed,,,,,,,,Export of internal Abseil changes. -- babbb6421068af3831870fd5995444437ace6769 by Derek Mauro <dmauro@google.com>:
+ca3f87560a0eef716195cadf66dc6b938a579ec6,2019-04-23,build failed,,,,,,,,Export of internal Abseil changes. -- 5a5dba4252e764e6737070bf0a31074bf23a3b41 by Abseil Team <absl-team@google.com>:
+33841c5c963aa9c3f096ef8e6c1e71624b941940,2019-04-24,build failed,,,,,,,,Export of internal Abseil changes. -- bb92c768e2271ddbebc1b1eb7e16a7b7c86a6e1c by Abseil Team <absl-team@google.com>:
+cd86d0d20ab167c33b23d3875db68d1d4bad3a3b,2019-04-25,build failed,,,,,,,,Export of internal Abseil changes. -- 997d2a8d12d9395046b0bdfc2f206a0b2fe2f1f9 by Abseil Team <absl-team@google.com>:
+aa468ad75539619b47979911297efbb629c52e44,2019-05-07,build failed,,,,,,,,Export of internal Abseil changes. -- 78293ba4eb4981991ae7e6edd25eb9245fcd7515 by Andy Soffer <asoffer@google.com>:
+27c2f6e2f3b5929fbd322b0f0ca392eb02efd9f8,2019-05-08,build failed,,,,,,,,Export of internal Abseil changes. -- 9fa04b5fb4b6aeb47226b9095b3bc36a53669c39 by Abseil Team <absl-team@google.com>:
+0cbdc774b97f7e80ab60dbe2ed4eaca3b2e33fc8,2019-05-10,build failed,,,,,,,,Export of internal Abseil changes. -- ab1a58c85a462884413ec0022dc1fff19ccb8602 by Abseil Team <absl-team@google.com>:
+fa00c321073c7ea40a4fc3dfc8a06309eae3d025,2019-05-15,build failed,,,,,,,,Export of internal Abseil changes. -- 6258612abc571fa7f51f34046b410c73486505fe by Derek Mauro <dmauro@google.com>:
+a18fc7461e7409c2ad64e28537261db1e02e76fa,2019-05-20,build failed,,,,,,,,Export of internal Abseil changes. -- b254aba40a65385deccd757480f8d7383f2f2f55 by CJ Johnson <johnsoncj@google.com>:
+ce65f5ac3cbf897bb5e3de1a51d80fd00866abaa,2019-05-22,build failed,,,,,,,,Export of internal Abseil changes. -- 1edfe05ddddca43e7650b2d790df7c8498c0e588 by Abseil Team <absl-team@google.com>:
+4adaf5490921f13028b55018c9f550277de5aebb,2019-05-23,build failed,,,,,,,,Export of internal Abseil changes. -- 2d7c9650fe2b1bf76085a993285e49db4d24aa4f by Derek Mauro <dmauro@google.com>:
+2f76a9bf50046e396138cc8eeb3cdc17b7a5ac24,2019-05-30,build failed,,,,,,,,Export of internal Abseil changes. -- 0925eb11f7730d5a1e538b9e6c2d1f8239f5fdc0 by Abseil Team <absl-team@google.com>:
+61c9bf3e3e1c28a4aa6d7f1be4b37fd473bb5529,2019-06-05,build failed,,,,,,,,Export of internal Abseil changes. -- 39b55fafbe4a83f9f0524544a12d4ed02fdec751 by Xiaoyi Zhang <zhangxy@google.com>:
+0238ab0a831f179518c1a814f9584e99da2d75a3,2019-06-07,build failed,,,,,,,,Merge pull request #321 from christoph-cullmann/c4245_fix_warning
+361cb8a9db2f2130442389fd80593255be26d681,2019-06-10,build failed,,,,,,,,Export of internal Abseil changes. -- 4a21ad4ffa957d28b770de8717289fab7410f567 by Gennadiy Rozental <rogeeff@google.com>:
+43ef2148c0936ebf7cb4be6b19927a9d9d145b8f,2019-06-18,build failed,,,,,,,,Export of internal Abseil changes. -- 635146be541d732fbf2e9c93c6bec89035552484 by Gennadiy Rozental <rogeeff@google.com>:
+e9324d926a9189e222741fce6e676f0944661a72,2019-06-21,build failed,,,,,,,,Export of internal Abseil changes. -- 7a6ff16a85beb730c172d5d25cf1b5e1be885c56 by Laramie Leavitt <lar@google.com>:
+d65e19dfcd8697076f68598c0131c6930cdcd74d,2019-06-24,build failed,,,,,,,,Export of internal Abseil changes. -- 2f187776e55fe7741882d64aa4fb04d361dcd1da by Shaindel Schwartz <shaindel@google.com>:
+72e09a54d993b192db32be14c65adf7e9bd08c31,2019-06-25,build failed,,,,,,,,Export of internal Abseil changes. -- 2ee5dbb79b56539b580c3a36eec5a025d08b7022 by Eric Fiselier <ericwf@google.com>:
+c964fcffac27bd4a9ff67fe393410dd1146ef8b8,2019-06-27,build failed,,,,,,,,Export of internal Abseil changes. -- c321829735accc2e6beb81e6a5a4421e5647b876 by CJ Johnson <johnsoncj@google.com>:
+e6b050212c859fbaf67abac76105da10ec348274,2019-07-02,build failed,,,,,,,,Export of internal Abseil changes. -- c2e2e2b21c3fe59b63279e7418c93c7289ee3e27 by Mark Barolak <mbar@google.com>:
+74d91756c11bc22f9b0108b94da9326f7f9e376f,2019-07-03,build failed,,,,,,,,Export of internal Abseil changes. -- a874475e842d2adeb31bb7bd37bdd6eb15a2aeb9 by Mark Barolak <mbar@google.com>:
+c6c3c1b498e4ee939b24be59cae29d59c3863be8,2019-07-17,build failed,,,,,,,,Export of internal Abseil changes. -- ed3a3431eee9e48e6553b0320e0308d2dde6725c by Derek Mauro <dmauro@google.com>:
+ad1485c8986246b2ae9105e512738d0e97aec887,2019-07-23,build failed,,,,,,,,Export of internal Abseil changes. -- 1f44f8f487aa3afe8248132e4081519e85671965 by CJ Johnson <johnsoncj@google.com>:
+36d37ab992038f52276ca66b9da80c1cf0f57dc2,2019-07-25,build failed,,,,,,,,Export of internal Abseil changes. -- 1224e58a45e4d016b18f5a6cf5762ba33027017a by CJ Johnson <johnsoncj@google.com>:
+14550beb3b7b97195e483fb74b5efb906395c31e,2019-07-30,build failed,,,,,,,,Export of internal Abseil changes. -- 8f685654a7d04eb8a0cb82d31e44e391e906b609 by Derek Mauro <dmauro@google.com>:
+8efba58a3b656e9b41fb0471ae6453425a61c520,2019-08-07,build failed,,,,,,,,Export of internal Abseil changes
+9ee91d3e430fb33a4590486573792eb0fa146c2d,2019-08-08,build failed,,,,,,,,Export of internal Abseil changes
+4ef574064e75b86f115549e9eb4c7e806781b3ab,2019-08-09,build failed,,,,,,,,Export of internal Abseil changes
+321ab5303023c86cd15d9ddc5740fb4b4fde32e1,2019-08-12,build failed,,,,,,,,Export of internal Abseil changes
+d9aa92d7fb324314f9df487ac23d32a25650b742,2019-08-13,build failed,,,,,,,,Export of internal Abseil changes
+aae8143cf9aa611f70d7ea9b95b8b8b383b2271a,2019-08-15,build failed,,,,,,,,Export of internal Abseil changes
+36910d3d7e9fccadd6603f232d0c4f54dcd47c7e,2019-08-16,build failed,,,,,,,,[bazel] Add fixes for --incompatible_load_cc_rules_from_bzl (#351)
+9a41ffdd3a0ccbcdd29c4e3886b28e06f2cd9c66,2019-08-16,build failed,,,,,,,,Export of internal Abseil changes
+0e7afdcbd24c7e5b7cab4e0217d8886f1525b520,2019-08-19,build failed,,,,,,,,Export of internal Abseil changes
+f0afae0d49af3e15a7169e019634d7719143d94d,2019-08-20,build failed,,,,,,,,Export of internal Abseil changes
+262d74ba81b1fc4d71f459555cde8ecb39786d68,2019-08-20,build failed,,,,,,,,Export of internal Abseil changes
+a0d1e098c2f99694fa399b175a7ccf920762030e,2019-08-27,build failed,,,,,,,,Export of internal Abseil changes
+1948f6f967e34db9793cfa8b4bcbaf370d039fd8,2019-08-30,build failed,,,,,,,,Export of internal Abseil changes
+83c1d65c90a92aa49632b9ac5a793214bb0768bc,2019-09-05,build failed,,,,,,,,Export of internal Abseil changes
+5374c56e5196320681993869e3126b51edac2a43,2019-09-10,build failed,,,,,,,,Export of internal Abseil changes
+502efe6d7841bff82b1aeef5500491fe9a48c635,2019-09-25,build failed,,,,,,,,Export of internal Abseil changes
+25597bdfc148e91e27678ec30efa52f4fc8c164f,2019-10-02,build failed,,,,,,,,Export of internal Abseil changes
+ab3552a18964e7063c8324f45b3896a6a20b08a8,2019-10-15,build failed,,,,,,,,Export of internal Abseil changes
+19b021cb3ff23048dfbe236a4e611925d8930831,2019-10-22,build failed,,,,,,,,Export of internal Abseil changes
+078b89b3c046d230ef3ad39494e5852184eb528b,2019-10-23,build failed,,,,,,,,Export of internal Abseil changes
+8207907f4f7fbaeeaa2b7340c76875e06fd345ba,2019-10-30,build failed,,,,,,,,Export of internal Abseil changes
+846e5dbedac123d12455adcfe6f53c8b5dcbfeef,2019-10-31,build failed,,,,,,,,Export of internal Abseil changes
+e96ae2203b80d5ae2e0b7abe0c77b722b224b16d,2019-11-05,build failed,,,,,,,,Export of internal Abseil changes
+fa8c75182fbfdeddb2485fc0d53baeda3f40b7a3,2019-11-13,build failed,,,,,,,,Export of internal Abseil changes
+7f4fe64af80fe3c84db8ea938276c3690573c45e,2019-11-25,build failed,,,,,,,,Export of internal Abseil changes
+0514227d2547793b23e209809276375e41c76617,2019-11-26,build failed,,,,,,,,Export of internal Abseil changes
+12bc53e0318d80569270a5b26ccbc62b52022b89,2019-12-12,build failed,,,,,,,,Export of internal Abseil changes
+29235139149790f5afc430c11cec8f1eb1677607,2019-12-18,build failed,,,,,,,,Export of internal Abseil changes
+1de0166368e2ae67347f92099d6dca3ab3a4a496,2020-01-03,build failed,,,,,,,,Export of internal Abseil changes
+63ee2f8877915a3565c29707dba8fe4d7822596a,2020-01-07,build failed,,,,,,,,Export of internal Abseil changes
+159bf2bf6d1cc8087e02468d071e94d1177d1bae,2020-01-16,build failed,,,,,,,,Export of internal Abseil changes
+37dd2562ec830d547a1524bb306be313ac3f2556,2020-01-28,ok,find (hit),,,,,,,Export of internal Abseil changes,70.02
+37dd2562ec830d547a1524bb306be313ac3f2556,2020-01-28,ok,find (miss),,,,,,,Export of internal Abseil changes,74.37
+37dd2562ec830d547a1524bb306be313ac3f2556,2020-01-28,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.89
+37dd2562ec830d547a1524bb306be313ac3f2556,2020-01-28,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,find (hit),,,,,,,Export of internal Abseil changes,70.02
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,find (miss),,,,,,,Export of internal Abseil changes,74.37
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.89
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+62f05b1f57ad660e9c09e02ce7d591dcc4d0ca08,2020-04-01,ok,find (hit),,,,,,,Export of internal Abseil changes,70.02
+62f05b1f57ad660e9c09e02ce7d591dcc4d0ca08,2020-04-01,ok,find (miss),,,,,,,Export of internal Abseil changes,74.37
+62f05b1f57ad660e9c09e02ce7d591dcc4d0ca08,2020-04-01,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.89
+62f05b1f57ad660e9c09e02ce7d591dcc4d0ca08,2020-04-01,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+d43b7997c0ca0f3312a51d1057fb73cfe934703b,2020-04-03,ok,find (hit),,,,,,,Export of internal Abseil changes,66.02
+d43b7997c0ca0f3312a51d1057fb73cfe934703b,2020-04-03,ok,find (miss),,,,,,,Export of internal Abseil changes,72.25
+d43b7997c0ca0f3312a51d1057fb73cfe934703b,2020-04-03,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.11
+d43b7997c0ca0f3312a51d1057fb73cfe934703b,2020-04-03,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+db5773a721a50d1fc8c9b51efea0e70be4003d36,2020-04-15,ok,find (hit),,,,,,,Export of internal Abseil changes,66.02
+db5773a721a50d1fc8c9b51efea0e70be4003d36,2020-04-15,ok,find (miss),,,,,,,Export of internal Abseil changes,72.25
+db5773a721a50d1fc8c9b51efea0e70be4003d36,2020-04-15,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.11
+db5773a721a50d1fc8c9b51efea0e70be4003d36,2020-04-15,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+902909a430e2558ad446294159af39bf019a1ef6,2020-04-22,ok,find (hit),,,,,,,Export of internal Abseil changes,66.02
+902909a430e2558ad446294159af39bf019a1ef6,2020-04-22,ok,find (miss),,,,,,,Export of internal Abseil changes,72.25
+902909a430e2558ad446294159af39bf019a1ef6,2020-04-22,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.11
+902909a430e2558ad446294159af39bf019a1ef6,2020-04-22,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,find (hit),,,,,,,Export of internal Abseil changes,66.02
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,find (miss),,,,,,,Export of internal Abseil changes,72.25
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.11
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,find (hit),,,,,,,Export of internal Abseil changes,66.02
+41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,find (miss),,,,,,,Export of internal Abseil changes,72.25
+41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.11
+41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+4d2ff381a3709ef9dd4cbc0237bae847c0bb1ccd,2020-08-26,ok,find (hit),,,,,,,Export of internal Abseil changes,66.02
+4d2ff381a3709ef9dd4cbc0237bae847c0bb1ccd,2020-08-26,ok,find (miss),,,,,,,Export of internal Abseil changes,72.25
+4d2ff381a3709ef9dd4cbc0237bae847c0bb1ccd,2020-08-26,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.11
+4d2ff381a3709ef9dd4cbc0237bae847c0bb1ccd,2020-08-26,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+f2c9c663db28a8a898c1fc8c8e06ab9b93eb5610,2020-09-09,ok,find (hit),,,,,,,Export of internal Abseil changes,66.02
+f2c9c663db28a8a898c1fc8c8e06ab9b93eb5610,2020-09-09,ok,find (miss),,,,,,,Export of internal Abseil changes,72.25
+f2c9c663db28a8a898c1fc8c8e06ab9b93eb5610,2020-09-09,ok,insert+erase,,,,,,,Export of internal Abseil changes,208.11
+f2c9c663db28a8a898c1fc8c8e06ab9b93eb5610,2020-09-09,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+6af91b35109cb35ae53cfe908e31a0c31c4a47f3,2020-09-11,ok,find (hit),,,,,,,Export of internal Abseil changes,66.01
+6af91b35109cb35ae53cfe908e31a0c31c4a47f3,2020-09-11,ok,find (miss),,,,,,,Export of internal Abseil changes,72.43
+6af91b35109cb35ae53cfe908e31a0c31c4a47f3,2020-09-11,ok,insert+erase,,,,,,,Export of internal Abseil changes,201.41
+6af91b35109cb35ae53cfe908e31a0c31c4a47f3,2020-09-11,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+c1ae0a497586edd38b0261846b8e4afdcfa30f0b,2020-09-14,ok,find (hit),,,,,,,Export of internal Abseil changes,66.01
+c1ae0a497586edd38b0261846b8e4afdcfa30f0b,2020-09-14,ok,find (miss),,,,,,,Export of internal Abseil changes,72.43
+c1ae0a497586edd38b0261846b8e4afdcfa30f0b,2020-09-14,ok,insert+erase,,,,,,,Export of internal Abseil changes,201.41
+c1ae0a497586edd38b0261846b8e4afdcfa30f0b,2020-09-14,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,find (hit),,,,,,,Export of internal Abseil changes,66.01
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,find (miss),,,,,,,Export of internal Abseil changes,72.43
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,insert+erase,,,,,,,Export of internal Abseil changes,201.41
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,find (hit),,,,,,,Export of internal Abseil changes,67.01
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,find (miss),,,,,,,Export of internal Abseil changes,73.43
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,insert+erase,,,,,,,Export of internal Abseil changes,201.41
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+20869f89edbc38139f46bdc49c8b6c3a1f7bee4c,2021-02-01,build failed,,,,,,,,Export of internal Abseil changes
+7ba826e50dff1878e6ecc6b9af44097c040c8968,2021-05-10,build failed,,,,,,,,Export of internal Abseil changes
+0ce3ca95fd56d1ff32ec6cec69a28f589064f8e6,2021-07-21,build failed,,,,,,,,Export of internal Abseil changes
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,find (hit),,,,,,,Export of internal Abseil changes,67.02
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,find (miss),,,,,,,Export of internal Abseil changes,73.43
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,insert+erase,,,,,,,Export of internal Abseil changes,199.09
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,71.01
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,find (hit),,,,,,,Export of internal Abseil changes,67.02
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,find (miss),,,,,,,Export of internal Abseil changes,73.43
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,insert+erase,,,,,,,Export of internal Abseil changes,201.09
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,72.01
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,find (hit),,,,,,,Export of internal Abseil changes,67.02
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,find (miss),,,,,,,Export of internal Abseil changes,73.43
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,insert+erase,,,,,,,Export of internal Abseil changes,201.09
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,operator[] (hit),,,,,,,Export of internal Abseil changes,72.01
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,find (hit),,,,,,,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect.",67.02
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,find (miss),,,,,,,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect.",73.43
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,insert+erase,,,,,,,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect.",201.09
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,operator[] (hit),,,,,,,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect.",72.01
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,find (hit),,,,,,,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__,67.01
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,find (miss),,,,,,,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__,73.27
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,insert+erase,,,,,,,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__,200.4
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,operator[] (hit),,,,,,,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__,72.01
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,find (hit),,,,,,,Fix ClangTidy warnings in btree.h and btree_test.cc.,67.01
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,find (miss),,,,,,,Fix ClangTidy warnings in btree.h and btree_test.cc.,73.27
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,insert+erase,,,,,,,Fix ClangTidy warnings in btree.h and btree_test.cc.,200.4
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,operator[] (hit),,,,,,,Fix ClangTidy warnings in btree.h and btree_test.cc.,72.01
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,find (hit),,,,,,,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC,67.01
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,find (miss),,,,,,,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC,73.27
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,insert+erase,,,,,,,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC,200.4
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,operator[] (hit),,,,,,,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC,72.01
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,find (hit),,,,,,,Improve error messages when comparing btree iterators.,67.01
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,find (miss),,,,,,,Improve error messages when comparing btree iterators.,73.27
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,insert+erase,,,,,,,Improve error messages when comparing btree iterators.,200.4
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,operator[] (hit),,,,,,,Improve error messages when comparing btree iterators.,72.01
+e6f568445f406318b970a56ae377e7ab8885cb50,2022-11-22,ok,find (hit),,,,,,,Refactor btree iterator generation code into a base class rather than using ifdefs inside btree_iterator.,67.01
+e6f568445f406318b970a56ae377e7ab8885cb50,2022-11-22,ok,find (miss),,,,,,,Refactor btree iterator generation code into a base class rather than using ifdefs inside btree_iterator.,73.27
+e6f568445f406318b970a56ae377e7ab8885cb50,2022-11-22,ok,insert+erase,,,,,,,Refactor btree iterator generation code into a base class rather than using ifdefs inside btree_iterator.,200.4
+e6f568445f406318b970a56ae377e7ab8885cb50,2022-11-22,ok,operator[] (hit),,,,,,,Refactor btree iterator generation code into a base class rather than using ifdefs inside btree_iterator.,72.01
+e5a7979d36a84831652abf3138c4d76797c002b5,2022-11-28,ok,find (hit),,,,,,,"Reduce flat_hash_{set,map} generated code size.",68.01
+e5a7979d36a84831652abf3138c4d76797c002b5,2022-11-28,ok,find (miss),,,,,,,"Reduce flat_hash_{set,map} generated code size.",75.14
+e5a7979d36a84831652abf3138c4d76797c002b5,2022-11-28,ok,insert+erase,,,,,,,"Reduce flat_hash_{set,map} generated code size.",220.26
+e5a7979d36a84831652abf3138c4d76797c002b5,2022-11-28,ok,operator[] (hit),,,,,,,"Reduce flat_hash_{set,map} generated code size.",72.01
+1063d2b829bbf1b5cf03f5f8e1e9fe4c71c9f966,2022-12-01,ok,find (hit),,,,,,,Move the vtable into a function to delay instantiation until the function is called. When the variable is a global the compiler is allowed to instantiate it more aggresively and it might happen before the types involved are complete. When it is inside a function the compiler can't instantiate it until after the functions are called.,68.02
+1063d2b829bbf1b5cf03f5f8e1e9fe4c71c9f966,2022-12-01,ok,find (miss),,,,,,,Move the vtable into a function to delay instantiation until the function is called. When the variable is a global the compiler is allowed to instantiate it more aggresively and it might happen before the types involved are complete. When it is inside a function the compiler can't instantiate it until after the functions are called.,75.17
+1063d2b829bbf1b5cf03f5f8e1e9fe4c71c9f966,2022-12-01,ok,insert+erase,,,,,,,Move the vtable into a function to delay instantiation until the function is called. When the variable is a global the compiler is allowed to instantiate it more aggresively and it might happen before the types involved are complete. When it is inside a function the compiler can't instantiate it until after the functions are called.,220.55
+1063d2b829bbf1b5cf03f5f8e1e9fe4c71c9f966,2022-12-01,ok,operator[] (hit),,,,,,,Move the vtable into a function to delay instantiation until the function is called. When the variable is a global the compiler is allowed to instantiate it more aggresively and it might happen before the types involved are complete. When it is inside a function the compiler can't instantiate it until after the functions are called.,72.01
+523b86994f1e705e27e99cdf6527ec1f010e69d1,2022-12-08,ok,find (hit),,,,,,,Change CommonFields from a private base class of raw_hash_set to be the first member of the settings_ CompressedTuple so that we can move growth_left into CommonFields.,68.02
+523b86994f1e705e27e99cdf6527ec1f010e69d1,2022-12-08,ok,find (miss),,,,,,,Change CommonFields from a private base class of raw_hash_set to be the first member of the settings_ CompressedTuple so that we can move growth_left into CommonFields.,75.17
+523b86994f1e705e27e99cdf6527ec1f010e69d1,2022-12-08,ok,insert+erase,,,,,,,Change CommonFields from a private base class of raw_hash_set to be the first member of the settings_ CompressedTuple so that we can move growth_left into CommonFields.,215.55
+523b86994f1e705e27e99cdf6527ec1f010e69d1,2022-12-08,ok,operator[] (hit),,,,,,,Change CommonFields from a private base class of raw_hash_set to be the first member of the settings_ CompressedTuple so that we can move growth_left into CommonFields.,72.01
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,find (hit),,,,,,,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.,68.02
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,find (miss),,,,,,,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.,75.17
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,insert+erase,,,,,,,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.,215.55
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,operator[] (hit),,,,,,,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.,72.01
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,find (hit),,,,,,,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.,68.02
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,find (miss),,,,,,,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.,75.17
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,insert+erase,,,,,,,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.,215.55
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,operator[] (hit),,,,,,,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.,72.01
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,find (hit),,,,,,,inlined_vector: stop sharing the memcpy-based move-assignment path.,68.02
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,find (miss),,,,,,,inlined_vector: stop sharing the memcpy-based move-assignment path.,75.17
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,insert+erase,,,,,,,inlined_vector: stop sharing the memcpy-based move-assignment path.,215.55
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,operator[] (hit),,,,,,,inlined_vector: stop sharing the memcpy-based move-assignment path.,72.01
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,find (hit),,,,,,,Add lifetimebound attribute to some Abseil containers,68.02
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,find (miss),,,,,,,Add lifetimebound attribute to some Abseil containers,75.17
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,insert+erase,,,,,,,Add lifetimebound attribute to some Abseil containers,215.55
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,operator[] (hit),,,,,,,Add lifetimebound attribute to some Abseil containers,72.01
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,find (hit),,,,,,,Move growth_left to the backing array.,68.02
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,find (miss),,,,,,,Move growth_left to the backing array.,75.17
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,insert+erase,,,,,,,Move growth_left to the backing array.,214.55
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,operator[] (hit),,,,,,,Move growth_left to the backing array.,72.01
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,find (hit),,,,,,,Add missing includes in raw_hash_set.h.,68.02
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,find (miss),,,,,,,Add missing includes in raw_hash_set.h.,75.17
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,insert+erase,,,,,,,Add missing includes in raw_hash_set.h.,214.55
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,operator[] (hit),,,,,,,Add missing includes in raw_hash_set.h.,72.01
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,find (hit),,,,,,,Add an internal wrapper for `abi::__cxa_demangle()`.,68.02
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,find (miss),,,,,,,Add an internal wrapper for `abi::__cxa_demangle()`.,75.17
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,insert+erase,,,,,,,Add an internal wrapper for `abi::__cxa_demangle()`.,214.55
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,operator[] (hit),,,,,,,Add an internal wrapper for `abi::__cxa_demangle()`.,72.01
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,find (hit),,,,,,,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.,69.02
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,find (miss),,,,,,,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.,76.4
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,insert+erase,,,,,,,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.,219.56
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,operator[] (hit),,,,,,,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.,73.01
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,find (hit),,,,,,,`btree_map`: avoid a copy in `map_params::key`.,69.02
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,find (miss),,,,,,,`btree_map`: avoid a copy in `map_params::key`.,76.4
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,insert+erase,,,,,,,`btree_map`: avoid a copy in `map_params::key`.,219.56
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,operator[] (hit),,,,,,,`btree_map`: avoid a copy in `map_params::key`.,73.01
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,find (hit),,,,,,,Remove code pieces for no longer supported GCC versions.,69.02
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,find (miss),,,,,,,Remove code pieces for no longer supported GCC versions.,76.4
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,insert+erase,,,,,,,Remove code pieces for no longer supported GCC versions.,213.45
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,operator[] (hit),,,,,,,Remove code pieces for no longer supported GCC versions.,73.01
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,find (hit),,,,,,,Make `begin()` to return `end()` on empty tables.,69.02
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,find (miss),,,,,,,Make `begin()` to return `end()` on empty tables.,76.4
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,insert+erase,,,,,,,Make `begin()` to return `end()` on empty tables.,213.45
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,operator[] (hit),,,,,,,Make `begin()` to return `end()` on empty tables.,73.01
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,find (hit),,,,,,,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents",69.02
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,find (miss),,,,,,,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents",75.52
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,insert+erase,,,,,,,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents",214.83
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,operator[] (hit),,,,,,,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents",73.01
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,find (hit),,,,,,,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC,69.02
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,find (miss),,,,,,,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC,75.52
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,insert+erase,,,,,,,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC,213.8
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,operator[] (hit),,,,,,,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC,73.01
+ad5499a290fd98de54ee54dcf8120f8d287640ce,2024-03-25,ok,find (hit),,,,,,,Add `BM_EraseIf` benchmark.,69.02
+ad5499a290fd98de54ee54dcf8120f8d287640ce,2024-03-25,ok,find (miss),,,,,,,Add `BM_EraseIf` benchmark.,75.52
+ad5499a290fd98de54ee54dcf8120f8d287640ce,2024-03-25,ok,insert+erase,,,,,,,Add `BM_EraseIf` benchmark.,213.8
+ad5499a290fd98de54ee54dcf8120f8d287640ce,2024-03-25,ok,operator[] (hit),,,,,,,Add `BM_EraseIf` benchmark.,73.01
+6f0c500453dd911018bd5cfb46999cee5e3e2cf8,2024-03-26,ok,find (hit),,,,,,,Refactor the GCC unintialized memory warning suppression in raw_hash_set.h.,69.02
+6f0c500453dd911018bd5cfb46999cee5e3e2cf8,2024-03-26,ok,find (miss),,,,,,,Refactor the GCC unintialized memory warning suppression in raw_hash_set.h.,75.52
+6f0c500453dd911018bd5cfb46999cee5e3e2cf8,2024-03-26,ok,insert+erase,,,,,,,Refactor the GCC unintialized memory warning suppression in raw_hash_set.h.,214.83
+6f0c500453dd911018bd5cfb46999cee5e3e2cf8,2024-03-26,ok,operator[] (hit),,,,,,,Refactor the GCC unintialized memory warning suppression in raw_hash_set.h.,73.01
+1ccc2eb35ed685a5640cb80a26be4df535b9c7b9,2024-03-26,ok,find (hit),,,,,,,Enable small object optimization in swisstable.,73.02
+1ccc2eb35ed685a5640cb80a26be4df535b9c7b9,2024-03-26,ok,find (miss),,,,,,,Enable small object optimization in swisstable.,79.52
+1ccc2eb35ed685a5640cb80a26be4df535b9c7b9,2024-03-26,ok,insert+erase,,,,,,,Enable small object optimization in swisstable.,259.24
+1ccc2eb35ed685a5640cb80a26be4df535b9c7b9,2024-03-26,ok,operator[] (hit),,,,,,,Enable small object optimization in swisstable.,75.01
+b70ad841380f60e8e825019bdc1e63f7c071843f,2024-03-26,ok,find (hit),,,,,,,"Introduce GrowthInfo with tests, but without usage.",73.02
+b70ad841380f60e8e825019bdc1e63f7c071843f,2024-03-26,ok,find (miss),,,,,,,"Introduce GrowthInfo with tests, but without usage.",79.52
+b70ad841380f60e8e825019bdc1e63f7c071843f,2024-03-26,ok,insert+erase,,,,,,,"Introduce GrowthInfo with tests, but without usage.",259.24
+b70ad841380f60e8e825019bdc1e63f7c071843f,2024-03-26,ok,operator[] (hit),,,,,,,"Introduce GrowthInfo with tests, but without usage.",75.01
+ff0a0f2d5428e8cc6a79cb9000d9cd3f9a0a67b5,2024-03-27,ok,find (hit),,,,,,,Disable small object optimization while debugging some failing tests.,69.02
+ff0a0f2d5428e8cc6a79cb9000d9cd3f9a0a67b5,2024-03-27,ok,find (miss),,,,,,,Disable small object optimization while debugging some failing tests.,75.52
+ff0a0f2d5428e8cc6a79cb9000d9cd3f9a0a67b5,2024-03-27,ok,insert+erase,,,,,,,Disable small object optimization while debugging some failing tests.,214.83
+ff0a0f2d5428e8cc6a79cb9000d9cd3f9a0a67b5,2024-03-27,ok,operator[] (hit),,,,,,,Disable small object optimization while debugging some failing tests.,73.01
+52715dbd30e19bda452f686c496379fe20660345,2024-03-27,ok,find (hit),,,,,,,Use GrowthInfo without applying any optimizations based on it.,69.02
+52715dbd30e19bda452f686c496379fe20660345,2024-03-27,ok,find (miss),,,,,,,Use GrowthInfo without applying any optimizations based on it.,75.52
+52715dbd30e19bda452f686c496379fe20660345,2024-03-27,ok,insert+erase,,,,,,,Use GrowthInfo without applying any optimizations based on it.,217.79
+52715dbd30e19bda452f686c496379fe20660345,2024-03-27,ok,operator[] (hit),,,,,,,Use GrowthInfo without applying any optimizations based on it.,73.01
+41136ed173b64fbe4ef55838bcc24c6b81dead5e,2024-03-27,ok,find (hit),,,,,,,Optimize InsertMiss for tables without kDeleted slots.,69.02
+41136ed173b64fbe4ef55838bcc24c6b81dead5e,2024-03-27,ok,find (miss),,,,,,,Optimize InsertMiss for tables without kDeleted slots.,75.52
+41136ed173b64fbe4ef55838bcc24c6b81dead5e,2024-03-27,ok,insert+erase,,,,,,,Optimize InsertMiss for tables without kDeleted slots.,227.58
+41136ed173b64fbe4ef55838bcc24c6b81dead5e,2024-03-27,ok,operator[] (hit),,,,,,,Optimize InsertMiss for tables without kDeleted slots.,73.01
+c0f104bf3aca7001d8a549f5efe15f89ee99d050,2024-03-28,ok,find (hit),,,,,,,Optimize LowLevelHash by breaking dependency between final loads and previous len/ptr updates.,69.02
+c0f104bf3aca7001d8a549f5efe15f89ee99d050,2024-03-28,ok,find (miss),,,,,,,Optimize LowLevelHash by breaking dependency between final loads and previous len/ptr updates.,75.52
+c0f104bf3aca7001d8a549f5efe15f89ee99d050,2024-03-28,ok,insert+erase,,,,,,,Optimize LowLevelHash by breaking dependency between final loads and previous len/ptr updates.,227.58
+c0f104bf3aca7001d8a549f5efe15f89ee99d050,2024-03-28,ok,operator[] (hit),,,,,,,Optimize LowLevelHash by breaking dependency between final loads and previous len/ptr updates.,73.01
+160d390608db56f11cbd29bd6b8938661dee525c,2024-03-28,ok,find (hit),,,,,,,Roll forward: enable small object optimization in swisstable.,73.02
+160d390608db56f11cbd29bd6b8938661dee525c,2024-03-28,ok,find (miss),,,,,,,Roll forward: enable small object optimization in swisstable.,79.52
+160d390608db56f11cbd29bd6b8938661dee525c,2024-03-28,ok,insert+erase,,,,,,,Roll forward: enable small object optimization in swisstable.,275.18
+160d390608db56f11cbd29bd6b8938661dee525c,2024-03-28,ok,operator[] (hit),,,,,,,Roll forward: enable small object optimization in swisstable.,75.01
+fbd5fa1781ce6151770557a90d018f71e64e45d0,2024-04-02,ok,find (hit),,,,,,,Fix bug in BM_EraseIf.,73.02
+fbd5fa1781ce6151770557a90d018f71e64e45d0,2024-04-02,ok,find (miss),,,,,,,Fix bug in BM_EraseIf.,79.52
+fbd5fa1781ce6151770557a90d018f71e64e45d0,2024-04-02,ok,insert+erase,,,,,,,Fix bug in BM_EraseIf.,275.18
+fbd5fa1781ce6151770557a90d018f71e64e45d0,2024-04-02,ok,operator[] (hit),,,,,,,Fix bug in BM_EraseIf.,75.01
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,find (hit),,,,,,,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again,73.02
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,find (miss),,,,,,,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again,79.52
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,insert+erase,,,,,,,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again,275.18
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,operator[] (hit),,,,,,,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again,75.01
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,find (hit),,,,,,,Document that swisstable and b-tree containers are not exception-safe.,73.02
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,find (miss),,,,,,,Document that swisstable and b-tree containers are not exception-safe.,79.22
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,insert+erase,,,,,,,Document that swisstable and b-tree containers are not exception-safe.,267.05
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,operator[] (hit),,,,,,,Document that swisstable and b-tree containers are not exception-safe.,75.01
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,find (hit),,,,,,,Add validation against use of moved-from hash tables.,73.02
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,find (miss),,,,,,,Add validation against use of moved-from hash tables.,79.22
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,insert+erase,,,,,,,Add validation against use of moved-from hash tables.,267.05
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,operator[] (hit),,,,,,,Add validation against use of moved-from hash tables.,75.01
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,find (hit),,,,,,,Add suggestions to enable sanitizers for asserts when doing so may be helpful.,73.02
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,find (miss),,,,,,,Add suggestions to enable sanitizers for asserts when doing so may be helpful.,79.22
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,insert+erase,,,,,,,Add suggestions to enable sanitizers for asserts when doing so may be helpful.,268.05
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,operator[] (hit),,,,,,,Add suggestions to enable sanitizers for asserts when doing so may be helpful.,75.01
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,find (hit),,,,,,,Add more debug capacity validation checks on moves.,73.02
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,find (miss),,,,,,,Add more debug capacity validation checks on moves.,79.22
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,insert+erase,,,,,,,Add more debug capacity validation checks on moves.,271.89
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,operator[] (hit),,,,,,,Add more debug capacity validation checks on moves.,75.01
+90a7ba66e88bf1b6fe98b196208448704766dac0,2024-12-23,ok,find (hit),,,,,,,Updates to CI to support newer versions of tools,73.02
+90a7ba66e88bf1b6fe98b196208448704766dac0,2024-12-23,ok,find (miss),,,,,,,Updates to CI to support newer versions of tools,79.22
+90a7ba66e88bf1b6fe98b196208448704766dac0,2024-12-23,ok,insert+erase,,,,,,,Updates to CI to support newer versions of tools,271.89
+90a7ba66e88bf1b6fe98b196208448704766dac0,2024-12-23,ok,operator[] (hit),,,,,,,Updates to CI to support newer versions of tools,75.01
+fcc8630eede5498b48b45b99e4eaa1406d6657e9,2024-12-28,ok,find (hit),,,,,,,Remove a trailing comma causing an issue for an OSS user,73.02
+fcc8630eede5498b48b45b99e4eaa1406d6657e9,2024-12-28,ok,find (miss),,,,,,,Remove a trailing comma causing an issue for an OSS user,79.22
+fcc8630eede5498b48b45b99e4eaa1406d6657e9,2024-12-28,ok,insert+erase,,,,,,,Remove a trailing comma causing an issue for an OSS user,271.89
+fcc8630eede5498b48b45b99e4eaa1406d6657e9,2024-12-28,ok,operator[] (hit),,,,,,,Remove a trailing comma causing an issue for an OSS user,75.01
+f28f81c5ba3455f7367115995cbe4da2d5e601b1,2024-12-30,ok,find (hit),,,,,,,Test that using a table that was moved-to from a moved-from table fails in sanitizer mode.,73.02
+f28f81c5ba3455f7367115995cbe4da2d5e601b1,2024-12-30,ok,find (miss),,,,,,,Test that using a table that was moved-to from a moved-from table fails in sanitizer mode.,79.22
+f28f81c5ba3455f7367115995cbe4da2d5e601b1,2024-12-30,ok,insert+erase,,,,,,,Test that using a table that was moved-to from a moved-from table fails in sanitizer mode.,271.89
+f28f81c5ba3455f7367115995cbe4da2d5e601b1,2024-12-30,ok,operator[] (hit),,,,,,,Test that using a table that was moved-to from a moved-from table fails in sanitizer mode.,75.01
+86c7331fb6cf9256301644bec7cdb52a44a4c79c,2024-12-30,ok,find (hit),,,,,,,"Use hashing ideas from Carbon's hashtable in absl hashing: - Use byte swap instead of mixing pointers twice. - Change order of branches to check for len<=8 first. - In len<=16 case, do one multiply to mix the data instead of using the logic from go/absl-hash-rl (reinforcement learning was used to optimize the instruction sequence). - Add special handling for len<=32 cases in 64-bit architectures.",69.01
+86c7331fb6cf9256301644bec7cdb52a44a4c79c,2024-12-30,ok,find (miss),,,,,,,"Use hashing ideas from Carbon's hashtable in absl hashing: - Use byte swap instead of mixing pointers twice. - Change order of branches to check for len<=8 first. - In len<=16 case, do one multiply to mix the data instead of using the logic from go/absl-hash-rl (reinforcement learning was used to optimize the instruction sequence). - Add special handling for len<=32 cases in 64-bit architectures.",75.81
+86c7331fb6cf9256301644bec7cdb52a44a4c79c,2024-12-30,ok,insert+erase,,,,,,,"Use hashing ideas from Carbon's hashtable in absl hashing: - Use byte swap instead of mixing pointers twice. - Change order of branches to check for len<=8 first. - In len<=16 case, do one multiply to mix the data instead of using the logic from go/absl-hash-rl (reinforcement learning was used to optimize the instruction sequence). - Add special handling for len<=32 cases in 64-bit architectures.",271.02
+86c7331fb6cf9256301644bec7cdb52a44a4c79c,2024-12-30,ok,operator[] (hit),,,,,,,"Use hashing ideas from Carbon's hashtable in absl hashing: - Use byte swap instead of mixing pointers twice. - Change order of branches to check for len<=8 first. - In len<=16 case, do one multiply to mix the data instead of using the logic from go/absl-hash-rl (reinforcement learning was used to optimize the instruction sequence). - Add special handling for len<=32 cases in 64-bit architectures.",75.01
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,find (hit),,,,,,,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]],69.01
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,find (miss),,,,,,,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]],75.81
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,insert+erase,,,,,,,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]],271.02
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,operator[] (hit),,,,,,,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]],75.01
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,find (hit),,,,,,,Update comments for Read4To8 and Read1To3.,69.01
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,find (miss),,,,,,,Update comments for Read4To8 and Read1To3.,75.81
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,insert+erase,,,,,,,Update comments for Read4To8 and Read1To3.,271.02
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,operator[] (hit),,,,,,,Update comments for Read4To8 and Read1To3.,75.01
+9e764b4f25c33e3f2407f5f22e695ede41bf2ce0,2025-02-11,ok,find (hit),,,,,,,Factor out some iterator traits detection code,69.01
+9e764b4f25c33e3f2407f5f22e695ede41bf2ce0,2025-02-11,ok,find (miss),,,,,,,Factor out some iterator traits detection code,75.81
+9e764b4f25c33e3f2407f5f22e695ede41bf2ce0,2025-02-11,ok,insert+erase,,,,,,,Factor out some iterator traits detection code,270.18
+9e764b4f25c33e3f2407f5f22e695ede41bf2ce0,2025-02-11,ok,operator[] (hit),,,,,,,Factor out some iterator traits detection code,75.01
+cc70e832b01f6c10ce9461c34f067ad91f8a2698,2025-02-14,ok,find (hit),,,,,,,Fix mis-located test dependency,69.01
+cc70e832b01f6c10ce9461c34f067ad91f8a2698,2025-02-14,ok,find (miss),,,,,,,Fix mis-located test dependency,75.81
+cc70e832b01f6c10ce9461c34f067ad91f8a2698,2025-02-14,ok,insert+erase,,,,,,,Fix mis-located test dependency,270.18
+cc70e832b01f6c10ce9461c34f067ad91f8a2698,2025-02-14,ok,operator[] (hit),,,,,,,Fix mis-located test dependency,75.01
+fdc64e28924de56a545e697548152d1cc5f2cde4,2025-02-15,ok,find (hit),,,,,,,Support C++20 iterators in raw_hash_map's random-access iterator detection,69.01
+fdc64e28924de56a545e697548152d1cc5f2cde4,2025-02-15,ok,find (miss),,,,,,,Support C++20 iterators in raw_hash_map's random-access iterator detection,75.81
+fdc64e28924de56a545e697548152d1cc5f2cde4,2025-02-15,ok,insert+erase,,,,,,,Support C++20 iterators in raw_hash_map's random-access iterator detection,270.18
+fdc64e28924de56a545e697548152d1cc5f2cde4,2025-02-15,ok,operator[] (hit),,,,,,,Support C++20 iterators in raw_hash_map's random-access iterator detection,75.01
+3b23f75ec28e505cbb47bd55aa08b23050f36f4a,2025-02-18,ok,find (hit),,,,,,,Split resizing routines and type erase similar instructions.,69.02
+3b23f75ec28e505cbb47bd55aa08b23050f36f4a,2025-02-18,ok,find (miss),,,,,,,Split resizing routines and type erase similar instructions.,75.62
+3b23f75ec28e505cbb47bd55aa08b23050f36f4a,2025-02-18,ok,insert+erase,,,,,,,Split resizing routines and type erase similar instructions.,261.0
+3b23f75ec28e505cbb47bd55aa08b23050f36f4a,2025-02-18,ok,operator[] (hit),,,,,,,Split resizing routines and type erase similar instructions.,105.01
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,find (hit),,,,,,,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.,69.02
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,find (miss),,,,,,,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.,75.62
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,insert+erase,,,,,,,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.,260.0
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,operator[] (hit),,,,,,,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.,105.01
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,find (hit),,,,,,,PR #1846: Fix build on big endian,69.02
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,find (miss),,,,,,,PR #1846: Fix build on big endian,75.62
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,insert+erase,,,,,,,PR #1846: Fix build on big endian,256.26
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,operator[] (hit),,,,,,,PR #1846: Fix build on big endian,105.01
+1c0abb047629cd95b64d9ce2a34504b91991fb7e,2025-03-10,ok,find (hit),,,,,,,Introduce seed stored in the hash table inside of the size.,69.02
+1c0abb047629cd95b64d9ce2a34504b91991fb7e,2025-03-10,ok,find (miss),,,,,,,Introduce seed stored in the hash table inside of the size.,75.75
+1c0abb047629cd95b64d9ce2a34504b91991fb7e,2025-03-10,ok,insert+erase,,,,,,,Introduce seed stored in the hash table inside of the size.,258.81
+1c0abb047629cd95b64d9ce2a34504b91991fb7e,2025-03-10,ok,operator[] (hit),,,,,,,Introduce seed stored in the hash table inside of the size.,105.0
+4800ee2712f71f93d358871054ba649ed942ee7c,2025-03-11,ok,find (hit),,,,,,,Implement `btree::iterator::+=` and `-=`.,69.02
+4800ee2712f71f93d358871054ba649ed942ee7c,2025-03-11,ok,find (miss),,,,,,,Implement `btree::iterator::+=` and `-=`.,75.75
+4800ee2712f71f93d358871054ba649ed942ee7c,2025-03-11,ok,insert+erase,,,,,,,Implement `btree::iterator::+=` and `-=`.,258.81
+4800ee2712f71f93d358871054ba649ed942ee7c,2025-03-11,ok,operator[] (hit),,,,,,,Implement `btree::iterator::+=` and `-=`.,105.0
+2100f3158c61edeae0c3afbe4f671fdbc20e5ae4,2025-03-11,ok,find (hit),,,,,,,C++23: Fix compressed_tuple_test.,69.02
+2100f3158c61edeae0c3afbe4f671fdbc20e5ae4,2025-03-11,ok,find (miss),,,,,,,C++23: Fix compressed_tuple_test.,75.75
+2100f3158c61edeae0c3afbe4f671fdbc20e5ae4,2025-03-11,ok,insert+erase,,,,,,,C++23: Fix compressed_tuple_test.,258.81
+2100f3158c61edeae0c3afbe4f671fdbc20e5ae4,2025-03-11,ok,operator[] (hit),,,,,,,C++23: Fix compressed_tuple_test.,105.0
+762b52388085960ef2c82fecc3e7ade26fe976d9,2025-03-11,ok,find (hit),,,,,,,Use `extern template` for `GrowFullSooTableToNextCapacity` since we know the most common  set of paramenters.,69.02
+762b52388085960ef2c82fecc3e7ade26fe976d9,2025-03-11,ok,find (miss),,,,,,,Use `extern template` for `GrowFullSooTableToNextCapacity` since we know the most common  set of paramenters.,75.64
+762b52388085960ef2c82fecc3e7ade26fe976d9,2025-03-11,ok,insert+erase,,,,,,,Use `extern template` for `GrowFullSooTableToNextCapacity` since we know the most common  set of paramenters.,259.9
+762b52388085960ef2c82fecc3e7ade26fe976d9,2025-03-11,ok,operator[] (hit),,,,,,,Use `extern template` for `GrowFullSooTableToNextCapacity` since we know the most common  set of paramenters.,79.0
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,find (hit),,,,,,,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.,69.02
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,find (miss),,,,,,,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.,75.64
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,insert+erase,,,,,,,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.,259.9
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,operator[] (hit),,,,,,,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.,79.0
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,find (hit),,,,,,,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.,68.02
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,find (miss),,,,,,,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.,74.64
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,insert+erase,,,,,,,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.,256.9
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,operator[] (hit),,,,,,,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.,78.0
+c8d5854f0ba521701455281b17f5f24cf584f916,2025-04-07,ok,find (hit),,,,,,,Optimize `GrowthToLowerBoundCapacity` in order to avoid division.,68.14
+c8d5854f0ba521701455281b17f5f24cf584f916,2025-04-07,ok,find (miss),,,,,,,Optimize `GrowthToLowerBoundCapacity` in order to avoid division.,74.59
+c8d5854f0ba521701455281b17f5f24cf584f916,2025-04-07,ok,insert+erase,,,,,,,Optimize `GrowthToLowerBoundCapacity` in order to avoid division.,264.57
+c8d5854f0ba521701455281b17f5f24cf584f916,2025-04-07,ok,operator[] (hit),,,,,,,Optimize `GrowthToLowerBoundCapacity` in order to avoid division.,78.15
+fddfe7b356fdc407a76d5788b7de265e6e729217,2025-04-08,ok,find (hit),,,,,,,Simplify `SingleGroupTableH1` since we do not need to mix all bits anymore. Per table seed has a good last bit distribution.,68.14
+fddfe7b356fdc407a76d5788b7de265e6e729217,2025-04-08,ok,find (miss),,,,,,,Simplify `SingleGroupTableH1` since we do not need to mix all bits anymore. Per table seed has a good last bit distribution.,74.48
+fddfe7b356fdc407a76d5788b7de265e6e729217,2025-04-08,ok,insert+erase,,,,,,,Simplify `SingleGroupTableH1` since we do not need to mix all bits anymore. Per table seed has a good last bit distribution.,264.21
+fddfe7b356fdc407a76d5788b7de265e6e729217,2025-04-08,ok,operator[] (hit),,,,,,,Simplify `SingleGroupTableH1` since we do not need to mix all bits anymore. Per table seed has a good last bit distribution.,78.14
+9f45a7d46fc490156172f1cbf3e05b79b46bb16a,2025-04-08,ok,find (hit),,,,,,,Make `GrowSooTableToNextCapacityAndPrepareInsert` in order to initialize control bytes all at once and avoid two function calls on growth right after SOO.,68.14
+9f45a7d46fc490156172f1cbf3e05b79b46bb16a,2025-04-08,ok,find (miss),,,,,,,Make `GrowSooTableToNextCapacityAndPrepareInsert` in order to initialize control bytes all at once and avoid two function calls on growth right after SOO.,74.48
+9f45a7d46fc490156172f1cbf3e05b79b46bb16a,2025-04-08,ok,insert+erase,,,,,,,Make `GrowSooTableToNextCapacityAndPrepareInsert` in order to initialize control bytes all at once and avoid two function calls on growth right after SOO.,258.21
+9f45a7d46fc490156172f1cbf3e05b79b46bb16a,2025-04-08,ok,operator[] (hit),,,,,,,Make `GrowSooTableToNextCapacityAndPrepareInsert` in order to initialize control bytes all at once and avoid two function calls on growth right after SOO.,74.14
+bc78884d8132c6818d93946cc5a3b658e36acfe1,2025-04-08,ok,find (hit),,,,,,,Avoid aliasing issues in growth information initialization.,68.14
+bc78884d8132c6818d93946cc5a3b658e36acfe1,2025-04-08,ok,find (miss),,,,,,,Avoid aliasing issues in growth information initialization.,74.48
+bc78884d8132c6818d93946cc5a3b658e36acfe1,2025-04-08,ok,insert+erase,,,,,,,Avoid aliasing issues in growth information initialization.,258.21
+bc78884d8132c6818d93946cc5a3b658e36acfe1,2025-04-08,ok,operator[] (hit),,,,,,,Avoid aliasing issues in growth information initialization.,74.14
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,find (hit),,,,,,,"Add latency benchmarks for Hash for strings with size 3, 5 and 17.",68.14
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,find (miss),,,,,,,"Add latency benchmarks for Hash for strings with size 3, 5 and 17.",74.48
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,insert+erase,,,,,,,"Add latency benchmarks for Hash for strings with size 3, 5 and 17.",258.21
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,operator[] (hit),,,,,,,"Add latency benchmarks for Hash for strings with size 3, 5 and 17.",74.14
+8b81b77c5e4251de400909e15279653f49b0a6ec,2025-04-14,ok,find (hit),,,,,,,Improve dependency graph in `TryFindNewIndexWithoutProbing` hot path evaluation.,68.14
+8b81b77c5e4251de400909e15279653f49b0a6ec,2025-04-14,ok,find (miss),,,,,,,Improve dependency graph in `TryFindNewIndexWithoutProbing` hot path evaluation.,74.48
+8b81b77c5e4251de400909e15279653f49b0a6ec,2025-04-14,ok,insert+erase,,,,,,,Improve dependency graph in `TryFindNewIndexWithoutProbing` hot path evaluation.,258.21
+8b81b77c5e4251de400909e15279653f49b0a6ec,2025-04-14,ok,operator[] (hit),,,,,,,Improve dependency graph in `TryFindNewIndexWithoutProbing` hot path evaluation.,74.14
+2873afce90750da2269b30d162fe06e0b3c057c1,2025-04-15,ok,find (hit),,,,,,,Prefetch from slots in parallel with reading from control.,71.14
+2873afce90750da2269b30d162fe06e0b3c057c1,2025-04-15,ok,find (miss),,,,,,,Prefetch from slots in parallel with reading from control.,79.03
+2873afce90750da2269b30d162fe06e0b3c057c1,2025-04-15,ok,insert+erase,,,,,,,Prefetch from slots in parallel with reading from control.,269.03
+2873afce90750da2269b30d162fe06e0b3c057c1,2025-04-15,ok,operator[] (hit),,,,,,,Prefetch from slots in parallel with reading from control.,77.14
+1c50475821b127689a52022ee14384e68dd9faa0,2025-04-17,ok,find (hit),,,,,,,Adjust threshold for stuck bits to avoid flaky failures.,71.14
+1c50475821b127689a52022ee14384e68dd9faa0,2025-04-17,ok,find (miss),,,,,,,Adjust threshold for stuck bits to avoid flaky failures.,79.03
+1c50475821b127689a52022ee14384e68dd9faa0,2025-04-17,ok,insert+erase,,,,,,,Adjust threshold for stuck bits to avoid flaky failures.,269.03
+1c50475821b127689a52022ee14384e68dd9faa0,2025-04-17,ok,operator[] (hit),,,,,,,Adjust threshold for stuck bits to avoid flaky failures.,77.14
+93cb76d60f8b535c2d683a01e3e456c6e1c39ddf,2025-04-23,ok,find (hit),,,,,,,Use large 64 bits kMul for 32 bits platforms as well.,71.14
+93cb76d60f8b535c2d683a01e3e456c6e1c39ddf,2025-04-23,ok,find (miss),,,,,,,Use large 64 bits kMul for 32 bits platforms as well.,79.03
+93cb76d60f8b535c2d683a01e3e456c6e1c39ddf,2025-04-23,ok,insert+erase,,,,,,,Use large 64 bits kMul for 32 bits platforms as well.,269.03
+93cb76d60f8b535c2d683a01e3e456c6e1c39ddf,2025-04-23,ok,operator[] (hit),,,,,,,Use large 64 bits kMul for 32 bits platforms as well.,77.14
+a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,find (hit),,,,,,,Refactor to use hash_of(key) instead of hash_ref()(key).,71.14
+a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,find (miss),,,,,,,Refactor to use hash_of(key) instead of hash_ref()(key).,79.03
+a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,insert+erase,,,,,,,Refactor to use hash_of(key) instead of hash_ref()(key).,269.03
+a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,operator[] (hit),,,,,,,Refactor to use hash_of(key) instead of hash_ref()(key).,77.14
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,find (hit),,,,,,,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.,71.14
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,find (miss),,,,,,,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.,78.95
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,insert+erase,,,,,,,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.,272.13
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,operator[] (hit),,,,,,,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.,77.13
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,find (hit),,,,,,,Avoid hashing the key in prefetch() for small tables.,71.14
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,find (miss),,,,,,,Avoid hashing the key in prefetch() for small tables.,78.95
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,insert+erase,,,,,,,Avoid hashing the key in prefetch() for small tables.,275.13
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,operator[] (hit),,,,,,,Avoid hashing the key in prefetch() for small tables.,77.13
+e430bb9b0833137c4365fee39dfa930657b408fc,2025-06-04,ok,find (hit),,,,,,,Fix -Wundef warning,71.14
+e430bb9b0833137c4365fee39dfa930657b408fc,2025-06-04,ok,find (miss),,,,,,,Fix -Wundef warning,78.95
+e430bb9b0833137c4365fee39dfa930657b408fc,2025-06-04,ok,insert+erase,,,,,,,Fix -Wundef warning,275.13
+e430bb9b0833137c4365fee39dfa930657b408fc,2025-06-04,ok,operator[] (hit),,,,,,,Fix -Wundef warning,77.13
+76fd1e96c71ad20fe08f1b7d18c6c55e197df85e,2025-06-09,ok,find (hit),,,,,,,Delete unused function ShouldSampleHashtablezInfoOnResize.,70.15
+76fd1e96c71ad20fe08f1b7d18c6c55e197df85e,2025-06-09,ok,find (miss),,,,,,,Delete unused function ShouldSampleHashtablezInfoOnResize.,79.17
+76fd1e96c71ad20fe08f1b7d18c6c55e197df85e,2025-06-09,ok,insert+erase,,,,,,,Delete unused function ShouldSampleHashtablezInfoOnResize.,269.66
+76fd1e96c71ad20fe08f1b7d18c6c55e197df85e,2025-06-09,ok,operator[] (hit),,,,,,,Delete unused function ShouldSampleHashtablezInfoOnResize.,75.14
+2ea5334068f11664a71d1d9dfb9a475482fa05f5,2025-06-12,ok,find (hit),,,,,,,Refactor long strings hash computations and move `len <= PiecewiseChunkSize()` out of the line to keep only one function call in the inlined hash code.,70.15
+2ea5334068f11664a71d1d9dfb9a475482fa05f5,2025-06-12,ok,find (miss),,,,,,,Refactor long strings hash computations and move `len <= PiecewiseChunkSize()` out of the line to keep only one function call in the inlined hash code.,79.17
+2ea5334068f11664a71d1d9dfb9a475482fa05f5,2025-06-12,ok,insert+erase,,,,,,,Refactor long strings hash computations and move `len <= PiecewiseChunkSize()` out of the line to keep only one function call in the inlined hash code.,269.66
+2ea5334068f11664a71d1d9dfb9a475482fa05f5,2025-06-12,ok,operator[] (hit),,,,,,,Refactor long strings hash computations and move `len <= PiecewiseChunkSize()` out of the line to keep only one function call in the inlined hash code.,75.14
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,find (hit),,,,,,,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.,70.14
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,find (miss),,,,,,,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.,79.1
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,insert+erase,,,,,,,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.,276.82
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,operator[] (hit),,,,,,,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.,108.16
+d4e6b8cdb9f4a7855a2bf223d98f9998f5065672,2025-06-27,ok,find (hit),,,,,,,Mark hash_test as large so that the timeout is increased.,70.15
+d4e6b8cdb9f4a7855a2bf223d98f9998f5065672,2025-06-27,ok,find (miss),,,,,,,Mark hash_test as large so that the timeout is increased.,79.09
+d4e6b8cdb9f4a7855a2bf223d98f9998f5065672,2025-06-27,ok,insert+erase,,,,,,,Mark hash_test as large so that the timeout is increased.,276.52
+d4e6b8cdb9f4a7855a2bf223d98f9998f5065672,2025-06-27,ok,operator[] (hit),,,,,,,Mark hash_test as large so that the timeout is increased.,108.16
+ddbb5170bb81762bca5493b1dda9160d76b5887b,2025-07-01,ok,find (hit),,,,,,,Consistently use [[maybe_unused]] in raw_hash_set.h for better compiler warning compatibility.,70.15
+ddbb5170bb81762bca5493b1dda9160d76b5887b,2025-07-01,ok,find (miss),,,,,,,Consistently use [[maybe_unused]] in raw_hash_set.h for better compiler warning compatibility.,79.09
+ddbb5170bb81762bca5493b1dda9160d76b5887b,2025-07-01,ok,insert+erase,,,,,,,Consistently use [[maybe_unused]] in raw_hash_set.h for better compiler warning compatibility.,276.52
+ddbb5170bb81762bca5493b1dda9160d76b5887b,2025-07-01,ok,operator[] (hit),,,,,,,Consistently use [[maybe_unused]] in raw_hash_set.h for better compiler warning compatibility.,108.16
+aad15c0e5b202d8223d075540ab157c5eece39c3,2025-07-02,ok,find (hit),,,,,,,Assume that control bytes don't alias CommonFields.,70.15
+aad15c0e5b202d8223d075540ab157c5eece39c3,2025-07-02,ok,find (miss),,,,,,,Assume that control bytes don't alias CommonFields.,79.09
+aad15c0e5b202d8223d075540ab157c5eece39c3,2025-07-02,ok,insert+erase,,,,,,,Assume that control bytes don't alias CommonFields.,271.18
+aad15c0e5b202d8223d075540ab157c5eece39c3,2025-07-02,ok,operator[] (hit),,,,,,,Assume that control bytes don't alias CommonFields.,102.16
+a09b217e30fb09f36bcbd5436d817eb6d72651ee,2025-07-07,ok,find (hit),,,,,,,"Roll back one more time: In debug mode, assert that the probe sequence isn't excessively long.",70.15
+a09b217e30fb09f36bcbd5436d817eb6d72651ee,2025-07-07,ok,find (miss),,,,,,,"Roll back one more time: In debug mode, assert that the probe sequence isn't excessively long.",79.09
+a09b217e30fb09f36bcbd5436d817eb6d72651ee,2025-07-07,ok,insert+erase,,,,,,,"Roll back one more time: In debug mode, assert that the probe sequence isn't excessively long.",271.18
+a09b217e30fb09f36bcbd5436d817eb6d72651ee,2025-07-07,ok,operator[] (hit),,,,,,,"Roll back one more time: In debug mode, assert that the probe sequence isn't excessively long.",102.16
+cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,find (hit),,,,,,,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.,70.15
+cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,find (miss),,,,,,,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.,79.09
+cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,insert+erase,,,,,,,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.,271.18
+cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,operator[] (hit),,,,,,,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.,102.16
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,find (hit),,,,,,,Disallow using a hash function whose return type is smaller than size_t.,70.15
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,find (miss),,,,,,,Disallow using a hash function whose return type is smaller than size_t.,79.09
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,insert+erase,,,,,,,Disallow using a hash function whose return type is smaller than size_t.,269.52
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,operator[] (hit),,,,,,,Disallow using a hash function whose return type is smaller than size_t.,102.16
+fb885a1cf7e6edff69bc76a1dfc41079ed8c3ba9,2025-08-08,ok,find (hit),,,,,,,<filesystem> is not supported for XTENSA. Disable it in //absl/hash/internal/hash.h.,70.15
+fb885a1cf7e6edff69bc76a1dfc41079ed8c3ba9,2025-08-08,ok,find (miss),,,,,,,<filesystem> is not supported for XTENSA. Disable it in //absl/hash/internal/hash.h.,79.09
+fb885a1cf7e6edff69bc76a1dfc41079ed8c3ba9,2025-08-08,ok,insert+erase,,,,,,,<filesystem> is not supported for XTENSA. Disable it in //absl/hash/internal/hash.h.,269.52
+fb885a1cf7e6edff69bc76a1dfc41079ed8c3ba9,2025-08-08,ok,operator[] (hit),,,,,,,<filesystem> is not supported for XTENSA. Disable it in //absl/hash/internal/hash.h.,102.16
+2c83d701283fe9fa2e8b89d61e268cdaeb077122,2025-08-20,ok,find (hit),,,,,,,Reduce maximum load factor to 27/32 (from 28/32).,70.14
+2c83d701283fe9fa2e8b89d61e268cdaeb077122,2025-08-20,ok,find (miss),,,,,,,Reduce maximum load factor to 27/32 (from 28/32).,79.16
+2c83d701283fe9fa2e8b89d61e268cdaeb077122,2025-08-20,ok,insert+erase,,,,,,,Reduce maximum load factor to 27/32 (from 28/32).,259.78
+2c83d701283fe9fa2e8b89d61e268cdaeb077122,2025-08-20,ok,operator[] (hit),,,,,,,Reduce maximum load factor to 27/32 (from 28/32).,102.14
+c5c771d1218159daac7d084f75905bc85597dadf,2025-08-20,ok,find (hit),,,,,,,"Adjust software prefetch to fetch 5 cachelines ahead, as benchmarking suggests this should perform better.",70.14
+c5c771d1218159daac7d084f75905bc85597dadf,2025-08-20,ok,find (miss),,,,,,,"Adjust software prefetch to fetch 5 cachelines ahead, as benchmarking suggests this should perform better.",79.16
+c5c771d1218159daac7d084f75905bc85597dadf,2025-08-20,ok,insert+erase,,,,,,,"Adjust software prefetch to fetch 5 cachelines ahead, as benchmarking suggests this should perform better.",259.78
+c5c771d1218159daac7d084f75905bc85597dadf,2025-08-20,ok,operator[] (hit),,,,,,,"Adjust software prefetch to fetch 5 cachelines ahead, as benchmarking suggests this should perform better.",102.14
+dcbd71bfd72154abbc19616abcf8cd1fff6c3c63,2025-09-01,ok,find (hit),,,,,,,Change absl::InlinedVector::clear() so that it does not deallocate any allocated space. This allows allocations to be reused and matches the behavior specification of std::vector::clear().,70.14
+dcbd71bfd72154abbc19616abcf8cd1fff6c3c63,2025-09-01,ok,find (miss),,,,,,,Change absl::InlinedVector::clear() so that it does not deallocate any allocated space. This allows allocations to be reused and matches the behavior specification of std::vector::clear().,79.16
+dcbd71bfd72154abbc19616abcf8cd1fff6c3c63,2025-09-01,ok,insert+erase,,,,,,,Change absl::InlinedVector::clear() so that it does not deallocate any allocated space. This allows allocations to be reused and matches the behavior specification of std::vector::clear().,259.78
+dcbd71bfd72154abbc19616abcf8cd1fff6c3c63,2025-09-01,ok,operator[] (hit),,,,,,,Change absl::InlinedVector::clear() so that it does not deallocate any allocated space. This allows allocations to be reused and matches the behavior specification of std::vector::clear().,102.14
+d5ccaa212c8257b066c9910b13b879754df9dd9e,2025-09-02,ok,find (hit),,,,,,,Move SetCtrl* family of functions to cc file.,70.14
+d5ccaa212c8257b066c9910b13b879754df9dd9e,2025-09-02,ok,find (miss),,,,,,,Move SetCtrl* family of functions to cc file.,79.16
+d5ccaa212c8257b066c9910b13b879754df9dd9e,2025-09-02,ok,insert+erase,,,,,,,Move SetCtrl* family of functions to cc file.,259.78
+d5ccaa212c8257b066c9910b13b879754df9dd9e,2025-09-02,ok,operator[] (hit),,,,,,,Move SetCtrl* family of functions to cc file.,102.14
+f2f4fa2ca3298326fe859f6eebc78ce0e51972e1,2025-09-02,ok,find (hit),,,,,,,Refactor `find_or_prepare_insert_large` to use a single return statement using a lambda.,70.14
+f2f4fa2ca3298326fe859f6eebc78ce0e51972e1,2025-09-02,ok,find (miss),,,,,,,Refactor `find_or_prepare_insert_large` to use a single return statement using a lambda.,79.16
+f2f4fa2ca3298326fe859f6eebc78ce0e51972e1,2025-09-02,ok,insert+erase,,,,,,,Refactor `find_or_prepare_insert_large` to use a single return statement using a lambda.,314.33
+f2f4fa2ca3298326fe859f6eebc78ce0e51972e1,2025-09-02,ok,operator[] (hit),,,,,,,Refactor `find_or_prepare_insert_large` to use a single return statement using a lambda.,153.13
+dc242cce4187c22525361959c7916d0ee0bcd658,2025-09-09,ok,find (hit),,,,,,,PR #1931: raw_hash_set: fix instantiation for recursive types on MSVC with /Zc:__cplusplus,70.14
+dc242cce4187c22525361959c7916d0ee0bcd658,2025-09-09,ok,find (miss),,,,,,,PR #1931: raw_hash_set: fix instantiation for recursive types on MSVC with /Zc:__cplusplus,79.16
+dc242cce4187c22525361959c7916d0ee0bcd658,2025-09-09,ok,insert+erase,,,,,,,PR #1931: raw_hash_set: fix instantiation for recursive types on MSVC with /Zc:__cplusplus,314.33
+dc242cce4187c22525361959c7916d0ee0bcd658,2025-09-09,ok,operator[] (hit),,,,,,,PR #1931: raw_hash_set: fix instantiation for recursive types on MSVC with /Zc:__cplusplus,153.13
+179d2e39e79e0c313bb2cafd5784da1ce3a52f48,2025-09-12,ok,find (hit),,,,,,,Use `ABSL_ATTRIBUTE_ALWAYS_INLINE`for lambda in `find_or_prepare_insert_large`.,70.14
+179d2e39e79e0c313bb2cafd5784da1ce3a52f48,2025-09-12,ok,find (miss),,,,,,,Use `ABSL_ATTRIBUTE_ALWAYS_INLINE`for lambda in `find_or_prepare_insert_large`.,79.16
+179d2e39e79e0c313bb2cafd5784da1ce3a52f48,2025-09-12,ok,insert+erase,,,,,,,Use `ABSL_ATTRIBUTE_ALWAYS_INLINE`for lambda in `find_or_prepare_insert_large`.,260.63
+179d2e39e79e0c313bb2cafd5784da1ce3a52f48,2025-09-12,ok,operator[] (hit),,,,,,,Use `ABSL_ATTRIBUTE_ALWAYS_INLINE`for lambda in `find_or_prepare_insert_large`.,104.13
+9b55d184e03d0f9ec5958e3c8c063bc685e3ea7f,2025-09-22,ok,find (hit),,,,,,,Move insert index computation into `PrepareInsertLarge` in order to reduce inlined part of insert/emplace operations.,70.14
+9b55d184e03d0f9ec5958e3c8c063bc685e3ea7f,2025-09-22,ok,find (miss),,,,,,,Move insert index computation into `PrepareInsertLarge` in order to reduce inlined part of insert/emplace operations.,79.16
+9b55d184e03d0f9ec5958e3c8c063bc685e3ea7f,2025-09-22,ok,insert+erase,,,,,,,Move insert index computation into `PrepareInsertLarge` in order to reduce inlined part of insert/emplace operations.,258.63
+9b55d184e03d0f9ec5958e3c8c063bc685e3ea7f,2025-09-22,ok,operator[] (hit),,,,,,,Move insert index computation into `PrepareInsertLarge` in order to reduce inlined part of insert/emplace operations.,104.13
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,find (hit),,,,,,,Refactor raw_hash_set range insertion to call private insert_range function.,70.14
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,find (miss),,,,,,,Refactor raw_hash_set range insertion to call private insert_range function.,79.16
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,insert+erase,,,,,,,Refactor raw_hash_set range insertion to call private insert_range function.,258.63
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,operator[] (hit),,,,,,,Refactor raw_hash_set range insertion to call private insert_range function.,104.13
+6725fe31f587744f1ce3eb370c2ae3371654f106,2025-10-16,ok,find (hit),,,,,,,Skip the ShortStringCollision test on WASM.,70.14
+6725fe31f587744f1ce3eb370c2ae3371654f106,2025-10-16,ok,find (miss),,,,,,,Skip the ShortStringCollision test on WASM.,79.16
+6725fe31f587744f1ce3eb370c2ae3371654f106,2025-10-16,ok,insert+erase,,,,,,,Skip the ShortStringCollision test on WASM.,258.63
+6725fe31f587744f1ce3eb370c2ae3371654f106,2025-10-16,ok,operator[] (hit),,,,,,,Skip the ShortStringCollision test on WASM.,104.13
+b13bf1d129316c91a43e1e7d1cca3c98fd990ec4,2025-11-03,ok,find (hit),,,,,,,Avoid using a thread_local in an inline function since this causes issues on some platforms.,70.14
+b13bf1d129316c91a43e1e7d1cca3c98fd990ec4,2025-11-03,ok,find (miss),,,,,,,Avoid using a thread_local in an inline function since this causes issues on some platforms.,79.21
+b13bf1d129316c91a43e1e7d1cca3c98fd990ec4,2025-11-03,ok,insert+erase,,,,,,,Avoid using a thread_local in an inline function since this causes issues on some platforms.,258.16
+b13bf1d129316c91a43e1e7d1cca3c98fd990ec4,2025-11-03,ok,operator[] (hit),,,,,,,Avoid using a thread_local in an inline function since this causes issues on some platforms.,104.13
+5bd1257b981567c374911d96ae8a8e54ca43a4bd,2025-11-05,ok,find (hit),,,,,,,Rollback reduction of maximum load factor. Now it is back to 28/32.,70.14
+5bd1257b981567c374911d96ae8a8e54ca43a4bd,2025-11-05,ok,find (miss),,,,,,,Rollback reduction of maximum load factor. Now it is back to 28/32.,79.2
+5bd1257b981567c374911d96ae8a8e54ca43a4bd,2025-11-05,ok,insert+erase,,,,,,,Rollback reduction of maximum load factor. Now it is back to 28/32.,267.94
+5bd1257b981567c374911d96ae8a8e54ca43a4bd,2025-11-05,ok,operator[] (hit),,,,,,,Rollback reduction of maximum load factor. Now it is back to 28/32.,104.14
+0f891910976813f95d10a5f46afad2ba32d7ee6a,2025-11-05,ok,find (hit),,,,,,,PR #1968: Use std::move_backward within InlinedVector's Storage::Insert,70.14
+0f891910976813f95d10a5f46afad2ba32d7ee6a,2025-11-05,ok,find (miss),,,,,,,PR #1968: Use std::move_backward within InlinedVector's Storage::Insert,79.2
+0f891910976813f95d10a5f46afad2ba32d7ee6a,2025-11-05,ok,insert+erase,,,,,,,PR #1968: Use std::move_backward within InlinedVector's Storage::Insert,267.94
+0f891910976813f95d10a5f46afad2ba32d7ee6a,2025-11-05,ok,operator[] (hit),,,,,,,PR #1968: Use std::move_backward within InlinedVector's Storage::Insert,104.14
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,find (hit),,,,,,,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one.",70.14
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,find (miss),,,,,,,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one.",79.2
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,insert+erase,,,,,,,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one.",267.94
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,operator[] (hit),,,,,,,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one.",104.14
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,find (hit),,,,,,,Add a latency benchmark for hashing a pair of integers.,70.14
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,find (miss),,,,,,,Add a latency benchmark for hashing a pair of integers.,79.2
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,insert+erase,,,,,,,Add a latency benchmark for hashing a pair of integers.,267.94
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,operator[] (hit),,,,,,,Add a latency benchmark for hashing a pair of integers.,104.14
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,find (hit),,,,,,,Open up the throw_delegate library to public usage,69.13
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,find (miss),,,,,,,Open up the throw_delegate library to public usage,77.85
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,insert+erase,,,,,,,Open up the throw_delegate library to public usage,262.87
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,operator[] (hit),,,,,,,Open up the throw_delegate library to public usage,103.13
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,find (hit),,,,,,,Add benchmark for string erase/emplace.,69.13
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,find (miss),,,,,,,Add benchmark for string erase/emplace.,76.85
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,insert+erase,,,,,,,Add benchmark for string erase/emplace.,263.96
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,operator[] (hit),,,,,,,Add benchmark for string erase/emplace.,106.13
+271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,find (hit),,,,,,,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions,69.15
+271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,find (miss),,,,,,,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions,77.46
+271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,insert+erase,,,,,,,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions,263.89
+271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,operator[] (hit),,,,,,,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions,103.13
+8fb4507d10a24a1204e98f77ad19c27c291e13e9,2026-05-19,ok,find (hit),,,,,,,Fix strict aliasing violation in node_hash_map,69.15
+8fb4507d10a24a1204e98f77ad19c27c291e13e9,2026-05-19,ok,find (miss),,,,,,,Fix strict aliasing violation in node_hash_map,77.46
+8fb4507d10a24a1204e98f77ad19c27c291e13e9,2026-05-19,ok,insert+erase,,,,,,,Fix strict aliasing violation in node_hash_map,263.89
+8fb4507d10a24a1204e98f77ad19c27c291e13e9,2026-05-19,ok,operator[] (hit),,,,,,,Fix strict aliasing violation in node_hash_map,103.13
+c508bab517c1a04275ca80b144b3c22f2f3751c6,2026-05-20,ok,find (hit),,,,,,,Do not reserve space for GrowthInfo for single element tables in non-SOO case.,69.15
+c508bab517c1a04275ca80b144b3c22f2f3751c6,2026-05-20,ok,find (miss),,,,,,,Do not reserve space for GrowthInfo for single element tables in non-SOO case.,77.46
+c508bab517c1a04275ca80b144b3c22f2f3751c6,2026-05-20,ok,insert+erase,,,,,,,Do not reserve space for GrowthInfo for single element tables in non-SOO case.,263.89
+c508bab517c1a04275ca80b144b3c22f2f3751c6,2026-05-20,ok,operator[] (hit),,,,,,,Do not reserve space for GrowthInfo for single element tables in non-SOO case.,103.13
+c7269872a5565c86ab8fafc6d8a26097c4775050,2026-05-21,ok,find (hit),,,,,,,Store capacity by log and change macro to represent original version of storing by value.,70.14
+c7269872a5565c86ab8fafc6d8a26097c4775050,2026-05-21,ok,find (miss),,,,,,,Store capacity by log and change macro to represent original version of storing by value.,78.64
+c7269872a5565c86ab8fafc6d8a26097c4775050,2026-05-21,ok,insert+erase,,,,,,,Store capacity by log and change macro to represent original version of storing by value.,313.07
+c7269872a5565c86ab8fafc6d8a26097c4775050,2026-05-21,ok,operator[] (hit),,,,,,,Store capacity by log and change macro to represent original version of storing by value.,124.14
+54615fe69f198bc93e473a3eec35b27f11cf747f,2026-05-23,ok,find (hit),,,,,,,Refactor ClearBackingArray and add test for clearing with different sizes.,70.14
+54615fe69f198bc93e473a3eec35b27f11cf747f,2026-05-23,ok,find (miss),,,,,,,Refactor ClearBackingArray and add test for clearing with different sizes.,78.64
+54615fe69f198bc93e473a3eec35b27f11cf747f,2026-05-23,ok,insert+erase,,,,,,,Refactor ClearBackingArray and add test for clearing with different sizes.,313.07
+54615fe69f198bc93e473a3eec35b27f11cf747f,2026-05-23,ok,operator[] (hit),,,,,,,Refactor ClearBackingArray and add test for clearing with different sizes.,124.14
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,find (hit),,,,,,,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).,70.14
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,find (miss),,,,,,,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).,78.64
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,insert+erase,,,,,,,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).,313.07
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,operator[] (hit),,,,,,,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).,124.14
+0a6b505c95f558e82893b4a87f10d4267715cbae,2026-06-03,ok,find (hit),,,,,,,Extra tests for reserved hash table with tombstones. They are useful to test blocked element logic for tables with removed values.,70.14
+0a6b505c95f558e82893b4a87f10d4267715cbae,2026-06-03,ok,find (miss),,,,,,,Extra tests for reserved hash table with tombstones. They are useful to test blocked element logic for tables with removed values.,78.64
+0a6b505c95f558e82893b4a87f10d4267715cbae,2026-06-03,ok,insert+erase,,,,,,,Extra tests for reserved hash table with tombstones. They are useful to test blocked element logic for tables with removed values.,315.07
+0a6b505c95f558e82893b4a87f10d4267715cbae,2026-06-03,ok,operator[] (hit),,,,,,,Extra tests for reserved hash table with tombstones. They are useful to test blocked element logic for tables with removed values.,124.14
+c321b9b7a25c5690eca2b55f2cb68f0cc71d0a3a,2026-06-05,ok,find (hit),,,,,,,Optimize GrowthInfo storage for small capacities.,70.14
+c321b9b7a25c5690eca2b55f2cb68f0cc71d0a3a,2026-06-05,ok,find (miss),,,,,,,Optimize GrowthInfo storage for small capacities.,78.64
+c321b9b7a25c5690eca2b55f2cb68f0cc71d0a3a,2026-06-05,ok,insert+erase,,,,,,,Optimize GrowthInfo storage for small capacities.,338.57
+c321b9b7a25c5690eca2b55f2cb68f0cc71d0a3a,2026-06-05,ok,operator[] (hit),,,,,,,Optimize GrowthInfo storage for small capacities.,124.14
+3950161ad6b236ca0768977449fe46d716dda91d,2026-06-05,ok,find (hit),,,,,,,Replace std::TRAIT<...>::type with equivalent std::TRAIT_t<...> aliases,70.14
+3950161ad6b236ca0768977449fe46d716dda91d,2026-06-05,ok,find (miss),,,,,,,Replace std::TRAIT<...>::type with equivalent std::TRAIT_t<...> aliases,78.64
+3950161ad6b236ca0768977449fe46d716dda91d,2026-06-05,ok,insert+erase,,,,,,,Replace std::TRAIT<...>::type with equivalent std::TRAIT_t<...> aliases,338.57
+3950161ad6b236ca0768977449fe46d716dda91d,2026-06-05,ok,operator[] (hit),,,,,,,Replace std::TRAIT<...>::type with equivalent std::TRAIT_t<...> aliases,124.14
+e6141e0cc53ac9af7f1b1f81bc3d7fb67502a158,2026-06-05,ok,find (hit),,,,,,,Internal cleanup,70.14
+e6141e0cc53ac9af7f1b1f81bc3d7fb67502a158,2026-06-05,ok,find (miss),,,,,,,Internal cleanup,78.64
+e6141e0cc53ac9af7f1b1f81bc3d7fb67502a158,2026-06-05,ok,insert+erase,,,,,,,Internal cleanup,338.57
+e6141e0cc53ac9af7f1b1f81bc3d7fb67502a158,2026-06-05,ok,operator[] (hit),,,,,,,Internal cleanup,124.14
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,find (hit),,,,,,,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.,70.14
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,find (miss),,,,,,,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.,78.64
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,insert+erase,,,,,,,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.,338.57
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,operator[] (hit),,,,,,,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.,124.14
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,find (hit),,,,,,,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.,70.12
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,find (miss),,,,,,,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.,78.8
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,insert+erase,,,,,,,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.,334.0
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,operator[] (hit),,,,,,,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.,124.12
+5dfacb6c81886ae59d0480e18ad51bd2e41b1455,2026-07-06,ok,find (hit),,,,,,,"Make iterators from insert/emplace ""non-iterable"", i. e. `++` would always move them to the end position.",82.15
+5dfacb6c81886ae59d0480e18ad51bd2e41b1455,2026-07-06,ok,find (miss),,,,,,,"Make iterators from insert/emplace ""non-iterable"", i. e. `++` would always move them to the end position.",88.04
+5dfacb6c81886ae59d0480e18ad51bd2e41b1455,2026-07-06,ok,insert+erase,,,,,,,"Make iterators from insert/emplace ""non-iterable"", i. e. `++` would always move them to the end position.",316.28
+5dfacb6c81886ae59d0480e18ad51bd2e41b1455,2026-07-06,ok,operator[] (hit),,,,,,,"Make iterators from insert/emplace ""non-iterable"", i. e. `++` would always move them to the end position.",89.12
+1b0707192c65e2c45b2128eef6a02ec378707ab0,2026-07-06,ok,find (hit),,,,,,,Make controls bytes to end right before slots by moving necessary alignment at the beginning of the allocation.,82.15
+1b0707192c65e2c45b2128eef6a02ec378707ab0,2026-07-06,ok,find (miss),,,,,,,Make controls bytes to end right before slots by moving necessary alignment at the beginning of the allocation.,88.04
+1b0707192c65e2c45b2128eef6a02ec378707ab0,2026-07-06,ok,insert+erase,,,,,,,Make controls bytes to end right before slots by moving necessary alignment at the beginning of the allocation.,316.28
+1b0707192c65e2c45b2128eef6a02ec378707ab0,2026-07-06,ok,operator[] (hit),,,,,,,Make controls bytes to end right before slots by moving necessary alignment at the beginning of the allocation.,89.12
+f3f1fdbd5dc8c7589593965082c97387d56f2dd6,2026-07-07,ok,find (hit),,,,,,,Fix typo in comments about special iterator returned from insert/emplace.,82.15
+f3f1fdbd5dc8c7589593965082c97387d56f2dd6,2026-07-07,ok,find (miss),,,,,,,Fix typo in comments about special iterator returned from insert/emplace.,88.04
+f3f1fdbd5dc8c7589593965082c97387d56f2dd6,2026-07-07,ok,insert+erase,,,,,,,Fix typo in comments about special iterator returned from insert/emplace.,316.28
+f3f1fdbd5dc8c7589593965082c97387d56f2dd6,2026-07-07,ok,operator[] (hit),,,,,,,Fix typo in comments about special iterator returned from insert/emplace.,89.12
+3931836e556fef41bf75740d99844d058d488e09,2026-07-07,ok,find (hit),,,,,,,Store only `control` in SwissTable header.,73.12
+3931836e556fef41bf75740d99844d058d488e09,2026-07-07,ok,find (miss),,,,,,,Store only `control` in SwissTable header.,80.8
+3931836e556fef41bf75740d99844d058d488e09,2026-07-07,ok,insert+erase,,,,,,,Store only `control` in SwissTable header.,321.23
+3931836e556fef41bf75740d99844d058d488e09,2026-07-07,ok,operator[] (hit),,,,,,,Store only `control` in SwissTable header.,95.12
+df69e697c8459ea35ff29d0420e09d2aec291374,2026-07-09,ok,find (hit),,,,,,,Fix commit-before-construct bug in chunked_queue::emplace_back,73.12
+df69e697c8459ea35ff29d0420e09d2aec291374,2026-07-09,ok,find (miss),,,,,,,Fix commit-before-construct bug in chunked_queue::emplace_back,80.8
+df69e697c8459ea35ff29d0420e09d2aec291374,2026-07-09,ok,insert+erase,,,,,,,Fix commit-before-construct bug in chunked_queue::emplace_back,321.23
+df69e697c8459ea35ff29d0420e09d2aec291374,2026-07-09,ok,operator[] (hit),,,,,,,Fix commit-before-construct bug in chunked_queue::emplace_back,95.12
+13eb1a1662db41fa37a6e7f703b62f225727686e,2026-07-09,ok,find (hit),,,,,,,Fix size_t narrowing and pointer arithmetic overflow in absl::chunked_queue::resize,73.12
+13eb1a1662db41fa37a6e7f703b62f225727686e,2026-07-09,ok,find (miss),,,,,,,Fix size_t narrowing and pointer arithmetic overflow in absl::chunked_queue::resize,80.8
+13eb1a1662db41fa37a6e7f703b62f225727686e,2026-07-09,ok,insert+erase,,,,,,,Fix size_t narrowing and pointer arithmetic overflow in absl::chunked_queue::resize,321.23
+13eb1a1662db41fa37a6e7f703b62f225727686e,2026-07-09,ok,operator[] (hit),,,,,,,Fix size_t narrowing and pointer arithmetic overflow in absl::chunked_queue::resize,95.12
+67ae0034c30e9e4f057c22600d4561a3346c4373,2026-07-10,ok,find (hit),,,,,,,Pass capacity to CommonFields::slot_array when it is already in register and/or known at compile time.,73.12
+67ae0034c30e9e4f057c22600d4561a3346c4373,2026-07-10,ok,find (miss),,,,,,,Pass capacity to CommonFields::slot_array when it is already in register and/or known at compile time.,80.8
+67ae0034c30e9e4f057c22600d4561a3346c4373,2026-07-10,ok,insert+erase,,,,,,,Pass capacity to CommonFields::slot_array when it is already in register and/or known at compile time.,338.92
+67ae0034c30e9e4f057c22600d4561a3346c4373,2026-07-10,ok,operator[] (hit),,,,,,,Pass capacity to CommonFields::slot_array when it is already in register and/or known at compile time.,95.12
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,find (hit),,,,,,,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash,73.12
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,find (miss),,,,,,,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash,80.8
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,insert+erase,,,,,,,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash,338.92
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,operator[] (hit),,,,,,,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash,95.12
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,find (hit),,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",73.12
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,find (miss),,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",80.8
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,insert+erase,,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",339.18
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,operator[] (hit),,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",95.12
+ba427a3dd37a1948aaca5cda75191cc4b88b4fa8,2026-08-13,ok,find (hit),,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",73.12
+ba427a3dd37a1948aaca5cda75191cc4b88b4fa8,2026-08-13,ok,find (miss),,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",80.8
+ba427a3dd37a1948aaca5cda75191cc4b88b4fa8,2026-08-13,ok,insert+erase,,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",339.18
+ba427a3dd37a1948aaca5cda75191cc4b88b4fa8,2026-08-13,ok,operator[] (hit),,,,,,,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`.",95.12
+3b49be491a709dddea473c38594a67020fa35d3e,2026-08-14,ok,find (hit),,,,,,,Add more bits to size by reducing size of capacity and seed.,73.13
+3b49be491a709dddea473c38594a67020fa35d3e,2026-08-14,ok,find (miss),,,,,,,Add more bits to size by reducing size of capacity and seed.,80.69
+3b49be491a709dddea473c38594a67020fa35d3e,2026-08-14,ok,insert+erase,,,,,,,Add more bits to size by reducing size of capacity and seed.,318.08
+3b49be491a709dddea473c38594a67020fa35d3e,2026-08-14,ok,operator[] (hit),,,,,,,Add more bits to size by reducing size of capacity and seed.,93.13
+12eaa108e309d2b44edb5ff18e15ff5a88fa41ad,2026-08-17,ok,find (hit),,,,,,,Use C++17 inline variables to simplify some files,73.13
+12eaa108e309d2b44edb5ff18e15ff5a88fa41ad,2026-08-17,ok,find (miss),,,,,,,Use C++17 inline variables to simplify some files,80.69
+12eaa108e309d2b44edb5ff18e15ff5a88fa41ad,2026-08-17,ok,insert+erase,,,,,,,Use C++17 inline variables to simplify some files,318.08
+12eaa108e309d2b44edb5ff18e15ff5a88fa41ad,2026-08-17,ok,operator[] (hit),,,,,,,Use C++17 inline variables to simplify some files,93.13
+2fb256634a64f177b96cc2c2eaa4f91e13d8af8c,2026-08-17,ok,find (hit),,,,,,,Use __has_include unconditionally as it is supported by C++17,73.13
+2fb256634a64f177b96cc2c2eaa4f91e13d8af8c,2026-08-17,ok,find (miss),,,,,,,Use __has_include unconditionally as it is supported by C++17,80.69
+2fb256634a64f177b96cc2c2eaa4f91e13d8af8c,2026-08-17,ok,insert+erase,,,,,,,Use __has_include unconditionally as it is supported by C++17,318.08
+2fb256634a64f177b96cc2c2eaa4f91e13d8af8c,2026-08-17,ok,operator[] (hit),,,,,,,Use __has_include unconditionally as it is supported by C++17,93.13
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,find (hit),,,,,,,Reorder platform-specific #include directives after the others,73.13
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,find (miss),,,,,,,Reorder platform-specific #include directives after the others,80.69
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,insert+erase,,,,,,,Reorder platform-specific #include directives after the others,318.08
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,operator[] (hit),,,,,,,Reorder platform-specific #include directives after the others,93.13
+6089180640a78417aae3032ffbbd73b4c3a6d053,2026-08-27,ok,find (hit),,,,,,,Fix SwisstableCollisions.LowEntropyStrings on architectures where Group::kWidth is less than 16 by scaling the number of expected probes inversely with Group::kWidth,73.13
+6089180640a78417aae3032ffbbd73b4c3a6d053,2026-08-27,ok,find (miss),,,,,,,Fix SwisstableCollisions.LowEntropyStrings on architectures where Group::kWidth is less than 16 by scaling the number of expected probes inversely with Group::kWidth,80.69
+6089180640a78417aae3032ffbbd73b4c3a6d053,2026-08-27,ok,insert+erase,,,,,,,Fix SwisstableCollisions.LowEntropyStrings on architectures where Group::kWidth is less than 16 by scaling the number of expected probes inversely with Group::kWidth,318.08
+6089180640a78417aae3032ffbbd73b4c3a6d053,2026-08-27,ok,operator[] (hit),,,,,,,Fix SwisstableCollisions.LowEntropyStrings on architectures where Group::kWidth is less than 16 by scaling the number of expected probes inversely with Group::kWidth,93.13
+86e46f17d6b765cf1f95082579b61b6de475e83c,2026-08-27,ok,find (hit),,,,,,,Store GrowthInfoLowerBound in HashtableInlineData instead of before control bytes.,73.13
+86e46f17d6b765cf1f95082579b61b6de475e83c,2026-08-27,ok,find (miss),,,,,,,Store GrowthInfoLowerBound in HashtableInlineData instead of before control bytes.,80.69
+86e46f17d6b765cf1f95082579b61b6de475e83c,2026-08-27,ok,insert+erase,,,,,,,Store GrowthInfoLowerBound in HashtableInlineData instead of before control bytes.,304.2
+86e46f17d6b765cf1f95082579b61b6de475e83c,2026-08-27,ok,operator[] (hit),,,,,,,Store GrowthInfoLowerBound in HashtableInlineData instead of before control bytes.,93.13
+ed95b62a83bc3bc0ec27fef188ea03667103c063,2026-08-27,ok,find (hit),,,,,,,Improve sorting consistency in CMakeLists.txt,73.13
+ed95b62a83bc3bc0ec27fef188ea03667103c063,2026-08-27,ok,find (miss),,,,,,,Improve sorting consistency in CMakeLists.txt,80.69
+ed95b62a83bc3bc0ec27fef188ea03667103c063,2026-08-27,ok,insert+erase,,,,,,,Improve sorting consistency in CMakeLists.txt,304.2
+ed95b62a83bc3bc0ec27fef188ea03667103c063,2026-08-27,ok,operator[] (hit),,,,,,,Improve sorting consistency in CMakeLists.txt,93.13
+7af76527e8e7fd7c5db46877ad5b9afdf79fec24,2026-08-30,ok,find (hit),,,,,,,Internal cleanup,73.13
+7af76527e8e7fd7c5db46877ad5b9afdf79fec24,2026-08-30,ok,find (miss),,,,,,,Internal cleanup,80.69
+7af76527e8e7fd7c5db46877ad5b9afdf79fec24,2026-08-30,ok,insert+erase,,,,,,,Internal cleanup,304.2
+7af76527e8e7fd7c5db46877ad5b9afdf79fec24,2026-08-30,ok,operator[] (hit),,,,,,,Internal cleanup,93.13
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,find (hit),,,,,,,PR #2150: Fix some missing includes for std::-symbols,73.13
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,find (miss),,,,,,,PR #2150: Fix some missing includes for std::-symbols,80.69
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,insert+erase,,,,,,,PR #2150: Fix some missing includes for std::-symbols,304.2
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,operator[] (hit),,,,,,,PR #2150: Fix some missing includes for std::-symbols,93.13
+d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,find (hit),,,,,,,Update TransparentHash documentation and test to use an implicit conversion operator.,73.13
+d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,find (miss),,,,,,,Update TransparentHash documentation and test to use an implicit conversion operator.,80.69
+d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,insert+erase,,,,,,,Update TransparentHash documentation and test to use an implicit conversion operator.,310.2
+d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,operator[] (hit),,,,,,,Update TransparentHash documentation and test to use an implicit conversion operator.,93.13
+409bfabcc5c0a09d577d6881796a2be4cc85c083,2026-09-25,ok,find (hit),,,,,,,Pass target group offset instead of FindInfo to PrepareInsertLarge functions.,73.13
+409bfabcc5c0a09d577d6881796a2be4cc85c083,2026-09-25,ok,find (miss),,,,,,,Pass target group offset instead of FindInfo to PrepareInsertLarge functions.,80.69
+409bfabcc5c0a09d577d6881796a2be4cc85c083,2026-09-25,ok,insert+erase,,,,,,,Pass target group offset instead of FindInfo to PrepareInsertLarge functions.,314.2
+409bfabcc5c0a09d577d6881796a2be4cc85c083,2026-09-25,ok,operator[] (hit),,,,,,,Pass target group offset instead of FindInfo to PrepareInsertLarge functions.,97.13
+61d073d6713cf5ebf1666baf2c79fbeeb5e0831e,2026-09-25,ok,find (hit),,,,,,,Fix flaky raw_hash_set_test failure due to calling set_no_seed_for_testing() on a sampled table.,73.13
+61d073d6713cf5ebf1666baf2c79fbeeb5e0831e,2026-09-25,ok,find (miss),,,,,,,Fix flaky raw_hash_set_test failure due to calling set_no_seed_for_testing() on a sampled table.,80.69
+61d073d6713cf5ebf1666baf2c79fbeeb5e0831e,2026-09-25,ok,insert+erase,,,,,,,Fix flaky raw_hash_set_test failure due to calling set_no_seed_for_testing() on a sampled table.,314.2
+61d073d6713cf5ebf1666baf2c79fbeeb5e0831e,2026-09-25,ok,operator[] (hit),,,,,,,Fix flaky raw_hash_set_test failure due to calling set_no_seed_for_testing() on a sampled table.,97.13
+5197c69088f00b67ce35fb4531068654d2dd63da,2026-09-28,ok,find (hit),,,,,,,Factor out common parts of absl::container_internal::FlatHashMapPolicy to prevent unnecessary template instantiations,73.13
+5197c69088f00b67ce35fb4531068654d2dd63da,2026-09-28,ok,find (miss),,,,,,,Factor out common parts of absl::container_internal::FlatHashMapPolicy to prevent unnecessary template instantiations,80.69
+5197c69088f00b67ce35fb4531068654d2dd63da,2026-09-28,ok,insert+erase,,,,,,,Factor out common parts of absl::container_internal::FlatHashMapPolicy to prevent unnecessary template instantiations,314.2
+5197c69088f00b67ce35fb4531068654d2dd63da,2026-09-28,ok,operator[] (hit),,,,,,,Factor out common parts of absl::container_internal::FlatHashMapPolicy to prevent unnecessary template instantiations,97.13
+a5d71c6fe2507f9589de6337e366579ee26ca6c2,2026-09-28,ok,find (hit),,,,,,,Avoid compiling the bodies of disabled assertions in absl::container_internal::raw_hash_set,73.13
+a5d71c6fe2507f9589de6337e366579ee26ca6c2,2026-09-28,ok,find (miss),,,,,,,Avoid compiling the bodies of disabled assertions in absl::container_internal::raw_hash_set,80.69
+a5d71c6fe2507f9589de6337e366579ee26ca6c2,2026-09-28,ok,insert+erase,,,,,,,Avoid compiling the bodies of disabled assertions in absl::container_internal::raw_hash_set,314.2
+a5d71c6fe2507f9589de6337e366579ee26ca6c2,2026-09-28,ok,operator[] (hit),,,,,,,Avoid compiling the bodies of disabled assertions in absl::container_internal::raw_hash_set,97.13
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,find (hit),,,,,,,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl,73.13
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,find (miss),,,,,,,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl,80.69
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,insert+erase,,,,,,,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl,314.2
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,operator[] (hit),,,,,,,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl,97.13
+c7836d2ff5abab2dbb8220b629cac64c949ee607,2026-09-30,ok,find (hit),,,,,,,Schedule `Group{ctrl + seq.offset()}` load ahead of `PrefetchToLocalCache(slot_array + seq.offset())` in `find_large` and `find_or_prepare_insert_large`.,73.13
+c7836d2ff5abab2dbb8220b629cac64c949ee607,2026-09-30,ok,find (miss),,,,,,,Schedule `Group{ctrl + seq.offset()}` load ahead of `PrefetchToLocalCache(slot_array + seq.offset())` in `find_large` and `find_or_prepare_insert_large`.,80.69
+c7836d2ff5abab2dbb8220b629cac64c949ee607,2026-09-30,ok,insert+erase,,,,,,,Schedule `Group{ctrl + seq.offset()}` load ahead of `PrefetchToLocalCache(slot_array + seq.offset())` in `find_large` and `find_or_prepare_insert_large`.,314.2
+c7836d2ff5abab2dbb8220b629cac64c949ee607,2026-09-30,ok,operator[] (hit),,,,,,,Schedule `Group{ctrl + seq.offset()}` load ahead of `PrefetchToLocalCache(slot_array + seq.offset())` in `find_large` and `find_or_prepare_insert_large`.,97.13
+1a8a725f5a42aba6be5791a604d39b6bbc22cefc,2026-10-01,ok,find (hit),,,,,,,"Rollforward ""Make slot_array to assume large table to optimize large raw_hash_set operations.""",73.13
+1a8a725f5a42aba6be5791a604d39b6bbc22cefc,2026-10-01,ok,find (miss),,,,,,,"Rollforward ""Make slot_array to assume large table to optimize large raw_hash_set operations.""",80.69
+1a8a725f5a42aba6be5791a604d39b6bbc22cefc,2026-10-01,ok,insert+erase,,,,,,,"Rollforward ""Make slot_array to assume large table to optimize large raw_hash_set operations.""",314.2
+1a8a725f5a42aba6be5791a604d39b6bbc22cefc,2026-10-01,ok,operator[] (hit),,,,,,,"Rollforward ""Make slot_array to assume large table to optimize large raw_hash_set operations.""",97.13
+682c5617b301fc596052bb70ab5f391cb49b5eed,2026-10-04,ok,find (hit),,,,,,,Prepare to migrate ABSL_ATTRIBUTE_HOT and ABSL_ATTRIBUTE_COLD from __attribute__((hot)) and __attribute__((cold)) to [[gnu::hot]] and [[gnu::cold]],73.13
+682c5617b301fc596052bb70ab5f391cb49b5eed,2026-10-04,ok,find (miss),,,,,,,Prepare to migrate ABSL_ATTRIBUTE_HOT and ABSL_ATTRIBUTE_COLD from __attribute__((hot)) and __attribute__((cold)) to [[gnu::hot]] and [[gnu::cold]],80.69
+682c5617b301fc596052bb70ab5f391cb49b5eed,2026-10-04,ok,insert+erase,,,,,,,Prepare to migrate ABSL_ATTRIBUTE_HOT and ABSL_ATTRIBUTE_COLD from __attribute__((hot)) and __attribute__((cold)) to [[gnu::hot]] and [[gnu::cold]],314.2
+682c5617b301fc596052bb70ab5f391cb49b5eed,2026-10-04,ok,operator[] (hit),,,,,,,Prepare to migrate ABSL_ATTRIBUTE_HOT and ABSL_ATTRIBUTE_COLD from __attribute__((hot)) and __attribute__((cold)) to [[gnu::hot]] and [[gnu::cold]],97.13
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,find (hit),,,,,,,Store the swisstable per-table seed in a byte-addressable field.,75.11
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,find (miss),,,,,,,Store the swisstable per-table seed in a byte-addressable field.,82.85
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,insert+erase,,,,,,,Store the swisstable per-table seed in a byte-addressable field.,291.41
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,operator[] (hit),,,,,,,Store the swisstable per-table seed in a byte-addressable field.,94.11
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,find (hit),,,,,,,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.,75.11
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,find (miss),,,,,,,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.,82.73
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,insert+erase,,,,,,,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.,292.19
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,operator[] (hit),,,,,,,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.,94.11
+2671fc67d33f62a6372b592946503c3bc119be73,2026-10-19,ok,find (hit),,,,,,,Move annotate_for_bug_detection_on_move to CommonFields.,75.11
+2671fc67d33f62a6372b592946503c3bc119be73,2026-10-19,ok,find (miss),,,,,,,Move annotate_for_bug_detection_on_move to CommonFields.,82.73
+2671fc67d33f62a6372b592946503c3bc119be73,2026-10-19,ok,insert+erase,,,,,,,Move annotate_for_bug_detection_on_move to CommonFields.,294.19
+2671fc67d33f62a6372b592946503c3bc119be73,2026-10-19,ok,operator[] (hit),,,,,,,Move annotate_for_bug_detection_on_move to CommonFields.,94.11
+54e1f71c75edd0616b8d14c7969de99d52a168fd,2026-10-20,ok,find (hit),,,,,,,"Pass capacity and control bytes explicitly to SetCtrl, ResetCtrl, WasNeverFull, and find_first_non_full helpers.",75.11
+54e1f71c75edd0616b8d14c7969de99d52a168fd,2026-10-20,ok,find (miss),,,,,,,"Pass capacity and control bytes explicitly to SetCtrl, ResetCtrl, WasNeverFull, and find_first_non_full helpers.",82.73
+54e1f71c75edd0616b8d14c7969de99d52a168fd,2026-10-20,ok,insert+erase,,,,,,,"Pass capacity and control bytes explicitly to SetCtrl, ResetCtrl, WasNeverFull, and find_first_non_full helpers.",291.91
+54e1f71c75edd0616b8d14c7969de99d52a168fd,2026-10-20,ok,operator[] (hit),,,,,,,"Pass capacity and control bytes explicitly to SetCtrl, ResetCtrl, WasNeverFull, and find_first_non_full helpers.",94.11
+964041ea2662fb60799554fa28488577b71e69ab,2026-10-20,ok,find (hit),,,,,,,Add ABSL_SWISSTABLE_ASSUME_SEPARATE_STORAGE and use it in raw_hash_set::control().,71.11
+964041ea2662fb60799554fa28488577b71e69ab,2026-10-20,ok,find (miss),,,,,,,Add ABSL_SWISSTABLE_ASSUME_SEPARATE_STORAGE and use it in raw_hash_set::control().,79.73
+964041ea2662fb60799554fa28488577b71e69ab,2026-10-20,ok,insert+erase,,,,,,,Add ABSL_SWISSTABLE_ASSUME_SEPARATE_STORAGE and use it in raw_hash_set::control().,303.87
+964041ea2662fb60799554fa28488577b71e69ab,2026-10-20,ok,operator[] (hit),,,,,,,Add ABSL_SWISSTABLE_ASSUME_SEPARATE_STORAGE and use it in raw_hash_set::control().,94.11
+ad93c34aeaf3a3314b7a09e19c22054840d78fc8,2026-10-20,ok,find (hit),,,,,,,Select the base pointer rather than the index in `SetCtrlNoSanitizeImpl`.,71.11
+ad93c34aeaf3a3314b7a09e19c22054840d78fc8,2026-10-20,ok,find (miss),,,,,,,Select the base pointer rather than the index in `SetCtrlNoSanitizeImpl`.,79.73
+ad93c34aeaf3a3314b7a09e19c22054840d78fc8,2026-10-20,ok,insert+erase,,,,,,,Select the base pointer rather than the index in `SetCtrlNoSanitizeImpl`.,303.87
+ad93c34aeaf3a3314b7a09e19c22054840d78fc8,2026-10-20,ok,operator[] (hit),,,,,,,Select the base pointer rather than the index in `SetCtrlNoSanitizeImpl`.,94.11
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,find (hit),,,,,,,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.,71.11
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,find (miss),,,,,,,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.,79.73
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,insert+erase,,,,,,,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.,304.87
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,operator[] (hit),,,,,,,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.,94.11
+e3a12fbe48c7b217b485c9bff01978f61fa4ba0b,2026-10-23,ok,find (hit),,,,,,,Add pop_back() and bidirectional iterator support to absl::chunked_queue.,71.15
+e3a12fbe48c7b217b485c9bff01978f61fa4ba0b,2026-10-23,ok,find (miss),,,,,,,Add pop_back() and bidirectional iterator support to absl::chunked_queue.,79.63
+e3a12fbe48c7b217b485c9bff01978f61fa4ba0b,2026-10-23,ok,insert+erase,,,,,,,Add pop_back() and bidirectional iterator support to absl::chunked_queue.,300.64
+e3a12fbe48c7b217b485c9bff01978f61fa4ba0b,2026-10-23,ok,operator[] (hit),,,,,,,Add pop_back() and bidirectional iterator support to absl::chunked_queue.,92.14
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,find (hit),,,,,,,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.,72.15
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,find (miss),,,,,,,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.,80.63
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,insert+erase,,,,,,,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.,299.64
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,operator[] (hit),,,,,,,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.,91.14
+2bed512b5ac7b112ec83179a2b6f17255da3fdc9,2026-10-27,ok,find (hit),,,,,,,Annotate out-of-line large string hash functions as pure.,72.15
+2bed512b5ac7b112ec83179a2b6f17255da3fdc9,2026-10-27,ok,find (miss),,,,,,,Annotate out-of-line large string hash functions as pure.,80.63
+2bed512b5ac7b112ec83179a2b6f17255da3fdc9,2026-10-27,ok,insert+erase,,,,,,,Annotate out-of-line large string hash functions as pure.,299.64
+2bed512b5ac7b112ec83179a2b6f17255da3fdc9,2026-10-27,ok,operator[] (hit),,,,,,,Annotate out-of-line large string hash functions as pure.,91.14
+4e146a4c5302f9f2a7e17f30b32bba48f04d3759,2026-10-27,ok,find (hit),,,,,,,Move kIsMoveSameAsCopy and IsAllocMoveSameAsCopy to absl/meta/type_traits.h and factor out IsDefaultAlloc logic,72.15
+4e146a4c5302f9f2a7e17f30b32bba48f04d3759,2026-10-27,ok,find (miss),,,,,,,Move kIsMoveSameAsCopy and IsAllocMoveSameAsCopy to absl/meta/type_traits.h and factor out IsDefaultAlloc logic,80.63
+4e146a4c5302f9f2a7e17f30b32bba48f04d3759,2026-10-27,ok,insert+erase,,,,,,,Move kIsMoveSameAsCopy and IsAllocMoveSameAsCopy to absl/meta/type_traits.h and factor out IsDefaultAlloc logic,299.64
+4e146a4c5302f9f2a7e17f30b32bba48f04d3759,2026-10-27,ok,operator[] (hit),,,,,,,Move kIsMoveSameAsCopy and IsAllocMoveSameAsCopy to absl/meta/type_traits.h and factor out IsDefaultAlloc logic,91.14
+0f23e9536449f2cb42d69316d28829ef748766a0,2026-10-27,ok,find (hit),,,,,,,Move prefetch_heap_block() from find() into find_large() (matching `find_or_prepare_insert_large()`).,72.15
+0f23e9536449f2cb42d69316d28829ef748766a0,2026-10-27,ok,find (miss),,,,,,,Move prefetch_heap_block() from find() into find_large() (matching `find_or_prepare_insert_large()`).,80.63
+0f23e9536449f2cb42d69316d28829ef748766a0,2026-10-27,ok,insert+erase,,,,,,,Move prefetch_heap_block() from find() into find_large() (matching `find_or_prepare_insert_large()`).,277.53
+0f23e9536449f2cb42d69316d28829ef748766a0,2026-10-27,ok,operator[] (hit),,,,,,,Move prefetch_heap_block() from find() into find_large() (matching `find_or_prepare_insert_large()`).,91.14
+08035ac6c18ea82d9a3874f0078a482af01452a9,2026-10-28,ok,find (hit),,,,,,,Optimize SwissTable slot lifecycle and resize transfers with restrict qualifiers.,72.15
+08035ac6c18ea82d9a3874f0078a482af01452a9,2026-10-28,ok,find (miss),,,,,,,Optimize SwissTable slot lifecycle and resize transfers with restrict qualifiers.,80.63
+08035ac6c18ea82d9a3874f0078a482af01452a9,2026-10-28,ok,insert+erase,,,,,,,Optimize SwissTable slot lifecycle and resize transfers with restrict qualifiers.,277.53
+08035ac6c18ea82d9a3874f0078a482af01452a9,2026-10-28,ok,operator[] (hit),,,,,,,Optimize SwissTable slot lifecycle and resize transfers with restrict qualifiers.,91.14
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,find (hit),,,,,,,Remove `soo_enabled()` from raw_hash_set policy traits.,72.15
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,find (miss),,,,,,,Remove `soo_enabled()` from raw_hash_set policy traits.,80.63
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,insert+erase,,,,,,,Remove `soo_enabled()` from raw_hash_set policy traits.,280.53
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,operator[] (hit),,,,,,,Remove `soo_enabled()` from raw_hash_set policy traits.,92.14
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,find (hit),,,,,,,Always-inline SwissTable slot_array() accessors.,72.15
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,find (miss),,,,,,,Always-inline SwissTable slot_array() accessors.,80.63
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,insert+erase,,,,,,,Always-inline SwissTable slot_array() accessors.,280.53
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,operator[] (hit),,,,,,,Always-inline SwissTable slot_array() accessors.,92.14
+ec1a32b56aeadf4369945a7195078ec076ef62c5,2026-11-05,ok,find (hit),,,,,,,Use increment_size() in CommonFields::set_full_soo().,72.15
+ec1a32b56aeadf4369945a7195078ec076ef62c5,2026-11-05,ok,find (miss),,,,,,,Use increment_size() in CommonFields::set_full_soo().,80.63
+ec1a32b56aeadf4369945a7195078ec076ef62c5,2026-11-05,ok,insert+erase,,,,,,,Use increment_size() in CommonFields::set_full_soo().,280.53
+ec1a32b56aeadf4369945a7195078ec076ef62c5,2026-11-05,ok,operator[] (hit),,,,,,,Use increment_size() in CommonFields::set_full_soo().,92.14
+d18a2dc0663e4d2643e7a81d22c53118cbdffd67,2026-11-05,ok,find (hit),,,,,,,Deduplicate type-erased SwissTable key hashing for types with identical hash implementations.,72.15
+d18a2dc0663e4d2643e7a81d22c53118cbdffd67,2026-11-05,ok,find (miss),,,,,,,Deduplicate type-erased SwissTable key hashing for types with identical hash implementations.,80.63
+d18a2dc0663e4d2643e7a81d22c53118cbdffd67,2026-11-05,ok,insert+erase,,,,,,,Deduplicate type-erased SwissTable key hashing for types with identical hash implementations.,276.53
+d18a2dc0663e4d2643e7a81d22c53118cbdffd67,2026-11-05,ok,operator[] (hit),,,,,,,Deduplicate type-erased SwissTable key hashing for types with identical hash implementations.,88.14
+ec30956de52010f356b8e6109cc17b83d91aac86,2026-11-05,ok,find (hit),,,,,,,Share type-erased SwissTable policy functions across tables with trivially relocatable slots.,72.15
+ec30956de52010f356b8e6109cc17b83d91aac86,2026-11-05,ok,find (miss),,,,,,,Share type-erased SwissTable policy functions across tables with trivially relocatable slots.,80.63
+ec30956de52010f356b8e6109cc17b83d91aac86,2026-11-05,ok,insert+erase,,,,,,,Share type-erased SwissTable policy functions across tables with trivially relocatable slots.,276.53
+ec30956de52010f356b8e6109cc17b83d91aac86,2026-11-05,ok,operator[] (hit),,,,,,,Share type-erased SwissTable policy functions across tables with trivially relocatable slots.,88.14
+28d518b05d0ffef504738ff06f9232d4b65fe505,2026-11-07,ok,find (hit),,,,,,,Pass type-erased SwissTable key data via `EncodedHashKey` instead of `const void*`.,72.15
+28d518b05d0ffef504738ff06f9232d4b65fe505,2026-11-07,ok,find (miss),,,,,,,Pass type-erased SwissTable key data via `EncodedHashKey` instead of `const void*`.,80.63
+28d518b05d0ffef504738ff06f9232d4b65fe505,2026-11-07,ok,insert+erase,,,,,,,Pass type-erased SwissTable key data via `EncodedHashKey` instead of `const void*`.,276.53
+28d518b05d0ffef504738ff06f9232d4b65fe505,2026-11-07,ok,operator[] (hit),,,,,,,Pass type-erased SwissTable key data via `EncodedHashKey` instead of `const void*`.,88.14
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,find (hit),,,,,,,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.,72.15
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,find (miss),,,,,,,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.,80.63
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,insert+erase,,,,,,,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.,276.53
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,operator[] (hit),,,,,,,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.,87.14
+be93ce230ef75c5e57366c500e71cac4f4f4241a,2026-11-13,ok,find (hit),,,,,,,"Add regression test for ""extern const char kLazyEmplaceKey[];"" key in SwissTable.",72.15
+be93ce230ef75c5e57366c500e71cac4f4f4241a,2026-11-13,ok,find (miss),,,,,,,"Add regression test for ""extern const char kLazyEmplaceKey[];"" key in SwissTable.",80.63
+be93ce230ef75c5e57366c500e71cac4f4f4241a,2026-11-13,ok,insert+erase,,,,,,,"Add regression test for ""extern const char kLazyEmplaceKey[];"" key in SwissTable.",276.53
+be93ce230ef75c5e57366c500e71cac4f4f4241a,2026-11-13,ok,operator[] (hit),,,,,,,"Add regression test for ""extern const char kLazyEmplaceKey[];"" key in SwissTable.",87.14
+bf653e136c2a589f89e9a89210cd867ea16a3bf5,2026-11-16,ok,find (hit),,,,,,,PR #2484: Support sanitizer build in GCC.,72.15
+bf653e136c2a589f89e9a89210cd867ea16a3bf5,2026-11-16,ok,find (miss),,,,,,,PR #2484: Support sanitizer build in GCC.,80.63
+bf653e136c2a589f89e9a89210cd867ea16a3bf5,2026-11-16,ok,insert+erase,,,,,,,PR #2484: Support sanitizer build in GCC.,276.53
+bf653e136c2a589f89e9a89210cd867ea16a3bf5,2026-11-16,ok,operator[] (hit),,,,,,,PR #2484: Support sanitizer build in GCC.,87.14
+957149a29f4f58d6b9ff740b839ede37fd5f5657,2026-11-16,ok,find (hit),,,,,,,Assume control and insert-slot pointers are non-null in raw_hash_set.,72.15
+957149a29f4f58d6b9ff740b839ede37fd5f5657,2026-11-16,ok,find (miss),,,,,,,Assume control and insert-slot pointers are non-null in raw_hash_set.,80.63
+957149a29f4f58d6b9ff740b839ede37fd5f5657,2026-11-16,ok,insert+erase,,,,,,,Assume control and insert-slot pointers are non-null in raw_hash_set.,279.3
+957149a29f4f58d6b9ff740b839ede37fd5f5657,2026-11-16,ok,operator[] (hit),,,,,,,Assume control and insert-slot pointers are non-null in raw_hash_set.,83.14
+41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,find (hit),,,,,,,Report accurate allocated capacity in SwissTable hashtablez samples.,72.15
+41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,find (miss),,,,,,,Report accurate allocated capacity in SwissTable hashtablez samples.,79.63
+41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,insert+erase,,,,,,,Report accurate allocated capacity in SwissTable hashtablez samples.,278.3
+41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,operator[] (hit),,,,,,,Report accurate allocated capacity in SwissTable hashtablez samples.,83.14

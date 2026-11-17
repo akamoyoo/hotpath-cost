@@ -1,0 +1,491 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,find (hit),,,,,,,add hash8,50.38
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,find (miss),,,,,,,add hash8,57.68
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,insert+erase,,,,,,,add hash8,193.5
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,operator[] (hit),,,,,,,add hash8,91.97
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,find (hit),,,,,,,fix crash,50.38
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,find (miss),,,,,,,fix crash,57.68
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,insert+erase,,,,,,,fix crash,193.5
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,operator[] (hit),,,,,,,fix crash,89.97
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,find (hit),,,,,,,fix int/uint,50.38
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,find (miss),,,,,,,fix int/uint,57.68
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,insert+erase,,,,,,,fix int/uint,193.5
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,operator[] (hit),,,,,,,fix int/uint,90.97
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,find (hit),,,,,,,hash5/8 laod_factor=1.0,50.38
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,find (miss),,,,,,,hash5/8 laod_factor=1.0,57.68
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,insert+erase,,,,,,,hash5/8 laod_factor=1.0,193.5
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,operator[] (hit),,,,,,,hash5/8 laod_factor=1.0,90.97
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,find (hit),,,,,,,fix,50.38
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,find (miss),,,,,,,fix,57.68
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,insert+erase,,,,,,,fix,193.5
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,operator[] (hit),,,,,,,fix,90.97
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,find (hit),,,,,,,fast iterator,50.38
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,find (miss),,,,,,,fast iterator,57.68
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,insert+erase,,,,,,,fast iterator,193.5
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,operator[] (hit),,,,,,,fast iterator,90.97
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,find (hit),,,,,,,2022,50.38
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,find (miss),,,,,,,2022,57.68
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,insert+erase,,,,,,,2022,193.73
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,operator[] (hit),,,,,,,2022,90.97
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,find (hit),,,,,,,improve emhash8/cache_hash  miss find,61.38
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,find (miss),,,,,,,improve emhash8/cache_hash  miss find,62.51
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,insert+erase,,,,,,,improve emhash8/cache_hash  miss find,223.1
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,operator[] (hit),,,,,,,improve emhash8/cache_hash  miss find,98.05
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,find (hit),,,,,,,emilib fix leak,61.4
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,find (miss),,,,,,,emilib fix leak,62.28
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,insert+erase,,,,,,,emilib fix leak,222.45
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,operator[] (hit),,,,,,,emilib fix leak,98.05
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,find (hit),,,,,,,improve erase,61.4
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,find (miss),,,,,,,improve erase,62.28
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,insert+erase,,,,,,,improve erase,203.08
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,operator[] (hit),,,,,,,improve erase,101.19
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,find (hit),,,,,,,improve qc bench,61.4
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,find (miss),,,,,,,improve qc bench,62.28
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,insert+erase,,,,,,,improve qc bench,195.62
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,operator[] (hit),,,,,,,improve qc bench,99.12
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,find (hit),,,,,,,emilib improve,61.4
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,find (miss),,,,,,,emilib improve,62.26
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,insert+erase,,,,,,,emilib improve,187.02
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,operator[] (hit),,,,,,,emilib improve,94.12
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,find (hit),,,,,,,improve emilib2s,61.4
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,find (miss),,,,,,,improve emilib2s,62.28
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,insert+erase,,,,,,,improve emilib2s,190.13
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,operator[] (hit),,,,,,,improve emilib2s,95.12
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,find (hit),,,,,,,opt c++17,61.4
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,find (miss),,,,,,,opt c++17,62.28
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,insert+erase,,,,,,,opt c++17,190.13
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,operator[] (hit),,,,,,,opt c++17,95.12
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,find (hit),,,,,,,update readme,61.4
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,find (miss),,,,,,,update readme,62.28
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,insert+erase,,,,,,,update readme,190.13
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,operator[] (hit),,,,,,,update readme,95.12
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,find (hit),,,,,,,thirdpaty/insert opt,61.4
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,find (miss),,,,,,,thirdpaty/insert opt,62.28
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,insert+erase,,,,,,,thirdpaty/insert opt,190.13
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,operator[] (hit),,,,,,,thirdpaty/insert opt,95.12
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,find (hit),,,,,,,reduce peak memory/thirdparty,62.4
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,find (miss),,,,,,,reduce peak memory/thirdparty,62.98
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,insert+erase,,,,,,,reduce peak memory/thirdparty,188.45
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,operator[] (hit),,,,,,,reduce peak memory/thirdparty,94.19
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,find (hit),,,,,,,opt bench,62.4
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,find (miss),,,,,,,opt bench,62.98
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,insert+erase,,,,,,,opt bench,188.45
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,operator[] (hit),,,,,,,opt bench,94.19
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,find (hit),,,,,,,Update hash_table8.hpp,62.4
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,find (miss),,,,,,,Update hash_table8.hpp,62.98
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,insert+erase,,,,,,,Update hash_table8.hpp,188.45
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,operator[] (hit),,,,,,,Update hash_table8.hpp,94.19
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,find (hit),,,,,,,sync thirdparty,67.4
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,find (miss),,,,,,,sync thirdparty,65.51
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,insert+erase,,,,,,,sync thirdparty,187.45
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,operator[] (hit),,,,,,,sync thirdparty,94.19
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,find (hit),,,,,,,improve hash8,67.4
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,find (miss),,,,,,,improve hash8,65.51
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,insert+erase,,,,,,,improve hash8,187.45
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,operator[] (hit),,,,,,,improve hash8,94.19
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,find (hit),,,,,,,load factor 0.88->0.8,67.4
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,find (miss),,,,,,,load factor 0.88->0.8,65.51
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,insert+erase,,,,,,,load factor 0.88->0.8,187.45
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,operator[] (hit),,,,,,,load factor 0.88->0.8,94.19
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,find (hit),,,,,,,improve test/emhash8,69.54
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,find (miss),,,,,,,improve test/emhash8,67.58
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,insert+erase,,,,,,,improve test/emhash8,187.45
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,operator[] (hit),,,,,,,improve test/emhash8,94.19
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,find (hit),,,,,,,优化find bench,69.54
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,find (miss),,,,,,,优化find bench,67.57
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,insert+erase,,,,,,,优化find bench,188.8
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,operator[] (hit),,,,,,,优化find bench,96.19
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,find (hit),,,,,,,small opt,69.54
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,find (miss),,,,,,,small opt,67.56
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,insert+erase,,,,,,,small opt,188.78
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,operator[] (hit),,,,,,,small opt,96.19
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,find (hit),,,,,,,better proble,69.54
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,find (miss),,,,,,,better proble,67.56
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,insert+erase,,,,,,,better proble,198.49
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,operator[] (hit),,,,,,,better proble,95.19
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,find (hit),,,,,,,update probe,69.54
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,find (miss),,,,,,,update probe,67.6
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,insert+erase,,,,,,,update probe,198.66
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,operator[] (hit),,,,,,,update probe,95.19
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,find (hit),,,,,,,fix clear,69.54
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,find (miss),,,,,,,fix clear,67.6
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,insert+erase,,,,,,,fix clear,201.14
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,operator[] (hit),,,,,,,fix clear,96.19
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,find (hit),,,,,,,Merge pull request #15 from shines77/master,69.54
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,find (miss),,,,,,,Merge pull request #15 from shines77/master,67.6
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,insert+erase,,,,,,,Merge pull request #15 from shines77/master,201.14
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,operator[] (hit),,,,,,,Merge pull request #15 from shines77/master,96.19
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,find (hit),,,,,,,fix shrink_to_fit crash,69.54
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,find (miss),,,,,,,fix shrink_to_fit crash,67.6
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,insert+erase,,,,,,,fix shrink_to_fit crash,201.14
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,operator[] (hit),,,,,,,fix shrink_to_fit crash,96.19
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,find (hit),,,,,,,find_empty by size,69.54
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,find (miss),,,,,,,find_empty by size,67.6
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,insert+erase,,,,,,,find_empty by size,203.45
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,operator[] (hit),,,,,,,find_empty by size,97.27
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,find (hit),,,,,,,update 3rd,69.54
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,find (miss),,,,,,,update 3rd,67.6
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,insert+erase,,,,,,,update 3rd,203.45
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,operator[] (hit),,,,,,,update 3rd,97.27
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,find (hit),,,,,,,quadratic probing,69.54
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,find (miss),,,,,,,quadratic probing,67.63
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,insert+erase,,,,,,,quadratic probing,208.02
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,operator[] (hit),,,,,,,quadratic probing,98.19
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,find (hit),,,,,,,high load,69.54
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,find (miss),,,,,,,high load,67.6
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,insert+erase,,,,,,,high load,202.68
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,operator[] (hit),,,,,,,high load,98.19
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,find (hit),,,,,,,fix overflow,69.54
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,find (miss),,,,,,,fix overflow,67.6
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,insert+erase,,,,,,,fix overflow,199.21
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,operator[] (hit),,,,,,,fix overflow,94.98
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,find (hit),,,,,,,add inline,69.54
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,find (miss),,,,,,,add inline,67.6
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,insert+erase,,,,,,,add inline,199.21
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,operator[] (hit),,,,,,,add inline,94.98
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,find (hit),,,,,,,Merge pull request #23 from blueloveTH/master,69.54
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,find (miss),,,,,,,Merge pull request #23 from blueloveTH/master,67.6
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,insert+erase,,,,,,,Merge pull request #23 from blueloveTH/master,199.21
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,operator[] (hit),,,,,,,Merge pull request #23 from blueloveTH/master,94.98
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,find (hit),,,,,,,fix aligned_alloc on win32,69.54
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,find (miss),,,,,,,fix aligned_alloc on win32,67.6
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,insert+erase,,,,,,,fix aligned_alloc on win32,199.21
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,operator[] (hit),,,,,,,fix aligned_alloc on win32,94.98
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,find (hit),,,,,,,update readme,69.54
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,find (miss),,,,,,,update readme,67.6
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,insert+erase,,,,,,,update readme,199.21
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,operator[] (hit),,,,,,,update readme,94.98
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,find (hit),,,,,,,improve test,69.54
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,find (miss),,,,,,,improve test,67.57
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,insert+erase,,,,,,,improve test,198.55
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,operator[] (hit),,,,,,,improve test,94.98
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,find (hit),,,,,,,3rd update,69.54
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,find (miss),,,,,,,3rd update,67.57
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,insert+erase,,,,,,,3rd update,198.55
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,operator[] (hit),,,,,,,3rd update,94.98
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,find (hit),,,,,,,fix crash hash5,69.54
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,find (miss),,,,,,,fix crash hash5,67.57
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,insert+erase,,,,,,,fix crash hash5,198.55
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,operator[] (hit),,,,,,,fix crash hash5,94.98
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,find (hit),,,,,,,opt code,69.54
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,find (miss),,,,,,,opt code,67.6
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,insert+erase,,,,,,,opt code,201.89
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,operator[] (hit),,,,,,,opt code,95.98
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,find (hit),,,,,,,fix marco compile issue,69.54
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,find (miss),,,,,,,fix marco compile issue,67.6
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,insert+erase,,,,,,,fix marco compile issue,204.48
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,operator[] (hit),,,,,,,fix marco compile issue,97.98
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,find (hit),,,,,,,fix hash_table8.hpp some warning,69.54
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,find (miss),,,,,,,fix hash_table8.hpp some warning,67.6
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,insert+erase,,,,,,,fix hash_table8.hpp some warning,204.48
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,operator[] (hit),,,,,,,fix hash_table8.hpp some warning,97.98
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,find (hit),,,,,,,fix warning,69.54
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,find (miss),,,,,,,fix warning,67.6
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,insert+erase,,,,,,,fix warning,204.48
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,operator[] (hit),,,,,,,fix warning,97.98
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,find (hit),,,,,,,Merge pull request #44 from cppLawyer/patch-1,69.54
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,find (miss),,,,,,,Merge pull request #44 from cppLawyer/patch-1,67.6
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,insert+erase,,,,,,,Merge pull request #44 from cppLawyer/patch-1,204.48
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,operator[] (hit),,,,,,,Merge pull request #44 from cppLawyer/patch-1,97.98
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,find (hit),,,,,,,fix hash8 compile bug,69.54
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,find (miss),,,,,,,fix hash8 compile bug,67.59
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,insert+erase,,,,,,,fix hash8 compile bug,206.36
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,operator[] (hit),,,,,,,fix hash8 compile bug,98.06
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,find (hit),,,,,,,Merge pull request #48 from userdocs/patch-1,69.54
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,find (miss),,,,,,,Merge pull request #48 from userdocs/patch-1,67.59
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,insert+erase,,,,,,,Merge pull request #48 from userdocs/patch-1,206.36
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,operator[] (hit),,,,,,,Merge pull request #48 from userdocs/patch-1,98.06
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,find (hit),,,,,,,Merge pull request #55 from apocelipes/fix-Wsign-compare,69.54
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,find (miss),,,,,,,Merge pull request #55 from apocelipes/fix-Wsign-compare,67.59
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,insert+erase,,,,,,,Merge pull request #55 from apocelipes/fix-Wsign-compare,203.58
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,operator[] (hit),,,,,,,Merge pull request #55 from apocelipes/fix-Wsign-compare,96.06
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,find (hit),,,,,,,Merge pull request #58 from apocelipes/fix-discards-qualifiers,69.54
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,find (miss),,,,,,,Merge pull request #58 from apocelipes/fix-discards-qualifiers,67.59
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,insert+erase,,,,,,,Merge pull request #58 from apocelipes/fix-discards-qualifiers,203.58
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,operator[] (hit),,,,,,,Merge pull request #58 from apocelipes/fix-discards-qualifiers,96.06
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,find (hit),,,,,,,merge fix,69.54
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,find (miss),,,,,,,merge fix,67.59
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,insert+erase,,,,,,,merge fix,203.58
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,operator[] (hit),,,,,,,merge fix,96.06
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,find (hit),,,,,,,fix small size overflow with emhash8,69.54
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,find (miss),,,,,,,fix small size overflow with emhash8,67.59
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,insert+erase,,,,,,,fix small size overflow with emhash8,203.58
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,operator[] (hit),,,,,,,fix small size overflow with emhash8,96.06
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,find (hit),,,,,,,hash_table8.hpp set Allocator but not used,69.54
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,find (miss),,,,,,,hash_table8.hpp set Allocator but not used,67.59
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,insert+erase,,,,,,,hash_table8.hpp set Allocator but not used,203.58
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,operator[] (hit),,,,,,,hash_table8.hpp set Allocator but not used,96.06
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,find (hit),,,,,,,opt rehash,69.54
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,find (miss),,,,,,,opt rehash,67.59
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,insert+erase,,,,,,,opt rehash,203.58
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,operator[] (hit),,,,,,,opt rehash,96.06
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,find (hit),,,,,,,opt warning,69.54
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,find (miss),,,,,,,opt warning,67.59
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,insert+erase,,,,,,,opt warning,203.58
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,operator[] (hit),,,,,,,opt warning,96.06
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,find (hit),,,,,,,opt iterator,66.54
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,find (miss),,,,,,,opt iterator,68.52
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,insert+erase,,,,,,,opt iterator,203.58
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,operator[] (hit),,,,,,,opt iterator,96.06
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,find (hit),,,,,,,fix compile issue,66.54
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,find (miss),,,,,,,fix compile issue,68.52
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,insert+erase,,,,,,,fix compile issue,203.58
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,operator[] (hit),,,,,,,fix compile issue,96.06
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,find (hit),,,,,,,mod:improve test,66.54
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,find (miss),,,,,,,mod:improve test,68.52
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,insert+erase,,,,,,,mod:improve test,203.58
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,operator[] (hit),,,,,,,mod:improve test,96.06
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,find (hit),,,,,,,Merge pull request #76 from tarun-t/feature/allocator-support,66.54
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,find (miss),,,,,,,Merge pull request #76 from tarun-t/feature/allocator-support,68.52
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,insert+erase,,,,,,,Merge pull request #76 from tarun-t/feature/allocator-support,203.58
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,operator[] (hit),,,,,,,Merge pull request #76 from tarun-t/feature/allocator-support,96.06
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,find (hit),,,,,,,fix:highload factor by AI,66.54
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,find (miss),,,,,,,fix:highload factor by AI,68.52
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,insert+erase,,,,,,,fix:highload factor by AI,203.58
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,operator[] (hit),,,,,,,fix:highload factor by AI,96.06
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,find (hit),,,,,,,fix:overflow,70.82
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,find (miss),,,,,,,fix:overflow,73.59
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,insert+erase,,,,,,,fix:overflow,209.43
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,operator[] (hit),,,,,,,fix:overflow,98.06
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,find (hit),,,,,,,fix: two critical bugs in emhash8 reserve() and erase_slot(),70.82
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,find (miss),,,,,,,fix: two critical bugs in emhash8 reserve() and erase_slot(),73.59
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,insert+erase,,,,,,,fix: two critical bugs in emhash8 reserve() and erase_slot(),214.97
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,operator[] (hit),,,,,,,fix: two critical bugs in emhash8 reserve() and erase_slot(),98.06
+6b02c8de86ef070b15007ee396488a046e844f68,2026-06-12,run failed,,,,,,,,add more test and bench code
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,find (hit),,,,,,,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations,70.82
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,find (miss),,,,,,,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations,73.59
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,insert+erase,,,,,,,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations,216.36
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,operator[] (hit),,,,,,,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations,98.06
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,find (hit),,,,,,,fix:some fix by AI,70.82
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,find (miss),,,,,,,fix:some fix by AI,73.59
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,insert+erase,,,,,,,fix:some fix by AI,216.36
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,operator[] (hit),,,,,,,fix:some fix by AI,98.06
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,find (hit),,,,,,,refactor: move headers to include/emhash/ for standard layout,70.82
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,find (miss),,,,,,,refactor: move headers to include/emhash/ for standard layout,73.59
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,insert+erase,,,,,,,refactor: move headers to include/emhash/ for standard layout,216.36
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,operator[] (hit),,,,,,,refactor: move headers to include/emhash/ for standard layout,98.06
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,find (hit),,,,,,,Merge pull request #83 from orgads/typos,70.82
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,find (miss),,,,,,,Merge pull request #83 from orgads/typos,73.59
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,insert+erase,,,,,,,Merge pull request #83 from orgads/typos,216.36
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,operator[] (hit),,,,,,,Merge pull request #83 from orgads/typos,98.06
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,find (hit),,,,,,,Merge pull request #89 from orgads/unlikely-msvc,70.82
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,find (miss),,,,,,,Merge pull request #89 from orgads/unlikely-msvc,73.59
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,insert+erase,,,,,,,Merge pull request #89 from orgads/unlikely-msvc,216.36
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,operator[] (hit),,,,,,,Merge pull request #89 from orgads/unlikely-msvc,98.06
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,find (hit),,,,,,,fix:add head,70.82
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,find (miss),,,,,,,fix:add head,73.59
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,insert+erase,,,,,,,fix:add head,216.36
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,operator[] (hit),,,,,,,fix:add head,98.06
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,find (hit),,,,,,,fix: CTZ parameter type mismatch and missing cstdint in emilib,70.82
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,find (miss),,,,,,,fix: CTZ parameter type mismatch and missing cstdint in emilib,73.59
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,insert+erase,,,,,,,fix: CTZ parameter type mismatch and missing cstdint in emilib,216.36
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,operator[] (hit),,,,,,,fix: CTZ parameter type mismatch and missing cstdint in emilib,98.06
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,find (hit),,,,,,,fix: resolve sign-compare and old-style-cast warnings in CI,70.82
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,find (miss),,,,,,,fix: resolve sign-compare and old-style-cast warnings in CI,73.59
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,insert+erase,,,,,,,fix: resolve sign-compare and old-style-cast warnings in CI,216.36
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,operator[] (hit),,,,,,,fix: resolve sign-compare and old-style-cast warnings in CI,98.06
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,find (hit),,,,,,,refactor: reorganize project structure and fix CI/build issues,70.82
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,find (miss),,,,,,,refactor: reorganize project structure and fix CI/build issues,73.59
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,insert+erase,,,,,,,refactor: reorganize project structure and fix CI/build issues,216.36
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,operator[] (hit),,,,,,,refactor: reorganize project structure and fix CI/build issues,98.06
+ef71c32cc993f19426664dfb65aa816a576e381a,2026-06-19,build failed,,,,,,,,"refactor: extract config.hpp, fix EMH_LIKELY MSVC bug, remove dead code, update docs"
+15aa46ce3e207d16dc72f990e3e419497669cd06,2026-06-19,build failed,,,,,,,,"fix(core,docs): reserve bounds, emilib SIMD stride, hash-flood test, doc fixes"
+c99a1394c6cb30a011db50100f22602c56f6fdb0,2026-06-19,build failed,,,,,,,,update ci
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,find (hit),,,,,,,fix(core): change config.hpp include path to relative,70.82
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,find (miss),,,,,,,fix(core): change config.hpp include path to relative,73.59
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,insert+erase,,,,,,,fix(core): change config.hpp include path to relative,216.36
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,operator[] (hit),,,,,,,fix(core): change config.hpp include path to relative,98.06
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,find (hit),,,,,,,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4",70.82
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,find (miss),,,,,,,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4",73.59
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,insert+erase,,,,,,,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4",216.36
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,operator[] (hit),,,,,,,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4",98.06
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,find (hit),,,,,,,fix(emilib): add static_cast<size_t> to silence -Wconversion warning,70.82
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,find (miss),,,,,,,fix(emilib): add static_cast<size_t> to silence -Wconversion warning,73.59
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,insert+erase,,,,,,,fix(emilib): add static_cast<size_t> to silence -Wconversion warning,216.36
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,operator[] (hit),,,,,,,fix(emilib): add static_cast<size_t> to silence -Wconversion warning,98.06
+22766857f874bb06b20c3096a61f2df5dfa24ab7,2026-06-20,build failed,,,,,,,,fix(config): use __has_include for flexible config.hpp path resolution
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,find (hit),,,,,,,test: add string key and memory leak tests + fix emihmap2 sentinel leak,70.82
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,find (miss),,,,,,,test: add string key and memory leak tests + fix emihmap2 sentinel leak,73.59
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,insert+erase,,,,,,,test: add string key and memory leak tests + fix emihmap2 sentinel leak,216.36
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,operator[] (hit),,,,,,,test: add string key and memory leak tests + fix emihmap2 sentinel leak,98.06
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,find (hit),,,,,,,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering",70.82
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,find (miss),,,,,,,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering",73.59
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,insert+erase,,,,,,,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering",216.36
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,operator[] (hit),,,,,,,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering",98.06
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,find (hit),,,,,,,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros",70.82
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,find (miss),,,,,,,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros",73.59
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,insert+erase,,,,,,,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros",214.11
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,operator[] (hit),,,,,,,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros",96.2
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,find (hit),,,,,,,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15),70.72
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,find (miss),,,,,,,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15),73.85
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,insert+erase,,,,,,,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15),214.57
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,operator[] (hit),,,,,,,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15),96.2
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,find (hit),,,,,,,fix: resolve clang-tidy and clang-format warnings,70.72
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,find (miss),,,,,,,fix: resolve clang-tidy and clang-format warnings,73.85
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,insert+erase,,,,,,,fix: resolve clang-tidy and clang-format warnings,214.57
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,operator[] (hit),,,,,,,fix: resolve clang-tidy and clang-format warnings,96.2
+362a057022181257643e37c2cf3a24e7373812a8,2026-06-22,build failed,,,,,,,,fix: move PairAllocTraits definition to class header
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,find (hit),,,,,,,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error,70.72
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,find (miss),,,,,,,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error,73.85
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,insert+erase,,,,,,,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error,214.57
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,operator[] (hit),,,,,,,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error,96.2
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,find (hit),,,,,,,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types",70.72
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,find (miss),,,,,,,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types",73.85
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,insert+erase,,,,,,,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types",214.57
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,operator[] (hit),,,,,,,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types",96.2
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,find (hit),,,,,,,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash,70.72
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,find (miss),,,,,,,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash,73.85
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,insert+erase,,,,,,,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash,214.57
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,operator[] (hit),,,,,,,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash,96.2
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,find (hit),,,,,,,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE,70.72
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,find (miss),,,,,,,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE,73.85
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,insert+erase,,,,,,,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE,214.57
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,operator[] (hit),,,,,,,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE,96.2
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,find (hit),,,,,,,fix: MSan UB in tail sentinels memset for non-trivially-copyable types,70.72
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,find (miss),,,,,,,fix: MSan UB in tail sentinels memset for non-trivially-copyable types,73.85
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,insert+erase,,,,,,,fix: MSan UB in tail sentinels memset for non-trivially-copyable types,214.57
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,operator[] (hit),,,,,,,fix: MSan UB in tail sentinels memset for non-trivially-copyable types,96.2
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,find (hit),,,,,,,fix: emihmap2 clone() add _num_buckets > 0 check for safety,70.72
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,find (miss),,,,,,,fix: emihmap2 clone() add _num_buckets > 0 check for safety,73.85
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,insert+erase,,,,,,,fix: emihmap2 clone() add _num_buckets > 0 check for safety,214.57
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,operator[] (hit),,,,,,,fix: emihmap2 clone() add _num_buckets > 0 check for safety,96.2
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,find (hit),,,,,,,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy,70.72
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,find (miss),,,,,,,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy,73.85
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,insert+erase,,,,,,,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy,214.57
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,operator[] (hit),,,,,,,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy,96.2
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,find (hit),,,,,,,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct,70.72
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,find (miss),,,,,,,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct,73.85
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,insert+erase,,,,,,,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct,214.57
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,operator[] (hit),,,,,,,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct,96.2
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,find (hit),,,,,,,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets,70.72
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,find (miss),,,,,,,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets,73.85
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,insert+erase,,,,,,,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets,214.57
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,operator[] (hit),,,,,,,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets,96.2
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,find (hit),,,,,,,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate,70.72
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,find (miss),,,,,,,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate,73.85
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,insert+erase,,,,,,,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate,214.57
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,operator[] (hit),,,,,,,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate,96.2
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,find (hit),,,,,,,refactor: restructure tests into unit/memory/stress/attack and harden CI,70.72
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,find (miss),,,,,,,refactor: restructure tests into unit/memory/stress/attack and harden CI,73.85
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,insert+erase,,,,,,,refactor: restructure tests into unit/memory/stress/attack and harden CI,214.57
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,operator[] (hit),,,,,,,refactor: restructure tests into unit/memory/stress/attack and harden CI,96.2
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,find (hit),,,,,,,style: fix clang-format violations and align CI to clang-format-20,70.72
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,find (miss),,,,,,,style: fix clang-format violations and align CI to clang-format-20,73.85
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,insert+erase,,,,,,,style: fix clang-format violations and align CI to clang-format-20,214.57
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,operator[] (hit),,,,,,,style: fix clang-format violations and align CI to clang-format-20,96.2
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,find (hit),,,,,,,fix:ci crashed,70.72
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,find (miss),,,,,,,fix:ci crashed,73.85
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,insert+erase,,,,,,,fix:ci crashed,214.57
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,operator[] (hit),,,,,,,fix:ci crashed,96.2
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,find (hit),,,,,,,fix ci error,70.72
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,find (miss),,,,,,,fix ci error,73.85
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,insert+erase,,,,,,,fix ci error,214.57
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,operator[] (hit),,,,,,,fix ci error,96.2
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,find (hit),,,,,,,fix ci error,70.72
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,find (miss),,,,,,,fix ci error,73.85
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,insert+erase,,,,,,,fix ci error,214.57
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,operator[] (hit),,,,,,,fix ci error,96.2
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,find (hit),,,,,,,fix ci assert fail,70.72
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,find (miss),,,,,,,fix ci assert fail,73.85
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,insert+erase,,,,,,,fix ci assert fail,214.57
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,operator[] (hit),,,,,,,fix ci assert fail,96.2
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,find (hit),,,,,,,"Quality improvements: fix MSan assert, expand merge tests, add PR template",70.72
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,find (miss),,,,,,,"Quality improvements: fix MSan assert, expand merge tests, add PR template",73.85
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,insert+erase,,,,,,,"Quality improvements: fix MSan assert, expand merge tests, add PR template",214.57
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,operator[] (hit),,,,,,,"Quality improvements: fix MSan assert, expand merge tests, add PR template",96.2
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,find (hit),,,,,,,Replace C-style casts with static_cast in emilib,70.72
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,find (miss),,,,,,,Replace C-style casts with static_cast in emilib,73.85
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,insert+erase,,,,,,,Replace C-style casts with static_cast in emilib,214.57
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,operator[] (hit),,,,,,,Replace C-style casts with static_cast in emilib,96.2
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,find (hit),,,,,,,Clean up code: remove misleading TODOs and replace C-style casts,70.72
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,find (miss),,,,,,,Clean up code: remove misleading TODOs and replace C-style casts,73.85
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,insert+erase,,,,,,,Clean up code: remove misleading TODOs and replace C-style casts,214.57
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,operator[] (hit),,,,,,,Clean up code: remove misleading TODOs and replace C-style casts,96.2
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,find (hit),,,,,,,Clean up dead commented-out code and improve collision resolution comments,70.72
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,find (miss),,,,,,,Clean up dead commented-out code and improve collision resolution comments,73.85
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,insert+erase,,,,,,,Clean up dead commented-out code and improve collision resolution comments,214.57
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,operator[] (hit),,,,,,,Clean up dead commented-out code and improve collision resolution comments,96.2
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,find (hit),,,,,,,Apply clang-format to all recently modified files,70.72
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,find (miss),,,,,,,Apply clang-format to all recently modified files,73.85
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,insert+erase,,,,,,,Apply clang-format to all recently modified files,214.57
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,operator[] (hit),,,,,,,Apply clang-format to all recently modified files,96.2
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,find (hit),,,,,,,fix:some tips op,70.72
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,find (miss),,,,,,,fix:some tips op,73.85
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,insert+erase,,,,,,,fix:some tips op,214.57
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,operator[] (hit),,,,,,,fix:some tips op,96.2
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,find (hit),,,,,,,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment,70.72
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,find (miss),,,,,,,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment,73.85
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,insert+erase,,,,,,,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment,214.57
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,operator[] (hit),,,,,,,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment,96.2
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,find (hit),,,,,,,fix(ci): add ccache installation for macOS in asan job,70.72
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,find (miss),,,,,,,fix(ci): add ccache installation for macOS in asan job,73.85
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,insert+erase,,,,,,,fix(ci): add ccache installation for macOS in asan job,214.57
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,operator[] (hit),,,,,,,fix(ci): add ccache installation for macOS in asan job,96.2
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,find (hit),,,,,,,fix(emihmap4): resolve variable shadowing warning,70.72
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,find (miss),,,,,,,fix(emihmap4): resolve variable shadowing warning,73.85
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,insert+erase,,,,,,,fix(emihmap4): resolve variable shadowing warning,214.57
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,operator[] (hit),,,,,,,fix(emihmap4): resolve variable shadowing warning,96.2
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,find (hit),,,,,,,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity",70.72
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,find (miss),,,,,,,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity",73.85
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,insert+erase,,,,,,,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity",214.57
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,operator[] (hit),,,,,,,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity",96.2
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,find (hit),,,,,,,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps",70.72
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,find (miss),,,,,,,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps",73.85
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,insert+erase,,,,,,,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps",214.57
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,operator[] (hit),,,,,,,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps",96.2
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,find (hit),,,,,,,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function,70.72
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,find (miss),,,,,,,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function,73.85
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,insert+erase,,,,,,,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function,214.57
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,operator[] (hit),,,,,,,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function,96.2
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,find (hit),,,,,,,style: clang-format all headers for format-check CI,70.72
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,find (miss),,,,,,,style: clang-format all headers for format-check CI,73.85
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,insert+erase,,,,,,,style: clang-format all headers for format-check CI,214.57
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,operator[] (hit),,,,,,,style: clang-format all headers for format-check CI,96.2
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,find (hit),,,,,,,perf: adopt martinus wyhash optimizations from unordered_dense,70.72
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,find (miss),,,,,,,perf: adopt martinus wyhash optimizations from unordered_dense,73.85
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,insert+erase,,,,,,,perf: adopt martinus wyhash optimizations from unordered_dense,214.57
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,operator[] (hit),,,,,,,perf: adopt martinus wyhash optimizations from unordered_dense,96.2
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,find (hit),,,,,,,perf: disable prefetch by default in emhash5-8 (no performance gain),66.54
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,find (miss),,,,,,,perf: disable prefetch by default in emhash5-8 (no performance gain),68.52
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,insert+erase,,,,,,,perf: disable prefetch by default in emhash5-8 (no performance gain),208.43
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,operator[] (hit),,,,,,,perf: disable prefetch by default in emhash5-8 (no performance gain),94.2
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,find (hit),,,,,,,fix: suppress unused parameter warning when prefetch is disabled,66.54
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,find (miss),,,,,,,fix: suppress unused parameter warning when prefetch is disabled,68.52
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,insert+erase,,,,,,,fix: suppress unused parameter warning when prefetch is disabled,208.43
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,operator[] (hit),,,,,,,fix: suppress unused parameter warning when prefetch is disabled,94.2
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,find (hit),,,,,,,fix: rehash strong exception guarantee + comprehensive test infrastructure,66.54
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,find (miss),,,,,,,fix: rehash strong exception guarantee + comprehensive test infrastructure,68.52
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,insert+erase,,,,,,,fix: rehash strong exception guarantee + comprehensive test infrastructure,208.43
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,operator[] (hit),,,,,,,fix: rehash strong exception guarantee + comprehensive test infrastructure,94.2
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,find (hit),,,,,,,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs",66.54
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,find (miss),,,,,,,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs",68.52
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,insert+erase,,,,,,,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs",208.43
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,operator[] (hit),,,,,,,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs",94.2
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,find (hit),,,,,,,bench: add emilib_bench/framework suites and extend ebench/martin_bench,66.54
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,find (miss),,,,,,,bench: add emilib_bench/framework suites and extend ebench/martin_bench,68.52
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,insert+erase,,,,,,,bench: add emilib_bench/framework suites and extend ebench/martin_bench,208.43
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,operator[] (hit),,,,,,,bench: add emilib_bench/framework suites and extend ebench/martin_bench,94.2
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,find (hit),,,,,,,docs: unify README suite and align documentation with current repo state,66.54
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,find (miss),,,,,,,docs: unify README suite and align documentation with current repo state,68.52
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,insert+erase,,,,,,,docs: unify README suite and align documentation with current repo state,208.43
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,operator[] (hit),,,,,,,docs: unify README suite and align documentation with current repo state,94.2
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,find (hit),,,,,,,feat: add custom allocator support to emilib1-4 maps,66.54
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,find (miss),,,,,,,feat: add custom allocator support to emilib1-4 maps,68.52
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,insert+erase,,,,,,,feat: add custom allocator support to emilib1-4 maps,208.43
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,operator[] (hit),,,,,,,feat: add custom allocator support to emilib1-4 maps,94.2
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,find (hit),,,,,,,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload",66.54
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,find (miss),,,,,,,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload",68.52
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,insert+erase,,,,,,,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload",208.43
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,operator[] (hit),,,,,,,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload",94.2
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,find (hit),,,,,,,style: apply clang-format-20 to emihmap2/3 and emihset2,66.54
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,find (miss),,,,,,,style: apply clang-format-20 to emihmap2/3 and emihset2,68.52
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,insert+erase,,,,,,,style: apply clang-format-20 to emihmap2/3 and emihset2,208.43
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,operator[] (hit),,,,,,,style: apply clang-format-20 to emihmap2/3 and emihset2,94.2
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,find (hit),,,,,,,fix(emilib): member-init order and unused var breaking strict-warnings gate,66.54
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,find (miss),,,,,,,fix(emilib): member-init order and unused var breaking strict-warnings gate,68.52
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,insert+erase,,,,,,,fix(emilib): member-init order and unused var breaking strict-warnings gate,208.43
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,operator[] (hit),,,,,,,fix(emilib): member-init order and unused var breaking strict-warnings gate,94.2
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,find (hit),,,,,,,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers,66.54
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,find (miss),,,,,,,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers,68.52
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,insert+erase,,,,,,,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers,208.43
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,operator[] (hit),,,,,,,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers,94.2

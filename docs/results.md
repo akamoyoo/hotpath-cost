@@ -1,6 +1,6 @@
 # The libraries
 
-What the tool reported for every library it was applied to, then the compiler matrix. Paths are relative to the repository root. Per-commit data: `results/<build>/<library>.csv`; the matrix as Markdown: `results/matrix.md`.
+What the tool reported for every library it was applied to, then the compiler matrix. Paths are relative to the repository root. Per-commit data: `results/<build>/<library>.csv`; the matrix as Markdown: `results/matrix/matrix.md`.
 
 ## What was found
 

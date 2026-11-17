@@ -1,0 +1,97 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+2f76f67feffbdfebb47020c018daf0551b2078a9,2019-10-10,build failed,,,,,,,,"Rename to hwy, tests subdirectory in preparation for merge"
+07b3dc1222035082e0617b5cc46228d674a314c1,2020-12-30,build failed,,,,,,,,"Allow BitsFromMask/TableLookupBytes for partial vectors, and TableLookupBytes/Lanes in scalar"
+51dddb41f44f8ca1206ba3d260869368950f51eb,2021-01-28,build failed,,,,,,,,"Add ShiftLeft/RightSame for all targets Add Shr/Shl for 16-bit Add BroadcastSignBit for all signed Add Not(V) and Not(M) Deprecate HWY_VARIABLE_SHIFT_LANES and HWY_MINMAX64_LANES, no longer needed (always supported in full) arm: template for logical f32/64, fix ShiftLeft<0> Single HWY_IF_LANE_SIZE macro with param ZipUpper: allow calling for N=1 Shared test for all shift types, fix MinMax test for i64"
+6ed85fdc432d09b2c79c975df41fa4ddc5eb5066,2021-03-10,build failed,,,,,,,,remove no longer used example file
+ef7813de90dcf75cba84c6bd8eb05b6e8e4cbf38,2021-04-21,build failed,,,,,,,,"allow MSVC to build AVX2, remove message/log spam, work around compiler bugs"
+262b11ac3da99b341521f159dff5da480d245669,2021-06-15,build failed,,,,,,,,"include CLMUL,F16C,BMI2,FMA and AVX512{BW,DQ,VL} in baseline check"
+2df703831578d6760268e20d4a5d9936ace78b29,2021-07-14,build failed,,,,,,,,Support differing types in TableLookupBytes*.
+082b2674a6bc3e8d384b2cd45d5d0b0b1bd95294,2021-08-06,build failed,,,,,,,,"more gcc arm/wasm compile fixes (casts, unused)"
+9e671c939248d006bec39795dba8947d478ea276,2021-09-29,build failed,,,,,,,,add OddEvenBlocks and SwapAdjacentBlocks
+abe35e1ea5f6a3252785fc7623daf8fe12482b4a,2021-11-05,build failed,,,,,,,,"improved codegen for 16-bit AVX2 masks, thanks @yzazik. Refs #436"
+32015e56356900b7eb519eb9495052b6c2e146dd,2022-01-18,build failed,,,,,,,,Fix ForGE128Vectors alias
+d9b96416068796b2a47b75042d23bd7cb9c78396,2022-02-25,build failed,,,,,,,,"enable half-vector codepath for RVV, which is now supported."
+daf441c78191b3433410498d27a5bfdfdf93a142,2022-03-30,build failed,,,,,,,,fix XCR0 check (was ignoring AVX3 on ICL). Refs #617
+b0cb9f70b9abbaaf6bcb447953a04c5ca00b3639,2022-05-04,build failed,,,,,,,,support all lane types in StoreInterleaved*. Refs #641
+b61761af8917e5dea18a13f0ff8c845dd0971e05,2022-06-03,build failed,,,,,,,,faster NEON CountTrue/FindFirstTrue/AllFalse/AllTrue
+6b8722841eb126e47236d734809da824a6699316,2022-06-21,build failed,,,,,,,,"128-bit sort speedup: 1.39x for 64+64bit keys, 1.47x for 128-bit on x86"
+08f3e5ec0590bd4d096adccae1f9d690f1aee539,2022-07-08,build failed,,,,,,,,Merge pull request #844 from malaterre:gcc-macro-doc
+ecca92dcf734b4ea71f50517c325b9d4a196c135,2022-08-08,build failed,,,,,,,,more thoroughly disable TestAllMul
+22a9974beb72cce22881740398b2f50430cd612c,2022-09-08,build failed,,,,,,,,warning fix (unused param)
+adb012eb34ade8c4bb8a4c9e24d7080c7dbf48a1,2022-11-10,build failed,,,,,,,,fix wasm256 ambiguous overload
+45c98184ab7f81cf592c07633070b75fced14a52,2023-01-17,build failed,,,,,,,,warning fix (cast)
+7845d75a2b72f87c4c2ce7185ed4c4fa5d632d32,2023-03-03,build failed,,,,,,,,fix Wunused-local-typedef
+2331c185235d954aba5fe6313002f1e0f21ebfbe,2023-03-21,build failed,,,,,,,,add clang version detection for 15 and 16
+306d47e06d26826dbc2f328cc8cce043552f6f01,2023-04-20,build failed,,,,,,,,Merge pull request #1319 from ag01:neon_compilation_fixes
+5e9faa3f78f49007e3b254c15b6e59decc3a8857,2023-05-11,ok,sum of 1024 floats,,,,,,,"noinline BaseCase, only use 2 chunks for pivot",1060.0
+5e9faa3f78f49007e3b254c15b6e59decc3a8857,2023-05-11,ok,dot of 1024 floats,,,,,,,"noinline BaseCase, only use 2 chunks for pivot",1570.0
+aae54cdd82e90a37bf0b183790afc55bd752f179,2023-06-06,ok,sum of 1024 floats,,,,,,,Merge pull request #1431 from johnplatts:jep_hwy_shuf_enh_053023,1060.0
+aae54cdd82e90a37bf0b183790afc55bd752f179,2023-06-06,ok,dot of 1024 floats,,,,,,,Merge pull request #1431 from johnplatts:jep_hwy_shuf_enh_053023,1570.0
+dc67dc83e23434e036b56a58fe5b98c40af25afb,2023-06-26,ok,sum of 1024 floats,,,,,,,"VQSortStatic cleanup, support all key types. Refs #1500",1060.0
+dc67dc83e23434e036b56a58fe5b98c40af25afb,2023-06-26,ok,dot of 1024 floats,,,,,,,"VQSortStatic cleanup, support all key types. Refs #1500",1570.0
+ddb4de95c33d3263ebfe8b8dab96fb8838bfb126,2023-07-13,ok,sum of 1024 floats,,,,,,,Merge pull request #1511 from matthewkolbe:unroller,1060.0
+ddb4de95c33d3263ebfe8b8dab96fb8838bfb126,2023-07-13,ok,dot of 1024 floats,,,,,,,Merge pull request #1511 from matthewkolbe:unroller,1570.0
+4e559d15cdbb4854000498961725d06e445ebfc3,2023-07-31,ok,sum of 1024 floats,,,,,,,ICC build fixes: avoid AVX3_DL/SPR and pragma,1060.0
+4e559d15cdbb4854000498961725d06e445ebfc3,2023-07-31,ok,dot of 1024 floats,,,,,,,ICC build fixes: avoid AVX3_DL/SPR and pragma,1570.0
+5e3893b9aa6b3b29e22c4f34936ed0233e7f8ebd,2023-08-28,ok,sum of 1024 floats,,,,,,,MSVC crash workaround: avoid zext,1060.0
+5e3893b9aa6b3b29e22c4f34936ed0233e7f8ebd,2023-08-28,ok,dot of 1024 floats,,,,,,,MSVC crash workaround: avoid zext,1570.0
+c3d7dff485cd5e779d33bc547e4f8d993e19264c,2023-09-15,ok,sum of 1024 floats,,,,,,,"fix cast alignment warning, thanks @malaterre, fixes #1750",1060.0
+c3d7dff485cd5e779d33bc547e4f8d993e19264c,2023-09-15,ok,dot of 1024 floats,,,,,,,"fix cast alignment warning, thanks @malaterre, fixes #1750",1570.0
+36caf98e7b12baaf01c6f762cd2f7b8466164a2a,2023-10-12,ok,sum of 1024 floats,,,,,,,"fix mismatch between arg/assert, thanks @fbarbari, fixes #1815",1061.0
+36caf98e7b12baaf01c6f762cd2f7b8466164a2a,2023-10-12,ok,dot of 1024 floats,,,,,,,"fix mismatch between arg/assert, thanks @fbarbari, fixes #1815",1571.0
+065f10765f6a181cb449c78e788a65aecb6d7fa3,2023-11-29,ok,sum of 1024 floats,,,,,,,fix HWY_IF macros lacking hwy::,1061.0
+065f10765f6a181cb449c78e788a65aecb6d7fa3,2023-11-29,ok,dot of 1024 floats,,,,,,,fix HWY_IF macros lacking hwy::,1571.0
+1955cd8195ac195770645bd1ebf85e1ac0132729,2024-01-18,ok,sum of 1024 floats,,,,,,,Merge pull request #1946 from johnplatts:hwy_f16_demoteto_enh_011724,1061.0
+1955cd8195ac195770645bd1ebf85e1ac0132729,2024-01-18,ok,dot of 1024 floats,,,,,,,Merge pull request #1946 from johnplatts:hwy_f16_demoteto_enh_011724,1571.0
+26516776542261466734417936dd8cef223ca145,2024-03-04,ok,sum of 1024 floats,,,,,,,Merge pull request #2005 from johnplatts:jep_hwy_rol_ror_ops_022924,1061.0
+26516776542261466734417936dd8cef223ca145,2024-03-04,ok,dot of 1024 floats,,,,,,,Merge pull request #2005 from johnplatts:jep_hwy_rol_ror_ops_022924,1571.0
+6cf16e28ea2ec5ef575d4e3c584f9c5415c61c5f,2024-04-15,ok,sum of 1024 floats,,,,,,,Merge pull request #2067 from johnplatts:hwy_f32_to_f16_fix_040824,1061.0
+6cf16e28ea2ec5ef575d4e3c584f9c5415c61c5f,2024-04-15,ok,dot of 1024 floats,,,,,,,Merge pull request #2067 from johnplatts:hwy_f32_to_f16_fix_040824,1571.0
+d7856f466bfdc6468aa7ad50cc50dec4d0b45dea,2024-05-07,ok,sum of 1024 floats,,,,,,,Merge pull request #2135 from johnplatts:hwy_bitshuffle_050324,1061.0
+d7856f466bfdc6468aa7ad50cc50dec4d0b45dea,2024-05-07,ok,dot of 1024 floats,,,,,,,Merge pull request #2135 from johnplatts:hwy_bitshuffle_050324,1571.0
+9402abc22b1e679e775b86c6a0fad984157a7397,2024-05-22,ok,sum of 1024 floats,,,,,,,Re-enable float to int test; UB is fixed in #2189,1061.0
+9402abc22b1e679e775b86c6a0fad984157a7397,2024-05-22,ok,dot of 1024 floats,,,,,,,Re-enable float to int test; UB is fixed in #2189,1571.0
+1cf089d07c8fb5531cea04b505ac8d152581f401,2024-07-17,ok,sum of 1024 floats,,,,,,,Merge pull request #2274 from johnplatts:hwy_gcc_sort_warning_fix_071624,1061.0
+1cf089d07c8fb5531cea04b505ac8d152581f401,2024-07-17,ok,dot of 1024 floats,,,,,,,Merge pull request #2274 from johnplatts:hwy_gcc_sort_warning_fix_071624,1571.0
+0a3c9014a7b30528787e3cce04a75e8425e800bd,2024-10-10,ok,sum of 1024 floats,,,,,,,fix missing cast,1061.0
+0a3c9014a7b30528787e3cce04a75e8425e800bd,2024-10-10,ok,dot of 1024 floats,,,,,,,fix missing cast,1571.0
+c8c3f5eadab4a998a33fd86374a588672a3d658b,2025-01-09,ok,sum of 1024 floats,,,,,,,"update thresholds to account for a possible L4. Thanks @miladfarca, fixes 2435",1061.0
+c8c3f5eadab4a998a33fd86374a588672a3d658b,2025-01-09,ok,dot of 1024 floats,,,,,,,"update thresholds to account for a possible L4. Thanks @miladfarca, fixes 2435",1571.0
+40ace75f07e2d959d9a5c4dc35bd028ef2acad53,2025-02-21,ok,sum of 1024 floats,,,,,,,"detect clang 19, print in list_targets, enable SVE for clang 19",1061.0
+40ace75f07e2d959d9a5c4dc35bd028ef2acad53,2025-02-21,ok,dot of 1024 floats,,,,,,,"detect clang 19, print in list_targets, enable SVE for clang 19",1571.0
+1d6b1306047053e1515784b0bf917b45cdd7f822,2025-03-25,ok,sum of 1024 floats,,,,,,,print gain stats for pool autotune,1061.0
+1d6b1306047053e1515784b0bf917b45cdd7f822,2025-03-25,ok,dot of 1024 floats,,,,,,,print gain stats for pool autotune,1571.0
+9de0682cc07f12aea61b0a6e1c91254904f09c48,2025-07-04,ok,sum of 1024 floats,,,,,,,Merge pull request #2334 from lsrcz:synthesized-mul-even-odd,1061.0
+9de0682cc07f12aea61b0a6e1c91254904f09c48,2025-07-04,ok,dot of 1024 floats,,,,,,,Merge pull request #2334 from lsrcz:synthesized-mul-even-odd,1571.0
+047980ac18f5ee664011dc6b1ae13ea919eaa6a4,2025-09-01,ok,sum of 1024 floats,,,,,,,Merge pull request #2695 from johnplatts:hwy_ndk_avx10_2_fix_083125,1061.0
+047980ac18f5ee664011dc6b1ae13ea919eaa6a4,2025-09-01,ok,dot of 1024 floats,,,,,,,Merge pull request #2695 from johnplatts:hwy_ndk_avx10_2_fix_083125,1571.0
+5c8755e2b56a2dcaa270612b343b0c6715c95ef5,2025-10-17,ok,sum of 1024 floats,,,,,,,Disable HWY_NEON instead of HWY_NEON_WITHOUT_AES,1061.0
+5c8755e2b56a2dcaa270612b343b0c6715c95ef5,2025-10-17,ok,dot of 1024 floats,,,,,,,Disable HWY_NEON instead of HWY_NEON_WITHOUT_AES,1571.0
+56adfd11800e21045a782ef1abdf9ef2b4899fa2,2026-01-16,ok,sum of 1024 floats,,,,,,,"avoid unnecessary add after SVE BFDOT, also fix lint warning (formatting)",1061.0
+56adfd11800e21045a782ef1abdf9ef2b4899fa2,2026-01-16,ok,dot of 1024 floats,,,,,,,"avoid unnecessary add after SVE BFDOT, also fix lint warning (formatting)",1571.0
+9a717f669a7aa490704950ba76116ea4d0166e08,2026-03-17,ok,sum of 1024 floats,,,,,,,Update constants in fast_math-inl.h,1061.0
+9a717f669a7aa490704950ba76116ea4d0166e08,2026-03-17,ok,dot of 1024 floats,,,,,,,Update constants in fast_math-inl.h,1571.0
+eeebfb8bf705eb753ffe496f83b1271200906f6f,2026-04-01,ok,sum of 1024 floats,,,,,,,Merge pull request #2950 from RaviTriv:minmax,1061.0
+eeebfb8bf705eb753ffe496f83b1271200906f6f,2026-04-01,ok,dot of 1024 floats,,,,,,,Merge pull request #2950 from RaviTriv:minmax,1571.0
+af486ba63f30bb24669995fd15123930c441392c,2026-05-04,ok,sum of 1024 floats,,,,,,,Merge pull request #3030 from bkmgit:patch-1,1061.0
+af486ba63f30bb24669995fd15123930c441392c,2026-05-04,ok,dot of 1024 floats,,,,,,,Merge pull request #3030 from bkmgit:patch-1,1571.0
+054ed9c0209febdf5e2e3c8d404e7ba228e2cd4c,2026-06-08,ok,sum of 1024 floats,,,,,,,Fix PartialSort for k=n,1061.0
+054ed9c0209febdf5e2e3c8d404e7ba228e2cd4c,2026-06-08,ok,dot of 1024 floats,,,,,,,Fix PartialSort for k=n,1571.0
+9c883725ed221603f317ee10c14fc5e368193b66,2026-06-24,ok,sum of 1024 floats,,,,,,,Merge pull request #3153 from wszqkzqk:loong64,1061.0
+9c883725ed221603f317ee10c14fc5e368193b66,2026-06-24,ok,dot of 1024 floats,,,,,,,Merge pull request #3153 from wszqkzqk:loong64,1571.0
+2f880f2d1496ab08774dd62d3322f0f17f2f9df3,2026-07-08,ok,sum of 1024 floats,,,,,,,Merge pull request #3206 from bkmgit:patch-2,1061.0
+2f880f2d1496ab08774dd62d3322f0f17f2f9df3,2026-07-08,ok,dot of 1024 floats,,,,,,,Merge pull request #3206 from bkmgit:patch-2,1571.0
+df2b24ea7255a6f7eb7586d3248bc7e8c2737dc0,2026-08-10,ok,sum of 1024 floats,,,,,,,"Add STL type traits, reverse iterators, and lookup conveniences to hwy::BTreeSet and hwy::BTreeMap.",1061.0
+df2b24ea7255a6f7eb7586d3248bc7e8c2737dc0,2026-08-10,ok,dot of 1024 floats,,,,,,,"Add STL type traits, reverse iterators, and lookup conveniences to hwy::BTreeSet and hwy::BTreeMap.",1571.0
+ef876f4f42083256e794b9205f51e0e54c0510bf,2026-08-25,ok,sum of 1024 floats,,,,,,,Optimize Leaf Splitting in Hwy Btrees,1061.0
+ef876f4f42083256e794b9205f51e0e54c0510bf,2026-08-25,ok,dot of 1024 floats,,,,,,,Optimize Leaf Splitting in Hwy Btrees,1571.0
+e2eff5dc807b847a6d2315887db8986888d88b49,2026-09-08,ok,sum of 1024 floats,,,,,,,Merge pull request #3354 from a-eee:faster-unique,1061.0
+e2eff5dc807b847a6d2315887db8986888d88b49,2026-09-08,ok,dot of 1024 floats,,,,,,,Merge pull request #3354 from a-eee:faster-unique,1571.0
+6db5bf113bd2992c6b02845296de3f92f39a24ed,2026-09-23,ok,sum of 1024 floats,,,,,,,Use OrderedDemote2MasksTo to optimize ScanOffsets Getting 10-14% speedups for hwy btree queries which is amazing (on turin),1061.0
+6db5bf113bd2992c6b02845296de3f92f39a24ed,2026-09-23,ok,dot of 1024 floats,,,,,,,Use OrderedDemote2MasksTo to optimize ScanOffsets Getting 10-14% speedups for hwy btree queries which is amazing (on turin),1571.0
+a9660545737669e9f128c888910ffb08263f770b,2026-10-13,ok,sum of 1024 floats,,,,,,,Merge pull request #3468 from advitrocks9:fix-loggamma-range,1061.0
+a9660545737669e9f128c888910ffb08263f770b,2026-10-13,ok,dot of 1024 floats,,,,,,,Merge pull request #3468 from advitrocks9:fix-loggamma-range,1571.0
+6bc2d47793bae9c521fb4150936669647700765d,2026-11-09,ok,sum of 1024 floats,,,,,,,Merge pull request #3528 from johnplatts:hwy_sve_mul_by_pow2_103026,1061.0
+6bc2d47793bae9c521fb4150936669647700765d,2026-11-09,ok,dot of 1024 floats,,,,,,,Merge pull request #3528 from johnplatts:hwy_sve_mul_by_pow2_103026,1571.0
+b8da4c9666f86023050e305f536214ce817b7b31,2026-11-16,ok,sum of 1024 floats,,,,,,,"IO: Add RenameFileNoReplace, raw Linux fstat, and null-span/nothrow guards.",1061.0
+b8da4c9666f86023050e305f536214ce817b7b31,2026-11-16,ok,dot of 1024 floats,,,,,,,"IO: Add RenameFileNoReplace, raw Linux fstat, and null-span/nothrow guards.",1571.0
