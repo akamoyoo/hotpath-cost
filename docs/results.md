@@ -48,9 +48,9 @@ every 40th, and every interval whose counts differed was bisected. Built with GC
 | [yyjson](https://github.com/ibireme/yyjson) (JSON) | 239 of 280 | 0 | parse: 2 allocations with the default allocator, 0 with a pool, throughout |
 | [glaze](https://github.com/stephenberry/glaze) (JSON) | 45 of 2,689, sampled | 1 | reading into a reused struct and writing to a reused string: 0; first read 4 -> 2 allocations in 2024 (`f8cb7923`, statically sized decode buffer) |
 | [abseil](https://github.com/abseil/abseil-cpp) (`flat_hash_map`) | 70 of 1,197, sampled | 0 | 0 and 0 (versions before 2019 crash the workload, whose hash-table sampling is not linked) |
-| [gtl](https://github.com/greg7mdp/gtl) (hash map) | 179 of 179 | 0 | 0 and 0 |
-| [emhash](https://github.com/ktprime/emhash) (hash map) | 219 of 228 | 0 | 0 and 0 |
-| [Highway](https://github.com/google/highway) (SIMD) | 36 of 2,329, sampled | 0 | 0 and 0 |
+| [gtl](https://github.com/greg7mdp/gtl) (hash map) | 179 of 179 | 0 | 0 and 0; instructions per call unchanged at every other commit |
+| [emhash](https://github.com/ktprime/emhash) (hash map) | 219 of 228 | 0 | 0 and 0. Instructions per `find`: +6 to +7 % in June 2026 at `ba124419` "fix:overflow", which also turned on a prefetch, and back a month later at `280842c5` "disable prefetch by default ... (no performance gain)" |
+| [Highway](https://github.com/google/highway) (SIMD) | 36 of 2,329, sampled | 0 | 0 and 0; instructions per 1,024-float sum and dot unchanged |
 
 "Measured" counts the commits at which the fixed workload compiles and runs; older versions
 with a different API are not measured. The quiet rows are results too: these libraries keep their
