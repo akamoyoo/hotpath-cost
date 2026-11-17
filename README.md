@@ -58,7 +58,10 @@ each of these lessons changed how it works ([evidence](docs/insights.md)):
 - **`replay/combine.py`**: both views of one commit, matched site by site: exercised, never exercised,
   or missed by the analysis. Exploration workloads (`replay/workloads/<lib>_explore.cpp`) replay a
   seeded random sequence of realistic operations to reach what a fixed workload does not.
+- **`replay/check.py`**: a change under review in one command: counts, changed stacks and instructions
+  per call at the base and the head.
 - **`replay/gap.py`** and **`replay/matrix.sh`**: compiler and level comparisons.
+- **`replay/selftest.py`**: checks the tool against results it is known to give.
 - **[AGENTS.md](AGENTS.md)**: how a coding agent runs the tool and reads its results.
 
 ## Example
