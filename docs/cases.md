@@ -272,9 +272,13 @@ enqueue burst reused it; 0.13 allocations per burst are the queue growing to its
 far. Since then, a block that was allocated beyond the initial capacity is freed as soon as it is
 empty, and allocated again by the next burst that needs it: a `malloc` and a `free` per 32 elements,
 in the steady state. This is deliberate and documented: the trait `RECYCLE_ALLOCATED_BLOCKS` (default
-`false`) restores the old behaviour, and a queue sized for its peak never allocates. It is the kind of
-cost the tool is for: invisible to a workload that stays within capacity, introduced by one commit,
-and switched off by one line, once it is known.
+`false`) restores the old behaviour, and a queue sized for its peak never allocates. The count is exact; its price on one thread is about nothing. On the latest code, the same flow with
+`RECYCLE_ALLOCATED_BLOCKS = true` makes 0 allocations per burst instead of 2.9, and takes 3,712 against
+3,730 ns per burst (0.5 %), because glibc's thread cache serves the freed blocks again at once. The
+commit itself made the flow 20 % faster (3,619 -> 2,888 ns, timed alternately), for reasons unrelated
+to the frees: it also removed an atomic flag from every block's free-list path. What remains is a cost
+a single-threaded timing cannot show: a call into the allocator per 32 elements, which matters with a
+contended or instrumented allocator, or when a hot path must not call it at all.
 
 The other five sites are the creation of an implicit producer for a thread (its block index, its entry
 in the producer hash, the thread-exit callback). A single-threaded flow reaches them once, before

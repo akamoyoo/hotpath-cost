@@ -51,12 +51,21 @@ direction. The size of the effect on time varied by a factor of more than 20:
 | Eigen, 4x4 Cholesky, GCC 13 `-O2` to `-O3` | -35 % | -5 % |
 | Eigen, 8x8 matrix-vector, GCC 13 to GCC 15 at `-O2` | +13 % | +29 % |
 | Eigen `28c3b26d`, 4x4 Cholesky solve, GCC 13 | +34 % | +49 % |
+| abseil `f2f4fa2c`, `flat_hash_map::operator[]` | +50 % | +37 % |
+| abseil `f2f4fa2c`, insert+erase | +21 % | +9 % |
+| abseil `179d2e39` (the fix ten days later), `operator[]` | -32 % | -25 % |
 
 Code bound by a dependency chain (a multiply chain in XXH64, square roots and divisions in Cholesky)
 hides most of an instruction change. Code bound by the number of instructions passes it on almost
 one to one (fast_float). The Eigen cases go the other way: time grew more than instructions, up to twice
 as much.
 An instruction count is a detector, and the price has to be measured.
+
+The same holds for allocation counts. rapidjson's extra allocation per parse since #1858 costs 5 %
+(587 -> 616 ns). concurrentqueue's malloc and free per 32 elements (case 7) cost nothing measurable on
+one thread: on the latest code, switching block recycling on removes all 2.9 allocations per burst and
+changes the time by 0.5 % (3,730 -> 3,712 ns), because glibc's thread cache serves them. What they cost
+under several threads, with a contended allocator, is a different question that this did not measure.
 
 ## 3. A machine-code difference is not a cost
 
