@@ -69,8 +69,8 @@ no instruction count by 3 % or more; 2 do not build with the workload. The other
 
 | pull request | counts | instructions | time |
 |---|---|---|---|
-| parallel-hashmap #167 "AVX2 optimization of group lookup" | same | find +6 %, `operator[]` +6 % | find of a present key +13 %, `operator[]` +10 %, insert+erase -11 % |
-| fast_float #307 "Improving speed and reduce code size ..." | same | `integer 100` +11 %, 17 digits with exponent -5 % | `integer 100` +19 % (9.9 -> 11.8 ns), `price 187.25` +7 % |
+| parallel-hashmap #167 "AVX2 optimization of group lookup" | same | find +6 %, `operator[]` +6 % | with AVX2 (`-march=x86-64-v3`), slower in every case of a standalone benchmark: find +3 to +9 %, find of a missing key in a 10-million-entry table +42 % (15.7 -> 22.3 ns), insert+erase +11 to +17 %, with GCC 13 and clang 21; unchanged without AVX2 |
+| fast_float #307 "Improving speed and reduce code size ..." | same | `integer 100` +11 %, 17 digits with exponent -5 % | mixed in a standalone benchmark: with GCC 13, `100` and `65535` 4 to 7 % slower, other inputs up to 12 % faster; with clang 21, mostly faster (`100` 10 to 17 %) |
 | fast_float #416 "Speed up parsing: branch-free exponent ..." | same | -3 to -4 % | `price 187.25` -9 %, others within 3 % |
 | rapidjson #2402, #2403 (allocation failures) | same | +5 %, +8 % on a fixed-buffer pool | +5 %, +6 % |
 | spdlog #3641 "Reuse backtrace ring-buffer slots ..." | same | +27 per message with backtrace off (+5 % for `info(string)`) | +4 % for `info(string)`, within noise otherwise |
@@ -82,7 +82,11 @@ no instruction count by 3 % or more; 2 do not build with the workload. The other
 Taskflow's pull requests first showed instruction changes for most of them, including one that only
 touches MSVC module builds: with a worker thread, one build's count varies by up to 8 % between runs.
 `check.py` now measures such workloads three times and compares ranges, and none of them is left.
-None of these results was posted to the pull requests.
+The first prices of the two rows above came from `price.py`, with the replay's workload: insert+erase
+11 % faster for #167, `integer 100` 19 % slower for #307. A standalone benchmark (one `noinline` function,
+21 batches of a million calls, alternating builds) gave insert+erase 11 to 17 % slower and `100` 7 %
+slower. Both harnesses are exact about counts; their times differ with code layout and the loop around
+the call. A price meant for someone else is now confirmed with a second, independent harness.
 
 ## The compiler matrix
 

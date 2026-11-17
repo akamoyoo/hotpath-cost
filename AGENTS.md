@@ -112,6 +112,10 @@ other undefined symbol, and every undefined variable, fails the build.
   CPU N and N+20). The load on other cores changed one build's time by 40 %, and per-commit timings
   from parallel replays jumped by 2x between commits whose machine code was identical. Report the
   median and the spread between rounds, and call a difference real only if it repeats in every round.
+  Before a price goes to anyone else, confirm it with a second harness: a standalone program that
+  calls the operation through one `noinline` function in batches. The replay's workload and such a
+  program agreed on every count but disagreed on time by up to 28 points (parallel-hashmap #167:
+  insert+erase -11 % against +11 to +17 %), because code layout and the surrounding loop differ.
 - **Workloads with another thread** (a logger's backend, an executor's worker; `cores > 1` in `P`):
   frees counted on the calling thread depend on which thread drops the last reference, and vary between
   runs of the same build (Taskflow: 1.4 to 2.8 per call), so `diff.py` and `--refine` do not compare
