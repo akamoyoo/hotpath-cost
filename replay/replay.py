@@ -17,7 +17,7 @@ Output: out/<cc><tag>/<project>/<commit>.jsonl, or <commit>.fail with the build 
 Projects are expected under src/<project> (fetch.sh clones them). Counts do not depend on machine
 load; timings of parallel runs do, and are only indicative.
 """
-import concurrent.futures, json, os, subprocess, sys, tempfile, threading
+import re, concurrent.futures, json, os, subprocess, sys, tempfile, threading
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -81,11 +81,15 @@ P = {
     "gtl": dict(workload="gtl", paths=["include"], inc=["include"], srcs=[]),
     "emhash": dict(workload="emhash", paths=["include", "hash_table8.hpp"], inc=["include/emhash", "."], srcs=[]),
     "abseil": dict(workload="abseil", paths=["absl/container", "absl/hash"], inc=["."],
-                   # each compiled where it exists at the commit; hashtablez sampling is left unresolved
-                   # (see replay/workloads/abseil.cpp)
+                   # each compiled where it exists at the commit; the hashtablez sampling functions are left
+                   # unresolved (see replay/workloads/abseil.cpp), and ABSL_CONSUME_DLL turns sampling off in
+                   # the versions that enabled it by default
                    srcs=[], srcs_if_present=["absl/container/internal/raw_hash_set.cc", "absl/hash/internal/hash.cc",
                          "absl/hash/internal/city.cc", "absl/hash/internal/low_level_hash.cc",
-                         "absl/base/internal/raw_logging.cc"], flags=["-Wl,--unresolved-symbols=ignore-all"]),
+                         "absl/base/internal/raw_logging.cc"], flags=["-DABSL_CONSUME_DLL"],
+                   unresolved_ok=["ForcedTrySample", "SampleSlow", "UnsampleSlow", "RecordInsertSlow",
+                                  "RecordRehashSlow", "RecordStorageChangedSlow", "RecordEraseSlow",
+                                  "RecordReservationSlow", "RecordClearedReservationSlow", "SampleForTesting"]),
     "highway": dict(workload="highway", paths=["hwy"], inc=["."], srcs=[]),
 }
 CORES = [int(c) for c in os.environ.get("REPLAY_CORES", "2,4,6,8").split(",")]
@@ -108,8 +112,10 @@ def fingerprint(proj, cc):
     files += sorted((HERE / "workloads").glob("*.h"))
     if "drv" in cfg: files += sorted(p for p in (HERE / "drivers" / cfg["drv"]).rglob("*") if p.is_file())
     files += [HERE / "drivers" / "hp_entry.h"]
-    for f in files:
-        if f.exists(): h.update(f.name.encode()); h.update(f.read_bytes())
+    for f in files:   # lines that are only a // comment do not count: editing a comment keeps the results
+        if f.exists():
+            h.update(f.name.encode())
+            h.update(b"\n".join(l for l in f.read_bytes().splitlines() if not l.lstrip().startswith(b"//")))
     h.update(repr(sorted(cfg.items())).encode()); h.update(f"{CXX[cc]} {OPT} {METRIC}".encode())
     return h.hexdigest()[:16]
 
@@ -144,9 +150,21 @@ def build(proj, cc, h, tree, exe, extra=()):
             (tree / path).mkdir(parents=True, exist_ok=True)
             subprocess.run(f"git -C {TOP / 'src' / clone} archive {ls[2]} | tar -x -C {tree / path}", shell=True)
     std0 = "-std=" + P[proj].get("std", "c++17")   # a project may need a newer standard throughout
-    b = subprocess.run(build_cmd(P[proj], cc, tree, exe, std0, extra), capture_output=True, text=True)
+    # functions named in "unresolved_ok" may stay undefined (paths the workload never reaches); any other
+    # undefined symbol, and every undefined variable, fails the build: a variable resolved to address 0
+    # would be read and written without a crash
+    ok = P[proj].get("unresolved_ok")
+    link = ("-Wl,--warn-unresolved-symbols",) if ok else ()
+    def attempt(std):
+        b = subprocess.run(build_cmd(P[proj], cc, tree, exe, std, (*extra, *link)), capture_output=True, text=True)
+        if ok and b.returncode == 0:
+            bad = sorted({sym for sym in re.findall(r"undefined reference to `([^']+)'", b.stderr)
+                          if "(" not in sym or not any(re.search(r"::" + n + r"\(", sym) for n in ok)})
+            if bad: return subprocess.CompletedProcess(b.args, 1, b.stdout, "unresolved symbols not allowed:\n" + "\n".join(bad))
+        return b
+    b = attempt(std0)
     if b.returncode and std0 == "-std=c++17":
-        b2 = subprocess.run(build_cmd(P[proj], cc, tree, exe, "-std=c++20", extra), capture_output=True, text=True)
+        b2 = attempt("-std=c++20")
         if b2.returncode == 0: b = b2
     return b
 

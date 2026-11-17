@@ -81,7 +81,11 @@ self-contained `replay/workloads/LIB.cpp`. Add an entry to `P` in `replay/replay
 commits matter, the include directories, extra sources and flags. Check the latest commit first
 (`--commits <head>`), then the whole history. If older commits fail with missing standard types
 (`uint64_t`, `std::string`, `std::numeric_limits`), include those headers in the workload before the
-library's header; older headers relied on transitive includes.
+library's header; older headers relied on transitive includes. Sources that exist only in some versions
+go in `srcs_if_present`. When a library's compiled sources reference functions the workload never
+reaches and whose definitions pull in much more (abseil's hash-table sampling), name them in
+`unresolved_ok`: they may stay undefined, while any other undefined symbol, and every undefined
+variable, fails the build.
 
 ## Reading the results
 
@@ -117,7 +121,8 @@ library's header; older headers relied on transitive includes.
 - quill's workload has a backend thread and needs two cores in `REPLAY_CORES`.
 - A process may contain only one quill `FrontendOptions` type.
 - `replay.py` caches results per commit in `out/`, together with a fingerprint of the workload, its
-  driver, the shared headers and the project's entry in `P`. When any of them changes, the old results
+  driver, the shared headers and the project's entry in `P` (lines that are only a `//` comment do not
+  count). When any of them changes, the old results
   are moved to `stale-<fingerprint>/` and the next run measures again. Changes elsewhere (the compiler
   binary itself, an environment variable a workload reads) are not seen: delete the directory then.
 - Entry functions must be declared with `HP_ENTRY` (`replay/drivers/hp_entry.h`). An entry that ends in
