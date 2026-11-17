@@ -1,0 +1,520 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+e6a8caae2b2c2fe7204acefbfc1b37bc1a04966e,2020-10-08,build failed,,,,,,,,move to github
+727f853d13cbae83458e50b74ab6fb9942eda45c,2020-10-11,build failed,,,,,,,,update doc
+382a1f1411768fce5dbec78d01c07d4ac09d483b,2020-10-13,build failed,,,,,,,,optimize number reading
+af4d49971c030cae997200768ae7c1bdaf3ba870,2020-10-16,build failed,,,,,,,,change tag bit from 5 to 8
+cd51e55d9e3fa189abaaa2804e9d073214f0e5ed,2020-10-19,build failed,,,,,,,,update doc
+e470b75dcd6e8b08094ce2ea6c921c7bbec38551,2020-10-20,build failed,,,,,,,,"add more roundtrip test, fix the mutable_copy error"
+e08c141f05883846af63375e242b05302ad4280f,2020-10-25,build failed,,,,,,,,optimize string reading speed for gcc
+8cc7b3d079e897cb7530a12bc3159d70dbe235d7,2020-10-25,build failed,,,,,,,,optimize string reading speed for gcc
+d33bfa80da5f79f98bfc0dea8c97a5a3eb038e98,2020-10-26,build failed,,,,,,,,Add some document
+f0ab007bdc51601b210de5912867673d4c502a0a,2020-10-27,build failed,,,,,,,,fix the 64-bit integer typedef for old version gcc on linux: #7
+209c2303bc81f6d52fcf2431a93b8c3700c2f2c3,2020-10-27,build failed,,,,,,,,fix unmatched `elif`
+464fa1f4723d647e590401fee444c35d4d21c38a,2020-11-01,build failed,,,,,,,,update doc
+ba1de898e998e9529ecdb4c47a6e9641f3a40a03,2020-11-15,build failed,,,,,,,,"strict UTF-8 validation, more test case"
+9933f6f9e0fd71d5f64b580212ca6c73d3f6966b,2020-11-15,build failed,,,,,,,,add missing semicolon
+57baf04282b9688df08c0cda42f239138658d1ae,2020-11-16,build failed,,,,,,,,optimize performance for gcc
+59ac981edeac5b103626f0c75456a94e8074c841,2020-11-16,build failed,,,,,,,,fix macro error
+4b596358a6214e225db8e2a3314141051247c7e4,2020-11-23,build failed,,,,,,,,update comments and docs
+d3ed8e7c1bca39b68801693293bd42a93e0fef3b,2020-12-08,build failed,,,,,,,,1. Add a fast path for double number reader. 2. Optimize number reader performance for gcc. 3. Remove YYJSON_READ_FASTFP flag.
+00546d9b5abe04b13920848b3ee3dc0e993878e3,2020-12-08,build failed,,,,,,,,remove unused comments
+aac488cbde55b31214f82e4776931db4a8d79cdd,2020-12-08,build failed,,,,,,,,add comments for number reader macros
+be676e01c75288d605862917cbd9e44ca2c00d05,2020-12-13,build failed,,,,,,,,Rewrite floating-pointer number writer with Schubfach algorithm: #4
+54e3aa3afb9c97aab2a0a1f66df4837a50614f1d,2020-12-13,build failed,,,,,,,,Releasing 0.2.0.
+f02d8704d7b1927e1a5a24120e6c4fd27f2ede40,2020-12-22,build failed,,,,,,,,Add JSON Pointer support
+47070c3cccf9743fed77b22c0245cd49dcc9203a,2020-12-22,build failed,,,,,,,,Fix CI error
+89f12141cf20daacda4e73773fbf5b8a8897389a,2020-12-27,build failed,,,,,,,,"update doc, move PADDING_SIZE to header file."
+ae5f700249c8bb4456cd199f867e86a126a4424f,2021-01-24,build failed,,,,,,,,update documents
+26858503a2e6f7aedc8ff3b550b4d6cb683c5e5e,2021-02-18,build failed,,,,,,,,format code
+f0de94ace0322d8f0a7699a368ef525020ef9c3d,2021-03-17,build failed,,,,,,,,error handling for reading file
+8910a1a2f7d8bd7cbcdfafb165aa10c0743d4c18,2021-04-03,build failed,,,,,,,,add a flag to disable unaligned memory access
+02634e6dcd5eeb816323f94846e7a93ff735d4d8,2021-04-03,build failed,,,,,,,,support `-Wundef` compile flag for GCC and Clang: #20
+a58add7625d083d6bb6576844190012060ff4696,2021-04-04,build failed,,,,,,,,Merge pull request #22 from pavelxdd/double-promotions
+c3a1f1f54a517dc15ba8670d969c0acdfabcd039,2021-04-04,build failed,,,,,,,,Merge pull request #23 from pavelxdd/cloexec
+31313e8c15e3c221c7452fd99bf7fdf89b6d92c1,2021-04-11,build failed,,,,,,,,Merge pull request #25 from myd7349/fix-C4700
+95c019201e55638ea8c968de479aaeeb366a15bf,2021-05-23,build failed,,,,,,,,Merge pull request #26 from parkertomatoes/master
+8b682d2a57c6c514739d3c7f9a964438d52b2f92,2021-05-25,build failed,,,,,,,,Update documents
+1f7dc19c7664dc1aed74045e3b6f316ccd271442,2021-05-25,build failed,,,,,,,,Releasing 0.3.0
+545656f144dbd25f3abcd4302027cdb76b174201,2021-06-02,build failed,,,,,,,,Merge pull request #28 from ihsanturk/master
+be82903f30730f86b2489cd6c945f677956fce39,2021-06-13,ok,parse + read px,2.0,2.0,0.0,2,0,201.2,"Add const qualifier, add more comments"
+be82903f30730f86b2489cd6c945f677956fce39,2021-06-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.5,"Add const qualifier, add more comments"
+4803cfce4a56ef55c9f95b038c50b425882efecf,2021-06-13,ok,parse + read px,2.0,2.0,0.0,2,0,184.8,Add more test to increase coverage
+4803cfce4a56ef55c9f95b038c50b425882efecf,2021-06-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.8,Add more test to increase coverage
+a30298441109d31395e985824de033831e5b2375,2021-06-26,ok,parse + read px,2.0,2.0,0.0,2,0,184.6,Update doc and comments
+a30298441109d31395e985824de033831e5b2375,2021-06-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.3,Update doc and comments
+e38abe7b9f7d5d83912427eb733c93d9049b23b4,2021-07-08,ok,parse + read px,2.0,2.0,0.0,2,0,185.0,Fix some compiler warnings in test
+e38abe7b9f7d5d83912427eb733c93d9049b23b4,2021-07-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.1,Fix some compiler warnings in test
+ba36d2258923e0a060377341a77ecf93ac2f3e2e,2021-07-11,ok,parse + read px,2.0,2.0,0.0,2,0,185.4,Fix more compiler warnings (from -Weverything)
+ba36d2258923e0a060377341a77ecf93ac2f3e2e,2021-07-11,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.3,Fix more compiler warnings (from -Weverything)
+685c550939dc900ade0bbb012b8673b1b04a2944,2021-07-11,ok,parse + read px,2.0,2.0,0.0,2,0,188.1,Fix more compiler warnings (with -Wconversion)
+685c550939dc900ade0bbb012b8673b1b04a2944,2021-07-11,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.1,Fix more compiler warnings (with -Wconversion)
+376144892a5f084d9b26deeb6a09193fe8bf4cd4,2021-07-11,ok,parse + read px,2.0,2.0,0.0,2,0,190.4,Fix more compiler warnings (gcc -Wconversion)
+376144892a5f084d9b26deeb6a09193fe8bf4cd4,2021-07-11,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.2,Fix more compiler warnings (gcc -Wconversion)
+a5ee0830f08cda9e6428b29e89b291803f15c602,2021-07-11,ok,parse + read px,2.0,2.0,0.0,2,0,196.5,Fix more compiler warnings (gcc -Wconversion)
+a5ee0830f08cda9e6428b29e89b291803f15c602,2021-07-11,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,159.1,Fix more compiler warnings (gcc -Wconversion)
+7266da63f1c13b595b1f92422c61432051421b40,2021-07-14,ok,parse + read px,2.0,2.0,0.0,2,0,192.3,Fix some warnings in CLion Inspect
+7266da63f1c13b595b1f92422c61432051421b40,2021-07-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,159.5,Fix some warnings in CLion Inspect
+46c821dc2e707ca80cd4acdc0871b2b9313ab01f,2021-07-15,ok,parse + read px,2.0,2.0,0.0,2,0,187.1,Add a flag to support writing nan/inf as null
+46c821dc2e707ca80cd4acdc0871b2b9313ab01f,2021-07-15,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.4,Add a flag to support writing nan/inf as null
+760d02e22bf9c2433f89487f4f7d5ac20749620a,2021-07-15,ok,parse + read px,2.0,2.0,0.0,2,0,187.7,Add a flag to support writing nan/inf as null
+760d02e22bf9c2433f89487f4f7d5ac20749620a,2021-07-15,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.4,Add a flag to support writing nan/inf as null
+2b51d0b9ff0a9f12bedfdcf8cd710fd58400c237,2021-07-15,ok,parse + read px,2.0,2.0,0.0,2,0,384.3,Add a flag to support writing nan/inf as null
+2b51d0b9ff0a9f12bedfdcf8cd710fd58400c237,2021-07-15,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,319.7,Add a flag to support writing nan/inf as null
+2a08e0f1bb41a07029e5375ecbda25b4203c33b9,2021-07-16,ok,parse + read px,2.0,2.0,0.0,2,0,187.4,Add documentation for error code
+2a08e0f1bb41a07029e5375ecbda25b4203c33b9,2021-07-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.4,Add documentation for error code
+73899a94757f921a322311613cbaea69d95e803d,2021-08-05,ok,parse + read px,2.0,2.0,0.0,2,0,394.1,Add more comments
+73899a94757f921a322311613cbaea69d95e803d,2021-08-05,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,327.8,Add more comments
+bdd9142577ac5ed47dd26fc600f3dd45ab87946b,2021-08-08,ok,parse + read px,2.0,2.0,0.0,2,0,187.5,Merge some compile flags
+bdd9142577ac5ed47dd26fc600f3dd45ab87946b,2021-08-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.2,Merge some compile flags
+cae7029c8e2ce7067141a3c35ec9dd7e37982e14,2021-08-08,ok,parse + read px,2.0,2.0,0.0,2,0,186.0,Fix some compiler warnings in gcc4.8
+cae7029c8e2ce7067141a3c35ec9dd7e37982e14,2021-08-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.0,Fix some compiler warnings in gcc4.8
+b149a1b381efd3984560f48f4182cc554ba640ba,2021-08-12,ok,parse + read px,2.0,2.0,0.0,2,0,186.2,Merge pull request #32 from hellozhuzhu/master
+b149a1b381efd3984560f48f4182cc554ba640ba,2021-08-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.5,Merge pull request #32 from hellozhuzhu/master
+8f942be0ca8bd7189ab7c99bae45be56e3e93c2b,2021-08-29,ok,parse + read px,2.0,2.0,0.0,2,0,187.1,Merge pull request #35 from lshamis/lshamis/merge_patch
+8f942be0ca8bd7189ab7c99bae45be56e3e93c2b,2021-08-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.8,Merge pull request #35 from lshamis/lshamis/merge_patch
+af9eaa637e9a7b6785c0293e6fe9e4b5c0ea74dc,2021-09-06,ok,parse + read px,2.0,2.0,0.0,2,0,186.1,Format code
+af9eaa637e9a7b6785c0293e6fe9e4b5c0ea74dc,2021-09-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.1,Format code
+3b31f130e4934d0221f9be5edc6fb4e7a3cc2d5c,2021-09-20,ok,parse + read px,2.0,2.0,0.0,2,0,406.4,move some code from .h to .c
+3b31f130e4934d0221f9be5edc6fb4e7a3cc2d5c,2021-09-20,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,347.5,move some code from .h to .c
+f2f61564c93d256f0e90f3b57bf6c160d0b0926b,2021-09-20,build failed,,,,,,,,Add: get value with object iterator
+cb8f77cc9f82b96c85870f52d2f7326da7f90b06,2021-09-20,ok,parse + read px,2.0,2.0,0.0,2,0,197.1,fix warning
+cb8f77cc9f82b96c85870f52d2f7326da7f90b06,2021-09-20,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.7,fix warning
+6315aa6cd6e7851390099f4aa1285a5f2db25021,2021-09-21,ok,parse + read px,2.0,2.0,0.0,2,0,392.1,add test cases
+6315aa6cd6e7851390099f4aa1285a5f2db25021,2021-09-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,350.7,add test cases
+19d1152dfa7bcd287b153bb3fc97d4d78753a4d5,2021-09-21,ok,parse + read px,2.0,2.0,0.0,2,0,193.4,fix warning
+19d1152dfa7bcd287b153bb3fc97d4d78753a4d5,2021-09-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.7,fix warning
+37b56529f42bafb87e68c63a5e1f3e54c188237a,2021-09-21,ok,parse + read px,2.0,2.0,0.0,2,0,193.4,fix warning
+37b56529f42bafb87e68c63a5e1f3e54c188237a,2021-09-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.6,fix warning
+9a7f3fa311d0143bf60b6108f5c6a34c1932af37,2021-09-29,ok,parse + read px,2.0,2.0,0.0,2,0,197.3,Merge pull request #40 from pavelxdd/master
+9a7f3fa311d0143bf60b6108f5c6a34c1932af37,2021-09-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.5,Merge pull request #40 from pavelxdd/master
+b63b5c151a4ee9e4bec505cebbbe81bbace81f3b,2021-09-29,ok,parse + read px,2.0,2.0,0.0,2,0,193.7,Merge pull request #41 from pavelxdd/obj_add
+b63b5c151a4ee9e4bec505cebbbe81bbace81f3b,2021-09-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.3,Merge pull request #41 from pavelxdd/obj_add
+ae769c21adfa990e6bee59de6176ba56a876afd0,2021-09-29,ok,parse + read px,2.0,2.0,0.0,2,0,194.2,Merge pull request #43 from pavelxdd/arr_rotate
+ae769c21adfa990e6bee59de6176ba56a876afd0,2021-09-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.6,Merge pull request #43 from pavelxdd/arr_rotate
+c3f9d4f956c4023362b78f6ab3d4f15533a8a01e,2021-09-29,ok,parse + read px,2.0,2.0,0.0,2,0,416.4,Merge pull request #42 from pavelxdd/obj_insert
+c3f9d4f956c4023362b78f6ab3d4f15533a8a01e,2021-09-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,348.4,Merge pull request #42 from pavelxdd/obj_insert
+1f552cb6da8dd24a54e532f9ee6b10205cd39c79,2021-09-30,ok,parse + read px,2.0,2.0,0.0,2,0,263.1,Merge pull request #44 from pavelxdd/arr
+1f552cb6da8dd24a54e532f9ee6b10205cd39c79,2021-09-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.5,Merge pull request #44 from pavelxdd/arr
+71e5f862330056a9bd6bfef54f4b796088e7ff45,2021-09-30,ok,parse + read px,2.0,2.0,0.0,2,0,193.7,Merge pull request #45 from pavelxdd/obj_insert0
+71e5f862330056a9bd6bfef54f4b796088e7ff45,2021-09-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.4,Merge pull request #45 from pavelxdd/obj_insert0
+e59d25ca43f7258124a333399a534110d7d447b9,2021-10-01,ok,parse + read px,2.0,2.0,0.0,2,0,404.3,Merge pull request #46 from pavelxdd/tests
+e59d25ca43f7258124a333399a534110d7d447b9,2021-10-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.5,Merge pull request #46 from pavelxdd/tests
+3c2160dffc275d6a37b4ebff73df4bb5c3d03d8c,2021-10-10,ok,parse + read px,2.0,2.0,0.0,2,0,196.0,Format code
+3c2160dffc275d6a37b4ebff73df4bb5c3d03d8c,2021-10-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.6,Format code
+81c9977e436d66e0b01ee2cf432a887b062f6d27,2021-10-14,ok,parse + read px,2.0,2.0,0.0,2,0,183.0,Merge pull request #48 from lshamis/lshamis/equals
+81c9977e436d66e0b01ee2cf432a887b062f6d27,2021-10-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.1,Merge pull request #48 from lshamis/lshamis/equals
+d73cac67855bd4eea73298481b79f9f768a6c1cc,2021-10-28,ok,parse + read px,2.0,2.0,0.0,2,0,183.6,"Fix ""conflicting types int64_t"" error for gcc 4.4.7"
+d73cac67855bd4eea73298481b79f9f768a6c1cc,2021-10-28,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.3,"Fix ""conflicting types int64_t"" error for gcc 4.4.7"
+5c237702dcbdf67d06f89c0becd91cfe42cf6fb4,2021-11-05,ok,parse + read px,2.0,2.0,0.0,2,0,190.2,More tests for JSON merge patch.
+5c237702dcbdf67d06f89c0becd91cfe42cf6fb4,2021-11-05,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,159.3,More tests for JSON merge patch.
+19220b1194a2dab2bbbc176dac485ffd8b8bb037,2021-11-05,ok,parse + read px,2.0,2.0,0.0,2,0,366.1,Fix typo
+19220b1194a2dab2bbbc176dac485ffd8b8bb037,2021-11-05,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.9,Fix typo
+1fea0986f29ce26a79e20f375e5dd1efb4a0d1f0,2021-12-07,ok,parse + read px,2.0,2.0,0.0,2,0,188.7,Fix compile error in Visual C++ 6.0
+1fea0986f29ce26a79e20f375e5dd1efb4a0d1f0,2021-12-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.7,Fix compile error in Visual C++ 6.0
+986ac356473bfc2a4e88a80a731738c7e035e928,2021-12-07,ok,parse + read px,2.0,2.0,0.0,2,0,188.6,Fix compile error in Visual C++ 6.0
+986ac356473bfc2a4e88a80a731738c7e035e928,2021-12-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.0,Fix compile error in Visual C++ 6.0
+ba4714a0ad6d5c31827d0af078e5d8496f2c1a67,2021-12-09,ok,parse + read px,2.0,2.0,0.0,2,0,188.9,More pre-defined macros check
+ba4714a0ad6d5c31827d0af078e5d8496f2c1a67,2021-12-09,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.0,More pre-defined macros check
+537276d76c094e1b1b112da6e21ffcc2afe6e402,2021-12-12,ok,parse + read px,2.0,2.0,0.0,2,0,385.3,Add yyjson_version() function
+537276d76c094e1b1b112da6e21ffcc2afe6e402,2021-12-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.3,Add yyjson_version() function
+54c5b3cb00b7bca7ad020b1b747e06bba26d54f9,2021-12-18,ok,parse + read px,2.0,2.0,0.0,2,0,186.2,Make the code work correctly with setlocale() function and fast-math flag: #54
+54c5b3cb00b7bca7ad020b1b747e06bba26d54f9,2021-12-18,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.3,Make the code work correctly with setlocale() function and fast-math flag: #54
+a6273ee0fa69a604c8141c86b99ddad6665b4e97,2021-12-28,ok,parse + read px,2.0,2.0,0.0,2,0,185.3,Update comments
+a6273ee0fa69a604c8141c86b99ddad6665b4e97,2021-12-28,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.3,Update comments
+2e18911eaaffafcf2bea733e712ebf6b891a75b3,2022-01-03,ok,parse + read px,2.0,2.0,0.0,2,0,360.4,Merge pull request #59 from panyunyi97/mutable_duplicate
+2e18911eaaffafcf2bea733e712ebf6b891a75b3,2022-01-03,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.4,Merge pull request #59 from panyunyi97/mutable_duplicate
+936d5b3f32acfea6b2cc0de95273df3616b0ae7d,2022-01-08,ok,parse + read px,2.0,2.0,0.0,2,0,418.9,add more tests for mutable copy
+936d5b3f32acfea6b2cc0de95273df3616b0ae7d,2022-01-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,346.0,add more tests for mutable copy
+1dda65b1b9d82a7396063b530fb4e695437d6dfd,2022-01-17,ok,parse + read px,2.0,2.0,0.0,2,0,426.7,Merge pull request #61 from panyunyi97/mutable-detach
+1dda65b1b9d82a7396063b530fb4e695437d6dfd,2022-01-17,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,352.8,Merge pull request #61 from panyunyi97/mutable-detach
+84c683af73f2bad75ec5c79146f11a8f9f99c5a4,2022-02-10,ok,parse + read px,2.0,2.0,0.0,2,0,414.0,Fix negative infinity literals error: #64
+84c683af73f2bad75ec5c79146f11a8f9f99c5a4,2022-02-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,343.0,Fix negative infinity literals error: #64
+4f26a6efffa9b9ab7d1997cb17a02f7d092a9a89,2022-02-10,ok,parse + read px,2.0,2.0,0.0,2,0,418.1,"Fix warning, code format"
+4f26a6efffa9b9ab7d1997cb17a02f7d092a9a89,2022-02-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,351.0,"Fix warning, code format"
+81329dcc832c212712a63e544b53ebddadfe0bf9,2022-02-10,ok,parse + read px,2.0,2.0,0.0,2,0,425.0,Returns value instead of bool for mut_obj_remove() function
+81329dcc832c212712a63e544b53ebddadfe0bf9,2022-02-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,350.5,Returns value instead of bool for mut_obj_remove() function
+ed10f6294ed1b2ac7c66b8d3f9530cadaef89936,2022-02-12,ok,parse + read px,2.0,2.0,0.0,2,0,360.4,Support non null terminated string for yyjson_mut_val
+ed10f6294ed1b2ac7c66b8d3f9530cadaef89936,2022-02-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,279.3,Support non null terminated string for yyjson_mut_val
+c43d0933c389f1dfcaa18f550b95b1a2c7f3af04,2022-02-12,ok,parse + read px,2.0,2.0,0.0,2,0,190.4,Performance optimize
+c43d0933c389f1dfcaa18f550b95b1a2c7f3af04,2022-02-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.3,Performance optimize
+6c7993c380d3edfa22c407676eb63813c2d8fdb3,2022-02-12,ok,parse + read px,2.0,2.0,0.0,2,0,190.0,Compile flag YYJSON_DISABLE_NON_STANDARD not match document
+6c7993c380d3edfa22c407676eb63813c2d8fdb3,2022-02-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,159.5,Compile flag YYJSON_DISABLE_NON_STANDARD not match document
+804a8b2771e6bfb273a797f6c2413568a92e7874,2022-04-09,ok,parse + read px,2.0,2.0,0.0,2,0,190.7,Add `read number as raw` option
+804a8b2771e6bfb273a797f6c2413568a92e7874,2022-04-09,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.4,Add `read number as raw` option
+4bc017622b34ea5976b6f592deb60394f4e21903,2022-04-09,ok,parse + read px,2.0,2.0,0.0,2,0,378.4,Update comment
+4bc017622b34ea5976b6f592deb60394f4e21903,2022-04-09,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.2,Update comment
+32bba1f4fec1b20a563303e67d2abec4324d7544,2022-04-17,ok,parse + read px,2.0,2.0,0.0,2,0,405.2,Add functions to write a JSON value without document.
+32bba1f4fec1b20a563303e67d2abec4324d7544,2022-04-17,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,358.0,Add functions to write a JSON value without document.
+94e47ab18019129124099036ac1a1a02c5fc9b52,2022-04-19,ok,parse + read px,2.0,2.0,0.0,2,0,417.5,Merge pull request #72 from pavelxdd/mut_copy
+94e47ab18019129124099036ac1a1a02c5fc9b52,2022-04-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,345.4,Merge pull request #72 from pavelxdd/mut_copy
+9e7dc628deabe1eb652760ba6d278a419c050263,2022-04-19,ok,parse + read px,2.0,2.0,0.0,2,0,390.6,Merge pull request #73 from pavelxdd/cmp_tree
+9e7dc628deabe1eb652760ba6d278a419c050263,2022-04-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,308.8,Merge pull request #73 from pavelxdd/cmp_tree
+5cb87def66ebba024e7bb8f42ecb648649f7ffde,2022-04-19,ok,parse + read px,2.0,2.0,0.0,2,0,417.9,Fix cppcheck analyzer issues
+5cb87def66ebba024e7bb8f42ecb648649f7ffde,2022-04-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,343.6,Fix cppcheck analyzer issues
+6578e14ac7d656f599844855b085eaf7e4cb2fa2,2022-04-20,ok,parse + read px,2.0,2.0,0.0,2,0,412.7,Merge pull request #76 from pavelxdd/cmp
+6578e14ac7d656f599844855b085eaf7e4cb2fa2,2022-04-20,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,337.0,Merge pull request #76 from pavelxdd/cmp
+c2df748dabc048ceaf5c484f5e6a62192dee8b9f,2022-04-20,ok,parse + read px,2.0,2.0,0.0,2,0,187.6,Merge pull request #77 from pavelxdd/raw
+c2df748dabc048ceaf5c484f5e6a62192dee8b9f,2022-04-20,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.6,Merge pull request #77 from pavelxdd/raw
+d0a9e4859244869c84812fa8717dbf41948310c2,2022-04-21,ok,parse + read px,2.0,2.0,0.0,2,0,188.5,Merge pull request #78 from pavelxdd/utf8
+d0a9e4859244869c84812fa8717dbf41948310c2,2022-04-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.3,Merge pull request #78 from pavelxdd/utf8
+0a73d0add5cb61536ec3f3e90571033a103f6897,2022-04-25,ok,parse + read px,2.0,2.0,0.0,2,0,193.1,"Add option to allow writing invalid unicode. Rewrite string serialization function, validate unicode encoding by default. Optimize JSON serialization performance. Fix incorrect behavior of `YYJSON_DISABLE_NON_STANDARD` flag: #80"
+0a73d0add5cb61536ec3f3e90571033a103f6897,2022-04-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.0,"Add option to allow writing invalid unicode. Rewrite string serialization function, validate unicode encoding by default. Optimize JSON serialization performance. Fix incorrect behavior of `YYJSON_DISABLE_NON_STANDARD` flag: #80"
+0567befc5e116c0146942a7318640fc2067160b9,2022-04-29,build failed,,,,,,,,"Rewrite the JSON Pointer implementation, remove internal malloc() calls"
+8272c529be37890b1ae6ece9b13314c16f3a68c6,2022-04-29,ok,parse + read px,2.0,2.0,0.0,2,0,408.9,Fix compiler warning
+8272c529be37890b1ae6ece9b13314c16f3a68c6,2022-04-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,345.0,Fix compiler warning
+c7ffbffc4d003b8f04b2e669437c50526660bc86,2022-04-29,ok,parse + read px,2.0,2.0,0.0,2,0,397.2,Avoid calling the free() function directly
+c7ffbffc4d003b8f04b2e669437c50526660bc86,2022-04-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,360.4,Avoid calling the free() function directly
+331037f038c2e673f6567b132aede74196f87b58,2022-04-30,ok,parse + read px,2.0,2.0,0.0,2,0,419.2,Update documentation
+331037f038c2e673f6567b132aede74196f87b58,2022-04-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,355.2,Update documentation
+8f6704cd6e6e39a257e689a30ec302e29b653768,2022-05-21,ok,parse + read px,2.0,2.0,0.0,2,0,360.8,"Update documentation and comments, add functions: 	yyjson_mut_obj_remove_key() 	yyjson_mut_obj_remove_keyn() 	yyjson_mut_merge_patch()"
+8f6704cd6e6e39a257e689a30ec302e29b653768,2022-05-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,327.7,"Update documentation and comments, add functions: 	yyjson_mut_obj_remove_key() 	yyjson_mut_obj_remove_keyn() 	yyjson_mut_merge_patch()"
+257cd6cf8de6bb3d3a9aadd8d5ccf59550a27ae7,2022-05-26,ok,parse + read px,2.0,2.0,0.0,2,0,195.2,Add doxygen support; add more documentation; add more real number test data;
+257cd6cf8de6bb3d3a9aadd8d5ccf59550a27ae7,2022-05-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,166.1,Add doxygen support; add more documentation; add more real number test data;
+dd17081ce089f1ad7fc2342a3e9829f16dc5f1bb,2022-05-26,ok,parse + read px,2.0,2.0,0.0,2,0,194.8,Releasing 0.5.0
+dd17081ce089f1ad7fc2342a3e9829f16dc5f1bb,2022-05-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,166.6,Releasing 0.5.0
+d7fc32b88ed41fca07369c77253069bb967faa20,2022-05-29,ok,parse + read px,2.0,2.0,0.0,2,0,194.7,Update documentation
+d7fc32b88ed41fca07369c77253069bb967faa20,2022-05-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.3,Update documentation
+a6a528db18b4a0d39f7c20c4c5cdf09550c0f6e4,2022-06-17,ok,parse + read px,2.0,2.0,0.0,2,0,194.5,Update reference URL
+a6a528db18b4a0d39f7c20c4c5cdf09550c0f6e4,2022-06-17,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,167.7,Update reference URL
+53207cbdfab6f3e3a2f6ecdf5b1a66dbad945bc4,2022-06-17,ok,parse + read px,2.0,2.0,0.0,2,0,191.2,"Fix incurrect number format, remove unnecessary digits, e.g. 2.0e34 -> 2e34"
+53207cbdfab6f3e3a2f6ecdf5b1a66dbad945bc4,2022-06-17,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.6,"Fix incurrect number format, remove unnecessary digits, e.g. 2.0e34 -> 2e34"
+1e9fae0a742dd4b55b6063868a675a2bd495d6ce,2022-06-17,ok,parse + read px,2.0,2.0,0.0,2,0,190.5,Fix compiler warnings for 32-bit
+1e9fae0a742dd4b55b6063868a675a2bd495d6ce,2022-06-17,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.6,Fix compiler warnings for 32-bit
+8969d6db6487f4b7e3ac97388bd8069d316da16d,2022-06-17,ok,parse + read px,2.0,2.0,0.0,2,0,188.1,Fix error with g++-5 -m32 -fPIC #85
+8969d6db6487f4b7e3ac97388bd8069d316da16d,2022-06-17,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,159.4,Fix error with g++-5 -m32 -fPIC #85
+c3856514de0a67d7b66939bf3ed491a2d6e61277,2022-06-17,ok,parse + read px,2.0,2.0,0.0,2,0,187.6,Releasing 0.5.1
+c3856514de0a67d7b66939bf3ed491a2d6e61277,2022-06-17,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,159.6,Releasing 0.5.1
+c9595ae8dfe0909861e86aaaf6f115af118296ec,2022-06-23,ok,parse + read px,2.0,2.0,0.0,2,0,386.3,"Supplement a decimal point for the output of snprintf(), e.g. ""123"" -> ""123.0""."
+c9595ae8dfe0909861e86aaaf6f115af118296ec,2022-06-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,359.8,"Supplement a decimal point for the output of snprintf(), e.g. ""123"" -> ""123.0""."
+4cdbfb3b6b230cfcf97eac378b94f61e4074b765,2022-06-23,ok,parse + read px,2.0,2.0,0.0,2,0,407.4,Fix quite NaN on MIPS and HPPA.
+4cdbfb3b6b230cfcf97eac378b94f61e4074b765,2022-06-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,334.4,Fix quite NaN on MIPS and HPPA.
+019651e4d080786ac6c1f3608bb267fa20307f31,2022-07-03,ok,parse + read px,2.0,2.0,0.0,2,0,418.9,Fixing typos
+019651e4d080786ac6c1f3608bb267fa20307f31,2022-07-03,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,356.4,Fixing typos
+ee9e6d5d3bde4a26b78e9cfd596dd28d231266fa,2022-08-08,ok,parse + read px,2.0,2.0,0.0,2,0,398.0,Add function to set value
+ee9e6d5d3bde4a26b78e9cfd596dd28d231266fa,2022-08-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,364.6,Add function to set value
+72f19e2d455bbfaaf41c933a8bfc74354ac61823,2022-08-24,ok,parse + read px,2.0,2.0,0.0,2,0,370.4,Provide a placeholder allocator if yyjson_alc_pool_init() fails
+72f19e2d455bbfaaf41c933a8bfc74354ac61823,2022-08-24,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,312.9,Provide a placeholder allocator if yyjson_alc_pool_init() fails
+3884c6a4857b5d4ec667631174486128342c9c35,2022-09-07,build failed,,,,,,,,Add functions to copy from mutable doc to immutable doc
+b7d2f068eb5a8178bb67be90acfd64e224ff0084,2022-09-07,ok,parse + read px,2.0,2.0,0.0,2,0,185.9,Type casting
+b7d2f068eb5a8178bb67be90acfd64e224ff0084,2022-09-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.0,Type casting
+e98bf96594bd5e9c9e33b223757c33f92ca4d606,2022-09-07,ok,parse + read px,2.0,2.0,0.0,2,0,186.8,Add functions to renaming a key
+e98bf96594bd5e9c9e33b223757c33f92ca4d606,2022-09-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.4,Add functions to renaming a key
+0d587b411cf6459009c2a48d2141fde5153770b3,2022-09-07,ok,parse + read px,2.0,2.0,0.0,2,0,185.9,Optimize the rename key function
+0d587b411cf6459009c2a48d2141fde5153770b3,2022-09-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.1,Optimize the rename key function
+7c9fdca77adbf303d1c1c72c15e2a4a1af589b96,2022-09-14,ok,parse + read px,2.0,2.0,0.0,2,0,185.8,Suppress clang analyzer warning
+7c9fdca77adbf303d1c1c72c15e2a4a1af589b96,2022-09-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.3,Suppress clang analyzer warning
+b2a6dfeb9c89cc53adc6203896a66850a5973373,2022-09-19,ok,parse + read px,2.0,2.0,0.0,2,0,230.1,Merge pull request #95 from iSLC/master
+b2a6dfeb9c89cc53adc6203896a66850a5973373,2022-09-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.5,Merge pull request #95 from iSLC/master
+1f14bbd3af90410a8f1d6208879ca4204eb30365,2022-10-10,ok,parse + read px,2.0,2.0,0.0,2,0,402.2,Merge pull request #97 from pavelxdd/read_number
+1f14bbd3af90410a8f1d6208879ca4204eb30365,2022-10-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.8,Merge pull request #97 from pavelxdd/read_number
+586e7c7c327007c355abc7fc5b1e8767836f5f26,2022-10-12,ok,parse + read px,2.0,2.0,0.0,2,0,185.9,Fixed compile break before GCC 4.5 which doesn't support empty optional extended asm label
+586e7c7c327007c355abc7fc5b1e8767836f5f26,2022-10-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,171.0,Fixed compile break before GCC 4.5 which doesn't support empty optional extended asm label
+51c7a665a8e7988ba17ae499faed25f506265c06,2022-12-11,ok,parse + read px,2.0,2.0,0.0,2,0,399.1,Better documentation
+51c7a665a8e7988ba17ae499faed25f506265c06,2022-12-11,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,174.1,Better documentation
+e5ce6f154ac475f231cb66872bbe7e282c5c4ba0,2022-12-11,ok,parse + read px,2.0,2.0,0.0,2,0,186.3,Add const qualifier
+e5ce6f154ac475f231cb66872bbe7e282c5c4ba0,2022-12-11,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.8,Add const qualifier
+7b210d66cb73536f351e8a82a63508bc77bffd20,2022-12-12,ok,parse + read px,2.0,2.0,0.0,2,0,391.7,Releasing 0.6.0
+7b210d66cb73536f351e8a82a63508bc77bffd20,2022-12-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,158.8,Releasing 0.6.0
+662a406bbd2d7654dc1460e0c35ea486280ee65d,2022-12-25,ok,parse + read px,2.0,2.0,0.0,2,0,185.4,Remove unnecessary checks
+662a406bbd2d7654dc1460e0c35ea486280ee65d,2022-12-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,326.4,Remove unnecessary checks
+eff456db72844839f248cdaef5b20ae58669b4c4,2022-12-29,ok,parse + read px,2.0,2.0,0.0,2,0,408.0,Supports 2 space indent: #99
+eff456db72844839f248cdaef5b20ae58669b4c4,2022-12-29,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.1,Supports 2 space indent: #99
+31db654f24ac30d02f7959a73d0a79bebe992440,2023-01-15,ok,parse + read px,2.0,2.0,0.0,2,0,189.6,Add `old_size` parameter for allocator's realloc function: #100
+31db654f24ac30d02f7959a73d0a79bebe992440,2023-01-15,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.3,Add `old_size` parameter for allocator's realloc function: #100
+719b310ddf0a972a3f2ace140faaf207fccd6303,2023-01-25,ok,parse + read px,2.0,2.0,0.0,2,0,192.4,"Add test to verify error codes, fix incorrect error code: #103"
+719b310ddf0a972a3f2ace140faaf207fccd6303,2023-01-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.2,"Add test to verify error codes, fix incorrect error code: #103"
+ba2e6f91e7ca954f8c85ff0fb32acb6a786140d6,2023-01-25,ok,parse + read px,2.0,2.0,0.0,2,0,230.8,"Add `alc` parameter for yyjson_read_number() function, fix err.pos when builtin fp-reader is disabled."
+ba2e6f91e7ca954f8c85ff0fb32acb6a786140d6,2023-01-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.1,"Add `alc` parameter for yyjson_read_number() function, fix err.pos when builtin fp-reader is disabled."
+9daafa595b628a9b5a81021023fbaac1651e95b6,2023-01-25,ok,parse + read px,2.0,2.0,0.0,2,0,396.9,Type cast
+9daafa595b628a9b5a81021023fbaac1651e95b6,2023-01-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.2,Type cast
+f893f821e61c37ba83b39c90a7bfca7a0e5c2f3b,2023-01-25,ok,parse + read px,2.0,2.0,0.0,2,0,348.0,Fix read errors for gcc 5.4.0: #104
+f893f821e61c37ba83b39c90a7bfca7a0e5c2f3b,2023-01-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.6,Fix read errors for gcc 5.4.0: #104
+8ffa6f54df76242068e39a613893fbe8c3e6f8ab,2023-02-18,ok,parse + read px,2.0,2.0,0.0,2,0,192.2,Fix inaccurate error code for truncated JSON.
+8ffa6f54df76242068e39a613893fbe8c3e6f8ab,2023-02-18,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.0,Fix inaccurate error code for truncated JSON.
+fffb88fc2a7df09929f305cc378ef55235b485f9,2023-02-19,ok,parse + read px,2.0,2.0,0.0,2,0,183.2,Update documentation
+fffb88fc2a7df09929f305cc378ef55235b485f9,2023-02-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.4,Update documentation
+a1d700964e59b68a97618a829555b6feb0534ca6,2023-02-19,ok,parse + read px,2.0,2.0,0.0,2,0,192.4,Adjust truncation detection function
+a1d700964e59b68a97618a829555b6feb0534ca6,2023-02-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.8,Adjust truncation detection function
+82b30d913c084aab2c7fe1dad91d2f0bbcada83a,2023-03-04,ok,parse + read px,2.0,2.0,0.0,2,0,398.6,Add yyjson_get_num() function to convert and return any number value as `double`
+82b30d913c084aab2c7fe1dad91d2f0bbcada83a,2023-03-04,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.3,Add yyjson_get_num() function to convert and return any number value as `double`
+8bc8bc38851aa95de7b29ae28d0afe63b58f157a,2023-03-08,ok,parse + read px,2.0,2.0,0.0,2,0,190.7,Fix typos: #109
+8bc8bc38851aa95de7b29ae28d0afe63b58f157a,2023-03-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.9,Fix typos: #109
+8b8df872be402eebc7ff42f75af3b0f1b39c46af,2023-03-12,ok,parse + read px,2.0,2.0,0.0,2,0,396.6,Add more warning options and fix some warnings
+8b8df872be402eebc7ff42f75af3b0f1b39c46af,2023-03-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.0,Add more warning options and fix some warnings
+07fe558b84a24f8059c666cabeb8e12379d98ed5,2023-03-21,ok,parse + read px,2.0,2.0,0.0,2,0,192.7,Merge pull request #112 from LoongArch-Python/master
+07fe558b84a24f8059c666cabeb8e12379d98ed5,2023-03-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.6,Merge pull request #112 from LoongArch-Python/master
+6936ec05448d9b74595658515f128c7de543b446,2023-03-23,ok,parse + read px,2.0,2.0,0.0,2,0,195.4,"Optimize `yyjson_mut_write` performance, add functions to support modifying memory pool size of `yyjson_mut_doc`."
+6936ec05448d9b74595658515f128c7de543b446,2023-03-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.4,"Optimize `yyjson_mut_write` performance, add functions to support modifying memory pool size of `yyjson_mut_doc`."
+1b5529855a99aff102d2692e1c01528b11f627ab,2023-03-23,ok,parse + read px,2.0,2.0,0.0,2,0,185.6,Compile warning...
+1b5529855a99aff102d2692e1c01528b11f627ab,2023-03-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.0,Compile warning...
+cf075be6c6c9ec54869a121607f4af18782c0bff,2023-03-25,ok,parse + read px,2.0,2.0,0.0,2,0,185.3,Add convenience functions for creating iterator
+cf075be6c6c9ec54869a121607f4af18782c0bff,2023-03-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,164.8,Add convenience functions for creating iterator
+fe45385d9842ac3331da576c9e14e2c5b5d1e8a6,2023-04-01,ok,parse + read px,2.0,2.0,0.0,2,0,185.6,Change order of struct declarations for MSVC: #114
+fe45385d9842ac3331da576c9e14e2c5b5d1e8a6,2023-04-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.1,Change order of struct declarations for MSVC: #114
+9e9ca66b8c91c5c99cae780fa6285b0bb67d45ca,2023-04-02,ok,parse + read px,2.0,2.0,0.0,2,0,188.9,Improve documentation: #115
+9e9ca66b8c91c5c99cae780fa6285b0bb67d45ca,2023-04-02,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.1,Improve documentation: #115
+28fcdc6b36adf780db1be1a8b35fef5b45b4bc80,2023-04-07,ok,parse + read px,2.0,2.0,0.0,2,0,185.4,Merge pull request #116 from chad-earthscope/get_pointer_types
+28fcdc6b36adf780db1be1a8b35fef5b45b4bc80,2023-04-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,172.0,Merge pull request #116 from chad-earthscope/get_pointer_types
+eff9b8ce35a70f9b82ad43d275c4849b235a6e69,2023-04-08,ok,parse + read px,2.0,2.0,0.0,2,0,185.5,Format code
+eff9b8ce35a70f9b82ad43d275c4849b235a6e69,2023-04-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,172.2,Format code
+f77c915e1a0ab7402c02cab7997730e2e33021a6,2023-04-08,ok,parse + read px,2.0,2.0,0.0,2,0,185.3,Merge pull request #117 from chad-earthscope/get_pointer_with_val
+f77c915e1a0ab7402c02cab7997730e2e33021a6,2023-04-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.1,Merge pull request #117 from chad-earthscope/get_pointer_with_val
+d29e6db680d42d8b0eac093741c85180e1dcd8f5,2023-04-13,ok,parse + read px,2.0,2.0,0.0,2,0,189.0,Merge pull request #120 from chad-earthscope/merge_add_at_end
+d29e6db680d42d8b0eac093741c85180e1dcd8f5,2023-04-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.7,Merge pull request #120 from chad-earthscope/merge_add_at_end
+c9bc034a6a98f37497d5375ad2ec461c6210e185,2023-04-25,ok,parse + read px,2.0,2.0,0.0,2,0,391.6,Add functions to modify JSON using JSON Pointer
+c9bc034a6a98f37497d5375ad2ec461c6210e185,2023-04-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.1,Add functions to modify JSON using JSON Pointer
+f1e912720103d674fe3a23a1153d4825e9b27d81,2023-04-30,ok,parse + read px,2.0,2.0,0.0,2,0,400.4,Add test cases for JSON Pointer operations Rename some JSON Pointer functions
+f1e912720103d674fe3a23a1153d4825e9b27d81,2023-04-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,368.8,Add test cases for JSON Pointer operations Rename some JSON Pointer functions
+60abd976b364fe8d19fe4bf16c8b74ab1b238c35,2023-05-05,ok,parse + read px,2.0,2.0,0.0,2,0,394.2,Add JSON Patch (RFC 6902) and more tests
+60abd976b364fe8d19fe4bf16c8b74ab1b238c35,2023-05-05,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,357.1,Add JSON Patch (RFC 6902) and more tests
+1448a11a86fe4d9fba41c8d7ee908d38e4485c47,2023-05-06,ok,parse + read px,2.0,2.0,0.0,2,0,425.8,Remove unnecessary code
+1448a11a86fe4d9fba41c8d7ee908d38e4485c47,2023-05-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,357.0,Remove unnecessary code
+6c46e170a6167196154e37b0fdc8cc3f8077c1c6,2023-05-06,ok,parse + read px,2.0,2.0,0.0,2,0,191.7,Add flag to allow disabling JSON Pointer/Patch at compile time
+6c46e170a6167196154e37b0fdc8cc3f8077c1c6,2023-05-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.9,Add flag to allow disabling JSON Pointer/Patch at compile time
+985b8b4eb38f83f004db38aa661f4ea95a9ff061,2023-05-06,ok,parse + read px,2.0,2.0,0.0,2,0,192.5,"Add more test, use llvm-cov for codecov"
+985b8b4eb38f83f004db38aa661f4ea95a9ff061,2023-05-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,161.0,"Add more test, use llvm-cov for codecov"
+1fd031701bbb8a91c9bbbfd6c52a5541b9b7dfb0,2023-05-07,ok,parse + read px,2.0,2.0,0.0,2,0,192.5,"Add more test, remove unused code"
+1fd031701bbb8a91c9bbbfd6c52a5541b9b7dfb0,2023-05-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.9,"Add more test, remove unused code"
+ac1191f9139b325177b766906feeff4639e8c015,2023-05-15,ok,parse + read px,2.0,2.0,0.0,2,0,192.2,Add functions to read/write JSON with file pointer `FILE *` Improve documentation
+ac1191f9139b325177b766906feeff4639e8c015,2023-05-15,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,160.5,Add functions to read/write JSON with file pointer `FILE *` Improve documentation
+f2525dcb2390243555b5fa4cafcf689e618d990e,2023-05-24,ok,parse + read px,2.0,2.0,0.0,2,0,198.3,Add `YYJSON_READ_BIGNUM_AS_RAW` option to read big number as raw string: #124
+f2525dcb2390243555b5fa4cafcf689e618d990e,2023-05-24,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.2,Add `YYJSON_READ_BIGNUM_AS_RAW` option to read big number as raw string: #124
+5483b409e52b8e852654b10f2c0989bcfb059c6d,2023-05-25,ok,parse + read px,2.0,2.0,0.0,2,0,198.8,Improve documentation
+5483b409e52b8e852654b10f2c0989bcfb059c6d,2023-05-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.6,Improve documentation
+09ccaa449e01879e23f68d8be165e78e65334443,2023-05-25,ok,parse + read px,2.0,2.0,0.0,2,0,380.4,Releasing 0.7.0
+09ccaa449e01879e23f68d8be165e78e65334443,2023-05-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,322.4,Releasing 0.7.0
+d203eee63461798fefc585adb37c2b2be101b2b7,2023-06-24,ok,parse + read px,2.0,2.0,0.0,2,0,405.1,"Add `YYJSON_SUBTYPE_NOESC`, improve string writing speed"
+d203eee63461798fefc585adb37c2b2be101b2b7,2023-06-24,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,167.6,"Add `YYJSON_SUBTYPE_NOESC`, improve string writing speed"
+987d3f87c7836f2aedd02eff226dda79220c9136,2023-06-24,ok,parse + read px,2.0,2.0,0.0,2,0,200.8,Fix compile warning for MinSizeRel
+987d3f87c7836f2aedd02eff226dda79220c9136,2023-06-24,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.3,Fix compile warning for MinSizeRel
+0767082bae1e00779bb814145f89a34f43bf6224,2023-06-27,ok,parse + read px,2.0,2.0,0.0,2,0,200.7,Add `YYJSON_DISABLE_UTF8_VALIDATION` flag
+0767082bae1e00779bb814145f89a34f43bf6224,2023-06-27,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.5,Add `YYJSON_DISABLE_UTF8_VALIDATION` flag
+cedab08b7b8868605eb95626e2e38a05e1b71f2c,2023-07-04,ok,parse + read px,2.0,2.0,0.0,2,0,200.2,"Optimize flag test macros, fix warnings"
+cedab08b7b8868605eb95626e2e38a05e1b71f2c,2023-07-04,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,171.0,"Optimize flag test macros, fix warnings"
+067468c9acf5b18fda014ba1f03f837471c23df6,2023-07-10,ok,parse + read px,2.0,2.0,0.0,2,0,395.4,Optimize some macros for memory copying
+067468c9acf5b18fda014ba1f03f837471c23df6,2023-07-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.0,Optimize some macros for memory copying
+86bc5d1f15ab2dffdfbf43472117f3f1658b2749,2023-07-10,ok,parse + read px,2.0,2.0,0.0,2,0,392.9,Copy the License to the source code: #113
+86bc5d1f15ab2dffdfbf43472117f3f1658b2749,2023-07-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.4,Copy the License to the source code: #113
+aa67f9699ed0df6f82c6c03990962d4044d53c71,2023-07-18,ok,parse + read px,2.0,2.0,0.0,2,0,272.6,Merge pull request #133 from lundmark/master
+aa67f9699ed0df6f82c6c03990962d4044d53c71,2023-07-18,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.2,Merge pull request #133 from lundmark/master
+bc1613380fd1b950702a2792a3f434e5e390ab93,2023-08-08,ok,parse + read px,2.0,2.0,0.0,2,0,246.4,Add convenience function to create pool allocator
+bc1613380fd1b950702a2792a3f434e5e390ab93,2023-08-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.4,Add convenience function to create pool allocator
+f3946ec3ff5596b88eee360bb039ecafc14a174f,2023-08-08,ok,parse + read px,2.0,2.0,0.0,2,0,395.5,Fix comments
+f3946ec3ff5596b88eee360bb039ecafc14a174f,2023-08-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.8,Fix comments
+ba1b40aaf313202b0678e68c54ac3fb75a748993,2023-08-08,ok,parse + read px,2.0,2.0,0.0,2,0,198.2,Check size
+ba1b40aaf313202b0678e68c54ac3fb75a748993,2023-08-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.8,Check size
+fd4b51a1e4ad9f7a1ce7cc76daae044f8f8870c9,2023-08-13,build failed,,,,,,,,Add dynamic allocator API
+d51df11b78795448d966f7528482d58a97b6896a,2023-08-13,ok,parse + read px,2.0,2.0,0.0,2,0,410.6,Type casting...
+d51df11b78795448d966f7528482d58a97b6896a,2023-08-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.4,Type casting...
+d775713fe2a24b4c614b7028fa7e105ba811e76b,2023-08-14,ok,parse + read px,2.0,2.0,0.0,2,0,201.0,Comments and code format
+d775713fe2a24b4c614b7028fa7e105ba811e76b,2023-08-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.9,Comments and code format
+841a8c5603a1e393d95300a55b44ebc324497e82,2023-08-14,ok,parse + read px,2.0,2.0,0.0,2,0,379.1,Fix clang-16 valgrind fail: #134
+841a8c5603a1e393d95300a55b44ebc324497e82,2023-08-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,176.2,Fix clang-16 valgrind fail: #134
+d50c9564b6cb22e0b24751941abcd36ad254cff8,2023-09-12,ok,parse + read px,2.0,2.0,0.0,2,0,204.2,Add the missing `yyjson_mut_obj_add_arr/obj()` API: #140
+d50c9564b6cb22e0b24751941abcd36ad254cff8,2023-09-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.0,Add the missing `yyjson_mut_obj_add_arr/obj()` API: #140
+dad2450ff02138418a7727b85262ba2a83d3181a,2023-09-14,ok,parse + read px,2.0,2.0,0.0,2,0,203.0,Fix compile break when both FAST_FP and READER are disabled
+dad2450ff02138418a7727b85262ba2a83d3181a,2023-09-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.4,Fix compile break when both FAST_FP and READER are disabled
+e01ae9d89eaf858894d366169329097171a28d67,2023-09-14,ok,parse + read px,2.0,2.0,0.0,2,0,203.0,Releasing 0.8.0
+e01ae9d89eaf858894d366169329097171a28d67,2023-09-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.0,Releasing 0.8.0
+65a60a0cf18bcb0bd891709f7d3503785e5774fa,2023-11-07,ok,parse + read px,2.0,2.0,0.0,2,0,203.1,Fix code analysis warning: #144
+65a60a0cf18bcb0bd891709f7d3503785e5774fa,2023-11-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.1,Fix code analysis warning: #144
+dd712db85f3f196ecc9d7d80125079dbcb8e0492,2023-12-12,ok,parse + read px,2.0,2.0,0.0,2,0,381.4,Add `YYJSON_WRITE_NEWLINE_AT_END` flag for JSON writer: #147
+dd712db85f3f196ecc9d7d80125079dbcb8e0492,2023-12-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.3,Add `YYJSON_WRITE_NEWLINE_AT_END` flag for JSON writer: #147
+b63b3e1f7790ba63526d1e45b07c6a7fd64a749d,2024-01-23,ok,parse + read px,2.0,2.0,0.0,2,0,199.8,Add auto-type conversion (uint<->sint) to yyjson_ptr_get_uint/sint functions.
+b63b3e1f7790ba63526d1e45b07c6a7fd64a749d,2024-01-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.6,Add auto-type conversion (uint<->sint) to yyjson_ptr_get_uint/sint functions.
+82ea88337ba6b70c663fdce414d2731451b1de3a,2024-01-23,ok,parse + read px,2.0,2.0,0.0,2,0,200.2,More tests and fix last commit error
+82ea88337ba6b70c663fdce414d2731451b1de3a,2024-01-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.6,More tests and fix last commit error
+0eca326fe57aeeb866e6f04c9ef9ea9f8343157e,2024-02-06,ok,parse + read px,2.0,2.0,0.0,2,0,202.2,Merge pull request from GHSA-q4m7-9pcm-fpxh
+0eca326fe57aeeb866e6f04c9ef9ea9f8343157e,2024-02-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.6,Merge pull request from GHSA-q4m7-9pcm-fpxh
+2ca3753d8c790107a63a8338c540db15741122f2,2024-02-27,ok,parse + read px,2.0,2.0,0.0,2,0,423.1,Merge pull request #159 from hxdnshx/master
+2ca3753d8c790107a63a8338c540db15741122f2,2024-02-27,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.9,Merge pull request #159 from hxdnshx/master
+144642b77bf5b1987759b298bfe69a2a6c001b9e,2024-03-07,ok,parse + read px,2.0,2.0,0.0,2,0,200.8,Fixed incorrect output in environments lacking native `bool` type support: #161
+144642b77bf5b1987759b298bfe69a2a6c001b9e,2024-03-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.9,Fixed incorrect output in environments lacking native `bool` type support: #161
+b21c02904188add942d3c7cd4885422e4335f115,2024-04-08,ok,parse + read px,2.0,2.0,0.0,2,0,203.7,Releasing 0.9.0
+b21c02904188add942d3c7cd4885422e4335f115,2024-04-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.7,Releasing 0.9.0
+cebc072baa1a05c565abbb8a7383fd9c64508043,2024-05-07,ok,parse + read px,2.0,2.0,0.0,2,0,200.9,Merge pull request #167 from danielaparker/master
+cebc072baa1a05c565abbb8a7383fd9c64508043,2024-05-07,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,170.0,Merge pull request #167 from danielaparker/master
+2a1945fe1380857a0adf769c85e74a3abbf8ccc4,2024-05-08,ok,parse + read px,2.0,2.0,0.0,2,0,205.1,Merge branch 'develop'
+2a1945fe1380857a0adf769c85e74a3abbf8ccc4,2024-05-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.8,Merge branch 'develop'
+9b2c8b216a3672c5267714f7131b1ce84dcf77d4,2024-05-14,ok,parse + read px,2.0,2.0,0.0,2,0,201.7,Improve error messages: #168
+9b2c8b216a3672c5267714f7131b1ce84dcf77d4,2024-05-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,173.1,Improve error messages: #168
+7b474632e0a6d0a77703c99a8247dc30d49eefa3,2024-06-30,ok,parse + read px,2.0,2.0,0.0,2,0,198.1,Fix `YYJSON_READ_NUMBER_AS_RAW` not overriding `YYJSON_READ_BIGNUM_AS_RAW` as per documentation: #170
+7b474632e0a6d0a77703c99a8247dc30d49eefa3,2024-06-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,174.5,Fix `YYJSON_READ_NUMBER_AS_RAW` not overriding `YYJSON_READ_BIGNUM_AS_RAW` as per documentation: #170
+699edbfbf1249503a743f1b145faddf37b5a2bcd,2024-06-30,ok,parse + read px,2.0,2.0,0.0,2,0,364.4,Support different compile-time options: #170
+699edbfbf1249503a743f1b145faddf37b5a2bcd,2024-06-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,174.7,Support different compile-time options: #170
+9ddba001a4ea88e93b46932e5c5b87b222e19a5f,2024-07-10,ok,parse + read px,2.0,2.0,0.0,2,0,407.8,Releasing 0.10.0
+9ddba001a4ea88e93b46932e5c5b87b222e19a5f,2024-07-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,174.7,Releasing 0.10.0
+dcd0d7a9d5f81b752376b30d2128e7a681cc9064,2024-07-21,ok,parse + read px,2.0,2.0,0.0,2,0,199.7,Fix warnings when directly including yyjson.c: #177
+dcd0d7a9d5f81b752376b30d2128e7a681cc9064,2024-07-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.0,Fix warnings when directly including yyjson.c: #177
+ce22cdbabb0542078cbdfe56dc4759629836abcb,2024-07-25,ok,parse + read px,2.0,2.0,0.0,2,0,196.1,Fix missing indent for `YYJSON_TYPE_RAW` in prettify function: #178
+ce22cdbabb0542078cbdfe56dc4759629836abcb,2024-07-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.0,Fix missing indent for `YYJSON_TYPE_RAW` in prettify function: #178
+e6d49912d4eb9592c1adfe0472f023ceef01a5f7,2024-08-10,ok,parse + read px,2.0,2.0,0.0,2,0,199.0,Rewrite the double-to-string algorithm for better performance
+e6d49912d4eb9592c1adfe0472f023ceef01a5f7,2024-08-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.7,Rewrite the double-to-string algorithm for better performance
+6d416047822d86d53a3a0b45a6a5abf28383a1dc,2024-08-25,ok,parse + read px,2.0,2.0,0.0,2,0,191.4,Add flags and functions to control real number output precision.
+6d416047822d86d53a3a0b45a6a5abf28383a1dc,2024-08-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,182.4,Add flags and functions to control real number output precision.
+d82f31681fbe795e4758d30bcf2e7700aec81b1b,2025-01-25,ok,parse + read px,2.0,2.0,0.0,2,0,191.4,Fix bug in `yyjson_mut_arr_iter_remove()`: #194
+d82f31681fbe795e4758d30bcf2e7700aec81b1b,2025-01-25,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,167.3,Fix bug in `yyjson_mut_arr_iter_remove()`: #194
+ad77257e5dd959f52237302cd2fa59b0590fffef,2025-02-12,ok,parse + read px,2.0,2.0,0.0,2,0,206.6,Merge pull request #195 from pps83/master-ws
+ad77257e5dd959f52237302cd2fa59b0590fffef,2025-02-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,166.8,Merge pull request #195 from pps83/master-ws
+06d67149d8d687970531d3ac3dfc2d7baef99650,2025-03-13,ok,parse + read px,2.0,2.0,0.0,2,0,192.9,Merge pull request #201 from pps83/master-fixwarn
+06d67149d8d687970531d3ac3dfc2d7baef99650,2025-03-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,167.1,Merge pull request #201 from pps83/master-fixwarn
+91b4a95cf1739b9713770a00cd82380526e51282,2025-04-01,ok,parse + read px,2.0,2.0,0.0,2,0,195.1,Merge pull request #203 from huangqinjin/allow-utf8-bom
+91b4a95cf1739b9713770a00cd82380526e51282,2025-04-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,166.4,Merge pull request #203 from huangqinjin/allow-utf8-bom
+5ca715eb766059b0124ed101d7a84370cbc917c7,2025-04-01,ok,parse + read px,2.0,2.0,0.0,2,0,195.1,Fix clang19 documentation warning
+5ca715eb766059b0124ed101d7a84370cbc917c7,2025-04-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,166.0,Fix clang19 documentation warning
+83060fb9804ffe36070526ba8a827bee749d208b,2025-04-01,ok,parse + read px,2.0,2.0,0.0,2,0,195.0,More tests and changelog
+83060fb9804ffe36070526ba8a827bee749d208b,2025-04-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,165.6,More tests and changelog
+bfdebb0bc6dc64ab670f5cac6be7697d589250e9,2025-04-16,ok,parse + read px,2.0,2.0,0.0,2,0,195.1,Merge pull request #199 from zuiderkwast/incremental-read
+bfdebb0bc6dc64ab670f5cac6be7697d589250e9,2025-04-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,166.2,Merge pull request #199 from zuiderkwast/incremental-read
+fe8d6184bfb4158bd92601a0c976f07c0c1d4002,2025-04-16,ok,parse + read px,2.0,2.0,0.0,2,0,195.8,Fix warnings in CI
+fe8d6184bfb4158bd92601a0c976f07c0c1d4002,2025-04-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,167.1,Fix warnings in CI
+f0ad3235122682ed9204d560895c9177f91451f4,2025-04-16,ok,parse + read px,2.0,2.0,0.0,2,0,194.9,Code format
+f0ad3235122682ed9204d560895c9177f91451f4,2025-04-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,164.5,Code format
+78c45c46cff5c5ef4e564580b7de02078d8208d7,2025-04-21,ok,parse + read px,2.0,2.0,0.0,2,0,361.1,Merge pull request #206 from zuiderkwast/incr-read-follow-up
+78c45c46cff5c5ef4e564580b7de02078d8208d7,2025-04-21,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,166.8,Merge pull request #206 from zuiderkwast/incr-read-follow-up
+455436c04a856a053b36c63ed6a005392966bf42,2025-05-06,ok,parse + read px,2.0,2.0,0.0,2,0,193.6,Merge branch 'develop'
+455436c04a856a053b36c63ed6a005392966bf42,2025-05-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.9,Merge branch 'develop'
+484aefbfd34656cdcdcec3052b4241e13c2616ef,2025-05-06,ok,parse + read px,2.0,2.0,0.0,2,0,194.6,Releasing 0.11.0
+484aefbfd34656cdcdcec3052b4241e13c2616ef,2025-05-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.8,Releasing 0.11.0
+26f07301805da8bac9f1c7f9e47926c4542b831e,2025-05-14,ok,parse + read px,2.0,2.0,0.0,2,0,194.6,"Patch: fix errors when unaligned access is disallowed, add more CI checks."
+26f07301805da8bac9f1c7f9e47926c4542b831e,2025-05-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,173.5,"Patch: fix errors when unaligned access is disallowed, add more CI checks."
+d729bb54e5748c68be0eac6ae0aae8ed92bbca55,2025-06-16,ok,parse + read px,2.0,2.0,0.0,2,0,386.6,Add `yyjson_write_number()` and `yyjson_mut_write_number()` functions: #215
+d729bb54e5748c68be0eac6ae0aae8ed92bbca55,2025-06-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.4,Add `yyjson_write_number()` and `yyjson_mut_write_number()` functions: #215
+14f6f49a84fab65946ba59153e228b660ac63ff7,2025-06-16,ok,parse + read px,2.0,2.0,0.0,2,0,193.9,Update doc
+14f6f49a84fab65946ba59153e228b660ac63ff7,2025-06-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,162.9,Update doc
+87a6128ff5bd4660083b9eae1f7319edf2a76aef,2025-07-31,ok,parse + read px,2.0,2.0,0.0,2,0,194.0,Merge pull request #222 from CarterLi/patch-1
+87a6128ff5bd4660083b9eae1f7319edf2a76aef,2025-07-31,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,163.0,Merge pull request #222 from CarterLi/patch-1
+3ebe0d8cf91b4b3fe78373b6e1f5951fb3aa6b7a,2025-08-10,ok,parse + read px,2.0,2.0,0.0,2,0,416.9,Merge branch 'develop'
+3ebe0d8cf91b4b3fe78373b6e1f5951fb3aa6b7a,2025-08-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,167.7,Merge branch 'develop'
+ef63a4739ee6d08a62b75f2e19bf3991f45ee0ee,2025-08-15,ok,parse + read px,2.0,2.0,0.0,2,0,398.6,Refactor: unify unicode escape handling
+ef63a4739ee6d08a62b75f2e19bf3991f45ee0ee,2025-08-15,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.6,Refactor: unify unicode escape handling
+c3b63261b40f1582b14eda83cf4ef4a1dbb74406,2025-08-19,ok,parse + read px,2.0,2.0,0.0,2,0,203.8,Add more tests for coverage
+c3b63261b40f1582b14eda83cf4ef4a1dbb74406,2025-08-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,167.8,Add more tests for coverage
+8b4a38dc994a110abaec8a400615567bd996105f,2025-08-19,ok,parse + read px,2.0,2.0,0.0,2,0,200.1,Releasing 0.12.0
+8b4a38dc994a110abaec8a400615567bd996105f,2025-08-19,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.9,Releasing 0.12.0
+0eada75ee23b5b28564c37a8c4d4fd0cb4a2e7b3,2025-09-08,ok,parse + read px,2.0,2.0,0.0,2,0,202.1,Added a set of `write_buf()` functions for writing JSON to a buffer without allocation
+0eada75ee23b5b28564c37a8c4d4fd0cb4a2e7b3,2025-09-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.8,Added a set of `write_buf()` functions for writing JSON to a buffer without allocation
+351b5d7c65ee0ae4f66515ecea41b7273e74dc76,2025-09-13,ok,parse + read px,2.0,2.0,0.0,2,0,201.9,Merge pull request #234 from TheMode/tcc-patch
+351b5d7c65ee0ae4f66515ecea41b7273e74dc76,2025-09-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.8,Merge pull request #234 from TheMode/tcc-patch
+210302ffc108efb5547084f7ab17a93c6d1c6649,2025-10-16,ok,parse + read px,2.0,2.0,0.0,2,0,200.1,Merge pull request #235 from akx/depth-limit
+210302ffc108efb5547084f7ab17a93c6d1c6649,2025-10-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.8,Merge pull request #235 from akx/depth-limit
+3f81c9e56bf2987932724597bb110228cab4682a,2025-10-23,ok,parse + read px,2.0,2.0,0.0,2,0,200.9,Merge pull request #236 from pps83/master-warn
+3f81c9e56bf2987932724597bb110228cab4682a,2025-10-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.6,Merge pull request #236 from pps83/master-warn
+c3fc708d5773be586cb8faa0413f682c1fa3b42b,2025-11-23,ok,parse + read px,2.0,2.0,0.0,2,0,200.6,Change `set_int()` parameter type from `int` to `int64_t`: #240
+c3fc708d5773be586cb8faa0413f682c1fa3b42b,2025-11-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,169.0,Change `set_int()` parameter type from `int` to `int64_t`: #240
+c5aef1ee417f28d99e9ed7d8c3c7c1dfe59531ff,2026-02-26,ok,parse + read px,2.0,2.0,0.0,2,0,200.3,Add `const` qualifier to parameters of read-only functions: #248
+c5aef1ee417f28d99e9ed7d8c3c7c1dfe59531ff,2026-02-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,174.7,Add `const` qualifier to parameters of read-only functions: #248
+79aaa76e003e283348f772594f6f8631525d1ff4,2026-03-03,ok,parse + read px,2.0,2.0,0.0,2,0,201.4,Fix typos in comments and docs
+79aaa76e003e283348f772594f6f8631525d1ff4,2026-03-03,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.8,Fix typos in comments and docs
+840c9fa09cd2d1519d83482cc1d5f63d5def4eba,2026-03-04,ok,parse + read px,2.0,2.0,0.0,2,0,200.1,Merge pull request #252 from lhearachel/fix-errpos-trailing-comma
+840c9fa09cd2d1519d83482cc1d5f63d5def4eba,2026-03-04,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.2,Merge pull request #252 from lhearachel/fix-errpos-trailing-comma
+fc16410d94e6551e6e3b3a7b16a582fde32cef35,2026-03-08,ok,parse + read px,2.0,2.0,0.0,2,0,200.1,"Refactor CI workflows, add more old compilers (GCC 2.95, VC6, Watcom, DMC)"
+fc16410d94e6551e6e3b3a7b16a582fde32cef35,2026-03-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,168.8,"Refactor CI workflows, add more old compilers (GCC 2.95, VC6, Watcom, DMC)"
+de7abc1aede96d4a968a9e668524b1aad4df4258,2026-03-10,ok,parse + read px,2.0,2.0,0.0,2,0,200.1,"Add more platforms in CI, update doc"
+de7abc1aede96d4a968a9e668524b1aad4df4258,2026-03-10,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,173.2,"Add more platforms in CI, update doc"
+1e4b0d830506d99fd94d364613538fbcb72bde35,2026-04-03,ok,parse + read px,2.0,2.0,0.0,2,0,225.3,"Add MSAN CI, fix uninitialized value in read_number (oss-fuzz #498706935)"
+1e4b0d830506d99fd94d364613538fbcb72bde35,2026-04-03,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.3,"Add MSAN CI, fix uninitialized value in read_number (oss-fuzz #498706935)"
+8e9920f47c77e69ce704db6c3040961d821c2fea,2026-04-13,ok,parse + read px,2.0,2.0,0.0,2,0,226.1,Merge pull request #260 from xydone/allocator-ub
+8e9920f47c77e69ce704db6c3040961d821c2fea,2026-04-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.0,Merge pull request #260 from xydone/allocator-ub
+95f4c61bc1e24176f2aa4f430902705a995f1c97,2026-05-12,ok,parse + read px,2.0,2.0,0.0,2,0,229.8,Merge pull request #264 from iliaal/lowercase-hex-escapes
+95f4c61bc1e24176f2aa4f430902705a995f1c97,2026-05-12,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.6,Merge pull request #264 from iliaal/lowercase-hex-escapes
+99cc435178f77e322c143110b4fa5401af3467db,2026-05-24,ok,parse + read px,2.0,2.0,0.0,2,0,229.4,Merge pull request #268 from rootvector2/fix-mut-str-alc-len-overflow
+99cc435178f77e322c143110b4fa5401af3467db,2026-05-24,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.6,Merge pull request #268 from rootvector2/fix-mut-str-alc-len-overflow
+23627831fd862f803c8b83f0a9cfa2cfefd65086,2026-05-26,ok,parse + read px,2.0,2.0,0.0,2,0,394.7,Merge pull request #270 from dxbjavid/obj-with-count-overflow
+23627831fd862f803c8b83f0a9cfa2cfefd65086,2026-05-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.5,Merge pull request #270 from dxbjavid/obj-with-count-overflow
+da23b18b47977dd44c9aab221fcb03b230bfcc21,2026-05-27,ok,parse + read px,2.0,2.0,0.0,2,0,228.6,Merge pull request #271 from dxbjavid/arr-remove-range-overflow
+da23b18b47977dd44c9aab221fcb03b230bfcc21,2026-05-27,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.4,Merge pull request #271 from dxbjavid/arr-remove-range-overflow
+9edbbfec86092eff138538aabe9de85a83dae42b,2026-05-28,ok,parse + read px,2.0,2.0,0.0,2,0,231.6,Merge pull request #272 from dxbjavid/incr-raw-null-terminator
+9edbbfec86092eff138538aabe9de85a83dae42b,2026-05-28,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.3,Merge pull request #272 from dxbjavid/incr-raw-null-terminator
+d60852703c0fab67d488a692c50ed67d18b467ef,2026-05-28,ok,parse + read px,2.0,2.0,0.0,2,0,228.7,Merge pull request #273 from dxbjavid/obj-with-null-element
+d60852703c0fab67d488a692c50ed67d18b467ef,2026-05-28,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.2,Merge pull request #273 from dxbjavid/obj-with-null-element
+6e678b75cab2bfc2e8f5e7da7f4ce907b48552d3,2026-06-01,ok,parse + read px,2.0,2.0,0.0,2,0,229.1,Merge pull request #274 from dxbjavid/set-raw-null-check
+6e678b75cab2bfc2e8f5e7da7f4ce907b48552d3,2026-06-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.9,Merge pull request #274 from dxbjavid/set-raw-null-check
+768c047a5221f4e07fe527370d3abc03c2fd541d,2026-06-01,ok,parse + read px,2.0,2.0,0.0,2,0,229.2,Merge pull request #277 from dxbjavid/obj-iter-getn-idx-wrap
+768c047a5221f4e07fe527370d3abc03c2fd541d,2026-06-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.5,Merge pull request #277 from dxbjavid/obj-iter-getn-idx-wrap
+a9c4ec85dd53c7c85a785aaaaa6156a2aa6c15cd,2026-06-01,ok,parse + read px,2.0,2.0,0.0,2,0,406.6,Merge pull request #279 from dxbjavid/incr-root-number-truncation
+a9c4ec85dd53c7c85a785aaaaa6156a2aa6c15cd,2026-06-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.7,Merge pull request #279 from dxbjavid/incr-root-number-truncation
+4751ee68a424d07b8c7512f81590a4b4556319ea,2026-06-01,ok,parse + read px,2.0,2.0,0.0,2,0,393.2,Merge pull request #278 from dxbjavid/ptr-putx-null-token
+4751ee68a424d07b8c7512f81590a4b4556319ea,2026-06-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.7,Merge pull request #278 from dxbjavid/ptr-putx-null-token
+83a3e67657da9dec8fd3c4d88563df514ec56d8f,2026-06-03,ok,parse + read px,2.0,2.0,0.0,2,0,230.0,Merge pull request #276 from dxbjavid/read-fp-ftell-fail
+83a3e67657da9dec8fd3c4d88563df514ec56d8f,2026-06-03,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.0,Merge pull request #276 from dxbjavid/read-fp-ftell-fail
+7c932f29a683365c985d1b412fc13d3c2c51d9a6,2026-06-03,ok,parse + read px,2.0,2.0,0.0,2,0,233.9,Merge pull request #281 from dxbjavid/fwrite-zero-length-file-write
+7c932f29a683365c985d1b412fc13d3c2c51d9a6,2026-06-03,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.5,Merge pull request #281 from dxbjavid/fwrite-zero-length-file-write
+e34fb764a6c5c1239b7ab4adf515b136f017e434,2026-06-03,ok,parse + read px,2.0,2.0,0.0,2,0,241.9,Merge pull request #282 from dxbjavid/pretty-str-len-overflow
+e34fb764a6c5c1239b7ab4adf515b136f017e434,2026-06-03,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.2,Merge pull request #282 from dxbjavid/pretty-str-len-overflow
+dab8b72b967b79b53728dd988680f5353e213443,2026-06-15,ok,parse + read px,2.0,2.0,0.0,2,0,227.5,Merge pull request #283 from dxbjavid/incr-trailing-content
+dab8b72b967b79b53728dd988680f5353e213443,2026-06-15,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.8,Merge pull request #283 from dxbjavid/incr-trailing-content
+1d3f49c212ced71f4c18ff4fc9bf765b958534b1,2026-06-16,ok,parse + read px,2.0,2.0,0.0,2,0,227.5,Fix linux_musl CI failure caused by GCC 15 stringop-overflow warning
+1d3f49c212ced71f4c18ff4fc9bf765b958534b1,2026-06-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,194.9,Fix linux_musl CI failure caused by GCC 15 stringop-overflow warning
+92ae1e2216548eb1dee78c09145a9a9bd067e9e9,2026-06-20,ok,parse + read px,2.0,2.0,0.0,2,0,229.5,Merge pull request #284 from dxbjavid/read-fp-stream-size-overflow
+92ae1e2216548eb1dee78c09145a9a9bd067e9e9,2026-06-20,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.7,Merge pull request #284 from dxbjavid/read-fp-stream-size-overflow
+53448b2139be5b66b5003c74690b28cb68187b21,2026-06-30,ok,parse + read px,2.0,2.0,0.0,2,0,225.5,Add `YYJSON_FREESTANDING` and `YYJSON_DISABLE_FILE` compile-time options
+53448b2139be5b66b5003c74690b28cb68187b21,2026-06-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,206.8,Add `YYJSON_FREESTANDING` and `YYJSON_DISABLE_FILE` compile-time options
+4185c293979595516fe47d8226748708dd60309d,2026-06-30,ok,parse + read px,2.0,2.0,0.0,2,0,226.0,Improve docs and use inline string.h fallbacks only
+4185c293979595516fe47d8226748708dd60309d,2026-06-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,206.9,Improve docs and use inline string.h fallbacks only
+d179cfd47c86f6fbbea83d14be5aea6d92022dd1,2026-07-01,ok,parse + read px,2.0,2.0,0.0,2,0,437.4,Improve docs and code format
+d179cfd47c86f6fbbea83d14be5aea6d92022dd1,2026-07-01,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.7,Improve docs and code format
+a42845292cb38e97c5babed13d14f94fa51d5ee7,2026-07-02,ok,parse + read px,2.0,2.0,0.0,2,0,234.8,"Improve docs and comments, fix typos"
+a42845292cb38e97c5babed13d14f94fa51d5ee7,2026-07-02,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.7,"Improve docs and comments, fix typos"
+12797c6a469c78083985e9c2817bfb4ee382c260,2026-07-02,ok,parse + read px,2.0,2.0,0.0,2,0,226.4,Improve docs
+12797c6a469c78083985e9c2817bfb4ee382c260,2026-07-02,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.8,Improve docs
+9365ddc7061033df656578bf86040048b5b5531a,2026-07-23,ok,parse + read px,2.0,2.0,0.0,2,0,441.5,Merge pull request #293 from dxbjavid/iter-remove-stale-pre
+9365ddc7061033df656578bf86040048b5b5531a,2026-07-23,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.0,Merge pull request #293 from dxbjavid/iter-remove-stale-pre
+6a8ae46428783926cdd3697c064d5c7dfc559b27,2026-08-27,ok,parse + read px,2.0,2.0,0.0,2,0,418.6,Merge pull request #297 from two-heart/fp-stream-ferror
+6a8ae46428783926cdd3697c064d5c7dfc559b27,2026-08-27,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.9,Merge pull request #297 from two-heart/fp-stream-ferror
+757305bfaf4b8cb3e52c105926dc9105fb785101,2026-08-27,ok,parse + read px,2.0,2.0,0.0,2,0,224.9,Merge pull request #299 from two-heart/incr-reader-depth
+757305bfaf4b8cb3e52c105926dc9105fb785101,2026-08-27,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.3,Merge pull request #299 from two-heart/incr-reader-depth
+43ce2ff2a29b136722eb98f83db226c8344ffc4d,2026-09-06,ok,parse + read px,2.0,2.0,0.0,2,0,225.3,Merge pull request #301 from two-heart/get-len-types
+43ce2ff2a29b136722eb98f83db226c8344ffc4d,2026-09-06,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.0,Merge pull request #301 from two-heart/get-len-types
+d146b14adf728e7cb20b56a193c9ba74dfd8a20a,2026-09-09,ok,parse + read px,2.0,2.0,0.0,2,0,402.2,Fix integer truncation in bigint digit length check
+d146b14adf728e7cb20b56a193c9ba74dfd8a20a,2026-09-09,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.3,Fix integer truncation in bigint digit length check
+5be795566c2bb4aa66474ee8178b01c037fee2c1,2026-09-09,ok,parse + read px,2.0,2.0,0.0,2,0,225.9,Add `YYJSON_WRITER_DEPTH_LIMIT` compile-time option
+5be795566c2bb4aa66474ee8178b01c037fee2c1,2026-09-09,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.1,Add `YYJSON_WRITER_DEPTH_LIMIT` compile-time option
+6447536015f3d600f3d65323b10976103b337ca7,2026-09-09,ok,parse + read px,2.0,2.0,0.0,2,0,225.1,Releasing 0.13.0
+6447536015f3d600f3d65323b10976103b337ca7,2026-09-09,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.3,Releasing 0.13.0
+50d3ab4bf8d996c7137381e2bb8ee37a0d382dd0,2026-10-08,ok,parse + read px,2.0,2.0,0.0,2,0,226.8,Merge pull request #306 from aouxwoux/feat/pretty-tabs
+50d3ab4bf8d996c7137381e2bb8ee37a0d382dd0,2026-10-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.1,Merge pull request #306 from aouxwoux/feat/pretty-tabs
+08110603a6aa361e5f58817d0d12e5131e4426ea,2026-10-08,ok,parse + read px,2.0,2.0,0.0,2,0,228.2,Merge pull request #309 from Boulea7/ln-cx/fix-json-patch-numeric-equality
+08110603a6aa361e5f58817d0d12e5131e4426ea,2026-10-08,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.8,Merge pull request #309 from Boulea7/ln-cx/fix-json-patch-numeric-equality
+77307a64155ba6ee384c0f0fa751dc1cd2dae53d,2026-10-09,ok,parse + read px,2.0,2.0,0.0,2,0,228.4,Merge pull request #310 from fhgffy/fix-patch-add-existing-member
+77307a64155ba6ee384c0f0fa751dc1cd2dae53d,2026-10-09,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.6,Merge pull request #310 from fhgffy/fix-patch-add-existing-member
+f1138113b3847a760bf864a1fb346900fe6a0641,2026-10-13,ok,parse + read px,2.0,2.0,0.0,2,0,228.6,Merge pull request #313 from odoisveryverygood/byteask/string-copy-setters
+f1138113b3847a760bf864a1fb346900fe6a0641,2026-10-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.8,Merge pull request #313 from odoisveryverygood/byteask/string-copy-setters
+1420f0ec823d3f3bf094dba84f0be4dab85eddcc,2026-10-13,ok,parse + read px,2.0,2.0,0.0,2,0,232.8,Merge pull request #314 from iliaal/fix-long-number-rounding
+1420f0ec823d3f3bf094dba84f0be4dab85eddcc,2026-10-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.9,Merge pull request #314 from iliaal/fix-long-number-rounding
+e0d85715b34c8c28641a2ac5b25aae79d354b143,2026-10-13,ok,parse + read px,2.0,2.0,0.0,2,0,233.0,Move doc param to the end and adjust test for #313
+e0d85715b34c8c28641a2ac5b25aae79d354b143,2026-10-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,198.3,Move doc param to the end and adjust test for #313
+2c873dd4bc4e0784cdc8fb6fe11c5e9867044a98,2026-10-13,ok,parse + read px,2.0,2.0,0.0,2,0,236.2,Merge pull request #315 from iliaal/fix-incr-insitu-end-byte
+2c873dd4bc4e0784cdc8fb6fe11c5e9867044a98,2026-10-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.6,Merge pull request #315 from iliaal/fix-incr-insitu-end-byte
+332be7a997d19d5945c30b006be7c9a70f5111e5,2026-10-13,ok,parse + read px,2.0,2.0,0.0,2,0,229.9,Fix incremental growth failure reported as more data
+332be7a997d19d5945c30b006be7c9a70f5111e5,2026-10-13,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.2,Fix incremental growth failure reported as more data
+d31a003b8faaae9fe25067f287cd40275163fe78,2026-10-14,ok,parse + read px,2.0,2.0,0.0,2,0,415.9,Add doc for duplicate keys and linear lookup in merge patch
+d31a003b8faaae9fe25067f287cd40275163fe78,2026-10-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,209.7,Add doc for duplicate keys and linear lookup in merge patch
+a84070fa6dc58f9b379ed75b8c8fab2c1da1b604,2026-10-14,ok,parse + read px,2.0,2.0,0.0,2,0,400.2,Add doc for patch copy and output memory growth
+a84070fa6dc58f9b379ed75b8c8fab2c1da1b604,2026-10-14,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.8,Add doc for patch copy and output memory growth
+fe27f39babdf257d611885791fb888bfc473a7d2,2026-10-20,ok,parse + read px,2.0,2.0,0.0,2,0,224.2,Merge pull request #316 from ybai08/feat/write-trailing-commas
+fe27f39babdf257d611885791fb888bfc473a7d2,2026-10-20,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.6,Merge pull request #316 from ybai08/feat/write-trailing-commas
+556bf1c12b99608957271d319a546010e301da63,2026-10-20,ok,parse + read px,2.0,2.0,0.0,2,0,403.7,Reorder YYJSON_WRITE flags by bit
+556bf1c12b99608957271d319a546010e301da63,2026-10-20,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.4,Reorder YYJSON_WRITE flags by bit
+468e65a23284f54c74f1c5ad843ff59428008f05,2026-10-26,ok,parse + read px,2.0,2.0,0.0,2,0,224.9,Merge pull request #318 from zennnnnnn11/fix/null-pointer-arithmetic-ub
+468e65a23284f54c74f1c5ad843ff59428008f05,2026-10-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.5,Merge pull request #318 from zennnnnnn11/fix/null-pointer-arithmetic-ub
+b9154f410ff6320cc500870275d814f9e6715b4d,2026-10-26,ok,parse + read px,2.0,2.0,0.0,2,0,226.7,Merge pull request #319 from dxbjavid/invalid-utf8-noesc
+b9154f410ff6320cc500870275d814f9e6715b4d,2026-10-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,198.7,Merge pull request #319 from dxbjavid/invalid-utf8-noesc
+2c9c76a4b6acda1931c7d8bef05a91f2a759302d,2026-10-26,ok,parse + read px,2.0,2.0,0.0,2,0,434.4,Merge pull request #320 from wleeaf/patch-move-into-own-child
+2c9c76a4b6acda1931c7d8bef05a91f2a759302d,2026-10-26,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,367.6,Merge pull request #320 from wleeaf/patch-move-into-own-child
+ebb8d7e5aaa51bea4edefb39ee73a235066b0023,2026-10-30,ok,parse + read px,2.0,2.0,0.0,2,0,229.3,Merge pull request #321 from emincan2000/lowercase-hex-doc
+ebb8d7e5aaa51bea4edefb39ee73a235066b0023,2026-10-30,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,198.6,Merge pull request #321 from emincan2000/lowercase-hex-doc
+a0fca8ba12644e1c1d7d44ff12d57bb2a47b0dd0,2026-11-16,ok,parse + read px,2.0,2.0,0.0,2,0,416.5,Fix buffer growth overflow when writing large strings on 32-bit OS
+a0fca8ba12644e1c1d7d44ff12d57bb2a47b0dd0,2026-11-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.9,Fix buffer growth overflow when writing large strings on 32-bit OS
+68b270cb9df35e6ae0fed69f83b40bbc9e2ae498,2026-11-16,ok,parse + read px,2.0,2.0,0.0,2,0,399.2,Fix 32-bit OS length overflows in large JSON copying
+68b270cb9df35e6ae0fed69f83b40bbc9e2ae498,2026-11-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,197.8,Fix 32-bit OS length overflows in large JSON copying
+b01620fc18f1e4428346f4357c6171be9a5d238c,2026-11-16,ok,parse + read px,2.0,2.0,0.0,2,0,226.6,Fix writer buffer alignment for old arch
+b01620fc18f1e4428346f4357c6171be9a5d238c,2026-11-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,198.6,Fix writer buffer alignment for old arch
+99a4fe96ca1bfbf119be3c2e474b0a114fa78962,2026-11-16,ok,parse + read px,2.0,2.0,0.0,2,0,414.6,Allow overriding internal DOM preallocation ratios
+99a4fe96ca1bfbf119be3c2e474b0a114fa78962,2026-11-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,206.5,Allow overriding internal DOM preallocation ratios
+c623285c73e1bc8a45f7a98596f6a881fba27aa9,2026-11-16,ok,parse + read px,2.0,2.0,0.0,2,0,418.4,Merge pull request #324 from mzfr/fix/pointer-context-duplicate-key
+c623285c73e1bc8a45f7a98596f6a881fba27aa9,2026-11-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,196.6,Merge pull request #324 from mzfr/fix/pointer-context-duplicate-key
+67ccabcabbc0b40775e4a72454144e272ea1cde2,2026-11-16,ok,parse + read px,2.0,2.0,0.0,2,0,229.1,Merge pull request #325 from mzfr/fix/empty-object-iterator
+67ccabcabbc0b40775e4a72454144e272ea1cde2,2026-11-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,198.7,Merge pull request #325 from mzfr/fix/empty-object-iterator
+96eb796080a0d819abc67c285c35396d029ff07e,2026-11-16,ok,parse + read px,2.0,2.0,0.0,2,0,230.5,Simplify code based on #326
+96eb796080a0d819abc67c285c35396d029ff07e,2026-11-16,ok,"parse + read px, pool allocator",0.0,0.0,0.0,0,0,195.4,Simplify code based on #326

@@ -1,0 +1,886 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,find (hit),0.0,0.0,0.0,0,0,26.4,add hash8
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,find (miss),0.0,0.0,0.0,0,0,26.6,add hash8
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,insert+erase,0.0,0.0,0.0,0,0,70.8,add hash8
+672ad2c9c06de80001d3be0e968d31467619ef79,2021-06-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,30.4,add hash8
+31f82bd1c10717c9b4644a91bc2d3e1a066b96a8,2021-06-11,ok,find (hit),0.0,0.0,0.0,0,0,28.6,update thirdparty
+31f82bd1c10717c9b4644a91bc2d3e1a066b96a8,2021-06-11,ok,find (miss),0.0,0.0,0.0,0,0,22.3,update thirdparty
+31f82bd1c10717c9b4644a91bc2d3e1a066b96a8,2021-06-11,ok,insert+erase,0.0,0.0,0.0,0,0,68.8,update thirdparty
+31f82bd1c10717c9b4644a91bc2d3e1a066b96a8,2021-06-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,30.4,update thirdparty
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,find (hit),0.0,0.0,0.0,0,0,23.6,fix crash
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,find (miss),0.0,0.0,0.0,0,0,22.8,fix crash
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,insert+erase,0.0,0.0,0.0,0,0,77.2,fix crash
+49393a831eca46f433b9fa9217042ee420b30bf5,2021-06-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.1,fix crash
+8deb46fd07881b0b3b5020067a9774b4d04571e9,2021-06-14,ok,find (hit),0.0,0.0,0.0,0,0,23.3,hash8 opt
+8deb46fd07881b0b3b5020067a9774b4d04571e9,2021-06-14,ok,find (miss),0.0,0.0,0.0,0,0,22.6,hash8 opt
+8deb46fd07881b0b3b5020067a9774b4d04571e9,2021-06-14,ok,insert+erase,0.0,0.0,0.0,0,0,72.7,hash8 opt
+8deb46fd07881b0b3b5020067a9774b4d04571e9,2021-06-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.1,hash8 opt
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,find (hit),0.0,0.0,0.0,0,0,23.9,fix int/uint
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,find (miss),0.0,0.0,0.0,0,0,23.0,fix int/uint
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,insert+erase,0.0,0.0,0.0,0,0,75.5,fix int/uint
+18c4fede3d986b3f2a76ef8331bcf654d57746e7,2021-06-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,47.4,fix int/uint
+c0839f09dadfe233682055a5f754e16e0c1e81ed,2021-06-15,ok,find (hit),0.0,0.0,0.0,0,0,23.6,small fix
+c0839f09dadfe233682055a5f754e16e0c1e81ed,2021-06-15,ok,find (miss),0.0,0.0,0.0,0,0,22.6,small fix
+c0839f09dadfe233682055a5f754e16e0c1e81ed,2021-06-15,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,small fix
+c0839f09dadfe233682055a5f754e16e0c1e81ed,2021-06-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.1,small fix
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,find (hit),0.0,0.0,0.0,0,0,23.6,hash5/8 laod_factor=1.0
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,find (miss),0.0,0.0,0.0,0,0,23.0,hash5/8 laod_factor=1.0
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,insert+erase,0.0,0.0,0.0,0,0,69.1,hash5/8 laod_factor=1.0
+55f896ae55ef6337330df9ab7692dcf5edcbed89,2021-06-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.7,hash5/8 laod_factor=1.0
+489f7fedb2641a944b33d06a5308ae04fa01e77d,2021-06-16,ok,find (hit),0.0,0.0,0.0,0,0,36.1,small improve
+489f7fedb2641a944b33d06a5308ae04fa01e77d,2021-06-16,ok,find (miss),0.0,0.0,0.0,0,0,23.2,small improve
+489f7fedb2641a944b33d06a5308ae04fa01e77d,2021-06-16,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,small improve
+489f7fedb2641a944b33d06a5308ae04fa01e77d,2021-06-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.5,small improve
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,find (hit),0.0,0.0,0.0,0,0,23.0,fix
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,find (miss),0.0,0.0,0.0,0,0,22.8,fix
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,insert+erase,0.0,0.0,0.0,0,0,68.6,fix
+2a6c05d241e4a96694e5e13a66f4bf4b518d9968,2021-06-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.7,fix
+fd66862d4464473f17f3635fe217a398d8c133e0,2021-07-04,ok,find (hit),0.0,0.0,0.0,0,0,33.9,find opt
+fd66862d4464473f17f3635fe217a398d8c133e0,2021-07-04,ok,find (miss),0.0,0.0,0.0,0,0,34.8,find opt
+fd66862d4464473f17f3635fe217a398d8c133e0,2021-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,69.4,find opt
+fd66862d4464473f17f3635fe217a398d8c133e0,2021-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.3,find opt
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,find (hit),0.0,0.0,0.0,0,0,34.2,fast iterator
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,find (miss),0.0,0.0,0.0,0,0,35.0,fast iterator
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,insert+erase,0.0,0.0,0.0,0,0,85.7,fast iterator
+bd5c4b1a6d428622582ca9b3a5eb63b860a2b460,2021-07-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.3,fast iterator
+c70edebe154a884b199a314cfc336652acc1d143,2021-07-17,ok,find (hit),0.0,0.0,0.0,0,0,31.7,small opt
+c70edebe154a884b199a314cfc336652acc1d143,2021-07-17,ok,find (miss),0.0,0.0,0.0,0,0,22.6,small opt
+c70edebe154a884b199a314cfc336652acc1d143,2021-07-17,ok,insert+erase,0.0,0.0,0.0,0,0,70.1,small opt
+c70edebe154a884b199a314cfc336652acc1d143,2021-07-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.2,small opt
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,find (hit),0.0,0.0,0.0,0,0,23.2,2022
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,find (miss),0.0,0.0,0.0,0,0,22.3,2022
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,insert+erase,0.0,0.0,0.0,0,0,69.3,2022
+c3f784e68af9480a2a0fef4d18229d8ca72f8330,2022-01-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.3,2022
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,find (hit),0.0,0.0,0.0,0,0,27.3,improve emhash8/cache_hash  miss find
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,find (miss),0.0,0.0,0.0,0,0,27.6,improve emhash8/cache_hash  miss find
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,insert+erase,0.0,0.0,0.0,0,0,88.6,improve emhash8/cache_hash  miss find
+403c18915a66c86d90c3ca4e87f5105aab9b301e,2022-02-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.8,improve emhash8/cache_hash  miss find
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,find (hit),0.0,0.0,0.0,0,0,21.2,emilib fix leak
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,find (miss),0.0,0.0,0.0,0,0,21.8,emilib fix leak
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,insert+erase,0.0,0.0,0.0,0,0,73.7,emilib fix leak
+4133c399e6feeedf698be22ebd53f4c486a98a2a,2022-02-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.3,emilib fix leak
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,find (hit),0.0,0.0,0.0,0,0,22.0,improve erase
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,find (miss),0.0,0.0,0.0,0,0,21.4,improve erase
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,insert+erase,0.0,0.0,0.0,0,0,81.3,improve erase
+60c4566c80e9fd403c97345d33c25068d556827a,2022-02-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,28.7,improve erase
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,find (hit),0.0,0.0,0.0,0,0,21.6,improve qc bench
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,find (miss),0.0,0.0,0.0,0,0,21.3,improve qc bench
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,insert+erase,0.0,0.0,0.0,0,0,72.4,improve qc bench
+67143a56fd7c4fd33e7b7496f7dcc93f5902905f,2022-03-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.0,improve qc bench
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,find (hit),0.0,0.0,0.0,0,0,21.3,emilib improve
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,find (miss),0.0,0.0,0.0,0,0,21.4,emilib improve
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,emilib improve
+6a5471d2947b35a26a1f818161a6d3048585b541,2022-03-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.9,emilib improve
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,find (hit),0.0,0.0,0.0,0,0,24.4,improve emilib2s
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,find (miss),0.0,0.0,0.0,0,0,24.9,improve emilib2s
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,insert+erase,0.0,0.0,0.0,0,0,72.8,improve emilib2s
+f80d5258612790b4ce687bfddda62d6784f692c5,2022-03-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.3,improve emilib2s
+b2f989361a8c6a3b3f0643bff10576ae2d222ef4,2022-03-29,ok,find (hit),0.0,0.0,0.0,0,0,22.8,fix iterator
+b2f989361a8c6a3b3f0643bff10576ae2d222ef4,2022-03-29,ok,find (miss),0.0,0.0,0.0,0,0,21.4,fix iterator
+b2f989361a8c6a3b3f0643bff10576ae2d222ef4,2022-03-29,ok,insert+erase,0.0,0.0,0.0,0,0,70.4,fix iterator
+b2f989361a8c6a3b3f0643bff10576ae2d222ef4,2022-03-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,fix iterator
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,find (hit),0.0,0.0,0.0,0,0,21.1,opt c++17
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,find (miss),0.0,0.0,0.0,0,0,21.1,opt c++17
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,insert+erase,0.0,0.0,0.0,0,0,69.2,opt c++17
+da2c4addb55273f616ffa6769a55746f65f741c9,2022-03-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,opt c++17
+7af9661e74b850c3bcb87e9192e0887286bd4a3d,2022-04-01,ok,find (hit),0.0,0.0,0.0,0,0,21.5,test & c++20
+7af9661e74b850c3bcb87e9192e0887286bd4a3d,2022-04-01,ok,find (miss),0.0,0.0,0.0,0,0,21.4,test & c++20
+7af9661e74b850c3bcb87e9192e0887286bd4a3d,2022-04-01,ok,insert+erase,0.0,0.0,0.0,0,0,76.0,test & c++20
+7af9661e74b850c3bcb87e9192e0887286bd4a3d,2022-04-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.9,test & c++20
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,find (hit),0.0,0.0,0.0,0,0,25.9,update readme
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,find (miss),0.0,0.0,0.0,0,0,22.6,update readme
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,insert+erase,0.0,0.0,0.0,0,0,81.4,update readme
+d78e54227573426ee0227eea20af4ab29c317c23,2022-04-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,update readme
+24d15d2c3721dfbfae651884bdb77bb70828918e,2022-04-08,ok,find (hit),0.0,0.0,0.0,0,0,21.1,reabse update
+24d15d2c3721dfbfae651884bdb77bb70828918e,2022-04-08,ok,find (miss),0.0,0.0,0.0,0,0,21.3,reabse update
+24d15d2c3721dfbfae651884bdb77bb70828918e,2022-04-08,ok,insert+erase,0.0,0.0,0.0,0,0,69.6,reabse update
+24d15d2c3721dfbfae651884bdb77bb70828918e,2022-04-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.5,reabse update
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,find (hit),0.0,0.0,0.0,0,0,22.7,thirdpaty/insert opt
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,find (miss),0.0,0.0,0.0,0,0,21.2,thirdpaty/insert opt
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,insert+erase,0.0,0.0,0.0,0,0,68.8,thirdpaty/insert opt
+7a53c6d888e83994afcec976c00d0a3ae1f2bd8e,2022-04-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.5,thirdpaty/insert opt
+7df34a139f4c9e3d504fb3214899380347b74246,2022-05-25,ok,find (hit),0.0,0.0,0.0,0,0,21.2,more test/fix api
+7df34a139f4c9e3d504fb3214899380347b74246,2022-05-25,ok,find (miss),0.0,0.0,0.0,0,0,21.5,more test/fix api
+7df34a139f4c9e3d504fb3214899380347b74246,2022-05-25,ok,insert+erase,0.0,0.0,0.0,0,0,69.3,more test/fix api
+7df34a139f4c9e3d504fb3214899380347b74246,2022-05-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,more test/fix api
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.4,reduce peak memory/thirdparty
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,find (miss),0.0,0.0,0.0,0,0,21.3,reduce peak memory/thirdparty
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,82.8,reduce peak memory/thirdparty
+47cad32007c6a9e902d7d17f707d81209ca64f82,2022-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,46.9,reduce peak memory/thirdparty
+ad005fdd3f9ffd4d3d4226eae807e0447109b563,2022-06-29,ok,find (hit),0.0,0.0,0.0,0,0,23.0,fix fsanitize
+ad005fdd3f9ffd4d3d4226eae807e0447109b563,2022-06-29,ok,find (miss),0.0,0.0,0.0,0,0,21.1,fix fsanitize
+ad005fdd3f9ffd4d3d4226eae807e0447109b563,2022-06-29,ok,insert+erase,0.0,0.0,0.0,0,0,73.6,fix fsanitize
+ad005fdd3f9ffd4d3d4226eae807e0447109b563,2022-06-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,fix fsanitize
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,find (hit),0.0,0.0,0.0,0,0,21.5,opt bench
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,find (miss),0.0,0.0,0.0,0,0,21.2,opt bench
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,insert+erase,0.0,0.0,0.0,0,0,74.5,opt bench
+11234bcf745a5d68b380a6eca1186af4cf782b69,2022-06-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.0,opt bench
+9426489fdbb607ce576c01a2c486b8f8de866976,2022-06-30,ok,find (hit),0.0,0.0,0.0,0,0,21.3,fsanitize fix
+9426489fdbb607ce576c01a2c486b8f8de866976,2022-06-30,ok,find (miss),0.0,0.0,0.0,0,0,21.3,fsanitize fix
+9426489fdbb607ce576c01a2c486b8f8de866976,2022-06-30,ok,insert+erase,0.0,0.0,0.0,0,0,73.2,fsanitize fix
+9426489fdbb607ce576c01a2c486b8f8de866976,2022-06-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,fsanitize fix
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,find (hit),0.0,0.0,0.0,0,0,22.4,Update hash_table8.hpp
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,find (miss),0.0,0.0,0.0,0,0,21.6,Update hash_table8.hpp
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,insert+erase,0.0,0.0,0.0,0,0,74.8,Update hash_table8.hpp
+ae6189b363452452d87a72a25399cd1c215dcb9e,2022-07-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.9,Update hash_table8.hpp
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,find (hit),0.0,0.0,0.0,0,0,22.2,sync thirdparty
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,find (miss),0.0,0.0,0.0,0,0,21.4,sync thirdparty
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,insert+erase,0.0,0.0,0.0,0,0,74.8,sync thirdparty
+3a75617ee05d2cd1b6b2d3c00fe21b9e58d73b09,2022-07-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.9,sync thirdparty
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,find (hit),0.0,0.0,0.0,0,0,21.4,improve hash8
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,find (miss),0.0,0.0,0.0,0,0,21.5,improve hash8
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,insert+erase,0.0,0.0,0.0,0,0,72.3,improve hash8
+6bf3847d11d8a08b1b76caf7b89e12bf761725b3,2022-07-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,improve hash8
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,find (hit),0.0,0.0,0.0,0,0,32.8,load factor 0.88->0.8
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,find (miss),0.0,0.0,0.0,0,0,30.8,load factor 0.88->0.8
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,insert+erase,0.0,0.0,0.0,0,0,80.1,load factor 0.88->0.8
+c321c5ac8f28536adb4a16771e9205586d46fc61,2022-07-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.5,load factor 0.88->0.8
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,find (hit),0.0,0.0,0.0,0,0,21.5,improve test/emhash8
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,find (miss),0.0,0.0,0.0,0,0,24.5,improve test/emhash8
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,insert+erase,0.0,0.0,0.0,0,0,75.4,improve test/emhash8
+40a3e0da42bbfe7328ac88524f8d2fe7548e9809,2022-07-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.5,improve test/emhash8
+9a3f7189da73304fba4d197498dd26b327ae435b,2022-07-16,ok,find (hit),0.0,0.0,0.0,0,0,21.4,add emhash dense set
+9a3f7189da73304fba4d197498dd26b327ae435b,2022-07-16,ok,find (miss),0.0,0.0,0.0,0,0,21.5,add emhash dense set
+9a3f7189da73304fba4d197498dd26b327ae435b,2022-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,73.7,add emhash dense set
+9a3f7189da73304fba4d197498dd26b327ae435b,2022-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.5,add emhash dense set
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,find (hit),0.0,0.0,0.0,0,0,21.6,优化find bench
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,find (miss),0.0,0.0,0.0,0,0,21.9,优化find bench
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,91.3,优化find bench
+59dbd59762ce4124804ed18910541bebbf206de6,2022-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.9,优化find bench
+21bc3e48f5c2963784ff8bbb17f5485efbef9452,2022-07-23,ok,find (hit),0.0,0.0,0.0,0,0,31.3,add wyhash
+21bc3e48f5c2963784ff8bbb17f5485efbef9452,2022-07-23,ok,find (miss),0.0,0.0,0.0,0,0,31.0,add wyhash
+21bc3e48f5c2963784ff8bbb17f5485efbef9452,2022-07-23,ok,insert+erase,0.0,0.0,0.0,0,0,77.3,add wyhash
+21bc3e48f5c2963784ff8bbb17f5485efbef9452,2022-07-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.3,add wyhash
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,find (hit),0.0,0.0,0.0,0,0,22.2,small opt
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,find (miss),0.0,0.0,0.0,0,0,21.6,small opt
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,small opt
+30432ebb00112acce55eb40dc5a1dc56752e82a1,2022-07-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.2,small opt
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,find (hit),0.0,0.0,0.0,0,0,28.3,better proble
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,find (miss),0.0,0.0,0.0,0,0,21.6,better proble
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,insert+erase,0.0,0.0,0.0,0,0,72.5,better proble
+11bf1423252bb32481de790d24c836337a9cd9f3,2022-07-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,better proble
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,find (hit),0.0,0.0,0.0,0,0,26.9,update probe
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,find (miss),0.0,0.0,0.0,0,0,21.4,update probe
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,insert+erase,0.0,0.0,0.0,0,0,71.4,update probe
+c8e2c1a9b8f1cdd0da4d0e2ca1e8e38d91ddbeff,2022-07-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.9,update probe
+6f4a2c3ae25c6d4ed19935d78fe9e847be5a193d,2022-08-09,ok,find (hit),0.0,0.0,0.0,0,0,21.7,opt find_empty
+6f4a2c3ae25c6d4ed19935d78fe9e847be5a193d,2022-08-09,ok,find (miss),0.0,0.0,0.0,0,0,21.4,opt find_empty
+6f4a2c3ae25c6d4ed19935d78fe9e847be5a193d,2022-08-09,ok,insert+erase,0.0,0.0,0.0,0,0,71.6,opt find_empty
+6f4a2c3ae25c6d4ed19935d78fe9e847be5a193d,2022-08-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.7,opt find_empty
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,find (hit),0.0,0.0,0.0,0,0,32.0,fix clear
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,find (miss),0.0,0.0,0.0,0,0,31.6,fix clear
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,insert+erase,0.0,0.0,0.0,0,0,93.6,fix clear
+e3b46ee3cbf981a6becdabc97cd19624023c591a,2022-08-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,28.1,fix clear
+a46eab69dc66d84bed2c1a3bcbf3ec1ac4e72fcf,2022-09-03,ok,find (hit),0.0,0.0,0.0,0,0,22.5,rand find
+a46eab69dc66d84bed2c1a3bcbf3ec1ac4e72fcf,2022-09-03,ok,find (miss),0.0,0.0,0.0,0,0,22.1,rand find
+a46eab69dc66d84bed2c1a3bcbf3ec1ac4e72fcf,2022-09-03,ok,insert+erase,0.0,0.0,0.0,0,0,72.4,rand find
+a46eab69dc66d84bed2c1a3bcbf3ec1ac4e72fcf,2022-09-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,rand find
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,find (hit),0.0,0.0,0.0,0,0,23.1,Merge pull request #15 from shines77/master
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,find (miss),0.0,0.0,0.0,0,0,22.0,Merge pull request #15 from shines77/master
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,insert+erase,0.0,0.0,0.0,0,0,75.6,Merge pull request #15 from shines77/master
+1f3e21ff55df15056dca66fff6a09d1450c65d0b,2022-09-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.9,Merge pull request #15 from shines77/master
+f9d006ce40392b64c9659547bc55adaeed163efe,2022-09-11,ok,find (hit),0.0,0.0,0.0,0,0,22.0,benchmark opt
+f9d006ce40392b64c9659547bc55adaeed163efe,2022-09-11,ok,find (miss),0.0,0.0,0.0,0,0,22.0,benchmark opt
+f9d006ce40392b64c9659547bc55adaeed163efe,2022-09-11,ok,insert+erase,0.0,0.0,0.0,0,0,72.8,benchmark opt
+f9d006ce40392b64c9659547bc55adaeed163efe,2022-09-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,benchmark opt
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,find (hit),0.0,0.0,0.0,0,0,21.9,fix shrink_to_fit crash
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,find (miss),0.0,0.0,0.0,0,0,22.3,fix shrink_to_fit crash
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,insert+erase,0.0,0.0,0.0,0,0,93.2,fix shrink_to_fit crash
+34bba9f6b9ed0e31ad987aeeec97130db83fd0a8,2022-10-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.8,fix shrink_to_fit crash
+7e51e4cce5ae053c3e000466163aebd620e1004d,2022-10-11,ok,find (hit),0.0,0.0,0.0,0,0,21.5,fix warning
+7e51e4cce5ae053c3e000466163aebd620e1004d,2022-10-11,ok,find (miss),0.0,0.0,0.0,0,0,21.5,fix warning
+7e51e4cce5ae053c3e000466163aebd620e1004d,2022-10-11,ok,insert+erase,0.0,0.0,0.0,0,0,73.1,fix warning
+7e51e4cce5ae053c3e000466163aebd620e1004d,2022-10-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.5,fix warning
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,find (hit),0.0,0.0,0.0,0,0,21.6,find_empty by size
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,find (miss),0.0,0.0,0.0,0,0,21.5,find_empty by size
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,insert+erase,0.0,0.0,0.0,0,0,72.9,find_empty by size
+5bc8264bf768e3d1ed2fd1f9b93f1b561dcf171b,2022-10-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,28.4,find_empty by size
+9894137e0dd71083522de59ddfd7e1e288b1aa43,2022-10-23,ok,find (hit),0.0,0.0,0.0,0,0,21.4,heterogeneous find/insert
+9894137e0dd71083522de59ddfd7e1e288b1aa43,2022-10-23,ok,find (miss),0.0,0.0,0.0,0,0,21.5,heterogeneous find/insert
+9894137e0dd71083522de59ddfd7e1e288b1aa43,2022-10-23,ok,insert+erase,0.0,0.0,0.0,0,0,77.6,heterogeneous find/insert
+9894137e0dd71083522de59ddfd7e1e288b1aa43,2022-10-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.6,heterogeneous find/insert
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,find (hit),0.0,0.0,0.0,0,0,21.8,update 3rd
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,find (miss),0.0,0.0,0.0,0,0,22.3,update 3rd
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,insert+erase,0.0,0.0,0.0,0,0,73.0,update 3rd
+6d68369a48a07bf4650cb62efc256b5af14251f1,2022-10-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.5,update 3rd
+3c957f47ac241fa77928e07f51cfeb02ac8c9408,2022-10-29,ok,find (hit),0.0,0.0,0.0,0,0,22.0,better bench
+3c957f47ac241fa77928e07f51cfeb02ac8c9408,2022-10-29,ok,find (miss),0.0,0.0,0.0,0,0,22.1,better bench
+3c957f47ac241fa77928e07f51cfeb02ac8c9408,2022-10-29,ok,insert+erase,0.0,0.0,0.0,0,0,73.1,better bench
+3c957f47ac241fa77928e07f51cfeb02ac8c9408,2022-10-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.9,better bench
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,find (hit),0.0,0.0,0.0,0,0,21.6,quadratic probing
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,find (miss),0.0,0.0,0.0,0,0,21.7,quadratic probing
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,insert+erase,0.0,0.0,0.0,0,0,76.7,quadratic probing
+c5f5a3918554cfadb8860d0299ee800f99c8b22b,2022-10-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.6,quadratic probing
+409df2ba4af8812c6f66537d0b47ea1fd300019d,2022-10-31,ok,find (hit),0.0,0.0,0.0,0,0,21.6,update bench
+409df2ba4af8812c6f66537d0b47ea1fd300019d,2022-10-31,ok,find (miss),0.0,0.0,0.0,0,0,21.4,update bench
+409df2ba4af8812c6f66537d0b47ea1fd300019d,2022-10-31,ok,insert+erase,0.0,0.0,0.0,0,0,70.8,update bench
+409df2ba4af8812c6f66537d0b47ea1fd300019d,2022-10-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,update bench
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,find (hit),0.0,0.0,0.0,0,0,22.0,high load
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,find (miss),0.0,0.0,0.0,0,0,21.8,high load
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,high load
+343c84aec481a4a6d5ed2277022c5baa16c557ea,2022-11-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,high load
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,find (hit),0.0,0.0,0.0,0,0,34.2,fix overflow
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,find (miss),0.0,0.0,0.0,0,0,31.6,fix overflow
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,70.3,fix overflow
+fee6c87c541f7dbf849b3164310cb11c5f6cea81,2022-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,fix overflow
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,find (hit),0.0,0.0,0.0,0,0,26.3,add inline
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,find (miss),0.0,0.0,0.0,0,0,21.7,add inline
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,insert+erase,0.0,0.0,0.0,0,0,73.4,add inline
+739e613e97a2b3a1799b7fcc3ceb601d84f7c160,2022-11-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.7,add inline
+3b2fbdcd30d89eacc133c3abad77811b6b61d2f3,2022-12-03,ok,find (hit),0.0,0.0,0.0,0,0,21.9,all map
+3b2fbdcd30d89eacc133c3abad77811b6b61d2f3,2022-12-03,ok,find (miss),0.0,0.0,0.0,0,0,22.1,all map
+3b2fbdcd30d89eacc133c3abad77811b6b61d2f3,2022-12-03,ok,insert+erase,0.0,0.0,0.0,0,0,72.2,all map
+3b2fbdcd30d89eacc133c3abad77811b6b61d2f3,2022-12-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,all map
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,find (hit),0.0,0.0,0.0,0,0,22.0,Merge pull request #23 from blueloveTH/master
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,find (miss),0.0,0.0,0.0,0,0,22.1,Merge pull request #23 from blueloveTH/master
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,insert+erase,0.0,0.0,0.0,0,0,69.6,Merge pull request #23 from blueloveTH/master
+0b5c2604af42e893b5fdad240589f8af313fd188,2023-01-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,24.9,Merge pull request #23 from blueloveTH/master
+46e4757f1dc3784076bde24d1e209af3824b31e6,2023-01-30,ok,find (hit),0.0,0.0,0.0,0,0,21.8,add aligned_alloc
+46e4757f1dc3784076bde24d1e209af3824b31e6,2023-01-30,ok,find (miss),0.0,0.0,0.0,0,0,21.7,add aligned_alloc
+46e4757f1dc3784076bde24d1e209af3824b31e6,2023-01-30,ok,insert+erase,0.0,0.0,0.0,0,0,71.6,add aligned_alloc
+46e4757f1dc3784076bde24d1e209af3824b31e6,2023-01-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,add aligned_alloc
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,find (hit),0.0,0.0,0.0,0,0,21.4,fix aligned_alloc on win32
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,find (miss),0.0,0.0,0.0,0,0,21.6,fix aligned_alloc on win32
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,insert+erase,0.0,0.0,0.0,0,0,69.8,fix aligned_alloc on win32
+542b570f7e3f6e8094dff51fa9fa4093a6d9ac87,2023-02-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.6,fix aligned_alloc on win32
+a11f6d4d52f3cc0b854d69e135dfd150960239e7,2023-02-15,ok,find (hit),0.0,0.0,0.0,0,0,31.7,recover alloc
+a11f6d4d52f3cc0b854d69e135dfd150960239e7,2023-02-15,ok,find (miss),0.0,0.0,0.0,0,0,31.5,recover alloc
+a11f6d4d52f3cc0b854d69e135dfd150960239e7,2023-02-15,ok,insert+erase,0.0,0.0,0.0,0,0,92.5,recover alloc
+a11f6d4d52f3cc0b854d69e135dfd150960239e7,2023-02-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.4,recover alloc
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,find (hit),0.0,0.0,0.0,0,0,21.7,update readme
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,find (miss),0.0,0.0,0.0,0,0,22.0,update readme
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,insert+erase,0.0,0.0,0.0,0,0,68.2,update readme
+c3f292baaf9a9dfaf2f8c288e329d549942cccc1,2023-02-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.8,update readme
+2e3edc378373b331afa8bd570d657bf3f1229b86,2023-08-17,ok,find (hit),0.0,0.0,0.0,0,0,31.7,add a new 2ss hash map to replace 2so
+2e3edc378373b331afa8bd570d657bf3f1229b86,2023-08-17,ok,find (miss),0.0,0.0,0.0,0,0,31.2,add a new 2ss hash map to replace 2so
+2e3edc378373b331afa8bd570d657bf3f1229b86,2023-08-17,ok,insert+erase,0.0,0.0,0.0,0,0,90.0,add a new 2ss hash map to replace 2so
+2e3edc378373b331afa8bd570d657bf3f1229b86,2023-08-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.9,add a new 2ss hash map to replace 2so
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,find (hit),0.0,0.0,0.0,0,0,22.2,improve test
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,find (miss),0.0,0.0,0.0,0,0,21.6,improve test
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,insert+erase,0.0,0.0,0.0,0,0,75.0,improve test
+17c9816753c16d0745778025e88d76e42725a1ae,2023-09-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.7,improve test
+6a7532a2cc436b64d39fa7717c1581a89c1df9d3,2023-10-09,ok,find (hit),0.0,0.0,0.0,0,0,21.4,destroy crash two.
+6a7532a2cc436b64d39fa7717c1581a89c1df9d3,2023-10-09,ok,find (miss),0.0,0.0,0.0,0,0,21.5,destroy crash two.
+6a7532a2cc436b64d39fa7717c1581a89c1df9d3,2023-10-09,ok,insert+erase,0.0,0.0,0.0,0,0,77.5,destroy crash two.
+6a7532a2cc436b64d39fa7717c1581a89c1df9d3,2023-10-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,destroy crash two.
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,find (hit),0.0,0.0,0.0,0,0,22.4,3rd update
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,find (miss),0.0,0.0,0.0,0,0,21.8,3rd update
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,insert+erase,0.0,0.0,0.0,0,0,74.7,3rd update
+b033b53be1c7bf1328ad59ef169f98484c0702b1,2023-10-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.2,3rd update
+490552426238b438e5f7a945d19818bad98e6efc,2023-12-03,ok,find (hit),0.0,0.0,0.0,0,0,31.9,Merge pull request #35 from MohitSethi99/patch-1
+490552426238b438e5f7a945d19818bad98e6efc,2023-12-03,ok,find (miss),0.0,0.0,0.0,0,0,31.0,Merge pull request #35 from MohitSethi99/patch-1
+490552426238b438e5f7a945d19818bad98e6efc,2023-12-03,ok,insert+erase,0.0,0.0,0.0,0,0,91.8,Merge pull request #35 from MohitSethi99/patch-1
+490552426238b438e5f7a945d19818bad98e6efc,2023-12-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.8,Merge pull request #35 from MohitSethi99/patch-1
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,find (hit),0.0,0.0,0.0,0,0,31.9,fix crash hash5
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,find (miss),0.0,0.0,0.0,0,0,21.8,fix crash hash5
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,insert+erase,0.0,0.0,0.0,0,0,70.9,fix crash hash5
+e559ba34c3c5941f95d74f30868b1f7d4fac65ef,2024-01-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix crash hash5
+d38c6152ffce5c2dd7943e1ee82a24e6253fdffb,2024-03-08,ok,find (hit),0.0,0.0,0.0,0,0,21.5,add hash join test
+d38c6152ffce5c2dd7943e1ee82a24e6253fdffb,2024-03-08,ok,find (miss),0.0,0.0,0.0,0,0,21.6,add hash join test
+d38c6152ffce5c2dd7943e1ee82a24e6253fdffb,2024-03-08,ok,insert+erase,0.0,0.0,0.0,0,0,68.2,add hash join test
+d38c6152ffce5c2dd7943e1ee82a24e6253fdffb,2024-03-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.3,add hash join test
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,find (hit),0.0,0.0,0.0,0,0,21.9,opt code
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,find (miss),0.0,0.0,0.0,0,0,22.4,opt code
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,insert+erase,0.0,0.0,0.0,0,0,70.1,opt code
+2b1474f6b32b85085ab0bc390a372a4bdfea8854,2024-04-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.0,opt code
+3b2576672ea152f92463c76ad9fdbbdadb8a9c77,2024-05-19,ok,find (hit),0.0,0.0,0.0,0,0,22.1,fix warning
+3b2576672ea152f92463c76ad9fdbbdadb8a9c77,2024-05-19,ok,find (miss),0.0,0.0,0.0,0,0,22.8,fix warning
+3b2576672ea152f92463c76ad9fdbbdadb8a9c77,2024-05-19,ok,insert+erase,0.0,0.0,0.0,0,0,71.2,fix warning
+3b2576672ea152f92463c76ad9fdbbdadb8a9c77,2024-05-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,fix warning
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,find (hit),0.0,0.0,0.0,0,0,33.9,fix marco compile issue
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,find (miss),0.0,0.0,0.0,0,0,23.0,fix marco compile issue
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,insert+erase,0.0,0.0,0.0,0,0,72.5,fix marco compile issue
+bdebddbdce1b473bbc189178fd523ef4a876ea01,2024-08-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,fix marco compile issue
+afd962a68047f864e29063a33649c0b108741f8c,2024-11-06,ok,find (hit),0.0,0.0,0.0,0,0,23.6,Merge pull request #41 from sesse/master
+afd962a68047f864e29063a33649c0b108741f8c,2024-11-06,ok,find (miss),0.0,0.0,0.0,0,0,22.7,Merge pull request #41 from sesse/master
+afd962a68047f864e29063a33649c0b108741f8c,2024-11-06,ok,insert+erase,0.0,0.0,0.0,0,0,72.9,Merge pull request #41 from sesse/master
+afd962a68047f864e29063a33649c0b108741f8c,2024-11-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.0,Merge pull request #41 from sesse/master
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,find (hit),0.0,0.0,0.0,0,0,21.9,fix hash_table8.hpp some warning
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,find (miss),0.0,0.0,0.0,0,0,22.5,fix hash_table8.hpp some warning
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,insert+erase,0.0,0.0,0.0,0,0,71.7,fix hash_table8.hpp some warning
+fe863d5d7493b06653515abe83f4958df9144d93,2024-12-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.1,fix hash_table8.hpp some warning
+48e918928351648a3018848c1e85852155a93f49,2024-12-07,ok,find (hit),0.0,0.0,0.0,0,0,34.2,fix warning
+48e918928351648a3018848c1e85852155a93f49,2024-12-07,ok,find (miss),0.0,0.0,0.0,0,0,30.8,fix warning
+48e918928351648a3018848c1e85852155a93f49,2024-12-07,ok,insert+erase,0.0,0.0,0.0,0,0,71.2,fix warning
+48e918928351648a3018848c1e85852155a93f49,2024-12-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,fix warning
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,find (hit),0.0,0.0,0.0,0,0,21.6,fix warning
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,find (miss),0.0,0.0,0.0,0,0,22.1,fix warning
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,insert+erase,0.0,0.0,0.0,0,0,87.9,fix warning
+b6324b3f66900e9a2b8a38e05690877051f9d482,2024-12-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,30.1,fix warning
+a2678c37b69a91569b9a4c5bc10a3bee19c68b47,2024-12-21,ok,find (hit),0.0,0.0,0.0,0,0,22.1,small opt
+a2678c37b69a91569b9a4c5bc10a3bee19c68b47,2024-12-21,ok,find (miss),0.0,0.0,0.0,0,0,21.9,small opt
+a2678c37b69a91569b9a4c5bc10a3bee19c68b47,2024-12-21,ok,insert+erase,0.0,0.0,0.0,0,0,70.5,small opt
+a2678c37b69a91569b9a4c5bc10a3bee19c68b47,2024-12-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,small opt
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,find (hit),0.0,0.0,0.0,0,0,23.5,Merge pull request #44 from cppLawyer/patch-1
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,find (miss),0.0,0.0,0.0,0,0,23.7,Merge pull request #44 from cppLawyer/patch-1
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,insert+erase,0.0,0.0,0.0,0,0,89.9,Merge pull request #44 from cppLawyer/patch-1
+61265fb1ae9bb8aed62475879ed472cf2bd9151d,2024-12-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.8,Merge pull request #44 from cppLawyer/patch-1
+8f5502c1fee04512e73a3fd379b2e894078279be,2025-01-01,ok,find (hit),0.0,0.0,0.0,0,0,21.6,fix compile issue
+8f5502c1fee04512e73a3fd379b2e894078279be,2025-01-01,ok,find (miss),0.0,0.0,0.0,0,0,22.3,fix compile issue
+8f5502c1fee04512e73a3fd379b2e894078279be,2025-01-01,ok,insert+erase,0.0,0.0,0.0,0,0,73.5,fix compile issue
+8f5502c1fee04512e73a3fd379b2e894078279be,2025-01-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.5,fix compile issue
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,find (hit),0.0,0.0,0.0,0,0,33.1,fix hash8 compile bug
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,find (miss),0.0,0.0,0.0,0,0,32.0,fix hash8 compile bug
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,insert+erase,0.0,0.0,0.0,0,0,94.1,fix hash8 compile bug
+163553410de9768a962d3b9fb5c34593e3d69205,2025-01-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.4,fix hash8 compile bug
+3ba9abdfdc2e0430fcc2fd8993cad31945b6a02b,2025-01-27,ok,find (hit),0.0,0.0,0.0,0,0,21.5,fix compile issue on arm cpu
+3ba9abdfdc2e0430fcc2fd8993cad31945b6a02b,2025-01-27,ok,find (miss),0.0,0.0,0.0,0,0,21.8,fix compile issue on arm cpu
+3ba9abdfdc2e0430fcc2fd8993cad31945b6a02b,2025-01-27,ok,insert+erase,0.0,0.0,0.0,0,0,68.6,fix compile issue on arm cpu
+3ba9abdfdc2e0430fcc2fd8993cad31945b6a02b,2025-01-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,fix compile issue on arm cpu
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,find (hit),0.0,0.0,0.0,0,0,21.6,Merge pull request #48 from userdocs/patch-1
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,find (miss),0.0,0.0,0.0,0,0,21.9,Merge pull request #48 from userdocs/patch-1
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,insert+erase,0.0,0.0,0.0,0,0,68.7,Merge pull request #48 from userdocs/patch-1
+e2987ec7c0d35b2e0e3d5a2a2727d208ddbba468,2025-01-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.2,Merge pull request #48 from userdocs/patch-1
+419c8fd8d44d2a8427d131d732c984e435c90e89,2025-03-18,ok,find (hit),0.0,0.0,0.0,0,0,31.5,fix -Werror=conversion
+419c8fd8d44d2a8427d131d732c984e435c90e89,2025-03-18,ok,find (miss),0.0,0.0,0.0,0,0,31.0,fix -Werror=conversion
+419c8fd8d44d2a8427d131d732c984e435c90e89,2025-03-18,ok,insert+erase,0.0,0.0,0.0,0,0,93.5,fix -Werror=conversion
+419c8fd8d44d2a8427d131d732c984e435c90e89,2025-03-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.9,fix -Werror=conversion
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,find (hit),0.0,0.0,0.0,0,0,21.5,Merge pull request #55 from apocelipes/fix-Wsign-compare
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,find (miss),0.0,0.0,0.0,0,0,22.2,Merge pull request #55 from apocelipes/fix-Wsign-compare
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,insert+erase,0.0,0.0,0.0,0,0,68.7,Merge pull request #55 from apocelipes/fix-Wsign-compare
+0a3107222b4f1d2f3286fb84c2d468ea5ec50373,2025-03-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.2,Merge pull request #55 from apocelipes/fix-Wsign-compare
+9c681fc7da120f7923b6c171fe797de6406c3fc4,2025-03-24,ok,find (hit),0.0,0.0,0.0,0,0,21.4,Merge pull request #57 from bytesiz3d/fix_hash_table8
+9c681fc7da120f7923b6c171fe797de6406c3fc4,2025-03-24,ok,find (miss),0.0,0.0,0.0,0,0,22.0,Merge pull request #57 from bytesiz3d/fix_hash_table8
+9c681fc7da120f7923b6c171fe797de6406c3fc4,2025-03-24,ok,insert+erase,0.0,0.0,0.0,0,0,69.6,Merge pull request #57 from bytesiz3d/fix_hash_table8
+9c681fc7da120f7923b6c171fe797de6406c3fc4,2025-03-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.9,Merge pull request #57 from bytesiz3d/fix_hash_table8
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,find (hit),0.0,0.0,0.0,0,0,31.7,Merge pull request #58 from apocelipes/fix-discards-qualifiers
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,find (miss),0.0,0.0,0.0,0,0,31.1,Merge pull request #58 from apocelipes/fix-discards-qualifiers
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,insert+erase,0.0,0.0,0.0,0,0,111.5,Merge pull request #58 from apocelipes/fix-discards-qualifiers
+beae64cf1ef9e2be04923942aa457f729d105d04,2025-03-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,52.0,Merge pull request #58 from apocelipes/fix-discards-qualifiers
+add42edfaccab4a2d233948043e2db28b7b402e6,2025-04-13,ok,find (hit),0.0,0.0,0.0,0,0,21.9,fix is_triviall_destructable
+add42edfaccab4a2d233948043e2db28b7b402e6,2025-04-13,ok,find (miss),0.0,0.0,0.0,0,0,22.5,fix is_triviall_destructable
+add42edfaccab4a2d233948043e2db28b7b402e6,2025-04-13,ok,insert+erase,0.0,0.0,0.0,0,0,81.6,fix is_triviall_destructable
+add42edfaccab4a2d233948043e2db28b7b402e6,2025-04-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.4,fix is_triviall_destructable
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,find (hit),0.0,0.0,0.0,0,0,33.8,merge fix
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,find (miss),0.0,0.0,0.0,0,0,22.6,merge fix
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,merge fix
+83957183664af4815cc0e038425b1f9484497c48,2025-04-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.8,merge fix
+a5b522458c96c95a6146953efd0cc59059307130,2025-05-31,ok,find (hit),0.0,0.0,0.0,0,0,22.4,fix wanging
+a5b522458c96c95a6146953efd0cc59059307130,2025-05-31,ok,find (miss),0.0,0.0,0.0,0,0,23.1,fix wanging
+a5b522458c96c95a6146953efd0cc59059307130,2025-05-31,ok,insert+erase,0.0,0.0,0.0,0,0,74.2,fix wanging
+a5b522458c96c95a6146953efd0cc59059307130,2025-05-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.4,fix wanging
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,find (hit),0.0,0.0,0.0,0,0,25.5,fix small size overflow with emhash8
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,find (miss),0.0,0.0,0.0,0,0,21.9,fix small size overflow with emhash8
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,insert+erase,0.0,0.0,0.0,0,0,69.6,fix small size overflow with emhash8
+cf820bb091542a921cda1d3914b3159a1900749e,2025-08-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.1,fix small size overflow with emhash8
+6381bc6411cde00b44e835fa068dd36f3bffb53b,2025-08-16,ok,find (hit),0.0,0.0,0.0,0,0,21.9,fix warning of test
+6381bc6411cde00b44e835fa068dd36f3bffb53b,2025-08-16,ok,find (miss),0.0,0.0,0.0,0,0,22.1,fix warning of test
+6381bc6411cde00b44e835fa068dd36f3bffb53b,2025-08-16,ok,insert+erase,0.0,0.0,0.0,0,0,68.9,fix warning of test
+6381bc6411cde00b44e835fa068dd36f3bffb53b,2025-08-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix warning of test
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,find (hit),0.0,0.0,0.0,0,0,21.7,hash_table8.hpp set Allocator but not used
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,find (miss),0.0,0.0,0.0,0,0,21.9,hash_table8.hpp set Allocator but not used
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,insert+erase,0.0,0.0,0.0,0,0,68.5,hash_table8.hpp set Allocator but not used
+c69002a84b1f9186827334a226a26968ace44b9f,2025-08-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.4,hash_table8.hpp set Allocator but not used
+a8ec2a11c15cd0243f568d996614c448f3064822,2025-08-30,ok,find (hit),0.0,0.0,0.0,0,0,21.8,fix overflow in rehash
+a8ec2a11c15cd0243f568d996614c448f3064822,2025-08-30,ok,find (miss),0.0,0.0,0.0,0,0,22.7,fix overflow in rehash
+a8ec2a11c15cd0243f568d996614c448f3064822,2025-08-30,ok,insert+erase,0.0,0.0,0.0,0,0,69.5,fix overflow in rehash
+a8ec2a11c15cd0243f568d996614c448f3064822,2025-08-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.2,fix overflow in rehash
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,find (hit),0.0,0.0,0.0,0,0,31.2,opt rehash
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,find (miss),0.0,0.0,0.0,0,0,23.7,opt rehash
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,insert+erase,0.0,0.0,0.0,0,0,72.5,opt rehash
+c8c4d5b8a6d8f2234ec44ed45289aa265070b3f2,2025-08-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.9,opt rehash
+194fb606a1163c0618dc0015145209e175728ed1,2025-09-06,ok,find (hit),0.0,0.0,0.0,0,0,21.7,fix some api issuse
+194fb606a1163c0618dc0015145209e175728ed1,2025-09-06,ok,find (miss),0.0,0.0,0.0,0,0,23.7,fix some api issuse
+194fb606a1163c0618dc0015145209e175728ed1,2025-09-06,ok,insert+erase,0.0,0.0,0.0,0,0,69.8,fix some api issuse
+194fb606a1163c0618dc0015145209e175728ed1,2025-09-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.7,fix some api issuse
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,find (hit),0.0,0.0,0.0,0,0,21.5,opt warning
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,find (miss),0.0,0.0,0.0,0,0,21.7,opt warning
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,insert+erase,0.0,0.0,0.0,0,0,72.7,opt warning
+5fd4893b3c7d8ebac99f5816c3689859b9cce888,2025-09-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.5,opt warning
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,find (hit),0.0,0.0,0.0,0,0,20.9,opt iterator
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,find (miss),0.0,0.0,0.0,0,0,21.6,opt iterator
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,insert+erase,0.0,0.0,0.0,0,0,70.8,opt iterator
+970e970e457d9408c716847fa21f78a926685566,2025-09-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.3,opt iterator
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,find (hit),0.0,0.0,0.0,0,0,29.4,fix compile issue
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,find (miss),0.0,0.0,0.0,0,0,21.6,fix compile issue
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,insert+erase,0.0,0.0,0.0,0,0,76.1,fix compile issue
+c6e4e2f7dda5a5a04e3dd6b68a9efc9219396186,2025-10-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,fix compile issue
+323298ea9118e9c28b6e78f485f5a970842d963f,2025-10-23,ok,find (hit),0.0,0.0,0.0,0,0,22.6,Merge pull request #71 from robertszafa/rob/woa_compilation_fix
+323298ea9118e9c28b6e78f485f5a970842d963f,2025-10-23,ok,find (miss),0.0,0.0,0.0,0,0,21.6,Merge pull request #71 from robertszafa/rob/woa_compilation_fix
+323298ea9118e9c28b6e78f485f5a970842d963f,2025-10-23,ok,insert+erase,0.0,0.0,0.0,0,0,74.5,Merge pull request #71 from robertszafa/rob/woa_compilation_fix
+323298ea9118e9c28b6e78f485f5a970842d963f,2025-10-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.6,Merge pull request #71 from robertszafa/rob/woa_compilation_fix
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,find (hit),0.0,0.0,0.0,0,0,21.1,mod:improve test
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,find (miss),0.0,0.0,0.0,0,0,21.6,mod:improve test
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,insert+erase,0.0,0.0,0.0,0,0,73.7,mod:improve test
+dea46a4765e070b95e819757330c8dbe2d4d74f3,2025-11-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.3,mod:improve test
+f0abe5e02f2ec27d53e8334091f4e0a654b9e2a2,2026-01-18,ok,find (hit),0.0,0.0,0.0,0,0,31.2,FIX:_mm256_set1_epi32 avx2
+f0abe5e02f2ec27d53e8334091f4e0a654b9e2a2,2026-01-18,ok,find (miss),0.0,0.0,0.0,0,0,31.0,FIX:_mm256_set1_epi32 avx2
+f0abe5e02f2ec27d53e8334091f4e0a654b9e2a2,2026-01-18,ok,insert+erase,0.0,0.0,0.0,0,0,90.7,FIX:_mm256_set1_epi32 avx2
+f0abe5e02f2ec27d53e8334091f4e0a654b9e2a2,2026-01-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.3,FIX:_mm256_set1_epi32 avx2
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,find (hit),0.0,0.0,0.0,0,0,20.8,Merge pull request #76 from tarun-t/feature/allocator-support
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,find (miss),0.0,0.0,0.0,0,0,21.7,Merge pull request #76 from tarun-t/feature/allocator-support
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,insert+erase,0.0,0.0,0.0,0,0,68.1,Merge pull request #76 from tarun-t/feature/allocator-support
+d0628ffcdb37f6e43511a355515469d81916367c,2026-03-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.1,Merge pull request #76 from tarun-t/feature/allocator-support
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,find (hit),0.0,0.0,0.0,0,0,20.8,fix:highload factor by AI
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,find (miss),0.0,0.0,0.0,0,0,21.9,fix:highload factor by AI
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,insert+erase,0.0,0.0,0.0,0,0,69.9,fix:highload factor by AI
+35e98d687757d4321dcb1caad4bd1285b50597f0,2026-06-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,fix:highload factor by AI
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,find (hit),0.0,0.0,0.0,0,0,21.9,fix:overflow
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,find (miss),0.0,0.0,0.0,0,0,23.9,fix:overflow
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,insert+erase,0.0,0.0,0.0,0,0,72.1,fix:overflow
+ba124419b1cf63c1603bd24e22dc8f6c8f856c5a,2026-06-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.3,fix:overflow
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,find (hit),0.0,0.0,0.0,0,0,23.1,fix: two critical bugs in emhash8 reserve() and erase_slot()
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,find (miss),0.0,0.0,0.0,0,0,23.5,fix: two critical bugs in emhash8 reserve() and erase_slot()
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,fix: two critical bugs in emhash8 reserve() and erase_slot()
+0d0bd7200d049e0fc07323687d9c2c5002b1c416,2026-06-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,fix: two critical bugs in emhash8 reserve() and erase_slot()
+6b02c8de86ef070b15007ee396488a046e844f68,2026-06-12,run failed,,,,,,,,add more test and bench code
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,find (hit),0.0,0.0,0.0,0,0,22.1,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,find (miss),0.0,0.0,0.0,0,0,23.9,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,insert+erase,0.0,0.0,0.0,0,0,71.9,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations
+c816f0034ee242f6f51d85a004d3938ff779d73d,2026-06-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.3,fix: critical bugs in hash_table5/6/8 and emilib2s/2ss implementations
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,find (hit),0.0,0.0,0.0,0,0,27.6,fix:some fix by AI
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,find (miss),0.0,0.0,0.0,0,0,25.0,fix:some fix by AI
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,insert+erase,0.0,0.0,0.0,0,0,71.4,fix:some fix by AI
+97af6639b82126fea29127e4494eb89eac6c9665,2026-06-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.6,fix:some fix by AI
+9cf9a39bde3d8f9b0c932e2cf92e2d32013cdaeb,2026-06-14,ok,find (hit),0.0,0.0,0.0,0,0,22.3,"feat: add CI, docs, examples, packaging and cross-platform fixes"
+9cf9a39bde3d8f9b0c932e2cf92e2d32013cdaeb,2026-06-14,ok,find (miss),0.0,0.0,0.0,0,0,23.9,"feat: add CI, docs, examples, packaging and cross-platform fixes"
+9cf9a39bde3d8f9b0c932e2cf92e2d32013cdaeb,2026-06-14,ok,insert+erase,0.0,0.0,0.0,0,0,72.1,"feat: add CI, docs, examples, packaging and cross-platform fixes"
+9cf9a39bde3d8f9b0c932e2cf92e2d32013cdaeb,2026-06-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.5,"feat: add CI, docs, examples, packaging and cross-platform fixes"
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,find (hit),0.0,0.0,0.0,0,0,21.7,refactor: move headers to include/emhash/ for standard layout
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,find (miss),0.0,0.0,0.0,0,0,24.2,refactor: move headers to include/emhash/ for standard layout
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,insert+erase,0.0,0.0,0.0,0,0,71.7,refactor: move headers to include/emhash/ for standard layout
+b4bb3229a28641df948ed74d4bfd84a5e0fe0d5c,2026-06-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,refactor: move headers to include/emhash/ for standard layout
+bce7d711b9c718c33a3cd3c1d9ab649ece703ee3,2026-06-14,ok,find (hit),0.0,0.0,0.0,0,0,21.8,Merge pull request #82 from orgads/multiline
+bce7d711b9c718c33a3cd3c1d9ab649ece703ee3,2026-06-14,ok,find (miss),0.0,0.0,0.0,0,0,24.1,Merge pull request #82 from orgads/multiline
+bce7d711b9c718c33a3cd3c1d9ab649ece703ee3,2026-06-14,ok,insert+erase,0.0,0.0,0.0,0,0,71.9,Merge pull request #82 from orgads/multiline
+bce7d711b9c718c33a3cd3c1d9ab649ece703ee3,2026-06-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,Merge pull request #82 from orgads/multiline
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,find (hit),0.0,0.0,0.0,0,0,27.8,Merge pull request #83 from orgads/typos
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,find (miss),0.0,0.0,0.0,0,0,33.9,Merge pull request #83 from orgads/typos
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,insert+erase,0.0,0.0,0.0,0,0,77.7,Merge pull request #83 from orgads/typos
+b3b2cf85fff0eb029c24ea3ec1ea7da4e43f1a2a,2026-06-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,Merge pull request #83 from orgads/typos
+c10601c0fccfc060ac558ca9f05aedeb2399105b,2026-06-14,ok,find (hit),0.0,0.0,0.0,0,0,31.2,Merge pull request #84 from orgads/trailing-ws
+c10601c0fccfc060ac558ca9f05aedeb2399105b,2026-06-14,ok,find (miss),0.0,0.0,0.0,0,0,31.6,Merge pull request #84 from orgads/trailing-ws
+c10601c0fccfc060ac558ca9f05aedeb2399105b,2026-06-14,ok,insert+erase,0.0,0.0,0.0,0,0,74.8,Merge pull request #84 from orgads/trailing-ws
+c10601c0fccfc060ac558ca9f05aedeb2399105b,2026-06-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.1,Merge pull request #84 from orgads/trailing-ws
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,find (hit),0.0,0.0,0.0,0,0,21.7,Merge pull request #89 from orgads/unlikely-msvc
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,find (miss),0.0,0.0,0.0,0,0,23.9,Merge pull request #89 from orgads/unlikely-msvc
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,insert+erase,0.0,0.0,0.0,0,0,74.3,Merge pull request #89 from orgads/unlikely-msvc
+571c4c2e2739c6232bf26ceca4e82c82b2b7985c,2026-06-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,Merge pull request #89 from orgads/unlikely-msvc
+27f64291747ba78d0ed1bd42efd59d640548d015,2026-06-17,ok,find (hit),0.0,0.0,0.0,0,0,22.1,refactor: reorganize project structure and clean up codebase
+27f64291747ba78d0ed1bd42efd59d640548d015,2026-06-17,ok,find (miss),0.0,0.0,0.0,0,0,23.7,refactor: reorganize project structure and clean up codebase
+27f64291747ba78d0ed1bd42efd59d640548d015,2026-06-17,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,refactor: reorganize project structure and clean up codebase
+27f64291747ba78d0ed1bd42efd59d640548d015,2026-06-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,refactor: reorganize project structure and clean up codebase
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,find (hit),0.0,0.0,0.0,0,0,21.8,fix:add head
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,find (miss),0.0,0.0,0.0,0,0,23.6,fix:add head
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,fix:add head
+6277161640c10e769a4e96453c621c421498682e,2026-06-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.8,fix:add head
+d3396eb493952399c0ccf254b0b10848c7a0ad43,2026-06-17,ok,find (hit),0.0,0.0,0.0,0,0,21.4,fix:head file
+d3396eb493952399c0ccf254b0b10848c7a0ad43,2026-06-17,ok,find (miss),0.0,0.0,0.0,0,0,24.1,fix:head file
+d3396eb493952399c0ccf254b0b10848c7a0ad43,2026-06-17,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,fix:head file
+d3396eb493952399c0ccf254b0b10848c7a0ad43,2026-06-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.7,fix:head file
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,find (hit),0.0,0.0,0.0,0,0,25.2,fix: CTZ parameter type mismatch and missing cstdint in emilib
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,find (miss),0.0,0.0,0.0,0,0,24.0,fix: CTZ parameter type mismatch and missing cstdint in emilib
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,insert+erase,0.0,0.0,0.0,0,0,72.3,fix: CTZ parameter type mismatch and missing cstdint in emilib
+443d1d723069e89cbf109e9a51c935fd2ffd3157,2026-06-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.1,fix: CTZ parameter type mismatch and missing cstdint in emilib
+fcf825003b98d5ba96a472916f4785c2ddc0c3b8,2026-06-18,ok,find (hit),0.0,0.0,0.0,0,0,22.2,"fix: interface consistency, bug fixes, and project reorganization"
+fcf825003b98d5ba96a472916f4785c2ddc0c3b8,2026-06-18,ok,find (miss),0.0,0.0,0.0,0,0,23.8,"fix: interface consistency, bug fixes, and project reorganization"
+fcf825003b98d5ba96a472916f4785c2ddc0c3b8,2026-06-18,ok,insert+erase,0.0,0.0,0.0,0,0,71.8,"fix: interface consistency, bug fixes, and project reorganization"
+fcf825003b98d5ba96a472916f4785c2ddc0c3b8,2026-06-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,"fix: interface consistency, bug fixes, and project reorganization"
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,find (hit),0.0,0.0,0.0,0,0,21.9,fix: resolve sign-compare and old-style-cast warnings in CI
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,find (miss),0.0,0.0,0.0,0,0,23.8,fix: resolve sign-compare and old-style-cast warnings in CI
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,insert+erase,0.0,0.0,0.0,0,0,71.8,fix: resolve sign-compare and old-style-cast warnings in CI
+57db8b5072810c4dd3030853ff8ba3fc4ac51116,2026-06-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.5,fix: resolve sign-compare and old-style-cast warnings in CI
+25a7b6c79b8c1f33fc72b2436f73fb85524a06d2,2026-06-19,ok,find (hit),0.0,0.0,0.0,0,0,21.6,"chore: fix headers URL, conanfile, scripts cleanup"
+25a7b6c79b8c1f33fc72b2436f73fb85524a06d2,2026-06-19,ok,find (miss),0.0,0.0,0.0,0,0,23.8,"chore: fix headers URL, conanfile, scripts cleanup"
+25a7b6c79b8c1f33fc72b2436f73fb85524a06d2,2026-06-19,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,"chore: fix headers URL, conanfile, scripts cleanup"
+25a7b6c79b8c1f33fc72b2436f73fb85524a06d2,2026-06-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,"chore: fix headers URL, conanfile, scripts cleanup"
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,find (hit),0.0,0.0,0.0,0,0,22.4,refactor: reorganize project structure and fix CI/build issues
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,find (miss),0.0,0.0,0.0,0,0,23.8,refactor: reorganize project structure and fix CI/build issues
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,insert+erase,0.0,0.0,0.0,0,0,70.6,refactor: reorganize project structure and fix CI/build issues
+7f6eb4f04e54587a43cd942e5335adef9b3b1828,2026-06-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.6,refactor: reorganize project structure and fix CI/build issues
+e292e5fada89a6af2ed7c0dbc3a4600d74f68c96,2026-06-19,ok,find (hit),0.0,0.0,0.0,0,0,31.7,"fix: remove incorrect noexcept and add defensive checks in include/ - Remove noexcept from emplace, operator[], insert, insert_or_assign, insert_unique that may trigger rehash throwing std::bad_alloc - Add self-loop exit check in find_slot_bucket to prevent infinite loop - Add boundary check for size_type-- underflow in rehash loops - Fix is_trivially_destructible() -> need_explicit_dtor() function name - Enable __builtin_prefetch in hash_set8.hpp prefetch_heap_block - Make iterator::kv_ private with friend access in hash_set8.hpp - Fix size_type conditional compilation using #if defined() - Fix empty table begin() returning invalid iterator in lru_size/time - Fix unused parameter warnings in hash_set2/3/4 emplace_hint/initializer_list - Translate Dutch comments to English in hash_set8.hpp - Update tests/CMakeLists.txt and conanfile.py"
+e292e5fada89a6af2ed7c0dbc3a4600d74f68c96,2026-06-19,ok,find (miss),0.0,0.0,0.0,0,0,34.1,"fix: remove incorrect noexcept and add defensive checks in include/ - Remove noexcept from emplace, operator[], insert, insert_or_assign, insert_unique that may trigger rehash throwing std::bad_alloc - Add self-loop exit check in find_slot_bucket to prevent infinite loop - Add boundary check for size_type-- underflow in rehash loops - Fix is_trivially_destructible() -> need_explicit_dtor() function name - Enable __builtin_prefetch in hash_set8.hpp prefetch_heap_block - Make iterator::kv_ private with friend access in hash_set8.hpp - Fix size_type conditional compilation using #if defined() - Fix empty table begin() returning invalid iterator in lru_size/time - Fix unused parameter warnings in hash_set2/3/4 emplace_hint/initializer_list - Translate Dutch comments to English in hash_set8.hpp - Update tests/CMakeLists.txt and conanfile.py"
+e292e5fada89a6af2ed7c0dbc3a4600d74f68c96,2026-06-19,ok,insert+erase,0.0,0.0,0.0,0,0,93.8,"fix: remove incorrect noexcept and add defensive checks in include/ - Remove noexcept from emplace, operator[], insert, insert_or_assign, insert_unique that may trigger rehash throwing std::bad_alloc - Add self-loop exit check in find_slot_bucket to prevent infinite loop - Add boundary check for size_type-- underflow in rehash loops - Fix is_trivially_destructible() -> need_explicit_dtor() function name - Enable __builtin_prefetch in hash_set8.hpp prefetch_heap_block - Make iterator::kv_ private with friend access in hash_set8.hpp - Fix size_type conditional compilation using #if defined() - Fix empty table begin() returning invalid iterator in lru_size/time - Fix unused parameter warnings in hash_set2/3/4 emplace_hint/initializer_list - Translate Dutch comments to English in hash_set8.hpp - Update tests/CMakeLists.txt and conanfile.py"
+e292e5fada89a6af2ed7c0dbc3a4600d74f68c96,2026-06-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.6,"fix: remove incorrect noexcept and add defensive checks in include/ - Remove noexcept from emplace, operator[], insert, insert_or_assign, insert_unique that may trigger rehash throwing std::bad_alloc - Add self-loop exit check in find_slot_bucket to prevent infinite loop - Add boundary check for size_type-- underflow in rehash loops - Fix is_trivially_destructible() -> need_explicit_dtor() function name - Enable __builtin_prefetch in hash_set8.hpp prefetch_heap_block - Make iterator::kv_ private with friend access in hash_set8.hpp - Fix size_type conditional compilation using #if defined() - Fix empty table begin() returning invalid iterator in lru_size/time - Fix unused parameter warnings in hash_set2/3/4 emplace_hint/initializer_list - Translate Dutch comments to English in hash_set8.hpp - Update tests/CMakeLists.txt and conanfile.py"
+ef71c32cc993f19426664dfb65aa816a576e381a,2026-06-19,build failed,,,,,,,,"refactor: extract config.hpp, fix EMH_LIKELY MSVC bug, remove dead code, update docs"
+8242437a402c54881797afb8cf1d7f38747bf703,2026-06-19,build failed,,,,,,,,"fix(docs,core): resolve risk points and documentation issues"
+15aa46ce3e207d16dc72f990e3e419497669cd06,2026-06-19,build failed,,,,,,,,"fix(core,docs): reserve bounds, emilib SIMD stride, hash-flood test, doc fixes"
+46557db4ff5556cdce29c95243d3fc5420bc942b,2026-06-19,build failed,,,,,,,,chore: apply clang-format to include/ and tests/
+c99a1394c6cb30a011db50100f22602c56f6fdb0,2026-06-19,build failed,,,,,,,,update ci
+933ee6915b31ef88a97884fa2580c4f604a6c8da,2026-06-20,build failed,,,,,,,,fix(core): eliminate strict compilation warnings across GCC/Clang/MSVC
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,22.2,fix(core): change config.hpp include path to relative
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.9,fix(core): change config.hpp include path to relative
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,70.9,fix(core): change config.hpp include path to relative
+23cca367b9a4986d9365e961fd7893ba875d5501,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.8,fix(core): change config.hpp include path to relative
+bcaa88ac6c7fbba0cc22ec34d7647c7d5d364904,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,28.1,fix(core): use memcpy to avoid misaligned access in hash_table7
+bcaa88ac6c7fbba0cc22ec34d7647c7d5d364904,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,28.1,fix(core): use memcpy to avoid misaligned access in hash_table7
+bcaa88ac6c7fbba0cc22ec34d7647c7d5d364904,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,74.1,fix(core): use memcpy to avoid misaligned access in hash_table7
+bcaa88ac6c7fbba0cc22ec34d7647c7d5d364904,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,fix(core): use memcpy to avoid misaligned access in hash_table7
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,21.9,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4"
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.6,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4"
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,74.1,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4"
+1b9a7c1fbe5aedc1159f2abfca96c1dde604b23d,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.4,"feat(bench): add Google Benchmark, fix misaligned access in hash_table6/hash_set4"
+ebef5babd9377c5f8248074cd8dc40f0fdac82c8,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,22.0,fix(emilib): fix _mlf overflow causing rehash failure and CI hang
+ebef5babd9377c5f8248074cd8dc40f0fdac82c8,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.9,fix(emilib): fix _mlf overflow causing rehash failure and CI hang
+ebef5babd9377c5f8248074cd8dc40f0fdac82c8,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,73.1,fix(emilib): fix _mlf overflow causing rehash failure and CI hang
+ebef5babd9377c5f8248074cd8dc40f0fdac82c8,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,fix(emilib): fix _mlf overflow causing rehash failure and CI hang
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,21.8,fix(emilib): add static_cast<size_t> to silence -Wconversion warning
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.9,fix(emilib): add static_cast<size_t> to silence -Wconversion warning
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,71.7,fix(emilib): add static_cast<size_t> to silence -Wconversion warning
+06974d70961ce02c7fd3deb5c5b4e8f4ad4f60a5,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,fix(emilib): add static_cast<size_t> to silence -Wconversion warning
+6b8d37bf5c45d3a86fd086cb3aab7a9c5f40e5f1,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,21.6,fix: add static_cast for all uint64_t to size_t/uint32_t conversions
+6b8d37bf5c45d3a86fd086cb3aab7a9c5f40e5f1,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.7,fix: add static_cast for all uint64_t to size_t/uint32_t conversions
+6b8d37bf5c45d3a86fd086cb3aab7a9c5f40e5f1,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,71.4,fix: add static_cast for all uint64_t to size_t/uint32_t conversions
+6b8d37bf5c45d3a86fd086cb3aab7a9c5f40e5f1,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.8,fix: add static_cast for all uint64_t to size_t/uint32_t conversions
+22766857f874bb06b20c3096a61f2df5dfa24ab7,2026-06-20,build failed,,,,,,,,fix(config): use __has_include for flexible config.hpp path resolution
+fddad91b0b0679bef91f7152671ba49b2ac8fd23,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,23.7,fix(config): add missing #endif for EMH_CONFIG_INCLUDED guard
+fddad91b0b0679bef91f7152671ba49b2ac8fd23,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.6,fix(config): add missing #endif for EMH_CONFIG_INCLUDED guard
+fddad91b0b0679bef91f7152671ba49b2ac8fd23,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,fix(config): add missing #endif for EMH_CONFIG_INCLUDED guard
+fddad91b0b0679bef91f7152671ba49b2ac8fd23,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,fix(config): add missing #endif for EMH_CONFIG_INCLUDED guard
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,21.7,test: add string key and memory leak tests + fix emihmap2 sentinel leak
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.9,test: add string key and memory leak tests + fix emihmap2 sentinel leak
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,71.8,test: add string key and memory leak tests + fix emihmap2 sentinel leak
+add3072b42143418dfb8ed54e814fd6bff76fb51,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.2,test: add string key and memory leak tests + fix emihmap2 sentinel leak
+47b629cdbf36026fd326f42b43619fefc5520e53,2026-06-20,ok,find (hit),0.0,0.0,0.0,0,0,21.9,"fix: comprehensive code quality, safety, and documentation improvements"
+47b629cdbf36026fd326f42b43619fefc5520e53,2026-06-20,ok,find (miss),0.0,0.0,0.0,0,0,23.6,"fix: comprehensive code quality, safety, and documentation improvements"
+47b629cdbf36026fd326f42b43619fefc5520e53,2026-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,72.7,"fix: comprehensive code quality, safety, and documentation improvements"
+47b629cdbf36026fd326f42b43619fefc5520e53,2026-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.8,"fix: comprehensive code quality, safety, and documentation improvements"
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,find (hit),0.0,0.0,0.0,0,0,21.9,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering"
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,find (miss),0.0,0.0,0.0,0,0,23.9,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering"
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,74.9,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering"
+56b58428a5a4e74370c5ed7c85e020a732d3cf16,2026-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,"ci: enable format check, add clang-tidy, .gitattributes, improve engineering"
+0b2cfa42e56f3f2220c57ebf9d16b30dba242c20,2026-06-21,ok,find (hit),0.0,0.0,0.0,0,0,33.9,Fix documentation consistency and supply chain security
+0b2cfa42e56f3f2220c57ebf9d16b30dba242c20,2026-06-21,ok,find (miss),0.0,0.0,0.0,0,0,34.1,Fix documentation consistency and supply chain security
+0b2cfa42e56f3f2220c57ebf9d16b30dba242c20,2026-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,97.4,Fix documentation consistency and supply chain security
+0b2cfa42e56f3f2220c57ebf9d16b30dba242c20,2026-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.4,Fix documentation consistency and supply chain security
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,find (hit),0.0,0.0,0.0,0,0,31.8,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros"
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,find (miss),0.0,0.0,0.0,0,0,23.7,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros"
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros"
+45e12ead917759d26501374839aa156e6323c98f,2026-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,"perf: restore prefetch, mark hot functions EMH_INLINE, replace unsafe macros"
+7090caa3ad2c660cd106df5daeaa06117668bd2f,2026-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.5,fix(hash_table7): correct EMH_NEW macro call with wrong argument count
+7090caa3ad2c660cd106df5daeaa06117668bd2f,2026-06-21,ok,find (miss),0.0,0.0,0.0,0,0,23.3,fix(hash_table7): correct EMH_NEW macro call with wrong argument count
+7090caa3ad2c660cd106df5daeaa06117668bd2f,2026-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,75.3,fix(hash_table7): correct EMH_NEW macro call with wrong argument count
+7090caa3ad2c660cd106df5daeaa06117668bd2f,2026-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,fix(hash_table7): correct EMH_NEW macro call with wrong argument count
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,find (hit),0.0,0.0,0.0,0,0,33.1,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15)
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,find (miss),0.0,0.0,0.0,0,0,34.4,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15)
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,95.0,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15)
+b8581ecaf426e544b44dedf620e602ff6e844c89,2026-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.6,fix: resolve all actionable high-priority issues (H1/H2/H3/C7/H15)
+379c5ec83b8d8f061f15853623e85ae502def95b,2026-06-21,ok,find (hit),0.0,0.0,0.0,0,0,33.0,fix(emihset2): silence -Wunused-parameter / -Wunused-variable warnings
+379c5ec83b8d8f061f15853623e85ae502def95b,2026-06-21,ok,find (miss),0.0,0.0,0.0,0,0,34.9,fix(emihset2): silence -Wunused-parameter / -Wunused-variable warnings
+379c5ec83b8d8f061f15853623e85ae502def95b,2026-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,99.7,fix(emihset2): silence -Wunused-parameter / -Wunused-variable warnings
+379c5ec83b8d8f061f15853623e85ae502def95b,2026-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,46.3,fix(emihset2): silence -Wunused-parameter / -Wunused-variable warnings
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,find (hit),0.0,0.0,0.0,0,0,22.3,fix: resolve clang-tidy and clang-format warnings
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,find (miss),0.0,0.0,0.0,0,0,24.1,fix: resolve clang-tidy and clang-format warnings
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,72.3,fix: resolve clang-tidy and clang-format warnings
+ca0408d6a17011686f9b12fc12056ccc1fc854f0,2026-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.7,fix: resolve clang-tidy and clang-format warnings
+8aa06ac23fea8fe46bee6c94fe36f75a1af151d9,2026-06-22,ok,find (hit),0.0,0.0,0.0,0,0,28.6,fix: improve SIMD header detection and ARM64 cross-compile
+8aa06ac23fea8fe46bee6c94fe36f75a1af151d9,2026-06-22,ok,find (miss),0.0,0.0,0.0,0,0,23.5,fix: improve SIMD header detection and ARM64 cross-compile
+8aa06ac23fea8fe46bee6c94fe36f75a1af151d9,2026-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,71.4,fix: improve SIMD header detection and ARM64 cross-compile
+8aa06ac23fea8fe46bee6c94fe36f75a1af151d9,2026-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,fix: improve SIMD header detection and ARM64 cross-compile
+362a057022181257643e37c2cf3a24e7373812a8,2026-06-22,build failed,,,,,,,,fix: move PairAllocTraits definition to class header
+1850c226818a852d461f4b3fcfd2f38d7fce5ad2,2026-06-22,ok,find (hit),0.0,0.0,0.0,0,0,21.7,fix: move Index struct definition before IndexAlloc
+1850c226818a852d461f4b3fcfd2f38d7fce5ad2,2026-06-22,ok,find (miss),0.0,0.0,0.0,0,0,24.0,fix: move Index struct definition before IndexAlloc
+1850c226818a852d461f4b3fcfd2f38d7fce5ad2,2026-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,72.4,fix: move Index struct definition before IndexAlloc
+1850c226818a852d461f4b3fcfd2f38d7fce5ad2,2026-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,fix: move Index struct definition before IndexAlloc
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,find (hit),0.0,0.0,0.0,0,0,21.8,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,find (miss),0.0,0.0,0.0,0,0,24.1,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,71.9,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error
+f64c75f88c3ff24eca962d885c85759df996f016,2026-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,fix: avoid memset for non-trivial types in rehash/clear to fix MSan error
+2ae1f7c43dcf4d834340cadf74ecc380e7154bf3,2026-06-22,ok,find (hit),0.0,0.0,0.0,0,0,21.9,"Revert ""fix: avoid memset for non-trivial types in rehash/clear to fix MSan error"""
+2ae1f7c43dcf4d834340cadf74ecc380e7154bf3,2026-06-22,ok,find (miss),0.0,0.0,0.0,0,0,24.2,"Revert ""fix: avoid memset for non-trivial types in rehash/clear to fix MSan error"""
+2ae1f7c43dcf4d834340cadf74ecc380e7154bf3,2026-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,72.8,"Revert ""fix: avoid memset for non-trivial types in rehash/clear to fix MSan error"""
+2ae1f7c43dcf4d834340cadf74ecc380e7154bf3,2026-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,"Revert ""fix: avoid memset for non-trivial types in rehash/clear to fix MSan error"""
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,find (hit),0.0,0.0,0.0,0,0,21.8,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types"
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,find (miss),0.0,0.0,0.0,0,0,24.1,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types"
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,72.6,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types"
+542ab73bc4b9ef318834a15ee3d3ecb19c572175,2026-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.1,"fix: use offsetof to init only bucket field, avoiding memset UB on non-trivial types"
+a15c2856d877f4278683dff17c013362997a9d0a,2026-06-22,ok,find (hit),0.0,0.0,0.0,0,0,21.7,fix: resolve nodiscard warnings and MSan UB in rehash
+a15c2856d877f4278683dff17c013362997a9d0a,2026-06-22,ok,find (miss),0.0,0.0,0.0,0,0,24.2,fix: resolve nodiscard warnings and MSan UB in rehash
+a15c2856d877f4278683dff17c013362997a9d0a,2026-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,72.8,fix: resolve nodiscard warnings and MSan UB in rehash
+a15c2856d877f4278683dff17c013362997a9d0a,2026-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.1,fix: resolve nodiscard warnings and MSan UB in rehash
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,find (hit),0.0,0.0,0.0,0,0,32.1,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,find (miss),0.0,0.0,0.0,0,0,34.8,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,98.7,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash
+bb2db92692144467dca2ee54b544ab71e95546b6,2026-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.1,fix: use need_explicit_dtor to conditionally memset/memcpy in rehash
+cab28193c2fe5c5fefa749d2f930dfb2af4a61bb,2026-06-23,ok,find (hit),0.0,0.0,0.0,0,0,32.0,fix: MSan uninitialized-value and PairAllocTraits build errors
+cab28193c2fe5c5fefa749d2f930dfb2af4a61bb,2026-06-23,ok,find (miss),0.0,0.0,0.0,0,0,25.1,fix: MSan uninitialized-value and PairAllocTraits build errors
+cab28193c2fe5c5fefa749d2f930dfb2af4a61bb,2026-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,fix: MSan uninitialized-value and PairAllocTraits build errors
+cab28193c2fe5c5fefa749d2f930dfb2af4a61bb,2026-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.6,fix: MSan uninitialized-value and PairAllocTraits build errors
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,find (hit),0.0,0.0,0.0,0,0,21.5,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,find (miss),0.0,0.0,0.0,0,0,23.7,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE
+3d5b871f0f031189d924696b4bab90fdec67cb39,2026-06-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix: hash_table6 clear() use EMH_ADDR instead of .second for INACTIVE
+3705df7736bbee947623f4f46a77c52537f5b33a,2026-06-24,ok,find (hit),0.0,0.0,0.0,0,0,21.4,fix: hash_table6 clone() memcpy UB for non-trivially-copyable types + clang-format
+3705df7736bbee947623f4f46a77c52537f5b33a,2026-06-24,ok,find (miss),0.0,0.0,0.0,0,0,23.7,fix: hash_table6 clone() memcpy UB for non-trivially-copyable types + clang-format
+3705df7736bbee947623f4f46a77c52537f5b33a,2026-06-24,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,fix: hash_table6 clone() memcpy UB for non-trivially-copyable types + clang-format
+3705df7736bbee947623f4f46a77c52537f5b33a,2026-06-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.4,fix: hash_table6 clone() memcpy UB for non-trivially-copyable types + clang-format
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,find (hit),0.0,0.0,0.0,0,0,21.4,fix: MSan UB in tail sentinels memset for non-trivially-copyable types
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,find (miss),0.0,0.0,0.0,0,0,24.0,fix: MSan UB in tail sentinels memset for non-trivially-copyable types
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,fix: MSan UB in tail sentinels memset for non-trivially-copyable types
+e8c7f07967eb21b6de538769894504cd922874b4,2026-06-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.4,fix: MSan UB in tail sentinels memset for non-trivially-copyable types
+e8e21aeb31d432ba6f2d1f7348e65b5095ce7802,2026-06-25,ok,find (hit),0.0,0.0,0.0,0,0,23.1,fix: clang-format for emihmap2.hpp and hash_table6.hpp
+e8e21aeb31d432ba6f2d1f7348e65b5095ce7802,2026-06-25,ok,find (miss),0.0,0.0,0.0,0,0,23.6,fix: clang-format for emihmap2.hpp and hash_table6.hpp
+e8e21aeb31d432ba6f2d1f7348e65b5095ce7802,2026-06-25,ok,insert+erase,0.0,0.0,0.0,0,0,71.2,fix: clang-format for emihmap2.hpp and hash_table6.hpp
+e8e21aeb31d432ba6f2d1f7348e65b5095ce7802,2026-06-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.7,fix: clang-format for emihmap2.hpp and hash_table6.hpp
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,21.6,fix: emihmap2 clone() add _num_buckets > 0 check for safety
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,25.9,fix: emihmap2 clone() add _num_buckets > 0 check for safety
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,73.0,fix: emihmap2 clone() add _num_buckets > 0 check for safety
+912a783d5684881fb00dac1805096f26cafd41e5,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,fix: emihmap2 clone() add _num_buckets > 0 check for safety
+535679a1942ecb0a55281fbe19811df6e8231965,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,33.6,fix: emihmap2 clone() simplify - skip tail sentinel for non-trivial types
+535679a1942ecb0a55281fbe19811df6e8231965,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,34.7,fix: emihmap2 clone() simplify - skip tail sentinel for non-trivial types
+535679a1942ecb0a55281fbe19811df6e8231965,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,95.8,fix: emihmap2 clone() simplify - skip tail sentinel for non-trivial types
+535679a1942ecb0a55281fbe19811df6e8231965,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.1,fix: emihmap2 clone() simplify - skip tail sentinel for non-trivial types
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,22.0,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,24.0,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,72.7,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy
+430ae71a4b90d03afae9b8e77e60e6d54e9683c7,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix: emihmap3 and emihset3 clone() include tail sentinel in trivially_copyable memcpy
+d82a70bbcf4f7be0b807936077588035a77bb3ae,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,27.1,fix: emihset2 clone() avoid double sentinel construction after rehash
+d82a70bbcf4f7be0b807936077588035a77bb3ae,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,23.8,fix: emihset2 clone() avoid double sentinel construction after rehash
+d82a70bbcf4f7be0b807936077588035a77bb3ae,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,71.7,fix: emihset2 clone() avoid double sentinel construction after rehash
+d82a70bbcf4f7be0b807936077588035a77bb3ae,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.1,fix: emihset2 clone() avoid double sentinel construction after rehash
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,22.4,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,27.6,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,74.4,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct
+77ceae0945f221e19ec69839b3196ba955169044,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.3,fix: emihset2 clone() remove unnecessary sentinel destruct/reconstruct
+20f4889683fc1163e06ebff19e34123b07aba115,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,21.5,"fix: hash_set2 clone() include 2 tail sentinels in memcpy, emihmap1 rehash/destructor handle non-trivial sentinel"
+20f4889683fc1163e06ebff19e34123b07aba115,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,23.8,"fix: hash_set2 clone() include 2 tail sentinels in memcpy, emihmap1 rehash/destructor handle non-trivial sentinel"
+20f4889683fc1163e06ebff19e34123b07aba115,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,71.7,"fix: hash_set2 clone() include 2 tail sentinels in memcpy, emihmap1 rehash/destructor handle non-trivial sentinel"
+20f4889683fc1163e06ebff19e34123b07aba115,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.6,"fix: hash_set2 clone() include 2 tail sentinels in memcpy, emihmap1 rehash/destructor handle non-trivial sentinel"
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,21.8,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,23.8,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,71.6,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets
+e12c982e84e1b5e03c97eaec75da81efa3d9f152,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.4,Remove unnecessary sentinel placement-new/destructors in emilib maps/sets
+c9512d4e0f42d10c5a203de42e993cfe3a8cfba5,2026-06-26,ok,find (hit),0.0,0.0,0.0,0,0,21.5,clang-format: fix formatting in emilib and hash_table6
+c9512d4e0f42d10c5a203de42e993cfe3a8cfba5,2026-06-26,ok,find (miss),0.0,0.0,0.0,0,0,24.0,clang-format: fix formatting in emilib and hash_table6
+c9512d4e0f42d10c5a203de42e993cfe3a8cfba5,2026-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,71.7,clang-format: fix formatting in emilib and hash_table6
+c9512d4e0f42d10c5a203de42e993cfe3a8cfba5,2026-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.6,clang-format: fix formatting in emilib and hash_table6
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,find (hit),0.0,0.0,0.0,0,0,23.2,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,find (miss),0.0,0.0,0.0,0,0,24.2,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,insert+erase,0.0,0.0,0.0,0,0,71.1,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate
+a437344848514d58db50f3f1e8d49fa9c6c8dc28,2026-06-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.2,Fix MSan use-of-uninitialized-value in hash_table5 find_or_allocate
+a1dc2c60d64ebb55de9c96f40d2be6ec268c9185,2026-06-27,ok,find (hit),0.0,0.0,0.0,0,0,21.9,fix: resolve MSan false positives with uninstrumented libc++ std::string
+a1dc2c60d64ebb55de9c96f40d2be6ec268c9185,2026-06-27,ok,find (miss),0.0,0.0,0.0,0,0,24.1,fix: resolve MSan false positives with uninstrumented libc++ std::string
+a1dc2c60d64ebb55de9c96f40d2be6ec268c9185,2026-06-27,ok,insert+erase,0.0,0.0,0.0,0,0,73.8,fix: resolve MSan false positives with uninstrumented libc++ std::string
+a1dc2c60d64ebb55de9c96f40d2be6ec268c9185,2026-06-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.8,fix: resolve MSan false positives with uninstrumented libc++ std::string
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.9,refactor: restructure tests into unit/memory/stress/attack and harden CI
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,24.1,refactor: restructure tests into unit/memory/stress/attack and harden CI
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,72.1,refactor: restructure tests into unit/memory/stress/attack and harden CI
+bf2e837a452e5d56c1cf6d79fc7ae234571845da,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.7,refactor: restructure tests into unit/memory/stress/attack and harden CI
+525987802593f4fe17e704bf973ef1ce95aa7cae,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,37.4,fix: resolve CI strict-warning failures across headers and tests
+525987802593f4fe17e704bf973ef1ce95aa7cae,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,36.4,fix: resolve CI strict-warning failures across headers and tests
+525987802593f4fe17e704bf973ef1ce95aa7cae,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,105.4,fix: resolve CI strict-warning failures across headers and tests
+525987802593f4fe17e704bf973ef1ce95aa7cae,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,fix: resolve CI strict-warning failures across headers and tests
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,22.2,style: fix clang-format violations and align CI to clang-format-20
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,24.5,style: fix clang-format violations and align CI to clang-format-20
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,74.4,style: fix clang-format violations and align CI to clang-format-20
+a66c1d5936d1ce17770ba33cd97484fbc30e655c,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,style: fix clang-format violations and align CI to clang-format-20
+d12da1b3fce990e84753038617393c5fdc68d6ae,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.7,fix:format include
+d12da1b3fce990e84753038617393c5fdc68d6ae,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,24.0,fix:format include
+d12da1b3fce990e84753038617393c5fdc68d6ae,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,fix:format include
+d12da1b3fce990e84753038617393c5fdc68d6ae,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.4,fix:format include
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.5,fix:ci crashed
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,29.7,fix:ci crashed
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,fix:ci crashed
+0482f93f4939500c71b5747ecfbd30d521f95b05,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.3,fix:ci crashed
+919dc7f138becca6efe03655f94e0533a529e928,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.7,fix ci issuse
+919dc7f138becca6efe03655f94e0533a529e928,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,23.9,fix ci issuse
+919dc7f138becca6efe03655f94e0533a529e928,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,71.2,fix ci issuse
+919dc7f138becca6efe03655f94e0533a529e928,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.3,fix ci issuse
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,31.4,fix ci error
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,33.7,fix ci error
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,91.8,fix ci error
+8ac8463d6a043164515e027001de46b959f46cf5,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.8,fix ci error
+2461c4fe5bd5b4585eccbfb455e9e4241e99cf75,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,32.0,remove explicit throws and add noexcept in emhash5-8 rehash/alloc paths
+2461c4fe5bd5b4585eccbfb455e9e4241e99cf75,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,34.3,remove explicit throws and add noexcept in emhash5-8 rehash/alloc paths
+2461c4fe5bd5b4585eccbfb455e9e4241e99cf75,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,99.2,remove explicit throws and add noexcept in emhash5-8 rehash/alloc paths
+2461c4fe5bd5b4585eccbfb455e9e4241e99cf75,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.8,remove explicit throws and add noexcept in emhash5-8 rehash/alloc paths
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.7,fix ci error
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,23.5,fix ci error
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,75.7,fix ci error
+34ec2258d719a466b41f1d58a6bb44c3411c2a1f,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.0,fix ci error
+fb0cffac70bd2a633113e127c43ebfb3012fa9ef,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.5,fix ci assert fail
+fb0cffac70bd2a633113e127c43ebfb3012fa9ef,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,23.4,fix ci assert fail
+fb0cffac70bd2a633113e127c43ebfb3012fa9ef,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,72.5,fix ci assert fail
+fb0cffac70bd2a633113e127c43ebfb3012fa9ef,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,fix ci assert fail
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,find (hit),0.0,0.0,0.0,0,0,21.7,fix ci assert fail
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,find (miss),0.0,0.0,0.0,0,0,23.4,fix ci assert fail
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,70.8,fix ci assert fail
+2f882063ebc4f81cbc6785a32f418deb4b760479,2026-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix ci assert fail
+573a11ebe9c5203b012b66891a720041f787a267,2026-07-02,ok,find (hit),0.0,0.0,0.0,0,0,21.4,Fix emhash6/7 erase iterator skip bug and implement merge for all maps
+573a11ebe9c5203b012b66891a720041f787a267,2026-07-02,ok,find (miss),0.0,0.0,0.0,0,0,23.4,Fix emhash6/7 erase iterator skip bug and implement merge for all maps
+573a11ebe9c5203b012b66891a720041f787a267,2026-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,71.4,Fix emhash6/7 erase iterator skip bug and implement merge for all maps
+573a11ebe9c5203b012b66891a720041f787a267,2026-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,Fix emhash6/7 erase iterator skip bug and implement merge for all maps
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,find (hit),0.0,0.0,0.0,0,0,31.5,"Quality improvements: fix MSan assert, expand merge tests, add PR template"
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,find (miss),0.0,0.0,0.0,0,0,33.2,"Quality improvements: fix MSan assert, expand merge tests, add PR template"
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,91.4,"Quality improvements: fix MSan assert, expand merge tests, add PR template"
+8bd71bd640f89629e14425258406b61e4322f33c,2026-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.3,"Quality improvements: fix MSan assert, expand merge tests, add PR template"
+fc6623dc82552394981196bd9e47cd97c264bb05,2026-07-02,ok,find (hit),0.0,0.0,0.0,0,0,21.4,Fix hash_set4 iterator next() causing erase_if/merge skip
+fc6623dc82552394981196bd9e47cd97c264bb05,2026-07-02,ok,find (miss),0.0,0.0,0.0,0,0,23.2,Fix hash_set4 iterator next() causing erase_if/merge skip
+fc6623dc82552394981196bd9e47cd97c264bb05,2026-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,Fix hash_set4 iterator next() causing erase_if/merge skip
+fc6623dc82552394981196bd9e47cd97c264bb05,2026-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.4,Fix hash_set4 iterator next() causing erase_if/merge skip
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,find (hit),0.0,0.0,0.0,0,0,21.5,Replace C-style casts with static_cast in emilib
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,find (miss),0.0,0.0,0.0,0,0,23.3,Replace C-style casts with static_cast in emilib
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,87.9,Replace C-style casts with static_cast in emilib
+e1333e77978632f8945f8da6a92812197d258827,2026-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.3,Replace C-style casts with static_cast in emilib
+d1e22768f09c5934ee1891aa6268c52b747f6ccd,2026-07-02,ok,find (hit),0.0,0.0,0.0,0,0,21.6,Fix clang-format violations in emilib files
+d1e22768f09c5934ee1891aa6268c52b747f6ccd,2026-07-02,ok,find (miss),0.0,0.0,0.0,0,0,23.4,Fix clang-format violations in emilib files
+d1e22768f09c5934ee1891aa6268c52b747f6ccd,2026-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,73.7,Fix clang-format violations in emilib files
+d1e22768f09c5934ee1891aa6268c52b747f6ccd,2026-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,Fix clang-format violations in emilib files
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,find (hit),0.0,0.0,0.0,0,0,21.4,Clean up code: remove misleading TODOs and replace C-style casts
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,find (miss),0.0,0.0,0.0,0,0,23.2,Clean up code: remove misleading TODOs and replace C-style casts
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,Clean up code: remove misleading TODOs and replace C-style casts
+f19a5abc9b590c302be637bcb5e5474e1de83ddd,2026-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,Clean up code: remove misleading TODOs and replace C-style casts
+ec2339d5c333e14c3891c1bc945f4e808c70d6ea,2026-07-04,ok,find (hit),0.0,0.0,0.0,0,0,21.7,Unify member variable naming: _loadlf -> _mlf
+ec2339d5c333e14c3891c1bc945f4e808c70d6ea,2026-07-04,ok,find (miss),0.0,0.0,0.0,0,0,23.5,Unify member variable naming: _loadlf -> _mlf
+ec2339d5c333e14c3891c1bc945f4e808c70d6ea,2026-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,72.0,Unify member variable naming: _loadlf -> _mlf
+ec2339d5c333e14c3891c1bc945f4e808c70d6ea,2026-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,Unify member variable naming: _loadlf -> _mlf
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,find (hit),0.0,0.0,0.0,0,0,21.4,Clean up dead commented-out code and improve collision resolution comments
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,find (miss),0.0,0.0,0.0,0,0,23.3,Clean up dead commented-out code and improve collision resolution comments
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,72.0,Clean up dead commented-out code and improve collision resolution comments
+6d23afaae2198d95c5a67315b7eae922c67b267e,2026-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.5,Clean up dead commented-out code and improve collision resolution comments
+7e71c9e6739a68fa6bdfb24d9e9943e8240973cf,2026-07-04,ok,find (hit),0.0,0.0,0.0,0,0,21.4,Suppress -Wunused-result warnings on intentional nodiscard discards
+7e71c9e6739a68fa6bdfb24d9e9943e8240973cf,2026-07-04,ok,find (miss),0.0,0.0,0.0,0,0,23.2,Suppress -Wunused-result warnings on intentional nodiscard discards
+7e71c9e6739a68fa6bdfb24d9e9943e8240973cf,2026-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,71.6,Suppress -Wunused-result warnings on intentional nodiscard discards
+7e71c9e6739a68fa6bdfb24d9e9943e8240973cf,2026-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.7,Suppress -Wunused-result warnings on intentional nodiscard discards
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,find (hit),0.0,0.0,0.0,0,0,23.6,Apply clang-format to all recently modified files
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,find (miss),0.0,0.0,0.0,0,0,24.2,Apply clang-format to all recently modified files
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,Apply clang-format to all recently modified files
+aa66639250a7401f803794dad9adf1295b0c244d,2026-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.7,Apply clang-format to all recently modified files
+1ed2764d819280f7d0c5dff7645671c9a9703717,2026-07-04,ok,find (hit),0.0,0.0,0.0,0,0,22.8,fix clang format
+1ed2764d819280f7d0c5dff7645671c9a9703717,2026-07-04,ok,find (miss),0.0,0.0,0.0,0,0,23.3,fix clang format
+1ed2764d819280f7d0c5dff7645671c9a9703717,2026-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,70.9,fix clang format
+1ed2764d819280f7d0c5dff7645671c9a9703717,2026-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix clang format
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,find (hit),0.0,0.0,0.0,0,0,31.9,fix:some tips op
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,find (miss),0.0,0.0,0.0,0,0,33.9,fix:some tips op
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,94.7,fix:some tips op
+651ee7b7a1a6da293a52ca4ec73970ff7c80f20c,2026-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.8,fix:some tips op
+67fafd31038dbd256807acb03b90504ab172e88a,2026-07-05,ok,find (hit),0.0,0.0,0.0,0,0,31.8,"feat: extend emilib API, harden rehash, expand CI/format coverage"
+67fafd31038dbd256807acb03b90504ab172e88a,2026-07-05,ok,find (miss),0.0,0.0,0.0,0,0,33.8,"feat: extend emilib API, harden rehash, expand CI/format coverage"
+67fafd31038dbd256807acb03b90504ab172e88a,2026-07-05,ok,insert+erase,0.0,0.0,0.0,0,0,92.7,"feat: extend emilib API, harden rehash, expand CI/format coverage"
+67fafd31038dbd256807acb03b90504ab172e88a,2026-07-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.0,"feat: extend emilib API, harden rehash, expand CI/format coverage"
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,find (hit),0.0,0.0,0.0,0,0,21.4,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,find (miss),0.0,0.0,0.0,0,0,23.3,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,insert+erase,0.0,0.0,0.0,0,0,71.9,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment
+3cf7fcbc3ae018683aff56fd116c574370cd86d9,2026-07-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.3,feat(hash_table6/7): move bitmask to front of allocation with configurable alignment
+371332c91e7d5beb7969105fffac2d5a90d946d2,2026-07-14,ok,find (hit),0.0,0.0,0.0,0,0,32.4,fix(hash_table8/hash_set8): correct _pairs_capacity in copy ctor/assignment
+371332c91e7d5beb7969105fffac2d5a90d946d2,2026-07-14,ok,find (miss),0.0,0.0,0.0,0,0,34.0,fix(hash_table8/hash_set8): correct _pairs_capacity in copy ctor/assignment
+371332c91e7d5beb7969105fffac2d5a90d946d2,2026-07-14,ok,insert+erase,0.0,0.0,0.0,0,0,92.2,fix(hash_table8/hash_set8): correct _pairs_capacity in copy ctor/assignment
+371332c91e7d5beb7969105fffac2d5a90d946d2,2026-07-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.1,fix(hash_table8/hash_set8): correct _pairs_capacity in copy ctor/assignment
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,find (hit),0.0,0.0,0.0,0,0,31.5,fix(ci): add ccache installation for macOS in asan job
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,find (miss),0.0,0.0,0.0,0,0,34.2,fix(ci): add ccache installation for macOS in asan job
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,insert+erase,0.0,0.0,0.0,0,0,95.7,fix(ci): add ccache installation for macOS in asan job
+18c977586bede3afc66c4cea2344a1bfff0acf12,2026-07-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.5,fix(ci): add ccache installation for macOS in asan job
+d718a3de3e6b06fb6e7bd5e8d3b1358b4e549caf,2026-07-15,ok,find (hit),0.0,0.0,0.0,0,0,21.8,fix:miss file head
+d718a3de3e6b06fb6e7bd5e8d3b1358b4e549caf,2026-07-15,ok,find (miss),0.0,0.0,0.0,0,0,23.6,fix:miss file head
+d718a3de3e6b06fb6e7bd5e8d3b1358b4e549caf,2026-07-15,ok,insert+erase,0.0,0.0,0.0,0,0,72.0,fix:miss file head
+d718a3de3e6b06fb6e7bd5e8d3b1358b4e549caf,2026-07-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,fix:miss file head
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,find (hit),0.0,0.0,0.0,0,0,21.6,fix(emihmap4): resolve variable shadowing warning
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,find (miss),0.0,0.0,0.0,0,0,23.2,fix(emihmap4): resolve variable shadowing warning
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,insert+erase,0.0,0.0,0.0,0,0,88.2,fix(emihmap4): resolve variable shadowing warning
+ed743788a965288d4dd40c99b01cedc943863ee1,2026-07-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.8,fix(emihmap4): resolve variable shadowing warning
+72e3203a8e7a612c9fddad278b30b31e5d07a31a,2026-07-15,ok,find (hit),0.0,0.0,0.0,0,0,21.4,fix ci eror
+72e3203a8e7a612c9fddad278b30b31e5d07a31a,2026-07-15,ok,find (miss),0.0,0.0,0.0,0,0,23.3,fix ci eror
+72e3203a8e7a612c9fddad278b30b31e5d07a31a,2026-07-15,ok,insert+erase,0.0,0.0,0.0,0,0,72.0,fix ci eror
+72e3203a8e7a612c9fddad278b30b31e5d07a31a,2026-07-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix ci eror
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,find (hit),0.0,0.0,0.0,0,0,33.0,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity"
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,find (miss),0.0,0.0,0.0,0,0,35.0,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity"
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,insert+erase,0.0,0.0,0.0,0,0,96.8,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity"
+998f5c187e35bc0de934b4b4e762434b02919b47,2026-07-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.1,"fix(msan): zero-init malloc buffer in emihmap4, fix copy ctor _pairs_capacity"
+7cab9771b8afa49b2a22de95f1c4522914a630da,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,31.7,"refactor: noexcept getters, named constants, iterator invalidation tests"
+7cab9771b8afa49b2a22de95f1c4522914a630da,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,34.2,"refactor: noexcept getters, named constants, iterator invalidation tests"
+7cab9771b8afa49b2a22de95f1c4522914a630da,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,94.1,"refactor: noexcept getters, named constants, iterator invalidation tests"
+7cab9771b8afa49b2a22de95f1c4522914a630da,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.6,"refactor: noexcept getters, named constants, iterator invalidation tests"
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,21.7,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps"
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,23.4,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps"
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,73.4,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps"
+de6aaf0672373dcac21ad1bfbd30ea082fb06900,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.9,"test: rename test_emihmap4 -> test_stress_correctness, expand to all 8 maps"
+38ab5d2d03242e74629cdfb3063288622ce00392,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,32.3,perf: add cross-platform prefetch to hash_table5/7 collision chains
+38ab5d2d03242e74629cdfb3063288622ce00392,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,34.2,perf: add cross-platform prefetch to hash_table5/7 collision chains
+38ab5d2d03242e74629cdfb3063288622ce00392,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,99.4,perf: add cross-platform prefetch to hash_table5/7 collision chains
+38ab5d2d03242e74629cdfb3063288622ce00392,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.5,perf: add cross-platform prefetch to hash_table5/7 collision chains
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,32.3,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,33.9,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,91.3,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function
+65d6e978547f801f5dd21961cb9859d50a767f4a,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,fix(clang-tidy): suppress pointer arithmetic warning in wyhash wyr3 function
+506d1899211e846730c9cb9e9e9b109f7b37dcaa,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,31.5,fix(clang-tidy): rename emh_wyp to EMH_WYP for constant naming convention
+506d1899211e846730c9cb9e9e9b109f7b37dcaa,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,33.4,fix(clang-tidy): rename emh_wyp to EMH_WYP for constant naming convention
+506d1899211e846730c9cb9e9e9b109f7b37dcaa,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,90.9,fix(clang-tidy): rename emh_wyp to EMH_WYP for constant naming convention
+506d1899211e846730c9cb9e9e9b109f7b37dcaa,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.7,fix(clang-tidy): rename emh_wyp to EMH_WYP for constant naming convention
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,31.7,style: clang-format all headers for format-check CI
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,34.4,style: clang-format all headers for format-check CI
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,73.2,style: clang-format all headers for format-check CI
+73a41da8fc6c23298813e2feee0b6eeb12477e3a,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,style: clang-format all headers for format-check CI
+02093de0d0fdb3d33f52d4efefdf5b41dc2d3ce4,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,33.3,style: re-format all headers with clang-format-20 for CI consistency
+02093de0d0fdb3d33f52d4efefdf5b41dc2d3ce4,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,39.3,style: re-format all headers with clang-format-20 for CI consistency
+02093de0d0fdb3d33f52d4efefdf5b41dc2d3ce4,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,95.5,style: re-format all headers with clang-format-20 for CI consistency
+02093de0d0fdb3d33f52d4efefdf5b41dc2d3ce4,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.7,style: re-format all headers with clang-format-20 for CI consistency
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,21.5,perf: adopt martinus wyhash optimizations from unordered_dense
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,23.3,perf: adopt martinus wyhash optimizations from unordered_dense
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,perf: adopt martinus wyhash optimizations from unordered_dense
+0d5fdc38f445eb7ce862d42bbd1fe117f14e6eb7,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.0,perf: adopt martinus wyhash optimizations from unordered_dense
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,20.9,perf: disable prefetch by default in emhash5-8 (no performance gain)
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,21.6,perf: disable prefetch by default in emhash5-8 (no performance gain)
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,75.7,perf: disable prefetch by default in emhash5-8 (no performance gain)
+280842c5b7f7b34bd8e7b97ebe2c9847d2a7f0d3,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.2,perf: disable prefetch by default in emhash5-8 (no performance gain)
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,find (hit),0.0,0.0,0.0,0,0,21.2,fix: suppress unused parameter warning when prefetch is disabled
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,find (miss),0.0,0.0,0.0,0,0,21.9,fix: suppress unused parameter warning when prefetch is disabled
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,insert+erase,0.0,0.0,0.0,0,0,79.6,fix: suppress unused parameter warning when prefetch is disabled
+912adcd6316cbfcda608458972ca2c7e2b96e4cb,2026-07-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.2,fix: suppress unused parameter warning when prefetch is disabled
+bb82ea74b7e3d3e4027663a9f91f0d60d471a3fb,2026-07-23,ok,find (hit),0.0,0.0,0.0,0,0,21.0,add some new fun
+bb82ea74b7e3d3e4027663a9f91f0d60d471a3fb,2026-07-23,ok,find (miss),0.0,0.0,0.0,0,0,21.8,add some new fun
+bb82ea74b7e3d3e4027663a9f91f0d60d471a3fb,2026-07-23,ok,insert+erase,0.0,0.0,0.0,0,0,77.2,add some new fun
+bb82ea74b7e3d3e4027663a9f91f0d60d471a3fb,2026-07-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.1,add some new fun
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,find (hit),0.0,0.0,0.0,0,0,21.0,fix: rehash strong exception guarantee + comprehensive test infrastructure
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,find (miss),0.0,0.0,0.0,0,0,21.7,fix: rehash strong exception guarantee + comprehensive test infrastructure
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,insert+erase,0.0,0.0,0.0,0,0,75.3,fix: rehash strong exception guarantee + comprehensive test infrastructure
+8d9071b7221e01a638c12236ec6d5ffa7f090167,2026-08-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.5,fix: rehash strong exception guarantee + comprehensive test infrastructure
+d8f4937f46d054111fb857c2c1a55a9bbe2d2297,2026-08-29,ok,find (hit),0.0,0.0,0.0,0,0,30.8,"fix: rehash overflow guard + sign-compare fix, add emihmap opt benches"
+d8f4937f46d054111fb857c2c1a55a9bbe2d2297,2026-08-29,ok,find (miss),0.0,0.0,0.0,0,0,30.8,"fix: rehash overflow guard + sign-compare fix, add emihmap opt benches"
+d8f4937f46d054111fb857c2c1a55a9bbe2d2297,2026-08-29,ok,insert+erase,0.0,0.0,0.0,0,0,93.3,"fix: rehash overflow guard + sign-compare fix, add emihmap opt benches"
+d8f4937f46d054111fb857c2c1a55a9bbe2d2297,2026-08-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.2,"fix: rehash overflow guard + sign-compare fix, add emihmap opt benches"
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,find (hit),0.0,0.0,0.0,0,0,31.6,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs"
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,find (miss),0.0,0.0,0.0,0,0,31.4,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs"
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,insert+erase,0.0,0.0,0.0,0,0,99.5,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs"
+8b4b1d8b174cf05e42b148d4bef3b6568d3dfcdd,2026-10-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.4,"perf(hash_table8): lazy alloc + shared sentinel, ADL swap, POD hash, lookup APIs"
+2f0a051bbbe683c16ed02616854154149f66aec6,2026-10-04,ok,find (hit),0.0,0.0,0.0,0,0,32.1,"fix(hash_table7): harden CTZ/metadata edge cases, remove dead code"
+2f0a051bbbe683c16ed02616854154149f66aec6,2026-10-04,ok,find (miss),0.0,0.0,0.0,0,0,31.1,"fix(hash_table7): harden CTZ/metadata edge cases, remove dead code"
+2f0a051bbbe683c16ed02616854154149f66aec6,2026-10-04,ok,insert+erase,0.0,0.0,0.0,0,0,100.6,"fix(hash_table7): harden CTZ/metadata edge cases, remove dead code"
+2f0a051bbbe683c16ed02616854154149f66aec6,2026-10-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.2,"fix(hash_table7): harden CTZ/metadata edge cases, remove dead code"
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,find (hit),0.0,0.0,0.0,0,0,21.4,bench: add emilib_bench/framework suites and extend ebench/martin_bench
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,find (miss),0.0,0.0,0.0,0,0,22.0,bench: add emilib_bench/framework suites and extend ebench/martin_bench
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,insert+erase,0.0,0.0,0.0,0,0,72.1,bench: add emilib_bench/framework suites and extend ebench/martin_bench
+801d02a7fea394bbf534af1d8bd62024c9c42cf6,2026-10-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.2,bench: add emilib_bench/framework suites and extend ebench/martin_bench
+5caa540e58d3ec4e01d600ef36e14a81f5e83cdf,2026-10-14,ok,find (hit),0.0,0.0,0.0,0,0,22.1,fix(hash_table): support try_emplace with zero/multiple mapped-value ctor args
+5caa540e58d3ec4e01d600ef36e14a81f5e83cdf,2026-10-14,ok,find (miss),0.0,0.0,0.0,0,0,21.8,fix(hash_table): support try_emplace with zero/multiple mapped-value ctor args
+5caa540e58d3ec4e01d600ef36e14a81f5e83cdf,2026-10-14,ok,insert+erase,0.0,0.0,0.0,0,0,74.4,fix(hash_table): support try_emplace with zero/multiple mapped-value ctor args
+5caa540e58d3ec4e01d600ef36e14a81f5e83cdf,2026-10-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,29.9,fix(hash_table): support try_emplace with zero/multiple mapped-value ctor args
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,find (hit),0.0,0.0,0.0,0,0,31.2,docs: unify README suite and align documentation with current repo state
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,find (miss),0.0,0.0,0.0,0,0,30.9,docs: unify README suite and align documentation with current repo state
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,insert+erase,0.0,0.0,0.0,0,0,95.5,docs: unify README suite and align documentation with current repo state
+f54cb9003719889ee35853df570bdd0c92229f4c,2026-10-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.0,docs: unify README suite and align documentation with current repo state
+48373e2a046f9928fb6ce80c8ac259a5a8b7391d,2026-10-15,ok,find (hit),0.0,0.0,0.0,0,0,35.9,chore: relocate stray files out of include/ and document config macro boundary
+48373e2a046f9928fb6ce80c8ac259a5a8b7391d,2026-10-15,ok,find (miss),0.0,0.0,0.0,0,0,31.5,chore: relocate stray files out of include/ and document config macro boundary
+48373e2a046f9928fb6ce80c8ac259a5a8b7391d,2026-10-15,ok,insert+erase,0.0,0.0,0.0,0,0,115.7,chore: relocate stray files out of include/ and document config macro boundary
+48373e2a046f9928fb6ce80c8ac259a5a8b7391d,2026-10-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.5,chore: relocate stray files out of include/ and document config macro boundary
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,find (hit),0.0,0.0,0.0,0,0,34.8,feat: add custom allocator support to emilib1-4 maps
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,find (miss),0.0,0.0,0.0,0,0,31.0,feat: add custom allocator support to emilib1-4 maps
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,97.5,feat: add custom allocator support to emilib1-4 maps
+bbc3cbb24ad66c65a3ed5fee0987ed1db877ea21,2026-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.5,feat: add custom allocator support to emilib1-4 maps
+504a560c73bd309c38bd7855bed80f740b625ec7,2026-10-17,ok,find (hit),0.0,0.0,0.0,0,0,33.9,chore: remove obsolete emihmap1_opt.hpp and its benchmark
+504a560c73bd309c38bd7855bed80f740b625ec7,2026-10-17,ok,find (miss),0.0,0.0,0.0,0,0,31.5,chore: remove obsolete emihmap1_opt.hpp and its benchmark
+504a560c73bd309c38bd7855bed80f740b625ec7,2026-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,104.3,chore: remove obsolete emihmap1_opt.hpp and its benchmark
+504a560c73bd309c38bd7855bed80f740b625ec7,2026-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.7,chore: remove obsolete emihmap1_opt.hpp and its benchmark
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,find (hit),0.0,0.0,0.0,0,0,21.9,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload"
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,find (miss),0.0,0.0,0.0,0,0,21.6,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload"
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,70.6,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload"
+a785d4de28077eedb45e749d33a73fe4646908bd,2026-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,24.9,"fix(hash_table8): drop ambiguous pointer-form try_get(key, hash) overload"
+b81f26c43c1e22feed350e8f3a3f6bc80889fcc0,2026-10-17,ok,find (hit),0.0,0.0,0.0,0,0,22.4,"refactor: API audit — remove EMH_EXT gate, backfill emilib parity"
+b81f26c43c1e22feed350e8f3a3f6bc80889fcc0,2026-10-17,ok,find (miss),0.0,0.0,0.0,0,0,21.3,"refactor: API audit — remove EMH_EXT gate, backfill emilib parity"
+b81f26c43c1e22feed350e8f3a3f6bc80889fcc0,2026-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,73.2,"refactor: API audit — remove EMH_EXT gate, backfill emilib parity"
+b81f26c43c1e22feed350e8f3a3f6bc80889fcc0,2026-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,24.9,"refactor: API audit — remove EMH_EXT gate, backfill emilib parity"
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,find (hit),0.0,0.0,0.0,0,0,31.0,style: apply clang-format-20 to emihmap2/3 and emihset2
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,find (miss),0.0,0.0,0.0,0,0,31.0,style: apply clang-format-20 to emihmap2/3 and emihset2
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,93.9,style: apply clang-format-20 to emihmap2/3 and emihset2
+822c6bf522c29c43fba2bc586486d8ffe181d591,2026-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.3,style: apply clang-format-20 to emihmap2/3 and emihset2
+db084025c7b056f282e18d39e61721e1c22191da,2026-10-17,ok,find (hit),0.0,0.0,0.0,0,0,21.2,fix(emihmap3): SIMD-state alignment broke on MSVC — rebind through alignas(64) block
+db084025c7b056f282e18d39e61721e1c22191da,2026-10-17,ok,find (miss),0.0,0.0,0.0,0,0,21.6,fix(emihmap3): SIMD-state alignment broke on MSVC — rebind through alignas(64) block
+db084025c7b056f282e18d39e61721e1c22191da,2026-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,70.2,fix(emihmap3): SIMD-state alignment broke on MSVC — rebind through alignas(64) block
+db084025c7b056f282e18d39e61721e1c22191da,2026-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.1,fix(emihmap3): SIMD-state alignment broke on MSVC — rebind through alignas(64) block
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,find (hit),0.0,0.0,0.0,0,0,21.2,fix(emilib): member-init order and unused var breaking strict-warnings gate
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,find (miss),0.0,0.0,0.0,0,0,21.7,fix(emilib): member-init order and unused var breaking strict-warnings gate
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,69.7,fix(emilib): member-init order and unused var breaking strict-warnings gate
+6c816103e2233c35cdda4931673765e8b0867149,2026-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.4,fix(emilib): member-init order and unused var breaking strict-warnings gate
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,find (hit),0.0,0.0,0.0,0,0,21.0,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,find (miss),0.0,0.0,0.0,0,0,21.7,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,insert+erase,0.0,0.0,0.0,0,0,70.6,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers
+76490cde8a999eeeb99c301ca1d77cee1beb3725,2026-11-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,25.1,fix: clear C++26 and strict-conversion warnings in emhash/emilib headers

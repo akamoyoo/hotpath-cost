@@ -1,0 +1,472 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+26a30738a4fa4e92300821fd761764ec8df2dcf2,2014-01-27,build failed,,,,,,,,Initial commit of the FlatBuffers code.
+76227f201dae6d0a21165708db76269eaf1072b5,2014-06-23,build failed,,,,,,,,JSON text output now optionally doesn't output linefeeds either.
+b863ac0171500634406b10577c59853bce615e7c,2014-07-02,build failed,,,,,,,,Fixed helper function CreateVectorOfStructs calling wrong variant.
+b632f8129faac6d881e3c67198047d2b3c284cea,2014-07-11,build failed,,,,,,,,Add support for the Xbox360 platform (PPC+msvc)
+9143a93312b65955511838fafddf56301716be41,2014-07-15,build failed,,,,,,,,Small fixes to the core C++ FlatBuffers implementation.
+bba042d72357d80542fbda6382658f4cc9fdd8e4,2014-07-24,build failed,,,,,,,,Fixed possible compile error in CreateVector* functions.
+be3c8742585326447a6f9e776ad90a6b0fceb953,2014-08-11,build failed,,,,,,,,Fixed bugs that could cause struct values not to be stored or misaligned
+be894f09df2383844d6c19b1d173fec105451e0f,2014-08-19,build failed,,,,,,,,Schemas now support include files.
+ffb3dec573280414d9a3bf7b0d6c6289668a63df,2014-08-21,build failed,,,,,,,,Prefixing of enum value identifiers in C++ is now optional.
+11f25386100ce50e114ec52d5487027af2912ebf,2014-09-04,build failed,,,,,,,,"Made ""field set more than once"" check in JSON parser faster."
+9a1f7be6fd318ddd9545926b5925cf0a10a083e4,2014-09-09,build failed,,,,,,,,Initial commit of .NET port of FlatBuffers
+517c964fe2099ecc0810db33cfd45b406b3f3132,2014-09-19,build failed,,,,,,,,Support for required fields.
+730c0cadde2302efa1487d672a1e2f53680ce2ea,2014-09-24,build failed,,,,,,,,Output multiline doc comments over multiple lines
+8ef6ee2a3e7f5c85e41fff07bf731fdb3b4bbc38,2014-11-07,build failed,,,,,,,,Fixed required field checking incorrectly using unsigned offsets.
+10f4ecac262c93855bbc2eb970d4b634908b2d50,2014-12-09,build failed,,,,,,,,"Merge ""Fixed missing virtual destructor in allocator."" into ub-games-master"
+3550899987f9590357dec34d302380874bb2311c,2015-01-07,build failed,,,,,,,,Sorted Vector & binary search functionality.
+6180b5ac7a23f463ffb62498a9ff15a7b35fb6fe,2015-02-09,build failed,,,,,,,,"Merge ""Reset minimum alignment when reusing FlatBufferBuilder"" into ub-games-master"
+b8708beeec669371628eafbb6570cd278a0b96b9,2015-03-31,build failed,,,,,,,,Generate Java doc comments in JavaDoc style
+39833d7cf051e4a2ecfb342419a86dc02c7e77aa,2015-05-08,build failed,,,,,,,,Added namespaced way to refer to types in schemas. Also made proper namespacing work for enums.
+36f9b1ec910ab59ba6824a339617037c7bb55453,2015-05-20,build failed,,,,,,,,Merge pull request #207 from zachreizner/header
+81312c21281430449aef20f7a71ad9e0962791d3,2015-05-21,build failed,,,,,,,,Initial reflection and resizing functionality.
+c967515da56fe5a8f0a5d18eaf2a741f5999697a,2015-06-17,build failed,,,,,,,,Small improvements to the C++ API.
+b6380aceac8ea50152ca963ea4a1c8cbe8d790b0,2015-07-22,build failed,,,,,,,,Fixed reflection resizing code not checking strings in vectors.
+7101224d868e15fa1d401f4b3afc54f3b5761e18,2015-07-31,build failed,,,,,,,,Reworked reflection.h to be more general.
+44261ccdf12d99937e042cbc1ed696aa06445be6,2015-09-16,build failed,,,,,,,,Merge pull request #271 from vijairaj/scoped-enums
+94680f5483593b1a48c79b516d153fd432b3f2e8,2015-10-05,build failed,,,,,,,,Added support for imports and many other .proto features.
+48ff7294779eb3a255dce51474c20628a4b4b3dc,2015-10-20,build failed,,,,,,,,Added assert for referring to 0 offsets.
+6266b4f12203340cc2dff423b9e7d9cd2f0bd23c,2015-11-18,build failed,,,,,,,,Merge pull request #308 from chobie/php
+1d457a0271ec4b2ddf73e52a13c856ed939efde0,2015-11-27,build failed,,,,,,,,Fix use of std::max when Windows.h is imported.
+40a33b1d0683d3d732620b7f8adb6c34678a5910,2015-12-09,build failed,,,,,,,,Replaced exception handling in the parser with error checking.
+6532bfce349f31af9655e6387207d8c9cf8f6b50,2016-01-06,build failed,,,,,,,,Merge pull request #3493 from parnic/support-platforms-without-realpath
+491e970943341a9578fd12f3a3957203a5a0ab42,2016-01-20,build failed,,,,,,,,Merge branch 'master' of https://github.com/google/flatbuffers
+1a63eb46bbbb9a0e0d269b2fc0ec31c552871128,2016-03-07,build failed,,,,,,,,Added RPC declarations to the schema parser.
+c8c00824138ae1819250d4dd77859f5d0b811ece,2016-03-30,build failed,,,,,,,,Fix flatbuffers conversion warnings.
+4a04bac250c66f946161063bb3932087bc084822,2016-04-13,build failed,,,,,,,,Fixed struct -> class pre-declaration error.
+69eef0a0ece27a2f07397e763b5bac389a98c4d8,2016-05-18,build failed,,,,,,,,Fixes verifier not catching odd vtable sizes.
+afa276288c8db9a983aa8ae134328b1b447bec70,2016-06-15,build failed,,,,,,,,Added additional convenience overloads to CreateVector().
+48f37f9e0a04f2b60046dda7fef20a8b0ebc1a70,2016-04-13,build failed,,,,,,,,Added GRPC code generator to flatc.
+b22db6e8eb2f5d3d32927d09e71a55d7d21994ae,2016-07-14,build failed,,,,,,,,Merge pull request #3905 from bog-dan-ro/master
+05b00c50ad07a30974681005ef553eb546a12ce1,2016-07-20,build failed,,,,,,,,Added way to test two schemas for safe evolution.
+d70f5ac6b02f250dca8e2c6e8f59a4223d1f66f6,2016-07-29,build failed,,,,,,,,Added backwards compatible --no-union-value-namespacing
+a0b8f669eeab24e0a23a8cc93b89d53117d0c26e,2016-08-12,build failed,,,,,,,,"Added ""Direct"" suffix to vector/string object creation functions."
+486c048a0d5963f83f3a0d6957e4dde41602e2e7,2016-10-10,build failed,,,,,,,,Added support for size prefixed buffers.
+e31fbb0b23e702a872a51e287fbcfc7f1c45b499,2016-10-21,build failed,,,,,,,,Fixed STLPort error for missing vector::data()
+d1e8899310d8e8758d9900628de448a3a43bd050,2016-12-14,build failed,,,,,,,,Fixed JS outputting helper for Int64Array.
+cc8424009853447b209c5d3ccb12c23a2f134fa4,2017-01-04,build failed,,,,,,,,Misc idl_gen_cpp cleanup
+3f936c5655d2e802db101c73c42ebaab4ed476aa,2017-01-18,build failed,,,,,,,,More native code gen functionality.
+9b3d8b318a3bc9d71d08b50d723996f556557c86,2017-01-27,build failed,,,,,,,,Added tracking of order of types declared.
+aac6be1153eb5343f03dd60101ee438636e9300b,2016-02-01,build failed,,,,,,,,First attempt at SchemaLess FlatBuffers.
+2272229983bcd40aa6b0e41612a793f56f136ea6,2017-02-10,build failed,,,,,,,,Added --prefix-include option for generated includes.
+d798100be99989f5cd7d67b175b3ec7b4512d53b,2017-02-15,build failed,,,,,,,,Round vector_downward initial size up (#4179)
+640b525e830f84060f0d43923e4fffdb40d5676a,2017-03-04,build failed,,,,,,,,optimization of FlatBufferBuilder::CreateVector() (#4198)
+f5387387def9c43956e369e7a256aab82e57e5c2,2017-03-10,build failed,,,,,,,,Pedantic Visual Studio build (/W4 /WX) (#4214)
+f2071e4f80bf7ccd924337c7bf1bf33c79e3fc3e,2017-03-20,build failed,,,,,,,,Add arbitrary string type to the native object API (#4218)
+89041a16862ec702db63c312e8f0f7e88ed82c4e,2017-03-27,build failed,,,,,,,,Add a VectorCast function that safely casts from Vector<Offset<T>> to Vector<Offset<U>> if U is a base class of T.
+e6fa7b11333a8da26ea800bb9b7b4bbb25b10879,2017-04-12,build failed,,,,,,,,Fix Visual Studio 2017 new warning (C4244: 'argument': conversion fro… (#4261)
+fb03f78fb4ef2123425a38d93df2e9818a15739b,2017-04-19,build failed,,,,,,,,Fix minor const correctness issue (#4271)
+e93a5652d03286af2b327ce8a16864c5224d4c87,2017-04-24,build failed,,,,,,,,Fixes for VS 2015 build.
+93c0960c3abdd5f3f7cdc9c4981732fde7be5e4e,2017-05-10,build failed,,,,,,,,Added --keep-prefix to not strip schema include path in C++ includes.
+81ecc98e023f85fe003a27e920e78b34db8a0087,2017-05-12,build failed,,,,,,,,Adding support for s390x (#4297)
+22743ca45a3f835df423eb608837022a4a57dcc0,2017-05-24,build failed,,,,,,,,Fixed --keep-prefix functionality.
+da67c0a71f98b8bab59aacd424b8648a9e293476,2017-06-07,build failed,,,,,,,,[C++] Improve flatbuffers + gRPC integration (#4310)
+8f864aad7b875d645236be59ab1037051b12ba10,2017-06-05,build failed,,,,,,,,Added (nested) FlexBuffer JSON parsing and output.
+f325cce6fdfc0c85e081fe90c7267fb0e8c79878,2017-06-16,build failed,,,,,,,,Initial support for parsing (and generating) Protobuf ASCII.
+6f94fb51b14a1f9cc8b4fcc14744a6c334e644cb,2017-06-16,build failed,,,,,,,,Updated version numbers to 1.7.0
+f20204180dbf58a53dcaf7929f0f996930d40bf3,2017-07-10,build failed,,,,,,,,Json schema (#4369)
+89a68942acdeeb51ceb102d19153dcc23ba8c0dd,2017-07-29,build failed,,,,,,,,Added support for nested flatbuffers serializing to json (#4391)
+7fe281295fdaa4a27bcbe24c72284734862d2a7e,2017-08-07,build failed,,,,,,,,Fixed clang-tidy warnings.
+801e1b76995ade64fd89d17a7628b11c75d79967,2017-08-14,build failed,,,,,,,,Missing FieldDef initializer.
+42611f9a8344833286e03cc748fbd37330b69996,2017-08-25,ok,"build, reused builder",0.0,0.0,0.0,1,0,241.0,Fixed VS memory tracking leaking into user code
+42611f9a8344833286e03cc748fbd37330b69996,2017-08-25,ok,"build, new builder",3.0,3.0,0.0,3,0,473.3,Fixed VS memory tracking leaking into user code
+42611f9a8344833286e03cc748fbd37330b69996,2017-08-25,ok,read two fields,0.0,0.0,0.0,0,0,7.9,Fixed VS memory tracking leaking into user code
+72a99abfb7db64dc49720b28b41f382b5ec7cde0,2017-08-24,ok,"build, reused builder",0.0,0.0,0.0,1,0,118.7,Added support for mini-reflection tables.
+72a99abfb7db64dc49720b28b41f382b5ec7cde0,2017-08-24,ok,"build, new builder",3.0,3.0,0.0,3,0,208.7,Added support for mini-reflection tables.
+72a99abfb7db64dc49720b28b41f382b5ec7cde0,2017-08-24,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Added support for mini-reflection tables.
+30e7d161049482a8196036e0726fd25227498aa6,2017-10-09,ok,"build, reused builder",0.0,0.0,0.0,1,0,118.8,_Nullable cpp interface (#4451)
+30e7d161049482a8196036e0726fd25227498aa6,2017-10-09,ok,"build, new builder",3.0,3.0,0.0,3,0,208.7,_Nullable cpp interface (#4451)
+30e7d161049482a8196036e0726fd25227498aa6,2017-10-09,ok,read two fields,0.0,0.0,0.0,0,0,4.9,_Nullable cpp interface (#4451)
+97face1527989f59479ab61d47bb13765257bf8a,2017-10-20,ok,"build, reused builder",0.0,0.0,0.0,1,0,245.6,Changed how vector_data works. (#4467)
+97face1527989f59479ab61d47bb13765257bf8a,2017-10-20,ok,"build, new builder",3.0,3.0,0.0,3,0,477.8,Changed how vector_data works. (#4467)
+97face1527989f59479ab61d47bb13765257bf8a,2017-10-20,ok,read two fields,0.0,0.0,0.0,0,0,8.1,Changed how vector_data works. (#4467)
+53a897731e23320e67602d3d4c56e09caffb98ca,2017-12-01,ok,"build, reused builder",0.0,0.0,0.0,1,0,117.3,this is allow custom allocator for obj-api structs/tables. (#4520)
+53a897731e23320e67602d3d4c56e09caffb98ca,2017-12-01,ok,"build, new builder",3.0,3.0,0.0,3,0,202.9,this is allow custom allocator for obj-api structs/tables. (#4520)
+53a897731e23320e67602d3d4c56e09caffb98ca,2017-12-01,ok,read two fields,0.0,0.0,0.0,0,0,4.9,this is allow custom allocator for obj-api structs/tables. (#4520)
+1d73b3b9fc359e0654f22a76c6644c1b88fdc944,2017-12-28,ok,"build, reused builder",0.0,0.0,0.0,1,0,117.3,Various build fixes; update checked-in codegen. (#4572)
+1d73b3b9fc359e0654f22a76c6644c1b88fdc944,2017-12-28,ok,"build, new builder",3.0,3.0,0.0,3,0,204.1,Various build fixes; update checked-in codegen. (#4572)
+1d73b3b9fc359e0654f22a76c6644c1b88fdc944,2017-12-28,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Various build fixes; update checked-in codegen. (#4572)
+a056402f56c70bcca51b703bc851e42dd77bcd79,2018-01-05,ok,"build, reused builder",0.0,0.0,0.0,1,0,117.3,Remove unused declarations (#4578)
+a056402f56c70bcca51b703bc851e42dd77bcd79,2018-01-05,ok,"build, new builder",3.0,3.0,0.0,3,0,202.2,Remove unused declarations (#4578)
+a056402f56c70bcca51b703bc851e42dd77bcd79,2018-01-05,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Remove unused declarations (#4578)
+dfe68566e4b90d90635f19f466dc3f4b50a58a4f,2018-01-08,ok,"build, reused builder",0.0,0.0,0.0,1,0,117.4,Add char * overload for FlatBufferBuilder::CreateString() (#4583)
+dfe68566e4b90d90635f19f466dc3f4b50a58a4f,2018-01-08,ok,"build, new builder",3.0,3.0,0.0,3,0,202.0,Add char * overload for FlatBufferBuilder::CreateString() (#4583)
+dfe68566e4b90d90635f19f466dc3f4b50a58a4f,2018-01-08,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add char * overload for FlatBufferBuilder::CreateString() (#4583)
+79b80f84df7de0618596b293566062a3ea460958,2017-12-28,ok,"build, reused builder",0.0,0.0,0.0,1,0,71.4,Reduced FlatBufferBuilder from 3 buffers to 1
+79b80f84df7de0618596b293566062a3ea460958,2017-12-28,ok,"build, new builder",1.0,1.0,0.0,1,0,102.4,Reduced FlatBufferBuilder from 3 buffers to 1
+79b80f84df7de0618596b293566062a3ea460958,2017-12-28,ok,read two fields,0.0,0.0,0.0,0,0,5.2,Reduced FlatBufferBuilder from 3 buffers to 1
+bbf4dac6a3f88a8ff26f2851f183a7cef3e709c4,2018-01-22,ok,"build, reused builder",0.0,0.0,0.0,1,0,85.7,Made doubles output with higher precision in JSON and elsewhere.
+bbf4dac6a3f88a8ff26f2851f183a7cef3e709c4,2018-01-22,ok,"build, new builder",1.0,1.0,0.0,1,0,102.2,Made doubles output with higher precision in JSON and elsewhere.
+bbf4dac6a3f88a8ff26f2851f183a7cef3e709c4,2018-01-22,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Made doubles output with higher precision in JSON and elsewhere.
+19c81b11b3b3ed1949b64134184c4bf5144f3564,2018-02-17,ok,"build, reused builder",0.0,0.0,0.0,1,0,73.2,[C++] better type mismatch error (#4623)
+19c81b11b3b3ed1949b64134184c4bf5144f3564,2018-02-17,ok,"build, new builder",1.0,1.0,0.0,1,0,109.6,[C++] better type mismatch error (#4623)
+19c81b11b3b3ed1949b64134184c4bf5144f3564,2018-02-17,ok,read two fields,0.0,0.0,0.0,0,0,5.0,[C++] better type mismatch error (#4623)
+9ce98dd77da56070dfaea00f4350a71121bd0180,2018-03-06,ok,"build, reused builder",0.0,0.0,0.0,1,0,148.2,"Support attribute ""cpp_ptr_type"" on table elements marked as ""hash"" (#4643)"
+9ce98dd77da56070dfaea00f4350a71121bd0180,2018-03-06,ok,"build, new builder",1.0,1.0,0.0,1,0,240.9,"Support attribute ""cpp_ptr_type"" on table elements marked as ""hash"" (#4643)"
+9ce98dd77da56070dfaea00f4350a71121bd0180,2018-03-06,ok,read two fields,0.0,0.0,0.0,0,0,8.0,"Support attribute ""cpp_ptr_type"" on table elements marked as ""hash"" (#4643)"
+60de37448671772201e156eae66d503bf70066bc,2018-03-09,ok,"build, reused builder",0.0,0.0,0.0,1,0,146.8,Convert to unsigned char before applying bit shift operator (#4664)
+60de37448671772201e156eae66d503bf70066bc,2018-03-09,ok,"build, new builder",1.0,1.0,0.0,1,0,246.5,Convert to unsigned char before applying bit shift operator (#4664)
+60de37448671772201e156eae66d503bf70066bc,2018-03-09,ok,read two fields,0.0,0.0,0.0,0,0,8.0,Convert to unsigned char before applying bit shift operator (#4664)
+eac0bc649029c32576610c811e241155973e6187,2018-04-05,ok,"build, reused builder",0.0,0.0,0.0,1,0,148.3,Add FLATBUFFERS_ prefix to defines [C++] (#4695)
+eac0bc649029c32576610c811e241155973e6187,2018-04-05,ok,"build, new builder",1.0,1.0,0.0,1,0,251.5,Add FLATBUFFERS_ prefix to defines [C++] (#4695)
+eac0bc649029c32576610c811e241155973e6187,2018-04-05,ok,read two fields,0.0,0.0,0.0,0,0,8.2,Add FLATBUFFERS_ prefix to defines [C++] (#4695)
+12c4c2238c9156446afa3cd246868e0e22441ca6,2018-05-04,ok,"build, reused builder",0.0,0.0,0.0,1,0,153.1,Output JSON strings as natural UTF-8 text without escapes (#4710)
+12c4c2238c9156446afa3cd246868e0e22441ca6,2018-05-04,ok,"build, new builder",1.0,1.0,0.0,1,0,248.3,Output JSON strings as natural UTF-8 text without escapes (#4710)
+12c4c2238c9156446afa3cd246868e0e22441ca6,2018-05-04,ok,read two fields,0.0,0.0,0.0,0,0,8.0,Output JSON strings as natural UTF-8 text without escapes (#4710)
+c43a0beff0ab4e1d5c5fe5044dfb30f24974eaff,2018-05-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,86.0,Fix undertermined execution behavior (#4751)
+c43a0beff0ab4e1d5c5fe5044dfb30f24974eaff,2018-05-18,ok,"build, new builder",1.0,1.0,0.0,1,0,108.1,Fix undertermined execution behavior (#4751)
+c43a0beff0ab4e1d5c5fe5044dfb30f24974eaff,2018-05-18,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Fix undertermined execution behavior (#4751)
+43944a0ab1d10082b04b06543bcd5340c4a80a11,2018-06-01,ok,"build, reused builder",0.0,0.0,0.0,1,0,73.3,renamed flexbuffers::Type enum values TYPE_ -> FBT_ (#4761)
+43944a0ab1d10082b04b06543bcd5340c4a80a11,2018-06-01,ok,"build, new builder",1.0,1.0,0.0,1,0,105.7,renamed flexbuffers::Type enum values TYPE_ -> FBT_ (#4761)
+43944a0ab1d10082b04b06543bcd5340c4a80a11,2018-06-01,ok,read two fields,0.0,0.0,0.0,0,0,4.9,renamed flexbuffers::Type enum values TYPE_ -> FBT_ (#4761)
+bb321fbe19d2e618b6e8909d04c3f4ab6d971ba3,2018-06-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,80.6,CreateUnitializedVectorOfStructs and tests (#4781)
+bb321fbe19d2e618b6e8909d04c3f4ab6d971ba3,2018-06-18,ok,"build, new builder",1.0,1.0,0.0,1,0,104.8,CreateUnitializedVectorOfStructs and tests (#4781)
+bb321fbe19d2e618b6e8909d04c3f4ab6d971ba3,2018-06-18,ok,read two fields,0.0,0.0,0.0,0,0,4.9,CreateUnitializedVectorOfStructs and tests (#4781)
+ba5eb3b5cfb6eea74727e67cad599409f9d0af99,2018-07-05,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.8,Lua (5.3) Language addition (#4804)
+ba5eb3b5cfb6eea74727e67cad599409f9d0af99,2018-07-05,ok,"build, new builder",1.0,1.0,0.0,1,0,104.9,Lua (5.3) Language addition (#4804)
+ba5eb3b5cfb6eea74727e67cad599409f9d0af99,2018-07-05,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Lua (5.3) Language addition (#4804)
+79f2adc50a23949d14b0da7d12a5d1451748e82c,2018-07-16,ok,"build, reused builder",0.0,0.0,0.0,1,0,71.6,Renamed Verifier methods
+79f2adc50a23949d14b0da7d12a5d1451748e82c,2018-07-16,ok,"build, new builder",1.0,1.0,0.0,1,0,104.9,Renamed Verifier methods
+79f2adc50a23949d14b0da7d12a5d1451748e82c,2018-07-16,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Renamed Verifier methods
+118093b6139cb49993f72757b32afe0067051284,2018-07-26,ok,"build, reused builder",0.0,0.0,0.0,1,0,71.6,Update FLATBUFFERS_HAS_STRING_VIEW __cplusplus checks to the versions provided by the standard feature test macros. (#4841)
+118093b6139cb49993f72757b32afe0067051284,2018-07-26,ok,"build, new builder",1.0,1.0,0.0,1,0,105.2,Update FLATBUFFERS_HAS_STRING_VIEW __cplusplus checks to the versions provided by the standard feature test macros. (#4841)
+118093b6139cb49993f72757b32afe0067051284,2018-07-26,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Update FLATBUFFERS_HAS_STRING_VIEW __cplusplus checks to the versions provided by the standard feature test macros. (#4841)
+e203882d54d08827f6c8126d4f252d6d11a4a59d,2018-08-10,ok,"build, reused builder",0.0,0.0,0.0,1,0,81.1,Clarify flatbuffer reflection struct sizes to be less error-prone. (#4870)
+e203882d54d08827f6c8126d4f252d6d11a4a59d,2018-08-10,ok,"build, new builder",1.0,1.0,0.0,1,0,104.8,Clarify flatbuffer reflection struct sizes to be less error-prone. (#4870)
+e203882d54d08827f6c8126d4f252d6d11a4a59d,2018-08-10,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Clarify flatbuffer reflection struct sizes to be less error-prone. (#4870)
+e1f48ad35ad1bbdbc3ded1ff537e362011a6c876,2018-08-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,140.1,Updated preprocessor check for template aliases. (#4888)
+e1f48ad35ad1bbdbc3ded1ff537e362011a6c876,2018-08-23,ok,"build, new builder",1.0,1.0,0.0,1,0,231.5,Updated preprocessor check for template aliases. (#4888)
+e1f48ad35ad1bbdbc3ded1ff537e362011a6c876,2018-08-23,ok,read two fields,0.0,0.0,0.0,0,0,8.2,Updated preprocessor check for template aliases. (#4888)
+33791dc7b0fcfa31781875753dcd716e50d41283,2018-09-22,ok,"build, reused builder",0.0,0.0,0.0,1,0,144.8,Add compare operator to code generated for c++ (#4940)
+33791dc7b0fcfa31781875753dcd716e50d41283,2018-09-22,ok,"build, new builder",1.0,1.0,0.0,1,0,239.8,Add compare operator to code generated for c++ (#4940)
+33791dc7b0fcfa31781875753dcd716e50d41283,2018-09-22,ok,read two fields,0.0,0.0,0.0,0,0,8.3,Add compare operator to code generated for c++ (#4940)
+0bffce5aefee03f8e52aa77cc0154772236adad5,2018-09-28,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.4,Add more apis to query vector types from a reference (#4823)
+0bffce5aefee03f8e52aa77cc0154772236adad5,2018-09-28,ok,"build, new builder",1.0,1.0,0.0,1,0,108.7,Add more apis to query vector types from a reference (#4823)
+0bffce5aefee03f8e52aa77cc0154772236adad5,2018-09-28,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add more apis to query vector types from a reference (#4823)
+569492e8900e93a826381dd08e8ce419727c1f52,2018-10-08,ok,"build, reused builder",0.0,0.0,0.0,1,0,138.6,Disable armeabi builds for Android and re-enable CI builds. (#4970)
+569492e8900e93a826381dd08e8ce419727c1f52,2018-10-08,ok,"build, new builder",1.0,1.0,0.0,1,0,229.6,Disable armeabi builds for Android and re-enable CI builds. (#4970)
+569492e8900e93a826381dd08e8ce419727c1f52,2018-10-08,ok,read two fields,0.0,0.0,0.0,0,0,8.0,Disable armeabi builds for Android and re-enable CI builds. (#4970)
+a3d8391f7be8c29660f77953f2fea11c76864408,2018-10-15,ok,"build, reused builder",0.0,0.0,0.0,1,0,144.9,don't use std::function in flatbuffers::Parser (#4995)
+a3d8391f7be8c29660f77953f2fea11c76864408,2018-10-15,ok,"build, new builder",1.0,1.0,0.0,1,0,241.6,don't use std::function in flatbuffers::Parser (#4995)
+a3d8391f7be8c29660f77953f2fea11c76864408,2018-10-15,ok,read two fields,0.0,0.0,0.0,0,0,8.3,don't use std::function in flatbuffers::Parser (#4995)
+efbb11e09354147c0716ba7a599723f2eb1526e2,2018-10-22,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.6,CI check generate code (#4998)
+efbb11e09354147c0716ba7a599723f2eb1526e2,2018-10-22,ok,"build, new builder",1.0,1.0,0.0,1,0,106.8,CI check generate code (#4998)
+efbb11e09354147c0716ba7a599723f2eb1526e2,2018-10-22,ok,read two fields,0.0,0.0,0.0,0,0,4.9,CI check generate code (#4998)
+0fb1d44bc42a828a1ce8669e3fa001de2b1bd8bd,2018-10-30,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.9,"Add 'fsanitize=address,undefined' to tests and flatc targets (#5009)"
+0fb1d44bc42a828a1ce8669e3fa001de2b1bd8bd,2018-10-30,ok,"build, new builder",1.0,1.0,0.0,1,0,225.9,"Add 'fsanitize=address,undefined' to tests and flatc targets (#5009)"
+0fb1d44bc42a828a1ce8669e3fa001de2b1bd8bd,2018-10-30,ok,read two fields,0.0,0.0,0.0,0,0,4.9,"Add 'fsanitize=address,undefined' to tests and flatc targets (#5009)"
+ab54e61805321eaea8f0e886531c4f5aa79773c7,2018-11-12,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.4,FlexBuffer to JSON convertor for typed and fixedTypedvectors (#4947)
+ab54e61805321eaea8f0e886531c4f5aa79773c7,2018-11-12,ok,"build, new builder",1.0,1.0,0.0,1,0,107.3,FlexBuffer to JSON convertor for typed and fixedTypedvectors (#4947)
+ab54e61805321eaea8f0e886531c4f5aa79773c7,2018-11-12,ok,read two fields,0.0,0.0,0.0,0,0,4.9,FlexBuffer to JSON convertor for typed and fixedTypedvectors (#4947)
+2aa0d9a54d9f45e2622e8f49f5c3a1b0c356c0a3,2018-12-03,ok,"build, reused builder",0.0,0.0,0.0,1,0,146.7,"Support nulls in String compare, CreateSharedString (#5060)"
+2aa0d9a54d9f45e2622e8f49f5c3a1b0c356c0a3,2018-12-03,ok,"build, new builder",1.0,1.0,0.0,1,0,233.6,"Support nulls in String compare, CreateSharedString (#5060)"
+2aa0d9a54d9f45e2622e8f49f5c3a1b0c356c0a3,2018-12-03,ok,read two fields,0.0,0.0,0.0,0,0,8.3,"Support nulls in String compare, CreateSharedString (#5060)"
+dd288f71f316e73bf6a421721f861a760d5d4bfe,2019-01-08,ok,"build, reused builder",0.0,0.0,0.0,1,0,141.9,Add `NaN` and `Inf` defaults to the C++ generated code. (#5102)
+dd288f71f316e73bf6a421721f861a760d5d4bfe,2019-01-08,ok,"build, new builder",1.0,1.0,0.0,1,0,235.2,Add `NaN` and `Inf` defaults to the C++ generated code. (#5102)
+dd288f71f316e73bf6a421721f861a760d5d4bfe,2019-01-08,ok,read two fields,0.0,0.0,0.0,0,0,8.0,Add `NaN` and `Inf` defaults to the C++ generated code. (#5102)
+d44931656ab5801db260236650701812f4a7eb18,2019-01-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,146.1,Fix high certainty warnings from PVS-studio (#5115)
+d44931656ab5801db260236650701812f4a7eb18,2019-01-18,ok,"build, new builder",1.0,1.0,0.0,1,0,228.0,Fix high certainty warnings from PVS-studio (#5115)
+d44931656ab5801db260236650701812f4a7eb18,2019-01-18,ok,read two fields,0.0,0.0,0.0,0,0,8.1,Fix high certainty warnings from PVS-studio (#5115)
+347dba8501a6c4deacc63afd0554fbfe5048104f,2019-01-25,ok,"build, reused builder",0.0,0.0,0.0,1,0,139.8,delete zero width space characters <U+200B>'s to avoid MSVC warning C4819 (#5133)
+347dba8501a6c4deacc63afd0554fbfe5048104f,2019-01-25,ok,"build, new builder",1.0,1.0,0.0,1,0,237.8,delete zero width space characters <U+200B>'s to avoid MSVC warning C4819 (#5133)
+347dba8501a6c4deacc63afd0554fbfe5048104f,2019-01-25,ok,read two fields,0.0,0.0,0.0,0,0,8.1,delete zero width space characters <U+200B>'s to avoid MSVC warning C4819 (#5133)
+cc7f9b89f3795b44bb7ec38ac96c15f95e1c7d24,2019-02-07,ok,"build, reused builder",0.0,0.0,0.0,1,0,142.8,Made FLATBUFFERS_TRACK_VERIFIER_BUFFER_SIZE #ifdef out less
+cc7f9b89f3795b44bb7ec38ac96c15f95e1c7d24,2019-02-07,ok,"build, new builder",1.0,1.0,0.0,1,0,236.5,Made FLATBUFFERS_TRACK_VERIFIER_BUFFER_SIZE #ifdef out less
+cc7f9b89f3795b44bb7ec38ac96c15f95e1c7d24,2019-02-07,ok,read two fields,0.0,0.0,0.0,0,0,8.2,Made FLATBUFFERS_TRACK_VERIFIER_BUFFER_SIZE #ifdef out less
+bb58442054adbc502e54df0ce31516927da0b715,2019-02-21,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.2,Improve endian detection. (#5204)
+bb58442054adbc502e54df0ce31516927da0b715,2019-02-21,ok,"build, new builder",1.0,1.0,0.0,1,0,107.0,Improve endian detection. (#5204)
+bb58442054adbc502e54df0ce31516927da0b715,2019-02-21,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Improve endian detection. (#5204)
+6e2d530d6102da86b638b5e6f71764a109b29f11,2019-02-25,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.6,Fix incorrect code generation on Solaris Sparc. (#5208)
+6e2d530d6102da86b638b5e6f71764a109b29f11,2019-02-25,ok,"build, new builder",1.0,1.0,0.0,1,0,107.0,Fix incorrect code generation on Solaris Sparc. (#5208)
+6e2d530d6102da86b638b5e6f71764a109b29f11,2019-02-25,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Fix incorrect code generation on Solaris Sparc. (#5208)
+407fb5d5379a52e21002b9d887b4bbf36980efd5,2019-03-12,ok,"build, reused builder",0.0,0.0,0.0,1,0,80.6,Narrows template ascii routines to prevent a possible signed overflow in generic code. (#5232)
+407fb5d5379a52e21002b9d887b4bbf36980efd5,2019-03-12,ok,"build, new builder",1.0,1.0,0.0,1,0,106.9,Narrows template ascii routines to prevent a possible signed overflow in generic code. (#5232)
+407fb5d5379a52e21002b9d887b4bbf36980efd5,2019-03-12,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Narrows template ascii routines to prevent a possible signed overflow in generic code. (#5232)
+fd51fadaac768b166c4cd356eff72fe766bfbb46,2019-03-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,82.7,Fixed vector_delimited excluding delimiter
+fd51fadaac768b166c4cd356eff72fe766bfbb46,2019-03-18,ok,"build, new builder",1.0,1.0,0.0,1,0,107.0,Fixed vector_delimited excluding delimiter
+fd51fadaac768b166c4cd356eff72fe766bfbb46,2019-03-18,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Fixed vector_delimited excluding delimiter
+dd6daa709b4a105ce123726d98378cfcc27dab9a,2019-04-09,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.4,"Part of #5265, neutral changes (#5281)"
+dd6daa709b4a105ce123726d98378cfcc27dab9a,2019-04-09,ok,"build, new builder",1.0,1.0,0.0,1,0,118.0,"Part of #5265, neutral changes (#5281)"
+dd6daa709b4a105ce123726d98378cfcc27dab9a,2019-04-09,ok,read two fields,0.0,0.0,0.0,0,0,4.9,"Part of #5265, neutral changes (#5281)"
+107c08988a49a093b7e38640153e74d3859e8577,2019-05-10,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.7,Set default CRTReportMode for the `flatc` target (#5336)
+107c08988a49a093b7e38640153e74d3859e8577,2019-05-10,ok,"build, new builder",1.0,1.0,0.0,1,0,107.1,Set default CRTReportMode for the `flatc` target (#5336)
+107c08988a49a093b7e38640153e74d3859e8577,2019-05-10,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Set default CRTReportMode for the `flatc` target (#5336)
+79f0df3dfc06d27bf158eedf336a093954dc570f,2019-05-30,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.7,[C++] Fix Undefined behavior for zero length vectors (#5355)
+79f0df3dfc06d27bf158eedf336a093954dc570f,2019-05-30,ok,"build, new builder",1.0,1.0,0.0,1,0,107.0,[C++] Fix Undefined behavior for zero length vectors (#5355)
+79f0df3dfc06d27bf158eedf336a093954dc570f,2019-05-30,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[C++] Fix Undefined behavior for zero length vectors (#5355)
+e635141d5bc66f056c90bcc9da5fdd766610492f,2019-06-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.8,Add support for fixed-size arrays (#5313)
+e635141d5bc66f056c90bcc9da5fdd766610492f,2019-06-18,ok,"build, new builder",1.0,1.0,0.0,1,0,107.0,Add support for fixed-size arrays (#5313)
+e635141d5bc66f056c90bcc9da5fdd766610492f,2019-06-18,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add support for fixed-size arrays (#5313)
+e304f8c115a79c26dfc8b4b164f7920bbddfd7af,2019-07-09,ok,"build, reused builder",0.0,0.0,0.0,1,0,142.8,Extend the test of MonsterExtra (#5428)
+e304f8c115a79c26dfc8b4b164f7920bbddfd7af,2019-07-09,ok,"build, new builder",1.0,1.0,0.0,1,0,236.6,Extend the test of MonsterExtra (#5428)
+e304f8c115a79c26dfc8b4b164f7920bbddfd7af,2019-07-09,ok,read two fields,0.0,0.0,0.0,0,0,8.1,Extend the test of MonsterExtra (#5428)
+2d5315ff0eebfa4b9c967e708c24be0b21d921b6,2019-08-02,ok,"build, reused builder",0.0,0.0,0.0,1,0,144.3,[C++] remove static_cast expression (#5440)
+2d5315ff0eebfa4b9c967e708c24be0b21d921b6,2019-08-02,ok,"build, new builder",1.0,1.0,0.0,1,0,241.3,[C++] remove static_cast expression (#5440)
+2d5315ff0eebfa4b9c967e708c24be0b21d921b6,2019-08-02,ok,read two fields,0.0,0.0,0.0,0,0,8.1,[C++] remove static_cast expression (#5440)
+ec6b0bf297efb089a8256f168852ea3507b0f56a,2019-08-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,147.8,Fixed STLPort Android compile error
+ec6b0bf297efb089a8256f168852ea3507b0f56a,2019-08-23,ok,"build, new builder",1.0,1.0,0.0,1,0,246.3,Fixed STLPort Android compile error
+ec6b0bf297efb089a8256f168852ea3507b0f56a,2019-08-23,ok,read two fields,0.0,0.0,0.0,0,0,8.4,Fixed STLPort Android compile error
+917687c7a6357d4a0e9e53e0f051b76cd0187747,2019-09-16,ok,"build, reused builder",0.0,0.0,0.0,1,0,81.2,Fixed Reflection Verifier not handling vectors of unions.
+917687c7a6357d4a0e9e53e0f051b76cd0187747,2019-09-16,ok,"build, new builder",1.0,1.0,0.0,1,0,107.3,Fixed Reflection Verifier not handling vectors of unions.
+917687c7a6357d4a0e9e53e0f051b76cd0187747,2019-09-16,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Fixed Reflection Verifier not handling vectors of unions.
+7f1af7cb02aad67c8a02ea541c78dee5df4a70e5,2019-10-15,ok,"build, reused builder",0.0,0.0,0.0,1,0,74.1,Fix build with gcc version 7.4.0 (#5570)
+7f1af7cb02aad67c8a02ea541c78dee5df4a70e5,2019-10-15,ok,"build, new builder",1.0,1.0,0.0,1,0,107.3,Fix build with gcc version 7.4.0 (#5570)
+7f1af7cb02aad67c8a02ea541c78dee5df4a70e5,2019-10-15,ok,read two fields,0.0,0.0,0.0,0,0,5.2,Fix build with gcc version 7.4.0 (#5570)
+7b38aa71e62cfdbc4530b104226177529469f076,2019-11-04,ok,"build, reused builder",0.0,0.0,0.0,1,0,81.0,flatbuffers.h: fix documentation warning (#5607)
+7b38aa71e62cfdbc4530b104226177529469f076,2019-11-04,ok,"build, new builder",1.0,1.0,0.0,1,0,107.7,flatbuffers.h: fix documentation warning (#5607)
+7b38aa71e62cfdbc4530b104226177529469f076,2019-11-04,ok,read two fields,0.0,0.0,0.0,0,0,4.9,flatbuffers.h: fix documentation warning (#5607)
+42c08cbca601688af921eaa9384844a632e2cde8,2019-11-11,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.6,Ran src/clang-format-all.sh (#5617)
+42c08cbca601688af921eaa9384844a632e2cde8,2019-11-11,ok,"build, new builder",1.0,1.0,0.0,1,0,120.7,Ran src/clang-format-all.sh (#5617)
+42c08cbca601688af921eaa9384844a632e2cde8,2019-11-11,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Ran src/clang-format-all.sh (#5617)
+ff3781dc2d541c68122ec33c96ddf7032fcca27e,2019-11-19,ok,"build, reused builder",0.0,0.0,0.0,1,0,148.2,add namespace prefix in FLATBUFFERS_MAX_BUFFER_SIZE (#5629)
+ff3781dc2d541c68122ec33c96ddf7032fcca27e,2019-11-19,ok,"build, new builder",1.0,1.0,0.0,1,0,231.0,add namespace prefix in FLATBUFFERS_MAX_BUFFER_SIZE (#5629)
+ff3781dc2d541c68122ec33c96ddf7032fcca27e,2019-11-19,ok,read two fields,0.0,0.0,0.0,0,0,5.2,add namespace prefix in FLATBUFFERS_MAX_BUFFER_SIZE (#5629)
+75823cc2755127e408ee944ffbc3863b0079fd01,2019-12-03,ok,"build, reused builder",0.0,0.0,0.0,1,0,82.4,[Clang 10]: definition of implicit copy constructor for 'TableKeyComparatoris deprecated #5649 (#5650)
+75823cc2755127e408ee944ffbc3863b0079fd01,2019-12-03,ok,"build, new builder",1.0,1.0,0.0,1,0,107.1,[Clang 10]: definition of implicit copy constructor for 'TableKeyComparatoris deprecated #5649 (#5650)
+75823cc2755127e408ee944ffbc3863b0079fd01,2019-12-03,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[Clang 10]: definition of implicit copy constructor for 'TableKeyComparatoris deprecated #5649 (#5650)
+3e8f15df908c31b4c52308b621fed490cbac2ccc,2019-12-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,143.2,Fix for FlexBuffers FBT_VECTOR_STRING size bit-width.
+3e8f15df908c31b4c52308b621fed490cbac2ccc,2019-12-23,ok,"build, new builder",1.0,1.0,0.0,1,0,106.9,Fix for FlexBuffers FBT_VECTOR_STRING size bit-width.
+3e8f15df908c31b4c52308b621fed490cbac2ccc,2019-12-23,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Fix for FlexBuffers FBT_VECTOR_STRING size bit-width.
+21b7061963233fddc726a3dfb9a4131a4ce6cb0d,2020-01-06,ok,"build, reused builder",0.0,0.0,0.0,1,0,84.2,(Optionally) add an additional suffix namespace to generated fbs files. (#5698)
+21b7061963233fddc726a3dfb9a4131a4ce6cb0d,2020-01-06,ok,"build, new builder",1.0,1.0,0.0,1,0,107.3,(Optionally) add an additional suffix namespace to generated fbs files. (#5698)
+21b7061963233fddc726a3dfb9a4131a4ce6cb0d,2020-01-06,ok,read two fields,0.0,0.0,0.0,0,0,4.9,(Optionally) add an additional suffix namespace to generated fbs files. (#5698)
+47026ea6ba0e3ea8c4f4ab47de880cb5665ee1b6,2020-01-24,ok,"build, reused builder",0.0,0.0,0.0,1,0,103.5,Added the code to embed the binary schema to the source (--bfbs-gen-embed). (#5701)
+47026ea6ba0e3ea8c4f4ab47de880cb5665ee1b6,2020-01-24,ok,"build, new builder",1.0,1.0,0.0,1,0,108.7,Added the code to embed the binary schema to the source (--bfbs-gen-embed). (#5701)
+47026ea6ba0e3ea8c4f4ab47de880cb5665ee1b6,2020-01-24,ok,read two fields,0.0,0.0,0.0,0,0,9.0,Added the code to embed the binary schema to the source (--bfbs-gen-embed). (#5701)
+6ff1898413a56577bd2e9abd8280a79b1880bd53,2020-03-02,ok,"build, reused builder",0.0,0.0,0.0,1,0,142.3,Added --filename-suffix and --filename-ext to flatc (#5778)
+6ff1898413a56577bd2e9abd8280a79b1880bd53,2020-03-02,ok,"build, new builder",1.0,1.0,0.0,1,0,107.2,Added --filename-suffix and --filename-ext to flatc (#5778)
+6ff1898413a56577bd2e9abd8280a79b1880bd53,2020-03-02,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Added --filename-suffix and --filename-ext to flatc (#5778)
+8b52af65bc066fb36761ebc1f950454c5e5ef548,2020-03-16,ok,"build, reused builder",0.0,0.0,0.0,1,0,142.9,[C++] Add max_depth and max_tables parameters to reflection::Verify (#5815)
+8b52af65bc066fb36761ebc1f950454c5e5ef548,2020-03-16,ok,"build, new builder",1.0,1.0,0.0,1,0,239.7,[C++] Add max_depth and max_tables parameters to reflection::Verify (#5815)
+8b52af65bc066fb36761ebc1f950454c5e5ef548,2020-03-16,ok,read two fields,0.0,0.0,0.0,0,0,8.3,[C++] Add max_depth and max_tables parameters to reflection::Verify (#5815)
+cb4d0f72e38dfe2a15e39d8d449f7e6385300ca1,2020-04-13,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.0,[Swift] Object API support  (#5826)
+cb4d0f72e38dfe2a15e39d8d449f7e6385300ca1,2020-04-13,ok,"build, new builder",1.0,1.0,0.0,1,0,107.3,[Swift] Object API support  (#5826)
+cb4d0f72e38dfe2a15e39d8d449f7e6385300ca1,2020-04-13,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[Swift] Object API support  (#5826)
+7179a5a8baf478b09bb906ed0be030ade87f02cd,2020-06-01,ok,"build, reused builder",0.0,0.0,0.0,1,0,81.3,General Codebase clean up (#5939)
+7179a5a8baf478b09bb906ed0be030ade87f02cd,2020-06-01,ok,"build, new builder",1.0,1.0,0.0,1,0,107.2,General Codebase clean up (#5939)
+7179a5a8baf478b09bb906ed0be030ade87f02cd,2020-06-01,ok,read two fields,0.0,0.0,0.0,0,0,4.9,General Codebase clean up (#5939)
+7571b2ac56271777e0c5fde11371c0d054e9c1f5,2020-06-25,ok,"build, reused builder",0.0,0.0,0.0,1,0,145.2,[C++] Updates real_path to be truly portable (#5787)
+7571b2ac56271777e0c5fde11371c0d054e9c1f5,2020-06-25,ok,"build, new builder",1.0,1.0,0.0,1,0,241.3,[C++] Updates real_path to be truly portable (#5787)
+7571b2ac56271777e0c5fde11371c0d054e9c1f5,2020-06-25,ok,read two fields,0.0,0.0,0.0,0,0,8.3,[C++] Updates real_path to be truly portable (#5787)
+e86d5b8e97c09d4eac46dbbb8541f180d05f1da2,2020-08-19,ok,"build, reused builder",0.0,0.0,0.0,1,0,138.2,[Kotlin] Attach JvmStatic annotation to each method in companion object (#6052)
+e86d5b8e97c09d4eac46dbbb8541f180d05f1da2,2020-08-19,ok,"build, new builder",1.0,1.0,0.0,1,0,232.7,[Kotlin] Attach JvmStatic annotation to each method in companion object (#6052)
+e86d5b8e97c09d4eac46dbbb8541f180d05f1da2,2020-08-19,ok,read two fields,0.0,0.0,0.0,0,0,8.1,[Kotlin] Attach JvmStatic annotation to each method in companion object (#6052)
+c75ae242931821a5e50c1221d425a2629adb871b,2020-09-11,ok,"build, reused builder",0.0,0.0,0.0,1,0,148.8,Optional-ness in reflection (#6097)
+c75ae242931821a5e50c1221d425a2629adb871b,2020-09-11,ok,"build, new builder",1.0,1.0,0.0,1,0,248.1,Optional-ness in reflection (#6097)
+c75ae242931821a5e50c1221d425a2629adb871b,2020-09-11,ok,read two fields,0.0,0.0,0.0,0,0,8.4,Optional-ness in reflection (#6097)
+34d67b425e22ab8406eacc0a3a95e5bd60fd3300,2020-09-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,81.5,Minireflect fixed array (#6129)
+34d67b425e22ab8406eacc0a3a95e5bd60fd3300,2020-09-23,ok,"build, new builder",1.0,1.0,0.0,1,0,107.3,Minireflect fixed array (#6129)
+34d67b425e22ab8406eacc0a3a95e5bd60fd3300,2020-09-23,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Minireflect fixed array (#6129)
+cb971eece803c13c8a0dda3841dc1ab830164253,2020-10-08,ok,"build, reused builder",0.0,0.0,0.0,1,0,148.7,[C++] Fix -Wnarrowing and -Woverflow due to signed bitfields on G++ ARM (#6163)
+cb971eece803c13c8a0dda3841dc1ab830164253,2020-10-08,ok,"build, new builder",1.0,1.0,0.0,1,0,247.0,[C++] Fix -Wnarrowing and -Woverflow due to signed bitfields on G++ ARM (#6163)
+cb971eece803c13c8a0dda3841dc1ab830164253,2020-10-08,ok,read two fields,0.0,0.0,0.0,0,0,8.5,[C++] Fix -Wnarrowing and -Woverflow due to signed bitfields on G++ ARM (#6163)
+5cd7137103c8ea7e2ecb07975b0649fd51d9da62,2020-10-16,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.1,Add generation of JSON Schema to library (#6165)
+5cd7137103c8ea7e2ecb07975b0649fd51d9da62,2020-10-16,ok,"build, new builder",1.0,1.0,0.0,1,0,107.2,Add generation of JSON Schema to library (#6165)
+5cd7137103c8ea7e2ecb07975b0649fd51d9da62,2020-10-16,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add generation of JSON Schema to library (#6165)
+e58c182443ac53c317c12fc8b4017d7816576a3d,2020-11-19,ok,"build, reused builder",0.0,0.0,0.0,1,0,77.2,Add --require-explicit-ids to require explicit ids (#6277)
+e58c182443ac53c317c12fc8b4017d7816576a3d,2020-11-19,ok,"build, new builder",1.0,1.0,0.0,1,0,107.2,Add --require-explicit-ids to require explicit ids (#6277)
+e58c182443ac53c317c12fc8b4017d7816576a3d,2020-11-19,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add --require-explicit-ids to require explicit ids (#6277)
+fd4c1b5ff7aca18220ddb0d3b82fd831924533ba,2020-12-07,ok,"build, reused builder",0.0,0.0,0.0,1,0,84.0,Replace std::string and const char* CreateSharedString with string_view (#6315)
+fd4c1b5ff7aca18220ddb0d3b82fd831924533ba,2020-12-07,ok,"build, new builder",1.0,1.0,0.0,1,0,108.9,Replace std::string and const char* CreateSharedString with string_view (#6315)
+fd4c1b5ff7aca18220ddb0d3b82fd831924533ba,2020-12-07,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Replace std::string and const char* CreateSharedString with string_view (#6315)
+75c859e98f360b07fa7168afcf1b3902c6a19540,2021-01-20,ok,"build, reused builder",0.0,0.0,0.0,1,0,143.9,[idl_parser] Improve symbols lookup thru parent namespaces (#6407)
+75c859e98f360b07fa7168afcf1b3902c6a19540,2021-01-20,ok,"build, new builder",1.0,1.0,0.0,1,0,238.6,[idl_parser] Improve symbols lookup thru parent namespaces (#6407)
+75c859e98f360b07fa7168afcf1b3902c6a19540,2021-01-20,ok,read two fields,0.0,0.0,0.0,0,0,8.1,[idl_parser] Improve symbols lookup thru parent namespaces (#6407)
+fee095410b0969765b5c2545c10e585f69e961b0,2021-02-11,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.4,[idl_parser] Validate `force_align` on all possible paths (#6430)
+fee095410b0969765b5c2545c10e585f69e961b0,2021-02-11,ok,"build, new builder",1.0,1.0,0.0,1,0,107.3,[idl_parser] Validate `force_align` on all possible paths (#6430)
+fee095410b0969765b5c2545c10e585f69e961b0,2021-02-11,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[idl_parser] Validate `force_align` on all possible paths (#6430)
+9a4f1f434b006d20ad1815abf8faee64e4657f01,2021-03-08,ok,"build, reused builder",0.0,0.0,0.0,1,0,84.0,Disable x64-specific optimizations for ARM64EC ReadInt64 (#6506)
+9a4f1f434b006d20ad1815abf8faee64e4657f01,2021-03-08,ok,"build, new builder",1.0,1.0,0.0,1,0,145.7,Disable x64-specific optimizations for ARM64EC ReadInt64 (#6506)
+9a4f1f434b006d20ad1815abf8faee64e4657f01,2021-03-08,ok,read two fields,0.0,0.0,0.0,0,0,5.6,Disable x64-specific optimizations for ARM64EC ReadInt64 (#6506)
+16836ff95a7f112f66a8c5994a508e6bfec010c9,2021-04-27,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.6,Add advance feature indicators to reflection (#6546)
+16836ff95a7f112f66a8c5994a508e6bfec010c9,2021-04-27,ok,"build, new builder",1.0,1.0,0.0,1,0,107.2,Add advance feature indicators to reflection (#6546)
+16836ff95a7f112f66a8c5994a508e6bfec010c9,2021-04-27,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add advance feature indicators to reflection (#6546)
+ef0eb3701d9d765f4f0955d6f48ac07eb89bd8a4,2021-05-15,ok,"build, reused builder",0.0,0.0,0.0,1,0,78.6,Ran clang-format-all.sh. Removed default --style=file parameter (#6639)
+ef0eb3701d9d765f4f0955d6f48ac07eb89bd8a4,2021-05-15,ok,"build, new builder",1.0,1.0,0.0,1,0,107.9,Ran clang-format-all.sh. Removed default --style=file parameter (#6639)
+ef0eb3701d9d765f4f0955d6f48ac07eb89bd8a4,2021-05-15,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Ran clang-format-all.sh. Removed default --style=file parameter (#6639)
+7c3e267e1e99ff53175d869813c077b16036b07d,2021-06-04,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.5,[Java] ObjectAPI implementation (#6521) (#6582)
+7c3e267e1e99ff53175d869813c077b16036b07d,2021-06-04,ok,"build, new builder",1.0,1.0,0.0,1,0,107.2,[Java] ObjectAPI implementation (#6521) (#6582)
+7c3e267e1e99ff53175d869813c077b16036b07d,2021-06-04,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[Java] ObjectAPI implementation (#6521) (#6582)
+06fd6d640c4690cf858199b05b445160ac31334b,2021-06-19,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.4,Replace filenames in reflection with filenames+includes. (#6703)
+06fd6d640c4690cf858199b05b445160ac31334b,2021-06-19,ok,"build, new builder",1.0,1.0,0.0,1,0,107.2,Replace filenames in reflection with filenames+includes. (#6703)
+06fd6d640c4690cf858199b05b445160ac31334b,2021-06-19,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Replace filenames in reflection with filenames+includes. (#6703)
+0980e39c9b99659cfd17e8fa33e00a3177345029,2021-07-12,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.8,flexbuffers: Add variant of Blob() that takes a key (#6730)
+0980e39c9b99659cfd17e8fa33e00a3177345029,2021-07-12,ok,"build, new builder",1.0,1.0,0.0,1,0,107.4,flexbuffers: Add variant of Blob() that takes a key (#6730)
+0980e39c9b99659cfd17e8fa33e00a3177345029,2021-07-12,ok,read two fields,0.0,0.0,0.0,0,0,4.9,flexbuffers: Add variant of Blob() that takes a key (#6730)
+b20c4d3aada74ea4bd204b03b5045585008294bc,2021-08-31,ok,"build, reused builder",0.0,0.0,0.0,1,0,83.8,[C++] Add GetMutableSizePrefixedRoot and generate GetMutableSizePrefixedXxx functions (#6815)
+b20c4d3aada74ea4bd204b03b5045585008294bc,2021-08-31,ok,"build, new builder",1.0,1.0,0.0,1,0,107.6,[C++] Add GetMutableSizePrefixedRoot and generate GetMutableSizePrefixedXxx functions (#6815)
+b20c4d3aada74ea4bd204b03b5045585008294bc,2021-08-31,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[C++] Add GetMutableSizePrefixedRoot and generate GetMutableSizePrefixedXxx functions (#6815)
+6f7a57eaa0ef872af87ee3333a4a0fa1bfb607ce,2021-09-15,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.6,[C#] Using 'global::' as qualifying_start_ within BaseGenerator (#6767)
+6f7a57eaa0ef872af87ee3333a4a0fa1bfb607ce,2021-09-15,ok,"build, new builder",1.0,1.0,0.0,1,0,107.5,[C#] Using 'global::' as qualifying_start_ within BaseGenerator (#6767)
+6f7a57eaa0ef872af87ee3333a4a0fa1bfb607ce,2021-09-15,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[C#] Using 'global::' as qualifying_start_ within BaseGenerator (#6767)
+6c8c291559053f90a35c138499053449a40e3b9a,2021-11-10,ok,"build, reused builder",0.0,0.0,0.0,1,0,137.9,[C++] Split flatbuffers.h into separate files (#6868)
+6c8c291559053f90a35c138499053449a40e3b9a,2021-11-10,ok,"build, new builder",1.0,1.0,0.0,1,0,230.6,[C++] Split flatbuffers.h into separate files (#6868)
+6c8c291559053f90a35c138499053449a40e3b9a,2021-11-10,ok,read two fields,0.0,0.0,0.0,0,0,8.0,[C++] Split flatbuffers.h into separate files (#6868)
+a2b99084b446cd9dd239b3d08ef22d2dd51a3f6e,2021-11-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,144.3,Fix flexbuffers clang-analyzer warning (#6947)
+a2b99084b446cd9dd239b3d08ef22d2dd51a3f6e,2021-11-23,ok,"build, new builder",1.0,1.0,0.0,1,0,240.6,Fix flexbuffers clang-analyzer warning (#6947)
+a2b99084b446cd9dd239b3d08ef22d2dd51a3f6e,2021-11-23,ok,read two fields,0.0,0.0,0.0,0,0,8.2,Fix flexbuffers clang-analyzer warning (#6947)
+4f7f6dc301f5ffb9765b055d48324dc7629abd5a,2021-12-01,ok,"build, reused builder",0.0,0.0,0.0,1,0,116.3,Restore FlatBufferBuilder::kFileIdentifierLength. (#6960)
+4f7f6dc301f5ffb9765b055d48324dc7629abd5a,2021-12-01,ok,"build, new builder",1.0,1.0,0.0,1,0,224.4,Restore FlatBufferBuilder::kFileIdentifierLength. (#6960)
+4f7f6dc301f5ffb9765b055d48324dc7629abd5a,2021-12-01,ok,read two fields,0.0,0.0,0.0,0,0,8.3,Restore FlatBufferBuilder::kFileIdentifierLength. (#6960)
+d0cede9c90c5257537c293517a21376408b549fa,2021-12-09,ok,"build, reused builder",0.0,0.0,0.0,1,0,68.8,Bumping to Version 2.0.5 (#6967)
+d0cede9c90c5257537c293517a21376408b549fa,2021-12-09,ok,"build, new builder",1.0,1.0,0.0,1,0,88.4,Bumping to Version 2.0.5 (#6967)
+d0cede9c90c5257537c293517a21376408b549fa,2021-12-09,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Bumping to Version 2.0.5 (#6967)
+a22b1b6267a08f9ad028675865501b174171e896,2021-12-13,ok,"build, reused builder",0.0,0.0,0.0,1,0,59.9,Prevent shadow with _{{FIELD_NAME}} (#6991)
+a22b1b6267a08f9ad028675865501b174171e896,2021-12-13,ok,"build, new builder",1.0,1.0,0.0,1,0,88.5,Prevent shadow with _{{FIELD_NAME}} (#6991)
+a22b1b6267a08f9ad028675865501b174171e896,2021-12-13,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Prevent shadow with _{{FIELD_NAME}} (#6991)
+b8aaccee8248059b2af032cca0eb1d2ddbdb6cdc,2021-12-15,ok,"build, reused builder",0.0,0.0,0.0,1,0,59.5,Disable parsing of nested_flatbuffers as bytes by default
+b8aaccee8248059b2af032cca0eb1d2ddbdb6cdc,2021-12-15,ok,"build, new builder",1.0,1.0,0.0,1,0,88.5,Disable parsing of nested_flatbuffers as bytes by default
+b8aaccee8248059b2af032cca0eb1d2ddbdb6cdc,2021-12-15,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Disable parsing of nested_flatbuffers as bytes by default
+d7b75417fc21b981ba2a67c3ffca9e0796268b25,2022-01-14,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.9,Make flatbuffer builder deterministic (#6993)
+d7b75417fc21b981ba2a67c3ffca9e0796268b25,2022-01-14,ok,"build, new builder",1.0,1.0,0.0,1,0,88.5,Make flatbuffer builder deterministic (#6993)
+d7b75417fc21b981ba2a67c3ffca9e0796268b25,2022-01-14,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Make flatbuffer builder deterministic (#6993)
+7089c9ecddb5e8fba49b875f871cf27e3a31d13f,2022-01-29,ok,"build, reused builder",0.0,0.0,0.0,1,0,73.2,Convert flatbuffers_version_string to inline function (#7046)
+7089c9ecddb5e8fba49b875f871cf27e3a31d13f,2022-01-29,ok,"build, new builder",1.0,1.0,0.0,1,0,88.5,Convert flatbuffers_version_string to inline function (#7046)
+7089c9ecddb5e8fba49b875f871cf27e3a31d13f,2022-01-29,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Convert flatbuffers_version_string to inline function (#7046)
+fd0d1ed9298d4f495492bfea7e58935d52489bd5,2022-02-02,ok,"build, reused builder",0.0,0.0,0.0,1,0,59.4,update C++ generator to emit scoped enums in vector of unions (#7075)
+fd0d1ed9298d4f495492bfea7e58935d52489bd5,2022-02-02,ok,"build, new builder",1.0,1.0,0.0,1,0,88.5,update C++ generator to emit scoped enums in vector of unions (#7075)
+fd0d1ed9298d4f495492bfea7e58935d52489bd5,2022-02-02,ok,read two fields,0.0,0.0,0.0,0,0,4.9,update C++ generator to emit scoped enums in vector of unions (#7075)
+d5add9fca56899aa9f98125be076cbd0fb5819ae,2022-02-14,ok,"build, reused builder",0.0,0.0,0.0,1,0,59.2,Fixed FlexBuffers ToString unquoted non-ident keys
+d5add9fca56899aa9f98125be076cbd0fb5819ae,2022-02-14,ok,"build, new builder",1.0,1.0,0.0,1,0,88.5,Fixed FlexBuffers ToString unquoted non-ident keys
+d5add9fca56899aa9f98125be076cbd0fb5819ae,2022-02-14,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Fixed FlexBuffers ToString unquoted non-ident keys
+65a10b6e32a965ea95367c5942574f56e28cbb27,2022-03-05,ok,"build, reused builder",0.0,0.0,0.0,1,0,60.4,Implement a config based name manager and use it in Rust codegen (#7144)
+65a10b6e32a965ea95367c5942574f56e28cbb27,2022-03-05,ok,"build, new builder",1.0,1.0,0.0,1,0,88.9,Implement a config based name manager and use it in Rust codegen (#7144)
+65a10b6e32a965ea95367c5942574f56e28cbb27,2022-03-05,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Implement a config based name manager and use it in Rust codegen (#7144)
+4213d91054afa9ea1e610b790347a08eaab49094,2022-03-24,ok,"build, reused builder",0.0,0.0,0.0,1,0,62.5,VerifySizePrefixed (reflection::Schema) and GetAnySizePrefixedRoot added (#7181)
+4213d91054afa9ea1e610b790347a08eaab49094,2022-03-24,ok,"build, new builder",1.0,1.0,0.0,1,0,88.5,VerifySizePrefixed (reflection::Schema) and GetAnySizePrefixedRoot added (#7181)
+4213d91054afa9ea1e610b790347a08eaab49094,2022-03-24,ok,read two fields,0.0,0.0,0.0,0,0,5.0,VerifySizePrefixed (reflection::Schema) and GetAnySizePrefixedRoot added (#7181)
+20aad0c41e1252b04c72111c3eb221280a9c2009,2022-04-06,ok,"build, reused builder",0.0,0.0,0.0,1,0,59.3,[C++] stl_emulation span::count_ is not const anymore (#7226) (#7227)
+20aad0c41e1252b04c72111c3eb221280a9c2009,2022-04-06,ok,"build, new builder",1.0,1.0,0.0,1,0,88.8,[C++] stl_emulation span::count_ is not const anymore (#7226) (#7227)
+20aad0c41e1252b04c72111c3eb221280a9c2009,2022-04-06,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[C++] stl_emulation span::count_ is not const anymore (#7226) (#7227)
+70002dc5caac40a2c4393c76b322997e40efb612,2022-04-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,109.2,various fixes for google merge
+70002dc5caac40a2c4393c76b322997e40efb612,2022-04-18,ok,"build, new builder",1.0,1.0,0.0,1,0,90.7,various fixes for google merge
+70002dc5caac40a2c4393c76b322997e40efb612,2022-04-18,ok,read two fields,0.0,0.0,0.0,0,0,8.2,various fixes for google merge
+0fe13cb28ce5a3fb81f654b21cb37c9821194962,2022-05-10,ok,"build, reused builder",0.0,0.0,0.0,1,0,57.9,Remove span ConstIterator/cbegin()/cend(). (#7295)
+0fe13cb28ce5a3fb81f654b21cb37c9821194962,2022-05-10,ok,"build, new builder",1.0,1.0,0.0,1,0,89.8,Remove span ConstIterator/cbegin()/cend(). (#7295)
+0fe13cb28ce5a3fb81f654b21cb37c9821194962,2022-05-10,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Remove span ConstIterator/cbegin()/cend(). (#7295)
+6e2791640e789459078eece008d6200c18dda5da,2022-07-26,ok,"build, reused builder",0.0,0.0,0.0,1,0,60.7,keep-prefix keeps relative pathing (#7394)
+6e2791640e789459078eece008d6200c18dda5da,2022-07-26,ok,"build, new builder",1.0,1.0,0.0,1,0,89.8,keep-prefix keeps relative pathing (#7394)
+6e2791640e789459078eece008d6200c18dda5da,2022-07-26,ok,read two fields,0.0,0.0,0.0,0,0,5.0,keep-prefix keeps relative pathing (#7394)
+fc5d86f1e78f2e7335dec05186e2c35ef5b007a9,2022-08-10,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.0,[C++] Make template parameter in stl_emulation.h more explicit to avoid conflicts with cpprestsdk U macro (#7424)
+fc5d86f1e78f2e7335dec05186e2c35ef5b007a9,2022-08-10,ok,"build, new builder",1.0,1.0,0.0,1,0,90.0,[C++] Make template parameter in stl_emulation.h more explicit to avoid conflicts with cpprestsdk U macro (#7424)
+fc5d86f1e78f2e7335dec05186e2c35ef5b007a9,2022-08-10,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[C++] Make template parameter in stl_emulation.h more explicit to avoid conflicts with cpprestsdk U macro (#7424)
+44a7dc99953fadae9d27902af507273b584d90fe,2022-08-14,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.4,Define minimum buffer size (#7440)
+44a7dc99953fadae9d27902af507273b584d90fe,2022-08-14,ok,"build, new builder",1.0,1.0,0.0,1,0,89.7,Define minimum buffer size (#7440)
+44a7dc99953fadae9d27902af507273b584d90fe,2022-08-14,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Define minimum buffer size (#7440)
+fa41e8367954fcf954606970c2bcfe38da53e493,2022-08-26,ok,"build, reused builder",0.0,0.0,0.0,1,0,66.2,[C++] Fixed crash when copying table with empty shared strings (#7477)
+fa41e8367954fcf954606970c2bcfe38da53e493,2022-08-26,ok,"build, new builder",1.0,1.0,0.0,1,0,89.7,[C++] Fixed crash when copying table with empty shared strings (#7477)
+fa41e8367954fcf954606970c2bcfe38da53e493,2022-08-26,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[C++] Fixed crash when copying table with empty shared strings (#7477)
+41d9add7ef8722e83e3964f8cf211fc49327cb0a,2022-08-29,ok,"build, reused builder",0.0,0.0,0.0,1,0,68.5,C++: Add option to skip verifying nested flatbuffers (#7489)
+41d9add7ef8722e83e3964f8cf211fc49327cb0a,2022-08-29,ok,"build, new builder",1.0,1.0,0.0,1,0,90.0,C++: Add option to skip verifying nested flatbuffers (#7489)
+41d9add7ef8722e83e3964f8cf211fc49327cb0a,2022-08-29,ok,read two fields,0.0,0.0,0.0,0,0,5.0,C++: Add option to skip verifying nested flatbuffers (#7489)
+72aa85a759e997d68b0ff25d16f5ad27fea045ae,2022-09-21,ok,"build, reused builder",0.0,0.0,0.0,1,0,67.4,[C++] Rare bad buffer content alignment if sizeof(T) != alignof(T) (#7520)
+72aa85a759e997d68b0ff25d16f5ad27fea045ae,2022-09-21,ok,"build, new builder",1.0,1.0,0.0,1,0,89.7,[C++] Rare bad buffer content alignment if sizeof(T) != alignof(T) (#7520)
+72aa85a759e997d68b0ff25d16f5ad27fea045ae,2022-09-21,ok,read two fields,0.0,0.0,0.0,0,0,4.9,[C++] Rare bad buffer content alignment if sizeof(T) != alignof(T) (#7520)
+872a497464a5847f594ea16386f64ffa544e69b8,2022-10-21,ok,"build, reused builder",0.0,0.0,0.0,1,0,115.0,[Nim] Bfbs Nim Generator (#7534)
+872a497464a5847f594ea16386f64ffa544e69b8,2022-10-21,ok,"build, new builder",1.0,1.0,0.0,1,0,214.5,[Nim] Bfbs Nim Generator (#7534)
+872a497464a5847f594ea16386f64ffa544e69b8,2022-10-21,ok,read two fields,0.0,0.0,0.0,0,0,8.0,[Nim] Bfbs Nim Generator (#7534)
+a4ff275d9b204c5c6fac917bfe1cb9455caa9e94,2022-11-03,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.1,Added option to not requires an EoF token when parsing JSON (#7620)
+a4ff275d9b204c5c6fac917bfe1cb9455caa9e94,2022-11-03,ok,"build, new builder",1.0,1.0,0.0,1,0,89.8,Added option to not requires an EoF token when parsing JSON (#7620)
+a4ff275d9b204c5c6fac917bfe1cb9455caa9e94,2022-11-03,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Added option to not requires an EoF token when parsing JSON (#7620)
+8aa8b9139eb330f27816a5b8b5bbef402fbe3632,2022-11-08,ok,"build, reused builder",0.0,0.0,0.0,1,0,68.2,Fix handling of +/-inf defaults in TS/rust/go/dart codegen (#7588)
+8aa8b9139eb330f27816a5b8b5bbef402fbe3632,2022-11-08,ok,"build, new builder",1.0,1.0,0.0,1,0,94.9,Fix handling of +/-inf defaults in TS/rust/go/dart codegen (#7588)
+8aa8b9139eb330f27816a5b8b5bbef402fbe3632,2022-11-08,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Fix handling of +/-inf defaults in TS/rust/go/dart codegen (#7588)
+bb9b9dad5f5a00adaa867aece30de5e0695c2942,2022-11-22,ok,"build, reused builder",0.0,0.0,0.0,1,0,57.7,"Fixed the BytesConsumed function, which was pointing slightly ahead. (#7657)"
+bb9b9dad5f5a00adaa867aece30de5e0695c2942,2022-11-22,ok,"build, new builder",1.0,1.0,0.0,1,0,91.1,"Fixed the BytesConsumed function, which was pointing slightly ahead. (#7657)"
+bb9b9dad5f5a00adaa867aece30de5e0695c2942,2022-11-22,ok,read two fields,0.0,0.0,0.0,0,0,4.9,"Fixed the BytesConsumed function, which was pointing slightly ahead. (#7657)"
+ad6054c60079c0b813f3354a822ffbf1b4a70ad0,2022-11-29,ok,"build, reused builder",0.0,0.0,0.0,1,0,60.1,chore: emit more reasonable error message when using incomplete type in struct (#7678)
+ad6054c60079c0b813f3354a822ffbf1b4a70ad0,2022-11-29,ok,"build, new builder",1.0,1.0,0.0,1,0,89.8,chore: emit more reasonable error message when using incomplete type in struct (#7678)
+ad6054c60079c0b813f3354a822ffbf1b4a70ad0,2022-11-29,ok,read two fields,0.0,0.0,0.0,0,0,4.9,chore: emit more reasonable error message when using incomplete type in struct (#7678)
+acf39ff056df8c9e5bfa32cf6f7b5e6b87a90544,2022-12-06,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.5,FlatBuffers Version 22.12.06 (#7702)
+acf39ff056df8c9e5bfa32cf6f7b5e6b87a90544,2022-12-06,ok,"build, new builder",1.0,1.0,0.0,1,0,200.0,FlatBuffers Version 22.12.06 (#7702)
+acf39ff056df8c9e5bfa32cf6f7b5e6b87a90544,2022-12-06,ok,read two fields,0.0,0.0,0.0,0,0,7.9,FlatBuffers Version 22.12.06 (#7702)
+a809a2d3f7c9b4e1c0289c613be7008a637acf9c,2023-01-05,ok,"build, reused builder",0.0,0.0,0.0,1,0,57.6,Add pointer reference to sibling union field on FieldDef (#7755)
+a809a2d3f7c9b4e1c0289c613be7008a637acf9c,2023-01-05,ok,"build, new builder",1.0,1.0,0.0,1,0,89.6,Add pointer reference to sibling union field on FieldDef (#7755)
+a809a2d3f7c9b4e1c0289c613be7008a637acf9c,2023-01-05,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add pointer reference to sibling union field on FieldDef (#7755)
+c2668fc0e27c9cbcb5c3376442c94170f3d5ab2d,2023-01-07,ok,"build, reused builder",0.0,0.0,0.0,1,0,71.7,Add ts-no-import-ext flag (#7748)
+c2668fc0e27c9cbcb5c3376442c94170f3d5ab2d,2023-01-07,ok,"build, new builder",1.0,1.0,0.0,1,0,89.7,Add ts-no-import-ext flag (#7748)
+c2668fc0e27c9cbcb5c3376442c94170f3d5ab2d,2023-01-07,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Add ts-no-import-ext flag (#7748)
+62e4d2e5b2152a0936a4df7bf585ee3ffcaca4c6,2023-01-11,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.6,Fix binary output different in different platform (#7718)
+62e4d2e5b2152a0936a4df7bf585ee3ffcaca4c6,2023-01-11,ok,"build, new builder",1.0,1.0,0.0,1,0,90.0,Fix binary output different in different platform (#7718)
+62e4d2e5b2152a0936a4df7bf585ee3ffcaca4c6,2023-01-11,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Fix binary output different in different platform (#7718)
+34c821f4adbc97723f27998b20e1c86fbf4f5937,2023-01-25,ok,"build, reused builder",0.0,0.0,0.0,1,0,69.0,Refactor languages to use CodeGenerator interface. (#7797)
+34c821f4adbc97723f27998b20e1c86fbf4f5937,2023-01-25,ok,"build, new builder",1.0,1.0,0.0,1,0,89.7,Refactor languages to use CodeGenerator interface. (#7797)
+34c821f4adbc97723f27998b20e1c86fbf4f5937,2023-01-25,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Refactor languages to use CodeGenerator interface. (#7797)
+f8380178600ff8255cc47694bddb321b2a9f648b,2023-02-02,ok,"build, reused builder",0.0,0.0,0.0,1,0,65.7,Parsing from proto should keep field ID. (fixes #7645) (#7655)
+f8380178600ff8255cc47694bddb321b2a9f648b,2023-02-02,ok,"build, new builder",1.0,1.0,0.0,1,0,89.8,Parsing from proto should keep field ID. (fixes #7645) (#7655)
+f8380178600ff8255cc47694bddb321b2a9f648b,2023-02-02,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Parsing from proto should keep field ID. (fixes #7645) (#7655)
+a56f9ec50e908362e20254fcef28e62a2f148d91,2023-02-15,ok,"build, reused builder",0.0,0.0,0.0,1,0,56.9,Only use absl headers if C++14 is available. (#7824)
+a56f9ec50e908362e20254fcef28e62a2f148d91,2023-02-15,ok,"build, new builder",1.0,1.0,0.0,1,0,90.9,Only use absl headers if C++14 is available. (#7824)
+a56f9ec50e908362e20254fcef28e62a2f148d91,2023-02-15,ok,read two fields,0.0,0.0,0.0,0,0,4.9,Only use absl headers if C++14 is available. (#7824)
+01834de25e4bf3975a9a00e816292b1ad0fe184b,2023-03-03,ok,"build, reused builder",0.0,0.0,0.0,1,0,74.1,FlatBuffers Version 23.3.3 (#7852)
+01834de25e4bf3975a9a00e816292b1ad0fe184b,2023-03-03,ok,"build, new builder",1.0,1.0,0.0,1,0,89.7,FlatBuffers Version 23.3.3 (#7852)
+01834de25e4bf3975a9a00e816292b1ad0fe184b,2023-03-03,ok,read two fields,0.0,0.0,0.0,0,0,4.9,FlatBuffers Version 23.3.3 (#7852)
+c192ab423b5dc63f467a2ad32bab6bc883d44dbe,2023-04-28,ok,"build, reused builder",0.0,0.0,0.0,1,0,60.7,additional check for absl::string_view availability (#7897)
+c192ab423b5dc63f467a2ad32bab6bc883d44dbe,2023-04-28,ok,"build, new builder",1.0,1.0,0.0,1,0,89.7,additional check for absl::string_view availability (#7897)
+c192ab423b5dc63f467a2ad32bab6bc883d44dbe,2023-04-28,ok,read two fields,0.0,0.0,0.0,0,0,4.9,additional check for absl::string_view availability (#7897)
+13fc75cb6b7b44793f3f5b4ba025ff403d012c9f,2023-05-09,ok,"build, reused builder",0.0,0.0,0.0,1,0,57.9,FlatBuffers Version 23.5.8 (#7943)
+13fc75cb6b7b44793f3f5b4ba025ff403d012c9f,2023-05-09,ok,"build, new builder",1.0,1.0,0.0,1,0,90.3,FlatBuffers Version 23.5.8 (#7943)
+13fc75cb6b7b44793f3f5b4ba025ff403d012c9f,2023-05-09,ok,read two fields,0.0,0.0,0.0,0,0,4.9,FlatBuffers Version 23.5.8 (#7943)
+3e6cd51b6307d680ac8eb6a3f1671fb756228e8b,2023-05-09,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.0,fixed bfbs gen to pass extra options (#7949)
+3e6cd51b6307d680ac8eb6a3f1671fb756228e8b,2023-05-09,ok,"build, new builder",1.0,1.0,0.0,1,0,99.5,fixed bfbs gen to pass extra options (#7949)
+3e6cd51b6307d680ac8eb6a3f1671fb756228e8b,2023-05-09,ok,read two fields,0.0,0.0,0.0,0,0,5.0,fixed bfbs gen to pass extra options (#7949)
+86486a1735bc38f5629447251206934ef205f6e4,2023-05-11,ok,"build, reused builder",0.0,0.0,0.0,1,0,68.5,run `scripts/clang-format-all.sh`
+86486a1735bc38f5629447251206934ef205f6e4,2023-05-11,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,run `scripts/clang-format-all.sh`
+86486a1735bc38f5629447251206934ef205f6e4,2023-05-11,ok,read two fields,0.0,0.0,0.0,0,0,5.0,run `scripts/clang-format-all.sh`
+d64dc6200a959738b5e3260d74b8e736e81a5af4,2023-05-17,ok,"build, reused builder",0.0,0.0,0.0,1,0,117.1,Switch to using alias instead of a typedef for FlatBufferBuilder (#7966)
+d64dc6200a959738b5e3260d74b8e736e81a5af4,2023-05-17,ok,"build, new builder",1.0,1.0,0.0,1,0,93.8,Switch to using alias instead of a typedef for FlatBufferBuilder (#7966)
+d64dc6200a959738b5e3260d74b8e736e81a5af4,2023-05-17,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Switch to using alias instead of a typedef for FlatBufferBuilder (#7966)
+96294e9f841c1d73427383709231c4864b4017ab,2023-05-26,ok,"build, reused builder",0.0,0.0,0.0,1,0,117.8,Add `ForceVectorAlignment64` and test (#7977)
+96294e9f841c1d73427383709231c4864b4017ab,2023-05-26,ok,"build, new builder",1.0,1.0,0.0,1,0,93.8,Add `ForceVectorAlignment64` and test (#7977)
+96294e9f841c1d73427383709231c4864b4017ab,2023-05-26,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Add `ForceVectorAlignment64` and test (#7977)
+afafd206a32e960deaa57b3746b466bf74dfe96d,2023-08-20,ok,"build, reused builder",0.0,0.0,0.0,1,0,121.5,Optional omission of Typescript entrypoint (#8057)
+afafd206a32e960deaa57b3746b466bf74dfe96d,2023-08-20,ok,"build, new builder",1.0,1.0,0.0,1,0,229.4,Optional omission of Typescript entrypoint (#8057)
+afafd206a32e960deaa57b3746b466bf74dfe96d,2023-08-20,ok,read two fields,0.0,0.0,0.0,0,0,8.8,Optional omission of Typescript entrypoint (#8057)
+56e2bc30b0035e39df1b2a853c9c1ad07b65fb02,2023-09-29,ok,"build, reused builder",0.0,0.0,0.0,1,0,115.3,C++ strict conversion fixes for flatbuffer_builder.h (#8062) (#8065)
+56e2bc30b0035e39df1b2a853c9c1ad07b65fb02,2023-09-29,ok,"build, new builder",1.0,1.0,0.0,1,0,211.6,C++ strict conversion fixes for flatbuffer_builder.h (#8062) (#8065)
+56e2bc30b0035e39df1b2a853c9c1ad07b65fb02,2023-09-29,ok,read two fields,0.0,0.0,0.0,0,0,8.7,C++ strict conversion fixes for flatbuffer_builder.h (#8062) (#8065)
+46577d0d2f297fb052d7ecae93521aae34a388ea,2023-11-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,60.0,Fix: detect c++ standard on MSVC for span (#8155)
+46577d0d2f297fb052d7ecae93521aae34a388ea,2023-11-18,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,Fix: detect c++ standard on MSVC for span (#8155)
+46577d0d2f297fb052d7ecae93521aae34a388ea,2023-11-18,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Fix: detect c++ standard on MSVC for span (#8155)
+7d6d99c6befa635780a4e944d37ebfd58e68a108,2023-11-19,ok,"build, reused builder",0.0,0.0,0.0,1,0,67.5,Add absolute file names option to BFBS (#8055)
+7d6d99c6befa635780a4e944d37ebfd58e68a108,2023-11-19,ok,"build, new builder",1.0,1.0,0.0,1,0,93.8,Add absolute file names option to BFBS (#8055)
+7d6d99c6befa635780a4e944d37ebfd58e68a108,2023-11-19,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Add absolute file names option to BFBS (#8055)
+6ff9e90e7e399f3977e99a315856b57c8afe5b4d,2024-03-07,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.9,FlatBuffers Version v24.3.7
+6ff9e90e7e399f3977e99a315856b57c8afe5b4d,2024-03-07,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,FlatBuffers Version v24.3.7
+6ff9e90e7e399f3977e99a315856b57c8afe5b4d,2024-03-07,ok,read two fields,0.0,0.0,0.0,0,0,5.0,FlatBuffers Version v24.3.7
+e6463926479bd6b330cbcf673f7e917803fd5831,2024-04-17,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.5,`flatbuffer_builder`: Fix GetTemporaryPointer constantness
+e6463926479bd6b330cbcf673f7e917803fd5831,2024-04-17,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,`flatbuffer_builder`: Fix GetTemporaryPointer constantness
+e6463926479bd6b330cbcf673f7e917803fd5831,2024-04-17,ok,read two fields,0.0,0.0,0.0,0,0,5.0,`flatbuffer_builder`: Fix GetTemporaryPointer constantness
+0e034ecdba87ea5b22d6c523db7d9747e5d70c32,2024-05-29,ok,"build, reused builder",0.0,0.0,0.0,1,0,68.6,[C++] Make code compile with -Wfloat-equal (#8221)
+0e034ecdba87ea5b22d6c523db7d9747e5d70c32,2024-05-29,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,[C++] Make code compile with -Wfloat-equal (#8221)
+0e034ecdba87ea5b22d6c523db7d9747e5d70c32,2024-05-29,ok,read two fields,0.0,0.0,0.0,0,0,5.0,[C++] Make code compile with -Wfloat-equal (#8221)
+baddf905999b23d4dce04812ca9593d260890200,2024-08-20,ok,"build, reused builder",0.0,0.0,0.0,1,0,70.2,"Add parentheses in FLATBUFFERS_MAX_BUFFER_SIZE, FLATBUFFERS_MAX_64_BUFFER_SIZE to avoid preprocessor definition collision (#8377)"
+baddf905999b23d4dce04812ca9593d260890200,2024-08-20,ok,"build, new builder",1.0,1.0,0.0,1,0,93.4,"Add parentheses in FLATBUFFERS_MAX_BUFFER_SIZE, FLATBUFFERS_MAX_64_BUFFER_SIZE to avoid preprocessor definition collision (#8377)"
+baddf905999b23d4dce04812ca9593d260890200,2024-08-20,ok,read two fields,0.0,0.0,0.0,0,0,5.0,"Add parentheses in FLATBUFFERS_MAX_BUFFER_SIZE, FLATBUFFERS_MAX_64_BUFFER_SIZE to avoid preprocessor definition collision (#8377)"
+a2cd1ea3b6d3fee220106b5fed3f7ce8da9eb757,2024-12-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,62.1,FlatBuffers Version 24.12.23 (#8459)
+a2cd1ea3b6d3fee220106b5fed3f7ce8da9eb757,2024-12-23,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,FlatBuffers Version 24.12.23 (#8459)
+a2cd1ea3b6d3fee220106b5fed3f7ce8da9eb757,2024-12-23,ok,read two fields,0.0,0.0,0.0,0,0,5.0,FlatBuffers Version 24.12.23 (#8459)
+5822c1c8ddc69bf54ee659603c4d7754eb609b4c,2025-05-18,ok,"build, reused builder",0.0,0.0,0.0,1,0,66.8,Fix dereference operator of VectorIterator to structures (#8425)
+5822c1c8ddc69bf54ee659603c4d7754eb609b4c,2025-05-18,ok,"build, new builder",1.0,1.0,0.0,1,0,93.9,Fix dereference operator of VectorIterator to structures (#8425)
+5822c1c8ddc69bf54ee659603c4d7754eb609b4c,2025-05-18,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Fix dereference operator of VectorIterator to structures (#8425)
+0e047869daf1e711f93722470c4a23f1f33a560d,2025-09-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.6,Use the Google Style for clang-format without exceptions (#8706)
+0e047869daf1e711f93722470c4a23f1f33a560d,2025-09-23,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,Use the Google Style for clang-format without exceptions (#8706)
+0e047869daf1e711f93722470c4a23f1f33a560d,2025-09-23,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Use the Google Style for clang-format without exceptions (#8706)
+e68355cb22bc459880c367b073c18f4e5a23db35,2025-11-17,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.7,[C++] Add Vector64 specialization for `std::vector<bool>` (#8757)
+e68355cb22bc459880c367b073c18f4e5a23db35,2025-11-17,ok,"build, new builder",1.0,1.0,0.0,1,0,93.5,[C++] Add Vector64 specialization for `std::vector<bool>` (#8757)
+e68355cb22bc459880c367b073c18f4e5a23db35,2025-11-17,ok,read two fields,0.0,0.0,0.0,0,0,5.0,[C++] Add Vector64 specialization for `std::vector<bool>` (#8757)
+7dd38fa23a4ef815186be36caeb0522e7da7b145,2025-11-30,ok,"build, reused builder",0.0,0.0,0.0,1,0,118.4,Fix platform ifdefs for locale independent str functions (#8678)
+7dd38fa23a4ef815186be36caeb0522e7da7b145,2025-11-30,ok,"build, new builder",1.0,1.0,0.0,1,0,231.3,Fix platform ifdefs for locale independent str functions (#8678)
+7dd38fa23a4ef815186be36caeb0522e7da7b145,2025-11-30,ok,read two fields,0.0,0.0,0.0,0,0,8.8,Fix platform ifdefs for locale independent str functions (#8678)
+8cb53ccc95dabae66233733017bc4f8668bfb379,2025-12-19,ok,"build, reused builder",0.0,0.0,0.0,1,0,112.4,Add --gen-absl-hash option to generate AbslHashValue for structs. (#8868)
+8cb53ccc95dabae66233733017bc4f8668bfb379,2025-12-19,ok,"build, new builder",1.0,1.0,0.0,1,0,210.5,Add --gen-absl-hash option to generate AbslHashValue for structs. (#8868)
+8cb53ccc95dabae66233733017bc4f8668bfb379,2025-12-19,ok,read two fields,0.0,0.0,0.0,0,0,8.4,Add --gen-absl-hash option to generate AbslHashValue for structs. (#8868)
+e5a9ff757f94ec6f3fb62c8f2c8a9618fc6d63e2,2026-02-04,ok,"build, reused builder",0.0,0.0,0.0,1,0,114.2,flatbuffers.h: fix C++11 compilation (#8857) (#8858)
+e5a9ff757f94ec6f3fb62c8f2c8a9618fc6d63e2,2026-02-04,ok,"build, new builder",1.0,1.0,0.0,1,0,211.2,flatbuffers.h: fix C++11 compilation (#8857) (#8858)
+e5a9ff757f94ec6f3fb62c8f2c8a9618fc6d63e2,2026-02-04,ok,read two fields,0.0,0.0,0.0,0,0,8.6,flatbuffers.h: fix C++11 compilation (#8857) (#8858)
+4e582b0c1d60c55f9a0a90f9740d4a4c48f3b53b,2026-03-23,ok,"build, reused builder",0.0,0.0,0.0,1,0,113.7,"[flexbuffers] Add ""AlignedBlob"", a version of ""Blob"" with explicit alignment. (#8993)"
+4e582b0c1d60c55f9a0a90f9740d4a4c48f3b53b,2026-03-23,ok,"build, new builder",1.0,1.0,0.0,1,0,215.0,"[flexbuffers] Add ""AlignedBlob"", a version of ""Blob"" with explicit alignment. (#8993)"
+4e582b0c1d60c55f9a0a90f9740d4a4c48f3b53b,2026-03-23,ok,read two fields,0.0,0.0,0.0,0,0,8.9,"[flexbuffers] Add ""AlignedBlob"", a version of ""Blob"" with explicit alignment. (#8993)"
+9a8a511b52bc4391ad9cec19fe10594adefaa436,2026-10-21,ok,"build, reused builder",0.0,0.0,0.0,1,0,58.7,Enable locale-independent strtod_l/strtof_l on Linux glibc (#9424)
+9a8a511b52bc4391ad9cec19fe10594adefaa436,2026-10-21,ok,"build, new builder",1.0,1.0,0.0,1,0,92.4,Enable locale-independent strtod_l/strtof_l on Linux glibc (#9424)
+9a8a511b52bc4391ad9cec19fe10594adefaa436,2026-10-21,ok,read two fields,0.0,0.0,0.0,0,0,5.0,Enable locale-independent strtod_l/strtof_l on Linux glibc (#9424)

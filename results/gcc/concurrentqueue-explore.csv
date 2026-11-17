@@ -1,0 +1,137 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+25ae235718a481ab59c512d7c97f73fad1fbe9ff,2014-11-05,build failed,,,,,,,,Initial commit
+cff5faadf50ad46dfaccc70b8ffaa9e8b4b3cd5f,2014-11-09,build failed,,,,,,,,Fixed compile-time error on VS2013 (I think)
+576978c95397b28a9c61a7ba89ea2473fc45bd5f,2014-11-11,build failed,,,,,,,,"Another fix for VS2013 (issue #3), plus comment tweaks"
+3f117fdf6487db4df0323d377a7c4f020881f6a2,2014-11-12,build failed,,,,,,,,Proper fix for issue #3 (last one didn't compile!
+cc6611d4bcd97fc9fa6c7c008ac6e9fa360731ac,2014-11-27,build failed,,,,,,,,"Now exception safe (issue #5), and fixed producer/consumer samples"
+26eac1568d1ffc80fe53902386c4762360458a8f,2014-11-28,build failed,,,,,,,,"Added VS2013 solution and projects, and fixed related errors and warnings (though unit test for exceptions does not pass under MSVC yet)"
+6bea1ee4fe9d963eedea81317182ba8f773c9c40,2014-11-28,build failed,,,,,,,,Got queue to compile with exceptions disabled
+0d463a6698ae92421c7ddc6fd13a521f05523570,2014-11-29,build failed,,,,,,,,Fixed condition for try blocks when compiling without exception support
+2fe59a87dd960516e5cd986198c7392145737e3d,2014-11-29,build failed,,,,,,,,Merge pull request #7 from iefserge/master
+bc0765a263736ed71becfe19c5d7a01f03deaab6,2014-12-01,build failed,,,,,,,,Added support for fixed limit per-producer (issue #4)
+ba76344b466d4186d3b86a1ea6e2ac6204deec7a,2014-12-02,build failed,,,,,,,,"Added test for maximum producer size limit trait, and fixed missing parenthese around arithmetic for it (completes issue #4)"
+e53f28cb38cd713043c39faf8e67545d734770e8,2014-12-23,build failed,,,,,,,,Added support for recycling implicit producers once the thread they're associated to has exited
+daae6634c82e31dfb9742c7ad5462106c5457073,2014-12-23,build failed,,,,,,,,Merge
+594bae453a25f83def391763a5c301cf1e36dbd0,2015-01-14,build failed,,,,,,,,Fix for issue #8 (weird identifier resolving rules in g++/EDG)
+8919822cf480fc819bc77375c86b2acf879b4610,2015-01-15,build failed,,,,,,,,Fixes for g++ 4.7
+fb64f57d2114b3d376c577daf060052191b8045a,2015-01-19,ok,random bursts,0.1325,0.0,0.0,0,0,3988.2,Fixed compile error under BSD clang (issue #9)
+ae16009846dfe0dbf79ab7678b81c07e0a2a5280,2015-01-21,ok,random bursts,0.1325,0.0,0.0,0,0,4062.8,Improved granularity of MinGW-w64 thread_local support detection
+183a7b411a1e58f6476726d3bab6d8f090dafca2,2015-02-16,ok,random bursts,0.1325,0.0,0.0,0,0,3640.8,"Disable implicit producer reclaimation for now as there seems to be a bug with it (at the very least, it doesn't work on some platforms) -- see issue #12)"
+f6d8690aa34a44d7df16034759dfcc57d7262545,2015-02-17,ok,random bursts,0.1325,0.0,0.0,0,0,3639.1,"Fixed bug with std::has_trivial_destructor not being available on older GCCs when they use a newer libstdc++ with a modern clang backend (this happens on OS X 10.10.2, for example) (issue #14)"
+fb0650c08deaaae2065e77a2cf582ef33515f184,2015-02-25,ok,random bursts,0.1325,0.0,0.0,0,0,3997.3,Minor improvement to implicit producer recycling efficiency
+eb6a1bf644c16be8cf7423f538bc8461d9eccfca,2015-02-25,ok,random bursts,0.1325,0.0,0.0,0,0,3957.6,Improved debuggability of queue when MOODYCAMEL_QUEUE_INTERNAL_DEBUG is defined
+4632ba7d1221f611a237b553fda4301471f5a46a,2015-02-25,ok,random bursts,0.1325,0.0,0.0,0,0,4026.5,Updated copyright
+01f420d7cc847b8f6fa3a7d6efe3d45f5121f7f3,2015-02-28,ok,random bursts,0.1325,0.0,0.0,0,0,5073.7,Added support for testing entire queue as a whole under Relacy -- relacy integration test is currently failing
+0947618fe059144197ce98c7babf053b60567fac,2015-03-02,ok,random bursts,0.1325,0.0,0.0,0,0,5013.7,Fixed memory ordering bug in core dequeue algorithm. All tests now pass. Thanks Relacy!
+d3ca98ea59eea75b0a7903f729a18795b75dd851,2015-03-09,ok,random bursts,0.1325,0.0,0.0,0,0,3625.9,"Added more Relacy-based integration tests, one of which found a bug in the explicit producer destructor that could cause destructors to be called on already-destructed objects (this should fix issue #13)"
+0aa8906d56ff53919f1d763d800c62da1c63b3dd,2015-03-18,ok,random bursts,0.1325,0.0,0.0,0,0,5364.7,Another patch to fix issue #14 (was also failing with clang on FreeBSD)
+d3735b5b7a94340f7d2eca0de9566ec8e8295ddb,2015-04-08,ok,random bursts,0.1325,0.0,0.0,0,0,3764.3,Added blocking version of queue
+15249a415c2443c3d492f4663c8b1a95af5dd481,2015-04-09,ok,random bursts,0.1325,0.0,0.0,0,0,3860.4,Removed unecessary #define guard
+db68eeafe45ab448a6ff7ba554fb9fb4d7f2a61c,2015-04-09,ok,random bursts,0.1325,0.0,0.0,0,0,3990.5,Fixed spin waiting never actually giving up and blocking
+18728dda5c2b6f89121c749a8a85ac0b7ac95095,2015-04-10,ok,random bursts,0.1325,0.0,0.0,0,0,3605.9,Got blocking queue compiling under VS2013
+84e520d67984e3e9f4459c013e12ad47ef19595a,2015-04-23,ok,random bursts,0.1325,0.0,0.0,0,0,3967.1,"Added explanation to README of how to set the initial size of the queue correctly, plus an alternate constructor that does this for you, and fixed offsetof warning under GCC"
+3a5c3d2f7498d2626e1e751e0ddaffe5875f736c,2015-05-20,ok,random bursts,0.1325,0.0,0.0,0,0,3747.2,Merge pull request #19 from jlaumon/master
+317a67b28ac82b73b0c136ecf5db7f46c954457f,2015-05-20,ok,random bursts,0.1325,0.0,0.0,0,0,3988.8,Fixed build and failing unit tests under VS2012 (related to issue #18/pull #19)
+259efbca9f6c6977ffe25566abedb826ef2489ae,2015-05-25,ok,random bursts,0.1325,0.0,0.0,0,0,5226.1,Fixed `throw` in code even when exceptions are disabled (issue #20)
+8dcedc1ad0026d4b7bac4edf2ea453e4bc30033b,2015-07-25,ok,random bursts,0.1325,0.0,0.0,0,0,3960.0,Fixed const-cast warning
+35bd7bee11568392a621a43af2bddd200b48081a,2015-08-16,ok,random bursts,0.1325,0.0,0.0,0,0,3980.4,Merge pull request #25 from yuikns/master
+a951473283959656619013effe411b2bde5caaf1,2015-09-11,ok,random bursts,0.1325,0.0,0.0,0,0,3672.3,Allow malloc() and free() macros to be defined without breaking code (issue #27)
+ff6b72d4490887cd8658875d9daef0b1c394f727,2015-10-07,ok,random bursts,0.1325,0.0,0.0,0,0,3608.1,Fixed token move constructors being marked 'explicit' (issue #28)
+335eabdd680bb7074a30b27f81539301c8dd941a,2015-10-20,ok,random bursts,0.1325,0.0,0.0,0,0,3838.1,Merge pull request #31 from Chaosvex/uninit-vars-patch
+153525facf71f5a06118826677bdafb54b58f5f1,2015-10-20,ok,random bursts,0.1325,0.0,0.0,0,0,3703.5,Fixed initially-allocated blocks not being properly reused when queue is destroyed. Also silenced some -Wreorder and code analysis warnings. See pull request #31.
+5ec729e63560a01f3dadc1f58d07b36bbd76a373,2016-01-18,ok,random bursts,0.1325,0.0,0.0,0,0,3962.6,"Tentative fix for missing thread_local support on iOS (issue #32, and relates to pull request #29)"
+6df61c759071fe1203f7458cb945f7af62e79de7,2016-01-27,ok,random bursts,0.1325,0.0,0.0,0,0,5175.4,Merge pull request #40 from cahlbin/master
+b88377263d183e0ae34e6cf304adaebadd1188e0,2016-03-23,ok,random bursts,0.1325,0.0,0.0,0,0,5079.5,Fixed alignment of user-supplied objects within blocks!
+2ab2b74a241b8e02d095fe9246bc830294180b79,2016-03-23,ok,random bursts,0.1325,0.0,0.0,0,0,3619.1,Proper fix for block alignment this time
+f2271b922de8265677fca9ff89a6ef7055d9aba6,2016-03-23,ok,random bursts,0.1325,0.0,0.0,0,0,4002.4,Added explanatory comment
+4f4911a5df912cb24ae74b5b4907210976b7ad53,2016-03-23,ok,random bursts,0.1325,0.0,0.0,0,0,5406.3,"Another tweak to block alignment; same effect, but less memory wasted when elements are at least 16 bytes large"
+2578150195c72fc72161be34404b8a7c2f78099d,2016-03-31,ok,random bursts,0.1325,0.0,0.0,0,0,5051.8,Merge pull request #44 from huachaohuang/master
+10927b835dd7399d52c508a1a57d019e73264ae1,2016-04-04,ok,random bursts,0.1325,0.0,0.0,0,0,5317.6,Tabs instead of spaces
+0059f8cf46335be17cd3e0579245479937fd633c,2016-04-25,ok,random bursts,0.1325,0.0,0.0,0,0,5347.6,Removed forwarding of non-universal-reference arguments. See issue #46
+de372d35efd43b2fcb4d854f3111fa90cbee0855,2015-07-17,ok,random bursts,0.1325,0.0,0.0,0,0,4057.9,Preliminary merg of pull request #22 from https://github.com/mojoBrendan/concurrentqueue.git: add timeout to queue
+08ad767bf64c92eeafbc3f77091e321d59acd3aa,2016-04-28,ok,random bursts,0.1325,0.0,0.0,0,0,3659.6,"First pass at support for timeouts in blocking queue. Windows and Linux only so far. Untested. See issues #22, #38"
+3d216afaf9a9320c5b30ef13fed8d6c8a5b1d634,2016-05-02,ok,random bursts,0.1325,0.0,0.0,0,0,4063.4,Added OS X timed wait support (untested). See pull request #38
+faa5b281485108c85d22b9d0d49daaf0aadd6976,2016-05-04,ok,random bursts,0.1325,0.0,0.0,0,0,3795.4,Added missing header and std::chrono::duration overloads. Relates to issue #22
+f52be57f2fefc402b7dfb05410249b1c4dbb20dd,2016-05-10,ok,random bursts,0.1325,0.0,0.0,0,0,3958.3,Added unit test for timed waits (all seems well so far!) -- see issues #22 and #38
+afdeb10ef3305eac7d671f1726bb265b43e45c84,2016-05-11,ok,random bursts,0.1325,0.0,0.0,0,0,5120.1,Attempt to work around strict aliasing warning (issue #48)
+1124c1a7af749e0e7d6f618be9863acea254c50f,2016-05-11,ok,random bursts,0.1325,0.0,0.0,0,0,3694.7,Replaced implicit conversions with explicit conversions
+85775ecc4a92421267941da979aa63b270ce18f6,2016-05-11,ok,random bursts,0.1325,0.0,0.0,0,0,4040.5,Added missing memory barrier on CAS failure
+abbbc9e4d13c4f69c27975e00069cf812197c45f,2016-05-25,ok,random bursts,0.1325,0.0,0.0,0,0,5205.1,Fixed memory barriers not complying to C++11 model (issue #51)
+0bc97ad4aeb7d8ffa3c1d845de01573bae269cfd,2016-06-06,ok,random bursts,0.1325,0.0,0.0,0,0,3974.2,"Don't use thread_local on ARM (this may degrade performance on non-Apple platforms when using implicit producers, but it seems not to be fully supported). See issue #42"
+c227e283a9edd9d15393733223235527af6101e9,2016-06-15,ok,random bursts,0.1325,0.0,0.0,0,0,5150.5,Added missing header for clock_gettime
+444794d4603b4efa9a8fc068574f33a941ba352b,2016-08-29,ok,random bursts,0.1325,0.0,0.0,0,0,5006.9,Merge pull request #58 from domazaris/ifdef-fix
+a8a6b8d6716dab65e8069406cbaa340cf75d3e0e,2016-08-10,build failed,,,,,,,,Constructor overload that took number of producers was accidentally allocating BLOCK_SIZE times more blocks than necessary(!)
+1d60c7f3004a87eaa9d9cbd647d66361c868558f,2016-08-10,ok,random bursts,0.1325,0.0,0.0,0,0,5060.6,Missing semicolon
+e2bd49d20108adf639e5325011104a4fbd5279b3,2016-10-12,ok,random bursts,0.1325,0.0,0.0,0,0,5103.6,Tweaked preprocessor logic to allow header to be included after including cameron314/readerwriterqueue.h too
+6ae63b6f67da59e8bedc09e145f1bde6b0488ff5,2016-12-16,ok,random bursts,0.1325,0.0,0.0,0,0,5309.2,"Make max_align_t at least as aligned as 'long double' and pointers, since that is what it's supposed to already be (but isn't always). See issue #64."
+3df464c32cdfed55c9388d9b3e43ec2efa95193c,2017-01-13,ok,random bursts,0.1325,0.0,0.0,0,0,4004.2,Don't use 3-argument form of compare_exchange since it's broken on some Android libstdc++ implementations (issue #68)
+c54341183f8674c575913a65ef7c651ecce47243,2017-01-13,ok,random bursts,0.1325,0.0,0.0,0,0,5358.6,Undid home-brewed max_align_t fix for iOS since its max_align_tof 4 bytes is technically correct (issue #64)
+61d3c07bf14492b312450b25fb69b7708fe33218,2017-04-10,ok,random bursts,0.1325,0.0,0.0,0,0,3732.9,Fixed (harmless) shadowed variable warnings (see issue #78)
+5a12400bf44349f0c5626104e6d79b5ed53c90b6,2017-04-20,ok,random bursts,0.1325,0.0,0.0,0,0,5447.6,Added default initialization to appease VS2015 which can't prove a variable is initialized before use in this complex case (issue #81)
+5170da7fd04335da6d4e1d2ed7209a539176e589,2017-04-20,ok,random bursts,0.1325,0.0,0.0,0,0,5156.9,Fixed bug where new_block_index failing to allocate memory during the construction of an implicit queue would cause the next enqueue operation to segfault on a null pointer (see issue #75)
+55b294e94033c8634d683e175674f97cb216ea6e,2017-07-24,ok,random bursts,0.1325,0.0,0.0,0,0,3650.6,Another attempt to fix alignment woes on the exotic 32-bit iOS platform (see issue #64)
+e74e530e5668bafee43d120174f9b4268171f23a,2017-07-27,ok,random bursts,0.1325,0.0,0.0,0,0,5076.2,Changed fetch_add(-1) to fetch_sub(1) to fix MSVC warning
+b276773a1babd702b020a91ea2443985a65bab11,2017-07-27,ok,random bursts,0.1325,0.0,0.0,0,0,3632.5,"Oops, missed one negative fetch_add in last commit"
+2149d48fb73831f8599f52e3040e012925a5fe55,2017-09-27,ok,random bursts,0.1325,0.0,0.0,0,0,5168.1,Fixed issue where nsec could exceed its maximum value by one
+7b69a8fd4d7dfbc169bd79aa724a3e8da19b9851,2017-11-01,ok,random bursts,0.1325,0.0,0.0,0,0,5202.8,Merge pull request #97 from mpark/max_align_t
+735179e91ee6167c6acb834baad01e57b9dffcdb,2017-11-09,ok,random bursts,0.1325,0.0,0.0,0,0,5194.9,Silenced warning with cast on OS X (following identical pull request from readerwriterqueue#56)
+a5d7dd873c94b52973a8a2baab204034db0799bc,2018-02-20,ok,random bursts,0.1325,0.0,0.0,0,0,5134.5,Merge pull request #105 from DarkDimius/patch-1
+02f36545c5d6f1a93f07b2b85109c0c7fe1c2a23,2018-03-01,ok,random bursts,0.1325,0.0,0.0,0,0,3639.2,Allow likely/unlikely macros to co-exist without causing compile errors (issue #108)
+8f7e861dd9411a0bf77a6b9de83a47b3424fafba,2018-05-10,ok,random bursts,0.1325,0.0,0.0,0,0,3628.8,More explicit pre-declarations to make MSVC2017 happy (should fix issue #113)
+8f65a8734d77c3cc00d74c0532efca872931d3ce,2018-07-12,ok,random bursts,0.1325,0.0,0.0,0,0,3674.7,"Removed assertions that were only valid until index overflow (logic still works on overflow, though); issue #119"
+dea078cf5b6e742cd67a0d725e36f872feca4de4,2019-01-11,ok,random bursts,0.1325,0.0,0.0,0,0,4991.7,Merge pull request #148 from AbundantRobotics/master
+8b0215e6a2c142b2da23123b58022196a9e7951f,2019-07-09,ok,random bursts,0.1325,0.0,0.0,0,0,5261.6,Merge pull request #158 from biddisco/clang_tidy_nolint
+7e8f20941fa00a784ab06c89f13e4ddec7708c28,2019-07-10,ok,random bursts,0.1325,0.0,0.0,0,0,3605.9,Merge pull request #159 from Danielhu229/master
+2f00c960abfab428ab00a35eb1699d533641f076,2019-08-01,ok,random bursts,0.1325,0.0,0.0,0,0,5316.8,Merge pull request #163 from kobi-ca/add-no-lint-line-3360
+7e3ad876fcca2e44e17528a51865ab2420afb238,2019-08-01,ok,random bursts,0.1325,0.0,0.0,0,0,3628.3,Fixed compile error in VS2017+ when combining placement new on nullptr in a noexcept expression with overloads of the new operator [issue #162]
+66b4ed5a58d32d5bcbadb3e6d4b90bf9514985f8,2019-11-03,ok,random bursts,0.1325,0.0,0.0,0,0,5098.7,Merge pull request #170 from invexed/fix-Wundef
+9e35d0cf82e0d86054fdbece5daa5b9c5bd4e5a4,2019-11-06,build failed,,,,,,,,Fixed more harmless shadow warnings (#171)
+cff1001582db67e357d5f77c31e73566003311f2,2019-11-06,ok,random bursts,0.1325,0.0,0.0,0,0,5110.6,Fixed compile error introduced in previous commit
+4bcc86ece39a7455ac818cb7744ed362a320972a,2019-12-27,ok,random bursts,0.1325,0.0,0.0,0,0,4045.4,Fixed semaphore error handling (see issue #173)
+fcd4d4f01cd63469c9e4702c32fe1d091d8fb7d2,2019-12-27,ok,random bursts,0.1325,0.0,0.0,0,0,4996.4,Silence warning (see #129)
+e4e2e381ace8f6fe15695914fcbf5cf844157c1b,2019-12-27,ok,random bursts,0.1325,0.0,0.0,0,0,5077.5,Made thread_id function non-static so that different compilation units are not seen as different implicit producers unless they are actually executing on different threads (#126)
+e04d31d756fd7f9aab3db1745e617d0c20ecaab9,2019-12-27,ok,random bursts,0.1325,0.0,0.0,0,0,5220.8,Merge branch 'zerodefect-split_out_semaphores2'
+3fe22490edef1969bab1c1c8877dfb4682e00e07,2019-12-27,ok,random bursts,0.1325,0.0,0.0,0,0,3930.2,Merge branch 'narrill-master'
+c2e768e7ac760aaf85e99055ebfb071c89f154f7,2020-01-02,ok,random bursts,0.1325,0.0,0.0,0,0,5232.6,Merge pull request #179 from improbablejan/bugfix/under-alignment
+ba571c3d816352e94f24b69ec50748a0bc4b76fe,2020-01-02,ok,random bursts,0.1325,0.0,0.0,0,0,5051.2,Reduced alignment in test to work around GCC limitations (should fix #178)
+fa11ae7c61b138c15a20758df5f1a398bff23eeb,2020-01-19,ok,random bursts,0.1325,0.0,0.0,0,0,5170.9,Silenced potential unused variable warnings when compiling in release
+66c3c13cc64bd587e748d8e9d39ac5c8b42185b0,2020-01-29,ok,random bursts,0.1325,0.0,0.0,0,0,5375.7,Merge branch 'ivysnow-master'
+79cec4c3bf1ca23ea4a03adfcd3c2c3659684dd2,2020-01-30,ok,random bursts,0.1325,0.0,0.0,0,0,3999.2,Fixed indentation following pull request
+4abab7d4f73ea73612a0e4870600d9b31e39ce2e,2020-02-04,ok,random bursts,0.1325,0.0,0.0,0,0,3671.4,Attempt to fix warnings and errors when compiling for Raspberry Pi (issue #185)
+c8632bbba2f0c95b0576097cd77190dc037e9eb1,2020-04-16,ok,random bursts,0.1325,0.0,0.0,0,0,3618.2,Bug fix for alignment syntax on VS2013 (issue #194)
+5c278285c247ff315059459762cb9ca15c8c4bcf,2020-04-21,build failed,,,,,,,,Merge pull request #198 from graphicsMan/master
+38e6a6f0185a98c3aaf2a95aa109ba041221d527,2020-04-22,ok,random bursts,0.1325,0.0,0.0,0,0,5080.4,Merge pull request #200 from khuck/master
+7912b95d041e658732e0732dd01794232a0a2892,2020-06-24,ok,random bursts,0.1325,0.0,0.0,0,0,3964.1,Updated license comments to make extra-clear that the code is dual-licensed under the Boost terms (issue #207)
+790db30df598bb45fdc63b571847160a2f9eb60b,2020-06-24,ok,random bursts,0.1325,0.0,0.0,0,0,4858.2,Added MAX_SEMA_SPINS to traits to control semaphore spin-waiting (see issue #205)
+4cc3bee07b9ef252cfdfd3fddbdb476dc750179f,2020-06-26,ok,random bursts,0.1325,0.0,0.0,0,0,4054.1,Fixed accidental reference being taken on new static const variable with g++ (issue #208)
+7bb34c928cf5359e68b89c01f236862f63019df1,2020-07-07,ok,random bursts,0.1325,0.0,0.0,0,0,5286.5,Changed lightweight semaphore to avoid costly sem_timedwait (on Linux) when timeout is 0 (see #210); also fixed error handling in semaphore
+9cfda6cc61065d016ae3f51f486ce0fae563ea87,2020-07-11,ok,random bursts,0.1325,0.0,0.0,0,0,3702.3,Fixed VS2019 /W4 warnings with and without C++17 language suport (issue #211)
+062fb97a17dfd45e4d463781829cffda0965cb76,2020-08-13,ok,random bursts,0.1325,0.0,0.0,0,0,5256.4,Changed LightweightSemaphore::availableApprox() to return an unsigned type (following same change suggested by @kletoz for readerwriterqueue)
+b9b4aa8350735ad72436638e71b3115ed28aa11b,2020-09-11,ok,random bursts,0.1325,0.0,0.0,0,0,4994.1,Work around template argument deduction bug in GCC 9.2.0 (issue #218)
+6f57c62fed357f1b3b1ecde93283c1e730aa9439,2020-09-25,ok,random bursts,0.1325,0.0,0.0,0,0,5135.0,Merge pull request #223 from slumber/slumber/clang-warnings
+8ec297b3b3117c0c00206ba4e5169271d779a015,2020-11-09,ok,random bursts,0.1325,0.0,0.0,0,0,3666.2,Fixed warnings in semaphore code (following similar commit in readerwriterqueue)
+26f494358de1614e42df31a68a2b11d8204e8a81,2021-04-13,ok,random bursts,0.1325,0.0,0.0,0,0,3977.6,Merge pull request #243 from philbucher/patch-1
+dd387742bca3ae6f6bd7b6aab9d60859dfb363c4,2021-06-06,ok,random bursts,0.1325,0.0,0.0,0,0,3622.7,Merge pull request #250 from jcelerier/patch-1
+550a9aa97cc64ecf235f13bda0b2c09b3515e47b,2021-11-28,ok,random bursts,0.1325,0.0,0.0,0,0,5218.8,Merge pull request #272 from cf-natali/charles-is-lock-free-constexpr
+9c44f36de1f0d8fac97a9e6aeb42409a95f7aa5d,2021-12-14,ok,random bursts,0.1325,0.0,0.0,0,0,5101.1,Merge pull request #273 from Acretock/master
+a15a7236e928bacb14ea30cf50b0edb62acefaca,2022-01-25,ok,random bursts,1.046,1.052,0.0,0,0,4673.0,Made implicit producers free dynamically allocated blocks all the way back to the heap by default (see issue #279)
+38d01f450602513722ccf71a209cdce76bb2758b,2022-01-25,ok,random bursts,1.046,1.052,0.0,0,0,4715.9,Tentatively enabled implicit producer reuse and updated README (see #271 and #278)
+e4245f8656609a9f2a9e4963434765419f179bca,2022-03-10,ok,random bursts,1.046,1.052,0.0,0,0,2953.7,"Fixed race where insertion into implicit producer hash could accidentally skip a tombstoned slot, forcing an empty slot to be sacrificed for a reused producer, which in extreme cases can cause the hash to break its 0.75 load factor invariant (see #288)"
+1752d7baf6e1766606bbd7373f392a4f6725f306,2022-03-10,ok,random bursts,1.046,1.052,0.0,0,0,2946.2,Fixed reused slot counting in implicit producer hash table which can again cause the 0.75 load invariant to be broken (almost certainly the main cause of #288)
+68aacbc50bc084a7e60492d3a726de745dba18c1,2022-03-11,ok,random bursts,1.046,1.052,0.0,0,0,2891.6,Re-enable support for implicit producer hash slot reuse following fixes
+12b5206b77a4c623acb5ee5d5779b0362edcf951,2022-03-12,ok,random bursts,1.046,1.052,0.0,0,0,4489.5,Use monotonic clock for semaphore timeout where supported (fixes #289)
+3e72a150ac1f560ac5a21df2def1aae3e8e45b66,2022-03-13,ok,random bursts,1.046,1.052,0.0,0,0,4712.5,"Tentative fix for use-after-free in thread exit notification linked list, and for race between thread exit and thread exit unsubscription (see #288)"
+c52e5ef60d5b0506ceffea4cada0b7bf11f2ff02,2022-03-13,ok,random bursts,1.046,1.052,0.0,0,0,3010.2,Fix preprocessor evaluation when __GLIBC_PREFREQ is not defined
+0a404492ac2c0bba0f62eb2b859ec152e494f8bf,2022-05-07,ok,random bursts,1.046,1.052,0.0,0,0,2973.8,Attempt to resolve -Wsign-conversion warnings in concurrentqueue.h (see #294)
+d49fa2b0bd1c6185d93509f48c8987f9759d7238,2022-05-09,ok,random bursts,1.046,1.052,0.0,0,0,2936.3,Merge pull request #296 from MathiasMagnus/fix-c4554
+6dd38b8a1dbaa7863aa907045f32308a56a6ff5d,2023-06-10,ok,random bursts,1.046,1.052,0.0,0,0,4600.6,Merge pull request #346 from v1gnesh/master
+e74b07d5878a10689f1999d0c3ab1aae4127f881,2025-01-26,ok,random bursts,1.046,1.052,0.0,0,0,2923.8,Ensure happens-before chain when add_knowing_refcount_is_zero reacquires zeroth reference in free list
+0d54c6794510018f42b1b987f55c313dd1358320,2025-01-26,ok,random bursts,1.046,1.052,0.0,0,0,2976.7,"Fix chain of happens-before between dequeue operations in a block and that block's reuse when empty, affecting implicit producers (see #404)"
+2f09da73d22a47dc8a89cdd4fc4c3bfae07f4284,2025-03-01,ok,random bursts,1.046,1.052,0.0,0,0,4331.9,Fix warning (#408)
+8a40b501ef31b51302942dec3d8424dd336de55c,2026-02-08,ok,random bursts,1.046,1.052,0.0,0,0,3083.7,Merge pull request #440 from jan-moravec/bugfix/fix-missing-delete-macro-in-lightweightsemaphore
+00dd7ba09164fcd25b590818747e3d9a32dddc9c,2026-02-09,ok,random bursts,1.046,1.052,0.0,0,0,2958.4,Merge pull request #441 from jan-moravec/bugfix/add-missing-headers-in-lightweightsemaphore
+593df78ec309be7a7b456b3334025ccade1d2d66,2026-02-14,ok,random bursts,1.046,1.052,0.0,0,0,4412.8,Fix macro dependency (see #439)
+d37a4679de9ec08c93f50791cacd8c9eaf598aa7,2026-03-28,ok,random bursts,1.046,1.052,0.0,0,0,2916.5,Merge pull request #445 from PavelGuzenfeld/feature/fix-c-style-casts
+9afb99746f0f5fc94ac8aef737053ae0481ba8d1,2026-04-03,ok,random bursts,1.046,1.052,0.0,0,0,3243.2,Merge pull request #446 from PavelGuzenfeld/fix/try-enqueue-implicit-index-docs-418
+683b9e31ea15eb69f1b81cc1defc7850d5f20b71,2026-07-11,ok,random bursts,1.046,1.052,0.0,0,0,3256.6,Merge pull request #454 from vsaraikin/fix/clang-has-feature-cxx-exceptions
+36c5755dc0789e5bcddbbb9a201d3af2bbf3024c,2026-10-25,ok,random bursts,1.046,1.052,0.0,0,0,2867.5,Merge pull request #460 from Ethan-y-free/fix/modules-static-inline

@@ -280,6 +280,40 @@ state. And a cached result of that first version was compared with the second, w
 at a commit that only removed `static` from inline functions; cached results now carry a fingerprint
 of the workload and are set aside when it changes.
 
+## Case 8: msgpack-c allocates twice per message when unpacking into a reused zone
+
+The documented way to keep msgpack-c's unpacking off the heap is to reuse a `msgpack::zone`:
+`z.clear(); msgpack::unpack(z, data, size)`. The workload (`replay/workloads/msgpack-c.cpp`) does that for a
+four-field struct. The count at the latest commit is 2 allocations and 2 frees per message, and
+`attribute.py msgpack-c bcba2717` names them:
+
+```
+  allocation 1.000 per call
+      create_object_visitor::create_object_visitor(...)   include/msgpack/v2/create_object_visitor.hpp:31
+      v2::detail::unpack_imp(...)                         include/msgpack/v2/unpack.hpp:348
+  allocation 1.000 per call
+      context<parse_helper<create_object_visitor>>::unpack_stack   include/msgpack/v2/parse.hpp:161
+      v2::detail::parse_imp(...)                                   include/msgpack/v2/parse.hpp:1060
+```
+
+Both are the `reserve(MSGPACK_EMBED_STACK_SIZE)` of a `std::vector` parse stack that lives for one call. The
+history replay of all 290 library commits pins the second one to the visitor API (`d15d9220`, 2016), which
+split the parser's stack in two; before it, the count was 1.
+
+Keeping the first 32 entries of each stack inline, and deeper levels in a vector, brings the reused-zone case
+to 0 allocations and the `object_handle` case from 4 to 2. Timed alternately on one core (median of 9 rounds,
+ns per call):
+
+| | GCC 13 before | after | clang 21 before | after |
+|---|---:|---:|---:|---:|
+| unpack into a reused zone | 118.6 | 83.7 | 119.1 | 98.3 |
+| unpack to an `object_handle` | 187.1 | 173.9 | 204.1 | 209.1 |
+
+The last cell is 2 % slower, unexplained. The library's 40 tests pass, also under AddressSanitizer and
+UBSan, with a new test across the inline/vector boundary. Reported and proposed upstream:
+[msgpack-c#1222](https://github.com/msgpack/msgpack-c/issues/1222),
+[msgpack-c#1223](https://github.com/msgpack/msgpack-c/pull/1223).
+
 ## Static and run-time, side by side
 
 The counts say what a workload does; they cannot see a path it does not take. A static analysis sees

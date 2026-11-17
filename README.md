@@ -21,7 +21,7 @@ tool works on existing code, unmodified, and every answer it gives names the com
 
 ## What we learned building it
 
-The tool was applied to 17,133 commits of 29 open-source low-latency and numerical C++ libraries, and
+The tool was applied to 25,567 commits of 38 open-source low-latency and numerical C++ libraries, and
 each of these lessons changed how it works ([evidence](docs/insights.md)):
 
 1. **Count, don't time.** Allocations, locks and executed instructions per call are exact and
@@ -88,7 +88,7 @@ reaches are on paths it does not take, such as stop orders and all-or-none match
 
 ## What it found
 
-The six cases behind most of the lessons above ([all libraries](docs/results.md)).
+The cases behind most of the lessons above ([all libraries](docs/results.md)).
 
 **1. Liquibook's last release allocates twice as often per order** ([details](docs/cases.md#case-1-liquibook-200-allocates-twice-more-per-order)).
 Allocations per add+cancel, counted at every library commit:
@@ -153,6 +153,14 @@ triggered stop order overwrite the members after the price levels
 ([liquibook#44](https://github.com/enewhuis/liquibook/issues/44), fix and tests in
 [#45](https://github.com/enewhuis/liquibook/pull/45)).
 
+**7. msgpack-c allocates twice per message when unpacking into a reused zone**
+([details](docs/cases.md#case-8-msgpack-c-allocates-twice-per-message-when-unpacking-into-a-reused-zone)).
+Reusing a `msgpack::zone` is how a caller keeps unpacking off the heap, but each `unpack()` still reserves
+two `std::vector` parse stacks: 2 allocations per message, 1 before the visitor API of 2016 (`d15d9220`).
+Keeping their first 32 levels inline removes both: 118.6 -> 83.7 ns per message with GCC 13, 119.1 -> 98.3
+with clang 21 ([msgpack-c#1222](https://github.com/msgpack/msgpack-c/issues/1222), fix and test in
+[#1223](https://github.com/msgpack/msgpack-c/pull/1223)).
+
 **Static and run time agree.** On every measured operation of Liquibook and concurrentqueue, every
 allocation and lock seen at run time matches a site of the static analysis (no static miss), and the
 static analysis lists the paths the workloads never take ([details](docs/cases.md#static-and-run-time-side-by-side)).
@@ -191,8 +199,8 @@ For a change under review, measuring the merge base and the head is enough:
 - Only the primitives in `replay/counts.h` are counted (the malloc family and `pthread_mutex_lock`).
 - Timings come from one machine (Haswell, Ubuntu 24.04). They are medians of interleaved rounds on an
   idle core, and are compared only within one table.
-- No library was found to be wrong. The changes found are costs, and upstream later removed most of
-  them itself.
+- Apart from Liquibook's out-of-bounds write, the changes found are costs, not bugs, and upstream later
+  removed most of them itself.
 
 Research quality, Linux x86-64, LLVM 21 for the static half. An independent project, not affiliated with
 the LLVM project. Apache-2.0; the libraries are fetched from their own repositories and are not part of

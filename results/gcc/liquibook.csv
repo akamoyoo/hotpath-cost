@@ -52,7 +52,7 @@ e1af0bbb314d252dac08204d08e6f862dcd4e3c9,2017-02-20,ok,add+cancel,1.0002,1.0002,
 f7deb99c33f1eea106935985590023ccb83673fb,2017-02-22,build failed,,,,,,,,Use virtual methods to inform depth_book of changes rather than having depth_book hijack the perform_callbacks mechanism. Perform_callbacks is deprecated.  Remove it from unit tests and examples.
 6edff0e1f4d4e02542c0e01f2fb3aae7cf7a9c27,2017-02-22,build failed,,,,,,,,Remove default template parameter.  It is unnecessary and misleading.
 25b0c5eccf9d7e59fc46a68e70f405487ebf1c23,2017-02-22,ok,add+cancel,4.0,4.0,0.0,4,0,429.4,TransId is an idea who's time never came.  Eliminate it.
-dd5ada837c4f198979f3111924ed6362fa0390f4,2017-02-22,ok,add+cancel,2.0,2.0,0.0,2,0,374.5,avoid reallocating callbacks vector.
+dd5ada837c4f198979f3111924ed6362fa0390f4,2017-02-22,ok,add+cancel,2.0,2.0,0.0,2,0,376.5,avoid reallocating callbacks vector.
 543b8cbbc5604aba357f2142c3d3a97e0a18de61,2019-06-24,ok,add+cancel,2.0,2.0,0.0,2,0,737.0,Changed ! price_ == rhs to !( price_ == rhs ).
 828a771d715438f487db15bbc6d6c310a952e26d,2019-06-25,ok,add+cancel,2.0,2.0,0.0,2,0,378.4,Fixed order cancelation issue when order was not triggered.
 26f65bfc5fb9fe9af320b7e35d0242a5100ab0de,2018-10-18,ok,add+cancel,2.0,2.0,0.0,2,0,754.6,expand price/qty/cost from 32 to 64 bits

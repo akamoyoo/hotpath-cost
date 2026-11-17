@@ -1,0 +1,717 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+be560de0ea297daf1a0f02387d61c0a3e4e3284e,2022-03-11,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Merge pull request #5 from phprus/modern-cmake-1
+be560de0ea297daf1a0f02387d61c0a3e4e3284e,2022-03-11,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Merge pull request #5 from phprus/modern-cmake-1
+be560de0ea297daf1a0f02387d61c0a3e4e3284e,2022-03-11,ok,insert+erase,0.0,0.0,0.0,0,0,61.7,Merge pull request #5 from phprus/modern-cmake-1
+be560de0ea297daf1a0f02387d61c0a3e4e3284e,2022-03-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Merge pull request #5 from phprus/modern-cmake-1
+93723c298d2c6c950c7ba939b1f9b83fc99be61f,2022-03-11,ok,find (hit),0.0,0.0,0.0,0,0,17.9,fix some 32 bit compilation warnings
+93723c298d2c6c950c7ba939b1f9b83fc99be61f,2022-03-11,ok,find (miss),0.0,0.0,0.0,0,0,17.1,fix some 32 bit compilation warnings
+93723c298d2c6c950c7ba939b1f9b83fc99be61f,2022-03-11,ok,insert+erase,0.0,0.0,0.0,0,0,62.6,fix some 32 bit compilation warnings
+93723c298d2c6c950c7ba939b1f9b83fc99be61f,2022-03-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.6,fix some 32 bit compilation warnings
+92dce475d2e61579858b441af6fde4edd7c301db,2022-03-11,ok,find (hit),0.0,0.0,0.0,0,0,17.1,fix issue with unchanged hash in test
+92dce475d2e61579858b441af6fde4edd7c301db,2022-03-11,ok,find (miss),0.0,0.0,0.0,0,0,16.8,fix issue with unchanged hash in test
+92dce475d2e61579858b441af6fde4edd7c301db,2022-03-11,ok,insert+erase,0.0,0.0,0.0,0,0,60.3,fix issue with unchanged hash in test
+92dce475d2e61579858b441af6fde4edd7c301db,2022-03-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.9,fix issue with unchanged hash in test
+18dd441117f5f951d322f0cfbcdb9646d6a11c2f,2022-03-14,ok,find (hit),0.0,0.0,0.0,0,0,18.6,fine tune previous fix specific of 32 bit platforms
+18dd441117f5f951d322f0cfbcdb9646d6a11c2f,2022-03-14,ok,find (miss),0.0,0.0,0.0,0,0,17.6,fine tune previous fix specific of 32 bit platforms
+18dd441117f5f951d322f0cfbcdb9646d6a11c2f,2022-03-14,ok,insert+erase,0.0,0.0,0.0,0,0,61.2,fine tune previous fix specific of 32 bit platforms
+18dd441117f5f951d322f0cfbcdb9646d6a11c2f,2022-03-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,fine tune previous fix specific of 32 bit platforms
+d55adc459f6f0e1d2c388d3d07e5b938d9b8106b,2022-03-21,ok,find (hit),0.0,0.0,0.0,0,0,19.6,Merge branch 'main' of https://github.com/greg7mdp/gtl
+d55adc459f6f0e1d2c388d3d07e5b938d9b8106b,2022-03-21,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Merge branch 'main' of https://github.com/greg7mdp/gtl
+d55adc459f6f0e1d2c388d3d07e5b938d9b8106b,2022-03-21,ok,insert+erase,0.0,0.0,0.0,0,0,69.3,Merge branch 'main' of https://github.com/greg7mdp/gtl
+d55adc459f6f0e1d2c388d3d07e5b938d9b8106b,2022-03-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,22.4,Merge branch 'main' of https://github.com/greg7mdp/gtl
+20288ef5fecb0344e2a59cb52dd6cc3eb9531bb5,2022-03-24,ok,find (hit),0.0,0.0,0.0,0,0,34.6,add memoize and memoize_lru templates
+20288ef5fecb0344e2a59cb52dd6cc3eb9531bb5,2022-03-24,ok,find (miss),0.0,0.0,0.0,0,0,19.5,add memoize and memoize_lru templates
+20288ef5fecb0344e2a59cb52dd6cc3eb9531bb5,2022-03-24,ok,insert+erase,0.0,0.0,0.0,0,0,83.8,add memoize and memoize_lru templates
+20288ef5fecb0344e2a59cb52dd6cc3eb9531bb5,2022-03-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.4,add memoize and memoize_lru templates
+59b6c9a6c1634e887b124f3a6cb12f01613d8588,2022-03-26,ok,find (hit),0.0,0.0,0.0,0,0,30.7,add new APIs to memoize classes.
+59b6c9a6c1634e887b124f3a6cb12f01613d8588,2022-03-26,ok,find (miss),0.0,0.0,0.0,0,0,25.9,add new APIs to memoize classes.
+59b6c9a6c1634e887b124f3a6cb12f01613d8588,2022-03-26,ok,insert+erase,0.0,0.0,0.0,0,0,82.2,add new APIs to memoize classes.
+59b6c9a6c1634e887b124f3a6cb12f01613d8588,2022-03-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,add new APIs to memoize classes.
+9dc0c1375afa87e468bbd0a42e4ce44019666f85,2022-03-26,ok,find (hit),0.0,0.0,0.0,0,0,24.0,add support for lambdas in memoize
+9dc0c1375afa87e468bbd0a42e4ce44019666f85,2022-03-26,ok,find (miss),0.0,0.0,0.0,0,0,17.5,add support for lambdas in memoize
+9dc0c1375afa87e468bbd0a42e4ce44019666f85,2022-03-26,ok,insert+erase,0.0,0.0,0.0,0,0,68.4,add support for lambdas in memoize
+9dc0c1375afa87e468bbd0a42e4ce44019666f85,2022-03-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.8,add support for lambdas in memoize
+674ac219e2ac85b24029de0a5e34ba3ce95c859f,2022-03-26,ok,find (hit),0.0,0.0,0.0,0,0,17.5,small cleanup of memoize code
+674ac219e2ac85b24029de0a5e34ba3ce95c859f,2022-03-26,ok,find (miss),0.0,0.0,0.0,0,0,16.9,small cleanup of memoize code
+674ac219e2ac85b24029de0a5e34ba3ce95c859f,2022-03-26,ok,insert+erase,0.0,0.0,0.0,0,0,61.6,small cleanup of memoize code
+674ac219e2ac85b24029de0a5e34ba3ce95c859f,2022-03-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.6,small cleanup of memoize code
+458eb79130bfddd17ceae442eec698cd8be6ec54,2022-03-26,ok,find (hit),0.0,0.0,0.0,0,0,17.7,fix incorrect std::forward in memoize
+458eb79130bfddd17ceae442eec698cd8be6ec54,2022-03-26,ok,find (miss),0.0,0.0,0.0,0,0,17.1,fix incorrect std::forward in memoize
+458eb79130bfddd17ceae442eec698cd8be6ec54,2022-03-26,ok,insert+erase,0.0,0.0,0.0,0,0,61.2,fix incorrect std::forward in memoize
+458eb79130bfddd17ceae442eec698cd8be6ec54,2022-03-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,fix incorrect std::forward in memoize
+cebe3c787bc076d921b20615f1977dace0ae0341,2022-03-26,ok,find (hit),0.0,0.0,0.0,0,0,17.6,Update lru_cache.hpp
+cebe3c787bc076d921b20615f1977dace0ae0341,2022-03-26,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Update lru_cache.hpp
+cebe3c787bc076d921b20615f1977dace0ae0341,2022-03-26,ok,insert+erase,0.0,0.0,0.0,0,0,83.7,Update lru_cache.hpp
+cebe3c787bc076d921b20615f1977dace0ae0341,2022-03-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.1,Update lru_cache.hpp
+590662a8b7ef84551e825dca92724535bb4f942a,2022-03-27,ok,find (hit),0.0,0.0,0.0,0,0,17.1,wip: gtl::lazy_list
+590662a8b7ef84551e825dca92724535bb4f942a,2022-03-27,ok,find (miss),0.0,0.0,0.0,0,0,16.9,wip: gtl::lazy_list
+590662a8b7ef84551e825dca92724535bb4f942a,2022-03-27,ok,insert+erase,0.0,0.0,0.0,0,0,60.2,wip: gtl::lazy_list
+590662a8b7ef84551e825dca92724535bb4f942a,2022-03-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.2,wip: gtl::lazy_list
+3d290389372093034c3ff30f3cd3dc642b0f5db3,2022-03-31,ok,find (hit),0.0,0.0,0.0,0,0,33.3,comment out not-working lazy_list
+3d290389372093034c3ff30f3cd3dc642b0f5db3,2022-03-31,ok,find (miss),0.0,0.0,0.0,0,0,26.3,comment out not-working lazy_list
+3d290389372093034c3ff30f3cd3dc642b0f5db3,2022-03-31,ok,insert+erase,0.0,0.0,0.0,0,0,62.2,comment out not-working lazy_list
+3d290389372093034c3ff30f3cd3dc642b0f5db3,2022-03-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.1,comment out not-working lazy_list
+605d668edfb8f5bf46256bee2672e3673ad4e51e,2022-03-31,ok,find (hit),0.0,0.0,0.0,0,0,17.2,fix compilation issue on linux
+605d668edfb8f5bf46256bee2672e3673ad4e51e,2022-03-31,ok,find (miss),0.0,0.0,0.0,0,0,17.2,fix compilation issue on linux
+605d668edfb8f5bf46256bee2672e3673ad4e51e,2022-03-31,ok,insert+erase,0.0,0.0,0.0,0,0,81.6,fix compilation issue on linux
+605d668edfb8f5bf46256bee2672e3673ad4e51e,2022-03-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.8,fix compilation issue on linux
+8729bdb8ae3cf74f66aaea130d43563bdb52aaa6,2022-04-01,ok,find (hit),0.0,0.0,0.0,0,0,17.5,operator=() should preserve load_factor
+8729bdb8ae3cf74f66aaea130d43563bdb52aaa6,2022-04-01,ok,find (miss),0.0,0.0,0.0,0,0,16.9,operator=() should preserve load_factor
+8729bdb8ae3cf74f66aaea130d43563bdb52aaa6,2022-04-01,ok,insert+erase,0.0,0.0,0.0,0,0,62.2,operator=() should preserve load_factor
+8729bdb8ae3cf74f66aaea130d43563bdb52aaa6,2022-04-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.0,operator=() should preserve load_factor
+87b498ffdbeac729b76aae0d3fc9f0940859d081,2022-04-01,ok,find (hit),0.0,0.0,0.0,0,0,18.6,correct fix for phmap issue #136 so the capacity is preserved but doesn't increase
+87b498ffdbeac729b76aae0d3fc9f0940859d081,2022-04-01,ok,find (miss),0.0,0.0,0.0,0,0,16.8,correct fix for phmap issue #136 so the capacity is preserved but doesn't increase
+87b498ffdbeac729b76aae0d3fc9f0940859d081,2022-04-01,ok,insert+erase,0.0,0.0,0.0,0,0,60.9,correct fix for phmap issue #136 so the capacity is preserved but doesn't increase
+87b498ffdbeac729b76aae0d3fc9f0940859d081,2022-04-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,correct fix for phmap issue #136 so the capacity is preserved but doesn't increase
+dbe32edaf38ad306ef813495aa831ba04bd5fd75,2022-04-03,ok,find (hit),0.0,0.0,0.0,0,0,17.9,Fix issue with preserving capacity when phmap_dump/load parallel hash containers
+dbe32edaf38ad306ef813495aa831ba04bd5fd75,2022-04-03,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Fix issue with preserving capacity when phmap_dump/load parallel hash containers
+dbe32edaf38ad306ef813495aa831ba04bd5fd75,2022-04-03,ok,insert+erase,0.0,0.0,0.0,0,0,64.0,Fix issue with preserving capacity when phmap_dump/load parallel hash containers
+dbe32edaf38ad306ef813495aa831ba04bd5fd75,2022-04-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.0,Fix issue with preserving capacity when phmap_dump/load parallel hash containers
+a0b7103173187c3ba44398e3c2c8b791d3acc1cd,2022-04-19,ok,find (hit),0.0,0.0,0.0,0,0,18.4,Add fix for phmap issue #138
+a0b7103173187c3ba44398e3c2c8b791d3acc1cd,2022-04-19,ok,find (miss),0.0,0.0,0.0,0,0,26.3,Add fix for phmap issue #138
+a0b7103173187c3ba44398e3c2c8b791d3acc1cd,2022-04-19,ok,insert+erase,0.0,0.0,0.0,0,0,62.4,Add fix for phmap issue #138
+a0b7103173187c3ba44398e3c2c8b791d3acc1cd,2022-04-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.0,Add fix for phmap issue #138
+f80aefde2b3b1b57c0cbf467f6897561e2f889ad,2022-05-07,ok,find (hit),0.0,0.0,0.0,0,0,17.8,Add support for `std::erase_if` for hash containers
+f80aefde2b3b1b57c0cbf467f6897561e2f889ad,2022-05-07,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Add support for `std::erase_if` for hash containers
+f80aefde2b3b1b57c0cbf467f6897561e2f889ad,2022-05-07,ok,insert+erase,0.0,0.0,0.0,0,0,65.2,Add support for `std::erase_if` for hash containers
+f80aefde2b3b1b57c0cbf467f6897561e2f889ad,2022-05-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.5,Add support for `std::erase_if` for hash containers
+d059eea3a113497a828e5464edd81bf12e84b72e,2022-06-20,ok,find (hit),0.0,0.0,0.0,0,0,19.6,Implement HashtableDebugAccess for parallel_hash_set (PR from phmap)
+d059eea3a113497a828e5464edd81bf12e84b72e,2022-06-20,ok,find (miss),0.0,0.0,0.0,0,0,26.7,Implement HashtableDebugAccess for parallel_hash_set (PR from phmap)
+d059eea3a113497a828e5464edd81bf12e84b72e,2022-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,83.7,Implement HashtableDebugAccess for parallel_hash_set (PR from phmap)
+d059eea3a113497a828e5464edd81bf12e84b72e,2022-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.5,Implement HashtableDebugAccess for parallel_hash_set (PR from phmap)
+e927ac1b68c05927faa15bf2ecaa7b1611265d03,2022-06-20,ok,find (hit),0.0,0.0,0.0,0,0,36.3,Update comment for `lazy_emplace_l` API
+e927ac1b68c05927faa15bf2ecaa7b1611265d03,2022-06-20,ok,find (miss),0.0,0.0,0.0,0,0,27.9,Update comment for `lazy_emplace_l` API
+e927ac1b68c05927faa15bf2ecaa7b1611265d03,2022-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,76.6,Update comment for `lazy_emplace_l` API
+e927ac1b68c05927faa15bf2ecaa7b1611265d03,2022-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.0,Update comment for `lazy_emplace_l` API
+3d91e6a2a372cd5aae802cd93f781a8c4d6e050f,2022-06-20,ok,find (hit),0.0,0.0,0.0,0,0,32.3,Fix build issue with added HashtableDebugAccess API
+3d91e6a2a372cd5aae802cd93f781a8c4d6e050f,2022-06-20,ok,find (miss),0.0,0.0,0.0,0,0,27.6,Fix build issue with added HashtableDebugAccess API
+3d91e6a2a372cd5aae802cd93f781a8c4d6e050f,2022-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,86.9,Fix build issue with added HashtableDebugAccess API
+3d91e6a2a372cd5aae802cd93f781a8c4d6e050f,2022-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,Fix build issue with added HashtableDebugAccess API
+0449cc0c73603d4197182a843264904159af9a1f,2022-06-20,ok,find (hit),0.0,0.0,0.0,0,0,31.9,Fix compilation issue with clang on HashtableDebugAccess
+0449cc0c73603d4197182a843264904159af9a1f,2022-06-20,ok,find (miss),0.0,0.0,0.0,0,0,25.8,Fix compilation issue with clang on HashtableDebugAccess
+0449cc0c73603d4197182a843264904159af9a1f,2022-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,79.4,Fix compilation issue with clang on HashtableDebugAccess
+0449cc0c73603d4197182a843264904159af9a1f,2022-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.1,Fix compilation issue with clang on HashtableDebugAccess
+d0f17b457562e641e531a65f3d4c5e328a1290c6,2022-06-20,ok,find (hit),0.0,0.0,0.0,0,0,17.4,fix warning on win32
+d0f17b457562e641e531a65f3d4c5e328a1290c6,2022-06-20,ok,find (miss),0.0,0.0,0.0,0,0,16.7,fix warning on win32
+d0f17b457562e641e531a65f3d4c5e328a1290c6,2022-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,60.8,fix warning on win32
+d0f17b457562e641e531a65f3d4c5e328a1290c6,2022-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.0,fix warning on win32
+45bcb936d9c7224f8383e73403061c5e3aefad22,2022-06-21,ok,find (hit),0.0,0.0,0.0,0,0,20.3,switch 2 parameters in one instamce of lazy_emplace_with_hash for consistency
+45bcb936d9c7224f8383e73403061c5e3aefad22,2022-06-21,ok,find (miss),0.0,0.0,0.0,0,0,17.2,switch 2 parameters in one instamce of lazy_emplace_with_hash for consistency
+45bcb936d9c7224f8383e73403061c5e3aefad22,2022-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,64.6,switch 2 parameters in one instamce of lazy_emplace_with_hash for consistency
+45bcb936d9c7224f8383e73403061c5e3aefad22,2022-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.0,switch 2 parameters in one instamce of lazy_emplace_with_hash for consistency
+9d6902a8c6e6410eec0bcf6c51a246632abafd35,2022-06-21,ok,find (hit),0.0,0.0,0.0,0,0,33.3,Merge pull request #9 from phprus/fix-HashtableDebugAccess-1
+9d6902a8c6e6410eec0bcf6c51a246632abafd35,2022-06-21,ok,find (miss),0.0,0.0,0.0,0,0,26.0,Merge pull request #9 from phprus/fix-HashtableDebugAccess-1
+9d6902a8c6e6410eec0bcf6c51a246632abafd35,2022-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,64.5,Merge pull request #9 from phprus/fix-HashtableDebugAccess-1
+9d6902a8c6e6410eec0bcf6c51a246632abafd35,2022-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.2,Merge pull request #9 from phprus/fix-HashtableDebugAccess-1
+fa27823055b766c73b8f9516ce15a9d8ade972e7,2022-06-21,ok,find (hit),0.0,0.0,0.0,0,0,17.6,cleanup some warning in test
+fa27823055b766c73b8f9516ce15a9d8ade972e7,2022-06-21,ok,find (miss),0.0,0.0,0.0,0,0,17.1,cleanup some warning in test
+fa27823055b766c73b8f9516ce15a9d8ade972e7,2022-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,66.9,cleanup some warning in test
+fa27823055b766c73b8f9516ce15a9d8ade972e7,2022-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,23.9,cleanup some warning in test
+9c3023504ad122017399f326db014bfac253f965,2022-06-25,ok,find (hit),0.0,0.0,0.0,0,0,50.9,use <typeindex> instead of <functional>
+9c3023504ad122017399f326db014bfac253f965,2022-06-25,ok,find (miss),0.0,0.0,0.0,0,0,18.4,use <typeindex> instead of <functional>
+9c3023504ad122017399f326db014bfac253f965,2022-06-25,ok,insert+erase,0.0,0.0,0.0,0,0,63.5,use <typeindex> instead of <functional>
+9c3023504ad122017399f326db014bfac253f965,2022-06-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.6,use <typeindex> instead of <functional>
+eab9cec7ae52cd4bca35d70515d656f5aecd6b84,2022-06-25,ok,find (hit),0.0,0.0,0.0,0,0,30.7,use ADL lookup for erase_if instead of adding to std (issue #11)
+eab9cec7ae52cd4bca35d70515d656f5aecd6b84,2022-06-25,ok,find (miss),0.0,0.0,0.0,0,0,29.0,use ADL lookup for erase_if instead of adding to std (issue #11)
+eab9cec7ae52cd4bca35d70515d656f5aecd6b84,2022-06-25,ok,insert+erase,0.0,0.0,0.0,0,0,64.9,use ADL lookup for erase_if instead of adding to std (issue #11)
+eab9cec7ae52cd4bca35d70515d656f5aecd6b84,2022-06-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.5,use ADL lookup for erase_if instead of adding to std (issue #11)
+863e82cbfbb081421788b8e442526cd658f62e8e,2022-07-03,ok,find (hit),0.0,0.0,0.0,0,0,29.4,add mt_memoize for multithreaded caching
+863e82cbfbb081421788b8e442526cd658f62e8e,2022-07-03,ok,find (miss),0.0,0.0,0.0,0,0,17.1,add mt_memoize for multithreaded caching
+863e82cbfbb081421788b8e442526cd658f62e8e,2022-07-03,ok,insert+erase,0.0,0.0,0.0,0,0,62.5,add mt_memoize for multithreaded caching
+863e82cbfbb081421788b8e442526cd658f62e8e,2022-07-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.3,add mt_memoize for multithreaded caching
+9c5758673bc033c35fd55555510a8a237132c689,2022-07-03,ok,find (hit),0.0,0.0,0.0,0,0,23.3,add comment and fix example
+9c5758673bc033c35fd55555510a8a237132c689,2022-07-03,ok,find (miss),0.0,0.0,0.0,0,0,17.1,add comment and fix example
+9c5758673bc033c35fd55555510a8a237132c689,2022-07-03,ok,insert+erase,0.0,0.0,0.0,0,0,62.8,add comment and fix example
+9c5758673bc033c35fd55555510a8a237132c689,2022-07-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.6,add comment and fix example
+ea65ea073ff17f62666d63cb8f1bd9cdb639dc9d,2022-07-03,ok,find (hit),0.0,0.0,0.0,0,0,17.1,remove assert added by mistake
+ea65ea073ff17f62666d63cb8f1bd9cdb639dc9d,2022-07-03,ok,find (miss),0.0,0.0,0.0,0,0,16.6,remove assert added by mistake
+ea65ea073ff17f62666d63cb8f1bd9cdb639dc9d,2022-07-03,ok,insert+erase,0.0,0.0,0.0,0,0,60.0,remove assert added by mistake
+ea65ea073ff17f62666d63cb8f1bd9cdb639dc9d,2022-07-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.7,remove assert added by mistake
+fffd9940c9ae2ba0dfabc5145c8551bd6a5f6cc0,2022-07-03,ok,find (hit),0.0,0.0,0.0,0,0,17.2,make optional template parameters optional - as suggested by /u/silicon_heretic
+fffd9940c9ae2ba0dfabc5145c8551bd6a5f6cc0,2022-07-03,ok,find (miss),0.0,0.0,0.0,0,0,16.7,make optional template parameters optional - as suggested by /u/silicon_heretic
+fffd9940c9ae2ba0dfabc5145c8551bd6a5f6cc0,2022-07-03,ok,insert+erase,0.0,0.0,0.0,0,0,60.8,make optional template parameters optional - as suggested by /u/silicon_heretic
+fffd9940c9ae2ba0dfabc5145c8551bd6a5f6cc0,2022-07-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,make optional template parameters optional - as suggested by /u/silicon_heretic
+b628bd0727a20050710bf0d61a99d845fb5e6b42,2022-07-04,ok,find (hit),0.0,0.0,0.0,0,0,17.2,cleanup memoize APIs in lru_cache
+b628bd0727a20050710bf0d61a99d845fb5e6b42,2022-07-04,ok,find (miss),0.0,0.0,0.0,0,0,16.9,cleanup memoize APIs in lru_cache
+b628bd0727a20050710bf0d61a99d845fb5e6b42,2022-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,63.7,cleanup memoize APIs in lru_cache
+b628bd0727a20050710bf0d61a99d845fb5e6b42,2022-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,cleanup memoize APIs in lru_cache
+1aa2c1e1a5f05afd52d1deb7039deec32f9faf4e,2022-07-04,ok,find (hit),0.0,0.0,0.0,0,0,18.0,wip - start implementing mt_memoize_lru
+1aa2c1e1a5f05afd52d1deb7039deec32f9faf4e,2022-07-04,ok,find (miss),0.0,0.0,0.0,0,0,16.9,wip - start implementing mt_memoize_lru
+1aa2c1e1a5f05afd52d1deb7039deec32f9faf4e,2022-07-04,ok,insert+erase,0.0,0.0,0.0,0,0,60.6,wip - start implementing mt_memoize_lru
+1aa2c1e1a5f05afd52d1deb7039deec32f9faf4e,2022-07-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,wip - start implementing mt_memoize_lru
+03ac0727b059254f5b60cceda0e26d3e0284da0e,2022-07-22,ok,find (hit),0.0,0.0,0.0,0,0,17.4,"Rename `cache_hit()` to `contains()` in lru_cache, and remove unneeded template parameter"
+03ac0727b059254f5b60cceda0e26d3e0284da0e,2022-07-22,ok,find (miss),0.0,0.0,0.0,0,0,17.0,"Rename `cache_hit()` to `contains()` in lru_cache, and remove unneeded template parameter"
+03ac0727b059254f5b60cceda0e26d3e0284da0e,2022-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,60.8,"Rename `cache_hit()` to `contains()` in lru_cache, and remove unneeded template parameter"
+03ac0727b059254f5b60cceda0e26d3e0284da0e,2022-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,"Rename `cache_hit()` to `contains()` in lru_cache, and remove unneeded template parameter"
+1460cb1dd4b1cdb55cc49a1aaaf06cdd58f991fe,2022-07-22,ok,find (hit),0.0,0.0,0.0,0,0,35.9,Add versions of `for_each()` with `ExecutionPolicy` (phmap PR 160)
+1460cb1dd4b1cdb55cc49a1aaaf06cdd58f991fe,2022-07-22,ok,find (miss),0.0,0.0,0.0,0,0,25.2,Add versions of `for_each()` with `ExecutionPolicy` (phmap PR 160)
+1460cb1dd4b1cdb55cc49a1aaaf06cdd58f991fe,2022-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,64.6,Add versions of `for_each()` with `ExecutionPolicy` (phmap PR 160)
+1460cb1dd4b1cdb55cc49a1aaaf06cdd58f991fe,2022-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.7,Add versions of `for_each()` with `ExecutionPolicy` (phmap PR 160)
+90f0a979efabc932484f3cbc51a0f75dfcfb3940,2022-07-22,ok,find (hit),0.0,0.0,0.0,0,0,20.8,Fix imperfect hash for tuple of small integers - better implementation of `gtl::HashState().combine(` from boost
+90f0a979efabc932484f3cbc51a0f75dfcfb3940,2022-07-22,ok,find (miss),0.0,0.0,0.0,0,0,18.4,Fix imperfect hash for tuple of small integers - better implementation of `gtl::HashState().combine(` from boost
+90f0a979efabc932484f3cbc51a0f75dfcfb3940,2022-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,63.7,Fix imperfect hash for tuple of small integers - better implementation of `gtl::HashState().combine(` from boost
+90f0a979efabc932484f3cbc51a0f75dfcfb3940,2022-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.5,Fix imperfect hash for tuple of small integers - better implementation of `gtl::HashState().combine(` from boost
+a42e18759b92ab733f581c41a007378bdf2ddf74,2022-07-22,ok,find (hit),0.0,0.0,0.0,0,0,22.7,Suppress warning in btree.hpp
+a42e18759b92ab733f581c41a007378bdf2ddf74,2022-07-22,ok,find (miss),0.0,0.0,0.0,0,0,18.4,Suppress warning in btree.hpp
+a42e18759b92ab733f581c41a007378bdf2ddf74,2022-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,64.1,Suppress warning in btree.hpp
+a42e18759b92ab733f581c41a007378bdf2ddf74,2022-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.1,Suppress warning in btree.hpp
+43659251ac1fd10e0491c4d3f1a4198db864cb80,2022-07-22,ok,find (hit),0.0,0.0,0.0,0,0,17.3,Small cleanup in StringHashEqT definition
+43659251ac1fd10e0491c4d3f1a4198db864cb80,2022-07-22,ok,find (miss),0.0,0.0,0.0,0,0,16.9,Small cleanup in StringHashEqT definition
+43659251ac1fd10e0491c4d3f1a4198db864cb80,2022-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,61.7,Small cleanup in StringHashEqT definition
+43659251ac1fd10e0491c4d3f1a4198db864cb80,2022-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.8,Small cleanup in StringHashEqT definition
+4f128c45f6423b6b0c8ab04bc5ae28bbb9a76882,2022-07-23,ok,find (hit),0.0,0.0,0.0,0,0,17.8,Add intrusive header and example
+4f128c45f6423b6b0c8ab04bc5ae28bbb9a76882,2022-07-23,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Add intrusive header and example
+4f128c45f6423b6b0c8ab04bc5ae28bbb9a76882,2022-07-23,ok,insert+erase,0.0,0.0,0.0,0,0,61.0,Add intrusive header and example
+4f128c45f6423b6b0c8ab04bc5ae28bbb9a76882,2022-07-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Add intrusive header and example
+a16c7066b5b62b3e50f3ff79868ea12151038cc7,2022-07-23,ok,find (hit),0.0,0.0,0.0,0,0,18.5,intrusive.hpp: move friend functions inline
+a16c7066b5b62b3e50f3ff79868ea12151038cc7,2022-07-23,ok,find (miss),0.0,0.0,0.0,0,0,17.0,intrusive.hpp: move friend functions inline
+a16c7066b5b62b3e50f3ff79868ea12151038cc7,2022-07-23,ok,insert+erase,0.0,0.0,0.0,0,0,62.1,intrusive.hpp: move friend functions inline
+a16c7066b5b62b3e50f3ff79868ea12151038cc7,2022-07-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,intrusive.hpp: move friend functions inline
+9fde696f065ec4e8ee320257955e7873da335dbd,2022-07-23,ok,find (hit),0.0,0.0,0.0,0,0,35.0,Normalize all the line endings
+9fde696f065ec4e8ee320257955e7873da335dbd,2022-07-23,ok,find (miss),0.0,0.0,0.0,0,0,28.3,Normalize all the line endings
+9fde696f065ec4e8ee320257955e7873da335dbd,2022-07-23,ok,insert+erase,0.0,0.0,0.0,0,0,66.2,Normalize all the line endings
+9fde696f065ec4e8ee320257955e7873da335dbd,2022-07-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.7,Normalize all the line endings
+29e69827f501f04f9f2415a88b8d2d9d4a08f26d,2022-07-23,ok,find (hit),0.0,0.0,0.0,0,0,17.5,"Rename lru_cache.hpp to memoize.hpp, and update example/test file names"
+29e69827f501f04f9f2415a88b8d2d9d4a08f26d,2022-07-23,ok,find (miss),0.0,0.0,0.0,0,0,16.7,"Rename lru_cache.hpp to memoize.hpp, and update example/test file names"
+29e69827f501f04f9f2415a88b8d2d9d4a08f26d,2022-07-23,ok,insert+erase,0.0,0.0,0.0,0,0,84.5,"Rename lru_cache.hpp to memoize.hpp, and update example/test file names"
+29e69827f501f04f9f2415a88b8d2d9d4a08f26d,2022-07-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.3,"Rename lru_cache.hpp to memoize.hpp, and update example/test file names"
+84715005d0a0acdb081f407951bd23a099f0216c,2022-07-25,ok,find (hit),0.0,0.0,0.0,0,0,34.3,memoize: add support for `contains` to `mt_memoize_lru`
+84715005d0a0acdb081f407951bd23a099f0216c,2022-07-25,ok,find (miss),0.0,0.0,0.0,0,0,25.2,memoize: add support for `contains` to `mt_memoize_lru`
+84715005d0a0acdb081f407951bd23a099f0216c,2022-07-25,ok,insert+erase,0.0,0.0,0.0,0,0,78.4,memoize: add support for `contains` to `mt_memoize_lru`
+84715005d0a0acdb081f407951bd23a099f0216c,2022-07-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.8,memoize: add support for `contains` to `mt_memoize_lru`
+85135e918084b22989ffd19ba006591eeaeb450c,2022-07-25,ok,find (hit),0.0,0.0,0.0,0,0,21.5,Merge pull request #13 from phprus/unused-2
+85135e918084b22989ffd19ba006591eeaeb450c,2022-07-25,ok,find (miss),0.0,0.0,0.0,0,0,26.1,Merge pull request #13 from phprus/unused-2
+85135e918084b22989ffd19ba006591eeaeb450c,2022-07-25,ok,insert+erase,0.0,0.0,0.0,0,0,83.3,Merge pull request #13 from phprus/unused-2
+85135e918084b22989ffd19ba006591eeaeb450c,2022-07-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.6,Merge pull request #13 from phprus/unused-2
+ff64f35779cff5c588ac647044f03225b3a9c99b,2022-07-25,ok,find (hit),0.0,0.0,0.0,0,0,32.8,Merge pull request #14 from phprus/unused-3
+ff64f35779cff5c588ac647044f03225b3a9c99b,2022-07-25,ok,find (miss),0.0,0.0,0.0,0,0,26.4,Merge pull request #14 from phprus/unused-3
+ff64f35779cff5c588ac647044f03225b3a9c99b,2022-07-25,ok,insert+erase,0.0,0.0,0.0,0,0,61.5,Merge pull request #14 from phprus/unused-3
+ff64f35779cff5c588ac647044f03225b3a9c99b,2022-07-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Merge pull request #14 from phprus/unused-3
+a2b69a8f23486fcc4266f97b4ace9ec5ef31c3fc,2022-07-25,ok,find (hit),0.0,0.0,0.0,0,0,33.9,Add `with_submap` api for parallel maps allowing access to submaps under lock protection
+a2b69a8f23486fcc4266f97b4ace9ec5ef31c3fc,2022-07-25,ok,find (miss),0.0,0.0,0.0,0,0,26.6,Add `with_submap` api for parallel maps allowing access to submaps under lock protection
+a2b69a8f23486fcc4266f97b4ace9ec5ef31c3fc,2022-07-25,ok,insert+erase,0.0,0.0,0.0,0,0,83.7,Add `with_submap` api for parallel maps allowing access to submaps under lock protection
+a2b69a8f23486fcc4266f97b4ace9ec5ef31c3fc,2022-07-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,Add `with_submap` api for parallel maps allowing access to submaps under lock protection
+1b294d189fa23b5b78e3d9125afad9dd74be510c,2022-07-25,ok,find (hit),0.0,0.0,0.0,0,0,18.3,"Add doc for parallel hashmap extended APIs, and remove some unnecessary casts in phmap.hpp"
+1b294d189fa23b5b78e3d9125afad9dd74be510c,2022-07-25,ok,find (miss),0.0,0.0,0.0,0,0,16.7,"Add doc for parallel hashmap extended APIs, and remove some unnecessary casts in phmap.hpp"
+1b294d189fa23b5b78e3d9125afad9dd74be510c,2022-07-25,ok,insert+erase,0.0,0.0,0.0,0,0,61.7,"Add doc for parallel hashmap extended APIs, and remove some unnecessary casts in phmap.hpp"
+1b294d189fa23b5b78e3d9125afad9dd74be510c,2022-07-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,"Add doc for parallel hashmap extended APIs, and remove some unnecessary casts in phmap.hpp"
+7c8773d0e09319b5c439efddb40ae9fb07de506d,2022-07-28,ok,find (hit),0.0,0.0,0.0,0,0,38.4,"Add separate file for `lru_cache` implementation, and add support for mt version"
+7c8773d0e09319b5c439efddb40ae9fb07de506d,2022-07-28,ok,find (miss),0.0,0.0,0.0,0,0,28.3,"Add separate file for `lru_cache` implementation, and add support for mt version"
+7c8773d0e09319b5c439efddb40ae9fb07de506d,2022-07-28,ok,insert+erase,0.0,0.0,0.0,0,0,90.7,"Add separate file for `lru_cache` implementation, and add support for mt version"
+7c8773d0e09319b5c439efddb40ae9fb07de506d,2022-07-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.9,"Add separate file for `lru_cache` implementation, and add support for mt version"
+e3913b06cfcdf2077f8678195a7ee444c922dadb,2022-07-28,ok,find (hit),0.0,0.0,0.0,0,0,17.6,Update comments/copyrights
+e3913b06cfcdf2077f8678195a7ee444c922dadb,2022-07-28,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Update comments/copyrights
+e3913b06cfcdf2077f8678195a7ee444c922dadb,2022-07-28,ok,insert+erase,0.0,0.0,0.0,0,0,64.3,Update comments/copyrights
+e3913b06cfcdf2077f8678195a7ee444c922dadb,2022-07-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.8,Update comments/copyrights
+22eba92aa8c82355ddcdf58d9a09c7d994acfd7b,2022-07-29,ok,find (hit),0.0,0.0,0.0,0,0,33.0,`std::move` key before deleting it from the list
+22eba92aa8c82355ddcdf58d9a09c7d994acfd7b,2022-07-29,ok,find (miss),0.0,0.0,0.0,0,0,17.0,`std::move` key before deleting it from the list
+22eba92aa8c82355ddcdf58d9a09c7d994acfd7b,2022-07-29,ok,insert+erase,0.0,0.0,0.0,0,0,61.0,`std::move` key before deleting it from the list
+22eba92aa8c82355ddcdf58d9a09c7d994acfd7b,2022-07-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,`std::move` key before deleting it from the list
+8ef0a8f4b0e5ce9b2ef7f9ccdbdc2554f0a48526,2022-08-05,ok,find (hit),0.0,0.0,0.0,0,0,18.6,Merge pull request #16 from phprus/msvc-warning-1
+8ef0a8f4b0e5ce9b2ef7f9ccdbdc2554f0a48526,2022-08-05,ok,find (miss),0.0,0.0,0.0,0,0,18.1,Merge pull request #16 from phprus/msvc-warning-1
+8ef0a8f4b0e5ce9b2ef7f9ccdbdc2554f0a48526,2022-08-05,ok,insert+erase,0.0,0.0,0.0,0,0,70.7,Merge pull request #16 from phprus/msvc-warning-1
+8ef0a8f4b0e5ce9b2ef7f9ccdbdc2554f0a48526,2022-08-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.7,Merge pull request #16 from phprus/msvc-warning-1
+27cc08083605b36f8a221fbad6f8636f27bd2a44,2022-08-06,ok,find (hit),0.0,0.0,0.0,0,0,38.4,Merge pull request #17 from phprus/unused-4
+27cc08083605b36f8a221fbad6f8636f27bd2a44,2022-08-06,ok,find (miss),0.0,0.0,0.0,0,0,28.1,Merge pull request #17 from phprus/unused-4
+27cc08083605b36f8a221fbad6f8636f27bd2a44,2022-08-06,ok,insert+erase,0.0,0.0,0.0,0,0,79.6,Merge pull request #17 from phprus/unused-4
+27cc08083605b36f8a221fbad6f8636f27bd2a44,2022-08-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.9,Merge pull request #17 from phprus/unused-4
+079e04780a669231a208dba2860b6259e81badbd,2022-08-12,ok,find (hit),0.0,0.0,0.0,0,0,33.3,fix dump_nested.cpp example
+079e04780a669231a208dba2860b6259e81badbd,2022-08-12,ok,find (miss),0.0,0.0,0.0,0,0,21.4,fix dump_nested.cpp example
+079e04780a669231a208dba2860b6259e81badbd,2022-08-12,ok,insert+erase,0.0,0.0,0.0,0,0,67.3,fix dump_nested.cpp example
+079e04780a669231a208dba2860b6259e81badbd,2022-08-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,fix dump_nested.cpp example
+ba9386e76879da72910e44dc1fb6265f30285b67,2022-09-16,ok,find (hit),0.0,0.0,0.0,0,0,21.2,"Allow swap() to work with parallel hash maps/sets with different mutex types, so you can use the same container with or without locking."
+ba9386e76879da72910e44dc1fb6265f30285b67,2022-09-16,ok,find (miss),0.0,0.0,0.0,0,0,16.8,"Allow swap() to work with parallel hash maps/sets with different mutex types, so you can use the same container with or without locking."
+ba9386e76879da72910e44dc1fb6265f30285b67,2022-09-16,ok,insert+erase,0.0,0.0,0.0,0,0,60.1,"Allow swap() to work with parallel hash maps/sets with different mutex types, so you can use the same container with or without locking."
+ba9386e76879da72910e44dc1fb6265f30285b67,2022-09-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,"Allow swap() to work with parallel hash maps/sets with different mutex types, so you can use the same container with or without locking."
+ff7f311dee827d5ed6e449d2c6f428f5315aa484,2022-09-23,ok,find (hit),0.0,0.0,0.0,0,0,20.2,update version in gtl_config.hpp to 1.1.4
+ff7f311dee827d5ed6e449d2c6f428f5315aa484,2022-09-23,ok,find (miss),0.0,0.0,0.0,0,0,17.1,update version in gtl_config.hpp to 1.1.4
+ff7f311dee827d5ed6e449d2c6f428f5315aa484,2022-09-23,ok,insert+erase,0.0,0.0,0.0,0,0,60.5,update version in gtl_config.hpp to 1.1.4
+ff7f311dee827d5ed6e449d2c6f428f5315aa484,2022-09-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,update version in gtl_config.hpp to 1.1.4
+e6b3fd0bd78d257e284d19db93110608c523e0ca,2022-09-30,ok,find (hit),0.0,0.0,0.0,0,0,23.9,remove executable flag for files not needing it
+e6b3fd0bd78d257e284d19db93110608c523e0ca,2022-09-30,ok,find (miss),0.0,0.0,0.0,0,0,23.5,remove executable flag for files not needing it
+e6b3fd0bd78d257e284d19db93110608c523e0ca,2022-09-30,ok,insert+erase,0.0,0.0,0.0,0,0,76.5,remove executable flag for files not needing it
+e6b3fd0bd78d257e284d19db93110608c523e0ca,2022-09-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,46.0,remove executable flag for files not needing it
+aa66e64f61fe71e91ca59f702cda57f394cdde59,2022-10-01,ok,find (hit),0.0,0.0,0.0,0,0,42.7,Update gtl::Hash so that std::hash<Foo*> can be overridden
+aa66e64f61fe71e91ca59f702cda57f394cdde59,2022-10-01,ok,find (miss),0.0,0.0,0.0,0,0,28.8,Update gtl::Hash so that std::hash<Foo*> can be overridden
+aa66e64f61fe71e91ca59f702cda57f394cdde59,2022-10-01,ok,insert+erase,0.0,0.0,0.0,0,0,70.7,Update gtl::Hash so that std::hash<Foo*> can be overridden
+aa66e64f61fe71e91ca59f702cda57f394cdde59,2022-10-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.6,Update gtl::Hash so that std::hash<Foo*> can be overridden
+7e9498c0a7c6d5bc21393c5a8cc8c517cb4c7599,2022-10-01,ok,find (hit),0.0,0.0,0.0,0,0,23.3,bump gtl version to 1.1.5
+7e9498c0a7c6d5bc21393c5a8cc8c517cb4c7599,2022-10-01,ok,find (miss),0.0,0.0,0.0,0,0,20.1,bump gtl version to 1.1.5
+7e9498c0a7c6d5bc21393c5a8cc8c517cb4c7599,2022-10-01,ok,insert+erase,0.0,0.0,0.0,0,0,69.0,bump gtl version to 1.1.5
+7e9498c0a7c6d5bc21393c5a8cc8c517cb4c7599,2022-10-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.9,bump gtl version to 1.1.5
+06e07a3538c42b2d5040866176916335deefaac2,2022-10-03,ok,find (hit),0.0,0.0,0.0,0,0,17.7,Disable assert causing duplicated hash calls when NDEBUG is not defined - phmap issue #168
+06e07a3538c42b2d5040866176916335deefaac2,2022-10-03,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Disable assert causing duplicated hash calls when NDEBUG is not defined - phmap issue #168
+06e07a3538c42b2d5040866176916335deefaac2,2022-10-03,ok,insert+erase,0.0,0.0,0.0,0,0,60.0,Disable assert causing duplicated hash calls when NDEBUG is not defined - phmap issue #168
+06e07a3538c42b2d5040866176916335deefaac2,2022-10-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,Disable assert causing duplicated hash calls when NDEBUG is not defined - phmap issue #168
+23287f1cd3cba773304d564beeb559d54e851ded,2022-11-19,ok,find (hit),0.0,0.0,0.0,0,0,18.6,Merge pull request #21 from phprus/todo-1
+23287f1cd3cba773304d564beeb559d54e851ded,2022-11-19,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Merge pull request #21 from phprus/todo-1
+23287f1cd3cba773304d564beeb559d54e851ded,2022-11-19,ok,insert+erase,0.0,0.0,0.0,0,0,60.0,Merge pull request #21 from phprus/todo-1
+23287f1cd3cba773304d564beeb559d54e851ded,2022-11-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,Merge pull request #21 from phprus/todo-1
+40e866760e3528fd13a421a23bae4821b92e6a27,2022-11-19,ok,find (hit),0.0,0.0,0.0,0,0,17.4,add .clang_format file and format code with it
+40e866760e3528fd13a421a23bae4821b92e6a27,2022-11-19,ok,find (miss),0.0,0.0,0.0,0,0,16.8,add .clang_format file and format code with it
+40e866760e3528fd13a421a23bae4821b92e6a27,2022-11-19,ok,insert+erase,0.0,0.0,0.0,0,0,63.8,add .clang_format file and format code with it
+40e866760e3528fd13a421a23bae4821b92e6a27,2022-11-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.6,add .clang_format file and format code with it
+0f8cecf52c91bb8f265d6ff2fc32cd8144c987a6,2022-11-20,ok,find (hit),0.0,0.0,0.0,0,0,17.6,fine tune .clang-format
+0f8cecf52c91bb8f265d6ff2fc32cd8144c987a6,2022-11-20,ok,find (miss),0.0,0.0,0.0,0,0,17.0,fine tune .clang-format
+0f8cecf52c91bb8f265d6ff2fc32cd8144c987a6,2022-11-20,ok,insert+erase,0.0,0.0,0.0,0,0,61.9,fine tune .clang-format
+0f8cecf52c91bb8f265d6ff2fc32cd8144c987a6,2022-11-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.5,fine tune .clang-format
+2aebc71540b0165321968f09c48ea16f192f5c52,2022-11-29,ok,find (hit),0.0,0.0,0.0,0,0,32.9,fix typo in comment (erase instead of _erase)
+2aebc71540b0165321968f09c48ea16f192f5c52,2022-11-29,ok,find (miss),0.0,0.0,0.0,0,0,28.1,fix typo in comment (erase instead of _erase)
+2aebc71540b0165321968f09c48ea16f192f5c52,2022-11-29,ok,insert+erase,0.0,0.0,0.0,0,0,81.9,fix typo in comment (erase instead of _erase)
+2aebc71540b0165321968f09c48ea16f192f5c52,2022-11-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.7,fix typo in comment (erase instead of _erase)
+c437f8db8edffcdef07d6f41bb9acb18b2b03de0,2022-12-17,ok,find (hit),0.0,0.0,0.0,0,0,21.9,add utils.hpp - wip
+c437f8db8edffcdef07d6f41bb9acb18b2b03de0,2022-12-17,ok,find (miss),0.0,0.0,0.0,0,0,18.7,add utils.hpp - wip
+c437f8db8edffcdef07d6f41bb9acb18b2b03de0,2022-12-17,ok,insert+erase,0.0,0.0,0.0,0,0,69.4,add utils.hpp - wip
+c437f8db8edffcdef07d6f41bb9acb18b2b03de0,2022-12-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.5,add utils.hpp - wip
+77a2d462dad465b9ea5079dec4efef25f4f7d5b3,2022-12-17,ok,find (hit),0.0,0.0,0.0,0,0,18.2,Fix compilation issue with clang-14
+77a2d462dad465b9ea5079dec4efef25f4f7d5b3,2022-12-17,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Fix compilation issue with clang-14
+77a2d462dad465b9ea5079dec4efef25f4f7d5b3,2022-12-17,ok,insert+erase,0.0,0.0,0.0,0,0,66.0,Fix compilation issue with clang-14
+77a2d462dad465b9ea5079dec4efef25f4f7d5b3,2022-12-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.1,Fix compilation issue with clang-14
+b17466736b061ba6410b582f8992ccf775e5703f,2022-12-18,ok,find (hit),0.0,0.0,0.0,0,0,25.2,add timestamp class to utils
+b17466736b061ba6410b582f8992ccf775e5703f,2022-12-18,ok,find (miss),0.0,0.0,0.0,0,0,18.5,add timestamp class to utils
+b17466736b061ba6410b582f8992ccf775e5703f,2022-12-18,ok,insert+erase,0.0,0.0,0.0,0,0,69.4,add timestamp class to utils
+b17466736b061ba6410b582f8992ccf775e5703f,2022-12-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.6,add timestamp class to utils
+f59c20521273cd314f27c7218c86a023abefcc8d,2022-12-18,ok,find (hit),0.0,0.0,0.0,0,0,18.1,"Update utils.hpp, and add example"
+f59c20521273cd314f27c7218c86a023abefcc8d,2022-12-18,ok,find (miss),0.0,0.0,0.0,0,0,17.3,"Update utils.hpp, and add example"
+f59c20521273cd314f27c7218c86a023abefcc8d,2022-12-18,ok,insert+erase,0.0,0.0,0.0,0,0,63.4,"Update utils.hpp, and add example"
+f59c20521273cd314f27c7218c86a023abefcc8d,2022-12-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,"Update utils.hpp, and add example"
+ed5dc2270c36392510b3ceb8a4b2606357637d1a,2022-12-18,ok,find (hit),0.0,0.0,0.0,0,0,18.5,Fix build issue on macos
+ed5dc2270c36392510b3ceb8a4b2606357637d1a,2022-12-18,ok,find (miss),0.0,0.0,0.0,0,0,17.4,Fix build issue on macos
+ed5dc2270c36392510b3ceb8a4b2606357637d1a,2022-12-18,ok,insert+erase,0.0,0.0,0.0,0,0,78.8,Fix build issue on macos
+ed5dc2270c36392510b3ceb8a4b2606357637d1a,2022-12-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.6,Fix build issue on macos
+8e4988e9f829da32cdce02c740d8d1fea4fb6f08,2022-12-18,ok,find (hit),0.0,0.0,0.0,0,0,18.6,Fix build issue because of missing header file
+8e4988e9f829da32cdce02c740d8d1fea4fb6f08,2022-12-18,ok,find (miss),0.0,0.0,0.0,0,0,17.3,Fix build issue because of missing header file
+8e4988e9f829da32cdce02c740d8d1fea4fb6f08,2022-12-18,ok,insert+erase,0.0,0.0,0.0,0,0,63.3,Fix build issue because of missing header file
+8e4988e9f829da32cdce02c740d8d1fea4fb6f08,2022-12-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.6,Fix build issue because of missing header file
+50c5df11fe4290cc78fff35af1ff2a2bd2ef7e8a,2022-12-18,ok,find (hit),0.0,0.0,0.0,0,0,18.2,update comments
+50c5df11fe4290cc78fff35af1ff2a2bd2ef7e8a,2022-12-18,ok,find (miss),0.0,0.0,0.0,0,0,17.0,update comments
+50c5df11fe4290cc78fff35af1ff2a2bd2ef7e8a,2022-12-18,ok,insert+erase,0.0,0.0,0.0,0,0,64.3,update comments
+50c5df11fe4290cc78fff35af1ff2a2bd2ef7e8a,2022-12-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.8,update comments
+75cdaedcc3c883b139f3976b86190d21bacc74b8,2023-01-01,ok,find (hit),0.0,0.0,0.0,0,0,33.0,Add implementation of binary_search using concepts
+75cdaedcc3c883b139f3976b86190d21bacc74b8,2023-01-01,ok,find (miss),0.0,0.0,0.0,0,0,27.0,Add implementation of binary_search using concepts
+75cdaedcc3c883b139f3976b86190d21bacc74b8,2023-01-01,ok,insert+erase,0.0,0.0,0.0,0,0,80.2,Add implementation of binary_search using concepts
+75cdaedcc3c883b139f3976b86190d21bacc74b8,2023-01-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.5,Add implementation of binary_search using concepts
+e4c77a5deebfa9b917d6fe6747f94da9f4c03ce7,2023-01-01,ok,find (hit),0.0,0.0,0.0,0,0,20.3,Update binary search middle function to avoid overflows
+e4c77a5deebfa9b917d6fe6747f94da9f4c03ce7,2023-01-01,ok,find (miss),0.0,0.0,0.0,0,0,18.0,Update binary search middle function to avoid overflows
+e4c77a5deebfa9b917d6fe6747f94da9f4c03ce7,2023-01-01,ok,insert+erase,0.0,0.0,0.0,0,0,68.5,Update binary search middle function to avoid overflows
+e4c77a5deebfa9b917d6fe6747f94da9f4c03ce7,2023-01-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.1,Update binary search middle function to avoid overflows
+c5e0cf8edc86f95757cb490a6cafc3916eba9b55,2023-01-02,ok,find (hit),0.0,0.0,0.0,0,0,19.4,Small updates
+c5e0cf8edc86f95757cb490a6cafc3916eba9b55,2023-01-02,ok,find (miss),0.0,0.0,0.0,0,0,18.5,Small updates
+c5e0cf8edc86f95757cb490a6cafc3916eba9b55,2023-01-02,ok,insert+erase,0.0,0.0,0.0,0,0,69.2,Small updates
+c5e0cf8edc86f95757cb490a6cafc3916eba9b55,2023-01-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,23.9,Small updates
+e4de6b2c1daee4dea84b3e5e4fd624264e300633,2023-01-02,ok,find (hit),0.0,0.0,0.0,0,0,19.1,cleanup implementation of middle functions
+e4de6b2c1daee4dea84b3e5e4fd624264e300633,2023-01-02,ok,find (miss),0.0,0.0,0.0,0,0,18.8,cleanup implementation of middle functions
+e4de6b2c1daee4dea84b3e5e4fd624264e300633,2023-01-02,ok,insert+erase,0.0,0.0,0.0,0,0,67.6,cleanup implementation of middle functions
+e4de6b2c1daee4dea84b3e5e4fd624264e300633,2023-01-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.0,cleanup implementation of middle functions
+6bd246c12552c528a612c64175c1471a27a92de6,2023-01-14,ok,find (hit),0.0,0.0,0.0,0,0,40.4,wip - adding a vector class derived from fbvector
+6bd246c12552c528a612c64175c1471a27a92de6,2023-01-14,ok,find (miss),0.0,0.0,0.0,0,0,27.4,wip - adding a vector class derived from fbvector
+6bd246c12552c528a612c64175c1471a27a92de6,2023-01-14,ok,insert+erase,0.0,0.0,0.0,0,0,87.7,wip - adding a vector class derived from fbvector
+6bd246c12552c528a612c64175c1471a27a92de6,2023-01-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,wip - adding a vector class derived from fbvector
+37968bc2e285de0e8df8c9acf1abd3c412d66460,2023-01-14,ok,find (hit),0.0,0.0,0.0,0,0,17.3,removing unneeded classes from utils.hpp
+37968bc2e285de0e8df8c9acf1abd3c412d66460,2023-01-14,ok,find (miss),0.0,0.0,0.0,0,0,18.4,removing unneeded classes from utils.hpp
+37968bc2e285de0e8df8c9acf1abd3c412d66460,2023-01-14,ok,insert+erase,0.0,0.0,0.0,0,0,67.6,removing unneeded classes from utils.hpp
+37968bc2e285de0e8df8c9acf1abd3c412d66460,2023-01-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.3,removing unneeded classes from utils.hpp
+a1a2f14eb012ca26a73757bc28610515a0c43341,2023-01-14,ok,find (hit),0.0,0.0,0.0,0,0,19.7,cleanup some noexcept specifications in utils.hpp
+a1a2f14eb012ca26a73757bc28610515a0c43341,2023-01-14,ok,find (miss),0.0,0.0,0.0,0,0,17.2,cleanup some noexcept specifications in utils.hpp
+a1a2f14eb012ca26a73757bc28610515a0c43341,2023-01-14,ok,insert+erase,0.0,0.0,0.0,0,0,63.7,cleanup some noexcept specifications in utils.hpp
+a1a2f14eb012ca26a73757bc28610515a0c43341,2023-01-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.9,cleanup some noexcept specifications in utils.hpp
+8dba0f6ff3c28bee0c5974a041e728c84887e99f,2023-01-15,ok,find (hit),0.0,0.0,0.0,0,0,17.5,fix linux compilation issues in new vector.hpp
+8dba0f6ff3c28bee0c5974a041e728c84887e99f,2023-01-15,ok,find (miss),0.0,0.0,0.0,0,0,16.8,fix linux compilation issues in new vector.hpp
+8dba0f6ff3c28bee0c5974a041e728c84887e99f,2023-01-15,ok,insert+erase,0.0,0.0,0.0,0,0,65.1,fix linux compilation issues in new vector.hpp
+8dba0f6ff3c28bee0c5974a041e728c84887e99f,2023-01-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,23.3,fix linux compilation issues in new vector.hpp
+872c2f73d76c694dec955c7c89c0e2c2df4aeb06,2023-01-16,ok,find (hit),0.0,0.0,0.0,0,0,33.3,add tests for new vector class
+872c2f73d76c694dec955c7c89c0e2c2df4aeb06,2023-01-16,ok,find (miss),0.0,0.0,0.0,0,0,27.0,add tests for new vector class
+872c2f73d76c694dec955c7c89c0e2c2df4aeb06,2023-01-16,ok,insert+erase,0.0,0.0,0.0,0,0,83.0,add tests for new vector class
+872c2f73d76c694dec955c7c89c0e2c2df4aeb06,2023-01-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.4,add tests for new vector class
+4a863dba74448fdc29aae9f6176fe1491fd84faa,2023-01-16,ok,find (hit),0.0,0.0,0.0,0,0,33.6,added custom gtl::vector constructor accepting a buffer
+4a863dba74448fdc29aae9f6176fe1491fd84faa,2023-01-16,ok,find (miss),0.0,0.0,0.0,0,0,27.6,added custom gtl::vector constructor accepting a buffer
+4a863dba74448fdc29aae9f6176fe1491fd84faa,2023-01-16,ok,insert+erase,0.0,0.0,0.0,0,0,91.6,added custom gtl::vector constructor accepting a buffer
+4a863dba74448fdc29aae9f6176fe1491fd84faa,2023-01-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.4,added custom gtl::vector constructor accepting a buffer
+aefdccb4d1333ef9d5496957be6b16aef3b25d2b,2023-01-16,ok,find (hit),0.0,0.0,0.0,0,0,17.5,added custom api `steal_data` to gtl::vector
+aefdccb4d1333ef9d5496957be6b16aef3b25d2b,2023-01-16,ok,find (miss),0.0,0.0,0.0,0,0,17.2,added custom api `steal_data` to gtl::vector
+aefdccb4d1333ef9d5496957be6b16aef3b25d2b,2023-01-16,ok,insert+erase,0.0,0.0,0.0,0,0,64.2,added custom api `steal_data` to gtl::vector
+aefdccb4d1333ef9d5496957be6b16aef3b25d2b,2023-01-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.5,added custom api `steal_data` to gtl::vector
+c9f14bb6ad1b4bc5273967de77e56b4f3dbc9a2e,2023-03-05,ok,find (hit),0.0,0.0,0.0,0,0,17.1,Fix error in soa.hpp
+c9f14bb6ad1b4bc5273967de77e56b4f3dbc9a2e,2023-03-05,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Fix error in soa.hpp
+c9f14bb6ad1b4bc5273967de77e56b4f3dbc9a2e,2023-03-05,ok,insert+erase,0.0,0.0,0.0,0,0,63.2,Fix error in soa.hpp
+c9f14bb6ad1b4bc5273967de77e56b4f3dbc9a2e,2023-03-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.8,Fix error in soa.hpp
+ca882aab3851c093a9d9557fcb5cda961a7f96fc,2023-03-05,ok,find (hit),0.0,0.0,0.0,0,0,17.0,soa update to std::apply (wip)
+ca882aab3851c093a9d9557fcb5cda961a7f96fc,2023-03-05,ok,find (miss),0.0,0.0,0.0,0,0,26.4,soa update to std::apply (wip)
+ca882aab3851c093a9d9557fcb5cda961a7f96fc,2023-03-05,ok,insert+erase,0.0,0.0,0.0,0,0,79.0,soa update to std::apply (wip)
+ca882aab3851c093a9d9557fcb5cda961a7f96fc,2023-03-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.1,soa update to std::apply (wip)
+5ea246a935aab84eae78d6e29a7d41766dd87858,2023-03-05,ok,find (hit),0.0,0.0,0.0,0,0,19.7,soa update to std::apply
+5ea246a935aab84eae78d6e29a7d41766dd87858,2023-03-05,ok,find (miss),0.0,0.0,0.0,0,0,16.8,soa update to std::apply
+5ea246a935aab84eae78d6e29a7d41766dd87858,2023-03-05,ok,insert+erase,0.0,0.0,0.0,0,0,62.0,soa update to std::apply
+5ea246a935aab84eae78d6e29a7d41766dd87858,2023-03-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,soa update to std::apply
+1969849b5256369c60a06e9270b44e5cf554fd4d,2023-04-08,ok,find (hit),0.0,0.0,0.0,0,0,18.4,Fix a couple compilation warnings with g++-12.
+1969849b5256369c60a06e9270b44e5cf554fd4d,2023-04-08,ok,find (miss),0.0,0.0,0.0,0,0,19.1,Fix a couple compilation warnings with g++-12.
+1969849b5256369c60a06e9270b44e5cf554fd4d,2023-04-08,ok,insert+erase,0.0,0.0,0.0,0,0,71.8,Fix a couple compilation warnings with g++-12.
+1969849b5256369c60a06e9270b44e5cf554fd4d,2023-04-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,24.7,Fix a couple compilation warnings with g++-12.
+fb90e0bf80f23fe5144f12465e63dd951167fbf2,2023-04-09,ok,find (hit),0.0,0.0,0.0,0,0,17.2,Add mt_word_counter example (and run clang-format with increased line width)
+fb90e0bf80f23fe5144f12465e63dd951167fbf2,2023-04-09,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Add mt_word_counter example (and run clang-format with increased line width)
+fb90e0bf80f23fe5144f12465e63dd951167fbf2,2023-04-09,ok,insert+erase,0.0,0.0,0.0,0,0,64.7,Add mt_word_counter example (and run clang-format with increased line width)
+fb90e0bf80f23fe5144f12465e63dd951167fbf2,2023-04-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.1,Add mt_word_counter example (and run clang-format with increased line width)
+a0e7ffd79c9987cdd8e273a512cb6d3abab92737,2023-04-08,ok,find (hit),0.0,0.0,0.0,0,0,34.9,Fix compilation issue when swapping containers using std::pmr::polymorphic_allocator
+a0e7ffd79c9987cdd8e273a512cb6d3abab92737,2023-04-08,ok,find (miss),0.0,0.0,0.0,0,0,28.8,Fix compilation issue when swapping containers using std::pmr::polymorphic_allocator
+a0e7ffd79c9987cdd8e273a512cb6d3abab92737,2023-04-08,ok,insert+erase,0.0,0.0,0.0,0,0,91.2,Fix compilation issue when swapping containers using std::pmr::polymorphic_allocator
+a0e7ffd79c9987cdd8e273a512cb6d3abab92737,2023-04-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,47.5,Fix compilation issue when swapping containers using std::pmr::polymorphic_allocator
+90dcc71690bf9103ccfcbc709a178d98aecc5700,2023-04-09,ok,find (hit),0.0,0.0,0.0,0,0,36.1,Add missing include
+90dcc71690bf9103ccfcbc709a178d98aecc5700,2023-04-09,ok,find (miss),0.0,0.0,0.0,0,0,30.8,Add missing include
+90dcc71690bf9103ccfcbc709a178d98aecc5700,2023-04-09,ok,insert+erase,0.0,0.0,0.0,0,0,86.0,Add missing include
+90dcc71690bf9103ccfcbc709a178d98aecc5700,2023-04-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.6,Add missing include
+69a9e5b14d771d4a7a90aa46dcbf8419f051377f,2023-04-15,ok,find (hit),0.0,0.0,0.0,0,0,37.4,Fix a couple return type mismatches reported by clang-tidy.
+69a9e5b14d771d4a7a90aa46dcbf8419f051377f,2023-04-15,ok,find (miss),0.0,0.0,0.0,0,0,29.3,Fix a couple return type mismatches reported by clang-tidy.
+69a9e5b14d771d4a7a90aa46dcbf8419f051377f,2023-04-15,ok,insert+erase,0.0,0.0,0.0,0,0,85.5,Fix a couple return type mismatches reported by clang-tidy.
+69a9e5b14d771d4a7a90aa46dcbf8419f051377f,2023-04-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.7,Fix a couple return type mismatches reported by clang-tidy.
+c3d2d3dbb94a3b98ef6f649019ef86bee04326fc,2023-04-15,ok,find (hit),0.0,0.0,0.0,0,0,17.1,Address some clang-tidy warnings
+c3d2d3dbb94a3b98ef6f649019ef86bee04326fc,2023-04-15,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Address some clang-tidy warnings
+c3d2d3dbb94a3b98ef6f649019ef86bee04326fc,2023-04-15,ok,insert+erase,0.0,0.0,0.0,0,0,86.8,Address some clang-tidy warnings
+c3d2d3dbb94a3b98ef6f649019ef86bee04326fc,2023-04-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.1,Address some clang-tidy warnings
+17516f04229290d073ae8763e746efa97e9e3e44,2023-04-23,ok,find (hit),0.0,0.0,0.0,0,0,34.5,re-enable clang-format which was disabled by mistake
+17516f04229290d073ae8763e746efa97e9e3e44,2023-04-23,ok,find (miss),0.0,0.0,0.0,0,0,26.6,re-enable clang-format which was disabled by mistake
+17516f04229290d073ae8763e746efa97e9e3e44,2023-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,66.4,re-enable clang-format which was disabled by mistake
+17516f04229290d073ae8763e746efa97e9e3e44,2023-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,re-enable clang-format which was disabled by mistake
+9d7e2b2a1a9f99186b8556efc62fab338620bf49,2023-04-23,ok,find (hit),0.0,0.0,0.0,0,0,17.5,"Make Throw a macro, for platforms missing definitions for `std::*_error` types."
+9d7e2b2a1a9f99186b8556efc62fab338620bf49,2023-04-23,ok,find (miss),0.0,0.0,0.0,0,0,16.9,"Make Throw a macro, for platforms missing definitions for `std::*_error` types."
+9d7e2b2a1a9f99186b8556efc62fab338620bf49,2023-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,72.3,"Make Throw a macro, for platforms missing definitions for `std::*_error` types."
+9d7e2b2a1a9f99186b8556efc62fab338620bf49,2023-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.4,"Make Throw a macro, for platforms missing definitions for `std::*_error` types."
+f4067da5adc014a2fd90b6dab093dec8e54150f7,2023-04-23,ok,find (hit),0.0,0.0,0.0,0,0,17.0,Duplicate fix for phmap issue 117 - segfault when out of memory
+f4067da5adc014a2fd90b6dab093dec8e54150f7,2023-04-23,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Duplicate fix for phmap issue 117 - segfault when out of memory
+f4067da5adc014a2fd90b6dab093dec8e54150f7,2023-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,72.6,Duplicate fix for phmap issue 117 - segfault when out of memory
+f4067da5adc014a2fd90b6dab093dec8e54150f7,2023-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.7,Duplicate fix for phmap issue 117 - segfault when out of memory
+43b47d2ed0cc84bff6db940edcef775958737232,2023-04-23,ok,find (hit),0.0,0.0,0.0,0,0,39.6,Update version to 1.1.6
+43b47d2ed0cc84bff6db940edcef775958737232,2023-04-23,ok,find (miss),0.0,0.0,0.0,0,0,26.8,Update version to 1.1.6
+43b47d2ed0cc84bff6db940edcef775958737232,2023-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,103.8,Update version to 1.1.6
+43b47d2ed0cc84bff6db940edcef775958737232,2023-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.3,Update version to 1.1.6
+81df19ce4298d2682cf10984f340f0e1818cfd73,2023-04-23,ok,find (hit),0.0,0.0,0.0,0,0,18.6,Bump conan version
+81df19ce4298d2682cf10984f340f0e1818cfd73,2023-04-23,ok,find (miss),0.0,0.0,0.0,0,0,16.5,Bump conan version
+81df19ce4298d2682cf10984f340f0e1818cfd73,2023-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,70.0,Bump conan version
+81df19ce4298d2682cf10984f340f0e1818cfd73,2023-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.6,Bump conan version
+3e432352399d38b9637cfd885b90f4cfca7fe5e5,2023-04-23,ok,find (hit),0.0,0.0,0.0,0,0,39.7,Cleanup some clang-tidy warnings.
+3e432352399d38b9637cfd885b90f4cfca7fe5e5,2023-04-23,ok,find (miss),0.0,0.0,0.0,0,0,30.9,Cleanup some clang-tidy warnings.
+3e432352399d38b9637cfd885b90f4cfca7fe5e5,2023-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,119.1,Cleanup some clang-tidy warnings.
+3e432352399d38b9637cfd885b90f4cfca7fe5e5,2023-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.6,Cleanup some clang-tidy warnings.
+12476da751632ac5e61511c90bb92dfb677eed15,2023-04-23,ok,find (hit),0.0,0.0,0.0,0,0,17.6,Bump version to 1.1.8
+12476da751632ac5e61511c90bb92dfb677eed15,2023-04-23,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Bump version to 1.1.8
+12476da751632ac5e61511c90bb92dfb677eed15,2023-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,82.8,Bump version to 1.1.8
+12476da751632ac5e61511c90bb92dfb677eed15,2023-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.6,Bump version to 1.1.8
+c2b2a3326c2cbd3b2f48be04bbd334fccc77e30e,2023-04-27,ok,find (hit),0.0,0.0,0.0,0,0,17.3,remove conanfile.py
+c2b2a3326c2cbd3b2f48be04bbd334fccc77e30e,2023-04-27,ok,find (miss),0.0,0.0,0.0,0,0,17.1,remove conanfile.py
+c2b2a3326c2cbd3b2f48be04bbd334fccc77e30e,2023-04-27,ok,insert+erase,0.0,0.0,0.0,0,0,77.7,remove conanfile.py
+c2b2a3326c2cbd3b2f48be04bbd334fccc77e30e,2023-04-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.0,remove conanfile.py
+027ed2094be5270c08a56108b7ff914d7cb59b09,2023-04-30,ok,find (hit),0.0,0.0,0.0,0,0,31.7,Replace custom `CompressedTuple` with `std::tuple`.
+027ed2094be5270c08a56108b7ff914d7cb59b09,2023-04-30,ok,find (miss),0.0,0.0,0.0,0,0,26.3,Replace custom `CompressedTuple` with `std::tuple`.
+027ed2094be5270c08a56108b7ff914d7cb59b09,2023-04-30,ok,insert+erase,0.0,0.0,0.0,0,0,75.5,Replace custom `CompressedTuple` with `std::tuple`.
+027ed2094be5270c08a56108b7ff914d7cb59b09,2023-04-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,Replace custom `CompressedTuple` with `std::tuple`.
+ca4b8602c0f49193fb592345e82c76abc41d3b8a,2023-05-16,ok,find (hit),0.0,0.0,0.0,0,0,17.2,Change #error to #warning  on CHAR_BIT size
+ca4b8602c0f49193fb592345e82c76abc41d3b8a,2023-05-16,ok,find (miss),0.0,0.0,0.0,0,0,16.9,Change #error to #warning  on CHAR_BIT size
+ca4b8602c0f49193fb592345e82c76abc41d3b8a,2023-05-16,ok,insert+erase,0.0,0.0,0.0,0,0,76.2,Change #error to #warning  on CHAR_BIT size
+ca4b8602c0f49193fb592345e82c76abc41d3b8a,2023-05-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.1,Change #error to #warning  on CHAR_BIT size
+cb88da7211ef226039156e5df6a1e8982ff837b0,2023-05-28,ok,find (hit),0.0,0.0,0.0,0,0,17.1,Don't capture vector by value!
+cb88da7211ef226039156e5df6a1e8982ff837b0,2023-05-28,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Don't capture vector by value!
+cb88da7211ef226039156e5df6a1e8982ff837b0,2023-05-28,ok,insert+erase,0.0,0.0,0.0,0,0,69.5,Don't capture vector by value!
+cb88da7211ef226039156e5df6a1e8982ff837b0,2023-05-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.1,Don't capture vector by value!
+6e43b1425f1555754ae3f0dfd716ff03165f6590,2023-05-28,ok,find (hit),0.0,0.0,0.0,0,0,25.1,use `gtl::bit_vector` in soa.hpp
+6e43b1425f1555754ae3f0dfd716ff03165f6590,2023-05-28,ok,find (miss),0.0,0.0,0.0,0,0,18.2,use `gtl::bit_vector` in soa.hpp
+6e43b1425f1555754ae3f0dfd716ff03165f6590,2023-05-28,ok,insert+erase,0.0,0.0,0.0,0,0,70.5,use `gtl::bit_vector` in soa.hpp
+6e43b1425f1555754ae3f0dfd716ff03165f6590,2023-05-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.8,use `gtl::bit_vector` in soa.hpp
+fc85b2791782ca31cb7712c7df62982edc95b613,2023-05-28,ok,find (hit),0.0,0.0,0.0,0,0,17.8,replace `std::endl` with `'\n'`.
+fc85b2791782ca31cb7712c7df62982edc95b613,2023-05-28,ok,find (miss),0.0,0.0,0.0,0,0,16.8,replace `std::endl` with `'\n'`.
+fc85b2791782ca31cb7712c7df62982edc95b613,2023-05-28,ok,insert+erase,0.0,0.0,0.0,0,0,76.0,replace `std::endl` with `'\n'`.
+fc85b2791782ca31cb7712c7df62982edc95b613,2023-05-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,replace `std::endl` with `'\n'`.
+1325cabe63c2c8647d44f08754db14efa03147c3,2023-05-30,ok,find (hit),0.0,0.0,0.0,0,0,24.7,Merge pull request #24 from greg7mdp/add_growth_left_dump
+1325cabe63c2c8647d44f08754db14efa03147c3,2023-05-30,ok,find (miss),0.0,0.0,0.0,0,0,17.6,Merge pull request #24 from greg7mdp/add_growth_left_dump
+1325cabe63c2c8647d44f08754db14efa03147c3,2023-05-30,ok,insert+erase,0.0,0.0,0.0,0,0,75.0,Merge pull request #24 from greg7mdp/add_growth_left_dump
+1325cabe63c2c8647d44f08754db14efa03147c3,2023-05-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,30.9,Merge pull request #24 from greg7mdp/add_growth_left_dump
+86001d1c631c2f6b8ebb81ef8db42a412b22f39b,2023-06-04,ok,find (hit),0.0,0.0,0.0,0,0,17.0,Support `[[no_unique_address]]` for newer msvc compilers.
+86001d1c631c2f6b8ebb81ef8db42a412b22f39b,2023-06-04,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Support `[[no_unique_address]]` for newer msvc compilers.
+86001d1c631c2f6b8ebb81ef8db42a412b22f39b,2023-06-04,ok,insert+erase,0.0,0.0,0.0,0,0,70.7,Support `[[no_unique_address]]` for newer msvc compilers.
+86001d1c631c2f6b8ebb81ef8db42a412b22f39b,2023-06-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.7,Support `[[no_unique_address]]` for newer msvc compilers.
+4caee2d0ff0d5c160993e3ab2fc5f2c81b1eb9ae,2023-06-04,ok,find (hit),0.0,0.0,0.0,0,0,17.7,Add GTL_ASSUME macro (unused for now).
+4caee2d0ff0d5c160993e3ab2fc5f2c81b1eb9ae,2023-06-04,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Add GTL_ASSUME macro (unused for now).
+4caee2d0ff0d5c160993e3ab2fc5f2c81b1eb9ae,2023-06-04,ok,insert+erase,0.0,0.0,0.0,0,0,71.7,Add GTL_ASSUME macro (unused for now).
+4caee2d0ff0d5c160993e3ab2fc5f2c81b1eb9ae,2023-06-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.9,Add GTL_ASSUME macro (unused for now).
+e3d1138420359ce7fd819722e8db06eae65df602,2023-06-11,ok,find (hit),0.0,0.0,0.0,0,0,33.1,"Fix clang ""thread-safety-analysis"" warnings when including Abseil headers."
+e3d1138420359ce7fd819722e8db06eae65df602,2023-06-11,ok,find (miss),0.0,0.0,0.0,0,0,27.0,"Fix clang ""thread-safety-analysis"" warnings when including Abseil headers."
+e3d1138420359ce7fd819722e8db06eae65df602,2023-06-11,ok,insert+erase,0.0,0.0,0.0,0,0,104.8,"Fix clang ""thread-safety-analysis"" warnings when including Abseil headers."
+e3d1138420359ce7fd819722e8db06eae65df602,2023-06-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.4,"Fix clang ""thread-safety-analysis"" warnings when including Abseil headers."
+59dc827365114c8ddde53f6712738cb840b72ef2,2023-06-11,ok,find (hit),0.0,0.0,0.0,0,0,34.0,Avoid unnecessary creation of `std::*_error` objects when exceptions are disabled.
+59dc827365114c8ddde53f6712738cb840b72ef2,2023-06-11,ok,find (miss),0.0,0.0,0.0,0,0,17.6,Avoid unnecessary creation of `std::*_error` objects when exceptions are disabled.
+59dc827365114c8ddde53f6712738cb840b72ef2,2023-06-11,ok,insert+erase,0.0,0.0,0.0,0,0,73.3,Avoid unnecessary creation of `std::*_error` objects when exceptions are disabled.
+59dc827365114c8ddde53f6712738cb840b72ef2,2023-06-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.1,Avoid unnecessary creation of `std::*_error` objects when exceptions are disabled.
+cdc4c2e3d8bb2517e1e8a17a0e321f68b7fb6b3f,2023-06-11,ok,find (hit),0.0,0.0,0.0,0,0,17.9,Fix typo (extra parenthesis).
+cdc4c2e3d8bb2517e1e8a17a0e321f68b7fb6b3f,2023-06-11,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Fix typo (extra parenthesis).
+cdc4c2e3d8bb2517e1e8a17a0e321f68b7fb6b3f,2023-06-11,ok,insert+erase,0.0,0.0,0.0,0,0,72.4,Fix typo (extra parenthesis).
+cdc4c2e3d8bb2517e1e8a17a0e321f68b7fb6b3f,2023-06-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Fix typo (extra parenthesis).
+ef8bca589e8b129d7ec23e2813edf9ca2799e5a7,2023-06-25,ok,find (hit),0.0,0.0,0.0,0,0,19.8,Add `combinators.hpp` header.
+ef8bca589e8b129d7ec23e2813edf9ca2799e5a7,2023-06-25,ok,find (miss),0.0,0.0,0.0,0,0,23.5,Add `combinators.hpp` header.
+ef8bca589e8b129d7ec23e2813edf9ca2799e5a7,2023-06-25,ok,insert+erase,0.0,0.0,0.0,0,0,94.5,Add `combinators.hpp` header.
+ef8bca589e8b129d7ec23e2813edf9ca2799e5a7,2023-06-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.7,Add `combinators.hpp` header.
+c1c4ba16fcbefb767090c87bdcf09e7ecaffc96d,2023-07-07,ok,find (hit),0.0,0.0,0.0,0,0,17.1,Use `hardware_destructive_interference_size` for submaps to avoid cache contention
+c1c4ba16fcbefb767090c87bdcf09e7ecaffc96d,2023-07-07,ok,find (miss),0.0,0.0,0.0,0,0,16.5,Use `hardware_destructive_interference_size` for submaps to avoid cache contention
+c1c4ba16fcbefb767090c87bdcf09e7ecaffc96d,2023-07-07,ok,insert+erase,0.0,0.0,0.0,0,0,71.6,Use `hardware_destructive_interference_size` for submaps to avoid cache contention
+c1c4ba16fcbefb767090c87bdcf09e7ecaffc96d,2023-07-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.6,Use `hardware_destructive_interference_size` for submaps to avoid cache contention
+1c0394d77adf1e385a42fec53c1887f77eff8d6c,2023-07-08,ok,find (hit),0.0,0.0,0.0,0,0,18.8,Use std::shared_mutex by default
+1c0394d77adf1e385a42fec53c1887f77eff8d6c,2023-07-08,ok,find (miss),0.0,0.0,0.0,0,0,18.0,Use std::shared_mutex by default
+1c0394d77adf1e385a42fec53c1887f77eff8d6c,2023-07-08,ok,insert+erase,0.0,0.0,0.0,0,0,83.4,Use std::shared_mutex by default
+1c0394d77adf1e385a42fec53c1887f77eff8d6c,2023-07-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.6,Use std::shared_mutex by default
+936ca62d6b88d9ccb55c1372228e421b1b2b3e92,2023-07-08,ok,find (hit),0.0,0.0,0.0,0,0,35.6,Improve implementation of `contains()` and `count()` for `parallel_hash_set`
+936ca62d6b88d9ccb55c1372228e421b1b2b3e92,2023-07-08,ok,find (miss),0.0,0.0,0.0,0,0,27.5,Improve implementation of `contains()` and `count()` for `parallel_hash_set`
+936ca62d6b88d9ccb55c1372228e421b1b2b3e92,2023-07-08,ok,insert+erase,0.0,0.0,0.0,0,0,107.1,Improve implementation of `contains()` and `count()` for `parallel_hash_set`
+936ca62d6b88d9ccb55c1372228e421b1b2b3e92,2023-07-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.7,Improve implementation of `contains()` and `count()` for `parallel_hash_set`
+07cb8a920c2214769f6d1e4cbe4e966ab8215f82,2023-07-09,ok,find (hit),0.0,0.0,0.0,0,0,19.2,"Revert ""Use std::shared_mutex by default"""
+07cb8a920c2214769f6d1e4cbe4e966ab8215f82,2023-07-09,ok,find (miss),0.0,0.0,0.0,0,0,16.7,"Revert ""Use std::shared_mutex by default"""
+07cb8a920c2214769f6d1e4cbe4e966ab8215f82,2023-07-09,ok,insert+erase,0.0,0.0,0.0,0,0,72.1,"Revert ""Use std::shared_mutex by default"""
+07cb8a920c2214769f6d1e4cbe4e966ab8215f82,2023-07-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.8,"Revert ""Use std::shared_mutex by default"""
+7d30f71ebee35fc274bc1eb6128ca8a3db9e709d,2023-07-19,ok,find (hit),0.0,0.0,0.0,0,0,36.5,Add new aliases for `parallel_*_hash_*` using the default Hash/Eq/Alloc
+7d30f71ebee35fc274bc1eb6128ca8a3db9e709d,2023-07-19,ok,find (miss),0.0,0.0,0.0,0,0,27.1,Add new aliases for `parallel_*_hash_*` using the default Hash/Eq/Alloc
+7d30f71ebee35fc274bc1eb6128ca8a3db9e709d,2023-07-19,ok,insert+erase,0.0,0.0,0.0,0,0,74.4,Add new aliases for `parallel_*_hash_*` using the default Hash/Eq/Alloc
+7d30f71ebee35fc274bc1eb6128ca8a3db9e709d,2023-07-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.7,Add new aliases for `parallel_*_hash_*` using the default Hash/Eq/Alloc
+d464cbc1da652aeb0abfe1090abdad54aa7ee65a,2023-09-02,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Simplify `clear()` and don't iterate to destroy values with trivial destructor.
+d464cbc1da652aeb0abfe1090abdad54aa7ee65a,2023-09-02,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Simplify `clear()` and don't iterate to destroy values with trivial destructor.
+d464cbc1da652aeb0abfe1090abdad54aa7ee65a,2023-09-02,ok,insert+erase,0.0,0.0,0.0,0,0,71.6,Simplify `clear()` and don't iterate to destroy values with trivial destructor.
+d464cbc1da652aeb0abfe1090abdad54aa7ee65a,2023-09-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.1,Simplify `clear()` and don't iterate to destroy values with trivial destructor.
+7df85b52a4af12628da8a9af824bfab838913e55,2023-09-03,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Fix issue with my previous change
+7df85b52a4af12628da8a9af824bfab838913e55,2023-09-03,ok,find (miss),0.0,0.0,0.0,0,0,17.6,Fix issue with my previous change
+7df85b52a4af12628da8a9af824bfab838913e55,2023-09-03,ok,insert+erase,0.0,0.0,0.0,0,0,110.1,Fix issue with my previous change
+7df85b52a4af12628da8a9af824bfab838913e55,2023-09-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.5,Fix issue with my previous change
+0f422fd393129a108f89b129c109fbd9c7181dc1,2023-10-07,ok,find (hit),0.0,0.0,0.0,0,0,17.4,small cleanup in `utils.hpp`.
+0f422fd393129a108f89b129c109fbd9c7181dc1,2023-10-07,ok,find (miss),0.0,0.0,0.0,0,0,16.7,small cleanup in `utils.hpp`.
+0f422fd393129a108f89b129c109fbd9c7181dc1,2023-10-07,ok,insert+erase,0.0,0.0,0.0,0,0,70.3,small cleanup in `utils.hpp`.
+0f422fd393129a108f89b129c109fbd9c7181dc1,2023-10-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.9,small cleanup in `utils.hpp`.
+0a0666fc0b8fb782efde659fa55cf6e8fefb2813,2023-10-07,ok,find (hit),0.0,0.0,0.0,0,0,20.5,Update .clang-format and reformat.
+0a0666fc0b8fb782efde659fa55cf6e8fefb2813,2023-10-07,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Update .clang-format and reformat.
+0a0666fc0b8fb782efde659fa55cf6e8fefb2813,2023-10-07,ok,insert+erase,0.0,0.0,0.0,0,0,80.0,Update .clang-format and reformat.
+0a0666fc0b8fb782efde659fa55cf6e8fefb2813,2023-10-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.4,Update .clang-format and reformat.
+764b0d7b08b12736260955f603b0a8cbd1d51edb,2023-10-08,ok,find (hit),0.0,0.0,0.0,0,0,38.9,Catchup with changes in `parallel-hashmap`
+764b0d7b08b12736260955f603b0a8cbd1d51edb,2023-10-08,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Catchup with changes in `parallel-hashmap`
+764b0d7b08b12736260955f603b0a8cbd1d51edb,2023-10-08,ok,insert+erase,0.0,0.0,0.0,0,0,81.1,Catchup with changes in `parallel-hashmap`
+764b0d7b08b12736260955f603b0a8cbd1d51edb,2023-10-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.6,Catchup with changes in `parallel-hashmap`
+5d0cf8c1bf9b1482b2393e689975f5acd03719cb,2023-10-09,ok,find (hit),0.0,0.0,0.0,0,0,40.4,Fix incorrect constant in `reserve`.
+5d0cf8c1bf9b1482b2393e689975f5acd03719cb,2023-10-09,ok,find (miss),0.0,0.0,0.0,0,0,19.9,Fix incorrect constant in `reserve`.
+5d0cf8c1bf9b1482b2393e689975f5acd03719cb,2023-10-09,ok,insert+erase,0.0,0.0,0.0,0,0,80.0,Fix incorrect constant in `reserve`.
+5d0cf8c1bf9b1482b2393e689975f5acd03719cb,2023-10-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.7,Fix incorrect constant in `reserve`.
+e2a5faaad5c3a662e146a698cafb44b571829e44,2023-11-18,ok,find (hit),0.0,0.0,0.0,0,0,17.2,Minor cleanup in `utils.hpp`
+e2a5faaad5c3a662e146a698cafb44b571829e44,2023-11-18,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Minor cleanup in `utils.hpp`
+e2a5faaad5c3a662e146a698cafb44b571829e44,2023-11-18,ok,insert+erase,0.0,0.0,0.0,0,0,70.0,Minor cleanup in `utils.hpp`
+e2a5faaad5c3a662e146a698cafb44b571829e44,2023-11-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.8,Minor cleanup in `utils.hpp`
+cef6efb4d3da15571ea78f8933e5f3ae2fbd812a,2023-11-18,ok,find (hit),0.0,0.0,0.0,0,0,35.0,Add fixes from `phmap` repo.
+cef6efb4d3da15571ea78f8933e5f3ae2fbd812a,2023-11-18,ok,find (miss),0.0,0.0,0.0,0,0,29.5,Add fixes from `phmap` repo.
+cef6efb4d3da15571ea78f8933e5f3ae2fbd812a,2023-11-18,ok,insert+erase,0.0,0.0,0.0,0,0,86.1,Add fixes from `phmap` repo.
+cef6efb4d3da15571ea78f8933e5f3ae2fbd812a,2023-11-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.7,Add fixes from `phmap` repo.
+91d80535deea04d517ff94a8b7a9c18767526668,2023-11-18,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Add support for read/write locks. (#25)
+91d80535deea04d517ff94a8b7a9c18767526668,2023-11-18,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Add support for read/write locks. (#25)
+91d80535deea04d517ff94a8b7a9c18767526668,2023-11-18,ok,insert+erase,0.0,0.0,0.0,0,0,71.3,Add support for read/write locks. (#25)
+91d80535deea04d517ff94a8b7a9c18767526668,2023-11-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.5,Add support for read/write locks. (#25)
+355a6ef28915acd6ded3e8b3ba568dbe6bd542b6,2023-11-19,ok,find (hit),0.0,0.0,0.0,0,0,31.1,Support `ReadWriteLock` in more parallel map APIs. (#26)
+355a6ef28915acd6ded3e8b3ba568dbe6bd542b6,2023-11-19,ok,find (miss),0.0,0.0,0.0,0,0,25.9,Support `ReadWriteLock` in more parallel map APIs. (#26)
+355a6ef28915acd6ded3e8b3ba568dbe6bd542b6,2023-11-19,ok,insert+erase,0.0,0.0,0.0,0,0,102.3,Support `ReadWriteLock` in more parallel map APIs. (#26)
+355a6ef28915acd6ded3e8b3ba568dbe6bd542b6,2023-11-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.9,Support `ReadWriteLock` in more parallel map APIs. (#26)
+13647376da6c70cf40bd3b29d42d56165670e149,2023-11-19,ok,find (hit),0.0,0.0,0.0,0,0,32.8,Remove some unnecessary `typenames`
+13647376da6c70cf40bd3b29d42d56165670e149,2023-11-19,ok,find (miss),0.0,0.0,0.0,0,0,28.1,Remove some unnecessary `typenames`
+13647376da6c70cf40bd3b29d42d56165670e149,2023-11-19,ok,insert+erase,0.0,0.0,0.0,0,0,103.1,Remove some unnecessary `typenames`
+13647376da6c70cf40bd3b29d42d56165670e149,2023-11-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,32.9,Remove some unnecessary `typenames`
+04a8c8a48091a6f8ba5a91fc3ef3424165de805c,2023-11-19,ok,find (hit),0.0,0.0,0.0,0,0,16.9, Add support for Windows `phmap::srwlock`
+04a8c8a48091a6f8ba5a91fc3ef3424165de805c,2023-11-19,ok,find (miss),0.0,0.0,0.0,0,0,16.6, Add support for Windows `phmap::srwlock`
+04a8c8a48091a6f8ba5a91fc3ef3424165de805c,2023-11-19,ok,insert+erase,0.0,0.0,0.0,0,0,70.7, Add support for Windows `phmap::srwlock`
+04a8c8a48091a6f8ba5a91fc3ef3424165de805c,2023-11-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2, Add support for Windows `phmap::srwlock`
+589c9f94bbbef4922c2fda65e9a638a71e6783fe,2024-04-03,ok,find (hit),0.0,0.0,0.0,0,0,17.3,Add `basic_stopwatch`
+589c9f94bbbef4922c2fda65e9a638a71e6783fe,2024-04-03,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Add `basic_stopwatch`
+589c9f94bbbef4922c2fda65e9a638a71e6783fe,2024-04-03,ok,insert+erase,0.0,0.0,0.0,0,0,72.2,Add `basic_stopwatch`
+589c9f94bbbef4922c2fda65e9a638a71e6783fe,2024-04-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.0,Add `basic_stopwatch`
+e2cafcbc52d7799bceb5eb67a6003aa7bdf7533e,2024-08-24,ok,find (hit),0.0,0.0,0.0,0,0,17.1,Make some members private
+e2cafcbc52d7799bceb5eb67a6003aa7bdf7533e,2024-08-24,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Make some members private
+e2cafcbc52d7799bceb5eb67a6003aa7bdf7533e,2024-08-24,ok,insert+erase,0.0,0.0,0.0,0,0,69.8,Make some members private
+e2cafcbc52d7799bceb5eb67a6003aa7bdf7533e,2024-08-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.2,Make some members private
+8f167e085c808119a3a8727db3f809963ad1c15f,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,17.2,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/7556c955d48e396535dba54069c7fb4bd35a62b5
+8f167e085c808119a3a8727db3f809963ad1c15f,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/7556c955d48e396535dba54069c7fb4bd35a62b5
+8f167e085c808119a3a8727db3f809963ad1c15f,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,70.0,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/7556c955d48e396535dba54069c7fb4bd35a62b5
+8f167e085c808119a3a8727db3f809963ad1c15f,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,31.2,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/7556c955d48e396535dba54069c7fb4bd35a62b5
+87d45ea583c14bb0e47913484651dbff7cb59880,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,31.2,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/4c93cf00f2f9e25e2b1cc41d6dff49f2f211620e
+87d45ea583c14bb0e47913484651dbff7cb59880,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,26.3,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/4c93cf00f2f9e25e2b1cc41d6dff49f2f211620e
+87d45ea583c14bb0e47913484651dbff7cb59880,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,81.5,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/4c93cf00f2f9e25e2b1cc41d6dff49f2f211620e
+87d45ea583c14bb0e47913484651dbff7cb59880,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.0,Dup commit https://github.com/greg7mdp/parallel-hashmap/commit/4c93cf00f2f9e25e2b1cc41d6dff49f2f211620e
+07666cec36e4c49ebeac25cacb636afd46205509,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,17.2,implement `erase` using `erase_if_impl` (commit https://github.com/greg7mdp/parallel-hashmap/commit/0f0ecf724c91c7f6105555d2d11b00985c2feccd)
+07666cec36e4c49ebeac25cacb636afd46205509,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,16.9,implement `erase` using `erase_if_impl` (commit https://github.com/greg7mdp/parallel-hashmap/commit/0f0ecf724c91c7f6105555d2d11b00985c2feccd)
+07666cec36e4c49ebeac25cacb636afd46205509,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,70.0,implement `erase` using `erase_if_impl` (commit https://github.com/greg7mdp/parallel-hashmap/commit/0f0ecf724c91c7f6105555d2d11b00985c2feccd)
+07666cec36e4c49ebeac25cacb636afd46205509,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.7,implement `erase` using `erase_if_impl` (commit https://github.com/greg7mdp/parallel-hashmap/commit/0f0ecf724c91c7f6105555d2d11b00985c2feccd)
+c2838fa314797e8256bfe06c6e307303fb893771,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,17.8,Fix compilation warning `'kFirst' must be initialized by a constant expression`
+c2838fa314797e8256bfe06c6e307303fb893771,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Fix compilation warning `'kFirst' must be initialized by a constant expression`
+c2838fa314797e8256bfe06c6e307303fb893771,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,69.8,Fix compilation warning `'kFirst' must be initialized by a constant expression`
+c2838fa314797e8256bfe06c6e307303fb893771,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.0,Fix compilation warning `'kFirst' must be initialized by a constant expression`
+f714be48e606adf9fb91ed4640880a637151c79d,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,19.2,Fix MSVC warnings (dup commit https://github.com/greg7mdp/parallel-hashmap/commit/946ebad67a21212d11a0dd4deb7cdedc297d47bc)
+f714be48e606adf9fb91ed4640880a637151c79d,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,16.9,Fix MSVC warnings (dup commit https://github.com/greg7mdp/parallel-hashmap/commit/946ebad67a21212d11a0dd4deb7cdedc297d47bc)
+f714be48e606adf9fb91ed4640880a637151c79d,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,70.0,Fix MSVC warnings (dup commit https://github.com/greg7mdp/parallel-hashmap/commit/946ebad67a21212d11a0dd4deb7cdedc297d47bc)
+f714be48e606adf9fb91ed4640880a637151c79d,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,Fix MSVC warnings (dup commit https://github.com/greg7mdp/parallel-hashmap/commit/946ebad67a21212d11a0dd4deb7cdedc297d47bc)
+44ff8b51b0aa65596ecd6e178f24f52995087b8b,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,18.5,Avoid nvcc `unreachable` warning
+44ff8b51b0aa65596ecd6e178f24f52995087b8b,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Avoid nvcc `unreachable` warning
+44ff8b51b0aa65596ecd6e178f24f52995087b8b,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,70.6,Avoid nvcc `unreachable` warning
+44ff8b51b0aa65596ecd6e178f24f52995087b8b,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.1,Avoid nvcc `unreachable` warning
+f81317c977ad3ac07a1e78d64e060fa4c320b475,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,36.8,Add `const` `get_inner()`.
+f81317c977ad3ac07a1e78d64e060fa4c320b475,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,29.0,Add `const` `get_inner()`.
+f81317c977ad3ac07a1e78d64e060fa4c320b475,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,118.2,Add `const` `get_inner()`.
+f81317c977ad3ac07a1e78d64e060fa4c320b475,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.9,Add `const` `get_inner()`.
+426dcac833f80a9e991099a274e1bdaf977fb21f,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,44.4,Merge most changes from commit https://github.com/greg7mdp/parallel-hashmap/commit/8a889d3699b3c09ade435641fb034427f3fd12b6
+426dcac833f80a9e991099a274e1bdaf977fb21f,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,31.9,Merge most changes from commit https://github.com/greg7mdp/parallel-hashmap/commit/8a889d3699b3c09ade435641fb034427f3fd12b6
+426dcac833f80a9e991099a274e1bdaf977fb21f,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,122.6,Merge most changes from commit https://github.com/greg7mdp/parallel-hashmap/commit/8a889d3699b3c09ade435641fb034427f3fd12b6
+426dcac833f80a9e991099a274e1bdaf977fb21f,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.0,Merge most changes from commit https://github.com/greg7mdp/parallel-hashmap/commit/8a889d3699b3c09ade435641fb034427f3fd12b6
+7055545d440f34663964a9c7692c0dcd997c9839,2024-09-20,ok,find (hit),0.0,0.0,0.0,0,0,39.4,"Add `CITATION.cff` file, update version to `1.2.0`"
+7055545d440f34663964a9c7692c0dcd997c9839,2024-09-20,ok,find (miss),0.0,0.0,0.0,0,0,21.8,"Add `CITATION.cff` file, update version to `1.2.0`"
+7055545d440f34663964a9c7692c0dcd997c9839,2024-09-20,ok,insert+erase,0.0,0.0,0.0,0,0,107.5,"Add `CITATION.cff` file, update version to `1.2.0`"
+7055545d440f34663964a9c7692c0dcd997c9839,2024-09-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.8,"Add `CITATION.cff` file, update version to `1.2.0`"
+06f8277fce3292aa88dddea26cef640be32100a6,2024-10-05,ok,find (hit),0.0,0.0,0.0,0,0,34.9,Support loading old `phmap_dump` files.
+06f8277fce3292aa88dddea26cef640be32100a6,2024-10-05,ok,find (miss),0.0,0.0,0.0,0,0,29.2,Support loading old `phmap_dump` files.
+06f8277fce3292aa88dddea26cef640be32100a6,2024-10-05,ok,insert+erase,0.0,0.0,0.0,0,0,109.5,Support loading old `phmap_dump` files.
+06f8277fce3292aa88dddea26cef640be32100a6,2024-10-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.2,Support loading old `phmap_dump` files.
+7301b8eae59469555a132c33e2dc0f5ec05d7936,2024-10-27,ok,find (hit),0.0,0.0,0.0,0,0,17.3,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/issues/255
+7301b8eae59469555a132c33e2dc0f5ec05d7936,2024-10-27,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/issues/255
+7301b8eae59469555a132c33e2dc0f5ec05d7936,2024-10-27,ok,insert+erase,0.0,0.0,0.0,0,0,71.1,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/issues/255
+7301b8eae59469555a132c33e2dc0f5ec05d7936,2024-10-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.6,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/issues/255
+654bc2703cffab203a85f0ef89592dd1b5dbb12c,2024-10-27,ok,find (hit),0.0,0.0,0.0,0,0,19.5,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/pull/254
+654bc2703cffab203a85f0ef89592dd1b5dbb12c,2024-10-27,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/pull/254
+654bc2703cffab203a85f0ef89592dd1b5dbb12c,2024-10-27,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/pull/254
+654bc2703cffab203a85f0ef89592dd1b5dbb12c,2024-10-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Duplicate fix for https://github.com/greg7mdp/parallel-hashmap/pull/254
+822273280cc9ac3057b887de2c25b15de04b105a,2024-10-30,ok,find (hit),0.0,0.0,0.0,0,0,17.5,Fix msvc warning.
+822273280cc9ac3057b887de2c25b15de04b105a,2024-10-30,ok,find (miss),0.0,0.0,0.0,0,0,17.3,Fix msvc warning.
+822273280cc9ac3057b887de2c25b15de04b105a,2024-10-30,ok,insert+erase,0.0,0.0,0.0,0,0,70.6,Fix msvc warning.
+822273280cc9ac3057b887de2c25b15de04b105a,2024-10-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.8,Fix msvc warning.
+cf1d41106fae472f2195344db08cdb021ad3f110,2025-01-01,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Merge branch 'main' of github.com:greg7mdp/gtl
+cf1d41106fae472f2195344db08cdb021ad3f110,2025-01-01,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Merge branch 'main' of github.com:greg7mdp/gtl
+cf1d41106fae472f2195344db08cdb021ad3f110,2025-01-01,ok,insert+erase,0.0,0.0,0.0,0,0,71.1,Merge branch 'main' of github.com:greg7mdp/gtl
+cf1d41106fae472f2195344db08cdb021ad3f110,2025-01-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.5,Merge branch 'main' of github.com:greg7mdp/gtl
+1bf5d1c974d43443782a85a9ee10c683970eb80a,2025-02-08,ok,find (hit),0.0,0.0,0.0,0,0,32.3,Small performance optimizations.
+1bf5d1c974d43443782a85a9ee10c683970eb80a,2025-02-08,ok,find (miss),0.0,0.0,0.0,0,0,25.7,Small performance optimizations.
+1bf5d1c974d43443782a85a9ee10c683970eb80a,2025-02-08,ok,insert+erase,0.0,0.0,0.0,0,0,111.8,Small performance optimizations.
+1bf5d1c974d43443782a85a9ee10c683970eb80a,2025-02-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,47.1,Small performance optimizations.
+dfc32000a7e742537e2a7a2e802663f8f92e03c0,2025-02-09,ok,find (hit),0.0,0.0,0.0,0,0,18.4,"Mostly revert ""Small performance optimizations."""
+dfc32000a7e742537e2a7a2e802663f8f92e03c0,2025-02-09,ok,find (miss),0.0,0.0,0.0,0,0,17.7,"Mostly revert ""Small performance optimizations."""
+dfc32000a7e742537e2a7a2e802663f8f92e03c0,2025-02-09,ok,insert+erase,0.0,0.0,0.0,0,0,90.6,"Mostly revert ""Small performance optimizations."""
+dfc32000a7e742537e2a7a2e802663f8f92e03c0,2025-02-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,23.2,"Mostly revert ""Small performance optimizations."""
+ededd3e0c6c3b44eb7c632bb40498afcc223ee87,2025-04-04,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Fix comment.
+ededd3e0c6c3b44eb7c632bb40498afcc223ee87,2025-04-04,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Fix comment.
+ededd3e0c6c3b44eb7c632bb40498afcc223ee87,2025-04-04,ok,insert+erase,0.0,0.0,0.0,0,0,69.7,Fix comment.
+ededd3e0c6c3b44eb7c632bb40498afcc223ee87,2025-04-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,Fix comment.
+c824e3aa79e4cc4eb489dfd1a66945cd31a5eeb3,2025-04-04,ok,find (hit),0.0,0.0,0.0,0,0,17.8,Fix duplicate symbol issue in `bit_vector.hpp`. (#35)
+c824e3aa79e4cc4eb489dfd1a66945cd31a5eeb3,2025-04-04,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Fix duplicate symbol issue in `bit_vector.hpp`. (#35)
+c824e3aa79e4cc4eb489dfd1a66945cd31a5eeb3,2025-04-04,ok,insert+erase,0.0,0.0,0.0,0,0,82.7,Fix duplicate symbol issue in `bit_vector.hpp`. (#35)
+c824e3aa79e4cc4eb489dfd1a66945cd31a5eeb3,2025-04-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.6,Fix duplicate symbol issue in `bit_vector.hpp`. (#35)
+a9153b76d9b6656e364de1d51dd1f76c470d58da,2025-04-08,ok,find (hit),0.0,0.0,0.0,0,0,17.9,Add template deduction guide for scoped_guard (#36)
+a9153b76d9b6656e364de1d51dd1f76c470d58da,2025-04-08,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Add template deduction guide for scoped_guard (#36)
+a9153b76d9b6656e364de1d51dd1f76c470d58da,2025-04-08,ok,insert+erase,0.0,0.0,0.0,0,0,73.3,Add template deduction guide for scoped_guard (#36)
+a9153b76d9b6656e364de1d51dd1f76c470d58da,2025-04-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.6,Add template deduction guide for scoped_guard (#36)
+81cbc714c120c518ea6f8c1c2a30c7b2125adb0b,2025-05-18,ok,find (hit),0.0,0.0,0.0,0,0,32.2,Update `constructor` so that the call operator returns a pointer to the slot. (#38)
+81cbc714c120c518ea6f8c1c2a30c7b2125adb0b,2025-05-18,ok,find (miss),0.0,0.0,0.0,0,0,26.3,Update `constructor` so that the call operator returns a pointer to the slot. (#38)
+81cbc714c120c518ea6f8c1c2a30c7b2125adb0b,2025-05-18,ok,insert+erase,0.0,0.0,0.0,0,0,102.9,Update `constructor` so that the call operator returns a pointer to the slot. (#38)
+81cbc714c120c518ea6f8c1c2a30c7b2125adb0b,2025-05-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,Update `constructor` so that the call operator returns a pointer to the slot. (#38)
+e5af25a6ac9a43333d29c069188f90696795a516,2025-05-19,ok,find (hit),0.0,0.0,0.0,0,0,33.6,Add comment.
+e5af25a6ac9a43333d29c069188f90696795a516,2025-05-19,ok,find (miss),0.0,0.0,0.0,0,0,25.6,Add comment.
+e5af25a6ac9a43333d29c069188f90696795a516,2025-05-19,ok,insert+erase,0.0,0.0,0.0,0,0,109.9,Add comment.
+e5af25a6ac9a43333d29c069188f90696795a516,2025-05-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,Add comment.
+51eb683658378d67086d8fc04d5fd162a0ae30c5,2025-05-19,ok,find (hit),0.0,0.0,0.0,0,0,33.2,Have `constructor` return a reference to the `value_type` (#39)
+51eb683658378d67086d8fc04d5fd162a0ae30c5,2025-05-19,ok,find (miss),0.0,0.0,0.0,0,0,27.6,Have `constructor` return a reference to the `value_type` (#39)
+51eb683658378d67086d8fc04d5fd162a0ae30c5,2025-05-19,ok,insert+erase,0.0,0.0,0.0,0,0,103.7,Have `constructor` return a reference to the `value_type` (#39)
+51eb683658378d67086d8fc04d5fd162a0ae30c5,2025-05-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.9,Have `constructor` return a reference to the `value_type` (#39)
+6ad66cd6d3824128300f78aeeffc54294e147bc7,2025-06-05,ok,find (hit),0.0,0.0,0.0,0,0,18.7,Add `<cstdlib>` include for `std::abort`.
+6ad66cd6d3824128300f78aeeffc54294e147bc7,2025-06-05,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Add `<cstdlib>` include for `std::abort`.
+6ad66cd6d3824128300f78aeeffc54294e147bc7,2025-06-05,ok,insert+erase,0.0,0.0,0.0,0,0,76.3,Add `<cstdlib>` include for `std::abort`.
+6ad66cd6d3824128300f78aeeffc54294e147bc7,2025-06-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.9,Add `<cstdlib>` include for `std::abort`.
+5ecd21bf487598778f771e454d47dfa76072388c,2025-07-22,ok,find (hit),0.0,0.0,0.0,0,0,17.3,Fix issue with dereferencing `aux_` as a pointer instead of a reference.
+5ecd21bf487598778f771e454d47dfa76072388c,2025-07-22,ok,find (miss),0.0,0.0,0.0,0,0,16.9,Fix issue with dereferencing `aux_` as a pointer instead of a reference.
+5ecd21bf487598778f771e454d47dfa76072388c,2025-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,72.2,Fix issue with dereferencing `aux_` as a pointer instead of a reference.
+5ecd21bf487598778f771e454d47dfa76072388c,2025-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Fix issue with dereferencing `aux_` as a pointer instead of a reference.
+971cebe805014b3e33c6edf527c4192515e32a22,2025-08-10,ok,find (hit),0.0,0.0,0.0,0,0,33.6,Don't release the lock in `extract`.
+971cebe805014b3e33c6edf527c4192515e32a22,2025-08-10,ok,find (miss),0.0,0.0,0.0,0,0,27.6,Don't release the lock in `extract`.
+971cebe805014b3e33c6edf527c4192515e32a22,2025-08-10,ok,insert+erase,0.0,0.0,0.0,0,0,106.3,Don't release the lock in `extract`.
+971cebe805014b3e33c6edf527c4192515e32a22,2025-08-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,Don't release the lock in `extract`.
+dc7a24fe4b7f2f94480d954da6562c7381ace41f,2025-08-16,ok,find (hit),0.0,0.0,0.0,0,0,17.5,Fix `-Wconversion` warnings with `clang-20`
+dc7a24fe4b7f2f94480d954da6562c7381ace41f,2025-08-16,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Fix `-Wconversion` warnings with `clang-20`
+dc7a24fe4b7f2f94480d954da6562c7381ace41f,2025-08-16,ok,insert+erase,0.0,0.0,0.0,0,0,72.7,Fix `-Wconversion` warnings with `clang-20`
+dc7a24fe4b7f2f94480d954da6562c7381ace41f,2025-08-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.1,Fix `-Wconversion` warnings with `clang-20`
+3dea605e59de737aa4f563f0e0624b7974fd5af1,2025-11-26,ok,find (hit),0.0,0.0,0.0,0,0,19.4,Merge fix for https://github.com/greg7mdp/parallel-hashmap/issues/292
+3dea605e59de737aa4f563f0e0624b7974fd5af1,2025-11-26,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Merge fix for https://github.com/greg7mdp/parallel-hashmap/issues/292
+3dea605e59de737aa4f563f0e0624b7974fd5af1,2025-11-26,ok,insert+erase,0.0,0.0,0.0,0,0,70.8,Merge fix for https://github.com/greg7mdp/parallel-hashmap/issues/292
+3dea605e59de737aa4f563f0e0624b7974fd5af1,2025-11-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.8,Merge fix for https://github.com/greg7mdp/parallel-hashmap/issues/292
+ed2cadb9cfab89d87edaaa75bd4e8d1a62f1df3c,2025-11-26,ok,find (hit),0.0,0.0,0.0,0,0,18.8,Fix check for arm32 so umul is used consistently on gcc and clang when building on arm64.
+ed2cadb9cfab89d87edaaa75bd4e8d1a62f1df3c,2025-11-26,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Fix check for arm32 so umul is used consistently on gcc and clang when building on arm64.
+ed2cadb9cfab89d87edaaa75bd4e8d1a62f1df3c,2025-11-26,ok,insert+erase,0.0,0.0,0.0,0,0,70.5,Fix check for arm32 so umul is used consistently on gcc and clang when building on arm64.
+ed2cadb9cfab89d87edaaa75bd4e8d1a62f1df3c,2025-11-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Fix check for arm32 so umul is used consistently on gcc and clang when building on arm64.
+e302ad9e3b6810bcc1ba2419eb5aaf5f32056823,2026-01-05,ok,find (hit),0.0,0.0,0.0,0,0,19.3,"By default, use constants for `gtl::hardware_*_interference_size`. (#44)"
+e302ad9e3b6810bcc1ba2419eb5aaf5f32056823,2026-01-05,ok,find (miss),0.0,0.0,0.0,0,0,16.8,"By default, use constants for `gtl::hardware_*_interference_size`. (#44)"
+e302ad9e3b6810bcc1ba2419eb5aaf5f32056823,2026-01-05,ok,insert+erase,0.0,0.0,0.0,0,0,70.2,"By default, use constants for `gtl::hardware_*_interference_size`. (#44)"
+e302ad9e3b6810bcc1ba2419eb5aaf5f32056823,2026-01-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,"By default, use constants for `gtl::hardware_*_interference_size`. (#44)"
+a1381e70058257c0f639d90136fa9939703fab3b,2026-01-06,ok,find (hit),0.0,0.0,0.0,0,0,19.1,Make sure that `gtl::hardware_destructive_interference_size` is always stable. (#45)
+a1381e70058257c0f639d90136fa9939703fab3b,2026-01-06,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Make sure that `gtl::hardware_destructive_interference_size` is always stable. (#45)
+a1381e70058257c0f639d90136fa9939703fab3b,2026-01-06,ok,insert+erase,0.0,0.0,0.0,0,0,70.3,Make sure that `gtl::hardware_destructive_interference_size` is always stable. (#45)
+a1381e70058257c0f639d90136fa9939703fab3b,2026-01-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.8,Make sure that `gtl::hardware_destructive_interference_size` is always stable. (#45)
+337b5e79f4f6ebe8637205253ff2fafa3ff0c713,2026-01-07,ok,find (hit),0.0,0.0,0.0,0,0,17.3,Fix issues in `gtl.natvis` (#47)
+337b5e79f4f6ebe8637205253ff2fafa3ff0c713,2026-01-07,ok,find (miss),0.0,0.0,0.0,0,0,17.4,Fix issues in `gtl.natvis` (#47)
+337b5e79f4f6ebe8637205253ff2fafa3ff0c713,2026-01-07,ok,insert+erase,0.0,0.0,0.0,0,0,79.6,Fix issues in `gtl.natvis` (#47)
+337b5e79f4f6ebe8637205253ff2fafa3ff0c713,2026-01-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,24.1,Fix issues in `gtl.natvis` (#47)
+b4ac266c9008b6a1ea3d92633adb2066c05a48e6,2026-01-08,ok,find (hit),0.0,0.0,0.0,0,0,36.0,More fixes in `gtl.natvis`.  (#48)
+b4ac266c9008b6a1ea3d92633adb2066c05a48e6,2026-01-08,ok,find (miss),0.0,0.0,0.0,0,0,27.5,More fixes in `gtl.natvis`.  (#48)
+b4ac266c9008b6a1ea3d92633adb2066c05a48e6,2026-01-08,ok,insert+erase,0.0,0.0,0.0,0,0,110.9,More fixes in `gtl.natvis`.  (#48)
+b4ac266c9008b6a1ea3d92633adb2066c05a48e6,2026-01-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,More fixes in `gtl.natvis`.  (#48)
+3b91b883d653ee295171be6cbf97fc5aef585be6,2026-03-30,ok,find (hit),0.0,0.0,0.0,0,0,18.7,Fix broken detached storage ownership in gtl::vector extensions (#50)
+3b91b883d653ee295171be6cbf97fc5aef585be6,2026-03-30,ok,find (miss),0.0,0.0,0.0,0,0,17.4,Fix broken detached storage ownership in gtl::vector extensions (#50)
+3b91b883d653ee295171be6cbf97fc5aef585be6,2026-03-30,ok,insert+erase,0.0,0.0,0.0,0,0,81.0,Fix broken detached storage ownership in gtl::vector extensions (#50)
+3b91b883d653ee295171be6cbf97fc5aef585be6,2026-03-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.1,Fix broken detached storage ownership in gtl::vector extensions (#50)
+fd759e1957e7d5c789260e87a2646cb418bd4c38,2026-04-02,ok,find (hit),0.0,0.0,0.0,0,0,19.3,Fix some warnings (#52)
+fd759e1957e7d5c789260e87a2646cb418bd4c38,2026-04-02,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Fix some warnings (#52)
+fd759e1957e7d5c789260e87a2646cb418bd4c38,2026-04-02,ok,insert+erase,0.0,0.0,0.0,0,0,70.2,Fix some warnings (#52)
+fd759e1957e7d5c789260e87a2646cb418bd4c38,2026-04-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.0,Fix some warnings (#52)
+43979af0d4bb5e085bbda522ea1bde9e6f4c81a6,2026-06-10,ok,find (hit),0.0,0.0,0.0,0,0,18.8,Make `begin()` return `end()` on empty tables.
+43979af0d4bb5e085bbda522ea1bde9e6f4c81a6,2026-06-10,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Make `begin()` return `end()` on empty tables.
+43979af0d4bb5e085bbda522ea1bde9e6f4c81a6,2026-06-10,ok,insert+erase,0.0,0.0,0.0,0,0,75.8,Make `begin()` return `end()` on empty tables.
+43979af0d4bb5e085bbda522ea1bde9e6f4c81a6,2026-06-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.4,Make `begin()` return `end()` on empty tables.
+f35ce6ff8050e95b837caedb24cd07018f6a3fed,2026-07-13,ok,find (hit),0.0,0.0,0.0,0,0,37.7,Fix issue #56 - bug in `bit_vector::find_next` in the last partial word when start is unaligned. (#57)
+f35ce6ff8050e95b837caedb24cd07018f6a3fed,2026-07-13,ok,find (miss),0.0,0.0,0.0,0,0,26.0,Fix issue #56 - bug in `bit_vector::find_next` in the last partial word when start is unaligned. (#57)
+f35ce6ff8050e95b837caedb24cd07018f6a3fed,2026-07-13,ok,insert+erase,0.0,0.0,0.0,0,0,111.3,Fix issue #56 - bug in `bit_vector::find_next` in the last partial word when start is unaligned. (#57)
+f35ce6ff8050e95b837caedb24cd07018f6a3fed,2026-07-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,Fix issue #56 - bug in `bit_vector::find_next` in the last partial word when start is unaligned. (#57)
+086db6687a8d5bfe40219a54343f35316d4f588b,2026-09-10,ok,find (hit),0.0,0.0,0.0,0,0,17.0,Fix rehash(0) producing a 100%-full table (#58)
+086db6687a8d5bfe40219a54343f35316d4f588b,2026-09-10,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Fix rehash(0) producing a 100%-full table (#58)
+086db6687a8d5bfe40219a54343f35316d4f588b,2026-09-10,ok,insert+erase,0.0,0.0,0.0,0,0,69.8,Fix rehash(0) producing a 100%-full table (#58)
+086db6687a8d5bfe40219a54343f35316d4f588b,2026-09-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.1,Fix rehash(0) producing a 100%-full table (#58)
+d09920a5e6e71b39a6f3c1bc4cc590759aff45d6,2026-11-05,ok,find (hit),0.0,0.0,0.0,0,0,38.2,Fix issue #59 (#60)
+d09920a5e6e71b39a6f3c1bc4cc590759aff45d6,2026-11-05,ok,find (miss),0.0,0.0,0.0,0,0,27.4,Fix issue #59 (#60)
+d09920a5e6e71b39a6f3c1bc4cc590759aff45d6,2026-11-05,ok,insert+erase,0.0,0.0,0.0,0,0,116.0,Fix issue #59 (#60)
+d09920a5e6e71b39a6f3c1bc4cc590759aff45d6,2026-11-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.3,Fix issue #59 (#60)
+b19a7aa4484525fc05bbddc50302597a035bce36,2026-11-05,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Update version number to `1.3.0`
+b19a7aa4484525fc05bbddc50302597a035bce36,2026-11-05,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Update version number to `1.3.0`
+b19a7aa4484525fc05bbddc50302597a035bce36,2026-11-05,ok,insert+erase,0.0,0.0,0.0,0,0,74.1,Update version number to `1.3.0`
+b19a7aa4484525fc05bbddc50302597a035bce36,2026-11-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.5,Update version number to `1.3.0`
+510db9beb657e203099ddf2d9f9a34a2275dd888,2026-11-07,ok,find (hit),0.0,0.0,0.0,0,0,34.0,Fix #pragma once (#61)
+510db9beb657e203099ddf2d9f9a34a2275dd888,2026-11-07,ok,find (miss),0.0,0.0,0.0,0,0,30.4,Fix #pragma once (#61)
+510db9beb657e203099ddf2d9f9a34a2275dd888,2026-11-07,ok,insert+erase,0.0,0.0,0.0,0,0,117.2,Fix #pragma once (#61)
+510db9beb657e203099ddf2d9f9a34a2275dd888,2026-11-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.7,Fix #pragma once (#61)
+b9a2586edd9f052b6d071c751fe188b0e71bd2ee,2026-11-06,ok,find (hit),0.0,0.0,0.0,0,0,36.9,Update version to `1.3.1`
+b9a2586edd9f052b6d071c751fe188b0e71bd2ee,2026-11-06,ok,find (miss),0.0,0.0,0.0,0,0,27.8,Update version to `1.3.1`
+b9a2586edd9f052b6d071c751fe188b0e71bd2ee,2026-11-06,ok,insert+erase,0.0,0.0,0.0,0,0,107.5,Update version to `1.3.1`
+b9a2586edd9f052b6d071c751fe188b0e71bd2ee,2026-11-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.9,Update version to `1.3.1`
+9d7c41d9dc9adb2d7d20f16ddb1a18dea704a2e2,2026-11-10,ok,find (hit),0.0,0.0,0.0,0,0,17.7,fix incorrect return value in `erase_if_impl` (#67)
+9d7c41d9dc9adb2d7d20f16ddb1a18dea704a2e2,2026-11-10,ok,find (miss),0.0,0.0,0.0,0,0,16.7,fix incorrect return value in `erase_if_impl` (#67)
+9d7c41d9dc9adb2d7d20f16ddb1a18dea704a2e2,2026-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,72.7,fix incorrect return value in `erase_if_impl` (#67)
+9d7c41d9dc9adb2d7d20f16ddb1a18dea704a2e2,2026-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.0,fix incorrect return value in `erase_if_impl` (#67)
+c04a688cd15df6fa9f6036e9193734e869d047ad,2026-11-10,ok,find (hit),0.0,0.0,0.0,0,0,32.9,parallel_hash_map::insert_or_assign hashes the key twice (#66)
+c04a688cd15df6fa9f6036e9193734e869d047ad,2026-11-10,ok,find (miss),0.0,0.0,0.0,0,0,27.2,parallel_hash_map::insert_or_assign hashes the key twice (#66)
+c04a688cd15df6fa9f6036e9193734e869d047ad,2026-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,103.9,parallel_hash_map::insert_or_assign hashes the key twice (#66)
+c04a688cd15df6fa9f6036e9193734e869d047ad,2026-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.1,parallel_hash_map::insert_or_assign hashes the key twice (#66)
+2cabd8722bf3b918327cad44ec916f11d5c166fc,2026-11-14,ok,find (hit),0.0,0.0,0.0,0,0,31.1,Fix early eviction in memoize_lru (#68)
+2cabd8722bf3b918327cad44ec916f11d5c166fc,2026-11-14,ok,find (miss),0.0,0.0,0.0,0,0,24.2,Fix early eviction in memoize_lru (#68)
+2cabd8722bf3b918327cad44ec916f11d5c166fc,2026-11-14,ok,insert+erase,0.0,0.0,0.0,0,0,70.4,Fix early eviction in memoize_lru (#68)
+2cabd8722bf3b918327cad44ec916f11d5c166fc,2026-11-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,Fix early eviction in memoize_lru (#68)
+13b0bca8d34920642bff3623ef8d2f717eb76a2e,2026-11-14,ok,find (hit),0.0,0.0,0.0,0,0,19.4,Honor the fill value when growing bit_vector (#69)
+13b0bca8d34920642bff3623ef8d2f717eb76a2e,2026-11-14,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Honor the fill value when growing bit_vector (#69)
+13b0bca8d34920642bff3623ef8d2f717eb76a2e,2026-11-14,ok,insert+erase,0.0,0.0,0.0,0,0,69.4,Honor the fill value when growing bit_vector (#69)
+13b0bca8d34920642bff3623ef8d2f717eb76a2e,2026-11-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.9,Honor the fill value when growing bit_vector (#69)
+37d1f9679ecfc8c188ee63ece968ee157a4ce707,2026-11-15,ok,find (hit),0.0,0.0,0.0,0,0,17.5,Fix issue #71: allow small cache capacities in lru_cache and memoize_lru (#72)
+37d1f9679ecfc8c188ee63ece968ee157a4ce707,2026-11-15,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Fix issue #71: allow small cache capacities in lru_cache and memoize_lru (#72)
+37d1f9679ecfc8c188ee63ece968ee157a4ce707,2026-11-15,ok,insert+erase,0.0,0.0,0.0,0,0,69.8,Fix issue #71: allow small cache capacities in lru_cache and memoize_lru (#72)
+37d1f9679ecfc8c188ee63ece968ee157a4ce707,2026-11-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.0,Fix issue #71: allow small cache capacities in lru_cache and memoize_lru (#72)
+91975eb5aa6a9278b31bbe96d41835c8f27d0e4f,2026-11-15,ok,find (hit),0.0,0.0,0.0,0,0,19.2,Copy reference arguments into memoization keys (#70)
+91975eb5aa6a9278b31bbe96d41835c8f27d0e4f,2026-11-15,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Copy reference arguments into memoization keys (#70)
+91975eb5aa6a9278b31bbe96d41835c8f27d0e4f,2026-11-15,ok,insert+erase,0.0,0.0,0.0,0,0,69.6,Copy reference arguments into memoization keys (#70)
+91975eb5aa6a9278b31bbe96d41835c8f27d0e4f,2026-11-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,17.9,Copy reference arguments into memoization keys (#70)
+5115714d99c94a139f61e54fb8185261f6245586,2026-11-15,ok,find (hit),0.0,0.0,0.0,0,0,19.6,Add insert_or_assign_with_hash to parallel_hash_map (#73)
+5115714d99c94a139f61e54fb8185261f6245586,2026-11-15,ok,find (miss),0.0,0.0,0.0,0,0,16.9,Add insert_or_assign_with_hash to parallel_hash_map (#73)
+5115714d99c94a139f61e54fb8185261f6245586,2026-11-15,ok,insert+erase,0.0,0.0,0.0,0,0,70.1,Add insert_or_assign_with_hash to parallel_hash_map (#73)
+5115714d99c94a139f61e54fb8185261f6245586,2026-11-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.3,Add insert_or_assign_with_hash to parallel_hash_map (#73)

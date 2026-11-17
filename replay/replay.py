@@ -76,11 +76,16 @@ P = {
     "yyjson": dict(workload="yyjson", paths=["src"], inc=["src"], srcs=[]),
     "glaze": dict(workload="glaze", paths=["include"], inc=["include"], srcs=[], std="c++23"),
     "rapidjson": dict(workload="rapidjson", paths=["include"], inc=["include"], srcs=[]),
+    "flatbuffers": dict(workload="flatbuffers", paths=["include/flatbuffers"], inc=["include"], srcs=[]),
+    "msgpack-c": dict(workload="msgpack-c", paths=["include"], inc=["include"], srcs=[], flags=["-DMSGPACK_NO_BOOST"]),
     "gtl": dict(workload="gtl", paths=["include"], inc=["include"], srcs=[]),
     "emhash": dict(workload="emhash", paths=["include", "hash_table8.hpp"], inc=["include/emhash", "."], srcs=[]),
     "abseil": dict(workload="abseil", paths=["absl/container", "absl/hash"], inc=["."],
-                   srcs=["absl/container/internal/raw_hash_set.cc", "absl/hash/internal/hash.cc",
-                         "absl/hash/internal/city.cc", "absl/base/internal/raw_logging.cc"]),
+                   # each compiled where it exists at the commit; hashtablez sampling is left unresolved
+                   # (see replay/workloads/abseil.cpp)
+                   srcs=[], srcs_if_present=["absl/container/internal/raw_hash_set.cc", "absl/hash/internal/hash.cc",
+                         "absl/hash/internal/city.cc", "absl/hash/internal/low_level_hash.cc",
+                         "absl/base/internal/raw_logging.cc"], flags=["-Wl,--unresolved-symbols=ignore-all"]),
     "highway": dict(workload="highway", paths=["hwy"], inc=["."], srcs=[]),
 }
 CORES = [int(c) for c in os.environ.get("REPLAY_CORES", "2,4,6,8").split(",")]
@@ -125,7 +130,8 @@ def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
     drv = [f"-I{HERE / 'drivers' / cfg['drv']}"] if "drv" in cfg else []
     return [CXX[cc], std, OPT, "-DNDEBUG", "-pthread", "-march=x86-64-v3", "-w", *extra,
             *[f"-I{tree / i}" for i in cfg["inc"]], *drv, *cfg.get("flags", []),
-            str(workload), *[str(tree / s) for s in cfg["srcs"]], "-o", str(exe), "-ldl"]
+            str(workload), *[str(tree / s) for s in cfg["srcs"]],
+            *[str(tree / s) for s in cfg.get("srcs_if_present", []) if (tree / s).exists()], "-o", str(exe), "-ldl"]
 
 def build(proj, cc, h, tree, exe, extra=()):
     """Build at the commit; C++17 first, then C++20 (newer versions of some projects need it), unless the

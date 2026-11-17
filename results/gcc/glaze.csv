@@ -1,0 +1,121 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+bde462017bd1d3139c100b3d2a9c037224c31c50,2022-07-26,build failed,,,,,,,,initialization
+0d44573ee0a6e34d710038ab711244da409adabb,2022-07-28,build failed,,,,,,,,Update write.hpp
+dae97a073ca55199006b5c5be3412c02238a0d41,2022-08-18,build failed,,,,,,,,recorder now has map syntax
+8d539f57d55d7a5c871c230538ce616b97f7e810,2022-08-24,build failed,,,,,,,,partial messages
+227e1422a61e2a7ee3ac3078565d67ed741e6005,2022-09-19,build failed,,,,,,,,proper error from hash mismatch
+72151c2bb8f3f7ab6023b5eb26741da076ae3767,2022-10-17,build failed,,,,,,,,mutable lambdas for gcc
+22902dd5c6f03a4fbc13d9c0eae933d07939b617,2022-11-14,build failed,,,,,,,,get_thing -> get_member
+8b11cc2c0b04bf64a2655eb176af5c65023c1617,2022-12-19,build failed,,,,,,,,"ix everything, remove code duplication (#88)"
+dd47fcfba3495f834df9c96f06241e40d9be440a,2023-01-19,build failed,,,,,,,,Add meta for includer
+001fb590d1ce58902e88d6c3c36ae096c4e6ddec,2023-03-06,build failed,,,,,,,,Merge pull request #190 from fregate/gcc-10
+34fbbfcef529c151ee8d556cb6eda88b36e92526,2023-03-30,build failed,,,,,,,,Committing clang-format changes
+bb10f2d4b19d308298f0cd0d51be42957a12ab21,2023-05-08,build failed,,,,,,,,Committing clang-format changes
+791091e5ebd3b65c39b39362641fdac40ee6fb1a,2023-07-10,build failed,,,,,,,,glz::merge works with custom objects (#342)
+5ab8260b04f4f5ac2d081cd54a8a6f9ea821a112,2023-08-07,build failed,,,,,,,,removed GLZ_ALWAYS_INLINE from nonfunction (#388)
+5911f67a226eb410a519e63a99fab4e7075a83b9,2023-09-06,build failed,,,,,,,,fixed write_file_json api
+733869712bdcda930f3be4a2835cc6c03a2cd555,2023-10-19,build failed,,,,,,,,adding support for empty objects in variants (#461)
+b0ff450668e20f64a1546058a577bd823c18e640,2023-11-15,build failed,,,,,,,,min int32_t and int64_t writing fix (#523)
+f54406f3a848d5426f292713bda54a2d1d4bc022,2023-11-29,build failed,,,,,,,,Committing clang-format changes
+9cf1103c38fc91eb38ef352201f45e291169b299,2023-12-06,build failed,,,,,,,,quick fix for to_tuple consistent std::tuple return (#589)
+696ebaa742dfe1f3b6faf0532e99f8403e5ec88f,2023-12-14,build failed,,,,,,,,Committing clang-format changes
+2aba4c33853d76dad29b1584c48a76a0aa8c4106,2023-12-28,build failed,,,,,,,,Committing clang-format changes
+ad85f0279a4e2a94f4f1404536beaebf3e17b39e,2024-02-08,build failed,,,,,,,,Support for std::vector<std::pair reading + ranges doc (#724)
+4d31e008f0710955b29dafd63d620c71e82cad2e,2024-02-20,build failed,,,,,,,,Committing clang-format changes
+def4bc87e723d90a202aedb308cc1468d4f63834,2024-03-04,build failed,,,,,,,,Committing clang-format changes
+b936004c80f841e837b6614fcf9f7879e7714ab6,2024-03-20,build failed,,,,,,,,Simplifying and cleaning up includes (#849)
+fd21f0f816f36c2ef48b88f5c7e7f5c5fdb7e0f0,2024-03-27,build failed,,,,,,,,move meta concepts into meta.hpp and support volatile JSON ptr (#890)
+3673c4578b8c19409f4588448f9bfbdd03783274,2024-04-16,build failed,,,,,,,,get_as_json fix for intermediate array access (#923)
+47bceb7063ac75966b3d10d087bb9288b9e870df,2024-04-26,build failed,,,,,,,,More robust string reading and faster for escaped strings (#960)
+4418265f4c36d37f519a10dc93d1a7a652f3d4c5,2024-05-17,build failed,,,,,,,,Improved skipped type handling (#1005)
+ebbb3e17250b27938504426089966e0b3e1006f0,2024-05-30,build failed,,,,,,,, json schema enhancements (#1038)
+ddcf444b75d861b61b3e4012b45134bb19bee4ec,2024-06-13,ok,read into a reused struct,0.0,0.0,0.0,4,0,187.7,using buffer pool for asio client (#1095)
+ddcf444b75d861b61b3e4012b45134bb19bee4ec,2024-06-13,ok,write to a reused string,0.0,0.0,0.0,1,0,191.3,using buffer pool for asio client (#1095)
+31010dbd258f43c08fe0d6d53e85d6fabb1bdae5,2024-07-02,ok,read into a reused struct,0.0,0.0,0.0,4,0,184.5,Silence MSVC warning about including <expected> when not targeting C++23. (#1130)
+31010dbd258f43c08fe0d6d53e85d6fabb1bdae5,2024-07-02,ok,write to a reused string,0.0,0.0,0.0,1,0,195.3,Silence MSVC warning about including <expected> when not targeting C++23. (#1130)
+5c3a42c701cfa7e48123d2001c7715ef017b59fa,2024-07-16,ok,read into a reused struct,0.0,0.0,0.0,4,0,234.6,Committing clang-format changes
+5c3a42c701cfa7e48123d2001c7715ef017b59fa,2024-07-16,ok,write to a reused string,0.0,0.0,0.0,1,0,190.9,Committing clang-format changes
+cdd9df7a8839f4f5282c812f20f0823e20a3e227,2024-07-17,ok,read into a reused struct,0.0,0.0,0.0,4,0,235.8,Removal of force_conformance and addition of validate_skipped (#1159)
+cdd9df7a8839f4f5282c812f20f0823e20a3e227,2024-07-17,ok,write to a reused string,0.0,0.0,0.0,1,0,188.8,Removal of force_conformance and addition of validate_skipped (#1159)
+f8cb79235bf6d836bf9ebce9cacf1361eba468b1,2024-07-17,ok,read into a reused struct,0.0,0.0,0.0,2,0,232.5,Statically sized string decode buffer (#1165)
+f8cb79235bf6d836bf9ebce9cacf1361eba468b1,2024-07-17,ok,write to a reused string,0.0,0.0,0.0,1,0,175.0,Statically sized string decode buffer (#1165)
+4aeb3bd3a98c899876851ef2460360cade6c4289,2024-07-17,ok,read into a reused struct,0.0,0.0,0.0,2,0,232.7,Committing clang-format changes
+4aeb3bd3a98c899876851ef2460360cade6c4289,2024-07-17,ok,write to a reused string,0.0,0.0,0.0,1,0,175.1,Committing clang-format changes
+219c9b04603b23ff2f96327a0daf36d514eedd62,2024-07-18,ok,read into a reused struct,0.0,0.0,0.0,2,0,229.6,Removing string_decode_buffer and fixed potential unsafe access with table lookups (#1168)
+219c9b04603b23ff2f96327a0daf36d514eedd62,2024-07-18,ok,write to a reused string,0.0,0.0,0.0,1,0,170.6,Removing string_decode_buffer and fixed potential unsafe access with table lookups (#1168)
+9547bcff965f31e42ab0bd6c3fa11fc5597a8c26,2024-07-18,ok,read into a reused struct,0.0,0.0,0.0,2,0,241.0,Fixing potential out of bounds for prettify/minify (#1171)
+9547bcff965f31e42ab0bd6c3fa11fc5597a8c26,2024-07-18,ok,write to a reused string,0.0,0.0,0.0,1,0,170.6,Fixing potential out of bounds for prettify/minify (#1171)
+a6c18f90809efa88e6c4b1127ec929b50b790761,2024-07-21,ok,read into a reused struct,0.0,0.0,0.0,2,0,230.8,Glaze feature testing (#1191)
+a6c18f90809efa88e6c4b1127ec929b50b790761,2024-07-21,ok,write to a reused string,0.0,0.0,0.0,1,0,166.7,Glaze feature testing (#1191)
+0cb7a0ff47bd2e2b8c962e5455794d9d902719fe,2024-08-09,ok,read into a reused struct,0.0,0.0,0.0,2,0,213.6,Using hash map again for internal enum reading (#1252)
+0cb7a0ff47bd2e2b8c962e5455794d9d902719fe,2024-08-09,ok,write to a reused string,0.0,0.0,0.0,1,0,162.9,Using hash map again for internal enum reading (#1252)
+68174cba944885379439645cbccb04b74f796c23,2024-09-16,ok,read into a reused struct,0.0,0.0,0.0,2,0,186.0,new_lines_in_arrays support for .prettify = true write (#1302)
+68174cba944885379439645cbccb04b74f796c23,2024-09-16,ok,write to a reused string,0.0,0.0,0.0,1,0,162.7,new_lines_in_arrays support for .prettify = true write (#1302)
+76fbda3c4c35432cde01532a3dc1ea7757f8e761,2024-09-30,ok,read into a reused struct,0.0,0.0,0.0,2,0,183.1,Committing clang-format changes
+76fbda3c4c35432cde01532a3dc1ea7757f8e761,2024-09-30,ok,write to a reused string,0.0,0.0,0.0,1,0,162.3,Committing clang-format changes
+293eb5e84bf0a66970926413f40ddb65ee6e6383,2024-10-17,ok,read into a reused struct,0.0,0.0,0.0,2,0,191.0,Updated comments (#1386)
+293eb5e84bf0a66970926413f40ddb65ee6e6383,2024-10-17,ok,write to a reused string,0.0,0.0,0.0,1,0,161.5,Updated comments (#1386)
+54d59a3837eee9e8952d4462d78b3ceff7776f5c,2024-11-06,ok,read into a reused struct,0.0,0.0,0.0,2,0,188.0,Using a linear search for partial writing index finding (#1427)
+54d59a3837eee9e8952d4462d78b3ceff7776f5c,2024-11-06,ok,write to a reused string,0.0,0.0,0.0,1,0,162.9,Using a linear search for partial writing index finding (#1427)
+f5d6196f55ab49d4a36882fdbba3418fe3aa773c,2024-12-04,ok,read into a reused struct,0.0,0.0,0.0,2,0,225.8,Committing clang-format changes
+f5d6196f55ab49d4a36882fdbba3418fe3aa773c,2024-12-04,ok,write to a reused string,0.0,0.0,0.0,1,0,162.0,Committing clang-format changes
+950456e3f360708dbe91db0a2b6ca6537fd2ce99,2024-12-16,ok,read into a reused struct,0.0,0.0,0.0,2,0,221.5,Update partial_read documentation
+950456e3f360708dbe91db0a2b6ca6537fd2ce99,2024-12-16,ok,write to a reused string,0.0,0.0,0.0,1,0,162.2,Update partial_read documentation
+52ca1f7e1d7021c95cef32c869fe5b1231cefbac,2025-01-02,ok,read into a reused struct,0.0,0.0,0.0,2,0,225.8,Adding insert to glz::async_string (#1538)
+52ca1f7e1d7021c95cef32c869fe5b1231cefbac,2025-01-02,ok,write to a reused string,0.0,0.0,0.0,1,0,179.6,Adding insert to glz::async_string (#1538)
+29e92b85d94e39ff71a9e421d31d88fcf6b6c430,2025-02-07,ok,read into a reused struct,0.0,0.0,0.0,2,0,223.1,Add error_handler to asio_server (#1602)
+29e92b85d94e39ff71a9e421d31d88fcf6b6c430,2025-02-07,ok,write to a reused string,0.0,0.0,0.0,1,0,158.8,Add error_handler to asio_server (#1602)
+a2f8c8cc13623535baa44c8a3330504752d5c87e,2025-03-25,ok,read into a reused struct,0.0,0.0,0.0,2,0,222.5,const char* assignment for glz::json_t (#1667)
+a2f8c8cc13623535baa44c8a3330504752d5c87e,2025-03-25,ok,write to a reused string,0.0,0.0,0.0,1,0,159.5,const char* assignment for glz::json_t (#1667)
+d55638c950f9b774e0e5329d1dc29cca2c01ecca,2025-04-29,ok,read into a reused struct,0.0,0.0,0.0,2,0,222.5,has_ -> check_ (#1714)
+d55638c950f9b774e0e5329d1dc29cca2c01ecca,2025-04-29,ok,write to a reused string,0.0,0.0,0.0,1,0,158.4,has_ -> check_ (#1714)
+f7e9ba252ab8dae708dd6ac51376555efa023537,2025-05-30,ok,read into a reused struct,0.0,0.0,0.0,2,0,221.8,version 5.3.1 bump
+f7e9ba252ab8dae708dd6ac51376555efa023537,2025-05-30,ok,write to a reused string,0.0,0.0,0.0,1,0,162.4,version 5.3.1 bump
+a418e9c25083cd772308f68760cc5e38d81ffb45,2025-06-13,ok,read into a reused struct,0.0,0.0,0.0,2,0,178.8,Committing clang-format changes
+a418e9c25083cd772308f68760cc5e38d81ffb45,2025-06-13,ok,write to a reused string,0.0,0.0,0.0,1,0,161.5,Committing clang-format changes
+6f9dc0ca7844426ba6e72cb46d058bb45f13402c,2025-08-01,ok,read into a reused struct,0.0,0.0,0.0,2,0,179.0,undef Windows.h DELETE macro (#1878)
+6f9dc0ca7844426ba6e72cb46d058bb45f13402c,2025-08-01,ok,write to a reused string,0.0,0.0,0.0,1,0,160.7,undef Windows.h DELETE macro (#1878)
+f7a4c89e7f2607c8c6dcbf1f90f9ea596bf11c8d,2025-09-08,ok,read into a reused struct,0.0,0.0,0.0,2,0,178.8,Treat HTTP header names as case-insensitive (#1940)
+f7a4c89e7f2607c8c6dcbf1f90f9ea596bf11c8d,2025-09-08,ok,write to a reused string,0.0,0.0,0.0,1,0,161.5,Treat HTTP header names as case-insensitive (#1940)
+2ff970e070250c8097ac12b8c345c0649accc833,2025-10-07,ok,read into a reused struct,0.0,0.0,0.0,2,0,412.0,Use member_names to support modify and rename together (#2000)
+2ff970e070250c8097ac12b8c345c0649accc833,2025-10-07,ok,write to a reused string,0.0,0.0,0.0,1,0,310.8,Use member_names to support modify and rename together (#2000)
+7045136f56a182c57d9ea607165aca11a0cd2c0c,2025-11-11,ok,read into a reused struct,0.0,0.0,0.0,2,0,178.8,Committing clang-format changes
+7045136f56a182c57d9ea607165aca11a0cd2c0c,2025-11-11,ok,write to a reused string,0.0,0.0,0.0,1,0,161.9,Committing clang-format changes
+f2d80dafc51a0b53a4e9b13d47ec6ee797ea1e78,2025-11-28,ok,read into a reused struct,0.0,0.0,0.0,2,0,179.0,Committing clang-format changes
+f2d80dafc51a0b53a4e9b13d47ec6ee797ea1e78,2025-11-28,ok,write to a reused string,0.0,0.0,0.0,1,0,174.5,Committing clang-format changes
+9017b435266d2a897e61308c7ff100a2d2c59215,2025-12-16,ok,read into a reused struct,0.0,0.0,0.0,2,0,182.3,Committing clang-format changes
+9017b435266d2a897e61308c7ff100a2d2c59215,2025-12-16,ok,write to a reused string,0.0,0.0,0.0,1,0,162.8,Committing clang-format changes
+ccaea9d9b85a5ea44e5842c94a03e29d2a9372fe,2025-12-31,ok,read into a reused struct,0.0,0.0,0.0,2,0,183.1,glaze_DISABLE_ALWAYS_INLINE and linear_search option (#2188)
+ccaea9d9b85a5ea44e5842c94a03e29d2a9372fe,2025-12-31,ok,write to a reused string,0.0,0.0,0.0,1,0,161.3,glaze_DISABLE_ALWAYS_INLINE and linear_search option (#2188)
+6c1a7d8193ebd0c19d65eb6857eb0447659958c9,2026-01-07,ok,read into a reused struct,0.0,0.0,0.0,2,0,182.1,Committing clang-format changes
+6c1a7d8193ebd0c19d65eb6857eb0447659958c9,2026-01-07,ok,write to a reused string,0.0,0.0,0.0,1,0,150.4,Committing clang-format changes
+cef905c649cbcc7d79a2eace5a17f8f185f5e6e5,2026-01-31,ok,read into a reused struct,0.0,0.0,0.0,2,0,184.9,Avoid GCC ubsan contexpr bug and add asan CI (#2288)
+cef905c649cbcc7d79a2eace5a17f8f185f5e6e5,2026-01-31,ok,write to a reused string,0.0,0.0,0.0,1,0,152.7,Avoid GCC ubsan contexpr bug and add asan CI (#2288)
+cecdc386b741815de3d0d33f932246d12c33262d,2026-02-27,ok,read into a reused struct,0.0,0.0,0.0,2,0,185.3,Committing clang-format changes
+cecdc386b741815de3d0d33f932246d12c33262d,2026-02-27,ok,write to a reused string,0.0,0.0,0.0,1,0,152.5,Committing clang-format changes
+7b2ffd8a9b593925674e2bb2cc312c9d1b6967b9,2026-03-22,ok,read into a reused struct,0.0,0.0,0.0,2,0,185.8,custom optional support (#2390)
+7b2ffd8a9b593925674e2bb2cc312c9d1b6967b9,2026-03-22,ok,write to a reused string,0.0,0.0,0.0,1,0,160.7,custom optional support (#2390)
+7a58456a7c89dc59e0caadb28a752cc8aa6f1631,2026-04-10,ok,read into a reused struct,0.0,0.0,0.0,2,0,187.3,Guard fixed_padding for prettify (#2460)
+7a58456a7c89dc59e0caadb28a752cc8aa6f1631,2026-04-10,ok,write to a reused string,0.0,0.0,0.0,1,0,162.6,Guard fixed_padding for prettify (#2460)
+018920a7ee1706c14f1f6c4476d3a1aee0c15116,2026-04-20,ok,read into a reused struct,0.0,0.0,0.0,2,0,187.3,flatten_map wrapper (#2412)
+018920a7ee1706c14f1f6c4476d3a1aee0c15116,2026-04-20,ok,write to a reused string,0.0,0.0,0.0,1,0,152.0,flatten_map wrapper (#2412)
+8b09b8ec616f5967c534734f25c007dedf0238e3,2026-05-19,ok,read into a reused struct,0.0,0.0,0.0,2,0,415.0,chore: fix comment typos across include/ and examples/ (#2567)
+8b09b8ec616f5967c534734f25c007dedf0238e3,2026-05-19,ok,write to a reused string,0.0,0.0,0.0,1,0,158.8,chore: fix comment typos across include/ and examples/ (#2567)
+6352691fbc25535fa6066a4955685cbbc41fc6d1,2026-06-17,ok,read into a reused struct,0.0,0.0,0.0,2,0,187.5,Bound non-null-terminated value scanners against end of input (#2636)
+6352691fbc25535fa6066a4955685cbbc41fc6d1,2026-06-17,ok,write to a reused string,0.0,0.0,0.0,1,0,157.7,Bound non-null-terminated value scanners against end of input (#2636)
+d8ed4f45a744c01a527199eb2ce59812437ccefd,2026-07-07,ok,read into a reused struct,0.0,0.0,0.0,2,0,187.7,Reject truncated JSON arrays in null-terminated reads (#2691)
+d8ed4f45a744c01a527199eb2ce59812437ccefd,2026-07-07,ok,write to a reused string,0.0,0.0,0.0,1,0,155.9,Reject truncated JSON arrays in null-terminated reads (#2691)
+310f270af6bf93c8b35430615650808939b3b980,2026-07-31,ok,read into a reused struct,0.0,0.0,0.0,2,0,194.4,Bound every registry read to its buffer rather than a null terminator (#2732)
+310f270af6bf93c8b35430615650808939b3b980,2026-07-31,ok,write to a reused string,0.0,0.0,0.0,1,0,163.9,Bound every registry read to its buffer rather than a null terminator (#2732)
+ff828649b56a57ec07d04365b2e39cfcc55eab47,2026-08-15,ok,read into a reused struct,0.0,0.0,0.0,2,0,192.4,bound dynamic eigen matrix reads to the matrix storage (#2803)
+ff828649b56a57ec07d04365b2e39cfcc55eab47,2026-08-15,ok,write to a reused string,0.0,0.0,0.0,1,0,155.7,bound dynamic eigen matrix reads to the matrix storage (#2803)
+073af5e82c5e8aafdc38d1884377ff61e426e232,2026-09-14,ok,read into a reused struct,0.0,0.0,0.0,2,0,191.6,add opt-in redirect following to http_client (#2868)
+073af5e82c5e8aafdc38d1884377ff61e426e232,2026-09-14,ok,write to a reused string,0.0,0.0,0.0,1,0,153.2,add opt-in redirect following to http_client (#2868)
+0670ed9937de138305974c85e60fa160eaabc9d4,2026-09-24,ok,read into a reused struct,0.0,0.0,0.0,2,0,194.5,Assert glz::visit index in range in debug builds (#2936)
+0670ed9937de138305974c85e60fa160eaabc9d4,2026-09-24,ok,write to a reused string,0.0,0.0,0.0,1,0,126.1,Assert glz::visit index in range in debug builds (#2936)
+4bf99ead60429bb06de4d45b3da84d2139f37dd9,2026-10-20,ok,read into a reused struct,0.0,0.0,0.0,2,0,188.8,bound beve fixed-size array reads to the element count on the wire (#3018)
+4bf99ead60429bb06de4d45b3da84d2139f37dd9,2026-10-20,ok,write to a reused string,0.0,0.0,0.0,1,0,127.7,bound beve fixed-size array reads to the element count on the wire (#3018)
+30ecd842d5e2a1f56a652ac25b4f54d7fbbf7aea,2026-11-05,ok,read into a reused struct,0.0,0.0,0.0,2,0,193.0,http_client: report request body progress with on_upload_progress (#3061)
+30ecd842d5e2a1f56a652ac25b4f54d7fbbf7aea,2026-11-05,ok,write to a reused string,0.0,0.0,0.0,1,0,128.7,http_client: report request body progress with on_upload_progress (#3061)
+a53ddd59c6ff72ef42065b962dcb899711622f47,2026-11-13,ok,read into a reused struct,0.0,0.0,0.0,2,0,190.5,Encode filesystem paths as UTF-8 on Windows (#3092)
+a53ddd59c6ff72ef42065b962dcb899711622f47,2026-11-13,ok,write to a reused string,0.0,0.0,0.0,1,0,129.0,Encode filesystem paths as UTF-8 on Windows (#3092)

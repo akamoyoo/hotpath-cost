@@ -1,0 +1,206 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+8f8e9053066fb45747388f95846c835486766123,2011-11-18,build failed,,,,,,,,Initial version (0.1)
+f198c486eef47540b89f103c2df36ec8f1b9417a,2011-11-22,build failed,,,,,,,,Added encoding validation feature
+a45bcbba7b095877e896858872242d3ea8fcc5a6,2011-11-23,build failed,,,,,,,,Rewrite UTF8::Validate() to obtain better performance.
+5eac4489551117652f524485c3ea5c35e065672c,2011-11-29,build failed,,,,,,,,"Added EncodedInputStream, AutoUTFInputStream, AutoUTF"
+c51c90b2a6097d143bee2b4080fda563749288d3,2011-12-01,build failed,,,,,,,,"Added RFC4627's encoding detection method, with refactored BOM detection."
+bf8fcd19c189df01012b316b5dd7b550f513eab4,2011-12-03,build failed,,,,,,,,"Added prettyauto example, which can handle UTF-8/UTF-16LE/UTF-16BE/UTF-32LE/UTF-32BE Fixed a bug for using Reader with AutoUTFInputStream"
+4fdd805c7dbe22bf48ca803fbc57b80ff2f8abee,2012-03-06,build failed,,,,,,,,Fixed issue 18 from 0.1x branch
+22ddf37cf094d1cd6782338d10db97bc1b722911,2012-11-13,build failed,,,,,,,,Fixed issue 30
+94d05da2bc0f2ed910508a679b3297317b6e1a9f,2012-11-14,build failed,,,,,,,,Fixed Issue 28:	Parameter ‘inArray’ shadows a member of 'Level' in writer.h
+b7d12d8ab509fcfc76f82d748afae92139a76548,2012-11-15,build failed,,,,,,,,Fixed Issue 48:	incorrect return type of GetUint64()
+23056abad12c5bddf73e00b728d1d53c712627a5,2012-11-16,build failed,,,,,,,,Added #include <new> for placement new operator.
+a7430a0940629bd4cfae2c6c2fdfe52417217361,2014-06-25,build failed,,,,,,,,Merge remote-tracking branch 'origin/dev'
+32b930529a8cfecc67ac6e4941a61b11974d2e62,2014-06-26,build failed,,,,,,,,Merge pull request #24 from pah/fixes/travis-ci
+d8ed60956bb5151f852286bb79849a5383ec3c75,2014-06-29,build failed,,,,,,,,Merge pull request #32 from miloyip/issue30streamcopy
+1acfc216841ef581b37247b90052deb1de7781ef,2014-06-30,build failed,,,,,,,,Merge pull request #34 from miloyip/SmallFloatingPoint
+28294fa7549052ab0cc133572baba078998c7402,2014-07-03,build failed,,,,,,,,Merge pull request #44 from pah/feature/memberiterator
+a787e8a7f59317dba00912e3c7c5350fa88fa3c5,2014-07-04,build failed,,,,,,,,Merge branch 'master' of https://github.com/miloyip/rapidjson
+96882f4977f2711c825c1b9b5426fd04aca5fddd,2014-07-04,build failed,,,,,,,,Prohibit copy constructor in StackStream.
+63de910d1608cc29fde32b73be98f53a20a0019a,2014-07-09,build failed,,,,,,,,Merge pull request #57 from pah/cleanup/string-handling
+025c516f827845c2510f761b203fce7ae3b669a1,2014-07-13,build failed,,,,,,,,Add kParseErrorTermination English error message.
+c5a4926b7af18289be7bbaeea3f4bf60b5dfcbf3,2014-07-15,build failed,,,,,,,,Merge pull request #67 from miloyip/issue66writerassertion
+c4ce48cde9eb5545aad6fec3bcde598ae90e3cb3,2014-07-27,build failed,,,,,,,,Merge pull request #80 from miloyip/issue31optimizeitoa
+c4f64e7b02f1af5d309fce6b62a9333c6d64b0cf,2014-07-29,build failed,,,,,,,,Merge pull request #87 from miloyip/issue85simdsegfault
+5e5fb7b3d8d297fff731d1f7c0b4cbb6932a833f,2014-08-08,build failed,,,,,,,,Change UINT64_C() to RAPIDJSON_UINT64_C2()
+143bb83e74c962f004dbcb6b81bb12ae0bec0623,2014-08-12,build failed,,,,,,,,Merge pull request #101 from pah/feature/rfc7159
+1adeecb12e67989d0a3d0db6e9bd84310268469c,2014-08-20,ok,parse + read px,5.0,5.0,0.0,5,0,1137.0,Merge pull request #106 from pah/doc/config-error
+1adeecb12e67989d0a3d0db6e9bd84310268469c,2014-08-20,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,728.6,Merge pull request #106 from pah/doc/config-error
+b5928618d4a5a6be02d5cf79612b84420b853074,2014-08-27,ok,parse + read px,5.0,5.0,0.0,5,0,530.8,Merge pull request #112 from pah/fixes/111
+b5928618d4a5a6be02d5cf79612b84420b853074,2014-08-27,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,384.1,Merge pull request #112 from pah/fixes/111
+ab8416e1e688302d0b77b2d7f419d68b5c6b0164,2014-08-31,ok,parse + read px,5.0,5.0,0.0,5,0,1179.7,Merge pull request #125 from pah/fixes/113
+ab8416e1e688302d0b77b2d7f419d68b5c6b0164,2014-08-31,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,376.5,Merge pull request #125 from pah/fixes/113
+15d70d6a7b8124f2a7fb309abd66c2e5063e0535,2014-09-03,ok,parse + read px,5.0,5.0,0.0,5,0,537.0,Merge pull request #127 from pah/feature/value-different-allocators
+15d70d6a7b8124f2a7fb309abd66c2e5063e0535,2014-09-03,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,355.7,Merge pull request #127 from pah/feature/value-different-allocators
+a5ffc5be1c32a0faf0ce647dda6c82212d58bc94,2014-09-09,ok,parse + read px,5.0,5.0,0.0,5,0,541.9,Merge pull request #139 from pah/fixes/stack-growth-factor
+a5ffc5be1c32a0faf0ce647dda6c82212d58bc94,2014-09-09,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,363.2,Merge pull request #139 from pah/fixes/stack-growth-factor
+89fa782240a617c47ef90ef771afb98bf1145f18,2014-10-23,ok,parse + read px,5.0,5.0,0.0,5,0,537.6,Merge pull request #166 from spl/fix-memorystream-peek
+89fa782240a617c47ef90ef771afb98bf1145f18,2014-10-23,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,369.7,Merge pull request #166 from spl/fix-memorystream-peek
+1950efd6760fc89a074ae5b989e560edded92578,2014-10-27,ok,parse + read px,5.0,5.0,0.0,5,0,542.0,Merge pull request #173 from ecorm/issue123movesupport
+1950efd6760fc89a074ae5b989e560edded92578,2014-10-27,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,369.0,Merge pull request #173 from ecorm/issue123movesupport
+d6c1c57159ea38297f30cf66a40fab87481cc582,2014-10-31,ok,parse + read px,5.0,5.0,0.0,5,0,550.0,Merge pull request #188 from pah/feature/lazy-alloc-allocators
+d6c1c57159ea38297f30cf66a40fab87481cc582,2014-10-31,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,377.4,Merge pull request #188 from pah/feature/lazy-alloc-allocators
+28e55ee24d392ab0f011a2a47cb42a93e5b2a6e0,2014-11-25,ok,parse + read px,5.0,5.0,0.0,5,0,550.5,Merge pull request #204 from antonindrawan/master
+28e55ee24d392ab0f011a2a47cb42a93e5b2a6e0,2014-11-25,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,376.4,Merge pull request #204 from antonindrawan/master
+320eff1c217eb46a2859d62a1f4c24a6d65d46b3,2014-12-08,ok,parse + read px,5.0,5.0,0.0,5,0,553.8,Fix #207 VC2013 imaxdiv_t redefinition
+320eff1c217eb46a2859d62a1f4c24a6d65d46b3,2014-12-08,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,391.6,Fix #207 VC2013 imaxdiv_t redefinition
+ff4251968e9799cb0590ce9210d12534c35615a7,2015-01-14,ok,parse + read px,5.0,5.0,0.0,5,0,546.1,Merge pull request #227 from miloyip/issue226nullstring
+ff4251968e9799cb0590ce9210d12534c35615a7,2015-01-14,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,389.5,Merge pull request #227 from miloyip/issue226nullstring
+bb84ff2ffe289bf7ac305d2d95172ec58fb63797,2015-02-20,ok,parse + read px,5.0,5.0,0.0,5,0,544.9,Merge pull request #245 from pah/fixes/trailing-comma
+bb84ff2ffe289bf7ac305d2d95172ec58fb63797,2015-02-20,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,390.5,Merge pull request #245 from pah/fixes/trailing-comma
+b484407999fa104c9258316f09ad38e553e3e30e,2015-03-31,ok,parse + read px,5.0,5.0,0.0,5,0,548.1,Merge pull request #272 from pah/fix/std-string-inclusion
+b484407999fa104c9258316f09ad38e553e3e30e,2015-03-31,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,396.8,Merge pull request #272 from pah/fix/std-string-inclusion
+02aa12a29edd405a0b88675e3d14dbff58a971c5,2015-04-10,ok,parse + read px,5.0,5.0,0.0,5,0,547.2,Merge pull request #291 from miloyip/issue289_NegativeZeroRoundtrip
+02aa12a29edd405a0b88675e3d14dbff58a971c5,2015-04-10,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,389.5,Merge pull request #291 from miloyip/issue289_NegativeZeroRoundtrip
+e7f1c6dd08b522cfcf9aed58a333bd9a0c0ccbeb,2015-04-13,build failed,,,,,,,,Remove an invalid Document::ParseInsitu() API
+f7a64c5eae3a03930aad8f5ba855647e060dc10f,2015-04-18,ok,parse + read px,5.0,5.0,0.0,5,0,614.0,Add RAPIDJSON_LIKELY/UNLIKELY and apply them in stack
+f7a64c5eae3a03930aad8f5ba855647e060dc10f,2015-04-18,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,473.3,Add RAPIDJSON_LIKELY/UNLIKELY and apply them in stack
+1a21379e3ccc85caa5bb75b18dbb3ad289dd0625,2015-12-31,ok,parse + read px,7.0,7.0,0.0,7,0,650.4,Merge branch 'master' into optimization
+1a21379e3ccc85caa5bb75b18dbb3ad289dd0625,2015-12-31,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,516.2,Merge branch 'master' into optimization
+ef6957c177bd6d971bfedfbfe656c4b82d71f9a3,2015-12-31,ok,parse + read px,7.0,7.0,0.0,7,0,644.5,PutReserve() and PutUnsafe() optimisation for Writer
+ef6957c177bd6d971bfedfbfe656c4b82d71f9a3,2015-12-31,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,493.0,PutReserve() and PutUnsafe() optimisation for Writer
+122c7229936fa8811b78eea78c311b51c53fc836,2015-12-31,ok,parse + read px,7.0,7.0,0.0,7,0,644.7,More LIKELY/UNLIKELY in Writer
+122c7229936fa8811b78eea78c311b51c53fc836,2015-12-31,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,493.7,More LIKELY/UNLIKELY in Writer
+6863f7b24c0352fc78cebf6fedb87d68227d5425,2016-01-22,ok,parse + read px,7.0,7.0,0.0,7,0,574.0,Fix warning
+6863f7b24c0352fc78cebf6fedb87d68227d5425,2016-01-22,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,403.7,Fix warning
+968a666acd78402de16c11ff001ad2665e66147c,2016-01-22,ok,parse + read px,7.0,7.0,0.0,7,0,1238.8,Merge pull request #513 from miloyip/optimization
+968a666acd78402de16c11ff001ad2665e66147c,2016-01-22,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,775.7,Merge pull request #513 from miloyip/optimization
+5f819ea1d3a95f60ad939b9847658c1bc63c094a,2016-02-02,ok,parse + read px,7.0,7.0,0.0,7,0,1246.3,Fix warnings
+5f819ea1d3a95f60ad939b9847658c1bc63c094a,2016-02-02,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,785.0,Fix warnings
+e702d3dc709e0656e01ee30f2ece3bf6fc66785f,2016-02-09,ok,parse + read px,7.0,7.0,0.0,7,0,571.9,Merge pull request #530 from miloyip/iostream
+e702d3dc709e0656e01ee30f2ece3bf6fc66785f,2016-02-09,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,399.2,Merge pull request #530 from miloyip/iostream
+7e383864c73a1643498bf1343372518e32be427b,2016-02-10,ok,parse + read px,7.0,7.0,0.0,7,0,613.1,Fix #533
+7e383864c73a1643498bf1343372518e32be427b,2016-02-10,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,400.5,Fix #533
+e61169e61a3bd365125cbe73cb224d5ed03cc168,2016-02-12,ok,parse + read px,7.0,7.0,0.0,7,0,585.4,Fix Value::GetFloat()
+e61169e61a3bd365125cbe73cb224d5ed03cc168,2016-02-12,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,400.8,Fix Value::GetFloat()
+e733690e69ec1006dff25a10f3efa32a0c98f10b,2016-02-15,ok,parse + read px,7.0,7.0,0.0,7,0,583.1,Merge pull request #543 from miloyip/issue205
+e733690e69ec1006dff25a10f3efa32a0c98f10b,2016-02-15,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,403.4,Merge pull request #543 from miloyip/issue205
+10ccdf88e2963c67fbf253b8dabbc0d2c7cba2c1,2016-02-21,ok,parse + read px,7.0,7.0,0.0,7,0,574.5,Merge pull request #554 from miloyip/issue552_movingschemadocument
+10ccdf88e2963c67fbf253b8dabbc0d2c7cba2c1,2016-02-21,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,395.7,Merge pull request #554 from miloyip/issue552_movingschemadocument
+6c927047c4bac980a38f9101c30dd01cfe6211c0,2016-03-01,ok,parse + read px,7.0,7.0,0.0,7,0,572.4,Fix RAPIDJSON_(UN)LIKELY for VC
+6c927047c4bac980a38f9101c30dd01cfe6211c0,2016-03-01,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,401.1,Fix RAPIDJSON_(UN)LIKELY for VC
+6d0f0b2a84f3a94377ef48d5a7a5418c54caaaad,2016-03-03,ok,parse + read px,7.0,7.0,0.0,7,0,1260.1,Merge pull request #564 from corporateshark/stringnumbers
+6d0f0b2a84f3a94377ef48d5a7a5418c54caaaad,2016-03-03,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,772.4,Merge pull request #564 from corporateshark/stringnumbers
+a62777487d58421bcb0bc5eeab739817fb7bada9,2016-03-04,ok,parse + read px,7.0,7.0,0.0,7,0,574.3,Normalize line endings but not JSON files
+a62777487d58421bcb0bc5eeab739817fb7bada9,2016-03-04,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,395.0,Normalize line endings but not JSON files
+d454d21409a72b8736f3a5927d0f6f2fde8f4a45,2016-03-09,ok,parse + read px,7.0,7.0,0.0,7,0,575.5,Merge pull request #577 from comand/prettywriter-options
+d454d21409a72b8736f3a5927d0f6f2fde8f4a45,2016-03-09,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,395.9,Merge pull request #577 from comand/prettywriter-options
+62a9a6b0d8ade710309fc1172cf521c6f97ba88a,2016-03-31,ok,parse + read px,7.0,7.0,0.0,7,0,572.6,Merge pull request #589 from jnicholls/rawnumber
+62a9a6b0d8ade710309fc1172cf521c6f97ba88a,2016-03-31,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,396.3,Merge pull request #589 from jnicholls/rawnumber
+07343d5e3361a940448bb5d2887bb5253a126f32,2016-04-17,ok,parse + read px,7.0,7.0,0.0,7,0,574.0,Merge pull request #605 from miloyip/issue583_regexcrash
+07343d5e3361a940448bb5d2887bb5253a126f32,2016-04-17,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,396.2,Merge pull request #605 from miloyip/issue583_regexcrash
+7cc76a9d46257c0e71c88ca7dbc995897cfb070f,2016-05-10,ok,parse + read px,7.0,7.0,0.0,7,0,574.3,Fix #630
+7cc76a9d46257c0e71c88ca7dbc995897cfb070f,2016-05-10,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,395.7,Fix #630
+62ff0a9df9b9faeaf6c2ccc39422b2a810610a41,2016-06-15,ok,parse + read px,7.0,7.0,0.0,7,0,590.4,Merge pull request #646 from efidler/ubsan
+62ff0a9df9b9faeaf6c2ccc39422b2a810610a41,2016-06-15,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,429.9,Merge pull request #646 from efidler/ubsan
+369de87e5d7da05786731a712f25ab9b46c4b0ce,2016-07-11,ok,parse + read px,7.0,7.0,0.0,7,0,1257.4,Merge pull request #681 from niukuo/master
+369de87e5d7da05786731a712f25ab9b46c4b0ce,2016-07-11,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,750.7,Merge pull request #681 from niukuo/master
+c76ebf98de225aaea9c6f9aaa2425cf24343ce44,2016-07-27,ok,parse + read px,7.0,7.0,0.0,7,0,580.4,Merge pull request #698 from jseward/master
+c76ebf98de225aaea9c6f9aaa2425cf24343ce44,2016-07-27,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,387.2,Merge pull request #698 from jseward/master
+cdb345428331b57660838a14f42d3b75234c0399,2016-09-01,ok,parse + read px,7.0,7.0,0.0,7,0,578.2,Merge pull request #723 from niukuo/master
+cdb345428331b57660838a14f42d3b75234c0399,2016-09-01,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,402.1,Merge pull request #723 from niukuo/master
+f28203c7a12fc12b7a5425846a8f1a0ae94f657b,2016-09-21,ok,parse + read px,7.0,7.0,0.0,7,0,583.5,Fix #741
+f28203c7a12fc12b7a5425846a8f1a0ae94f657b,2016-09-21,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,386.5,Fix #741
+3b1a03749967637ce5c89d49f0c6b71fa4a3182a,2016-10-17,ok,parse + read px,7.0,7.0,0.0,7,0,1243.9,Merge pull request #748 from sfinktah/sfinktah-minwindef-fix
+3b1a03749967637ce5c89d49f0c6b71fa4a3182a,2016-10-17,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,388.1,Merge pull request #748 from sfinktah/sfinktah-minwindef-fix
+d6c8b378d4f0fcedcc637afe43edd0c0b6ebb3f7,2016-10-21,ok,parse + read px,7.0,7.0,0.0,7,0,1257.0,Merge pull request #777 from miloyip/issue728_threadsafe
+d6c8b378d4f0fcedcc637afe43edd0c0b6ebb3f7,2016-10-21,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,758.2,Merge pull request #777 from miloyip/issue728_threadsafe
+03a73910498d784a3a9429202a90d2fb67be910b,2016-12-23,ok,parse + read px,7.0,7.0,0.0,7,0,578.0,Merge pull request #757 from patcheng/feature/fix_clang_warning
+03a73910498d784a3a9429202a90d2fb67be910b,2016-12-23,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,397.9,Merge pull request #757 from patcheng/feature/fix_clang_warning
+0eaa0d288c5ef4a580c765cdf606837ec649d132,2017-02-24,ok,parse + read px,7.0,7.0,0.0,7,0,578.5,Merge pull request #862 from StilesCrisis/nan-inf-parse-fix
+0eaa0d288c5ef4a580c765cdf606837ec649d132,2017-02-24,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,389.9,Merge pull request #862 from StilesCrisis/nan-inf-parse-fix
+9cabd6372dd51893e6588215f77e0125b097fc86,2017-02-28,ok,parse + read px,7.0,7.0,0.0,7,0,591.7,Merge pull request #870 from StilesCrisis/null-handler-fix
+9cabd6372dd51893e6588215f77e0125b097fc86,2017-02-28,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,386.9,Merge pull request #870 from StilesCrisis/null-handler-fix
+465fab45c14da5fd59e40f1a91ded13d02cdd957,2017-03-16,ok,parse + read px,7.0,7.0,0.0,7,0,582.2,Merge pull request #897 from StilesCrisis/issue-889-pretty-writer
+465fab45c14da5fd59e40f1a91ded13d02cdd957,2017-03-16,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,385.8,Merge pull request #897 from StilesCrisis/issue-889-pretty-writer
+5d9d0f78b53dd8cd1ec757fd8ef07211ee114161,2017-03-27,ok,parse + read px,7.0,7.0,0.0,7,0,584.3,Merge pull request #909 from miloyip/issue905_PrettyWriterWriteFlags
+5d9d0f78b53dd8cd1ec757fd8ef07211ee114161,2017-03-27,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,395.3,Merge pull request #909 from miloyip/issue905_PrettyWriterWriteFlags
+d2fce9243837d1b7d753eae7654080c0733d8ece,2017-04-22,ok,parse + read px,7.0,7.0,0.0,7,0,583.5,Merge pull request #933 from OlegHahm/minor_fixes
+d2fce9243837d1b7d753eae7654080c0733d8ece,2017-04-22,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,385.4,Merge pull request #933 from OlegHahm/minor_fixes
+3202b0a3ddfbe2cf739ce0acfc48fead2cb75f4a,2017-05-19,ok,parse + read px,7.0,7.0,0.0,7,0,580.2,Merge pull request #964 from pah/fixes/962-copy-const-strings
+3202b0a3ddfbe2cf739ce0acfc48fead2cb75f4a,2017-05-19,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,390.4,Merge pull request #964 from pah/fixes/962-copy-const-strings
+2f45319b4e5862f9dc57bd1ffd11e55ab44efa61,2017-06-28,ok,parse + read px,7.0,7.0,0.0,7,0,581.9,Merge pull request #968 from TomaszNo/icc-preprocessor-guard
+2f45319b4e5862f9dc57bd1ffd11e55ab44efa61,2017-06-28,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,385.6,Merge pull request #968 from TomaszNo/icc-preprocessor-guard
+c34e3dfc72b6c90775aad132f27c29bbf1d79222,2017-07-13,ok,parse + read px,7.0,7.0,0.0,7,0,592.4,Merge pull request #1018 from miloyip/issue1017_allOfHandler
+c34e3dfc72b6c90775aad132f27c29bbf1d79222,2017-07-13,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,429.8,Merge pull request #1018 from miloyip/issue1017_allOfHandler
+2a53253e72c7331114f7db74607945488a5cf4a4,2017-09-07,ok,parse + read px,7.0,7.0,0.0,7,0,587.2,Merge pull request #1056 from chwarr/assert-enum-lower
+2a53253e72c7331114f7db74607945488a5cf4a4,2017-09-07,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,391.9,Merge pull request #1056 from chwarr/assert-enum-lower
+bf822593ee3b7a52c564acd82085db456d9248a3,2017-10-20,ok,parse + read px,7.0,7.0,0.0,7,0,1254.0,Merge pull request #1083 from piotr-kaminski-intel/master
+bf822593ee3b7a52c564acd82085db456d9248a3,2017-10-20,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,393.3,Merge pull request #1083 from piotr-kaminski-intel/master
+802ece6d7c29611e26a31e8d22f9f28a887fa301,2017-12-22,ok,parse + read px,7.0,7.0,0.0,7,0,1249.0,Merge pull request #1147 from DrumMeister/master
+802ece6d7c29611e26a31e8d22f9f28a887fa301,2017-12-22,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,386.4,Merge pull request #1147 from DrumMeister/master
+7641af690eb1996a15143b53fd675be6c3e11078,2018-01-26,ok,parse + read px,7.0,7.0,0.0,7,0,596.1,Merge pull request #1122 from svart-riddare/issue-1108
+7641af690eb1996a15143b53fd675be6c3e11078,2018-01-26,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,386.0,Merge pull request #1122 from svart-riddare/issue-1108
+a1909a9427bde2b2360b0e0fbdb7437a4f35039b,2018-02-13,ok,parse + read px,7.0,7.0,0.0,7,0,588.8,Merge pull request #1179 from Tencent/issue1153_rawvalueencoding
+a1909a9427bde2b2360b0e0fbdb7437a4f35039b,2018-02-13,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,398.8,Merge pull request #1179 from Tencent/issue1153_rawvalueencoding
+9dfc437477e2b9a351634e8249a9c18bfc81f136,2018-02-22,ok,parse + read px,7.0,7.0,0.0,7,0,588.6,Merge pull request #1182 from Romain-Geissler-1A/ignore-gcc-8-warnings
+9dfc437477e2b9a351634e8249a9c18bfc81f136,2018-02-22,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,386.1,Merge pull request #1182 from Romain-Geissler-1A/ignore-gcc-8-warnings
+67a17cfdbc25ff1fc8d01714be87e242b03a4cc9,2018-03-20,ok,parse + read px,7.0,7.0,0.0,7,0,589.7,Merge pull request #1207 from vim2meta/master
+67a17cfdbc25ff1fc8d01714be87e242b03a4cc9,2018-03-20,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,386.4,Merge pull request #1207 from vim2meta/master
+b32cd9421c5e3cbe183a99b6537ce11441e50656,2018-04-25,ok,parse + read px,7.0,7.0,0.0,7,0,1239.6,Merge pull request #1217 from tresorit/win-clang-fix
+b32cd9421c5e3cbe183a99b6537ce11441e50656,2018-04-25,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,767.0,Merge pull request #1217 from tresorit/win-clang-fix
+01c71740cd8afe1c335916768a204b329541e6fd,2018-06-14,ok,parse + read px,7.0,7.0,0.0,7,0,1265.2,Merge pull request #1287 from Nekto89/msvc_config
+01c71740cd8afe1c335916768a204b329541e6fd,2018-06-14,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,771.7,Merge pull request #1287 from Nekto89/msvc_config
+129d19ba7f496df5e33658527a7158c79b99c21c,2018-07-03,ok,parse + read px,7.0,7.0,0.0,7,0,586.8,Merge pull request #1312 from erikfroseth/issue-1308
+129d19ba7f496df5e33658527a7158c79b99c21c,2018-07-03,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,394.1,Merge pull request #1312 from erikfroseth/issue-1308
+6a905f9311f82d306da77bd963ec5aa5da07da9c,2018-08-01,ok,parse + read px,7.0,7.0,0.0,7,0,580.1,Merge pull request #1331 from JPEWdev/mem-alignment-fix
+6a905f9311f82d306da77bd963ec5aa5da07da9c,2018-08-01,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,383.1,Merge pull request #1331 from JPEWdev/mem-alignment-fix
+c0ca05f6ddb690c943a7fc59efab9ca9cfc39736,2018-09-11,ok,parse + read px,7.0,7.0,0.0,7,0,592.9,Merge pull request #1329 from pah/fix-noexcept
+c0ca05f6ddb690c943a7fc59efab9ca9cfc39736,2018-09-11,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,393.1,Merge pull request #1329 from pah/fix-noexcept
+eea3e57bcf2f9c99f7f19978f5659f1ab9b741f0,2018-12-06,ok,parse + read px,7.0,7.0,0.0,7,0,584.4,Merge pull request #1416 from ylavic/regex_syntax_noassert
+eea3e57bcf2f9c99f7f19978f5659f1ab9b741f0,2018-12-06,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,406.6,Merge pull request #1416 from ylavic/regex_syntax_noassert
+bfdcf4911047688fec49014d575433e2e5eb05be,2018-12-19,ok,parse + read px,7.0,7.0,0.0,7,0,584.1,Merge pull request #1426 from ylavic/pointer_less_than
+bfdcf4911047688fec49014d575433e2e5eb05be,2018-12-19,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,389.5,Merge pull request #1426 from ylavic/pointer_less_than
+3cf4f7c5a030e9a65b842d2e160ffee90df7613d,2019-03-06,ok,parse + read px,7.0,7.0,0.0,7,0,588.0,Merge pull request #727 from mapbox/silence-dereference-null-pointer
+3cf4f7c5a030e9a65b842d2e160ffee90df7613d,2019-03-06,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,391.9,Merge pull request #727 from mapbox/silence-dereference-null-pointer
+4b3d7c2f42142f10b888e580c515f60ca98e2ee9,2019-05-17,ok,parse + read px,7.0,7.0,0.0,7,0,591.5,Merge pull request #1506 from ylavic/CreatePattern
+4b3d7c2f42142f10b888e580c515f60ca98e2ee9,2019-05-17,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,391.8,Merge pull request #1506 from ylavic/CreatePattern
+d67a69a9cf64ed5984644fa061a2b14367fac820,2019-09-26,ok,parse + read px,7.0,7.0,0.0,7,0,588.1,Merge pull request #1490 from MalcolmTyrrell/fixCompileErrorInPointerH
+d67a69a9cf64ed5984644fa061a2b14367fac820,2019-09-26,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,391.6,Merge pull request #1490 from MalcolmTyrrell/fixCompileErrorInPointerH
+eeb9d553f83f86e7b5bf22cbacf1d5d8b44608e5,2019-12-03,ok,parse + read px,7.0,7.0,0.0,7,0,1256.9,Merge pull request #1617 from JPEWdev/master
+eeb9d553f83f86e7b5bf22cbacf1d5d8b44608e5,2019-12-03,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,760.6,Merge pull request #1617 from JPEWdev/master
+2bed293f4859f0f013367b5eb0ba2fba826eda13,2020-03-05,ok,parse + read px,7.0,7.0,0.0,7,0,1231.9,Update biginteger.h (#1652)
+2bed293f4859f0f013367b5eb0ba2fba826eda13,2020-03-05,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,399.8,Update biginteger.h (#1652)
+ebcbd04484fcdaddbb9fd7798e76bbfb4ae8f840,2020-03-30,ok,parse + read px,7.0,7.0,0.0,7,0,595.5,Three-way comparison for CLang 10 fix (#1679)
+ebcbd04484fcdaddbb9fd7798e76bbfb4ae8f840,2020-03-30,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,391.9,Three-way comparison for CLang 10 fix (#1679)
+ce81bc9edfe773667a7a4454ba81dac72ed4364c,2020-08-07,ok,parse + read px,7.0,7.0,0.0,7,0,589.1,Merge pull request #1760 from escherstair/fix_ce6_support
+ce81bc9edfe773667a7a4454ba81dac72ed4364c,2020-08-07,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,394.5,Merge pull request #1760 from escherstair/fix_ce6_support
+585042c02ba6350e10fc43df8beee1bc097f4c5f,2021-01-06,ok,parse + read px,7.0,7.0,0.0,7,0,1265.8,Merge pull request #1821 from slsyy/master
+585042c02ba6350e10fc43df8beee1bc097f4c5f,2021-01-06,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,765.6,Merge pull request #1821 from slsyy/master
+b1a4d91a53e0884ff7f60eafd9e9efa98781c97b,2021-02-23,ok,parse + read px,7.0,7.0,0.0,7,0,1268.2,Merge pull request #1779 from pavel-pimenov/fix-1778-part-1
+b1a4d91a53e0884ff7f60eafd9e9efa98781c97b,2021-02-23,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,775.5,Merge pull request #1779 from pavel-pimenov/fix-1778-part-1
+cd5ee4dfe9814fa88b7ba66c1f9d8176d154c62f,2021-03-25,ok,parse + read px,8.0,8.0,0.0,8,0,615.5,Merge pull request #1858 from ylavic/std_allocator
+cd5ee4dfe9814fa88b7ba66c1f9d8176d154c62f,2021-03-25,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,393.1,Merge pull request #1858 from ylavic/std_allocator
+b996a23714e0dda14913d39fda809af170fbb6e9,2021-03-30,ok,parse + read px,8.0,8.0,0.0,8,0,616.9,Merge pull request #1866 from ylavic/std_allocator_traits
+b996a23714e0dda14913d39fda809af170fbb6e9,2021-03-30,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,392.9,Merge pull request #1866 from ylavic/std_allocator_traits
+03676c9bf578d6ce2df873e44183a371ce0ca6c3,2021-04-07,ok,parse + read px,8.0,8.0,0.0,8,0,1308.7,Merge pull request #1870 from ylavic/allocators_rvalues
+03676c9bf578d6ce2df873e44183a371ce0ca6c3,2021-04-07,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,756.6,Merge pull request #1870 from ylavic/allocators_rvalues
+25fa7a119d2b05ef78bb457dff7b2440b6301a29,2021-05-06,ok,parse + read px,8.0,8.0,0.0,8,0,620.3,Merge pull request #1883 from nkolotov/fix/issues/1882
+25fa7a119d2b05ef78bb457dff7b2440b6301a29,2021-05-06,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,399.1,Merge pull request #1883 from nkolotov/fix/issues/1882
+00dbcf2c6e03c47d6c399338b6de060c71356464,2021-08-13,ok,parse + read px,8.0,8.0,0.0,8,0,1332.2,Merge pull request #1926 from Kyrega/master
+00dbcf2c6e03c47d6c399338b6de060c71356464,2021-08-13,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,778.4,Merge pull request #1926 from Kyrega/master
+bf8ca5da88c57c34217901e588f6a1f163180180,2022-02-09,build failed,,,,,,,,Merge pull request #1987 from adamcalhoon/fix-placement-new-alignment
+bdc49ad80a3cff89a25839dcdcd6a68b457ec9f1,2022-04-06,ok,parse + read px,8.0,8.0,0.0,8,0,622.8,Merge pull request #2014 from lazydroid/dev/lenik/fix_shadowed_variables
+bdc49ad80a3cff89a25839dcdcd6a68b457ec9f1,2022-04-06,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,401.3,Merge pull request #2014 from lazydroid/dev/lenik/fix_shadowed_variables
+88f8ddd70cebd8b0e7728467ac3958ad2a4c2cf1,2022-05-13,ok,parse + read px,8.0,8.0,0.0,8,0,1252.0,Include conceptual change from PR 2001.
+88f8ddd70cebd8b0e7728467ac3958ad2a4c2cf1,2022-05-13,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,398.7,Include conceptual change from PR 2001.
+22a62fcc2c2fa2418f5d358cdf65c1df73b418ae,2022-08-22,ok,parse + read px,8.0,8.0,0.0,8,0,617.6,Update allocators.h
+22a62fcc2c2fa2418f5d358cdf65c1df73b418ae,2022-08-22,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,407.7,Update allocators.h
+7cad78e236a98b08e1925aba07115f5b2749344c,2022-11-25,ok,parse + read px,8.0,8.0,0.0,8,0,611.8,tidy up after merge from master
+7cad78e236a98b08e1925aba07115f5b2749344c,2022-11-25,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,398.1,tidy up after merge from master
+b08672d4699b4c55c70d1a288b87295ee5808e07,2022-12-16,ok,parse + read px,8.0,8.0,0.0,8,0,613.6,review comment updates
+b08672d4699b4c55c70d1a288b87295ee5808e07,2022-12-16,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,406.5,review comment updates
+949c771b03de448bdedea80c44a4a5f65284bfeb,2023-04-07,ok,parse + read px,8.0,8.0,0.0,8,0,613.1,Resolve conflict with Windows header about max macro
+949c771b03de448bdedea80c44a4a5f65284bfeb,2023-04-07,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,398.1,Resolve conflict with Windows header about max macro
+516d0473949fdcf0a6dc9fbb40fa92b3b85db184,2023-08-14,ok,parse + read px,8.0,8.0,0.0,8,0,613.2,Remove empty cross-reference in comment
+516d0473949fdcf0a6dc9fbb40fa92b3b85db184,2023-08-14,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,398.2,Remove empty cross-reference in comment
+eee82cb0780a8807590a7a078d8b1622657b7aa8,2023-09-28,ok,parse + read px,8.0,8.0,0.0,8,0,612.1,Fix object hashing in schema
+eee82cb0780a8807590a7a078d8b1622657b7aa8,2023-09-28,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,398.0,Fix object hashing in schema
+3f73edae00aba5b0112a80b4d41e6f1ff7d92a3d,2024-02-09,ok,parse + read px,8.0,8.0,0.0,8,0,612.2,Fix static_cast in regex.h
+3f73edae00aba5b0112a80b4d41e6f1ff7d92a3d,2024-02-09,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,398.5,Fix static_cast in regex.h
+805d7ed5dfe97a39b8b0816fd5eeed8731dc4936,2024-09-23,ok,parse + read px,8.0,8.0,0.0,8,0,612.2,Fix issue 2307
+805d7ed5dfe97a39b8b0816fd5eeed8731dc4936,2024-09-23,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,393.6,Fix issue 2307
+d621dc9e9c77f81e5c8a35b8dcc16dcd63351321,2024-12-18,ok,parse + read px,8.0,8.0,0.0,8,0,611.4,Fix parsing 0.184467440737095516159 with kParseFullPrecisionFlag
+d621dc9e9c77f81e5c8a35b8dcc16dcd63351321,2024-12-18,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,393.6,Fix parsing 0.184467440737095516159 with kParseFullPrecisionFlag
+297637bc0a0f00dc504dbc1a47ebdaa577f8ae19,2026-10-29,ok,parse + read px,8.0,8.0,0.0,8,0,609.7,Fix integer overflow in Writer::WriteString for long strings
+297637bc0a0f00dc504dbc1a47ebdaa577f8ae19,2026-10-29,ok,"parse + read px, pool on a fixed buffer",0.0,0.0,0.0,0,0,392.8,Fix integer overflow in Writer::WriteString for long strings
