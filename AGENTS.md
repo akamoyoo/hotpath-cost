@@ -9,6 +9,7 @@ prints. `README.md` says what the tool is and what it found; `docs/insights.md` 
 |---|---|---|
 | Did this change add an allocation or a lock to a hot operation? | `replay/replay.py LIB --commits BASE,HEAD` then `replay/diff.py LIB` | yes, for the paths the workload takes |
 | Which line does it come from? | `replay/attribute.py LIB COMMIT` | yes |
+| Which stacks did a commit add, remove or change? | `replay/explain.py LIB COMMIT [BASE]` | yes |
 | When in the history did it start or stop? | `replay/replay.py LIB --stride N`, then `--refine`, then `diff.py` | yes, among commits that build |
 | Which allocating or locking paths does the workload never take? | `replay/combine.py LIB COMMIT` | static: "may", not "will" |
 | May this function allocate, lock or enter the kernel, on any path? | `static/fn-effects ... --functions` (see `static/README.md`) | depends on the evidence level printed |
@@ -37,8 +38,12 @@ writes the CSVs in `results/`.
 1. Run `replay/replay.py LIB --commits BASE,HEAD` (commit prefixes) and `replay/diff.py LIB`.
 2. If no count changed, report that, with the operations measured. Do not infer anything from the
    `ns` column of these runs.
-3. If a count changed, run `replay/attribute.py LIB HEAD` (and `BASE`) and compare the stacks. Name the
+3. If a count changed, run `replay/explain.py LIB HEAD BASE`: the totals per operation, then each
+   stack whose count per call changed, with its innermost library frame at both commits. Name the
    line, the count per call before and after, and whether it is every call or only the first call.
+   Stacks are matched by function names, so a refactoring that renames functions shows a stack that
+   is gone and one that is new; the totals say whether anything changed. For a single commit's stacks,
+   use `replay/attribute.py LIB COMMIT`.
 4. Put a price on it only with an alternating timing of both builds on one idle physical core
    (see "Timing").
 
@@ -71,7 +76,8 @@ thrown by the library during normal-looking use; look at the full stack with
 `attribute.py <lib>-explore COMMIT --cc clang --json`.
 
 **Find where a cost entered the history.** Sample with `--stride` (about 50 to 70 samples), then run
-`--refine` until it stops, then `diff.py`. A change reported "from X" where X is not the previous
+`--refine` until it stops, then `diff.py`, then `explain.py LIB COMMIT` on each commit it reports
+(the base defaults to the commit `diff.py` reports the change "from"). A change reported "from X" where X is not the previous
 commit means the commits in between do not build with the driver: report an interval, and use
 `git log -S'<the line>'` on the attributed line to name the commit.
 

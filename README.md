@@ -53,7 +53,7 @@ each of these lessons changed how it works ([evidence](docs/insights.md)):
 - **`replay/`**: the run-time half. A small workload per library calls its hot operations through
   out-of-line entry functions. `replay.py` builds it at any commit and counts allocations, frees and
   locks per call (or, with `--metric instr`, instructions per call under callgrind); `diff.py` and
-  `--refine` find and bisect changes; `attribute.py` names the line; `price.py` times two commits
+  `--refine` find and bisect changes; `explain.py` and `attribute.py` name the line; `price.py` times two commits
   against each other.
 - **`replay/combine.py`**: both views of one commit, matched site by site: exercised, never exercised,
   or missed by the analysis. Exploration workloads (`replay/workloads/<lib>_explore.cpp`) replay a
@@ -171,7 +171,8 @@ static analysis lists the paths the workloads never take ([details](docs/cases.m
 ./fetch.sh                                         # clone the libraries into src/
 replay/replay.py liquibook                         # allocations and locks at every library commit
 replay/diff.py liquibook                           # what changed, and at which commit
-replay/attribute.py liquibook 25b0c5ec             # which line allocates
+replay/explain.py liquibook 25b0c5ec               # which stacks that commit added, removed or changed
+replay/attribute.py liquibook 25b0c5ec             # every allocating and locking stack at one commit
 replay/combine.py liquibook 25b0c5ec               # static and run-time side by side (needs static/ built)
 replay/replay.py fast_float --metric instr         # instructions per call at every commit (valgrind)
 replay/diff.py fast_float --instr 5                # commits that changed them by 5 % or more
