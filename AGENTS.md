@@ -94,8 +94,8 @@ commits matter, the include directories, extra sources and flags. Check the late
 library's header; older headers relied on transitive includes. Sources that exist only in some versions
 go in `srcs_if_present`. When a library's compiled sources reference functions the workload never
 reaches and whose definitions pull in much more (abseil's hash-table sampling), name them in
-`unresolved_ok`: they may stay undefined, while any other undefined symbol, and every undefined
-variable, fails the build.
+`unresolved_ok`: each gets a stub that traps if called (a run that reaches one fails), while any
+other undefined symbol, and every undefined variable, fails the build.
 
 ## Reading the results
 

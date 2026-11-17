@@ -70,6 +70,13 @@ def main():
     if "free" not in fields: print(f"(frees not compared: the workload runs another thread, see replay.compared_fields)")
     print(f"{proj}: {len(order)} library commits; measured {n_ok} (from {first[1] if first else '-'} to {last[1] if last else '-'}), "
           f"build failed {n_bfail}, run failed {n_rfail}; {n_chg} measured commits changed {'instructions' if instr else 'a count'}")
+    if first and last and first[0] != last[0]:   # the net change over the whole measured history
+        f0 = {d["op"]: d for d in map(json.loads, (out / f"{first[0]}.jsonl").read_text().splitlines())}
+        f1 = {d["op"]: d for d in map(json.loads, (out / f"{last[0]}.jsonl").read_text().splitlines())}
+        keys = ("instr",) if instr else tuple(k for k in ("alloc", "lock") if k in fields)
+        net = [f"{op}: " + ", ".join(f"{k} {f0[op][k]:.{0 if instr else 2}f} -> {f1[op][k]:.{0 if instr else 2}f}" for k in keys)
+               for op in f1 if op in f0 and all(k in f0[op] and k in f1[op] for k in keys)]
+        if net: print(f"  net, {first[1]} to {last[1]}: " + "; ".join(net))
     if last and instr:
         print("  latest measured: " + "; ".join(f"{d['op']}: {d['instr']:.0f} instructions"
               for d in map(json.loads, (out / f"{last[0]}.jsonl").read_text().splitlines())))

@@ -61,7 +61,9 @@ def main():
         check_idle([int(c) for c in cores.split(",")])
         for _ in range(rounds):
             for c, exe in exes.items():
-                out = subprocess.run(["taskset", "-c", cores, str(exe)], capture_output=True, text=True).stdout
+                r = subprocess.run(["taskset", "-c", cores, str(exe)], capture_output=True, text=True)
+                if r.returncode: sys.exit(f"{c}: the workload failed (exit {r.returncode})\n{r.stderr[-2000:]}")
+                out = r.stdout
                 for d in (json.loads(l) for l in out.splitlines() if l.startswith('{"op"')):
                     res.setdefault(d["op"], {}).setdefault(c, []).append(d["ns"])
     print(f"{proj} {cc} {rp.OPT}: {a} -> {b}, median ns of {rounds} alternating rounds on core {core}")

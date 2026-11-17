@@ -154,18 +154,25 @@ def build(proj, cc, h, tree, exe, extra=()):
             (tree / path).mkdir(parents=True, exist_ok=True)
             subprocess.run(f"git -C {TOP / 'src' / clone} archive {ls[2]} | tar -x -C {tree / path}", shell=True)
     std0 = "-std=" + P[proj].get("std", "c++17")   # a project may need a newer standard throughout
-    # functions named in "unresolved_ok" may stay undefined (paths the workload never reaches); any other
-    # undefined symbol, and every undefined variable, fails the build: a variable resolved to address 0
-    # would be read and written without a crash
+    # functions named in "unresolved_ok" may stay undefined (paths the workload never reaches): they get a
+    # stub that traps (ud2), so that reaching one crashes the run. Any other undefined symbol, and every
+    # undefined variable, fails the build: a variable resolved to address 0 would be read and written
+    # without a crash.
     ok = P[proj].get("unresolved_ok")
-    link = ("-Wl,--warn-unresolved-symbols",) if ok else ()
     def attempt(std):
-        b = subprocess.run(build_cmd(P[proj], cc, tree, exe, std, (*extra, *link)), capture_output=True, text=True)
-        if ok and b.returncode == 0:
-            bad = sorted({sym for sym in re.findall(r"undefined reference to `([^']+)'", b.stderr)
-                          if "(" not in sym or not any(re.search(r"::" + n + r"\(", sym) for n in ok)})
-            if bad: return subprocess.CompletedProcess(b.args, 1, b.stdout, "unresolved symbols not allowed:\n" + "\n".join(bad))
-        return b
+        if not ok:
+            return subprocess.run(build_cmd(P[proj], cc, tree, exe, std, extra), capture_output=True, text=True)
+        probe = subprocess.run(build_cmd(P[proj], cc, tree, exe, std, (*extra, "-Wl,--warn-unresolved-symbols", "-Wl,--no-demangle")),
+                               capture_output=True, text=True)
+        if probe.returncode: return probe
+        syms = sorted(set(re.findall(r"undefined reference to `([^']+)'", probe.stderr)))
+        if not syms: return probe
+        names = subprocess.run(["c++filt"], input="\n".join(syms), capture_output=True, text=True).stdout.splitlines()
+        bad = [n for n in names if "(" not in n or not any(re.search(r"::" + f + r"\(", n) for f in ok)]
+        if bad: return subprocess.CompletedProcess(probe.args, 1, "", "unresolved symbols not allowed:\n" + "\n".join(bad))
+        stubs = tree / "_unresolved_stubs.s"
+        stubs.write_text("".join(f".text\n.globl {m}\n.type {m},@function\n{m}:\n  ud2\n" for m in syms))
+        return subprocess.run(build_cmd(P[proj], cc, tree, exe, std, (*extra, str(stubs))), capture_output=True, text=True)
     b = attempt(std0)
     if b.returncode and std0 == "-std=c++17":
         b2 = attempt("-std=c++20")
