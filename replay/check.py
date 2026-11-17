@@ -12,7 +12,7 @@ merge base and a branch head), and reports:
      changes of PCT percent or more (default 3).
 
 Counts and instructions are exact. Times are not reported: price a change with price.py.
-Exits 1 if a count changed, 2 if only instructions changed, 0 otherwise.
+Exits 1 if a count changed, 2 if only instructions changed, 3 if a build or run failed, 0 otherwise.
 """
 import json, os, subprocess, sys, tempfile
 from pathlib import Path
@@ -20,18 +20,21 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import replay as rp
 
+def fail(msg):
+    print(msg, file=sys.stderr); sys.exit(3)
+
 def measure(proj, cc, h, instr):
     """One run of the workload at commit h: {op: record}."""
     with tempfile.TemporaryDirectory() as t:
         t = Path(t); exe = t / "_workload_exe"
         extra = ("-DREPLAY_INSTR", *([f"-I{rp.VALGRIND_INC}"] if rp.VALGRIND_INC else [])) if instr else ()
         b = rp.build(proj, cc, h, t, exe, extra=extra)
-        if b.returncode: sys.exit(f"{h[:8]}: build failed\n{b.stderr[-3000:]}")
+        if b.returncode: fail(f"{h[:8]}: build failed\n{b.stderr[-3000:]}")
         cores = ",".join(map(str, rp.CORES[:rp.P[proj].get("cores", 1)]))
         cmd = ["taskset", "-c", cores, *([rp.VALGRIND, "--tool=callgrind", f"--callgrind-out-file={t}/cg.out",
                                           "--dump-instr=no", "--compress-strings=no", "--compress-pos=no"] if instr else []), str(exe)]
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=3600)
-        if r.returncode: sys.exit(f"{h[:8]}: the workload failed (exit {r.returncode})\n{r.stderr[-3000:]}")
+        if r.returncode: fail(f"{h[:8]}: the workload failed (exit {r.returncode})\n{r.stderr[-3000:]}")
         if instr: return {d["op"]: d for d in map(json.loads, rp.instr_lines(t, r.stdout))}
         return {d["op"]: d for d in (json.loads(l) for l in r.stdout.splitlines() if l.startswith('{"op"'))}
 

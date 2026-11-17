@@ -39,7 +39,7 @@ writes the CSVs in `results/`.
 
 **Check a change for a hot-path regression.** `replay/check.py LIB BASE HEAD` does steps 1 to 3 in one
 run (BASE and HEAD can be any commits of the clone, such as a merge base and a branch head; it exits 1
-if a count changed, 2 if only instructions did). By hand:
+if a count changed, 2 if only instructions did, 3 if a build or run failed). By hand:
 1. Run `replay/replay.py LIB --commits BASE,HEAD` (commit prefixes) and `replay/diff.py LIB`.
 2. If no count changed, report that, with the operations measured. Do not infer anything from the
    `ns` column of these runs.
