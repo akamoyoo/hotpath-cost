@@ -1,0 +1,115 @@
+# Results
+
+All eighteen libraries, then the compiler matrix. Paths are relative to the repository root. Per-commit data: `results/<build>/<library>.csv`; the matrix as Markdown: `results/matrix.md`.
+
+## What was found
+
+Eighteen libraries, 13,246 library commits in their first-parent histories, 2,050 of them measured.
+Thirteen libraries were measured at every library commit where the driver compiles. quill was sampled
+every fifth commit, spdlog every 30th, fmt every 50th, simdjson every 4th and Eigen every 100th, and
+every interval whose counts differed was bisected. Built with GCC 13.3, `-O2 -march=x86-64-v3`. Per-commit data:
+`results/gcc/<library>.csv`.
+
+| library | measured | count changes | what changed |
+|---|---|---|---|
+| [Liquibook](https://github.com/enewhuis/liquibook) (order book) | 13 of 60 | 2 | +2 allocations per add+cancel in release 2.0.0; fixed after it, never released (case 1) |
+| [spdlog](https://github.com/gabime/spdlog) (logger) | 80 of 1,856, bisected | 6 | a mutex lock per message on `null_sink_mt` in v1.0.0 to v1.3.1; an allocation and a TLS destructor on each thread's first message in v1.14.0 to v1.17.0, fixed upstream in October 2026 (case 2) |
+| [concurrentqueue](https://github.com/cameron314/concurrentqueue) | 118 of 136 | 1 | the first `try_enqueue` of each thread takes a mutex since a 2022 use-after-free fix (`3e72a15`); it also allocates 3 times, before and after |
+| [simdjson](https://github.com/simdjson/simdjson) | 53 of 272, bisected | 3 | first parse with a new parser: 6, then 10, then 11, then 6 allocations again (buffers); 0 per parse after it throughout |
+| [quill](https://github.com/odygrd/quill) (logger) | 125 of 333 | 0 | `LOG_INFO`: 0 allocations, 0 locks, first call included |
+| [fmt](https://github.com/fmtlib/fmt) | 61 of 3,407 | 0 | `format_to(memory_buffer)`: 0; `fmt::format` of a 41-character string: 1 (the `std::string` itself) |
+| [atomic_queue](https://github.com/max0x7ba/atomic_queue) | 116 of 119 | 0 | 0 and 0 (`3ae8dff` crashes the benchmark) |
+| [SPSCQueue](https://github.com/rigtorp/SPSCQueue) | 22 of 22 | 0 | 0 and 0 |
+| [MPMCQueue](https://github.com/rigtorp/MPMCQueue) | 7 of 7 | 0 | 0 and 0; but GCC's build is 1.7x slower than clang's on the uncontended path, fixed by a four-line change (case 4) |
+| [hffix](https://github.com/jamesdbrock/hffix) (FIX) | 15 of 69 | 0 | 0 and 0; but the encoder is 2.8x apart between compilers and levels (case 3) |
+| [readerwriterqueue](https://github.com/cameron314/readerwriterqueue) (SPSC queue) | 52 of 80 | 0 | 0 and 0 |
+| [unordered_dense](https://github.com/martinus/unordered_dense) (hash map) | 285 of 323 | 0 | find, insert+erase, `operator[]`: 0 and 0 |
+| [robin-map](https://github.com/Tessil/robin-map) (hash map) | 54 of 55 | 0 | 0 and 0 |
+| [parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) (hash map) | 287 of 316 | 0 | 0 and 0 |
+| [robin-hood-hashing](https://github.com/martinus/robin-hood-hashing) (hash map) | 221 of 224 | 0 | 0 and 0 |
+| [fast_float](https://github.com/fastfloat/fast_float) (number parsing) | 212 of 213 | 0 | 0 and 0 |
+| [xxHash](https://github.com/Cyan4973/xxHash) (hashing) | 290 of 346 | 0 | 0 and 0 |
+| [Eigen](https://gitlab.com/libeigen/eigen) (linear algebra, fixed sizes) | 39 of 5,408, sampled | 0 | 0 and 0 |
+
+"Measured" counts the commits at which the fixed benchmark driver compiles and runs; older versions
+with a different API are not measured. The quiet rows are results too: these libraries keep their
+hot path at zero allocations and locks, and over every measured commit nothing slipped in. For the
+numerical and hashing libraries the counts are zero by design; what differs there is time, which the
+compiler matrix below compares.
+
+## The compiler matrix
+
+The latest library commit of every library, three compilers, two levels, ns per call (median of three
+interleaved rounds on one idle core; quill's backend thread on a second core). Counts were identical
+between all builds.
+
+| library | operation | GCC 13 -O2 | GCC 13 -O3 | GCC 15 -O2 | GCC 15 -O3 | clang 21 -O2 | clang 21 -O3 | slowest / fastest |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| liquibook | add+cancel | 455 | 349 | 435 | 437 | 420 | 454 | 1.30 |
+| concurrentqueue | try_enqueue+try_dequeue | 66 | 58 | 60 | 59 | 64 | 63 | 1.13 |
+| concurrentqueue | try_enqueue_tok+try_dequeue_tok | 33 | 33 | 31 | 31 | 30 | 30 | 1.11 |
+| concurrentqueue | enqueue+try_dequeue | 51 | 50 | 50 | 48 | 55 | 55 | 1.13 |
+| atomic_queue | AtomicQueue push+pop | 41 | 40 | 43 | 43 | 42 | 42 | 1.07 |
+| atomic_queue | AtomicQueue2 try_push+try_pop | 37 | 37 | 37 | 37 | 38 | 37 | 1.03 |
+| atomic_queue | AtomicQueueB2 try_push+try_pop | 43 | 42 | 41 | 41 | 36 | 36 | 1.21 |
+| SPSCQueue | try_push+consume | 10 | 10 | 10 | 9 | 9 | 10 | 1.11 |
+| SPSCQueue | try_emplace+front+pop | 10 | 11 | 10 | 10 | 9 | 9 | 1.23 |
+| MPMCQueue | push+pop | 75 | 76 | 74 | 74 | 56 | 57 | 1.35 |
+| MPMCQueue | try_push+try_pop | 52 | 52 | 53 | 53 | 30 | 28 | 1.90 |
+| hffix | write_new_order | 384 | 178 | 300 | 138 | 342 | 346 | 2.78 |
+| hffix | read_all | 375 | 315 | 444 | 361 | 412 | 399 | 1.41 |
+| hffix | check | 111 | 30 | 32 | 31 | 33 | 33 | 3.74 |
+| spdlog | null sink info(int, double) | 142 | 148 | 139 | 150 | 147 | 148 | 1.08 |
+| spdlog | null sink info(string) | 76 | 81 | 68 | 73 | 64 | 64 | 1.27 |
+| spdlog | null sink debug below level | 12 | 13 | 11 | 11 | 6 | 6 | 2.07 |
+| spdlog | ostream sink info(int, double) | 307 | 293 | 278 | 291 | 288 | 290 | 1.10 |
+| fmt | format_to(memory_buffer) | 88 | 90 | 85 | 88 | 89 | 87 | 1.06 |
+| fmt | format int (short string) | 35 | 34 | 32 | 31 | 28 | 28 | 1.25 |
+| fmt | format double {:.4f} | 151 | 151 | 138 | 144 | 155 | 157 | 1.14 |
+| fmt | format long string | 153 | 159 | 148 | 150 | 150 | 152 | 1.08 |
+| simdjson | dom parse, reused parser | 222 | 221 | 217 | 213 | 196 | 199 | 1.13 |
+| quill | LOG_INFO int, double | 16 | 15 | 15 | 14 | 14 | 15 | 1.13 |
+| quill | LOG_INFO std::string | 18 | 19 | 16 | 16 | 17 | 17 | 1.14 |
+| quill | LOG_DEBUG below level | 3 | 3 | 3 | 3 | 7 | 7 | 2.77 |
+| readerwriterqueue | try_enqueue+try_dequeue | 10 | 10 | 10 | 10 | 10 | 11 | 1.17 |
+| readerwriterqueue | enqueue+try_dequeue | 20 | 12 | 10 | 11 | 12 | 14 | 1.99 |
+| unordered_dense | find (hit) | 18 | 18 | 28 | 19 | 21 | 20 | 1.53 |
+| unordered_dense | find (miss) | 16 | 16 | 27 | 16 | 16 | 16 | 1.71 |
+| unordered_dense | insert+erase | 46 | 46 | 44 | 44 | 48 | 48 | 1.11 |
+| unordered_dense | operator[] (hit) | 17 | 17 | 15 | 15 | 17 | 16 | 1.15 |
+| robin-map | find (hit) | 18 | 18 | 18 | 18 | 18 | 19 | 1.07 |
+| robin-map | find (miss) | 21 | 21 | 22 | 21 | 22 | 23 | 1.08 |
+| robin-map | insert+erase | 39 | 40 | 41 | 40 | 46 | 45 | 1.18 |
+| robin-map | operator[] (hit) | 18 | 20 | 21 | 19 | 21 | 21 | 1.17 |
+| parallel-hashmap | find (hit) | 19 | 19 | 18 | 18 | 18 | 18 | 1.08 |
+| parallel-hashmap | find (miss) | 17 | 17 | 16 | 16 | 16 | 16 | 1.04 |
+| parallel-hashmap | insert+erase | 70 | 71 | 69 | 70 | 70 | 70 | 1.02 |
+| parallel-hashmap | operator[] (hit) | 18 | 18 | 18 | 18 | 23 | 23 | 1.26 |
+| robin-hood-hashing | find (hit) | 35 | 35 | 35 | 35 | 37 | 37 | 1.06 |
+| robin-hood-hashing | find (miss) | 20 | 20 | 20 | 19 | 21 | 21 | 1.07 |
+| robin-hood-hashing | insert+erase | 101 | 99 | 101 | 97 | 106 | 103 | 1.10 |
+| robin-hood-hashing | operator[] (hit) | 40 | 38 | 40 | 37 | 43 | 43 | 1.16 |
+| fast_float | price 187.25 | 25 | 24 | 21 | 19 | 17 | 22 | 1.49 |
+| fast_float | integer 100 | 12 | 10 | 12 | 11 | 14 | 16 | 1.60 |
+| fast_float | 17 digits, exponent | 27 | 27 | 31 | 30 | 27 | 27 | 1.18 |
+| fast_float | 4567.123456789012 | 22 | 23 | 21 | 20 | 21 | 21 | 1.11 |
+| xxHash | XXH3_64bits 16 B | 7 | 8 | 7 | 8 | 7 | 7 | 1.18 |
+| xxHash | XXH3_64bits 64 B | 14 | 15 | 13 | 13 | 12 | 10 | 1.55 |
+| xxHash | XXH3_64bits 1024 B | 48 | 48 | 50 | 46 | 50 | 50 | 1.09 |
+| xxHash | XXH64 64 B | 19 | 14 | 18 | 14 | 16 | 16 | 1.39 |
+| xxHash | XXH64 1024 B | 113 | 107 | 110 | 107 | 113 | 108 | 1.06 |
+| eigen | Matrix4d * Matrix4d | 15 | 15 | 15 | 15 | 15 | 15 | 1.05 |
+| eigen | 8x8 matrix * vector | 35 | 38 | 45 | 50 | 37 | 37 | 1.42 |
+| eigen | dot of 256 doubles | 41 | 38 | 41 | 41 | 37 | 35 | 1.18 |
+| eigen | 4x4 Cholesky solve | 196 | 186 | 191 | 183 | 232 | 211 | 1.27 |
+
+A ratio near 1.1 is within what repeated rounds of the same build differ by for the allocating
+operations (Liquibook's spread between rounds was up to 83 ns); the tight operations repeat to within
+1 ns. The large, stable ratios are hffix (case 3), MPMCQueue (case 4), and the disabled-level paths
+of the two loggers, where clang is 2x faster than GCC for spdlog and 2x slower for quill (3 against 7
+ns). Among the numerical and hashing libraries the differences that repeat in every round are smaller
+but real: Eigen's 8x8 matrix-vector product takes 45 to 50 ns with GCC 15 against 30 to 38 with GCC 13
+and 37 with clang; Eigen's 4x4 Cholesky solve is about 20 % slower with clang; XXH64 over 64 bytes
+takes 19 ns with GCC 13 at `-O2` and 14 at `-O3`; parallel-hashmap's `operator[]` takes 23 ns with
+clang against 18 with GCC. None of these was investigated further. fast_float's differences did not
+repeat between rounds and are noise.
