@@ -7,7 +7,7 @@ prints. `README.md` says what the tool is and what it found; `docs/insights.md` 
 
 | question | command | exact? |
 |---|---|---|
-| Did this change add an allocation or a lock to a hot operation? | `replay/replay.py LIB --commits BASE,HEAD` then `replay/diff.py LIB` | yes, for the paths the workload takes |
+| Did this change add an allocation, a lock or instructions to a hot operation? | `replay/check.py LIB BASE HEAD` | yes, for the paths the workload takes |
 | Which line does it come from? | `replay/attribute.py LIB COMMIT` | yes |
 | Which stacks did a commit add, remove or change? | `replay/explain.py LIB COMMIT [BASE]` | yes |
 | When in the history did it start or stop? | `replay/replay.py LIB --stride N`, then `--refine`, then `diff.py` | yes, among commits that build |
@@ -37,7 +37,9 @@ writes the CSVs in `results/`.
 
 ## Recipes
 
-**Check a change for a hot-path regression.**
+**Check a change for a hot-path regression.** `replay/check.py LIB BASE HEAD` does steps 1 to 3 in one
+run (BASE and HEAD can be any commits of the clone, such as a merge base and a branch head; it exits 1
+if a count changed, 2 if only instructions did). By hand:
 1. Run `replay/replay.py LIB --commits BASE,HEAD` (commit prefixes) and `replay/diff.py LIB`.
 2. If no count changed, report that, with the operations measured. Do not infer anything from the
    `ns` column of these runs.

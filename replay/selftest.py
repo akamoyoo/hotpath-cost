@@ -35,6 +35,10 @@ SLOW = [
      [["replay.py", "concurrentqueue-explore", "--commits", "9c44f36d,a15a7236"], ["diff.py", "concurrentqueue-explore", "--tag", "{tag}"]],
      ["a15a7236", "alloc 0.13 -> 1.05"]),
 ]
+SLOW += [
+    ("check.py: abseil f2f4fa2c changes instructions only, +50 % per operator[]",
+     ["check.py", "abseil", "d5ccaa21", "f2f4fa2c"], ["+49.9 %", "no count changed; instructions changed"]),
+]
 STATIC = [
     ("combine.py: Liquibook's fixed workload reaches 5 of 85 hot sites, no static miss",
      ["combine.py", "liquibook", "25b0c5ec"], ["reached 5 of 85 static sites not marked cold; 0 static misses"]),
@@ -57,7 +61,7 @@ def main():
             for c in (cmds if isinstance(cmds[0], list) else [cmds]):
                 rc, o = run([a.replace("{tag}", tag) for a in c], env); out += o
                 if rc: break
-            ok = rc == 0 and all(w in out for w in (want or []))
+            ok = (rc == 0 or (c[0] == "check.py" and rc in (1, 2))) and all(w in out for w in (want or []))
             print(f"{'ok  ' if ok else 'FAIL'} {what}")
             if not ok: fails += 1; print("     " + out[-1500:].replace("\n", "\n     "))
         for what, cmd, want in CHECKS: check(what, cmd, want)
@@ -69,7 +73,9 @@ def main():
             print(f"{'ok  ' if ok else 'FAIL'} {proj} {c} {op}: alloc {a}, lock {l}" + ("" if ok else f" (got {got})"))
             fails += not ok
         if not quick:
-            for what, cmds, want in SLOW: check(what, cmds, want)
+            for what, cmds, want in SLOW:
+                if "check.py" in str(cmds) and not os.environ.get("VALGRIND"): print(f"skip {what} (VALGRIND not set)"); continue
+                check(what, cmds, want)
         if static:
             for what, cmd, want in STATIC: check(what, cmd, want)
         subprocess.run(["rm", "-rf", *[str(p) for p in (top / "out").glob(f"*{tag}*")]])

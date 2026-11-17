@@ -181,8 +181,8 @@ replay/gap.py hffix fix_write_new_order            # why one compiler is faster 
 replay/selftest.py                                 # check the tool against results it is known to give
 ```
 
-For a change under review, measuring the merge base and the head is enough:
-`replay/replay.py LIB --commits BASE,HEAD`. To add a library, write a driver and a workload (see
+For a change under review, `replay/check.py LIB BASE HEAD` measures the merge base and the head:
+counts, the stacks that changed, and instructions per call. To add a library, write a driver and a workload (see
 [docs/method.md](docs/method.md#using-it-on-another-library)).
 
 ## Documents
