@@ -47,6 +47,8 @@ def main():
     rev = lambda c: subprocess.run(["git", "-C", str(rp.TOP / "src" / proj), "rev-parse", c],
                                    capture_output=True, text=True, check=True).stdout.strip()
     b, h = rev(base), rev(head)
+    if b == h and "--same-ok" not in sys.argv:   # comparing a commit with itself always reports no change
+        fail(f"{base} and {head} are the same commit ({b[:8]})")
     fields = rp.compared_fields(proj)
     print(f"{proj} {cc} {rp.OPT}: {b[:8]} -> {h[:8]}")
     before, after = measure(proj, cc, b, False), measure(proj, cc, h, False)

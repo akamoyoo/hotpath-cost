@@ -191,7 +191,8 @@ replay/selftest.py                                 # check the tool against resu
 ```
 
 For a change under review, `replay/check.py LIB BASE HEAD` measures the merge base and the head:
-counts, the stacks that changed, and instructions per call. To add a library, write a driver and a workload (see
+counts, the stacks that changed, and instructions per call. `replay/prs.py LIB` does that for every open
+pull request of the library that touches its hot paths. To add a library, write a driver and a workload (see
 [docs/method.md](docs/method.md#using-it-on-another-library)).
 
 ## Documents

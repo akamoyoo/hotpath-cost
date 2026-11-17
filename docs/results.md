@@ -60,8 +60,8 @@ compiler matrix below compares.
 
 ## Open pull requests
 
-`replay/check.py LIB BASE HEAD` on every open pull request (November 17, 2026, up to 30 per library)
-that touches a library's measured paths, BASE being its merge base: 148 pull requests of 14 libraries
+`replay/prs.py LIB` (`check.py LIB BASE HEAD` on every open pull request (November 17, 2026, up to 30 per library)
+that touches a library's measured paths, BASE being its merge base): 148 pull requests of 14 libraries
 (spdlog, fmt, simdjson, nlohmann/json, glaze, quill, msgpack-c, yyjson, parallel-hashmap, fast_float,
 Taskflow, xxHash, rapidjson, flatbuffers; concurrentqueue's 8 checked first). 122 change no count and
 no instruction count by 3 % or more; 2 do not build with the workload. The others, priced with

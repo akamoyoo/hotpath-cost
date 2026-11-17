@@ -8,6 +8,7 @@ prints. `README.md` says what the tool is and what it found; `docs/insights.md` 
 | question | command | exact? |
 |---|---|---|
 | Did this change add an allocation, a lock or instructions to a hot operation? | `replay/check.py LIB BASE HEAD` | yes, for the paths the workload takes |
+| Do any of the library's open pull requests? | `replay/prs.py LIB` (needs `gh`) | as `check.py` |
 | Which line does it come from? | `replay/attribute.py LIB COMMIT` | yes |
 | Which stacks did a commit add, remove or change? | `replay/explain.py LIB COMMIT [BASE]` | yes |
 | When in the history did it start or stop? | `replay/replay.py LIB --stride N`, then `--refine`, then `diff.py` | yes, among commits that build |
