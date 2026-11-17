@@ -178,6 +178,7 @@ replay/replay.py fast_float --metric instr         # instructions per call at ev
 replay/diff.py fast_float --instr 5                # commits that changed them by 5 % or more
 replay/price.py fast_float 254f10ce 3044c9b1       # what such a change costs in time
 replay/gap.py hffix fix_write_new_order            # why one compiler is faster than another
+replay/selftest.py                                 # check the tool against results it is known to give
 ```
 
 For a change under review, measuring the merge base and the head is enough:

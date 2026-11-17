@@ -283,6 +283,10 @@ def main():
         cs = cs[::k] + ([cs[-1]] if (len(cs) - 1) % k else [])
     if "--commits" in sys.argv:
         want = sys.argv[sys.argv.index("--commits") + 1].split(",")
+        missing = [w for w in want if not any(c[0].startswith(w) for c in cs)]
+        if missing:   # a commit that touches none of the project's paths is not a library commit
+            sys.exit(f"{proj}: no library commit matches {', '.join(missing)} (only first-parent commits that touch "
+                     f"{', '.join(P[proj]['paths'])} are measured); the latest one is {cs[-1][0][:8]}")
         cs = [c for c in cs if any(c[0].startswith(w) for w in want)]
     with concurrent.futures.ThreadPoolExecutor(j) as ex:
         for h, st in ex.map(lambda c: one(proj, cc, c[0]), cs):

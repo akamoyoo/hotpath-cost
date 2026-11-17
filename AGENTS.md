@@ -26,6 +26,9 @@ prints. `README.md` says what the tool is and what it found; `docs/insights.md` 
    -DCMAKE_CXX_COMPILER=<llvm>/bin/clang++ && ninja -C build)          # only for static/ and combine.py
 ```
 
+After changing the tool, run `replay/selftest.py` (about a minute; `--quick` and `--no-static` skip
+parts): it checks exact counts and reports the documents rely on, in a temporary output directory.
+
 Environment variables: `CXX_GCC`, `CXX_GCC15`, `CXX_CLANG` (compilers), `REPLAY_OPT` (default `-O2`),
 `REPLAY_TAG` (suffix of the output directory), `REPLAY_CORES` (comma-separated cores to pin runs to),
 `LLVM_BIN` and `FN_EFFECTS` (for `combine.py`), `VALGRIND` and `VALGRIND_INC` (the valgrind binary and
