@@ -67,13 +67,21 @@ def main():
     ichanged = False
     if "--no-instr" not in sys.argv and rp.VALGRIND:
         print("\ninstructions per call (callgrind):")
-        bi, hi = measure(proj, cc, b, True), measure(proj, cc, h, True)
-        for op, y in hi.items():
-            x = bi.get(op)
-            if x is None: continue
-            d = (y["instr"] - x["instr"]) * 100 / max(x["instr"], 1)
-            ichanged |= abs(d) >= pct
-            print(f"  {op:40} {x['instr']:8.0f} -> {y['instr']:8.0f}  ({d:+.1f} %)" + ("   CHANGED" if abs(d) >= pct else ""))
+        # with another thread (cores > 1), the calling thread's instructions depend on scheduling (Taskflow:
+        # +-2 % between runs of one build): measure three times and call a change only if the ranges are apart
+        reps = 3 if rp.P[proj].get("cores", 1) > 1 else 1
+        if reps > 1: print(f"  (the workload runs another thread: {reps} runs each, min..max)")
+        bi = [measure(proj, cc, b, True) for _ in range(reps)]; hi = [measure(proj, cc, h, True) for _ in range(reps)]
+        for op in hi[0]:
+            if op not in bi[0]: continue
+            xs, ys = [r[op]["instr"] for r in bi], [r[op]["instr"] for r in hi]
+            x, y = sorted(xs)[len(xs) // 2], sorted(ys)[len(ys) // 2]
+            d = (y - x) * 100 / max(x, 1)
+            apart = min(ys) > max(xs) or max(ys) < min(xs)
+            ch = abs(d) >= pct and (reps == 1 or apart)
+            ichanged |= ch
+            rng = lambda v: f"{v[0]:.0f}" if reps == 1 else f"{min(v):.0f}..{max(v):.0f}"
+            print(f"  {op:40} {rng(xs):>12} -> {rng(ys):>12}  ({d:+.1f} %)" + ("   CHANGED" if ch else ""))
     elif "--no-instr" not in sys.argv:
         print("\n(instructions not measured: set VALGRIND, and VALGRIND_INC for callgrind.h)")
     verdict = ("a count changed: name the stacks above, and price it with price.py" if changed else

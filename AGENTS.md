@@ -115,7 +115,10 @@ other undefined symbol, and every undefined variable, fails the build.
   frees counted on the calling thread depend on which thread drops the last reference, and vary between
   runs of the same build (Taskflow: 1.4 to 2.8 per call), so `diff.py` and `--refine` do not compare
   them. Locks can vary slightly too (Taskflow `348ba9b4`: 3.99 to 4.00 per call); treat a change smaller
-  than one per call there as possible noise and rerun both commits.
+  than one per call there as possible noise and rerun both commits. Instructions per call are not exact there either: the
+  calling thread waits for the other, and a build's count varies by about 2 % between runs (Taskflow,
+  up to 8 %). `check.py` measures such workloads three times and calls a change only when the ranges do
+  not overlap; treat `diff.py --instr` results for them as leads.
 - **First-call counts** include one-time set-up and depend on which operation the workload runs
   first. Say "first call" explicitly when reporting them.
 - **Static verdicts.** `may` means some path reaches the primitive, not that it runs. `never` and
