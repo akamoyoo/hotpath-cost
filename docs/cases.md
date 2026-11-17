@@ -204,20 +204,27 @@ short; that was not measured separately. Not reported upstream yet (Eigen's trac
 
 ## Case 6: a random order flow reaches the paths, and finds an out-of-bounds write in Liquibook
 
-The static analysis listed 21 allocation sites, not marked cold, reachable from adding an order to
-Liquibook's book with conditions. The fixed workload (resting orders, added and cancelled) reaches 5.
+Over Liquibook's five entry functions (add, add with conditions, immediate-or-cancel, cancel, replace),
+the static analysis lists 85 allocation sites not marked cold; 19 of them are reachable from adding an
+order with conditions. The fixed workload (resting orders, added and cancelled) reaches 5 of the 85.
 An exploration workload (`replay/workloads/liquibook_explore.cpp`) replays a seeded random flow instead:
 resting and crossing limit orders, market orders, stop orders, all-or-none, immediate-or-cancel and
 fill-or-kill orders, cancels and replaces. `replay/combine.py liquibook-explore 2427613b32`:
 
 ```
 == hp_entry::lb_add_cond(...)
+   reached 10 of the 19 static sites not marked cold
    exercised (13): stop orders (order_book.h:591-629), all-or-none matching (829-979), trades,
                    depth levels, and one allocation by __cxa_allocate_exception (0.13 per call)
    not exercised: 9 not marked cold: growth of the callback vector (1109) and an error path
                   that the analysis did not mark cold (1249-1252)
    static miss (0)
+...
+all entries: reached 14 of 85 static sites not marked cold; 0 static misses
 ```
+
+"exercised" lists run-time stacks, several of which can land on one static site or on a site marked
+cold; "reached" counts static sites.
 
 The allocation by `__cxa_allocate_exception` was an exception thrown inside the book, 0.13 times per
 call over the traced calls: `std::runtime_error("Unexpected ignore_ask_fill_qty_")`, caught and printed by

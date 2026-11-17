@@ -38,7 +38,7 @@ each of these lessons changed how it works ([evidence](docs/insights.md)):
    Liquibook versions that may both allocate; only the static view named the 22 allocating paths that
    the workload never took.
 6. **The static view tells the workload where to go.** A random order flow written to reach the
-   sites the analysis listed raised Liquibook's coverage from 5 to 13 of 21, and turned up a
+   sites the analysis listed raised Liquibook's coverage from 5 to 14 of its 85 hot sites, and turned up a
    memory-corruption bug on the way; random bursts on concurrentqueue showed it freeing and
    reallocating its blocks whenever its length crosses its initial capacity.
 7. **Costs enter through refactorings, come back, and stay unreleased.** A lock removed in 2016 came
@@ -145,8 +145,8 @@ updates. Not yet reported upstream.
 
 **6. A random order flow reaches the hidden paths, and finds an out-of-bounds write in Liquibook**
 ([details](docs/cases.md#case-6-a-random-order-flow-reaches-the-paths-and-finds-an-out-of-bounds-write-in-liquibook)).
-Of the 21 allocation sites the static analysis lists for adding an order with conditions, the fixed
-workload reaches 5 and a seeded random order flow 13. One of them was `__cxa_allocate_exception`: the
+Over Liquibook's five entry functions the static analysis lists 85 allocation sites not marked cold; the
+fixed workload reaches 5 of them and a seeded random order flow 14. One of them was `__cxa_allocate_exception`: the
 book threw "Unexpected ignore_ask_fill_qty_" in ordinary order flow. Reduced to ten orders, it came
 down to `Depth::find_level` returning a past-the-end pointer instead of `nullptr`, so fills of a
 triggered stop order overwrite the members after the price levels

@@ -156,7 +156,7 @@ def main():
                                          capture_output=True, text=True).stdout.splitlines()
         try: return cache[path][int(line) - 1]
         except (ValueError, IndexError): return ""
-    report = {}
+    report = {}; totals = [0, 0, 0]
     for entry in sorted(set(st) | set(dy)):
         s, by_fn = st.get(entry, ({}, {})); d = dy.get(entry, {})
         used = set(); exercised = []; miss = []
@@ -167,8 +167,13 @@ def main():
             if hit: used.add(hit); exercised.append(row)
             else: miss.append(row)
         notex = [dict(kind=k[0], key=k[2], **v) for k, v in sorted(s.items()) if k not in used]
-        report[entry] = dict(exercised=exercised, not_exercised=notex, static_miss=miss)
+        n_static = sum(1 for v in s.values() if v.get("temp") != "c")
+        n_reached = sum(1 for k in used if s.get(k, {}).get("temp") != "c")
+        report[entry] = dict(exercised=exercised, not_exercised=notex, static_miss=miss,
+                             hot_sites=n_static, hot_sites_reached=n_reached)
+        totals[0] += n_static; totals[1] += n_reached; totals[2] += len(miss)
         print(f"== {entry}")
+        if n_static: print(f"   reached {n_reached} of the {n_static} static sites not marked cold")
         if entry not in dy:
             n_hot = sum(1 for r in notex if r["temp"] != "c")
             print(f"   no allocation or lock at run time (or not called); static: {n_hot} sites not marked cold, {len(notex) - n_hot} cold")
@@ -187,6 +192,7 @@ def main():
         print(f"   static miss ({len(miss)}):")
         for r in miss:
             print(f"      {r['kind']:5} {r['loc']:32} {short(r['function'])[:60]:60} per call {r['steady']:.2f}, first call {r['first']:.0f}")
+    print(f"all entries: reached {totals[1]} of {totals[0]} static sites not marked cold; {totals[2]} static misses")
     if "--json" in sys.argv:
         json.dump(report, open(sys.argv[sys.argv.index("--json") + 1], "w"), indent=1)
 

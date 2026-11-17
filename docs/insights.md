@@ -114,8 +114,9 @@ run time in the measured Liquibook and concurrentqueue operations matches a stat
 
 The list of sites a workload never reaches is a list of targets. For Liquibook, a seeded random order
 flow written to reach them (all order types, cancels and replaces, every action prepared before
-measurement) exercised 13 of the 21 sites not marked cold, against 5 for the fixed workload; the rest
-were the growth of a vector beyond its reserved size and an error path. It also found a bug the tool was
+measurement) reached 14 of the 85 sites not marked cold over the five entry functions, against 5 for
+the fixed workload; for adding an order with conditions, 10 of 19, and the rest of those were the
+growth of a vector beyond its reserved size and an error path. It also found a bug the tool was
 not looking for: one of the exercised "allocations" was `__cxa_allocate_exception`, an exception thrown
 inside the book during ordinary order flow. Reduced to ten orders and traced, it was an out-of-bounds
 write in `Depth::find_level` (case 6 in `cases.md`). Counting allocations made the exception visible;

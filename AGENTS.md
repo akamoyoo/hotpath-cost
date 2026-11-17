@@ -60,7 +60,9 @@ source and timing every compiler with `cases/*/run.sh`-style scripts; a fix for 
 another.
 
 **Find which paths the workload misses.** Run `replay/combine.py LIB COMMIT` and report the "not
-exercised" sites that are not marked cold. Each is a place that may allocate or lock in production and
+exercised" sites that are not marked cold. The line "reached k of the n static sites not marked
+cold" (per entry, and for all entries at the end) is the coverage to quote; "exercised" counts run-time
+stacks, several of which can match one site. Each is a place that may allocate or lock in production and
 that the workload does not show. Report "static miss" lines as possible defects of the static analysis,
 after checking them as described under "Matching".
 
