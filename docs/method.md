@@ -65,7 +65,19 @@ head names the new line.
   One build of hffix's checksum took 109 ns or 155 ns on the same idle core depending on how busy
   the other cores were; the encoder took up to 55 % longer on a core whose hyperthread sibling was busy. Timings in
   this repository are medians of interleaved rounds on one physical core of an otherwise idle
-  machine, and are compared only within one table.
+  machine, and are compared only within one table. `price.py` now samples the timing cores and their
+  hyperthread siblings before it starts and warns when one is busy.
+- **Linking with undefined symbols ignored.** To build abseil's history without its hash-table
+  sampling (which pulls in `absl::Mutex`, flags and stack traces), the first attempt linked with the
+  linker's option to ignore unresolved symbols. That is safe for a function that is never called, but
+  not for a variable: in the 2019 versions, which sampled by default, the per-thread sample counter was
+  left undefined, and the native run decremented a word of thread-local storage near address 0 and
+  carried on; only callgrind crashed. Builds now name the functions that may stay undefined and fail on
+  anything else.
+- **Results cached across workload changes.** A replay compared a cached result of an earlier version
+  of the concurrentqueue exploration workload with a result of the current one, and reported a change
+  at a commit that only removed `static` from inline functions. Cached results now carry a fingerprint
+  of the workload and its configuration, and are set aside when it changes.
 
 ## What is not claimed
 
