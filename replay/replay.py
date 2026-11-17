@@ -86,7 +86,11 @@ P = {
                    # the versions that enabled it by default
                    srcs=[], srcs_if_present=["absl/container/internal/raw_hash_set.cc", "absl/hash/internal/hash.cc",
                          "absl/hash/internal/city.cc", "absl/hash/internal/low_level_hash.cc",
-                         "absl/base/internal/raw_logging.cc"], flags=["-DABSL_CONSUME_DLL"],
+                         "absl/base/internal/raw_logging.cc"],
+                   # from c349faaf (2026-05-13) to d851fdd7 (2026-06-09) raw_hash_set.h includes <bmi2intrin.h>
+                   # directly, which GCC rejects; including the header it asks for first, in every
+                   # translation unit, lets those commits build
+                   flags=["-DABSL_CONSUME_DLL", "-include", "x86gprintrin.h"],
                    unresolved_ok=["ForcedTrySample", "SampleSlow", "UnsampleSlow", "RecordInsertSlow",
                                   "RecordRehashSlow", "RecordStorageChangedSlow", "RecordEraseSlow",
                                   "RecordReservationSlow", "RecordClearedReservationSlow", "SampleForTesting"]),

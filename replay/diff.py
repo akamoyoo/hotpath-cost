@@ -30,6 +30,7 @@ def main():
     fields = rp.compared_fields(proj) if proj in rp.P else ("alloc", "free", "lock", "first_alloc", "first_lock")
     order = json.load(open(out / "order.json"))
     prev = None; n_ok = n_bfail = n_rfail = n_chg = 0; first = last = None
+    idx = {c: i for i, (c, _, _) in enumerate(order)}
     for h, date, subj in order:
         f = out / f"{h}.jsonl"
         if not f.exists():
@@ -53,7 +54,17 @@ def main():
                 if ch: lines.append(f"    {op}: " + "; ".join(ch))
             if lines:
                 n_chg += 1
-                print(f"{h[:8]} {date} {subj[:80]}   (from {ph[:8]})")
+                gap = idx[h] - idx[ph] - 1
+                if gap == 0:
+                    print(f"{h[:8]} {date} {subj[:80]}   (from {ph[:8]}, the previous library commit)")
+                else:   # say why the commits in between were not measured: the change is anywhere in them
+                    why = {"failed to build": 0, "failed to run": 0, "not run": 0}
+                    for c, _, _ in order[idx[ph] + 1:idx[h]]:
+                        fl = out / f"{c}.fail"
+                        why["not run" if not fl.exists() else "failed to build" if fl.read_text().startswith("BUILD") else "failed to run"] += 1
+                    reason = ", ".join(f"{n} {k}" for k, n in why.items() if n)
+                    print(f"{ph[:8]}..{h[:8]} {date} {subj[:60]}   ({gap} commits in between not measured: {reason};"
+                          f" the change is in this interval{'; run --refine' if why['not run'] else ''})")
                 print("\n".join(lines))
         prev = (h, cur)
     if "free" not in fields: print(f"(frees not compared: the workload runs another thread, see replay.compared_fields)")

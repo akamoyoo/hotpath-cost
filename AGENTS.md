@@ -79,9 +79,11 @@ thrown by the library during normal-looking use; look at the full stack with
 
 **Find where a cost entered the history.** Sample with `--stride` (about 50 to 70 samples), then run
 `--refine` until it stops, then `diff.py`, then `explain.py LIB COMMIT` on each commit it reports
-(the base defaults to the commit `diff.py` reports the change "from"). A change reported "from X" where X is not the previous
-commit means the commits in between do not build with the driver: report an interval, and use
-`git log -S'<the line>'` on the attributed line to name the commit.
+(the base defaults to the commit `diff.py` reports the change "from"). A change printed as an interval, `A..B (N commits in between not measured: ...)`, is
+somewhere in those commits, not necessarily at B. If some were not run, run `--refine`; if they fail to
+build, look at why (`out/<build>/LIB/<commit>.fail`): a workaround in `P` often makes them build (abseil
+included a header GCC rejects for a month). Otherwise report the interval, and use `git log -S'<the
+line>'` on the line `explain.py` names to find the commit.
 
 **Add a library.** Write `replay/drivers/LIB/main.cpp` (operations as `HP_ENTRY` functions with
 opaque arguments, and a `main`) and `replay/workloads/LIB.cpp` (calls them through `run_ops`), or one

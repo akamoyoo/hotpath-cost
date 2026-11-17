@@ -92,7 +92,7 @@ def main():
             b = rp.build(proj, cc, c, d, exe)
             if b.returncode: print(f"{name}: build failed"); continue
             funcs = disasm(exe)
-            cands = [g for g in funcs if g.startswith("hp_entry::") and want in g]
+            cands = [g for g in funcs if re.match(r"(\S+\s+)*hp_entry::", g) and want in g]   # templates carry a return type
             entry = next((g for g in cands if "[clone" not in g), cands[0] if cands else None)
             if entry is None: sys.exit(f"no entry function containing {want!r}")
             facts, outline = tree_facts(funcs, entry)
