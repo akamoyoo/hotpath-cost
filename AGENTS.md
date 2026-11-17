@@ -60,6 +60,17 @@ exercised" sites that are not marked cold. Each is a place that may allocate or 
 that the benchmark does not show. Report "static miss" lines as possible defects of the static analysis,
 after checking them as described under "Matching".
 
+**Reach the paths the benchmark misses.** For a library with an exploration benchmark
+(`replay/bench/<lib>_explore.cpp`, configured as `<lib>-explore` in `P`, on the same clone through a
+link in `src/`), run `replay/combine.py <lib>-explore COMMIT`. The benchmark replays a seeded random
+sequence of realistic operations; the report counts, per entry, how many of the static sites it
+exercised. To write one for another library, prepare every action and object before `run_ops` so that
+only the library's own allocations are counted, and call the same driver entries as the fixed
+benchmark (add an entry when a path needs a parameter the existing ones fix, such as order conditions).
+An event in an exploration run that is reached only through `__cxa_allocate_exception` is an exception
+thrown by the library during normal-looking use; look at the full stack with
+`attribute.py <lib>-explore COMMIT --cc clang --json`.
+
 **Find where a cost entered the history.** Sample with `--stride` (about 50 to 70 samples), then run
 `--refine` until it stops, then `diff.py`. A change reported "from X" where X is not the previous
 commit means the commits in between do not build with the driver: report an interval, and use
@@ -97,15 +108,6 @@ library's header; older headers relied on transitive includes.
   miss, look at the full stack (`attribute.py LIB COMMIT --cc clang --json`) and the static sites of
   the functions on it.
 - **A machine-code difference is not a cost.** Measure before reporting one as a regression.
-
-## Proposing a fix upstream
-
-Check that the patched library behaves the same: identical output on many random inputs for
-encoders and parsers, a multi-threaded stress test with exactly-once delivery for queues, and the
-project's own tests (under ThreadSanitizer where it applies). Time every compiler the project
-supports, because a change that helps one compiler can hurt another (`cases/hffix`). Report the
-contended and the uncontended case separately for concurrent code. Look for existing issues and pull
-requests on the same subject first.
 
 ## Known pitfalls
 

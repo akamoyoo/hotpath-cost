@@ -61,6 +61,10 @@ P = {
     "dragonbox": dict(bench="dragonbox", paths=["include"], inc=["include"], srcs=[]),
     "libdivide": dict(bench="libdivide", paths=["libdivide.h"], inc=["."], srcs=[]),
     "date": dict(bench="date", paths=["include/date/date.h"], inc=["include"], srcs=[]),
+    # A random order flow on the same driver, to reach the paths a fixed benchmark does not take
+    # (src/liquibook-explore is a link to src/liquibook; fetch.sh makes it).
+    "liquibook-explore": dict(drv="liquibook", bench="liquibook_explore", paths=["src/book", "src/simple"], inc=["src"],
+                              srcs=["src/simple/simple_order.cpp"]),
     "fmtlog": dict(bench="fmtlog", paths=["fmtlog.h", "fmtlog-inl.h", "fmt"], inc=[".", "fmt/include"], srcs=[],
                    submodules={"fmt": "fmt"}, flags=["-DFMTLOG_HEADER_ONLY", "-DFMT_HEADER_ONLY"], cores=2),
     "bitsery": dict(bench="bitsery", paths=["include"], inc=["include"], srcs=[]),
@@ -79,7 +83,7 @@ def outdir(proj, cc):
     return TOP / "out" / (cc + TAG + ("-instr" if METRIC == "instr" else "")) / proj
 
 def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
-    bench = HERE / "bench" / f"{cfg.get('drv') or cfg['bench']}.cpp"
+    bench = HERE / "bench" / f"{cfg.get('bench') or cfg['drv']}.cpp"
     drv = [f"-I{HERE / 'drivers' / cfg['drv']}"] if "drv" in cfg else []
     return [CXX[cc], std, OPT, "-DNDEBUG", "-pthread", "-march=x86-64-v3", "-w", *extra,
             *[f"-I{tree / i}" for i in cfg["inc"]], *drv, *cfg.get("flags", []),

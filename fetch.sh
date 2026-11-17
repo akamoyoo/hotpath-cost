@@ -32,3 +32,4 @@ dragonbox https://github.com/jk-jeon/dragonbox
 libdivide https://github.com/ridiculousfish/libdivide
 date https://github.com/HowardHinnant/date
 LIST
+ln -sfn liquibook src/liquibook-explore   # replay/bench/liquibook_explore.cpp runs on the same clone

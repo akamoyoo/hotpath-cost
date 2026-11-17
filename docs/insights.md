@@ -110,7 +110,22 @@ not misses: the static analysis records an inlined callee's site at its caller's
 run-time stack had lost a frame to a tail call. With those rules, every allocation and lock seen at
 run time in the measured Liquibook and concurrentqueue operations matches a static site.
 
-## 6. Costs enter through refactorings, come back, and stay unreleased
+## 6. The static view tells the benchmark where to go
+
+The list of sites a benchmark never reaches is a list of targets. For Liquibook, a seeded random order
+flow written to reach them (all order types, cancels and replaces, every action prepared before
+measurement) exercised 13 of the 21 sites not marked cold, against 5 for the fixed benchmark; the rest
+were the growth of a vector beyond its reserved size and an error path. It also found a bug the tool was
+not looking for: one of the exercised "allocations" was `__cxa_allocate_exception`, an exception thrown
+inside the book during ordinary order flow. Reduced to ten orders and traced, it was an out-of-bounds
+write in `Depth::find_level` (case 6 in `cases.md`). Counting allocations made the exception visible;
+the static list made the exploration go where it was.
+
+A random flow is enough here because the operations of an order book are few and cheap to generate.
+It does not need a fuzzing framework: a fixed seed keeps each run reproducible, and the existing call
+stack recording and matching attribute everything it reaches.
+
+## 7. Costs enter through refactorings, come back, and stay unreleased
 
 - spdlog's null sink took a mutex until a 2016 commit removed it. A 2018 refactoring ("pattern per
   sink and pattern caching") put it back for six releases, and a one-line commit removed it again in

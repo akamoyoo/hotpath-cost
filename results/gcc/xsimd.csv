@@ -1,3 +1,46 @@
 commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+e573901ee103f4c79a99f795468691445351ca7b,2016-03-02,build failed,,,,,,,,Merge pull request #1 from jmabille/dev
+e70a6cec675079579711fb3cf537c3af372f074a,2017-06-13,build failed,,,,,,,,Merge pull request #43 from JohanMabille/power
+5a04fd50aa9c1f2df45a2d8217a13cdd04d65c0a,2018-04-03,build failed,,,,,,,,Release 4.1.2
+73e64319dc90edc0595dcf098e01ca42763556e8,2018-07-18,build failed,,,,,,,,Merge pull request #146 from wolfv/complex_float_accuracy_neon
+1b0408f8dc953710774a243bcef4dcc9a89a2a61,2018-10-02,build failed,,,,,,,,Merge pull request #186 from JohanMabille/avx512
+8249f51fc564c2522fcf4f77cf46ad346e79567d,2018-12-03,build failed,,,,,,,,update readme (#221)
+b429c11beb7cecec792b2d2e8d7df3b3a485c93d,2019-04-30,build failed,,,,,,,,Release 7.2.0
+e9d65ccd1588b4b607daf36eec219934f1375cc4,2019-11-20,build failed,,,,,,,,Merge pull request #322 from JohanMabille/avx512
+cd81a6c5903e3da064fe9677bc60c7ffeac50e8d,2020-06-22,build failed,,,,,,,,Merge pull request #372 from AlessioZanga/patch-1
+e04cd9380e5ca19fa63914d111e50d926d76a6a0,2021-04-20,build failed,,,,,,,,Merge pull request #454 from serge-sans-paille/ref_314
+311d3051a4f895356ede8821c05f31f394c27052,2021-08-25,build failed,,,,,,,,Merge pull request #541 from xtensor-stack/fix/improve-doc
+ca9533e9d561ad80be5e77bc49ff562ee8d712a6,2021-10-14,build failed,,,,,,,,Merge pull request #604 from xtensor-stack/feature/contexprness
+394baa44ccf0aee94871644eaec9a9fb3819d258,2022-02-09,build failed,,,,,,,,Merge pull request #649 from xtensor-stack/feature/swizzle
+f6c1daf1708fecd89a751d704c55c5411b5d0533,2022-04-19,build failed,,,,,,,,Fix integer sign during shift
+33c87e40a4900a11799e85dd79b1b17b8de5f6aa,2022-06-17,build failed,,,,,,,,Merge pull request #769 from xtensor-stack/feature/doxygen-coverage
+76d87c2c7a8fe5716e97da9d2e078158fd812df8,2022-10-05,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,116.0,Implement non-AVX specific zipping
+76d87c2c7a8fe5716e97da9d2e078158fd812df8,2022-10-05,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,204.6,Implement non-AVX specific zipping
+07ff958f3349237fbe9f6963d4f986c099ed24ff,2023-01-28,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,116.0,Provide fast byte multiply on avx2
+07ff958f3349237fbe9f6963d4f986c099ed24ff,2023-01-28,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,204.6,Provide fast byte multiply on avx2
+f27bbb85be2a60cedb0585c2306ea8405f49af90,2023-10-25,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,151.3,Merge pull request #952 from anutosh491/Introducing_wasm_based_IS
+f27bbb85be2a60cedb0585c2306ea8405f49af90,2023-10-25,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,249.4,Merge pull request #952 from anutosh491/Introducing_wasm_based_IS
+ead07427834c82aac105d36b8671abbe915c441c,2024-02-05,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,156.9,Use dedicated instructions for zip / unzip on arm64
+ead07427834c82aac105d36b8671abbe915c441c,2024-02-05,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,252.6,Use dedicated instructions for zip / unzip on arm64
+d50061f78e0ee8d83774c0541a2f3f85b88a461f,2024-10-15,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,151.4,Fix clang-17 miscompilation of __riscv_vreinterpret_u8m8
+d50061f78e0ee8d83774c0541a2f3f85b88a461f,2024-10-15,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,250.4,Fix clang-17 miscompilation of __riscv_vreinterpret_u8m8
+0a5320a516c9141c62c507d290d81090f5bcccaf,2025-03-28,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,152.3,Reorder make_batch_constant and make_batch_bool_constant template arguments
+0a5320a516c9141c62c507d290d81090f5bcccaf,2025-03-28,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,249.9,Reorder make_batch_constant and make_batch_bool_constant template arguments
+062d70cd695fe442b95b14d48ea21e33db5cc0ea,2025-07-21,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,152.7,avx512bw: Optimize shift_left and shift_right.
+062d70cd695fe442b95b14d48ea21e33db5cc0ea,2025-07-21,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,251.7,avx512bw: Optimize shift_left and shift_right.
+62a008c797a475bad3ce8defe9a462197a247bf8,2025-10-09,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,151.8,Optimize avx2 store of batch_bool for 64 bit registers
+62a008c797a475bad3ce8defe9a462197a247bf8,2025-10-09,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,249.7,Optimize avx2 store of batch_bool for 64 bit registers
+1e83d9e30c7f53642a50683532f5e5df76874177,2025-11-20,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,151.5,[cleanup] Remove some redundant code in batch_bool_constant
+1e83d9e30c7f53642a50683532f5e5df76874177,2025-11-20,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,248.3,[cleanup] Remove some redundant code in batch_bool_constant
+581cc89f645038f068c43167e2a17774469b476c,2026-02-02,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,116.2,Slighly less pessimistic detection of neon64
+581cc89f645038f068c43167e2a17774469b476c,2026-02-02,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,204.6,Slighly less pessimistic detection of neon64
+174247d29021cded98e65c7df29da94961cc0a28,2026-04-15,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,121.9,Merge pull request #1302 from AntoinePrv/sve-rvv-vl
+174247d29021cded98e65c7df29da94961cc0a28,2026-04-15,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,205.9,Merge pull request #1302 from AntoinePrv/sve-rvv-vl
+cc9ca3834b480b9b0490950518430397d1c03a05,2026-05-06,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,119.6,Fix C++ version detection for MSVC (#1342)
+cc9ca3834b480b9b0490950518430397d1c03a05,2026-05-06,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,205.2,Fix C++ version detection for MSVC (#1342)
+171349b0dfeb297ffd17e8af0c20c41bcc6a44ba,2026-07-10,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,116.4,perf(avx/avx2): plain-move lowering for constant-mask load/store
+171349b0dfeb297ffd17e8af0c20c41bcc6a44ba,2026-07-10,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,205.1,perf(avx/avx2): plain-move lowering for constant-mask load/store
+67ade8191dc48d9638dac2761bafc6986b259f5c,2026-10-01,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,124.1,Specialise constant-mask swizzle for lsx and lasx
+67ade8191dc48d9638dac2761bafc6986b259f5c,2026-10-01,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,206.5,Specialise constant-mask swizzle for lsx and lasx
 4c44d61d37c54168ace259d9b9d26918ef294cbc,2026-11-12,ok,sum of 1024 floats,0.0,0.0,0.0,0,0,116.2,Test complex issue 1432 functions on hardcoded cases
 4c44d61d37c54168ace259d9b9d26918ef294cbc,2026-11-12,ok,dot of 1024 floats,0.0,0.0,0.0,0,0,204.4,Test complex issue 1432 functions on hardcoded cases

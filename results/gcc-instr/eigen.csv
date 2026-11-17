@@ -15,6 +15,78 @@ d97d307fcfc9c9421562705db7bf734865dfd53b,2009-06-08,build failed,,,,,,,,SparseMa
 8a3f552e39d3fee3ada1cfc1eb75b179c77f2a78,2010-05-24,ok,dot of 256 doubles,,,,,,,Return matrices by constant reference where possible. This changes the return type of: * eigenvectors() and eigenvalues() in ComplexEigenSolver * eigenvalues() in EigenSolver * eigenvectors() and eigenvalues() in SelfAdjointEigenSolver,801.0
 8a3f552e39d3fee3ada1cfc1eb75b179c77f2a78,2010-05-24,ok,4x4 Cholesky solve,,,,,,,Return matrices by constant reference where possible. This changes the return type of: * eigenvectors() and eigenvalues() in ComplexEigenSolver * eigenvalues() in EigenSolver * eigenvectors() and eigenvalues() in SelfAdjointEigenSolver,314.0
 2874101b62f96f1654457eb37ad312799f828dfd,2010-07-01,build failed,,,,,,,,"fix compilation with icc. Anyway, the use of an enum instead of a 'const bool' is more consistent with the code around."
+efb79600b98b210f09d030f5c307b99c45ef0ad5,2010-07-05,ok,Matrix4d * Matrix4d,,,,,,,"fix warning ""type qualifiers ignored on function return type"" for long long scalar types",183.0
+efb79600b98b210f09d030f5c307b99c45ef0ad5,2010-07-05,ok,8x8 matrix * vector,,,,,,,"fix warning ""type qualifiers ignored on function return type"" for long long scalar types",198.0
+efb79600b98b210f09d030f5c307b99c45ef0ad5,2010-07-05,ok,dot of 256 doubles,,,,,,,"fix warning ""type qualifiers ignored on function return type"" for long long scalar types",801.0
+efb79600b98b210f09d030f5c307b99c45ef0ad5,2010-07-05,ok,4x4 Cholesky solve,,,,,,,"fix warning ""type qualifiers ignored on function return type"" for long long scalar types",318.0
+e1eccfad3f3b4e9e2ac94ca9a43256144ef72888,2010-07-05,build failed,,,,,,,,add intitial support for the vectorization of complex<float>
+c69a22619293b791b884b7aefa65b245a902ea04,2010-07-05,build failed,,,,,,,,* extend the Has* packet traits and makes all functor use it * extend the packing routines to support conjugation
+d6454788d960180e49aa84047ebb3aa75013032d,2010-07-06,build failed,,,,,,,,add support for vectorized conjugated products
+e04c3f2cc02d8c4c5378f297ff19cb9251514f94,2010-07-06,build failed,,,,,,,,reduce code generation and minor speed up
+bc57c68cf58bc91732ae150d2df2f2151a0d9819,2010-07-06,build failed,,,,,,,,bug fix forgot to conjugate the scalar factor when needed
+bfa606d16fcb475025f55b226617c969a623877a,2010-07-06,build failed,,,,,,,,* add a IsVectorized mechanism (instead of packet-size>1...) * vectorize complex<double>
+f8d3b4c0606683bb19ae2cf037e6fd637002954a,2010-07-07,build failed,,,,,,,,fix mixing types in DiagonalProduct
+e38fc9692dfac3596331c6f7b9e50a0fb7dbcfe9,2010-07-07,build failed,,,,,,,,add a conj_product functor and optimize dot products
+c851044eae0b0c4be639f6b4fd09825c8ed64d16,2010-07-07,build failed,,,,,,,,fix row cwise-prod column in coeff based products... I really don't know why this worked so far...
+d5e0efaf6930a588dbc6a3f4e047a9d4977eab34,2010-07-07,build failed,,,,,,,,fix vectorization rule of diagonal-product
+74cf12cbe0949852197260dc8dcdd0da61f09736,2010-07-07,build failed,,,,,,,,add a compile time error if someone call packet on Diagonal (instead of infinite runtime loop)
+b0896382a3d9d7ab31dee8a6c8c8256fd13a14e2,2010-07-07,build failed,,,,,,,,s/IsVectorized/Vectorizable
+e07c0f6bb501490c6e000ec7a6d202e1362c8136,2010-07-07,build failed,,,,,,,,cleanning
+845994f18f39fa5367561af3b995ade75e93efe4,2010-07-07,build failed,,,,,,,,optimize gemv for complex<double> and fix gcc alignment issue in 32bits
+dd18b22f0b7d66e507ec140e3394ee53c9f4be44,2010-07-07,build failed,,,,,,,,optimize pmul for complex<double>
+65257f6b29362bbd4b45faa6ba957d53096e2f11,2010-07-07,build failed,,,,,,,,optimize for SSE3 => significant speed up !!
+a2415388ef05154ca5f655a58694ce908e21213a,2010-07-07,build failed,,,,,,,,optimized conjugate products for SSE3
+861962c55f728a1eb68c0b6915c77e8c9b424cff,2010-07-07,build failed,,,,,,,,sync
+31a36aa9c407d736075de8dc06f5af0d0fe912d5,2010-07-07,build failed,,,,,,,,support for real * complex matrix product - step 1 (works for some special cases)
+d89925e6dee382ac0a5f4b91d9ad82c996213c3f,2010-07-07,build failed,,,,,,,,an attempt to fix wrong unaligned store
+2a1500915aae55c97e811b7d48707a072a078ada,2010-07-08,build failed,,,,,,,,compilation fix
+300a226ffa6f51ff8be00b1d01ce34fbdc303033,2010-07-08,build failed,,,,,,,,"scalars fitting in a single packet requires more work, step 1 * add a, Alignable trait * update LinearVectorization assignment"
+504d3a3586ffb56ffe9cdf10e4b784d51d8d1eeb,2010-07-08,build failed,,,,,,,,fix SliceVectorizedTraversal for packetsize==1
+b1a17dbfe4b1e88ab01083e7573028be5fa2210c,2010-07-09,build failed,,,,,,,,fix a few weird issues with gcc 4.3 32bits and complex<float>
+4161b8be6772f2b7338458c9932d7417797966bb,2010-07-10,build failed,,,,,,,,sync
+ff96c94043d575e4d0dd477c1ed2487e33f79627,2010-07-11,build failed,,,,,,,,"mixing types in  product step 2: * pload* and pset1 are now templated on the packet type * gemv routines are now embeded into a structure with   a consistent API with respect to gemm * some configurations of vector * matrix and matrix * matrix works fine,   some need more work..."
+8e3c4283f52a14b64ce346dcdd9115871a481ab6,2010-07-11,build failed,,,,,,,,make colmaj * vector uses pointers only
+f8678272a4244babe25cc92bbb9298ed922330a4,2010-07-11,build failed,,,,,,,,"mixing types step 3: - improve support of colmajor by vector and matrix - matrix - now all configurations are well handled, but the perf are not always very good"
+b72b7ab76fd6f3389f358ca412a32f519063250c,2010-07-12,build failed,,,,,,,,"matrix product: move the alpha factor to gebp instead of the packing, clean some temporaries, etc."
+36d9b51a44240ace201d38956b89293cb5cecd8d,2010-07-13,build failed,,,,,,,,"optimize non fused MADD, and add a flatten attribute macro to enforce inlining within a function"
+1dc9aaaf364e6a6eba679e09e965088fb6905cde,2010-07-13,build failed,,,,,,,,add support for mixing type in trsv
+cd0e5dca9bba943869ab7c98d370fcfc8456997a,2010-07-19,build failed,,,,,,,,wip: extend the gebp kernel to optimize complex and mixed products
+f8aae7a908c816810bf2005e59df016733884e81,2010-07-19,build failed,,,,,,,,* _mm_loaddup_pd is slow * optimize SSE ei_ploaddup<Packet4f>
+6e157dd7c6e6e643295c5645cfb75d4c457f8d25,2010-07-19,build failed,,,,,,,,"* fix a couple of remaining issues with previous commit, * merge ei_product_blocking_traits into ei_gepb_traits"
+c2ee454df447f3fc3be505c4c89ecf94140345c3,2010-07-19,build failed,,,,,,,,* fix compilation of mixed scalar product * optimize mixed scalar products
+1ed4233fd2bdfcfcbf5d20f03ad96815f5a550b1,2010-07-19,build failed,,,,,,,,port Jacobi to new ei_pset1/ei_pload API
+08c841eb87f6b2713b9eeca64b9dba5a37fd9cc4,2010-07-19,build failed,,,,,,,,fix lhs packing in the case of real * complex products
+8b0b121c9e7eb1fce42849124478067c4e4d30c5,2010-07-19,build failed,,,,,,,,explicitely disable vectorization for mixed coeff based products
+70b1ce11c6b32cfe4ed1cedcef5e96a43659d15a,2010-07-19,build failed,,,,,,,,* fix SelfCwiseBinaryOp traits and handling of mixed types * improve compilation error in case of type mismatch
+76eb9c9fd9ddd5efdff5148b44cf25a6b9873311,2010-07-19,build failed,,,,,,,,fix compilation by including file in correct order
+872523844ae9f01bad77d838e266c2b7abecd503,2010-07-20,build failed,,,,,,,,fix trmm and symm wrt lhs packing
+10a7668035b42251c6c6ec6678aca801e58a18f3,2010-07-20,build failed,,,,,,,,uncomment commented code for debug
+b551a2d77a715b1c64186c8466e8110287da3fbf,2010-07-20,build failed,,,,,,,,fix declaration of pack_lhs in trsm
+4824ac136393b874567951c38cf19deb7a513c31,2010-07-20,build failed,,,,,,,,fix openmp version
+d7fa09bf05e081649a1297cda7427df4434934d3,2010-07-20,build failed,,,,,,,,improve block-size heuristic
+193eedbfe2380cfc5d9ac84d68ba1275da28c416,2010-07-20,build failed,,,,,,,,one more fix for openmp
+ced1a45f82684ab18cbe4d830f6832407cabadb3,2010-07-20,build failed,,,,,,,,add NEON ploaddup and pcplxflip functions
+7dbbc6ffd183978748ee90275a0c4444e9595e49,2010-07-20,build failed,,,,,,,,fix static allocation of workspace
+0dfc5b296be31a06a630ff389344a54b2be507ba,2010-07-22,build failed,,,,,,,,fix strict aliasing issue
+0916d69ca5e77aef08e9aafec1df5ae840862a89,2010-07-22,build failed,,,,,,,,fix inner vectorization logic
+bec3f9bfe49c0c6c1d2b8d4c2f22a4893f8a5d55,2010-07-22,build failed,,,,,,,,rename indices to a common scheme
+c7f40e522ebc516b51c596db2ca7c679665d53ba,2010-07-22,build failed,,,,,,,,merge
+b9edd6fb85a4930f0291f1b52c7f84cb6684e063,2010-07-22,build failed,,,,,,,,oops
+7020f30da3ce2b646ddafa535c6564ed00fc762f,2010-07-22,build failed,,,,,,,,sync with default branch
+9daa66f262562737f3dfe5c5318031c667252081,2010-07-22,build failed,,,,,,,,fix merge conflicts
+40f6e26a247976ba1868520a4747e49e0739a42a,2010-07-23,build failed,,,,,,,,allow vectorization of mat44.col() by adding a InnerPanel boolean template parameter to Block
+145830e06763e14a1aee21737e51504453c7f6a0,2010-07-23,build failed,,,,,,,,Add newline at the end of Dense.
+425444428c366a09cbc7608c89deac7bcf8da621,2010-07-23,build failed,,,,,,,,Add examples for API documentation of block methods in DenseBase.
+1420f8b3a16e025ca54402a2feb17f8ed4b41694,2010-07-25,build failed,,,,,,,,Several changes in comments to keep Doxygen happy.
+b038a4bb71514d90fed7d71ec40210bbf775b5ec,2010-07-26,build failed,,,,,,,,"* added EIGEN_ALIGNED_ALLOCATOR macro to allow specifying a different aligned allocator  * attempted to add support for std::deque by copying and modifying the std::vector implementation...MSVC still fails to compile with the std::deque::resize() ""will not be aligned"" error...probably missing something simple but I'm not sure how to make it work"
+2f0e8904f1c2450ee013f671260c833c7e99a9f8,2010-07-28,build failed,,,,,,,,Removed debug outputs.
+6b89ee0095b9012302d0871d2300e60422a62316,2010-07-29,build failed,,,,,,,,Transform is now per default Projective. Improved invert() in the Transform class. RotationBase offers matrix() to be conform with Transform's naming scheme. Added Translation::translation() to be conform with Transform's naming scheme.
+e92993d7b9bf7120563239c4e7d2a53c7d892cd4,2010-07-29,build failed,,,,,,,,"Safeguarded some Transform functions with compile time asserts. Added missing static Identity() to Rotation2D, AngleAxis."
+7cefa75901117fb562d58129eab8ba705566f197,2010-07-29,build failed,,,,,,,,Added static method Identity() to the Translation class.
+cc25edd5deebe01324ab80d107005657a568289a,2010-08-02,build failed,,,,,,,,Fixed Affine transform typedef.
+d90d7a006f7e9aba7d06013faa305bd527093ff2,2010-08-03,build failed,,,,,,,,"fix warnings. The one in Reverse was potentially serious: coeff() methods should return CoeffReturnType, not ""Scalar"", if the expression is potentially a Lvalue."
+3dd822586288ae14ef5cecef166a54c803d355a8,2010-08-05,build failed,,,,,,,,Added more detailed docs to the QR decompositions classes.
+76fbe94279bda314e717cb3f98b46b253d081993,2010-08-10,build failed,,,,,,,,"Document EIGEN_NO_DEBUG macro. I needed some doxygen tricks to get this to work, so it may not be worth it."
 8bbe556e357501cff0cd93a7820f0e2b7f932509,2010-08-11,build failed,,,,,,,,merge the backout
 b80d9dd42e476efd9cead00bc2c48383a0e9df14,2010-08-13,build failed,,,,,,,,fix determination of number of registers on sse:   __i386__ was not defined by MSVC 2010. fixed as (2*sizeof(void*)). also move that to SSE/ and let the default for unknown arch's be just 8.
 3a30a2bc3e53c00e3f2902554e2c74bdfe7f52c1,2010-08-13,build failed,,,,,,,,forgot to remove a #endif
@@ -360,7 +432,116 @@ a18a1be42d35b9de82949eaa54ce5196002da391,2011-05-05,build failed,,,,,,,,"Fix com
 883219041fb070be4f7bf4e4fc8c1eb475cea34d,2011-05-05,build failed,,,,,,,,"better fix for gcc 4.6.0 / ptrdiff_t, as suggested by Benoit"
 97b6d26f5bf268bdec41bded2e5dc2dd27fa8b1c,2011-05-06,build failed,,,,,,,,fix compilation on ARM NEON (missing AlignedOnScalar)
 fb76452cbc4c62feb6c5bc47319ceefe3e54dd80,2011-05-06,build failed,,,,,,,,add missing .data() members to MatrixWrapper and ArrayWrapper
+4e7e5d09e1b5934bbbd7bcf432afffde3df6caa6,2011-05-06,build failed,,,,,,,,s/n=n/EIGEN_UNUSED_VARIABLE(n)
+0896c6d97dc587f76b92687d87ae3e21d0c5aab4,2011-05-07,build failed,,,,,,,,"Get rid of wrong ""subscript above bounds"" warning (bug #149)."
+d7e3c949be71dd26e4554547ebb0aa3673a1ec47,2011-05-09,build failed,,,,,,,,Implement and document MatrixBase::sqrt().
+0aa7425f1581b169f5d06a2818597331ad1de272,2011-05-11,build failed,,,,,,,,fix bug #260: broken Qt support for Transform (transplanted from 84c8b6d5c58c8e09c53356287bdfc8bc730492a0 )
+e22a52302103afd9366d10b0f71a52ffcf8fc235,2011-05-12,build failed,,,,,,,,"Remove Eigen::internal::sqrt(), see bug #264."
+9a06055870cef8fd55b7b1cc19096465058a85c8,2011-05-13,build failed,,,,,,,,Store light-weight objects in evaluators by value. This resolves failure in unit test caused by dying temporaries.
+179d42bb2b03199d8731a83f24b115d22c16ce20,2011-05-17,build failed,,,,,,,,fix bug #267: alloca is not aligned on arm
+85c137ccd4394123c06c36dcf414bd591a02c441,2011-05-18,build failed,,,,,,,,NEON: fix ploaddup
+f2837aebc4179c71145545c5e5988734c7ed30b2,2011-05-18,build failed,,,,,,,,NEON: fix plset
+7209d6a12610d4682c65a99f12b0d0278fbbe81d,2011-05-21,build failed,,,,,,,,"fix gemv_static_vector_if on architectures that cannot aligned on the stack (e.g., ARM NEON)"
+074b067624e45c8e9f42f2347509d06d0d437226,2011-05-23,build failed,,,,,,,,"fix implicit scalar conversions (needed to support fancy scalar types, see bug #276)"
+46bee5682fc41a8e2ad1f563b6362a9297ca3094,2011-05-23,build failed,,,,,,,,clean a bit previous patch (ctor vs static_cast and a few bits)
+117d17ee5873c430ac6705662c81bd15b6b407d6,2011-05-23,build failed,,,,,,,,bug #271: fix copy/paste mistakes in doc (transplanted from 145b9cad63101ee46924d446fa8b08ffb48c7f3a)
+87ac09daa88c1df338701f2d2b30b09e812cf757,2011-05-25,build failed,,,,,,,,"Simplify the use of custom scalar types, the rule is to never directly call a standard math function using std:: but rather put a using std::foo before and simply call foo: using std::max; max(a,b);"
+94647453857bf111a5a3be1e45b1586b09d20e1b,2011-05-28,build failed,,,,,,,,do not directly call std::ceil
+35c1158ee376b31a740a538ac1251460102971dd,2011-05-31,build failed,,,,,,,,add boolean || and && operators
+562d3ea91d9bb98fc10afb12476cac9106f07cce,2011-06-01,build failed,,,,,,,,forgot to include this file in previous commit
+5bc4abc45e20b862cd1af678d11a19d02d3e2e19,2011-06-01,build failed,,,,,,,,fix compilation with MinGW
+7a61a564ef7d5403bcf3eef0c84252cc8bf73705,2011-06-03,build failed,,,,,,,,Fix snippets for operator|| and && by adding pair of parens.
+421ece38e1995ec4df12213d6fd567fa18222cca,2011-06-06,build failed,,,,,,,,Sparse: fix long int as index type in simplicial cholesky and other decompositions
+91fe1507d1a06d84c9ac8d913f080e30f760375b,2011-06-07,build failed,,,,,,,,Sparse: more fixes regarding long int as index type
+8c8ab9ae103930e21da76ed6dcbaa585e8af7ff4,2011-06-07,build failed,,,,,,,,"Implement matrix logarithm + test + docs. Currently, test matrix_function_1 fails due to bug #288."
+6d3dee1b66ce77b82f2d4e1c052f78c8c9ccdc5d,2011-06-09,build failed,,,,,,,,introduce a smart_copy internal function and fix sparse matrices with non POD scalar type
+f82b3ea241baf9c8ba987812928361ff015dd21a,2011-06-14,build failed,,,,,,,,fix aligned_allocator::allocate interface
+40287d2fd9aab244f5f00fbd872d30e65a51653e,2011-06-14,build failed,,,,,,,,remove the use of non standard long long
+842881cfb1b8ece6e41c58f0466ae979e514d001,2011-06-15,build failed,,,,,,,,bug #298 - let normalize() return a reference to *this
+aedccbf52fac1654d81775ee71c496b2fd02d8fc,2011-06-15,build failed,,,,,,,,back out 842881cfb1b8ece6e41c58f0466ae979e514d001
+a55c27a15f8a34a6479f0032ae1fa72b1207a065,2011-06-18,build failed,,,,,,,,fix documentation of norm
+2f32e485174c2049a7c364745b2aad091449602b,2011-06-20,build failed,,,,,,,,New feature: add rank one update in Cholesky decomposition
+7aabce7c769adc0ad02e45e7ffe7590c5d1412d1,2011-06-17,build failed,,,,,,,,rm confusing sentence
+9b52fe043270df989a23ebf82411e21af834b968,2011-06-23,build failed,,,,,,,,fix typo in doc for ParametrizedLine
+16db255333f890d7c8e95822d70871b491e91a92,2011-06-24,build failed,,,,,,,,Fix compilation of cholesky rank update test.
+0b308e79c4731c093a8bbe2adc3bb9dc4ff3eb12,2011-06-24,build failed,,,,,,,,"Add DenseStorage specializations for dynamic size with MaxSize = 0 (bug #288). This is necessary for instantiations like Matrix<float,Dynamic,Dynamic,0,0,0>."
+c98cd5e564f75be2edc7c5d18491058d025fa796,2011-06-27,build failed,,,,,,,,fix constness of intersection methods (bug #309)
+08074843ac2f467a6204adf1fdeec32ee2aadbcd,2011-07-07,build failed,,,,,,,,fix few warnings reported by clang
+5fdebc2fa581089dc9232a4701e85f89ba9a5bb8,2011-07-09,build failed,,,,,,,,"fix bug #316 - SelfAdjointEigenSolver::compute does not handle matrices of size (1,1) correctly"
+0d02182ae898477d68d284e84e0a03c23ce2eebc,2011-07-18,build failed,,,,,,,,"add an ""InvalidInput"" enum, used by the SuperLU interface"
+38a4e3053dc762994c1cb5f6c2d8e1e6af1bfa38,2011-07-19,build failed,,,,,,,,"fix LLT rank one update for ""upper"" hermitian matrices"
+705023fd85f315d362ea6810d6a32f0c833ff6a8,2011-07-19,build failed,,,,,,,,Translation * RotationBase now returns an isometric transformation.
+22bff949c898e7c340a415d771145c0bd22317d6,2011-07-21,build failed,,,,,,,,protect calls to min and max with parentheses to make Eigen compatible with default windows.h (transplanted from 49b6e9143e1d74441924c0c313536e263e12a55c )
+26d7dad1389ca3eb46127dbe8c76c8359e6ded4b,2011-07-21,build failed,,,,,,,,add a computeDirect method to SelfAdjointEigenSolver for fast eigen decomposition
+47a2bca89fa665d56746dcb26800272ef30a8ef9,2011-07-22,build failed,,,,,,,,integrate Hauke's 2x2 direct symmetric eigenvalues solver
+e8313364c13c0cf3cc24eec1bacc14d8f8512322,2011-07-22,build failed,,,,,,,,simplify a bit the 2x2 direct eigenvalue solver
+97ac0fd192eab006ac02748b0ca9f6c4b0c5980e,2011-07-22,build failed,,,,,,,,fix eigen2 support min/max garbage
+8fa7e92e77f550efb6d67635f19dfd7672d3259c,2011-07-26,build failed,,,,,,,,fix sparse selfadjoint time dense such that the other triangular part is not used at all
+3431c052c6238a13138445fee554cbfb4d80b762,2011-07-28,build failed,,,,,,,,Improved compilation errors for Transform initialization/assignment with different numeric types.
+f162f7c32388b269b15bcae0000eca4e1d162d2e,2011-08-08,build failed,,,,,,,,fix a numerical issue in the direct 3x3 eigenvector extraction
+5734ee6df42991e59609ffd26aaeb3c7aacd61e2,2011-08-18,build failed,,,,,,,,add the possibility to specialize assign_impl and still call the default implementations. (yes I know this change will be deprecated as soon as the evaluators will be in shape but I need this now)
+42e2578ef9fcbb62ad6e07933ccf531f6f7cd1b3,2011-08-19,build failed,,,,,,,,"the min/max macros to detect unprotected min/max were undefined by some std header, so let's declare them after and do the respective fixes ;)"
+b85c89c313a79fa68b3e27c64247437f51a3657e,2011-08-22,build failed,,,,,,,,fix bug #262: Compilation error of stdvector_overload test with GCC 4.6 Now our aligned allocator is automatically activatived only when the user did not specified an allocator (or specified the default std::allocator).
+b3f5fbbd9a3a0ca92dff8c16123cdd9838a38fd6,2011-08-22,build failed,,,,,,,,"oops EIGEN_DEFINE_STL_VECTOR_SPECIALIZATION now perfroms full specialization, no need for the typename keywords"
+8414be739b78b2d750be03d41cb5017325f4ae49,2011-08-23,build failed,,,,,,,,fix bug #330: Index to int conversion warning
+477d3e5726cb8a2fc1c05130b15fa3826dcdf982,2011-09-03,build failed,,,,,,,,Update docs of PlainObjectBase::Map(); fixes bug #335. Also fix some typos.
+7706bafcfd26471801c3ac43a120a7e66ee36160,2011-09-08,build failed,,,,,,,,add the possibility to reserve room for inner vector in SparseMatrix
+d52d8e4a5336636567dd80a6da08c032c229c186,2011-09-08,build failed,,,,,,,,reactivate the sorting in the experimental sparse-sparse product
+6b006772f1c8083df609d70218f5848bce7dfc28,2011-09-11,build failed,,,,,,,,Fix LDLT::solve() if matrix singular but solution exists (bug #241). Clarify this in docs and add regression test.
+2092b45d0d27cf4f4c7f58e28628bd61464a8a2c,2011-09-19,build failed,,,,,,,,Bug fix for matrix1 * matrix2 * scalar1 * scalar2. See report on http://forum.kde.org/viewtopic.php?f=74&t=96947 .
+5d1836b18244bfb863aad5b848e9d9da9c5b8b16,2011-09-20,build failed,,,,,,,,accept both STL and Eigen's containers for reserve()
+7301f4345c31f0f8c74cabbcd576b2bce64ffad6,2011-09-21,build failed,,,,,,,,quick workaround of MSVC9' ICE in pset1
+c331c092d5bb7f9c4d8f0067198a8b9c9cb79e79,2011-09-21,build failed,,,,,,,,no comment
+17c321617ddbd16b780c031801da86c4f85223c8,2011-09-27,build failed,,,,,,,,Fix bug #286: Infinite loop in JacobiSVD with denormals
+ac3ad9c1e7da56cebc4c8153513c3927b0f4ccce,2011-09-27,build failed,,,,,,,,Convert tabs to spaces.
+4e7f38ffc7b53793a3944363363193f62a7d9dc1,2011-10-09,build failed,,,,,,,,fix nesting
+ae9c96a32d4d4af601faf1bb4a4de661ca602bc6,2011-10-10,build failed,,,,,,,,fix assignment to a set of sparse inner vectors
+b94c00226f52f48f1d2e6a5060325d4327ba27ff,2011-10-11,build failed,,,,,,,,make it compatible with Diagonal<>
+a5761d6dd70e5e4ec31486a44acb1b0f55817253,2011-10-11,build failed,,,,,,,,fix sparse tri-solve for full matrices
+0c6055c285e341b6a447558cf61e36ed5ba814cb,2011-10-16,build failed,,,,,,,,bug #363 - check for integer overflow in byte-size computations
+739559b08a6dd6a169837ca166b6887f024e0c01,2011-10-16,build failed,,,,,,,,bug #363 - check for integer overflow in size=rows*cols computations
+dcbc985a2821544f4d035e103494d34972ccf71f,2011-10-16,build failed,,,,,,,,bug #363 - add test for integer overflow in size computations
+16b638c159d25991bce2ec85351dc85d1d63c328,2011-10-17,build failed,,,,,,,,"Throw std::bad_alloc even when exceptions are disabled, by doing new int[size_t(-1)]. Don't throw exceptions on aligned_malloc(0) (just because malloc's retval is null doesn't mean error, if size==0). Remove EIGEN_NO_EXCEPTIONS option, use only compiler standard defines. Either exceptions are enabled or they aren't."
+de69129f560c180b56992e2927645088fac8d062,2011-10-17,build failed,,,,,,,,forgot inline keyword
+70df09b76d1a13a55de1ebe6834ee359f403be89,2011-10-24,build failed,,,,,,,,move DynamicSparseMatrix to SparseExtra
+39d4585bff7a69932a3d8fe0af1ad48481caac2d,2011-10-24,build failed,,,,,,,,add the possiibility to disable deprectated warnings (useful for deprecated unit tests!)
+1ddf88060b6475d3ee6b681bb0ed7b55d311ffa5,2011-10-24,build failed,,,,,,,,"update sparse*sparse product: the default is now a conservative algorithm preserving symbolic non zeros. The previous with auto pruning of the small value is avaible doing: (A*B).pruned() or (A*B).pruned(ref) or (A*B).pruned(ref,eps)"
+bca18a13eaa568a675a1116a0de185100ebaf54f,2011-10-25,build failed,,,,,,,,"The most important inline keyword ever? Without it, gcc failed to inline this function, which is called by all matrix constructors..."
+7bf0e8cd82271c26f1c37b96132c360b7ce7bfbc,2011-10-30,build failed,,,,,,,,"bug #206 - part 2: For HouseholderSequence objects, added non-allocating versions of evalTo() and applyThisOnTheRight/Left that take additional working vector parameters."
+5e431779f38ffa238e552504732d65628884f483,2011-03-08,build failed,,,,,,,,bug #206 - part 3: Reimplement FullPivHouseholderQR<T>::matrixQ() using ReturnByValue
 4477843bdd7555f634952357f6087021e2d8519b,2011-10-30,build failed,,,,,,,,bug #206 - part 4: Removes heap allocations from JacobiSVD and its preconditioners
+9df2f5c9237579bf1221b784ae87ed789237fb1c,2011-10-31,build failed,,,,,,,,bug #369 - Quaternion alignment is broken
+fa7c08a831bb571e295fbe709d62deb34e3cbb0a,2011-10-31,build failed,,,,,,,,bug #365 - Rename B0 in GeneralBlockPanelKernel.h to avoid name clash with termios.h on POSIX systems.
+a594ac3966541f46e88b785c56d82bfaf71fd302,2011-11-02,build failed,,,,,,,,Allow for more iterations in SelfAdjointEigenSolver (bug #354). Add an assert to guard against using eigenvalues that have not converged. Add call to info() in tutorial example to cover non-convergence.
+1de769d12236ee648c50a216466be7a6a47e8746,2011-11-04,build failed,,,,,,,,remove deprecated assert
+478de03bd8d91ab6238f322ed4783daa71a97b40,2011-11-05,build failed,,,,,,,,fix a couple of warnings in the unit tests
+ab3f138b2358aebcfa3d67edc8856cba2dcfc98e,2011-11-05,build failed,,,,,,,,"In the Matrix constructor taking (rows, cols), statically assert that the types are integer."
+1b98b7347248b959a76157a1da16ce70253fb597,2011-11-06,build failed,,,,,,,,"Refactor force-inlining macros and use EIGEN_ALWAYS_INLINE to force inlining of the integer overflow helpers, whose non-inlining caused major performance problems, see the mailing list thread 'Significant perf regression probably due to bug #363 patches'"
+f422668d39c51a7281e55404cfed4a262747eb51,2011-11-04,build failed,,,,,,,,Patches to support ARM NEON with Clang 3.0 and LLVM-GCC
+45a6bb34c3e67c865b489518767eadf747d391d7,2011-11-07,build failed,,,,,,,,Add simple example on how to compute Cholesky decomposition.
+fb3aa7220f10a1ed7f5f41e57260889017974297,2011-11-08,build failed,,,,,,,,reimplement abs2 not to use std::norm which is incredibly slow.
+3a82aa1133d9692b0f80880677a78b22a5fc7007,2011-11-09,build failed,,,,,,,,[Core/Matrix] Fix: Clear the right typedef macro
+c110abb7d255d06fcb4001671fa431d2d712fef8,2011-11-11,build failed,,,,,,,,fix performance issue with SPMV
+3e4a68cc60197b75e4bc9715f6752906c420c50b,2011-11-12,build failed,,,,,,,,"optimize vectorized reductions by peeling the loop:  - x2 for squaredNorm() on double  - peeling the loop with a peeling factor of 4 leads to even better perf    for large vectors (e.g., >64) but it makes more difficult to keep good performance on smaller ones."
+53fa8517245e0136c83b77526b05ce67de232a56,2011-11-12,build failed,,,,,,,,"move sparse solvers from unsupported/ to main Eigen/ and remove the ""not stable yet"" warning"
+cb2f1944e2c4d44c9488d7a71340dc905d4271e9,2011-11-12,build failed,,,,,,,,add the new module headers
+8fbbbe7521fc1f87566cad76da1918d094cd0305,2011-11-16,build failed,,,,,,,,fix some include paths
+db36e4204fe4b28954736691686063280f6573a2,2011-11-09,build failed,,,,,,,,"[Geometry/AlignedBox] New typedefs, like for Core/Matrix"
+08c0edae86215629074027b9d20aa84792a75472,2011-11-16,build failed,,,,,,,,Move EIGEN_USING_MATRIX_TYPEDEFS macros to Eigen2Support.
+de22ad117cb5324e3e1d0700dde7466921fdf9ca,2011-11-17,build failed,,,,,,,,bug #157 - Implemented *= /= * / operations for VectorwiseOp (e.g. mat.colwise())
+bc6d78982fb2b8d07827246e682acdf47d0e8944,2011-11-18,build failed,,,,,,,,Bugs 157 and 377 - General tightening/testing of vectorwise ops:
+f278a3eabaa6553825daafbee0a92515c90b0b74,2011-11-22,build failed,,,,,,,,stop fill pivoting LU only if the pivot is exactly 0
+ffe6d1f901566e0c7e34c1f6fcccd35864197cc1,2011-11-22,build failed,,,,,,,,"Alignment fixes:  * Fix AlignedBit computation for Plain Objects  * use it for the conditional alignment of operator new  * only overload new in PlainObjectBase, don't overload again in Matrix and Array"
+01b4b6e456d81e175568399042b86c506eae3b2a,2011-11-23,build failed,,,,,,,,improve accuracy of 3x3 direct eigenvector extraction
+2d4fe54b733408a9c7ca13d844d82f897c17764a,2011-11-24,build failed,,,,,,,,fix CG example
+8107b3da753dd03b81e67c4bfad8006cac8377ca,2011-11-26,ok,Matrix4d * Matrix4d,,,,,,,bug #383 - EIGEN_ASM_COMMENT broken in C++11,111.0
+8107b3da753dd03b81e67c4bfad8006cac8377ca,2011-11-26,ok,8x8 matrix * vector,,,,,,,bug #383 - EIGEN_ASM_COMMENT broken in C++11,373.0
+8107b3da753dd03b81e67c4bfad8006cac8377ca,2011-11-26,ok,dot of 256 doubles,,,,,,,bug #383 - EIGEN_ASM_COMMENT broken in C++11,497.0
+8107b3da753dd03b81e67c4bfad8006cac8377ca,2011-11-26,ok,4x4 Cholesky solve,,,,,,,bug #383 - EIGEN_ASM_COMMENT broken in C++11,342.0
+b60624dc2a626689034ba33fe7d571a93e01a382,2011-12-04,ok,Matrix4d * Matrix4d,,,,,,,fix bug #384: add a static assertion on the Index type which has to be signed,111.0
+b60624dc2a626689034ba33fe7d571a93e01a382,2011-12-04,ok,8x8 matrix * vector,,,,,,,fix bug #384: add a static assertion on the Index type which has to be signed,373.0
+b60624dc2a626689034ba33fe7d571a93e01a382,2011-12-04,ok,dot of 256 doubles,,,,,,,fix bug #384: add a static assertion on the Index type which has to be signed,497.0
+b60624dc2a626689034ba33fe7d571a93e01a382,2011-12-04,ok,4x4 Cholesky solve,,,,,,,fix bug #384: add a static assertion on the Index type which has to be signed,342.0
 0251bb6c1d2da1d4a685bc118cb5bc774c9dbc30,2012-01-26,ok,Matrix4d * Matrix4d,,,,,,,add missing inline keyword (linking issue),111.0
 0251bb6c1d2da1d4a685bc118cb5bc774c9dbc30,2012-01-26,ok,8x8 matrix * vector,,,,,,,add missing inline keyword (linking issue),373.0
 0251bb6c1d2da1d4a685bc118cb5bc774c9dbc30,2012-01-26,ok,dot of 256 doubles,,,,,,,add missing inline keyword (linking issue),497.0

@@ -78,7 +78,10 @@ def static_sites(proj, h, tree):
         for g, users in via.items():
             gname = funcs[g]["demangled"]
             for s in funcs[g].get("own", []):
-                if s.get("class") not in CLASSES or s.get("account") not in ("own", "library"): continue
+                # own and library sites; and the allocation a throw makes (__cxa_allocate_exception), which the
+                # analysis records as a consequence of the throw
+                if s.get("class") not in CLASSES: continue
+                if s.get("account") not in ("own", "library") and not (s.get("account") == "consequence" and s.get("consequence_of") == "throw" and s.get("class") == "alloc"): continue
                 loc = f"{rel(s.get('file', ''))}:{s.get('line', 0)}"
                 info = dict(temp=s.get("temp", "?"), symbol=s.get("symbol", ""), evidence=s.get("evidence", ""))
                 if is_user_file(rel(s.get("file", ""))) and s.get("line"):
@@ -111,7 +114,9 @@ def match(kind, user, stack, s, by_fn, source):
                frame is missing from the stack, as after a tail call)
       caller   an outer library frame is the static site's line (the static analysis records an
                inlined callee's site at its caller's line)
-      library  the site is inside a standard-library function called from the innermost library function"""
+      library  the site is inside a standard-library function called from the innermost library function
+      function the innermost library frame is in the function that holds the static site, at another line
+               (the frame of an inlined callee can come back without its name); the loosest rule, last"""
     if not user: return None, None
     if (kind, "line", user[1]) in s: return (kind, "line", user[1]), "line"
     text = source(user[1])
@@ -122,6 +127,7 @@ def match(kind, user, stack, s, by_fn, source):
     for fn, loc in stack[1:]:
         if (kind, "line", loc) in s: return (kind, "line", loc), "caller"
     if (kind, "fn", short(user[0])) in s: return (kind, "fn", short(user[0])), "library"
+    if (kind, short(user[0])) in by_fn: return by_fn[(kind, short(user[0]))], "function"
     return None, None
 
 def main():

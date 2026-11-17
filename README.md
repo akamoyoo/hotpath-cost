@@ -9,7 +9,7 @@ repository measures it over the whole history of real libraries, and is built on
 
 ## What we learned
 
-Over 15,986 commits of 25 open-source low-latency and numerical C++ libraries ([evidence](docs/insights.md)):
+Over 17,133 commits of 29 open-source low-latency and numerical C++ libraries ([evidence](docs/insights.md)):
 
 1. **Count, don't time.** Allocations, locks and executed instructions per call are exact and
    repeat on every run; per-commit timings jumped 2x between builds with identical machine code.
@@ -24,7 +24,10 @@ Over 15,986 commits of 25 open-source low-latency and numerical C++ libraries ([
 5. **The static and the run-time view each see what the other cannot.** Only counts told apart two
    Liquibook versions that may both allocate; only the static view named the 22 allocating paths that
    the benchmark never took.
-6. **Costs enter through refactorings, come back, and stay unreleased.** A lock removed in 2016 came
+6. **The static view tells the benchmark where to go.** A random order flow written to reach the
+   sites the analysis listed raised Liquibook's coverage from 5 to 13 of 21, and turned up a
+   memory-corruption bug on the way.
+7. **Costs enter through refactorings, come back, and stay unreleased.** A lock removed in 2016 came
    back for six releases; an extra allocation per order is in a library's last release; none was
    caught by tests.
 
@@ -41,6 +44,9 @@ Over 15,986 commits of 25 open-source low-latency and numerical C++ libraries ([
   machine-code facts behind a gap: out-of-line helpers, divisions, vector instructions (`gap.py`).
 - **Both views together.** `combine.py` matches the static sites of one commit against its run-time
   stacks: exercised, never exercised, or missed by the analysis.
+- **Exploration.** An optional benchmark per library replays a seeded random sequence of realistic
+  operations, so that `combine.py` can show how many of the static sites it reaches
+  (`replay/bench/liquibook_explore.cpp`).
 
 ## Example
 
@@ -69,7 +75,7 @@ reaches are on paths it does not take, such as stop orders and all-or-none match
 
 ## Cases
 
-The five cases behind most of the lessons above ([all libraries](docs/results.md)).
+The six cases behind most of the lessons above ([all libraries](docs/results.md)).
 
 **1. Liquibook's last release allocates twice as often per order** ([details](docs/cases.md#case-1-liquibook-200-allocates-twice-more-per-order)).
 Allocations per add+cancel, counted at every library commit:
@@ -123,6 +129,16 @@ Found by the instruction replay: commit `28c3b26d` "masked load/store framework"
 slower with GCC 13, 1.40x with GCC 15, 1.11x with clang; between releases 3.4.1 and 5.0.1, 1.48x with
 GCC. `gap.py` shows a new out-of-line masked-segment loop for the factorisation's 1-to-3-element
 updates. Not yet reported upstream.
+
+**6. A random order flow reaches the hidden paths, and finds an out-of-bounds write in Liquibook**
+([details](docs/cases.md#case-6-a-random-order-flow-reaches-the-paths-and-finds-an-out-of-bounds-write-in-liquibook)).
+Of the 21 allocation sites the static analysis lists for adding an order with conditions, the fixed
+benchmark reaches 5 and a seeded random order flow 13. One of them was `__cxa_allocate_exception`: the
+book threw "Unexpected ignore_ask_fill_qty_" in ordinary order flow. Reduced to ten orders, it came
+down to `Depth::find_level` returning a past-the-end pointer instead of `nullptr`, so fills of a
+triggered stop order overwrite the members after the price levels
+([liquibook#44](https://github.com/enewhuis/liquibook/issues/44), fix and tests in
+[#45](https://github.com/enewhuis/liquibook/pull/45)).
 
 **Static and run time agree.** On every measured operation of Liquibook and concurrentqueue, every
 allocation and lock seen at run time matches a site of the static analysis (no static miss), and the

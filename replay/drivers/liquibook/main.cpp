@@ -12,6 +12,7 @@ HP_ENTRY bool lb_add(Book &b, SimpleOrder *o) { return b.add(o); }
 HP_ENTRY bool lb_add_ioc(Book &b, SimpleOrder *o) { return b.add(o, liquibook::book::OrderCondition::oc_immediate_or_cancel); }
 HP_ENTRY void lb_cancel(Book &b, SimpleOrder *o) { b.cancel(o); }
 HP_ENTRY bool lb_replace(Book &b, SimpleOrder *o, int32_t dq, liquibook::book::Price p) { return b.replace(o, dq, p); }
+HP_ENTRY bool lb_add_cond(Book &b, SimpleOrder *o, liquibook::book::OrderConditions c) { return b.add(o, c); }
 }
 
 int main(int argc, char **) {

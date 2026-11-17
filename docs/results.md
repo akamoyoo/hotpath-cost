@@ -4,10 +4,11 @@ All libraries, then the compiler matrix. Paths are relative to the repository ro
 
 ## What was found
 
-Twenty-five libraries, 15,986 library commits in their first-parent histories, 3,409 of them measured.
-Eighteen of them were measured at every library commit where the driver compiles. quill was sampled
-every fifth commit, spdlog every 30th, fmt every 50th, simdjson every 4th, Eigen every 100th, json every
-10th and Taskflow every 15th, and every interval whose counts differed was bisected. Built with GCC 13.3, `-O2 -march=x86-64-v3`. Per-commit data:
+Twenty-nine libraries, 17,133 library commits in their first-parent histories, 3,500 of them measured.
+Twenty of them were measured at every library commit where the driver compiles. quill was sampled
+every fifth commit, spdlog every 30th, fmt every 50th, simdjson every 4th, Eigen every 100th, json and cereal
+every 10th, Taskflow every 15th and xsimd every 30th, and every interval whose counts differed was
+bisected. Built with GCC 13.3, `-O2 -march=x86-64-v3`. Per-commit data:
 `results/gcc/<library>.csv`.
 
 | library | measured | count changes | what changed |
@@ -37,6 +38,10 @@ every fifth commit, spdlog every 30th, fmt every 50th, simdjson every 4th, Eigen
 | [dragonbox](https://github.com/jk-jeon/dragonbox) (double to decimal) | 196 of 210 | 0 | 0 and 0 |
 | [libdivide](https://github.com/ridiculousfish/libdivide) (division by a run-time constant) | 163 of 163 | 0 | 0 and 0; 64 divisions in 115 ns against 670 with the hardware divider |
 | [date](https://github.com/HowardHinnant/date) (time stamps) | 139 of 141 | 0 | parsing through `istringstream` and formatting: 2 allocations each, throughout |
+| [fmtlog](https://github.com/MengRao/fmtlog) (low-latency logger) | 48 of 51 | 1 | `logi`: 0 and 0 per call; the first call on a thread: 3 -> 2 allocations and locks in 2021 (`692db5eb`, "optimize threadbuffer mutex holding time") |
+| [bitsery](https://github.com/fraillt/bitsery) (binary serialization) | 11 of 94 | 0 | 0 and 0 (older versions do not build with the driver) |
+| [cereal](https://github.com/USCiLab/cereal) (serialization) | 17 of 143, sampled | 1 | through `std::stringstream`: 2 allocations to serialize, 1 to deserialize; 4 -> 2 for serializing in 2013 |
+| [xsimd](https://github.com/xtensor-stack/xsimd) (SIMD) | 15 of 859, sampled | 0 | 0 and 0 |
 
 "Measured" counts the commits at which the fixed benchmark driver compiles and runs; older versions
 with a different API are not measured. The quiet rows are results too: these libraries keep their

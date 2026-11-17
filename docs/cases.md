@@ -1,6 +1,6 @@
 # Cases
 
-The five cases behind the summary in the [README](../README.md), and the static and run-time views of the same commits. Paths are relative to the repository root.
+The six cases behind the summary in the [README](../README.md), and the static and run-time views of the same commits. Paths are relative to the repository root.
 
 ## Case 1: Liquibook 2.0.0 allocates twice more per order
 
@@ -201,6 +201,44 @@ have run-time sizes of 1 to 3 elements. After the change, that update is a gener
 built on the new masked-segment loads and stores (`Core/arch/AVX/PacketMath.h`); before it, the whole
 solve was inlined into 361 instructions. Probably the masking costs more than it saves on vectors this
 short; that was not measured separately. Not reported upstream yet (Eigen's tracker is on GitLab).
+
+## Case 6: a random order flow reaches the paths, and finds an out-of-bounds write in Liquibook
+
+The static analysis listed 21 allocation sites, not marked cold, reachable from adding an order to
+Liquibook's book with conditions. The fixed benchmark (resting orders, added and cancelled) reaches 5.
+An exploration benchmark (`replay/bench/liquibook_explore.cpp`) replays a seeded random flow instead:
+resting and crossing limit orders, market orders, stop orders, all-or-none, immediate-or-cancel and
+fill-or-kill orders, cancels and replaces. `replay/combine.py liquibook-explore 2427613b32`:
+
+```
+== hp_entry::lb_add_cond(...)
+   exercised (13): stop orders (order_book.h:591-629), all-or-none matching (829-979), trades,
+                   depth levels, and one allocation by __cxa_allocate_exception (0.13 per call)
+   not exercised: 9 not marked cold: growth of the callback vector (1109) and an error path
+                  that the analysis did not mark cold (1249-1252)
+   static miss (0)
+```
+
+The allocation by `__cxa_allocate_exception` was an exception thrown inside the book, 0.13 times per
+call over the traced calls: `std::runtime_error("Unexpected ignore_ask_fill_qty_")`, caught and printed by
+`OrderBook::callback_now()`. Reducing the flow to the shortest prefix that still throws, by removing
+actions while the exception remained, left ten orders and no cancel or replace. Tracing the depth book
+through them showed `ignore_ask_fill_qty_` going from 0 to 2^64 - 1 with no call that sets it.
+
+The cause is in `Depth<SIZE>::find_level(price, is_bid, false)`: when the price has no level and no
+excess level, it returns its past-the-end pointer instead of `nullptr`. For bids that is the first ask
+level; for asks it is one past `levels_`, where the members `last_change_`, `last_published_change_`,
+`ignore_bid_fill_qty_` and `ignore_ask_fill_qty_` follow. Its two callers check for `nullptr` and then
+modify the level. A triggered stop order is never added to the depth, so its fills arrive at a price
+`find_level` does not find, and the write lands on those members. Setting `level = nullptr` before the
+excess-level search fixes it; two new unit tests fail without the change (four failed checks) and pass
+with it, the other 152 test cases give the same results before and after, and the 20,000-action flow
+no longer throws. Reported and fixed upstream:
+[liquibook#44](https://github.com/enewhuis/liquibook/issues/44),
+[liquibook#45](https://github.com/enewhuis/liquibook/pull/45).
+
+The tool was built to count allocations; this was a correctness bug, found because an exception is an
+allocation and the exploration was looking for allocations the static analysis predicted.
 
 ## Static and run-time, side by side
 

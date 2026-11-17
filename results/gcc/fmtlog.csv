@@ -58,5 +58,43 @@ bc3dfe4a2498e5eb0e065dc0322771f2e30d983e,2022-01-19,ok,"logi(int, double)",0.0,0
 bc3dfe4a2498e5eb0e065dc0322771f2e30d983e,2022-01-19,ok,logd below level,0.0,0.0,0.0,0,0,3.5,fix an bug about FMTLOG_BLOCK
 ce33b6295388fe088a0b05d99628b0f47aaf23c7,2022-02-07,ok,"logi(int, double)",0.0,0.0,0.0,2,2,21.8,upgrade fmtlib to 8.1.1; Support compile option -fno-exceptions
 ce33b6295388fe088a0b05d99628b0f47aaf23c7,2022-02-07,ok,logd below level,0.0,0.0,0.0,0,0,3.5,upgrade fmtlib to 8.1.1; Support compile option -fno-exceptions
+aaf77b4158d6e8fcde3741c1e8f3c059235c1e58,2022-02-08,ok,"logi(int, double)",0.0,0.0,0.0,2,2,21.8,support non-x86 archs
+aaf77b4158d6e8fcde3741c1e8f3c059235c1e58,2022-02-08,ok,logd below level,0.0,0.0,0.0,0,0,3.5,support non-x86 archs
+26da406f1453f2d17be42549450e70d183747072,2022-02-19,ok,"logi(int, double)",0.0,0.0,0.0,2,2,19.4,optimize frontend log code size; add macro FMTLOG_NO_CHECK_LEVEL to further reduce code size
+26da406f1453f2d17be42549450e70d183747072,2022-02-19,ok,logd below level,0.0,0.0,0.0,0,0,3.5,optimize frontend log code size; add macro FMTLOG_NO_CHECK_LEVEL to further reduce code size
+a567ae370d70e3f908386fc55c4fb3c66f941880,2022-02-19,ok,"logi(int, double)",0.0,0.0,0.0,2,2,19.8,fix some warnings
+a567ae370d70e3f908386fc55c4fb3c66f941880,2022-02-19,ok,logd below level,0.0,0.0,0.0,0,0,3.5,fix some warnings
+44627e650ccfe829fcc2df5f8b5e07782c60bc08,2022-03-15,ok,"logi(int, double)",0.0,0.0,0.0,2,2,19.7,Merge pull request #33 from TimStricker/bugfix/macro-redefinition
+44627e650ccfe829fcc2df5f8b5e07782c60bc08,2022-03-15,ok,logd below level,0.0,0.0,0.0,0,0,3.5,Merge pull request #33 from TimStricker/bugfix/macro-redefinition
+18b6632c7134e5528b5ed805a09ca9057027bfa4,2022-06-05,ok,"logi(int, double)",0.0,0.0,0.0,2,2,25.2,support log queue full callback
+18b6632c7134e5528b5ed805a09ca9057027bfa4,2022-06-05,ok,logd below level,0.0,0.0,0.0,0,0,3.5,support log queue full callback
+c5674ad0f6d20b25fc80323c2b914868bee1901f,2022-06-08,ok,"logi(int, double)",0.0,0.0,0.0,2,2,26.0,add user arg for logQFullCB
+c5674ad0f6d20b25fc80323c2b914868bee1901f,2022-06-08,ok,logd below level,0.0,0.0,0.0,0,0,3.7,add user arg for logQFullCB
+d8115d5b1ac87901d8d18a3b69d65423d00a9274,2022-06-24,ok,"logi(int, double)",0.0,0.0,0.0,2,2,25.9,Merge pull request #43 from moonshadow565/patch-1
+d8115d5b1ac87901d8d18a3b69d65423d00a9274,2022-06-24,ok,logd below level,0.0,0.0,0.0,0,0,3.7,Merge pull request #43 from moonshadow565/patch-1
+5c07952fec53043449f7347798f3345504c2d776,2022-06-26,ok,"logi(int, double)",0.0,0.0,0.0,2,2,25.7,change default FMTLOG_ACTIVE_LEVEL to FMTLOG_LEVEL_DBG
+5c07952fec53043449f7347798f3345504c2d776,2022-06-26,ok,logd below level,0.0,0.0,0.0,0,0,4.5,change default FMTLOG_ACTIVE_LEVEL to FMTLOG_LEVEL_DBG
+e45d13a89f45fb1629d995bcd70de54c5db81d97,2022-06-27,ok,"logi(int, double)",0.0,0.0,0.0,2,2,35.8,upgrade TSCNS to 2.0: now tsc clock will be synchronized with system clock
+e45d13a89f45fb1629d995bcd70de54c5db81d97,2022-06-27,ok,logd below level,0.0,0.0,0.0,0,0,4.4,upgrade TSCNS to 2.0: now tsc clock will be synchronized with system clock
+63b330ab426e3295fe62529da7f8c0053f2a905a,2022-06-28,ok,"logi(int, double)",0.0,0.0,0.0,2,2,35.2,update tscns
+63b330ab426e3295fe62529da7f8c0053f2a905a,2022-06-28,ok,logd below level,0.0,0.0,0.0,0,0,4.5,update tscns
+66df91361533ad423d42a678952e0d1570c71820,2022-06-29,ok,"logi(int, double)",0.0,0.0,0.0,2,2,37.0,fix an issue with constructing tscns
+66df91361533ad423d42a678952e0d1570c71820,2022-06-29,ok,logd below level,0.0,0.0,0.0,0,0,4.3,fix an issue with constructing tscns
+a8633d9fed740124fca7dc49b61fadd4d06044ac,2022-07-18,ok,"logi(int, double)",0.0,0.0,0.0,2,2,25.0,update tscns
+a8633d9fed740124fca7dc49b61fadd4d06044ac,2022-07-18,ok,logd below level,0.0,0.0,0.0,0,0,4.2,update tscns
+51756c2d9c3f45cc352d24704ed25c8d4cd7f507,2022-09-11,ok,"logi(int, double)",0.0,0.0,0.0,2,2,13.8,FMT_NOEXCEPT -> noexcept; upgrade fmtlib to 9.1.0
+51756c2d9c3f45cc352d24704ed25c8d4cd7f507,2022-09-11,ok,logd below level,0.0,0.0,0.0,0,0,2.9,FMT_NOEXCEPT -> noexcept; upgrade fmtlib to 9.1.0
+465ee200271c32f6355a416caf1e01576b6fedad,2022-09-11,ok,"logi(int, double)",0.0,0.0,0.0,2,2,13.8,minor change
+465ee200271c32f6355a416caf1e01576b6fedad,2022-09-11,ok,logd below level,0.0,0.0,0.0,0,0,2.9,minor change
+cab8ad3e249c6b6ff900e1ca2730219bcdc9d949,2022-12-14,ok,"logi(int, double)",0.0,0.0,0.0,2,2,42.1,make clear that the interval in startPollingThread() is in ns
+cab8ad3e249c6b6ff900e1ca2730219bcdc9d949,2022-12-14,ok,logd below level,0.0,0.0,0.0,0,0,4.3,make clear that the interval in startPollingThread() is in ns
+aa7ed208a5ca9e676e32826ca2bb0592e66243fb,2023-03-26,ok,"logi(int, double)",0.0,0.0,0.0,2,2,13.8,make log queue size configurable by adding macro FMTLOG_QUEUE_SIZE(default 1MB)
+aa7ed208a5ca9e676e32826ca2bb0592e66243fb,2023-03-26,ok,logd below level,0.0,0.0,0.0,0,0,2.9,make log queue size configurable by adding macro FMTLOG_QUEUE_SIZE(default 1MB)
+01b6cd339101f36c37e50938ec11918c6229b2de,2023-11-08,ok,"logi(int, double)",0.0,0.0,0.0,2,2,20.8,upgrade fmtlib to 10.1.1
+01b6cd339101f36c37e50938ec11918c6229b2de,2023-11-08,ok,logd below level,0.0,0.0,0.0,0,0,2.6,upgrade fmtlib to 10.1.1
+acd521b1a64480354136a745c511358da1ec7dc5,2024-05-31,ok,"logi(int, double)",0.0,0.0,0.0,2,2,24.5,upgrade fmtlib to 10.2.1
+acd521b1a64480354136a745c511358da1ec7dc5,2024-05-31,ok,logd below level,0.0,0.0,0.0,0,0,2.9,upgrade fmtlib to 10.2.1
+500e49fc8067b3e63da3aacd6f0cff77c0c3e76f,2025-02-12,ok,"logi(int, double)",0.0,0.0,0.0,2,2,25.1,update tscns: improve calibrate() on system time change with big step
+500e49fc8067b3e63da3aacd6f0cff77c0c3e76f,2025-02-12,ok,logd below level,0.0,0.0,0.0,0,0,2.9,update tscns: improve calibrate() on system time change with big step
 308b2317d4e9c21d3b203d104007fde127dcdbfa,2025-02-13,ok,"logi(int, double)",0.0,0.0,0.0,2,2,26.3,upgrade fmtlib to 11.1.3
 308b2317d4e9c21d3b203d104007fde127dcdbfa,2025-02-13,ok,logd below level,0.0,0.0,0.0,0,0,2.6,upgrade fmtlib to 11.1.3

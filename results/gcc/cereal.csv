@@ -1,3 +1,37 @@
 commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+18676e251fea0d7045f3720509923f1ebbe6c0bb,2013-06-17,build failed,,,,,,,,Restructuring
+d5afb78fcc446df03a8e9650c5ad607680d549c5,2013-06-19,build failed,,,,,,,,Adding chrono.  Some docs/cleanup.  NVP now works with R-values and l-values
+d4391d67eb482e045648da99388a7140dde4600d,2013-06-20,ok,serialize to ostringstream,4.0,4.0,0.0,4,0,886.4,fixed typo
+d4391d67eb482e045648da99388a7140dde4600d,2013-06-20,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,543.9,fixed typo
+3efeab031d39dc60402f43897a818332e49b2fba,2013-06-27,ok,serialize to ostringstream,4.0,4.0,0.0,4,0,427.0,fixing up polymorph prototype
+3efeab031d39dc60402f43897a818332e49b2fba,2013-06-27,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,243.6,fixing up polymorph prototype
+d9493f02cab96acfaefc81b537040240faf96cc4,2013-06-28,ok,serialize to ostringstream,4.0,4.0,0.0,4,0,471.2,Loading polymorphig shared_ptrs works
+d9493f02cab96acfaefc81b537040240faf96cc4,2013-06-28,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,248.2,Loading polymorphig shared_ptrs works
+7f791d2af94aa54f65f7abbccad2fb978d43b2c9,2013-06-29,ok,serialize to ostringstream,4.0,4.0,0.0,4,0,408.3,"mostly documentation, some playing around with weak_ptr but it doesn't seem to be properly working"
+7f791d2af94aa54f65f7abbccad2fb978d43b2c9,2013-06-29,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,232.6,"mostly documentation, some playing around with weak_ptr but it doesn't seem to be properly working"
+3c2c1315f0994386209a943e240172165fa854f7,2013-07-01,ok,serialize to ostringstream,4.0,4.0,0.0,4,0,433.8,making it possible to override process
+3c2c1315f0994386209a943e240172165fa854f7,2013-07-01,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,232.9,making it possible to override process
+441f5c44a5410020eeb799691cb21e80964f1ce9,2013-07-01,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,336.3,"removed push/pop pusition from binary archive, forward_list now needs to traverse an extra time for size"
+441f5c44a5410020eeb799691cb21e80964f1ce9,2013-07-01,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,234.5,"removed push/pop pusition from binary archive, forward_list now needs to traverse an extra time for size"
+825039a4e569f76dba9d32cb0f344653f143b3e3,2013-07-01,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,336.7,changed to std::distance impl for size on forward_list
+825039a4e569f76dba9d32cb0f344653f143b3e3,2013-07-01,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,234.9,changed to std::distance impl for size on forward_list
+5cecbdf08fa16fae84506c3ba78488811c9af6a1,2013-07-03,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,760.8,working on input xml
+5cecbdf08fa16fae84506c3ba78488811c9af6a1,2013-07-03,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,559.7,working on input xml
+8d2bdbf5db02da0837ab21799cd64e5a4d143dd1,2013-07-04,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,416.6,"cleaning up code, renamed detail in memory to memory_detail"
+8d2bdbf5db02da0837ab21799cd64e5a4d143dd1,2013-07-04,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,602.4,"cleaning up code, renamed detail in memory to memory_detail"
+ef4ec7bd6994c96cf84c8f94e38be743f8db6f51,2013-07-06,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,336.4,Adding doxygen file tags and STLSupport module
+ef4ec7bd6994c96cf84c8f94e38be743f8db6f51,2013-07-06,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,236.8,Adding doxygen file tags and STLSupport module
+4631cac2591ed6b95f0953c0b3cb189cb6ed3525,2013-07-08,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,760.2,Object serialization seems to work
+4631cac2591ed6b95f0953c0b3cb189cb6ed3525,2013-07-08,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,540.9,Object serialization seems to work
+3f5ac02c7077dbb902cbc12befdd9c9671759465,2013-07-10,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,337.4,Fixed GCC compile error
+3f5ac02c7077dbb902cbc12befdd9c9671759465,2013-07-10,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,235.3,Fixed GCC compile error
+5a8e3ce934eeaa86e9415cf83ad0f481b9cde916,2014-03-21,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,350.2,Merge branch 'develop'
+5a8e3ce934eeaa86e9415cf83ad0f481b9cde916,2014-03-21,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,267.2,Merge branch 'develop'
+075c44feef7cfe497b205aece079f5b842b3ffc0,2019-11-17,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,802.2,Merge pull request #597 from tankorsmash/patch-1
+075c44feef7cfe497b205aece079f5b842b3ffc0,2019-11-17,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,591.2,Merge pull request #597 from tankorsmash/patch-1
+0bbbb142f9eec2b0383a86a98e359a0d2106d94f,2021-06-10,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,390.6,Use std::variant::emplace when loading
+0bbbb142f9eec2b0383a86a98e359a0d2106d94f,2021-06-10,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,290.8,Use std::variant::emplace when loading
+f7deca361c084e3837bebe7641dd0dd6bc49bb3e,2024-02-29,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,353.2,More robust __cplusplus check
+f7deca361c084e3837bebe7641dd0dd6bc49bb3e,2024-02-29,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,273.6,More robust __cplusplus check
 d81e2f7df7b334fee057e53017388d02e555a836,2026-03-06,ok,serialize to ostringstream,2.0,2.0,0.0,2,0,354.0,Fix llvm20 compile issue in tuple.hpp (#872)
 d81e2f7df7b334fee057e53017388d02e555a836,2026-03-06,ok,deserialize from istringstream,1.0,1.0,0.0,1,0,271.7,Fix llvm20 compile issue in tuple.hpp (#872)
