@@ -1,0 +1,4 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+3026761cee69be3501f76bbb0713f13a89b0a7fa,2024-04-17,ok,write_new_order,0.0,0.0,0.0,0,0,177.9,Fix for std::basic_string_view<char>::const_iterator not being convertible to const char * in Windows (issue #43)
+3026761cee69be3501f76bbb0713f13a89b0a7fa,2024-04-17,ok,read_all,0.0,0.0,0.0,0,0,315.1,Fix for std::basic_string_view<char>::const_iterator not being convertible to const char * in Windows (issue #43)
+3026761cee69be3501f76bbb0713f13a89b0a7fa,2024-04-17,ok,check,0.0,0.0,0.0,0,0,29.7,Fix for std::basic_string_view<char>::const_iterator not being convertible to const char * in Windows (issue #43)

@@ -1,0 +1,6 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH3_64bits 16 B,0.0,0.0,0.0,0,0,5.4,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH3_64bits 64 B,0.0,0.0,0.0,0,0,9.9,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH3_64bits 1024 B,0.0,0.0,0.0,0,0,49.4,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH64 64 B,0.0,0.0,0.0,0,0,16.5,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170
+bedef07c2c7e8a63327e7d17995b613567eaa700,2026-10-28,ok,XXH64 1024 B,0.0,0.0,0.0,0,0,113.3,Merge pull request #1195 from Cyan4973/port/doc-fixes-1170

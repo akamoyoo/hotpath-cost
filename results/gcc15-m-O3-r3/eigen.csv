@@ -1,0 +1,5 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,15.0,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,50.1,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,41.1,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,182.6,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"

@@ -1,0 +1,174 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+a52c74095ffd4b898a05d1ec93e410eaa639d6a2,2007-12-20,build failed,,,,,,,,"rename src/ to Eigen/ so that we're able to #include<Eigen/Core.h> in the examples instead of ugly things like #include""../../src/Core.h"""
+4c92150676dea30748215549ba1b94df2624e652,2008-04-26,build failed,,,,,,,,Added Triangular expression to extract upper or lower (strictly or not) part of a matrix. Triangular also provide an optimised method for forward and backward substitution. Further optimizations regarding assignments and products might come later.
+e27b2b95cf566201810aa9f831c52bed3314d927,2008-06-27,build failed,,,,,,,,"* rework Map, allow vectorization * rework PacketMath and DummyPacketMath, make these actual template specializations instead of just overriding by non-template inline functions * introduce ei_ploadt and ei_pstoret, make use of them in Map and Matrix * remove Matrix::map() methods, use Map constructors instead."
+bf17467ce0418e0e9b759899f1af713f2376be1f,2008-08-24,build failed,,,,,,,,bugfix in Product and ei_L2_block_traits
+b26e04f40b113f54e1d5b405d7cd88e21a37c919,2008-10-27,build failed,,,,,,,,add Eigen namespace in EIGEN_INHERIT_ASSIGNMENT_OPERATOR
+6736e52d2552750c7346c67e6154e7169528af2a,2009-01-06,build failed,,,,,,,,* suppressed some minor warnings
+9bc44094c5aaac5dc4bd494a19eafe7b32645f1a,2009-01-28,build failed,,,,,,,,"add EIGEN_NO_AUTOMATIC_RESIZING if defined, already initialized matrices won't be automatically resized in assignments uninitialized matrices may still be initialized"
+fe00e864a131820669a98273ad9523726da3ec19,2009-03-20,build failed,,,,,,,,ei_pnegate implemented for AltiVec
+d97d307fcfc9c9421562705db7bf734865dfd53b,2009-06-08,build failed,,,,,,,,SparseMatrix::resize() always resets the matrix to an empty one
+3ac01b1400dccefcb2db85ab1caf88fc3bd379db,2009-08-06,build failed,,,,,,,,"compilation fix in EigenSolver, bugfix in PartialLU"
+9f899808d716474a758c6b31f1b0102a379ab1f4,2010-01-18,build failed,,,,,,,,fix scalar - matrix
+8a3f552e39d3fee3ada1cfc1eb75b179c77f2a78,2010-05-24,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,37.2,Return matrices by constant reference where possible. This changes the return type of: * eigenvectors() and eigenvalues() in ComplexEigenSolver * eigenvalues() in EigenSolver * eigenvectors() and eigenvalues() in SelfAdjointEigenSolver
+8a3f552e39d3fee3ada1cfc1eb75b179c77f2a78,2010-05-24,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,23.9,Return matrices by constant reference where possible. This changes the return type of: * eigenvectors() and eigenvalues() in ComplexEigenSolver * eigenvalues() in EigenSolver * eigenvectors() and eigenvalues() in SelfAdjointEigenSolver
+8a3f552e39d3fee3ada1cfc1eb75b179c77f2a78,2010-05-24,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,139.5,Return matrices by constant reference where possible. This changes the return type of: * eigenvectors() and eigenvalues() in ComplexEigenSolver * eigenvalues() in EigenSolver * eigenvectors() and eigenvalues() in SelfAdjointEigenSolver
+8a3f552e39d3fee3ada1cfc1eb75b179c77f2a78,2010-05-24,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,120.7,Return matrices by constant reference where possible. This changes the return type of: * eigenvectors() and eigenvalues() in ComplexEigenSolver * eigenvalues() in EigenSolver * eigenvectors() and eigenvalues() in SelfAdjointEigenSolver
+2874101b62f96f1654457eb37ad312799f828dfd,2010-07-01,build failed,,,,,,,,"fix compilation with icc. Anyway, the use of an enum instead of a 'const bool' is more consistent with the code around."
+d1111d625ccfc29a4b4a0db0192cbf6e2fdedf3c,2010-08-23,build failed,,,,,,,,Docs: Typos in ArrayBase doxygen comments
+11e253bc101d804c1e2dfea90f3c8256700324d4,2010-12-30,build failed,,,,,,,,"[Sparse] Added regression tests for the two bugfixes, the code passes all sparse_product tests"
+85f9fab00365e21988a194c49883f3db7dacf1be,2011-02-09,build failed,,,,,,,,"back out changeset efdf2e405664163c685127aecec53a21977f8031 . It turns out that the SSE3 header is always included, even without any SSE enabled, so it was making us wrongly use SSE3 paths. Backing this out fixes msvc related crashes, at least bug #165."
+7e863248987b06440742b1a02feaeb35cb1d75b6,2011-04-13,build failed,,,,,,,,Implement evaluator for PartialReduxExpr as a dumb wrapper.
+4477843bdd7555f634952357f6087021e2d8519b,2011-10-30,build failed,,,,,,,,bug #206 - part 4: Removes heap allocations from JacobiSVD and its preconditioners
+0251bb6c1d2da1d4a685bc118cb5bc774c9dbc30,2012-01-26,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,17.6,add missing inline keyword (linking issue)
+0251bb6c1d2da1d4a685bc118cb5bc774c9dbc30,2012-01-26,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,45.7,add missing inline keyword (linking issue)
+0251bb6c1d2da1d4a685bc118cb5bc774c9dbc30,2012-01-26,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,114.9,add missing inline keyword (linking issue)
+0251bb6c1d2da1d4a685bc118cb5bc774c9dbc30,2012-01-26,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,151.1,add missing inline keyword (linking issue)
+9c7b62415a71affa3a8183253f225327d446a833,2012-06-12,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,21.8,simplify and clean a bit the Pastix support module
+9c7b62415a71affa3a8183253f225327d446a833,2012-06-12,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,46.0,simplify and clean a bit the Pastix support module
+9c7b62415a71affa3a8183253f225327d446a833,2012-06-12,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,132.0,simplify and clean a bit the Pastix support module
+9c7b62415a71affa3a8183253f225327d446a833,2012-06-12,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,143.6,simplify and clean a bit the Pastix support module
+b3254c9af514ae4d6ab0e8a2947dea8aa3592d9b,2012-10-24,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,37.6,fix bug #524: Pardiso's parameter array does not have to be aligned!
+b3254c9af514ae4d6ab0e8a2947dea8aa3592d9b,2012-10-24,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,86.7,fix bug #524: Pardiso's parameter array does not have to be aligned!
+b3254c9af514ae4d6ab0e8a2947dea8aa3592d9b,2012-10-24,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,136.0,fix bug #524: Pardiso's parameter array does not have to be aligned!
+b3254c9af514ae4d6ab0e8a2947dea8aa3592d9b,2012-10-24,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,128.3,fix bug #524: Pardiso's parameter array does not have to be aligned!
+e5bf4440c0b43e467b7fc2ebc3f1c49a545ed115,2013-02-28,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,21.8,"Fix ""type qualifiers are meaningless here"" warnings"
+e5bf4440c0b43e467b7fc2ebc3f1c49a545ed115,2013-02-28,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,54.1,"Fix ""type qualifiers are meaningless here"" warnings"
+e5bf4440c0b43e467b7fc2ebc3f1c49a545ed115,2013-02-28,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,111.9,"Fix ""type qualifiers are meaningless here"" warnings"
+e5bf4440c0b43e467b7fc2ebc3f1c49a545ed115,2013-02-28,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,125.8,"Fix ""type qualifiers are meaningless here"" warnings"
+155fa0ca83715fca61c175251b0d7bef7344e8dc,2013-07-03,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,17.6,Add missing namespace prefix in pconj
+155fa0ca83715fca61c175251b0d7bef7344e8dc,2013-07-03,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,46.1,Add missing namespace prefix in pconj
+155fa0ca83715fca61c175251b0d7bef7344e8dc,2013-07-03,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,120.6,Add missing namespace prefix in pconj
+155fa0ca83715fca61c175251b0d7bef7344e8dc,2013-07-03,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,140.3,Add missing namespace prefix in pconj
+8f496cd3a3e1ce555da7391e72f5f51f3b4d1ec4,2013-11-01,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,21.0,Fix changeset 2702788da71303afa71e53dfa6542a560115425a  for fixed size matrices
+8f496cd3a3e1ce555da7391e72f5f51f3b4d1ec4,2013-11-01,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,45.6,Fix changeset 2702788da71303afa71e53dfa6542a560115425a  for fixed size matrices
+8f496cd3a3e1ce555da7391e72f5f51f3b4d1ec4,2013-11-01,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,126.2,Fix changeset 2702788da71303afa71e53dfa6542a560115425a  for fixed size matrices
+8f496cd3a3e1ce555da7391e72f5f51f3b4d1ec4,2013-11-01,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,126.4,Fix changeset 2702788da71303afa71e53dfa6542a560115425a  for fixed size matrices
+082f7ddc3745160c57d8a5a185a2a22e4d781b5f,2014-03-11,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,31.4,Port Cholesky module to evaluators
+082f7ddc3745160c57d8a5a185a2a22e4d781b5f,2014-03-11,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,88.8,Port Cholesky module to evaluators
+082f7ddc3745160c57d8a5a185a2a22e4d781b5f,2014-03-11,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,137.2,Port Cholesky module to evaluators
+082f7ddc3745160c57d8a5a185a2a22e4d781b5f,2014-03-11,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,152.8,Port Cholesky module to evaluators
+333905b0c2e2e377744c7ed326ead34625510530,2014-09-21,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,18.1,Fix typos in docs for IterativeLinearSolvers module
+333905b0c2e2e377744c7ed326ead34625510530,2014-09-21,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,64.6,Fix typos in docs for IterativeLinearSolvers module
+333905b0c2e2e377744c7ed326ead34625510530,2014-09-21,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,73.3,Fix typos in docs for IterativeLinearSolvers module
+333905b0c2e2e377744c7ed326ead34625510530,2014-09-21,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,237.4,Fix typos in docs for IterativeLinearSolvers module
+0f216136980503c3792a90e382b4d6bbdbb870c0,2015-01-30,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,20.1,"bug #936, patch 2/3: Remove EIGEN_VECTORIZE_FMA, was redundant with EIGEN_HAS_SINGLE_INSTRUCTION_MADD"
+0f216136980503c3792a90e382b4d6bbdbb870c0,2015-01-30,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,65.2,"bug #936, patch 2/3: Remove EIGEN_VECTORIZE_FMA, was redundant with EIGEN_HAS_SINGLE_INSTRUCTION_MADD"
+0f216136980503c3792a90e382b4d6bbdbb870c0,2015-01-30,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,71.2,"bug #936, patch 2/3: Remove EIGEN_VECTORIZE_FMA, was redundant with EIGEN_HAS_SINGLE_INSTRUCTION_MADD"
+0f216136980503c3792a90e382b4d6bbdbb870c0,2015-01-30,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,237.6,"bug #936, patch 2/3: Remove EIGEN_VECTORIZE_FMA, was redundant with EIGEN_HAS_SINGLE_INSTRUCTION_MADD"
+b0d5aaafcc63a666714faebbdf0fa250977e6e59,2015-06-10,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.9,"Rename free functions isFinite, isInf, isNaN to be compatible with c++11"
+b0d5aaafcc63a666714faebbdf0fa250977e6e59,2015-06-10,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,40.9,"Rename free functions isFinite, isInf, isNaN to be compatible with c++11"
+b0d5aaafcc63a666714faebbdf0fa250977e6e59,2015-06-10,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,51.1,"Rename free functions isFinite, isInf, isNaN to be compatible with c++11"
+b0d5aaafcc63a666714faebbdf0fa250977e6e59,2015-06-10,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,167.5,"Rename free functions isFinite, isInf, isNaN to be compatible with c++11"
+d16797cfc06b93d30bee0b698e90ddfe5cb456fe,2015-09-19,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,13.7,Fix bug #1067: naming conflict
+d16797cfc06b93d30bee0b698e90ddfe5cb456fe,2015-09-19,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,34.4,Fix bug #1067: naming conflict
+d16797cfc06b93d30bee0b698e90ddfe5cb456fe,2015-09-19,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,51.2,Fix bug #1067: naming conflict
+d16797cfc06b93d30bee0b698e90ddfe5cb456fe,2015-09-19,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,167.2,Fix bug #1067: naming conflict
+6bdeb8cfbe5d7da0380237fa5622a29223a261f3,2015-11-27,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,19.1,"bug #918, umfpack: add access to umfpack return code and parameters"
+6bdeb8cfbe5d7da0380237fa5622a29223a261f3,2015-11-27,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,67.8,"bug #918, umfpack: add access to umfpack return code and parameters"
+6bdeb8cfbe5d7da0380237fa5622a29223a261f3,2015-11-27,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,76.8,"bug #918, umfpack: add access to umfpack return code and parameters"
+6bdeb8cfbe5d7da0380237fa5622a29223a261f3,2015-11-27,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,266.7,"bug #918, umfpack: add access to umfpack return code and parameters"
+62acd679037400b55f81aac709edea75dc5ae876,2016-12-05,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,20.0,remove temporary in SparseLU::solve
+62acd679037400b55f81aac709edea75dc5ae876,2016-12-05,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,50.6,remove temporary in SparseLU::solve
+62acd679037400b55f81aac709edea75dc5ae876,2016-12-05,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,69.9,remove temporary in SparseLU::solve
+62acd679037400b55f81aac709edea75dc5ae876,2016-12-05,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,185.5,remove temporary in SparseLU::solve
+649d4758a6b8bdfd50656ff6b937e0276cc1eb8b,2018-10-08,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,13.6,merge
+649d4758a6b8bdfd50656ff6b937e0276cc1eb8b,2018-10-08,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,25.3,merge
+649d4758a6b8bdfd50656ff6b937e0276cc1eb8b,2018-10-08,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,66.9,merge
+649d4758a6b8bdfd50656ff6b937e0276cc1eb8b,2018-10-08,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,139.9,merge
+6e215cf109073da9ffb5b491171613b8db24fd9d,2019-09-14,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,11.4,Add Bessel functions to SpecialFunctions.
+6e215cf109073da9ffb5b491171613b8db24fd9d,2019-09-14,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,25.0,Add Bessel functions to SpecialFunctions.
+6e215cf109073da9ffb5b491171613b8db24fd9d,2019-09-14,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,63.1,Add Bessel functions to SpecialFunctions.
+6e215cf109073da9ffb5b491171613b8db24fd9d,2019-09-14,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,135.3,Add Bessel functions to SpecialFunctions.
+c854e189e6d4868fedc7d4ef81cc3485f5b24841,2020-04-10,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,13.8,Fixed commainitializer test.
+c854e189e6d4868fedc7d4ef81cc3485f5b24841,2020-04-10,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,25.1,Fixed commainitializer test.
+c854e189e6d4868fedc7d4ef81cc3485f5b24841,2020-04-10,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,50.4,Fixed commainitializer test.
+c854e189e6d4868fedc7d4ef81cc3485f5b24841,2020-04-10,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,135.3,Fixed commainitializer test.
+3012e755e92d3b3f01f8e7753b5e71cbeaaa40df,2020-09-15,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.9,Add plog ops support packet2d for NEON
+3012e755e92d3b3f01f8e7753b5e71cbeaaa40df,2020-09-15,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,29.8,Add plog ops support packet2d for NEON
+3012e755e92d3b3f01f8e7753b5e71cbeaaa40df,2020-09-15,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,50.4,Add plog ops support packet2d for NEON
+3012e755e92d3b3f01f8e7753b5e71cbeaaa40df,2020-09-15,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,135.3,Add plog ops support packet2d for NEON
+634bd79b0eb9330febf346fdc043a728c9f98df4,2020-12-07,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,20.4,Fix unused warning on new `dense_assignment_loop` impl.
+634bd79b0eb9330febf346fdc043a728c9f98df4,2020-12-07,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,49.7,Fix unused warning on new `dense_assignment_loop` impl.
+634bd79b0eb9330febf346fdc043a728c9f98df4,2020-12-07,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,50.5,Fix unused warning on new `dense_assignment_loop` impl.
+634bd79b0eb9330febf346fdc043a728c9f98df4,2020-12-07,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,135.5,Fix unused warning on new `dense_assignment_loop` impl.
+8f686ac4ec4fce1d712b97927342e2e1121a113c,2021-02-27,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,11.4,clang 10 aggressively warns about precision loss when converting int to float (or long to double)
+8f686ac4ec4fce1d712b97927342e2e1121a113c,2021-02-27,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,25.0,clang 10 aggressively warns about precision loss when converting int to float (or long to double)
+8f686ac4ec4fce1d712b97927342e2e1121a113c,2021-02-27,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,57.6,clang 10 aggressively warns about precision loss when converting int to float (or long to double)
+8f686ac4ec4fce1d712b97927342e2e1121a113c,2021-02-27,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,143.8,clang 10 aggressively warns about precision loss when converting int to float (or long to double)
+de2e62c62d234a5723fe27dcaf4282f2aab6d8c7,2021-07-25,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.9,Disable vectorization of comparisons except for bool.
+de2e62c62d234a5723fe27dcaf4282f2aab6d8c7,2021-07-25,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,29.7,Disable vectorization of comparisons except for bool.
+de2e62c62d234a5723fe27dcaf4282f2aab6d8c7,2021-07-25,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,50.4,Disable vectorization of comparisons except for bool.
+de2e62c62d234a5723fe27dcaf4282f2aab6d8c7,2021-07-25,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,143.8,Disable vectorization of comparisons except for bool.
+f04fd8b1686fdcaca35a5eb8d4b3b1ff50fc4636,2021-12-08,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,11.4,Make sure exp(-Inf) is zero for vectorized expressions. This fixes #2385.
+f04fd8b1686fdcaca35a5eb8d4b3b1ff50fc4636,2021-12-08,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,25.0,Make sure exp(-Inf) is zero for vectorized expressions. This fixes #2385.
+f04fd8b1686fdcaca35a5eb8d4b3b1ff50fc4636,2021-12-08,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,67.0,Make sure exp(-Inf) is zero for vectorized expressions. This fixes #2385.
+f04fd8b1686fdcaca35a5eb8d4b3b1ff50fc4636,2021-12-08,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,143.8,Make sure exp(-Inf) is zero for vectorized expressions. This fixes #2385.
+19a6a827c42062133aee119bc57c67ac6aac043c,2022-03-23,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,17.1,Optimize visitor traversal in case of RowMajor.
+19a6a827c42062133aee119bc57c67ac6aac043c,2022-03-23,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,29.5,Optimize visitor traversal in case of RowMajor.
+19a6a827c42062133aee119bc57c67ac6aac043c,2022-03-23,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,50.4,Optimize visitor traversal in case of RowMajor.
+19a6a827c42062133aee119bc57c67ac6aac043c,2022-03-23,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,143.8,Optimize visitor traversal in case of RowMajor.
+e8a2aa24a250e886522ceb040b92b20aafe56371,2022-09-09,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.1,Fix a couple of issues with unary pow():
+e8a2aa24a250e886522ceb040b92b20aafe56371,2022-09-09,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,29.9,Fix a couple of issues with unary pow():
+e8a2aa24a250e886522ceb040b92b20aafe56371,2022-09-09,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,63.1,Fix a couple of issues with unary pow():
+e8a2aa24a250e886522ceb040b92b20aafe56371,2022-09-09,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,139.3,Fix a couple of issues with unary pow():
+12ad99ce60ae7526ca831e845601130914042070,2023-01-29,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,18.3,Remove unused variables from GenericPacketMathFunctions.h
+12ad99ce60ae7526ca831e845601130914042070,2023-01-29,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,48.0,Remove unused variables from GenericPacketMathFunctions.h
+12ad99ce60ae7526ca831e845601130914042070,2023-01-29,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,69.5,Remove unused variables from GenericPacketMathFunctions.h
+12ad99ce60ae7526ca831e845601130914042070,2023-01-29,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,187.3,Remove unused variables from GenericPacketMathFunctions.h
+fdc749de2ac1dd6ab25298dd60ab8d594992fd07,2023-05-02,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,18.4,JacobiSVD: set m_nonzeroSingularValues to zero if not finite
+fdc749de2ac1dd6ab25298dd60ab8d594992fd07,2023-05-02,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,48.4,JacobiSVD: set m_nonzeroSingularValues to zero if not finite
+fdc749de2ac1dd6ab25298dd60ab8d594992fd07,2023-05-02,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,69.5,JacobiSVD: set m_nonzeroSingularValues to zero if not finite
+fdc749de2ac1dd6ab25298dd60ab8d594992fd07,2023-05-02,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,196.2,JacobiSVD: set m_nonzeroSingularValues to zero if not finite
+7fd7a3f946e5ac152d28dad388cff8bfa1026925,2023-12-07,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,18.4,Implement plog_complex
+7fd7a3f946e5ac152d28dad388cff8bfa1026925,2023-12-07,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,49.5,Implement plog_complex
+7fd7a3f946e5ac152d28dad388cff8bfa1026925,2023-12-07,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,72.2,Implement plog_complex
+7fd7a3f946e5ac152d28dad388cff8bfa1026925,2023-12-07,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,197.6,Implement plog_complex
+d165c7377f7d1f55f0209c5eab19972941b35c56,2024-05-20,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,11.4,Format EIGEN_STATIC_ASSERT() as a statement macro
+d165c7377f7d1f55f0209c5eab19972941b35c56,2024-05-20,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,26.2,Format EIGEN_STATIC_ASSERT() as a statement macro
+d165c7377f7d1f55f0209c5eab19972941b35c56,2024-05-20,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,50.4,Format EIGEN_STATIC_ASSERT() as a statement macro
+d165c7377f7d1f55f0209c5eab19972941b35c56,2024-05-20,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,148.2,Format EIGEN_STATIC_ASSERT() as a statement macro
+41e46ed243f03ae9e45c86a0ca865bc1a52f2ae0,2024-12-04,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.9,fix IOFormat alignment
+41e46ed243f03ae9e45c86a0ca865bc1a52f2ae0,2024-12-04,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,31.2,fix IOFormat alignment
+41e46ed243f03ae9e45c86a0ca865bc1a52f2ae0,2024-12-04,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,37.4,fix IOFormat alignment
+41e46ed243f03ae9e45c86a0ca865bc1a52f2ae0,2024-12-04,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,148.4,fix IOFormat alignment
+745e019edc4d6cac8cf5722bcee33649af23af3b,2025-10-17,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,18.2,Merge remote-tracking branch 'refs/remotes/origin/master'
+745e019edc4d6cac8cf5722bcee33649af23af3b,2025-10-17,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,47.5,Merge remote-tracking branch 'refs/remotes/origin/master'
+745e019edc4d6cac8cf5722bcee33649af23af3b,2025-10-17,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,41.6,Merge remote-tracking branch 'refs/remotes/origin/master'
+745e019edc4d6cac8cf5722bcee33649af23af3b,2025-10-17,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,222.2,Merge remote-tracking branch 'refs/remotes/origin/master'
+57b1de2330d0660f353037a743fada210bde41ce,2026-03-01,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,11.4,Fix row-major GEMV dropping rows when n8 heuristic disables main loop
+57b1de2330d0660f353037a743fada210bde41ce,2026-03-01,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,25.1,Fix row-major GEMV dropping rows when n8 heuristic disables main loop
+57b1de2330d0660f353037a743fada210bde41ce,2026-03-01,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,37.4,Fix row-major GEMV dropping rows when n8 heuristic disables main loop
+57b1de2330d0660f353037a743fada210bde41ce,2026-03-01,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,219.5,Fix row-major GEMV dropping rows when n8 heuristic disables main loop
+c8d5cba8d4b038c35ffbb814555fcd3cf9114af2,2026-04-25,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.9,Core: clean up remaining nested const storage
+c8d5cba8d4b038c35ffbb814555fcd3cf9114af2,2026-04-25,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,30.2,Core: clean up remaining nested const storage
+c8d5cba8d4b038c35ffbb814555fcd3cf9114af2,2026-04-25,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,37.5,Core: clean up remaining nested const storage
+c8d5cba8d4b038c35ffbb814555fcd3cf9114af2,2026-04-25,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,219.4,Core: clean up remaining nested const storage
+c1a4cd58646b76cfcee13edfa62962b4ac00c479,2026-06-10,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.1,Default trivial special members where semantics are unchanged
+c1a4cd58646b76cfcee13edfa62962b4ac00c479,2026-06-10,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,31.8,Default trivial special members where semantics are unchanged
+c1a4cd58646b76cfcee13edfa62962b4ac00c479,2026-06-10,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,44.4,Default trivial special members where semantics are unchanged
+c1a4cd58646b76cfcee13edfa62962b4ac00c479,2026-06-10,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,218.8,Default trivial special members where semantics are unchanged
+a885abcfa7b67efc4d7c4331698bb4225708f95c,2026-08-18,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.8,Tensor: Copy unit-magnitude reversed runs with a packet reversal
+a885abcfa7b67efc4d7c4331698bb4225708f95c,2026-08-18,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,31.8,Tensor: Copy unit-magnitude reversed runs with a packet reversal
+a885abcfa7b67efc4d7c4331698bb4225708f95c,2026-08-18,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,42.5,Tensor: Copy unit-magnitude reversed runs with a packet reversal
+a885abcfa7b67efc4d7c4331698bb4225708f95c,2026-08-18,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,218.2,Tensor: Copy unit-magnitude reversed runs with a packet reversal
+99baace3784200b7d84e443409360f60b451c36f,2026-09-15,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,20.8,Eigenvalues: Use power-of-two scaling in Schur decompositions
+99baace3784200b7d84e443409360f60b451c36f,2026-09-15,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,31.5,Eigenvalues: Use power-of-two scaling in Schur decompositions
+99baace3784200b7d84e443409360f60b451c36f,2026-09-15,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,46.8,Eigenvalues: Use power-of-two scaling in Schur decompositions
+99baace3784200b7d84e443409360f60b451c36f,2026-09-15,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,212.9,Eigenvalues: Use power-of-two scaling in Schur decompositions
+dee1af8bb77eff37a6c564741a53a2fb559c394c,2026-10-04,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.9,Householder: Restore AutoDiffScalar support in QR and JacobiSVD
+dee1af8bb77eff37a6c564741a53a2fb559c394c,2026-10-04,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,31.6,Householder: Restore AutoDiffScalar support in QR and JacobiSVD
+dee1af8bb77eff37a6c564741a53a2fb559c394c,2026-10-04,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,42.9,Householder: Restore AutoDiffScalar support in QR and JacobiSVD
+dee1af8bb77eff37a6c564741a53a2fb559c394c,2026-10-04,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,215.1,Householder: Restore AutoDiffScalar support in QR and JacobiSVD
+0934a0b0763a60ad2c6a9511043ad4b7b8312d04,2026-10-23,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.8,Core: Avoid spurious alignment warnings in GEMM packing storage
+0934a0b0763a60ad2c6a9511043ad4b7b8312d04,2026-10-23,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,35.3,Core: Avoid spurious alignment warnings in GEMM packing storage
+0934a0b0763a60ad2c6a9511043ad4b7b8312d04,2026-10-23,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,42.6,Core: Avoid spurious alignment warnings in GEMM packing storage
+0934a0b0763a60ad2c6a9511043ad4b7b8312d04,2026-10-23,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,192.5,Core: Avoid spurious alignment warnings in GEMM packing storage
+ceacb22ee3fa469e92718d2cb15499677ddc5704,2026-11-15,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,14.8,Core: Fix product-evaluator and kernel defects found before 5.1.0-rc1
+ceacb22ee3fa469e92718d2cb15499677ddc5704,2026-11-15,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,35.2,Core: Fix product-evaluator and kernel defects found before 5.1.0-rc1
+ceacb22ee3fa469e92718d2cb15499677ddc5704,2026-11-15,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,41.9,Core: Fix product-evaluator and kernel defects found before 5.1.0-rc1
+ceacb22ee3fa469e92718d2cb15499677ddc5704,2026-11-15,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,195.6,Core: Fix product-evaluator and kernel defects found before 5.1.0-rc1
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,Matrix4d * Matrix4d,0.0,0.0,0.0,0,0,17.6,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,8x8 matrix * vector,0.0,0.0,0.0,0,0,49.4,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,dot of 256 doubles,0.0,0.0,0.0,0,0,45.8,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"
+8d4a5a844cc052f0a17952e0fd5e4987ceb96e24,2026-11-15,ok,4x4 Cholesky solve,0.0,0.0,0.0,0,0,255.7,"Core: Fix five defects in Ref, hcat/vcat, reshaped, CwiseUnaryView and RealView"

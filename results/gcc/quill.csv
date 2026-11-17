@@ -1,0 +1,376 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+e9ce4ca8bf2ae6c2a56d7dfc86d79d9912d200e0,2024-08-14,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.5,Merge pull request #523 from odygrd/v7
+e9ce4ca8bf2ae6c2a56d7dfc86d79d9912d200e0,2024-08-14,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,19.1,Merge pull request #523 from odygrd/v7
+e9ce4ca8bf2ae6c2a56d7dfc86d79d9912d200e0,2024-08-14,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.5,Merge pull request #523 from odygrd/v7
+478d89465ab3283eafd873c052e127056da0afad,2024-08-15,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.6,Update Logger.h
+478d89465ab3283eafd873c052e127056da0afad,2024-08-15,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,19.1,Update Logger.h
+478d89465ab3283eafd873c052e127056da0afad,2024-08-15,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.5,Update Logger.h
+29254e6ce554f6eb31da8c005c55dceaff503086,2024-08-16,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,20.5,support std::string with custom allocator
+29254e6ce554f6eb31da8c005c55dceaff503086,2024-08-16,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,19.1,support std::string with custom allocator
+29254e6ce554f6eb31da8c005c55dceaff503086,2024-08-16,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.5,support std::string with custom allocator
+c3d83d9f2d9c7a80a8c9b644cfe8445fc7f030eb,2024-08-17,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,17.0,"Add ""Notice"" Logging Level (#526)"
+c3d83d9f2d9c7a80a8c9b644cfe8445fc7f030eb,2024-08-17,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,32.3,"Add ""Notice"" Logging Level (#526)"
+c3d83d9f2d9c7a80a8c9b644cfe8445fc7f030eb,2024-08-17,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,"Add ""Notice"" Logging Level (#526)"
+0959d7c340c3cfd2e48f80b763ab820bf53bb4af,2024-08-18,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,32.5,clang-tidy fixes
+0959d7c340c3cfd2e48f80b763ab820bf53bb4af,2024-08-18,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,34.5,clang-tidy fixes
+0959d7c340c3cfd2e48f80b763ab820bf53bb4af,2024-08-18,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,clang-tidy fixes
+5b56cc5a54d531e43772ad6d7cef2f043fdebeb3,2024-08-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,20.1,Improve static assert error message for unsupported codec
+5b56cc5a54d531e43772ad6d7cef2f043fdebeb3,2024-08-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,20.1,Improve static assert error message for unsupported codec
+5b56cc5a54d531e43772ad6d7cef2f043fdebeb3,2024-08-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,Improve static assert error message for unsupported codec
+815ed84a0d1142c083698cfbf39571ace52e9f1a,2024-08-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,24.6,use __thread for thread local storage on linux
+815ed84a0d1142c083698cfbf39571ace52e9f1a,2024-08-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,19.2,use __thread for thread local storage on linux
+815ed84a0d1142c083698cfbf39571ace52e9f1a,2024-08-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,use __thread for thread local storage on linux
+8f98f07416bafc7ea36e92fa67c8aa92c112ed57,2024-08-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.1,unified thread-local storage handling across platforms using `QUILL_THREAD_LOCAL`
+8f98f07416bafc7ea36e92fa67c8aa92c112ed57,2024-08-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,19.4,unified thread-local storage handling across platforms using `QUILL_THREAD_LOCAL`
+8f98f07416bafc7ea36e92fa67c8aa92c112ed57,2024-08-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,unified thread-local storage handling across platforms using `QUILL_THREAD_LOCAL`
+b3fdf903a39b6d7a50a5ade2f0d0877baae7b2be,2024-08-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,28.0,Replace std::vector with InlinedVector for size caching
+b3fdf903a39b6d7a50a5ade2f0d0877baae7b2be,2024-08-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,26.5,Replace std::vector with InlinedVector for size caching
+b3fdf903a39b6d7a50a5ade2f0d0877baae7b2be,2024-08-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.9,Replace std::vector with InlinedVector for size caching
+00626e0c3ab26f7e7f42a60602fe075fad47305e,2024-08-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.3,fix compute_encoded_size order of evaluation for pair
+00626e0c3ab26f7e7f42a60602fe075fad47305e,2024-08-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.7,fix compute_encoded_size order of evaluation for pair
+00626e0c3ab26f7e7f42a60602fe075fad47305e,2024-08-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,fix compute_encoded_size order of evaluation for pair
+e40d714d92c02c6a0313c44904aae5290a31eeef,2024-08-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.3,Moved log header encoding to a function to potentially help the compiler optimize
+e40d714d92c02c6a0313c44904aae5290a31eeef,2024-08-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.6,Moved log header encoding to a function to potentially help the compiler optimize
+e40d714d92c02c6a0313c44904aae5290a31eeef,2024-08-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Moved log header encoding to a function to potentially help the compiler optimize
+e7136ba632fddcd4b9b4c00bb08280338e67a395,2024-08-21,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,28.4,minor codec improvements
+e7136ba632fddcd4b9b4c00bb08280338e67a395,2024-08-21,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,31.9,minor codec improvements
+e7136ba632fddcd4b9b4c00bb08280338e67a395,2024-08-21,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.4,minor codec improvements
+c1a94357976072bdbb94e95037032cb22772368a,2024-08-24,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.7,add option `add_metadata_to_multi_line_logs`
+c1a94357976072bdbb94e95037032cb22772368a,2024-08-24,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.0,add option `add_metadata_to_multi_line_logs`
+c1a94357976072bdbb94e95037032cb22772368a,2024-08-24,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.7,add option `add_metadata_to_multi_line_logs`
+b0c5db6ad682abb665793304919819432f2c9b57,2024-08-24,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,20.1,add PatternFormatterOptions
+b0c5db6ad682abb665793304919819432f2c9b57,2024-08-24,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,21.2,add PatternFormatterOptions
+b0c5db6ad682abb665793304919819432f2c9b57,2024-08-24,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,add PatternFormatterOptions
+0792ecbb645899321b2833c3754e8e58eb111544,2024-08-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.3,Replace `static` variables with `static constexpr` in the `ConsoleColours`
+0792ecbb645899321b2833c3754e8e58eb111544,2024-08-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.5,Replace `static` variables with `static constexpr` in the `ConsoleColours`
+0792ecbb645899321b2833c3754e8e58eb111544,2024-08-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.8,Replace `static` variables with `static constexpr` in the `ConsoleColours`
+0b065268365f89a09d136b27a48e14ec808e95f4,2024-08-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.2,test all macros
+0b065268365f89a09d136b27a48e14ec808e95f4,2024-08-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.2,test all macros
+0b065268365f89a09d136b27a48e14ec808e95f4,2024-08-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.8,test all macros
+d9d677923d48bf97ff75883590ccda8d0103f024,2024-08-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.2,Expanded terminal list for color detection
+d9d677923d48bf97ff75883590ccda8d0103f024,2024-08-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.9,Expanded terminal list for color detection
+d9d677923d48bf97ff75883590ccda8d0103f024,2024-08-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Expanded terminal list for color detection
+293bf162e7f18aa2dae556c5d96658d8ac89298d,2024-08-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.3,"Exclude char from Codec template in Array.h, remove __STDC_WANT_LIB_EXT1__ dependency"
+293bf162e7f18aa2dae556c5d96658d8ac89298d,2024-08-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.7,"Exclude char from Codec template in Array.h, remove __STDC_WANT_LIB_EXT1__ dependency"
+293bf162e7f18aa2dae556c5d96658d8ac89298d,2024-08-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.7,"Exclude char from Codec template in Array.h, remove __STDC_WANT_LIB_EXT1__ dependency"
+b15b41474f7ce7f97076b67673c4549ef23b9217,2024-08-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,28.2,Remove system time reliance in StringFromTime constructor
+b15b41474f7ce7f97076b67673c4549ef23b9217,2024-08-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,33.8,Remove system time reliance in StringFromTime constructor
+b15b41474f7ce7f97076b67673c4549ef23b9217,2024-08-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.3,Remove system time reliance in StringFromTime constructor
+b6d13e39639ecc5012e770afb7b45b28067fc231,2024-08-27,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,18.8,remove unnecessary branch
+b6d13e39639ecc5012e770afb7b45b28067fc231,2024-08-27,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.8,remove unnecessary branch
+b6d13e39639ecc5012e770afb7b45b28067fc231,2024-08-27,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,remove unnecessary branch
+c70cfeb4ee15d738caa3a4a32b97f56708d7c0b2,2024-08-29,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.4,fix documentation
+c70cfeb4ee15d738caa3a4a32b97f56708d7c0b2,2024-08-29,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.2,fix documentation
+c70cfeb4ee15d738caa3a4a32b97f56708d7c0b2,2024-08-29,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,5.4,fix documentation
+03cbe800e8d3c1a1bc181e52f2556f19e3f007c7,2024-09-06,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.7,Suppressed the GCC warning `-Wstringop-overflow` in the bundled `libfmt`.
+03cbe800e8d3c1a1bc181e52f2556f19e3f007c7,2024-09-06,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.1,Suppressed the GCC warning `-Wstringop-overflow` in the bundled `libfmt`.
+03cbe800e8d3c1a1bc181e52f2556f19e3f007c7,2024-09-06,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.8,Suppressed the GCC warning `-Wstringop-overflow` in the bundled `libfmt`.
+21b923b50d53cc98d01628d5b305e324854c65d0,2024-09-07,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.5,Optimize decode_arg in ForwardList.h from O(n2) loop to O(1)
+21b923b50d53cc98d01628d5b305e324854c65d0,2024-09-07,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.1,Optimize decode_arg in ForwardList.h from O(n2) loop to O(1)
+21b923b50d53cc98d01628d5b305e324854c65d0,2024-09-07,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.7,Optimize decode_arg in ForwardList.h from O(n2) loop to O(1)
+153924a9308ad132bdf67a14a99b0c5ef7b475cc,2024-09-08,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.9,update version and CHANGELOG.md
+153924a9308ad132bdf67a14a99b0c5ef7b475cc,2024-09-08,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.1,update version and CHANGELOG.md
+153924a9308ad132bdf67a14a99b0c5ef7b475cc,2024-09-08,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,update version and CHANGELOG.md
+fa6884e0555e7712c1a2c88a448bcdf5b17684ff,2024-09-08,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.4,"always clear arg size cache, only increment failure counter for Log events"
+fa6884e0555e7712c1a2c88a448bcdf5b17684ff,2024-09-08,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.0,"always clear arg size cache, only increment failure counter for Log events"
+fa6884e0555e7712c1a2c88a448bcdf5b17684ff,2024-09-08,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.5,"always clear arg size cache, only increment failure counter for Log events"
+013207cd77700c2daf24ebb31eb4e0990d5d2613,2024-09-08,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,18.3,fix mingw build
+013207cd77700c2daf24ebb31eb4e0990d5d2613,2024-09-08,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.1,fix mingw build
+013207cd77700c2daf24ebb31eb4e0990d5d2613,2024-09-08,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,fix mingw build
+468a97c04c792d0c33eb204bb33889bd37faab47,2024-09-11,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.0,suppress GCC false-positive warnings more effectively
+468a97c04c792d0c33eb204bb33889bd37faab47,2024-09-11,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.1,suppress GCC false-positive warnings more effectively
+468a97c04c792d0c33eb204bb33889bd37faab47,2024-09-11,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,suppress GCC false-positive warnings more effectively
+aaba93635c6fdccbdddf8c02367309048dd72cca,2024-09-12,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.7,Add missing include
+aaba93635c6fdccbdddf8c02367309048dd72cca,2024-09-12,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,32.5,Add missing include
+aaba93635c6fdccbdddf8c02367309048dd72cca,2024-09-12,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.5,Add missing include
+f7779500eff544e29a271e40efd8dc3c2e7e5ac4,2024-09-12,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,27.0,Add support for custom write buffer size in FileSink and RotatingFileSink
+f7779500eff544e29a271e40efd8dc3c2e7e5ac4,2024-09-12,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,32.3,Add support for custom write buffer size in FileSink and RotatingFileSink
+f7779500eff544e29a271e40efd8dc3c2e7e5ac4,2024-09-12,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.6,Add support for custom write buffer size in FileSink and RotatingFileSink
+146a2be4dd84921b533816dc624f97bc4252f629,2024-09-12,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.2,Improve queue allocation message readability by displaying sizes in KiB
+146a2be4dd84921b533816dc624f97bc4252f629,2024-09-12,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.9,Improve queue allocation message readability by displaying sizes in KiB
+146a2be4dd84921b533816dc624f97bc4252f629,2024-09-12,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Improve queue allocation message readability by displaying sizes in KiB
+e11d26e0ca674832fe696503aaa2ff91360696bc,2024-09-13,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,27.1,Add configurable minimum fsync interval
+e11d26e0ca674832fe696503aaa2ff91360696bc,2024-09-13,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,31.6,Add configurable minimum fsync interval
+e11d26e0ca674832fe696503aaa2ff91360696bc,2024-09-13,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.5,Add configurable minimum fsync interval
+1d57c47bfb92f2efb27196e409e1324b41968904,2024-09-13,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.1,Fix log level short code mapping
+1d57c47bfb92f2efb27196e409e1324b41968904,2024-09-13,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.8,Fix log level short code mapping
+1d57c47bfb92f2efb27196e409e1324b41968904,2024-09-13,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Fix log level short code mapping
+0c5a27b65c52fef8a667a243332e02d6f05787e6,2024-09-14,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,26.6,simplify TransitEventbuffer
+0c5a27b65c52fef8a667a243332e02d6f05787e6,2024-09-14,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,32.1,simplify TransitEventbuffer
+0c5a27b65c52fef8a667a243332e02d6f05787e6,2024-09-14,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,simplify TransitEventbuffer
+df4dc3575eeb2d8e1224f70d255ba179c920ec95,2024-09-14,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,27.4,Optimise TransitEventBuffer expansion
+df4dc3575eeb2d8e1224f70d255ba179c920ec95,2024-09-14,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,32.8,Optimise TransitEventBuffer expansion
+df4dc3575eeb2d8e1224f70d255ba179c920ec95,2024-09-14,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.5,Optimise TransitEventBuffer expansion
+069f71918e59f5428d6d8734235a07b7c6a6f0d9,2024-09-17,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.6,"Backend optimisations, improvements, and cosmetic changes"
+069f71918e59f5428d6d8734235a07b7c6a6f0d9,2024-09-17,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.9,"Backend optimisations, improvements, and cosmetic changes"
+069f71918e59f5428d6d8734235a07b7c6a6f0d9,2024-09-17,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,"Backend optimisations, improvements, and cosmetic changes"
+069aad7beca24054d4cdf053fe95673480d2e905,2024-09-17,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,18.9,Add support for extra arguments in JSON output and `%(named_args)` placeholder with positional indexing
+069aad7beca24054d4cdf053fe95673480d2e905,2024-09-17,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.0,Add support for extra arguments in JSON output and `%(named_args)` placeholder with positional indexing
+069aad7beca24054d4cdf053fe95673480d2e905,2024-09-17,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,Add support for extra arguments in JSON output and `%(named_args)` placeholder with positional indexing
+04baa481d10529dbb0afbc2df0f4040608ceee2a,2024-09-17,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,18.6,"Tuned default backend options for transit_events_soft_limit, transit_events_hard_limit and added error checks for invalid config"
+04baa481d10529dbb0afbc2df0f4040608ceee2a,2024-09-17,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.9,"Tuned default backend options for transit_events_soft_limit, transit_events_hard_limit and added error checks for invalid config"
+04baa481d10529dbb0afbc2df0f4040608ceee2a,2024-09-17,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,"Tuned default backend options for transit_events_soft_limit, transit_events_hard_limit and added error checks for invalid config"
+33ab1fa3cf4517e6d2b45561988c9d852895ec67,2024-09-18,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,18.5,use size_t for queue and uint32_t to encode string len
+33ab1fa3cf4517e6d2b45561988c9d852895ec67,2024-09-18,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.2,use size_t for queue and uint32_t to encode string len
+33ab1fa3cf4517e6d2b45561988c9d852895ec67,2024-09-18,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,use size_t for queue and uint32_t to encode string len
+c29664a44349f2d7d5cbe2de35cbe1eee632a424,2024-09-19,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.4,use constexpr in unbounded queue
+c29664a44349f2d7d5cbe2de35cbe1eee632a424,2024-09-19,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.6,use constexpr in unbounded queue
+c29664a44349f2d7d5cbe2de35cbe1eee632a424,2024-09-19,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,5.7,use constexpr in unbounded queue
+35c0355ce745b82cf6b94ceb1bb3a75a7505361d,2024-09-19,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.4,Add support for custom timestamp format in log filenames via StartCustomTimestampFormat
+35c0355ce745b82cf6b94ceb1bb3a75a7505361d,2024-09-19,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.6,Add support for custom timestamp format in log filenames via StartCustomTimestampFormat
+35c0355ce745b82cf6b94ceb1bb3a75a7505361d,2024-09-19,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Add support for custom timestamp format in log filenames via StartCustomTimestampFormat
+67677f41a2d93e6ab85029010046b830de4deac2,2024-09-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,18.0,rename MathUtils
+67677f41a2d93e6ab85029010046b830de4deac2,2024-09-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.4,rename MathUtils
+67677f41a2d93e6ab85029010046b830de4deac2,2024-09-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,rename MathUtils
+d63ec441188bc4c72fcba9822d417a0adf28e519,2024-09-20,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,26.7,fix compile error in `BackendTscClock`
+d63ec441188bc4c72fcba9822d417a0adf28e519,2024-09-20,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,33.4,fix compile error in `BackendTscClock`
+d63ec441188bc4c72fcba9822d417a0adf28e519,2024-09-20,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.5,fix compile error in `BackendTscClock`
+b9ab9bbe444902c3e55e94a96d0dafc786671d40,2024-09-21,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.2,handle full queues and empty queues into separate functions
+b9ab9bbe444902c3e55e94a96d0dafc786671d40,2024-09-21,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.6,handle full queues and empty queues into separate functions
+b9ab9bbe444902c3e55e94a96d0dafc786671d40,2024-09-21,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,handle full queues and empty queues into separate functions
+0df2e208163aa3fc388a3e14c92e12d5900a5104,2024-09-21,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.1,use if branch for timestamp
+0df2e208163aa3fc388a3e14c92e12d5900a5104,2024-09-21,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,use if branch for timestamp
+0df2e208163aa3fc388a3e14c92e12d5900a5104,2024-09-21,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,use if branch for timestamp
+3c977bc8f77eb4e20976bfc0208515bc9584e545,2024-09-21,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.3,Use a separate function overload for when dynamic log level is used
+3c977bc8f77eb4e20976bfc0208515bc9584e545,2024-09-21,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.1,Use a separate function overload for when dynamic log level is used
+3c977bc8f77eb4e20976bfc0208515bc9584e545,2024-09-21,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Use a separate function overload for when dynamic log level is used
+4ec51bde0f90ea8dc5f26eb97bb6d9000dafb14d,2024-09-21,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.5,"Revert ""Use a separate function overload for when dynamic log level is used"""
+4ec51bde0f90ea8dc5f26eb97bb6d9000dafb14d,2024-09-21,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,"Revert ""Use a separate function overload for when dynamic log level is used"""
+4ec51bde0f90ea8dc5f26eb97bb6d9000dafb14d,2024-09-21,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,"Revert ""Use a separate function overload for when dynamic log level is used"""
+097069286c29bada706b9c42a0ee833eac5d6abf,2024-09-22,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,22.3,Check for dynamic log level at compile-time using `constexpr`
+097069286c29bada706b9c42a0ee833eac5d6abf,2024-09-22,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,25.6,Check for dynamic log level at compile-time using `constexpr`
+097069286c29bada706b9c42a0ee833eac5d6abf,2024-09-22,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.4,Check for dynamic log level at compile-time using `constexpr`
+39ee1360858f3d7eba0f4cca9581c701203f4244,2024-09-22,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.3,"Optimise size calculation for fundamental types, std::string, and std::string_view in compute_encoded_size_and_cache_string_lengths"
+39ee1360858f3d7eba0f4cca9581c701203f4244,2024-09-22,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.7,"Optimise size calculation for fundamental types, std::string, and std::string_view in compute_encoded_size_and_cache_string_lengths"
+39ee1360858f3d7eba0f4cca9581c701203f4244,2024-09-22,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,"Optimise size calculation for fundamental types, std::string, and std::string_view in compute_encoded_size_and_cache_string_lengths"
+8b70f47a05c5d2176fd5321594e46b56fb27d7e0,2024-09-22,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.2,combine finish_write and commit_write to a single function
+8b70f47a05c5d2176fd5321594e46b56fb27d7e0,2024-09-22,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,combine finish_write and commit_write to a single function
+8b70f47a05c5d2176fd5321594e46b56fb27d7e0,2024-09-22,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.4,combine finish_write and commit_write to a single function
+6b846a9805509f13090ec1698773f8ea2eb689f2,2024-09-22,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.1,update documentation
+6b846a9805509f13090ec1698773f8ea2eb689f2,2024-09-22,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,update documentation
+6b846a9805509f13090ec1698773f8ea2eb689f2,2024-09-22,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,update documentation
+9c32a33e2ddfc0b62225d06b23e3f25d4647ae43,2024-09-22,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.1,Fixed an unused variable warning treated as an error on MSVC.
+9c32a33e2ddfc0b62225d06b23e3f25d4647ae43,2024-09-22,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.4,Fixed an unused variable warning treated as an error on MSVC.
+9c32a33e2ddfc0b62225d06b23e3f25d4647ae43,2024-09-22,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,Fixed an unused variable warning treated as an error on MSVC.
+5567063964f19e17f3b59ef950909315c5af5fc4,2024-09-23,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.2,Fix race condition during DLL unload
+5567063964f19e17f3b59ef950909315c5af5fc4,2024-09-23,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.5,Fix race condition during DLL unload
+5567063964f19e17f3b59ef950909315c5af5fc4,2024-09-23,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Fix race condition during DLL unload
+443a9623d68cb7e6e9a5f52224f5861f1ba6dfc3,2024-09-23,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.5,bump version
+443a9623d68cb7e6e9a5f52224f5861f1ba6dfc3,2024-09-23,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.4,bump version
+443a9623d68cb7e6e9a5f52224f5861f1ba6dfc3,2024-09-23,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,bump version
+cd2eb4c0b905132a9062ff8a2a3397978e75cf18,2024-09-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.7,exclude CSV loggers from logging error logs in signal handler when using CsvWriter (#589)
+cd2eb4c0b905132a9062ff8a2a3397978e75cf18,2024-09-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.6,exclude CSV loggers from logging error logs in signal handler when using CsvWriter (#589)
+cd2eb4c0b905132a9062ff8a2a3397978e75cf18,2024-09-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,exclude CSV loggers from logging error logs in signal handler when using CsvWriter (#589)
+42a1957bc097fdcfd0978590426fcb772ecea7b0,2024-09-26,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,21.2,fix false positive clang-tidy errors on Windows
+42a1957bc097fdcfd0978590426fcb772ecea7b0,2024-09-26,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,25.0,fix false positive clang-tidy errors on Windows
+42a1957bc097fdcfd0978590426fcb772ecea7b0,2024-09-26,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.5,fix false positive clang-tidy errors on Windows
+b8a801dbdf2ef37c646bf7385494e4ee1ae4a454,2024-09-26,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.7,explicitly specify the `Logger` used by the built-in `SignalHandler`
+b8a801dbdf2ef37c646bf7385494e4ee1ae4a454,2024-09-26,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,24.9,explicitly specify the `Logger` used by the built-in `SignalHandler`
+b8a801dbdf2ef37c646bf7385494e4ee1ae4a454,2024-09-26,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.3,explicitly specify the `Logger` used by the built-in `SignalHandler`
+77d3911362ba08c684f8abfe598871e65fec33d4,2024-09-27,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.2,Add overload to `create_or_get_logger` for passing variable number of sinks at runtime
+77d3911362ba08c684f8abfe598871e65fec33d4,2024-09-27,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.5,Add overload to `create_or_get_logger` for passing variable number of sinks at runtime
+77d3911362ba08c684f8abfe598871e65fec33d4,2024-09-27,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Add overload to `create_or_get_logger` for passing variable number of sinks at runtime
+c73dd6df996677d82fe56aaff8668a5bda9f7b3e,2024-09-27,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.1,Add SignalHandlerOptions and deprecate `Backend::start_with_signal_handler`
+c73dd6df996677d82fe56aaff8668a5bda9f7b3e,2024-09-27,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Add SignalHandlerOptions and deprecate `Backend::start_with_signal_handler`
+c73dd6df996677d82fe56aaff8668a5bda9f7b3e,2024-09-27,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.7,Add SignalHandlerOptions and deprecate `Backend::start_with_signal_handler`
+0b6cadb87d42dcb87c23d18d0471253195643c4d,2024-09-27,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,21.2,Add overload to create_or_get_logger for creating a logger with inherited options.
+0b6cadb87d42dcb87c23d18d0471253195643c4d,2024-09-27,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,25.1,Add overload to create_or_get_logger for creating a logger with inherited options.
+0b6cadb87d42dcb87c23d18d0471253195643c4d,2024-09-27,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.3,Add overload to create_or_get_logger for creating a logger with inherited options.
+5b03aa5fb86543eea7aa39ca2de9be65661b17b5,2024-09-27,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,20.5,Bump version
+5b03aa5fb86543eea7aa39ca2de9be65661b17b5,2024-09-27,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,24.9,Bump version
+5b03aa5fb86543eea7aa39ca2de9be65661b17b5,2024-09-27,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.6,Bump version
+59fec49ea2e0bea0d64640dbec711d0e09127967,2024-09-29,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,21.2,simplified the fsync_file method by removing the unnecessary file descriptor parameter
+59fec49ea2e0bea0d64640dbec711d0e09127967,2024-09-29,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,25.0,simplified the fsync_file method by removing the unnecessary file descriptor parameter
+59fec49ea2e0bea0d64640dbec711d0e09127967,2024-09-29,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.4,simplified the fsync_file method by removing the unnecessary file descriptor parameter
+a058985253dffd6a77b4eeca3ba4aa5ad85a2d02,2024-09-29,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.3,Add force fsync option to FileSink
+a058985253dffd6a77b4eeca3ba4aa5ad85a2d02,2024-09-29,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.7,Add force fsync option to FileSink
+a058985253dffd6a77b4eeca3ba4aa5ad85a2d02,2024-09-29,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Add force fsync option to FileSink
+42c05c99e2211d529e9735b8da9613bc0f0fbc46,2024-10-04,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,17.5,"Added accessors to `Logger` for sinks, user clock source, clock source type, and pattern formatter options"
+42c05c99e2211d529e9735b8da9613bc0f0fbc46,2024-10-04,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.4,"Added accessors to `Logger` for sinks, user clock source, clock source type, and pattern formatter options"
+42c05c99e2211d529e9735b8da9613bc0f0fbc46,2024-10-04,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.3,"Added accessors to `Logger` for sinks, user clock source, clock source type, and pattern formatter options"
+bb7bbfa8805cc6c79beb07e0836a459d0928dbe7,2024-10-04,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,21.4,bump version
+bb7bbfa8805cc6c79beb07e0836a459d0928dbe7,2024-10-04,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,25.1,bump version
+bb7bbfa8805cc6c79beb07e0836a459d0928dbe7,2024-10-04,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.5,bump version
+602fdb59058f03cedaaa431f4cfbde26d921ef5b,2024-10-10,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,21.4,Fix a build issue when compiling with `-fno-rtti` (#606)
+602fdb59058f03cedaaa431f4cfbde26d921ef5b,2024-10-10,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,24.8,Fix a build issue when compiling with `-fno-rtti` (#606)
+602fdb59058f03cedaaa431f4cfbde26d921ef5b,2024-10-10,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.5,Fix a build issue when compiling with `-fno-rtti` (#606)
+412051106e2a89865bb1158f30609ce5bb98de6e,2024-10-10,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.1,Fix debug build when log_timestamp_ordering_grace_period is set to zero (#607)
+412051106e2a89865bb1158f30609ce5bb98de6e,2024-10-10,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.4,Fix debug build when log_timestamp_ordering_grace_period is set to zero (#607)
+412051106e2a89865bb1158f30609ce5bb98de6e,2024-10-10,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,Fix debug build when log_timestamp_ordering_grace_period is set to zero (#607)
+30c06f446ea75cbbcee73f18a2bd8bdc1b365967,2024-10-13,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.9,Fix csv writer with custom frontend options (#610)
+30c06f446ea75cbbcee73f18a2bd8bdc1b365967,2024-10-13,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.3,Fix csv writer with custom frontend options (#610)
+30c06f446ea75cbbcee73f18a2bd8bdc1b365967,2024-10-13,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,Fix csv writer with custom frontend options (#610)
+c2af97a66bbcff6992183966360da694ead6560a,2024-10-22,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.4,add colour_mode to ConsoleSink
+c2af97a66bbcff6992183966360da694ead6560a,2024-10-22,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.5,add colour_mode to ConsoleSink
+c2af97a66bbcff6992183966360da694ead6560a,2024-10-22,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,add colour_mode to ConsoleSink
+5375f8f570c8f5d8f0867ed1ecef5862ffa08cfe,2024-10-30,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.1,output the correct error when set_thread_name fails
+5375f8f570c8f5d8f0867ed1ecef5862ffa08cfe,2024-10-30,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.7,output the correct error when set_thread_name fails
+5375f8f570c8f5d8f0867ed1ecef5862ffa08cfe,2024-10-30,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,output the correct error when set_thread_name fails
+24504d477a9e9260e33867671ffe94ea963bde81,2024-10-31,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.3,Remove inclusion of Windows.h in Logger.h (#621)
+24504d477a9e9260e33867671ffe94ea963bde81,2024-10-31,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.1,Remove inclusion of Windows.h in Logger.h (#621)
+24504d477a9e9260e33867671ffe94ea963bde81,2024-10-31,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Remove inclusion of Windows.h in Logger.h (#621)
+0f483e2462eb7044c1bffdd9f28a64f7e15114f7,2024-11-01,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.6,fix windows build
+0f483e2462eb7044c1bffdd9f28a64f7e15114f7,2024-11-01,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.7,fix windows build
+0f483e2462eb7044c1bffdd9f28a64f7e15114f7,2024-11-01,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,fix windows build
+7f89a813680eb095e06d4ed9c1e73fc0d3286b2d,2024-11-01,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.5,add count based throttling macros and a counter to time based ones
+7f89a813680eb095e06d4ed9c1e73fc0d3286b2d,2024-11-01,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.2,add count based throttling macros and a counter to time based ones
+7f89a813680eb095e06d4ed9c1e73fc0d3286b2d,2024-11-01,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,add count based throttling macros and a counter to time based ones
+002d117267ecab1fb05f629f82170b9b6f2c8bd3,2024-12-07,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.2,Suppress -Wredundant-decls warning in GCC builds
+002d117267ecab1fb05f629f82170b9b6f2c8bd3,2024-12-07,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Suppress -Wredundant-decls warning in GCC builds
+002d117267ecab1fb05f629f82170b9b6f2c8bd3,2024-12-07,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Suppress -Wredundant-decls warning in GCC builds
+72e86c347c80bb36d9be46623625372178f22761,2024-10-23,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.1,use ANSI colour codes universally in ConsoleSink
+72e86c347c80bb36d9be46623625372178f22761,2024-10-23,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,use ANSI colour codes universally in ConsoleSink
+72e86c347c80bb36d9be46623625372178f22761,2024-10-23,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,use ANSI colour codes universally in ConsoleSink
+30443b49c0eff0e9b7d45212fe4938ecfc9d4b5e,2025-01-11,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.1,"Change class member visibility in `FileSink`, `JsonSink`, and `RotatingSink` from private to protected"
+30443b49c0eff0e9b7d45212fe4938ecfc9d4b5e,2025-01-11,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.7,"Change class member visibility in `FileSink`, `JsonSink`, and `RotatingSink` from private to protected"
+30443b49c0eff0e9b7d45212fe4938ecfc9d4b5e,2025-01-11,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,"Change class member visibility in `FileSink`, `JsonSink`, and `RotatingSink` from private to protected"
+e6f8c1102be8a6cd9decf2207c54ef98d9660513,2025-01-26,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.5,update version and changelog
+e6f8c1102be8a6cd9decf2207c54ef98d9660513,2025-01-26,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.2,update version and changelog
+e6f8c1102be8a6cd9decf2207c54ef98d9660513,2025-01-26,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,update version and changelog
+74dd431751027b17825d3809f1e585ff6cf1d8db,2025-02-14,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.1,"Revert ""add -Wimplicit-int-float-conversion flag to tests and fix any remaining warnings"""
+74dd431751027b17825d3809f1e585ff6cf1d8db,2025-02-14,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,"Revert ""add -Wimplicit-int-float-conversion flag to tests and fix any remaining warnings"""
+74dd431751027b17825d3809f1e585ff6cf1d8db,2025-02-14,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,"Revert ""add -Wimplicit-int-float-conversion flag to tests and fix any remaining warnings"""
+d7e4a04e77188f3503ddd2d03fa6e1020263b57f,2025-02-14,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.2,fix -Wdocumentation warning
+d7e4a04e77188f3503ddd2d03fa6e1020263b57f,2025-02-14,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,fix -Wdocumentation warning
+d7e4a04e77188f3503ddd2d03fa6e1020263b57f,2025-02-14,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,fix -Wdocumentation warning
+d2b8eaa41b32b0ae5d47ef2ec9c927465a8899f9,2025-02-26,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.4,Minor cosmetic changes
+d2b8eaa41b32b0ae5d47ef2ec9c927465a8899f9,2025-02-26,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.2,Minor cosmetic changes
+d2b8eaa41b32b0ae5d47ef2ec9c927465a8899f9,2025-02-26,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Minor cosmetic changes
+87dc506c87702c762985b6540197afb506b5b0c5,2025-02-28,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.6,Detect duplicate backend worker thread on windows
+87dc506c87702c762985b6540197afb506b5b0c5,2025-02-28,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,Detect duplicate backend worker thread on windows
+87dc506c87702c762985b6540197afb506b5b0c5,2025-02-28,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Detect duplicate backend worker thread on windows
+0b2e51ab77176abe2e71c397f9c8fa41b2a41a33,2025-03-10,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.3,Allow backend worker thread to start again after stopping
+0b2e51ab77176abe2e71c397f9c8fa41b2a41a33,2025-03-10,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,Allow backend worker thread to start again after stopping
+0b2e51ab77176abe2e71c397f9c8fa41b2a41a33,2025-03-10,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Allow backend worker thread to start again after stopping
+c66132a0e2839522bdda0a24b0947213e46d6327,2025-03-13,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,23.4,Add an option to fall back to normal pages if huge pages are unavailable
+c66132a0e2839522bdda0a24b0947213e46d6327,2025-03-13,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,Add an option to fall back to normal pages if huge pages are unavailable
+c66132a0e2839522bdda0a24b0947213e46d6327,2025-03-13,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,Add an option to fall back to normal pages if huge pages are unavailable
+4de6fe308232f14361e2e38650d64d3262adb980,2025-03-05,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.2,Fix builds
+4de6fe308232f14361e2e38650d64d3262adb980,2025-03-05,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.7,Fix builds
+4de6fe308232f14361e2e38650d64d3262adb980,2025-03-05,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Fix builds
+f8e3b7e7b570b480eb46d5237a958f5337d8c338,2025-03-18,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.3,fix last character drop and add empty message protection when add_metadata_to_multi_line_logs is false
+f8e3b7e7b570b480eb46d5237a958f5337d8c338,2025-03-18,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,fix last character drop and add empty message protection when add_metadata_to_multi_line_logs is false
+f8e3b7e7b570b480eb46d5237a958f5337d8c338,2025-03-18,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,fix last character drop and add empty message protection when add_metadata_to_multi_line_logs is false
+f8e9db63ee768e20c59024bedab162071ea0add9,2025-03-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,22.1,Shrink TransitEventBuffer in backend when frontend unbounded queue is explicitly shrunk (#734)
+f8e9db63ee768e20c59024bedab162071ea0add9,2025-03-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Shrink TransitEventBuffer in backend when frontend unbounded queue is explicitly shrunk (#734)
+f8e9db63ee768e20c59024bedab162071ea0add9,2025-03-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Shrink TransitEventBuffer in backend when frontend unbounded queue is explicitly shrunk (#734)
+11839c774c97f54f895868cebe3a9337d5ff0a55,2025-03-30,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,21.5,Improve CsvWriter and InlinedVector tests
+11839c774c97f54f895868cebe3a9337d5ff0a55,2025-03-30,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,26.5,Improve CsvWriter and InlinedVector tests
+11839c774c97f54f895868cebe3a9337d5ff0a55,2025-03-30,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Improve CsvWriter and InlinedVector tests
+61ef2c18e4811d3e645d5fb296880e101bbb76f9,2025-04-12,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.0,Added a fix in create_or_get_logger function to check logger_ptr prior to use (#748).
+61ef2c18e4811d3e645d5fb296880e101bbb76f9,2025-04-12,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Added a fix in create_or_get_logger function to check logger_ptr prior to use (#748).
+61ef2c18e4811d3e645d5fb296880e101bbb76f9,2025-04-12,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,Added a fix in create_or_get_logger function to check logger_ptr prior to use (#748).
+b93c96d2987ef2341919fe617bcfc758dd936645,2025-04-19,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.1,improve i386 workaround
+b93c96d2987ef2341919fe617bcfc758dd936645,2025-04-19,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,improve i386 workaround
+b93c96d2987ef2341919fe617bcfc758dd936645,2025-04-19,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,improve i386 workaround
+05e4b60476306eae7ba98f3d836b1aa69a49f3b5,2025-05-18,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,19.9,Add runtime immediate flush functionality
+05e4b60476306eae7ba98f3d836b1aa69a49f3b5,2025-05-18,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,24.8,Add runtime immediate flush functionality
+05e4b60476306eae7ba98f3d836b1aa69a49f3b5,2025-05-18,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Add runtime immediate flush functionality
+891e127e6b29b9d319412024d6f31dbaf54f21bd,2025-05-27,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.8,Replace immediate flush boolean flag with configurable message interval (#773)
+891e127e6b29b9d319412024d6f31dbaf54f21bd,2025-05-27,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.3,Replace immediate flush boolean flag with configurable message interval (#773)
+891e127e6b29b9d319412024d6f31dbaf54f21bd,2025-05-27,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,Replace immediate flush boolean flag with configurable message interval (#773)
+b77fa1e37174e81160ffb927823ba9cc79bd612d,2025-05-29,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.0,clang format all files
+b77fa1e37174e81160ffb927823ba9cc79bd612d,2025-05-29,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.5,clang format all files
+b77fa1e37174e81160ffb927823ba9cc79bd612d,2025-05-29,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,clang format all files
+b5d32730584798ab333462f47d74e9f6db7391a1,2025-06-04,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.3,minor doc fixes
+b5d32730584798ab333462f47d74e9f6db7391a1,2025-06-04,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.6,minor doc fixes
+b5d32730584798ab333462f47d74e9f6db7391a1,2025-06-04,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,6.9,minor doc fixes
+675d3a317914a932dfeba0bc24328578fe609b19,2025-06-25,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,22.8,"fix clang warning on windows clang-cl, update clang-windows workflow"
+675d3a317914a932dfeba0bc24328578fe609b19,2025-06-25,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,24.6,"fix clang warning on windows clang-cl, update clang-windows workflow"
+675d3a317914a932dfeba0bc24328578fe609b19,2025-06-25,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.2,"fix clang warning on windows clang-cl, update clang-windows workflow"
+a570e8eb97e3b8f2067ebc1647f17c6ce68781be,2025-07-21,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.6,Add overflow check when doubling resync interval in `RdtscClock::resync()`
+a570e8eb97e3b8f2067ebc1647f17c6ce68781be,2025-07-21,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,Add overflow check when doubling resync interval in `RdtscClock::resync()`
+a570e8eb97e3b8f2067ebc1647f17c6ce68781be,2025-07-21,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.1,Add overflow check when doubling resync interval in `RdtscClock::resync()`
+54289632f9ea6f8fdc763c88fdd2e6719779de59,2025-08-27,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.8,cache some variables in StringFromTime
+54289632f9ea6f8fdc763c88fdd2e6719779de59,2025-08-27,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.5,cache some variables in StringFromTime
+54289632f9ea6f8fdc763c88fdd2e6719779de59,2025-08-27,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.2,cache some variables in StringFromTime
+c40fc2aec80cb7ab4f484d8864ed61b52e624be8,2025-08-30,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,22.4,bump version
+c40fc2aec80cb7ab4f484d8864ed61b52e624be8,2025-08-30,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,26.5,bump version
+c40fc2aec80cb7ab4f484d8864ed61b52e624be8,2025-08-30,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.2,bump version
+ccfa04298731d70ed497a1c9b9a797be9a98c45c,2025-10-03,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,20.6,Fixed segmentation fault when `DirectFormatCodec` was used with enums types (#850)
+ccfa04298731d70ed497a1c9b9a797be9a98c45c,2025-10-03,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,23.8,Fixed segmentation fault when `DirectFormatCodec` was used with enums types (#850)
+ccfa04298731d70ed497a1c9b9a797be9a98c45c,2025-10-03,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,6.7,Fixed segmentation fault when `DirectFormatCodec` was used with enums types (#850)
+64b693ad140244f015efbe9081fb11dac27d081b,2025-10-18,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.9,- Fix process ID capture in `BackendWorker`
+64b693ad140244f015efbe9081fb11dac27d081b,2025-10-18,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.1,- Fix process ID capture in `BackendWorker`
+64b693ad140244f015efbe9081fb11dac27d081b,2025-10-18,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,7.2,- Fix process ID capture in `BackendWorker`
+b767236d54cc273f9719b5267e5ae4d9a17c927e,2025-10-26,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.8,use local pointer variable in codec (#867)
+b767236d54cc273f9719b5267e5ae4d9a17c927e,2025-10-26,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,use local pointer variable in codec (#867)
+b767236d54cc273f9719b5267e5ae4d9a17c927e,2025-10-26,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,use local pointer variable in codec (#867)
+9fb91859b034dc88e1c9413008ae30bf336977c3,2025-11-01,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.9,Minor fixes for sinks (#873)
+9fb91859b034dc88e1c9413008ae30bf336977c3,2025-11-01,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,Minor fixes for sinks (#873)
+9fb91859b034dc88e1c9413008ae30bf336977c3,2025-11-01,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.0,Minor fixes for sinks (#873)
+0dda9db2c3c7e7dbdad9bca98bb7f86957d188c7,2025-11-15,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.7,fix: building quill alongside boost::smt (#878)
+0dda9db2c3c7e7dbdad9bca98bb7f86957d188c7,2025-11-15,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,fix: building quill alongside boost::smt (#878)
+0dda9db2c3c7e7dbdad9bca98bb7f86957d188c7,2025-11-15,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,fix: building quill alongside boost::smt (#878)
+25bc0b7da8287a4b3ad95fc2f0848815fe8fe260,2025-12-15,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.6,Fix thread-local context duplication across shared libraries (#891)
+25bc0b7da8287a4b3ad95fc2f0848815fe8fe260,2025-12-15,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.5,Fix thread-local context duplication across shared libraries (#891)
+25bc0b7da8287a4b3ad95fc2f0848815fe8fe260,2025-12-15,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,Fix thread-local context duplication across shared libraries (#891)
+6737745d424aa0e02bbc7f0bdac944596b0d53ad,2026-03-22,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.2,Fix signal handler shutdown after Backend::stop() (#907)
+6737745d424aa0e02bbc7f0bdac944596b0d53ad,2026-03-22,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,Fix signal handler shutdown after Backend::stop() (#907)
+6737745d424aa0e02bbc7f0bdac944596b0d53ad,2026-03-22,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.4,Fix signal handler shutdown after Backend::stop() (#907)
+53a1c64da6fe0ccfc53f61222e37e887a39bfa54,2026-05-16,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.4,"Sink rotation, JSON output and CSV writer fixes"
+53a1c64da6fe0ccfc53f61222e37e887a39bfa54,2026-05-16,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,"Sink rotation, JSON output and CSV writer fixes"
+53a1c64da6fe0ccfc53f61222e37e887a39bfa54,2026-05-16,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,4.3,"Sink rotation, JSON output and CSV writer fixes"
+dc0142017c381cac81b0f5b28bf2a61f62109647,2026-05-17,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.1,Windows file I/O and rotation fixes; docs updates
+dc0142017c381cac81b0f5b28bf2a61f62109647,2026-05-17,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,20.2,Windows file I/O and rotation fixes; docs updates
+dc0142017c381cac81b0f5b28bf2a61f62109647,2026-05-17,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,5.0,Windows file I/O and rotation fixes; docs updates
+d014c6b4786cafccb5353cefe2858012f3c469ff,2026-06-16,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.1,Fix DirectFormatCodec fmt header dependency on Windows (#935)
+d014c6b4786cafccb5353cefe2858012f3c469ff,2026-06-16,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Fix DirectFormatCodec fmt header dependency on Windows (#935)
+d014c6b4786cafccb5353cefe2858012f3c469ff,2026-06-16,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,2.9,Fix DirectFormatCodec fmt header dependency on Windows (#935)
+7856d38209bdd23e0c67f335e6800da2e1f236e5,2026-07-08,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.9,Publish reader position when the queue drains to avoid permanently blocking near-capacity writes (#946)
+7856d38209bdd23e0c67f335e6800da2e1f236e5,2026-07-08,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Publish reader position when the queue drains to avoid permanently blocking near-capacity writes (#946)
+7856d38209bdd23e0c67f335e6800da2e1f236e5,2026-07-08,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.6,Publish reader position when the queue drains to avoid permanently blocking near-capacity writes (#946)
+a67b05b829a04ec7fc12ff2cb616d9602b052bbd,2026-07-13,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,18.6,Fix BackendTscClock lifetime across restarts
+a67b05b829a04ec7fc12ff2cb616d9602b052bbd,2026-07-13,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,25.4,Fix BackendTscClock lifetime across restarts
+a67b05b829a04ec7fc12ff2cb616d9602b052bbd,2026-07-13,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,5.7,Fix BackendTscClock lifetime across restarts
+d751f7094d04c18dc2aee01d7dbb3bafdbfb3675,2026-07-13,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.3,Validate durations and runtime metadata paths
+d751f7094d04c18dc2aee01d7dbb3bafdbfb3675,2026-07-13,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.6,Validate durations and runtime metadata paths
+d751f7094d04c18dc2aee01d7dbb3bafdbfb3675,2026-07-13,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.6,Validate durations and runtime metadata paths
+55a9be962b504cc327c4fe8ff511a5fea91b6c92,2026-08-10,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,13.2,Fixed the built-in signal handler suppressing core dumps for fatal signals
+55a9be962b504cc327c4fe8ff511a5fea91b6c92,2026-08-10,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.9,Fixed the built-in signal handler suppressing core dumps for fatal signals
+55a9be962b504cc327c4fe8ff511a5fea91b6c92,2026-08-10,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,2.9,Fixed the built-in signal handler suppressing core dumps for fatal signals
+cb642d517fa41e3945e4a9cb0758c891c313547e,2026-08-10,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.1,Release backend lock when thread creation fails
+cb642d517fa41e3945e4a9cb0758c891c313547e,2026-08-10,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Release backend lock when thread creation fails
+cb642d517fa41e3945e4a9cb0758c891c313547e,2026-08-10,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,2.9,Release backend lock when thread creation fails
+e0cbd07dfc640ed31b18db4d4eed50294b6f6eee,2026-08-10,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,20.9,Harden time-based rotating-file arithmetic
+e0cbd07dfc640ed31b18db4d4eed50294b6f6eee,2026-08-10,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,24.1,Harden time-based rotating-file arithmetic
+e0cbd07dfc640ed31b18db4d4eed50294b6f6eee,2026-08-10,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.2,Harden time-based rotating-file arithmetic
+23c88b27ff6463cec2da38066054fe3912d09e9b,2026-08-11,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.3,Prevent duplicate concurrent immediate flushes
+23c88b27ff6463cec2da38066054fe3912d09e9b,2026-08-11,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.3,Prevent duplicate concurrent immediate flushes
+23c88b27ff6463cec2da38066054fe3912d09e9b,2026-08-11,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Prevent duplicate concurrent immediate flushes
+acbb4da947b54ac85ea03fdc4f47865541fb6295,2026-08-24,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.1,Fix benchmark builds for 12.2.2 (#973) (#974)
+acbb4da947b54ac85ea03fdc4f47865541fb6295,2026-08-24,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.3,Fix benchmark builds for 12.2.2 (#973) (#974)
+acbb4da947b54ac85ea03fdc4f47865541fb6295,2026-08-24,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Fix benchmark builds for 12.2.2 (#973) (#974)
+7e01c2239fb90739cba7bc4f727e174aee4882c0,2026-08-26,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,16.0,Precompile pattern formatter fields
+7e01c2239fb90739cba7bc4f727e174aee4882c0,2026-08-26,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.6,Precompile pattern formatter fields
+7e01c2239fb90739cba7bc4f727e174aee4882c0,2026-08-26,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,2.9,Precompile pattern formatter fields
+4e284accb79e637e263f92b1cac3ed6ddda68825,2026-09-05,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,14.8,Fix oversized control events on bounded dropping queues
+4e284accb79e637e263f92b1cac3ed6ddda68825,2026-09-05,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,Fix oversized control events on bounded dropping queues
+4e284accb79e637e263f92b1cac3ed6ddda68825,2026-09-05,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Fix oversized control events on bounded dropping queues
+d7c2bd32dbc6c08c7610834a9c81e1a0dbdabce8,2026-09-05,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,12.1,Account for dynamic format arguments in named fields
+d7c2bd32dbc6c08c7610834a9c81e1a0dbdabce8,2026-09-05,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,Account for dynamic format arguments in named fields
+d7c2bd32dbc6c08c7610834a9c81e1a0dbdabce8,2026-09-05,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Account for dynamic format arguments in named fields
+5ddafc861b411122d9c00783e869304ed6c365f0,2026-09-05,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.0,Close native file handles after destructor flush failures
+5ddafc861b411122d9c00783e869304ed6c365f0,2026-09-05,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.4,Close native file handles after destructor flush failures
+5ddafc861b411122d9c00783e869304ed6c365f0,2026-09-05,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Close native file handles after destructor flush failures
+461da1ccf6a1a687ff91efd24e58d6b2c4befef6,2026-09-06,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.1,Share backend thread detection with Windows DLL consumers
+461da1ccf6a1a687ff91efd24e58d6b2c4befef6,2026-09-06,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,18.1,Share backend thread detection with Windows DLL consumers
+461da1ccf6a1a687ff91efd24e58d6b2c4befef6,2026-09-06,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,2.9,Share backend thread detection with Windows DLL consumers
+58302249f00b58f5b0c30fe54dbb1a878c33ebe9,2026-09-06,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,12.1,Report pending queue failures before retiring thread contexts
+58302249f00b58f5b0c30fe54dbb1a878c33ebe9,2026-09-06,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,14.8,Report pending queue failures before retiring thread contexts
+58302249f00b58f5b0c30fe54dbb1a878c33ebe9,2026-09-06,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Report pending queue failures before retiring thread contexts
+f14342a3ef75b204a5bfa5537a4e44c483310b76,2026-09-07,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,20.2,Preserve rotated backups across filename aliases
+f14342a3ef75b204a5bfa5537a4e44c483310b76,2026-09-07,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,25.3,Preserve rotated backups across filename aliases
+f14342a3ef75b204a5bfa5537a4e44c483310b76,2026-09-07,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,5.3,Preserve rotated backups across filename aliases
+8162b588dabb48498f71cc0f49539875e1e543a3,2026-09-08,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,12.7,Track the filename after FileSink reopens another path (#995)
+8162b588dabb48498f71cc0f49539875e1e543a3,2026-09-08,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.7,Track the filename after FileSink reopens another path (#995)
+8162b588dabb48498f71cc0f49539875e1e543a3,2026-09-08,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,2.9,Track the filename after FileSink reopens another path (#995)
+4ebde7fbee8671488b926a64fd3f187fbc8af489,2026-10-02,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,12.1,Support publishing metrics with runtime labels
+4ebde7fbee8671488b926a64fd3f187fbc8af489,2026-10-02,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.4,Support publishing metrics with runtime labels
+4ebde7fbee8671488b926a64fd3f187fbc8af489,2026-10-02,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Support publishing metrics with runtime labels
+459b24816ed2c9e7de7b188a233110b71b85d025,2026-11-15,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,15.1,Fix missing pthread declarations in BSD thread utilities
+459b24816ed2c9e7de7b188a233110b71b85d025,2026-11-15,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,17.6,Fix missing pthread declarations in BSD thread utilities
+459b24816ed2c9e7de7b188a233110b71b85d025,2026-11-15,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.2,Fix missing pthread declarations in BSD thread utilities
+8ecfde27bddbbd410103df97e8b098bf1a1bffb6,2026-11-16,ok,"LOG_INFO int, double",0.0,0.0,0.0,0,0,12.1,Fix MSVC import std module builds (#1015)
+8ecfde27bddbbd410103df97e8b098bf1a1bffb6,2026-11-16,ok,LOG_INFO std::string,0.0,0.0,0.0,0,0,15.0,Fix MSVC import std module builds (#1015)
+8ecfde27bddbbd410103df97e8b098bf1a1bffb6,2026-11-16,ok,LOG_DEBUG below level,0.0,0.0,0.0,0,0,3.3,Fix MSVC import std module builds (#1015)

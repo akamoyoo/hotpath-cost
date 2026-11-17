@@ -1,0 +1,50 @@
+== add+cancel, first call
+  allocation 1.000 per call
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add_order(liquibook::book::OrderTracker  src/book/order_book.h:667
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::submit_order(liquibook::book::OrderTrac  src/book/order_book.h:605
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add(liquibook::simple::SimpleOrder* con  src/book/order_book.h:412
+      hp_entry::lb_add(liquibook::simple::SimpleOrderBook<5>&, liquibook::simple::SimpleOrder*)  replay/drivers/liquibook/main.cpp:11
+      main  replay/bench/liquibook.cpp:13
+  allocation 1.000 per call
+      liquibook::book::Depth<5>::find_level(unsigned int, bool, bool)  src/book/depth.h:433
+      liquibook::book::Depth<5>::add_order(unsigned int, unsigned int, bool)  src/book/depth.h:227
+      liquibook::book::DepthOrderBook<liquibook::simple::SimpleOrder*, 5>::on_accept(liquibook::simple::Si  src/book/depth_order_book.h:105
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::perform_callback(liquibook::book::Callb  src/book/order_book.h:1115
+      liquibook::simple::SimpleOrderBook<5>::perform_callback(liquibook::book::Callback<liquibook::simple:  src/simple/simple_order_book.h:37
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::callback_now()  src/book/order_book.h:1056
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add(liquibook::simple::SimpleOrder* con  src/book/order_book.h:431
+      hp_entry::lb_add(liquibook::simple::SimpleOrderBook<5>&, liquibook::simple::SimpleOrder*)  replay/drivers/liquibook/main.cpp:11
+      main  replay/bench/liquibook.cpp:13
+== add+cancel, steady state
+  allocation 0.500 per call
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add_order(liquibook::book::OrderTracker  src/book/order_book.h:667
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::submit_order(liquibook::book::OrderTrac  src/book/order_book.h:605
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add(liquibook::simple::SimpleOrder* con  src/book/order_book.h:412
+      hp_entry::lb_add(liquibook::simple::SimpleOrderBook<5>&, liquibook::simple::SimpleOrder*)  replay/drivers/liquibook/main.cpp:11
+      main  replay/bench/liquibook.cpp:13
+  allocation 0.500 per call
+      liquibook::book::Depth<5>::find_level(unsigned int, bool, bool)  src/book/depth.h:433
+      liquibook::book::Depth<5>::add_order(unsigned int, unsigned int, bool)  src/book/depth.h:227
+      liquibook::book::DepthOrderBook<liquibook::simple::SimpleOrder*, 5>::on_accept(liquibook::simple::Si  src/book/depth_order_book.h:105
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::perform_callback(liquibook::book::Callb  src/book/order_book.h:1115
+      liquibook::simple::SimpleOrderBook<5>::perform_callback(liquibook::book::Callback<liquibook::simple:  src/simple/simple_order_book.h:37
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::callback_now()  src/book/order_book.h:1056
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add(liquibook::simple::SimpleOrder* con  src/book/order_book.h:431
+      hp_entry::lb_add(liquibook::simple::SimpleOrderBook<5>&, liquibook::simple::SimpleOrder*)  replay/drivers/liquibook/main.cpp:11
+      main  replay/bench/liquibook.cpp:13
+  allocation 0.500 per call
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add_order(liquibook::book::OrderTracker  src/book/order_book.h:656
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::submit_order(liquibook::book::OrderTrac  src/book/order_book.h:605
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add(liquibook::simple::SimpleOrder* con  src/book/order_book.h:412
+      hp_entry::lb_add(liquibook::simple::SimpleOrderBook<5>&, liquibook::simple::SimpleOrder*)  replay/drivers/liquibook/main.cpp:11
+      main  replay/bench/liquibook.cpp:13
+  allocation 0.500 per call
+      liquibook::book::Depth<5>::find_level(unsigned int, bool, bool)  src/book/depth.h:418
+      liquibook::book::Depth<5>::add_order(unsigned int, unsigned int, bool)  src/book/depth.h:227
+      liquibook::book::DepthOrderBook<liquibook::simple::SimpleOrder*, 5>::on_accept(liquibook::simple::Si  src/book/depth_order_book.h:105
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::perform_callback(liquibook::book::Callb  src/book/order_book.h:1115
+      liquibook::simple::SimpleOrderBook<5>::perform_callback(liquibook::book::Callback<liquibook::simple:  src/simple/simple_order_book.h:37
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::callback_now()  src/book/order_book.h:1056
+      liquibook::book::OrderBook<liquibook::simple::SimpleOrder*>::add(liquibook::simple::SimpleOrder* con  src/book/order_book.h:431
+      hp_entry::lb_add(liquibook::simple::SimpleOrderBook<5>&, liquibook::simple::SimpleOrder*)  replay/drivers/liquibook/main.cpp:11
+      main  replay/bench/liquibook.cpp:13

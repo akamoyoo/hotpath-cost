@@ -1,0 +1,61 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+e413ee057c9931ba38fc41e38a205ee0a9b5b683,2013-03-19,build failed,,,,,,,,Initial commit for oci repository.
+5a68a6b1b352eaf9cfc71f7ec527380de73203a5,2013-03-28,build failed,,,,,,,,Allow outside access to callbacks
+d9df7c727e84921c058f22741d35ad052c9f9986,2013-04-03,build failed,,,,,,,,"Introduce DepthOrderBook, and bind to it in SimpleOrderBook"
+b90ab2a2232995d2739304e03ef082ee64e5fd0d,2013-04-03,build failed,,,,,,,,Doxygen
+fce4e8528ecddb8d5cd1ec2b392f9246056620e2,2013-04-04,build failed,,,,,,,,Listener for BBO events.
+15009ca823292d0eff5274e9afc6c97b0e79f66f,2013-04-04,build failed,,,,,,,,Listener for depth events.
+391e06c6966ca74578bae2ec2bd6e52941dc9fcf,2013-04-04,build failed,,,,,,,,"Add listeners, callbacks for depth update, bbo update."
+b1045c91403319cff1e44416e9552b6fadacd57e,2013-04-04,build failed,,,,,,,,Listener cleanup
+914130c49b43fbc5ae551fdfa251e91b7d6f1072,2013-04-04,build failed,,,,,,,,"Change callback params from reference to pointer, template params to OrderBook,"
+6b6179f80beaf266ade948675a08b1ea585cf2bb,2013-04-04,build failed,,,,,,,,Comment why we save order_book pointer
+eb6eec706f40d14d90352fb657c8a40d97407983,2013-04-04,build failed,,,,,,,,Only mark depth as changed if a visible level changed.
+c7196bad88e4fefcba1ac73af1513abbbd9040d0,2013-04-04,build failed,,,,,,,,Use references to self's class
+1546f7b0563773c33c72b31b8f86fa31b265f72f,2013-04-04,build failed,,,,,,,,Track which orders were filled in callback.  Eliminate need for knowing open_qty of filled order.
+44e63229b76bea279c4152d8a188b288056e2853,2013-04-04,build failed,,,,,,,,That name was supposed to be temporary!
+223c75e1be60d66f626a06486bc779b5e704ef46,2013-04-04,build failed,,,,,,,,Save open_qty when handling cancel.
+94d8e5b82ea8f481589db28d383962388f054848,2013-04-08,build failed,,,,,,,,Store current qty and size delta in replace callback.
+e8a2a815a6eb17e1518aa24921dca338ab3512e4,2013-04-08,build failed,,,,,,,,Make sure cancel via replace has qty zero
+557a4a606f293e3e90777ed14188ec8ddd0ffcfe,2013-04-08,build failed,,,,,,,,Move SimpleOrder-specific logic to SimpleOrderBook
+5f6176ba1890190dfb744eef4a8ff6bb9d173eac,2013-04-08,build failed,,,,,,,,Comment why we don't call close_order() on a replace that closes the order.
+32b7eec49129b0259ce7222c1d9c5ca74ab38449,2013-04-08,build failed,,,,,,,,Fix match bug. Don't use SimpleOrder interface.
+c58add9457e0c0ba2f75dd8ce3d6ebda5de207d9,2013-07-06,build failed,,,,,,,,Merge branch 'sett'
+8626be06b3d9843d7400bde78f0775569a23e06c,2016-08-31,build failed,,,,,,,,Repair Windows Build.
+d0f0df4900e75661293dd446c34cbbb95952c7c8,2017-01-11,build failed,,,,,,,,Merge pull request #13 from thakkarparth007/find_bidask_bug
+6f842cfb6a0eeb0e8225102761dbdfe8af490c1a,2017-01-18,build failed,,,,,,,,Avoid build warnings.
+1a26d0cc00ff3147b7596e12cb670d2e3273b197,2017-01-23,build failed,,,,,,,,"Use vector::clear() rather than vector::erase(begin(), end()); for performance and clarity."
+72a5211258cdbdbec3186d007b44e25e6a73ed5d,2017-01-23,build failed,,,,,,,,Use vector swap when appropriate.  Allow 'logging' to arbitrary ostream.  Add TODO for 'order-knows-its-own-conditions' change.
+8e9845fed05134f0c79691ddd5ea980b4e02511d,2017-01-24,build failed,,,,,,,,Use symbolic names in unit tests.  Add unit tests to cover the broken handling of AON orders.  Tests are disabled with a compile-time warning for now.
+f9cb52d64f7faea695e763e1c10f75db533b594c,2017-01-30,build failed,,,,,,,,Order book knows which symbol it handles
+d5b5de8a701acca32e76bfc3907c0cda18b4bf31,2017-01-30,build failed,,,,,,,,Use nullptr rather than NULL (it's 2017!)
+0e715cd07e829a293f0918dbca609d42efe709d9,2017-01-30,build failed,,,,,,,,improve doxygen comments.
+403f98b0f43e969701b04c230d32b6e1a262c2fe,2017-02-01,build failed,,,,,,,,Move OrderTracker to its own file.
+f8273bf27e7a688e02b9214c8ad95a171a00c0ce,2017-02-06,build failed,,,,,,,,Add unit test for market price orders.  Make it pass.
+421c8ea658d8b5db502a1afc9565a7775bd1442f,2017-02-07,build failed,,,,,,,,Add stop order support (untested)  Previous unit tests still pass.
+716aa59280cce55f8c8a1c53e5ce904a28d7a235,2017-02-07,build failed,,,,,,,,Create unit test for stop orders.  Make it pass.
+336ee80c3f971b9d6d245cb7b7623990fb9f2672,2017-02-07,build failed,,,,,,,,Add STOP order support in mt_order_entry.  Create teststoporders script to exercise/demo stop orders.
+458d52106005529dc99715c05e21ebb572a28479,2017-02-09,build failed,,,,,,,,"Rename OrderMapkey to be ComparablePrice. Use ComparablePrice for bid and ask book collections. Eliminate the almost-but-not-quite duplicate code needed to apply the same   oerations to buy and sell orders. DESIGN ERROR FIX: Requesting modify (cancel/replace) to reduce the quantity  more than the quantity remaining on market (which the trader does not know!)  formerly failed.  Now it simply reduces the quantity to zero and acts accordingly.  - Fixed the unit tests for this, too. Switch the ""shared pointer"" test to use std::shared_ptr rather than boost::shared_ptr  - The only dependency on boost is now in the example program. Temporary mangle the MARKET_ORDER_XXX_SORT_PRICE symbols.  - They are an internal/implementation detail and should be hidden completely (soon)"
+5d8eaebe630f6e058825c8ff6ffce4d2f8c08769,2017-02-09,build failed,,,,,,,,Move depth constants (implementation details) to a separate file.
+dbdc4a08ce47f5202f773768658305178c0ec728,2017-02-09,build failed,,,,,,,,Use #pragma once 'everywhere'
+8a15e8610af849d202a95bc5d73597f5209c94b4,2017-02-10,build failed,,,,,,,,Work In progress.  One failing unit test
+d01eb31c45597adb853555839f1ddb4227c5de95,2017-02-13,build failed,,,,,,,,Reworked order match algorithm.  Fixed the test that was expecting a bug in the order match algorithm
+a352b355e253a134d999fdd0504a2a08499e0bdb,2017-02-14,build failed,,,,,,,,Enable more AON unit tests that failed previously due to order match limitations.  Make them pass.
+43b78a9a89e01c4a661efd757375a94f934c3549,2017-02-14,build failed,,,,,,,,Fix Linux build issues from recent changes.
+1e1277bd52946b69cee51f48b38b5c759c08d55b,2017-02-14,build failed,,,,,,,,Stop loss comparison was backwards after rework of order match.
+be49052ed7bf6833d2ff1756fba875ea2891ee3e,2017-02-20,build failed,,,,,,,,Update MPBs for header-only; Delete unneeded cpps
+a73032c38191fbbf4b936d0fd950d350afc674f6,2017-02-20,ok,add+cancel,1.0002,1.0002,0.0,1,0,305.9,Rename impl namespace to be simple. (Impl implies 'hidden implementation details'.)
+4e029869153fbc6ad3107d6127cb8a49a761a1fa,2017-02-20,ok,add+cancel,1.0002,1.0002,0.0,1,0,332.5,Normalize #includes (angle brackets for paths. quotes for simple file names in current directory.)
+be600dbc4c89842daf4b3bf95da862501db72afd,2017-02-20,ok,add+cancel,1.0002,1.0002,0.0,1,0,312.3,Move test/example helper files out of book directory.
+e1af0bbb314d252dac08204d08e6f862dcd4e3c9,2017-02-20,ok,add+cancel,1.0002,1.0002,0.0,1,0,308.0,Update version
+492c842c560e39b9eb26c94be757fbac32d18d36,2017-02-21,ok,add+cancel,1.0002,1.0002,0.0,1,0,308.5,Remove unnecessary includes of order.h.  Add a placeholder main.cpp to keep MPC/Visual Studio happy.
+38bcc8463e1257508bf5fd78e2bd460ca8336557,2017-02-21,build failed,,,,,,,,Simplify Callback object.
+f7deb99c33f1eea106935985590023ccb83673fb,2017-02-22,build failed,,,,,,,,Use virtual methods to inform depth_book of changes rather than having depth_book hijack the perform_callbacks mechanism. Perform_callbacks is deprecated.  Remove it from unit tests and examples.
+6edff0e1f4d4e02542c0e01f2fb3aae7cf7a9c27,2017-02-22,build failed,,,,,,,,Remove default template parameter.  It is unnecessary and misleading.
+25b0c5eccf9d7e59fc46a68e70f405487ebf1c23,2017-02-22,ok,add+cancel,4.0,4.0,0.0,4,0,429.4,TransId is an idea who's time never came.  Eliminate it.
+dd5ada837c4f198979f3111924ed6362fa0390f4,2017-02-22,ok,add+cancel,2.0,2.0,0.0,2,0,374.5,avoid reallocating callbacks vector.
+543b8cbbc5604aba357f2142c3d3a97e0a18de61,2019-06-24,ok,add+cancel,2.0,2.0,0.0,2,0,737.0,Changed ! price_ == rhs to !( price_ == rhs ).
+828a771d715438f487db15bbc6d6c310a952e26d,2019-06-25,ok,add+cancel,2.0,2.0,0.0,2,0,378.4,Fixed order cancelation issue when order was not triggered.
+26f65bfc5fb9fe9af320b7e35d0242a5100ab0de,2018-10-18,ok,add+cancel,2.0,2.0,0.0,2,0,754.6,expand price/qty/cost from 32 to 64 bits
+c4bcf9c61089177870fae223b5da0efadbb5841e,2018-11-05,ok,add+cancel,2.0,2.0,0.0,2,0,449.7,"remove cost computations, pass fixed-point price instead"
+213ab056d964f97eba699216558be5b03069df21,2018-12-06,ok,add+cancel,2.0,2.0,0.0,2,0,746.5,"expand qty diff fields to 64bit, fix bug using 32max instead of 64max"
+2427613b32f1667abae68a01df6af9ba8270f8e7,2019-05-22,ok,add+cancel,2.0,2.0,0.0,2,0,374.3,experimental STOP support

@@ -1,0 +1,21 @@
+== stress test (4 producers, 4 consumers, capacity 1000)
+gcc13 orig: received 8000000 of 8000000, duplicates 0, missing 0
+gcc13 patched: received 8000000 of 8000000, duplicates 0, missing 0
+clang21 orig: received 8000000 of 8000000, duplicates 0, missing 0
+clang21 patched: received 8000000 of 8000000, duplicates 0, missing 0
+== divisions in try_push (div instructions; clang's bypass adds a 32-bit div next to each 64-bit one)
+b-clang21-orig: 6
+b-clang21-orig-nobypass: 3
+b-clang21-patched: 4
+b-gcc13-orig: 2
+b-gcc13-patched: 1
+b-gcc15-orig: 2
+b-gcc15-patched: 1
+== ns per call, median of 3 runs on core 2
+b-clang21-orig              push+pop   58.3  try_push+try_pop   30.3
+b-clang21-orig-nobypass     push+pop   75.3  try_push+try_pop   47.7
+b-clang21-patched           push+pop   49.4  try_push+try_pop   26.6
+b-gcc13-orig                push+pop   75.1  try_push+try_pop   52.5
+b-gcc13-patched             push+pop   57.5  try_push+try_pop   29.6
+b-gcc15-orig                push+pop   73.8  try_push+try_pop   52.9
+b-gcc15-patched             push+pop   57.8  try_push+try_pop   29.6

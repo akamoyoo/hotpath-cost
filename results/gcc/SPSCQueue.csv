@@ -1,0 +1,45 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+efc85ebf9986251ddf4b1ee0257904b846c384e0,2018-09-13,ok,try_push+consume,0.0,0.0,0.0,0,0,12.8,Merge pull request #2 from rigtorp/DEV
+efc85ebf9986251ddf4b1ee0257904b846c384e0,2018-09-13,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.1,Merge pull request #2 from rigtorp/DEV
+10c00a5c0f1bcfcd4f4e135d143f00b409254026,2019-07-30,ok,try_push+consume,0.0,0.0,0.0,0,0,12.3,Use `ptrdiff_t` instead of `ssize_t` (#6)
+10c00a5c0f1bcfcd4f4e135d143f00b409254026,2019-07-30,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,11.2,Use `ptrdiff_t` instead of `ssize_t` (#6)
+3872478f07efa67414ac47f8e7f70997d09182f2,2019-09-30,ok,try_push+consume,0.0,0.0,0.0,0,0,13.0,Use 'ptrdiff_t' instead of 'ssize_t' in 'size()' method.
+3872478f07efa67414ac47f8e7f70997d09182f2,2019-09-30,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,12.5,Use 'ptrdiff_t' instead of 'ssize_t' in 'size()' method.
+bc30810e35ec3499d5ba065e2164ddcd76ced9f1,2020-04-01,ok,try_push+consume,0.0,0.0,0.0,0,0,7.2,Use std::hardware_destructive_interference_size if supported
+bc30810e35ec3499d5ba065e2164ddcd76ced9f1,2020-04-01,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,7.2,Use std::hardware_destructive_interference_size if supported
+cf622b1c7fe3d83899c89fbcc4e54626c8b3392e,2020-04-01,ok,try_push+consume,0.0,0.0,0.0,0,0,7.2,Use static_assert to verify alignment and padding
+cf622b1c7fe3d83899c89fbcc4e54626c8b3392e,2020-04-01,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,7.2,Use static_assert to verify alignment and padding
+96a31a80947430b6379d4f6aa2275f59988bb61b,2020-04-02,ok,try_push+consume,0.0,0.0,0.0,0,0,13.5,Add support for custom allocators
+96a31a80947430b6379d4f6aa2275f59988bb61b,2020-04-02,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.1,Add support for custom allocators
+fbe67fc1c07eab336024b68b47a640573b0f8c45,2020-04-02,ok,try_push+consume,0.0,0.0,0.0,0,0,13.4,Fix capacity being off by one
+fbe67fc1c07eab336024b68b47a640573b0f8c45,2020-04-02,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.0,Fix capacity being off by one
+26113ed563e949ade23cce960bf8a7c2983abfc5,2020-04-03,ok,try_push+consume,0.0,0.0,0.0,0,0,13.3,Add huge pages support
+26113ed563e949ade23cce960bf8a7c2983abfc5,2020-04-03,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.1,Add huge pages support
+eb32188f3e6007989f454f7a6b36d240389a6fcc,2021-07-22,ok,try_push+consume,0.0,0.0,0.0,0,0,13.4,Rename head and tail to readIdx and writeIdx
+eb32188f3e6007989f454f7a6b36d240389a6fcc,2021-07-22,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,12.9,Rename head and tail to readIdx and writeIdx
+3a0507a193b0573d87823759d5c8c1230598bfbc,2021-07-22,ok,try_push+consume,0.0,0.0,0.0,0,0,7.6,Cache head and tail indices
+3a0507a193b0573d87823759d5c8c1230598bfbc,2021-07-22,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,7.9,Cache head and tail indices
+62cdc1f3b0e59e63ec111348e9e7cc76282cc3b0,2021-12-14,ok,try_push+consume,0.0,0.0,0.0,0,0,7.6,Simplify implementation of empty()
+62cdc1f3b0e59e63ec111348e9e7cc76282cc3b0,2021-12-14,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,7.5,Simplify implementation of empty()
+3086fa915a505c021999b038e98118fdec876765,2021-12-14,ok,try_push+consume,0.0,0.0,0.0,0,0,7.6,Add nodiscard attribute
+3086fa915a505c021999b038e98118fdec876765,2021-12-14,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,7.5,Add nodiscard attribute
+40661138be2245d7d52854e4fb3b7f6bb4bf02ad,2023-09-24,ok,try_push+consume,0.0,0.0,0.0,0,0,13.9,Clarify pop() preconditions
+40661138be2245d7d52854e4fb3b7f6bb4bf02ad,2023-09-24,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.8,Clarify pop() preconditions
+1053918dbd251fbff69b24ef27fa5d51c29ec2af,2023-09-24,ok,try_push+consume,0.0,0.0,0.0,0,0,7.6,Remove redundant padding
+1053918dbd251fbff69b24ef27fa5d51c29ec2af,2023-09-24,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,7.5,Remove redundant padding
+59a6a938513ea5004817383711ed35d32385d3ee,2026-10-03,ok,try_push+consume,0.0,0.0,0.0,0,0,7.6,Fix size_t overflow when capacity == SIZE_MAX
+59a6a938513ea5004817383711ed35d32385d3ee,2026-10-03,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,7.5,Fix size_t overflow when capacity == SIZE_MAX
+93ddcfe9fe9f9c042737901ddb7dc005110409c0,2026-11-10,ok,try_push+consume,0.0,0.0,0.0,0,0,14.0,Merge pull request #54 from rigtorp/spdx-cpp-headers
+93ddcfe9fe9f9c042737901ddb7dc005110409c0,2026-11-10,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.7,Merge pull request #54 from rigtorp/spdx-cpp-headers
+258132c80780ded62f29da002e776a5afcc6d58b,2026-11-10,ok,try_push+consume,0.0,0.0,0.0,0,0,9.4,Merge pull request #55 from rigtorp/header-portability-cleanup
+258132c80780ded62f29da002e776a5afcc6d58b,2026-11-10,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,15.9,Merge pull request #55 from rigtorp/header-portability-cleanup
+6c6618e33a44e2b834aa2b1fe029edd0245e4030,2026-11-14,ok,try_push+consume,0.0,0.0,0.0,0,0,7.7,Merge pull request #60 from rigtorp/false-sharing-range
+6c6618e33a44e2b834aa2b1fe029edd0245e4030,2026-11-14,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,9.0,Merge pull request #60 from rigtorp/false-sharing-range
+647aa448933f4e760de6ff496a29eaf54c79281a,2026-11-14,ok,try_push+consume,0.0,0.0,0.0,0,0,13.0,Merge pull request #63 from rigtorp/cpp20-cmake
+647aa448933f4e760de6ff496a29eaf54c79281a,2026-11-14,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.4,Merge pull request #63 from rigtorp/cpp20-cmake
+3b3e9057107af632cdc3296333bc265f15f53287,2026-11-14,ok,try_push+consume,0.0,0.0,0.0,0,0,13.5,Merge pull request #64 from rigtorp/strict-warnings
+3b3e9057107af632cdc3296333bc265f15f53287,2026-11-14,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.3,Merge pull request #64 from rigtorp/strict-warnings
+a5e4e1c46fe729c9be3bb37a15f632c264b8d2cc,2026-11-14,ok,try_push+consume,0.0,0.0,0.0,0,0,12.9,Merge pull request #65 from rigtorp/construct-destroy-at
+a5e4e1c46fe729c9be3bb37a15f632c264b8d2cc,2026-11-14,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,13.2,Merge pull request #65 from rigtorp/construct-destroy-at
+503cc7eb190806d31ba5cc800d7f6c3e87d20d13,2026-11-16,ok,try_push+consume,0.0,0.0,0.0,0,0,9.7,Merge pull request #67 from rigtorp/feat-try-consume-try-pop
+503cc7eb190806d31ba5cc800d7f6c3e87d20d13,2026-11-16,ok,try_emplace+front+pop,0.0,0.0,0.0,0,0,9.0,Merge pull request #67 from rigtorp/feat-try-consume-try-pop

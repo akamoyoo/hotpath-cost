@@ -1,0 +1,850 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+1701be0224101d62341e2208f951d8e6df9ff173,2020-10-19,ok,price 187.25,0.0,0.0,0.0,0,0,23.0,First commit
+1701be0224101d62341e2208f951d8e6df9ff173,2020-10-19,ok,integer 100,0.0,0.0,0.0,0,0,15.6,First commit
+1701be0224101d62341e2208f951d8e6df9ff173,2020-10-19,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.3,First commit
+1701be0224101d62341e2208f951d8e6df9ff173,2020-10-19,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.7,First commit
+6f2586c85938a04cff5ac1032534458941172ee4,2020-10-19,ok,price 187.25,0.0,0.0,0.0,0,0,23.0,Merge pull request #2 from lemire/dlemire/make_requirements_more_explicit
+6f2586c85938a04cff5ac1032534458941172ee4,2020-10-19,ok,integer 100,0.0,0.0,0.0,0,0,15.6,Merge pull request #2 from lemire/dlemire/make_requirements_more_explicit
+6f2586c85938a04cff5ac1032534458941172ee4,2020-10-19,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.3,Merge pull request #2 from lemire/dlemire/make_requirements_more_explicit
+6f2586c85938a04cff5ac1032534458941172ee4,2020-10-19,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.7,Merge pull request #2 from lemire/dlemire/make_requirements_more_explicit
+0cb4aa175b1a66404f3956f04ab57e3ee3a28572,2020-10-21,ok,price 187.25,0.0,0.0,0.0,0,0,23.0,Merge pull request #5 from lemire/dlemire/improving_portability
+0cb4aa175b1a66404f3956f04ab57e3ee3a28572,2020-10-21,ok,integer 100,0.0,0.0,0.0,0,0,15.6,Merge pull request #5 from lemire/dlemire/improving_portability
+0cb4aa175b1a66404f3956f04ab57e3ee3a28572,2020-10-21,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.2,Merge pull request #5 from lemire/dlemire/improving_portability
+0cb4aa175b1a66404f3956f04ab57e3ee3a28572,2020-10-21,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.7,Merge pull request #5 from lemire/dlemire/improving_portability
+f3b7466d4d362d1ace53f62d37aba300a4f54aae,2020-10-23,ok,price 187.25,0.0,0.0,0.0,0,0,23.1,Update thompson_tao.h
+f3b7466d4d362d1ace53f62d37aba300a4f54aae,2020-10-23,ok,integer 100,0.0,0.0,0.0,0,0,15.6,Update thompson_tao.h
+f3b7466d4d362d1ace53f62d37aba300a4f54aae,2020-10-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.2,Update thompson_tao.h
+f3b7466d4d362d1ace53f62d37aba300a4f54aae,2020-10-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.7,Update thompson_tao.h
+4b284fbe19f232f107e08d7317048b505d8b7e8b,2020-10-27,ok,price 187.25,0.0,0.0,0.0,0,0,23.1,Merge pull request #12 from lemire/dlemire/issue8
+4b284fbe19f232f107e08d7317048b505d8b7e8b,2020-10-27,ok,integer 100,0.0,0.0,0.0,0,0,15.9,Merge pull request #12 from lemire/dlemire/issue8
+4b284fbe19f232f107e08d7317048b505d8b7e8b,2020-10-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.8,Merge pull request #12 from lemire/dlemire/issue8
+4b284fbe19f232f107e08d7317048b505d8b7e8b,2020-10-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.3,Merge pull request #12 from lemire/dlemire/issue8
+459f5db42c1cb978756a3eef4a7b6c975612ac70,2020-10-27,ok,price 187.25,0.0,0.0,0.0,0,0,23.1,Merge pull request #13 from lemire/dlemire/issue7
+459f5db42c1cb978756a3eef4a7b6c975612ac70,2020-10-27,ok,integer 100,0.0,0.0,0.0,0,0,15.9,Merge pull request #13 from lemire/dlemire/issue7
+459f5db42c1cb978756a3eef4a7b6c975612ac70,2020-10-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.0,Merge pull request #13 from lemire/dlemire/issue7
+459f5db42c1cb978756a3eef4a7b6c975612ac70,2020-10-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Merge pull request #13 from lemire/dlemire/issue7
+644b05989d6f17b5ba49992dccfe709c289a4504,2020-10-27,ok,price 187.25,0.0,0.0,0.0,0,0,23.1,Merge pull request #14 from lemire/dlemire/issue9
+644b05989d6f17b5ba49992dccfe709c289a4504,2020-10-27,ok,integer 100,0.0,0.0,0.0,0,0,16.0,Merge pull request #14 from lemire/dlemire/issue9
+644b05989d6f17b5ba49992dccfe709c289a4504,2020-10-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.0,Merge pull request #14 from lemire/dlemire/issue9
+644b05989d6f17b5ba49992dccfe709c289a4504,2020-10-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Merge pull request #14 from lemire/dlemire/issue9
+5c50a4c5d5c4404ceee85ccab47a209c8e639a41,2020-10-27,ok,price 187.25,0.0,0.0,0.0,0,0,23.2,Merge pull request #15 from lemire/dlemire/long_path
+5c50a4c5d5c4404ceee85ccab47a209c8e639a41,2020-10-27,ok,integer 100,0.0,0.0,0.0,0,0,15.7,Merge pull request #15 from lemire/dlemire/long_path
+5c50a4c5d5c4404ceee85ccab47a209c8e639a41,2020-10-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.1,Merge pull request #15 from lemire/dlemire/long_path
+5c50a4c5d5c4404ceee85ccab47a209c8e639a41,2020-10-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Merge pull request #15 from lemire/dlemire/long_path
+45745a325d855e1929c4d71e1feed811b86686c8,2020-10-27,ok,price 187.25,0.0,0.0,0.0,0,0,23.2,Merge pull request #17 from lemire/dlemire/minor_fix
+45745a325d855e1929c4d71e1feed811b86686c8,2020-10-27,ok,integer 100,0.0,0.0,0.0,0,0,15.7,Merge pull request #17 from lemire/dlemire/minor_fix
+45745a325d855e1929c4d71e1feed811b86686c8,2020-10-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.2,Merge pull request #17 from lemire/dlemire/minor_fix
+45745a325d855e1929c4d71e1feed811b86686c8,2020-10-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Merge pull request #17 from lemire/dlemire/minor_fix
+70bb48c5c1873913b0bc3c46d889522b0fdc7326,2020-10-27,ok,price 187.25,0.0,0.0,0.0,0,0,23.2,Update simple_decimal_conversion.h
+70bb48c5c1873913b0bc3c46d889522b0fdc7326,2020-10-27,ok,integer 100,0.0,0.0,0.0,0,0,15.7,Update simple_decimal_conversion.h
+70bb48c5c1873913b0bc3c46d889522b0fdc7326,2020-10-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.0,Update simple_decimal_conversion.h
+70bb48c5c1873913b0bc3c46d889522b0fdc7326,2020-10-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Update simple_decimal_conversion.h
+f7d3cdc426b06c091e3de01a6d8d81f48297a8e9,2020-10-29,ok,price 187.25,0.0,0.0,0.0,0,0,28.1,Minor fix.
+f7d3cdc426b06c091e3de01a6d8d81f48297a8e9,2020-10-29,ok,integer 100,0.0,0.0,0.0,0,0,15.8,Minor fix.
+f7d3cdc426b06c091e3de01a6d8d81f48297a8e9,2020-10-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.5,Minor fix.
+f7d3cdc426b06c091e3de01a6d8d81f48297a8e9,2020-10-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,Minor fix.
+e8e1a01733c678e5000c4b8fe44c97d0ad1452fd,2020-10-29,ok,price 187.25,0.0,0.0,0.0,0,0,23.2,cout
+e8e1a01733c678e5000c4b8fe44c97d0ad1452fd,2020-10-29,ok,integer 100,0.0,0.0,0.0,0,0,15.7,cout
+e8e1a01733c678e5000c4b8fe44c97d0ad1452fd,2020-10-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.0,cout
+e8e1a01733c678e5000c4b8fe44c97d0ad1452fd,2020-10-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,cout
+71e0355de891fb5c8f02ec1fa6a273d004ac959b,2020-10-29,ok,price 187.25,0.0,0.0,0.0,0,0,23.1,fixing a comment.
+71e0355de891fb5c8f02ec1fa6a273d004ac959b,2020-10-29,ok,integer 100,0.0,0.0,0.0,0,0,15.7,fixing a comment.
+71e0355de891fb5c8f02ec1fa6a273d004ac959b,2020-10-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.2,fixing a comment.
+71e0355de891fb5c8f02ec1fa6a273d004ac959b,2020-10-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,fixing a comment.
+26ecdea26c9e24aca0cf64ba290c738fc2a77843,2020-10-30,ok,price 187.25,0.0,0.0,0.0,0,0,23.2,Fixing comment.
+26ecdea26c9e24aca0cf64ba290c738fc2a77843,2020-10-30,ok,integer 100,0.0,0.0,0.0,0,0,15.7,Fixing comment.
+26ecdea26c9e24aca0cf64ba290c738fc2a77843,2020-10-30,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.1,Fixing comment.
+26ecdea26c9e24aca0cf64ba290c738fc2a77843,2020-10-30,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Fixing comment.
+022118e5d0dd1f8b04e0675d82b5364e41a9627f,2020-10-30,ok,price 187.25,0.0,0.0,0.0,0,0,23.3,Minor logical fix.
+022118e5d0dd1f8b04e0675d82b5364e41a9627f,2020-10-30,ok,integer 100,0.0,0.0,0.0,0,0,15.7,Minor logical fix.
+022118e5d0dd1f8b04e0675d82b5364e41a9627f,2020-10-30,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.2,Minor logical fix.
+022118e5d0dd1f8b04e0675d82b5364e41a9627f,2020-10-30,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Minor logical fix.
+48c017aa963aa7d419c43261e83986ea71b9679f,2020-10-31,ok,price 187.25,0.0,0.0,0.0,0,0,23.4,"Rounded toward one, not zero."
+48c017aa963aa7d419c43261e83986ea71b9679f,2020-10-31,ok,integer 100,0.0,0.0,0.0,0,0,15.7,"Rounded toward one, not zero."
+48c017aa963aa7d419c43261e83986ea71b9679f,2020-10-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.1,"Rounded toward one, not zero."
+48c017aa963aa7d419c43261e83986ea71b9679f,2020-10-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.7,"Rounded toward one, not zero."
+078095d1e30c3e4ca5a49bb4333ea3cda7c32fce,2020-11-02,ok,price 187.25,0.0,0.0,0.0,0,0,23.3,Patching.
+078095d1e30c3e4ca5a49bb4333ea3cda7c32fce,2020-11-02,ok,integer 100,0.0,0.0,0.0,0,0,15.7,Patching.
+078095d1e30c3e4ca5a49bb4333ea3cda7c32fce,2020-11-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.1,Patching.
+078095d1e30c3e4ca5a49bb4333ea3cda7c32fce,2020-11-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Patching.
+288efd35eb088f27530f96599d9a4875b9eb6b57,2020-11-02,ok,price 187.25,0.0,0.0,0.0,0,0,23.3,Minor cleaning.
+288efd35eb088f27530f96599d9a4875b9eb6b57,2020-11-02,ok,integer 100,0.0,0.0,0.0,0,0,15.6,Minor cleaning.
+288efd35eb088f27530f96599d9a4875b9eb6b57,2020-11-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.1,Minor cleaning.
+288efd35eb088f27530f96599d9a4875b9eb6b57,2020-11-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.0,Minor cleaning.
+9b102a95abb9e64273efcdf5c1bbb9708ec41617,2020-11-02,ok,price 187.25,0.0,0.0,0.0,0,0,23.4,"Actually, 19."
+9b102a95abb9e64273efcdf5c1bbb9708ec41617,2020-11-02,ok,integer 100,0.0,0.0,0.0,0,0,15.7,"Actually, 19."
+9b102a95abb9e64273efcdf5c1bbb9708ec41617,2020-11-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.3,"Actually, 19."
+9b102a95abb9e64273efcdf5c1bbb9708ec41617,2020-11-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.7,"Actually, 19."
+afd255b58bea45925b78207fa952d1ff691361d8,2020-11-05,ok,price 187.25,0.0,0.0,0.0,0,0,23.4,Minor update.
+afd255b58bea45925b78207fa952d1ff691361d8,2020-11-05,ok,integer 100,0.0,0.0,0.0,0,0,15.7,Minor update.
+afd255b58bea45925b78207fa952d1ff691361d8,2020-11-05,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.4,Minor update.
+afd255b58bea45925b78207fa952d1ff691361d8,2020-11-05,ok,4567.123456789012,0.0,0.0,0.0,0,0,35.1,Minor update.
+dcc883cde88a599eec4c61a9b1703425ffcc0b25,2020-11-05,ok,price 187.25,0.0,0.0,0.0,0,0,24.5,Merge branch 'main' of github.com:lemire/fast_float into main
+dcc883cde88a599eec4c61a9b1703425ffcc0b25,2020-11-05,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge branch 'main' of github.com:lemire/fast_float into main
+dcc883cde88a599eec4c61a9b1703425ffcc0b25,2020-11-05,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,38.4,Merge branch 'main' of github.com:lemire/fast_float into main
+dcc883cde88a599eec4c61a9b1703425ffcc0b25,2020-11-05,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.6,Merge branch 'main' of github.com:lemire/fast_float into main
+693fa66fa4ddaf36167fbb450d8788112cdb88b5,2020-11-06,ok,price 187.25,0.0,0.0,0.0,0,0,24.5,More testing.
+693fa66fa4ddaf36167fbb450d8788112cdb88b5,2020-11-06,ok,integer 100,0.0,0.0,0.0,0,0,16.7,More testing.
+693fa66fa4ddaf36167fbb450d8788112cdb88b5,2020-11-06,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,38.4,More testing.
+693fa66fa4ddaf36167fbb450d8788112cdb88b5,2020-11-06,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,More testing.
+e3fd438c64c973f38c7f4e89790052a67adeba9a,2020-11-07,ok,price 187.25,0.0,0.0,0.0,0,0,24.5,Tweaking.
+e3fd438c64c973f38c7f4e89790052a67adeba9a,2020-11-07,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Tweaking.
+e3fd438c64c973f38c7f4e89790052a67adeba9a,2020-11-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,38.5,Tweaking.
+e3fd438c64c973f38c7f4e89790052a67adeba9a,2020-11-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Tweaking.
+51f813a987b65cdf89f4e62dcf3abec3c64d520a,2020-11-07,ok,price 187.25,0.0,0.0,0.0,0,0,24.5,Tweaking.
+51f813a987b65cdf89f4e62dcf3abec3c64d520a,2020-11-07,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Tweaking.
+51f813a987b65cdf89f4e62dcf3abec3c64d520a,2020-11-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,38.4,Tweaking.
+51f813a987b65cdf89f4e62dcf3abec3c64d520a,2020-11-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Tweaking.
+045a0b0447c7fabe6d46a9064d923ad533a654f2,2020-11-09,ok,price 187.25,0.0,0.0,0.0,0,0,24.1,Merge pull request #24 from kitaisreal/fix-odr
+045a0b0447c7fabe6d46a9064d923ad533a654f2,2020-11-09,ok,integer 100,0.0,0.0,0.0,0,0,15.5,Merge pull request #24 from kitaisreal/fix-odr
+045a0b0447c7fabe6d46a9064d923ad533a654f2,2020-11-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.7,Merge pull request #24 from kitaisreal/fix-odr
+045a0b0447c7fabe6d46a9064d923ad533a654f2,2020-11-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.0,Merge pull request #24 from kitaisreal/fix-odr
+8ea46c615588dc3fc0fd7d516b18df9c84a5e394,2020-11-09,ok,price 187.25,0.0,0.0,0.0,0,0,24.5,Merge pull request #25 from lemire/dlemire/revert_micro_optimization
+8ea46c615588dc3fc0fd7d516b18df9c84a5e394,2020-11-09,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #25 from lemire/dlemire/revert_micro_optimization
+8ea46c615588dc3fc0fd7d516b18df9c84a5e394,2020-11-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.5,Merge pull request #25 from lemire/dlemire/revert_micro_optimization
+8ea46c615588dc3fc0fd7d516b18df9c84a5e394,2020-11-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,Merge pull request #25 from lemire/dlemire/revert_micro_optimization
+7eae925b51fd0f570ccd5c880c12e3e27a23b86f,2020-11-10,ok,price 187.25,0.0,0.0,0.0,0,0,23.5,Merge pull request #29 from lemire/dlemire/minor_simplification
+7eae925b51fd0f570ccd5c880c12e3e27a23b86f,2020-11-10,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #29 from lemire/dlemire/minor_simplification
+7eae925b51fd0f570ccd5c880c12e3e27a23b86f,2020-11-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.3,Merge pull request #29 from lemire/dlemire/minor_simplification
+7eae925b51fd0f570ccd5c880c12e3e27a23b86f,2020-11-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Merge pull request #29 from lemire/dlemire/minor_simplification
+8e1103d93ec549bd1af2bdab325ea0a263198fe7,2020-11-13,ok,price 187.25,0.0,0.0,0.0,0,0,23.5,Merge pull request #31 from lemire/dlemire/issue30
+8e1103d93ec549bd1af2bdab325ea0a263198fe7,2020-11-13,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #31 from lemire/dlemire/issue30
+8e1103d93ec549bd1af2bdab325ea0a263198fe7,2020-11-13,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.1,Merge pull request #31 from lemire/dlemire/issue30
+8e1103d93ec549bd1af2bdab325ea0a263198fe7,2020-11-13,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Merge pull request #31 from lemire/dlemire/issue30
+e5917323ec65578d5cae66e1541aac4fe638273f,2020-11-15,ok,price 187.25,0.0,0.0,0.0,0,0,23.5,Pedantic member initialization.
+e5917323ec65578d5cae66e1541aac4fe638273f,2020-11-15,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Pedantic member initialization.
+e5917323ec65578d5cae66e1541aac4fe638273f,2020-11-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.2,Pedantic member initialization.
+e5917323ec65578d5cae66e1541aac4fe638273f,2020-11-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Pedantic member initialization.
+8a0a0c4fc1afeabd65d55302e900aac2594e3bc5,2020-11-15,ok,price 187.25,0.0,0.0,0.0,0,0,23.5,Being pedantic.
+8a0a0c4fc1afeabd65d55302e900aac2594e3bc5,2020-11-15,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Being pedantic.
+8a0a0c4fc1afeabd65d55302e900aac2594e3bc5,2020-11-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.1,Being pedantic.
+8a0a0c4fc1afeabd65d55302e900aac2594e3bc5,2020-11-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,Being pedantic.
+395764249902646d4471e94c60114b295678694b,2020-11-16,ok,price 187.25,0.0,0.0,0.0,0,0,23.5,Merge pull request #38 from lemire/dlemire/issue37
+395764249902646d4471e94c60114b295678694b,2020-11-16,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #38 from lemire/dlemire/issue37
+395764249902646d4471e94c60114b295678694b,2020-11-16,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.2,Merge pull request #38 from lemire/dlemire/issue37
+395764249902646d4471e94c60114b295678694b,2020-11-16,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,Merge pull request #38 from lemire/dlemire/issue37
+70c9b7f884c7f80a9a0e06fa9754c0a2e6a9492e,2020-11-22,ok,price 187.25,0.0,0.0,0.0,0,0,23.5,Merge pull request #36 from biojppm/impl/32bit
+70c9b7f884c7f80a9a0e06fa9754c0a2e6a9492e,2020-11-22,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #36 from biojppm/impl/32bit
+70c9b7f884c7f80a9a0e06fa9754c0a2e6a9492e,2020-11-22,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.1,Merge pull request #36 from biojppm/impl/32bit
+70c9b7f884c7f80a9a0e06fa9754c0a2e6a9492e,2020-11-22,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,Merge pull request #36 from biojppm/impl/32bit
+3dab88a24536dda433ca4a507da0cc949f534810,2020-11-23,ok,price 187.25,0.0,0.0,0.0,0,0,23.6,Merge pull request #39 from lemire/dlemire/extended_fast_path
+3dab88a24536dda433ca4a507da0cc949f534810,2020-11-23,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #39 from lemire/dlemire/extended_fast_path
+3dab88a24536dda433ca4a507da0cc949f534810,2020-11-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.9,Merge pull request #39 from lemire/dlemire/extended_fast_path
+3dab88a24536dda433ca4a507da0cc949f534810,2020-11-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.1,Merge pull request #39 from lemire/dlemire/extended_fast_path
+caade6991621f9419a17e976186c053941da5f4e,2020-11-23,ok,price 187.25,0.0,0.0,0.0,0,0,23.9,Merge pull request #28 from lemire/dlemire/aqrit_magic
+caade6991621f9419a17e976186c053941da5f4e,2020-11-23,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #28 from lemire/dlemire/aqrit_magic
+caade6991621f9419a17e976186c053941da5f4e,2020-11-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,34.4,Merge pull request #28 from lemire/dlemire/aqrit_magic
+caade6991621f9419a17e976186c053941da5f4e,2020-11-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Merge pull request #28 from lemire/dlemire/aqrit_magic
+f51af514d189e74a22fe1dc90b15c13218263711,2020-11-24,ok,price 187.25,0.0,0.0,0.0,0,0,23.8,Merge pull request #41 from biojppm/fix/bloated_binary
+f51af514d189e74a22fe1dc90b15c13218263711,2020-11-24,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #41 from biojppm/fix/bloated_binary
+f51af514d189e74a22fe1dc90b15c13218263711,2020-11-24,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,34.3,Merge pull request #41 from biojppm/fix/bloated_binary
+f51af514d189e74a22fe1dc90b15c13218263711,2020-11-24,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.5,Merge pull request #41 from biojppm/fix/bloated_binary
+2940ec0458622f88d68bf8af4b476e400f5e7ace,2020-12-22,ok,price 187.25,0.0,0.0,0.0,0,0,23.8,Merge pull request #46 from fastfloat/dlemire/more_tests
+2940ec0458622f88d68bf8af4b476e400f5e7ace,2020-12-22,ok,integer 100,0.0,0.0,0.0,0,0,16.8,Merge pull request #46 from fastfloat/dlemire/more_tests
+2940ec0458622f88d68bf8af4b476e400f5e7ace,2020-12-22,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,34.3,Merge pull request #46 from fastfloat/dlemire/more_tests
+2940ec0458622f88d68bf8af4b476e400f5e7ace,2020-12-22,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.3,Merge pull request #46 from fastfloat/dlemire/more_tests
+2fa79150501a3d58a69e625f97815d9a8fe1bdd3,2020-12-29,ok,price 187.25,0.0,0.0,0.0,0,0,23.8,Merge pull request #48 from fastfloat/dlemire/fix_issue_47
+2fa79150501a3d58a69e625f97815d9a8fe1bdd3,2020-12-29,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Merge pull request #48 from fastfloat/dlemire/fix_issue_47
+2fa79150501a3d58a69e625f97815d9a8fe1bdd3,2020-12-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,34.2,Merge pull request #48 from fastfloat/dlemire/fix_issue_47
+2fa79150501a3d58a69e625f97815d9a8fe1bdd3,2020-12-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,Merge pull request #48 from fastfloat/dlemire/fix_issue_47
+47ffc1303beb0ed3783e668e33f0e05d053b87ad,2020-12-29,ok,price 187.25,0.0,0.0,0.0,0,0,23.8,Removing spurious 's'.
+47ffc1303beb0ed3783e668e33f0e05d053b87ad,2020-12-29,ok,integer 100,0.0,0.0,0.0,0,0,16.7,Removing spurious 's'.
+47ffc1303beb0ed3783e668e33f0e05d053b87ad,2020-12-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,34.2,Removing spurious 's'.
+47ffc1303beb0ed3783e668e33f0e05d053b87ad,2020-12-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,33.4,Removing spurious 's'.
+fa09c227c3c9d6d7ca6201503916f71bbae22f05,2020-12-31,ok,price 187.25,0.0,0.0,0.0,0,0,24.6,Merge pull request #49 from fastfloat/dlemire/cleaner19
+fa09c227c3c9d6d7ca6201503916f71bbae22f05,2020-12-31,ok,integer 100,0.0,0.0,0.0,0,0,17.4,Merge pull request #49 from fastfloat/dlemire/cleaner19
+fa09c227c3c9d6d7ca6201503916f71bbae22f05,2020-12-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.3,Merge pull request #49 from fastfloat/dlemire/cleaner19
+fa09c227c3c9d6d7ca6201503916f71bbae22f05,2020-12-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.1,Merge pull request #49 from fastfloat/dlemire/cleaner19
+002966323c42f92b2fb9b43b7b09789188ef0e6f,2021-01-07,ok,price 187.25,0.0,0.0,0.0,0,0,28.6,Update float_common.h
+002966323c42f92b2fb9b43b7b09789188ef0e6f,2021-01-07,ok,integer 100,0.0,0.0,0.0,0,0,17.4,Update float_common.h
+002966323c42f92b2fb9b43b7b09789188ef0e6f,2021-01-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.5,Update float_common.h
+002966323c42f92b2fb9b43b7b09789188ef0e6f,2021-01-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.2,Update float_common.h
+ca51b646c81ad68100e1e58186f5211db26bd33b,2021-01-07,ok,price 187.25,0.0,0.0,0.0,0,0,24.6,Update float_common.h
+ca51b646c81ad68100e1e58186f5211db26bd33b,2021-01-07,ok,integer 100,0.0,0.0,0.0,0,0,17.4,Update float_common.h
+ca51b646c81ad68100e1e58186f5211db26bd33b,2021-01-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.5,Update float_common.h
+ca51b646c81ad68100e1e58186f5211db26bd33b,2021-01-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.1,Update float_common.h
+b61ed01b650b24b5ab7b23d1805120df3d2d5b07,2021-01-08,ok,price 187.25,0.0,0.0,0.0,0,0,24.1,Merge pull request #51 from fastfloat/dlemire/alt_long
+b61ed01b650b24b5ab7b23d1805120df3d2d5b07,2021-01-08,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Merge pull request #51 from fastfloat/dlemire/alt_long
+b61ed01b650b24b5ab7b23d1805120df3d2d5b07,2021-01-08,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.6,Merge pull request #51 from fastfloat/dlemire/alt_long
+b61ed01b650b24b5ab7b23d1805120df3d2d5b07,2021-01-08,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.6,Merge pull request #51 from fastfloat/dlemire/alt_long
+c5adf9e4a59c429e3c02a078d033d5fda4c6a3ba,2021-01-11,ok,price 187.25,0.0,0.0,0.0,0,0,24.1,Fix truncate flag.
+c5adf9e4a59c429e3c02a078d033d5fda4c6a3ba,2021-01-11,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Fix truncate flag.
+c5adf9e4a59c429e3c02a078d033d5fda4c6a3ba,2021-01-11,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.6,Fix truncate flag.
+c5adf9e4a59c429e3c02a078d033d5fda4c6a3ba,2021-01-11,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.6,Fix truncate flag.
+716c87067ea7ec49cba164a5458cd51c8fcf9462,2021-01-11,ok,price 187.25,0.0,0.0,0.0,0,0,24.1,Simplifying fix.
+716c87067ea7ec49cba164a5458cd51c8fcf9462,2021-01-11,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Simplifying fix.
+716c87067ea7ec49cba164a5458cd51c8fcf9462,2021-01-11,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.7,Simplifying fix.
+716c87067ea7ec49cba164a5458cd51c8fcf9462,2021-01-11,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.5,Simplifying fix.
+e0bd5735300e761d8553a24b0525dd1e856fa4ca,2021-02-17,ok,price 187.25,0.0,0.0,0.0,0,0,18.7,Merge pull request #59 from nealrichardson/patch-1
+e0bd5735300e761d8553a24b0525dd1e856fa4ca,2021-02-17,ok,integer 100,0.0,0.0,0.0,0,0,11.4,Merge pull request #59 from nealrichardson/patch-1
+e0bd5735300e761d8553a24b0525dd1e856fa4ca,2021-02-17,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,25.4,Merge pull request #59 from nealrichardson/patch-1
+e0bd5735300e761d8553a24b0525dd1e856fa4ca,2021-02-17,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.5,Merge pull request #59 from nealrichardson/patch-1
+9d76b043c5e825e50f7e99e3f9e46ad43373930e,2021-02-26,ok,price 187.25,0.0,0.0,0.0,0,0,24.2,Minor typo.
+9d76b043c5e825e50f7e99e3f9e46ad43373930e,2021-02-26,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Minor typo.
+9d76b043c5e825e50f7e99e3f9e46ad43373930e,2021-02-26,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.7,Minor typo.
+9d76b043c5e825e50f7e99e3f9e46ad43373930e,2021-02-26,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.6,Minor typo.
+edd19b399e7b1864028590c8b5c4714718c3d236,2021-03-01,ok,price 187.25,0.0,0.0,0.0,0,0,19.2,Merge pull request #61 from eugenegff/main
+edd19b399e7b1864028590c8b5c4714718c3d236,2021-03-01,ok,integer 100,0.0,0.0,0.0,0,0,12.2,Merge pull request #61 from eugenegff/main
+edd19b399e7b1864028590c8b5c4714718c3d236,2021-03-01,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.8,Merge pull request #61 from eugenegff/main
+edd19b399e7b1864028590c8b5c4714718c3d236,2021-03-01,ok,4567.123456789012,0.0,0.0,0.0,0,0,23.8,Merge pull request #61 from eugenegff/main
+d4bc0f28a276ac05f8663826eadef324de3a3399,2021-03-02,ok,price 187.25,0.0,0.0,0.0,0,0,25.2,Merge pull request #63 from timkpaine/emscripten
+d4bc0f28a276ac05f8663826eadef324de3a3399,2021-03-02,ok,integer 100,0.0,0.0,0.0,0,0,14.8,Merge pull request #63 from timkpaine/emscripten
+d4bc0f28a276ac05f8663826eadef324de3a3399,2021-03-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.3,Merge pull request #63 from timkpaine/emscripten
+d4bc0f28a276ac05f8663826eadef324de3a3399,2021-03-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.5,Merge pull request #63 from timkpaine/emscripten
+b492e6461532804bdbcfe3da008c470ada7e548a,2021-03-17,ok,price 187.25,0.0,0.0,0.0,0,0,27.4,Merge pull request #64 from eugenegff/main
+b492e6461532804bdbcfe3da008c470ada7e548a,2021-03-17,ok,integer 100,0.0,0.0,0.0,0,0,19.3,Merge pull request #64 from eugenegff/main
+b492e6461532804bdbcfe3da008c470ada7e548a,2021-03-17,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,48.3,Merge pull request #64 from eugenegff/main
+b492e6461532804bdbcfe3da008c470ada7e548a,2021-03-17,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.7,Merge pull request #64 from eugenegff/main
+124690d7d57fbc76c48163e592c10d427d9c9e9a,2021-04-07,ok,price 187.25,0.0,0.0,0.0,0,0,28.9,Merge pull request #66 from wojdyr/detail
+124690d7d57fbc76c48163e592c10d427d9c9e9a,2021-04-07,ok,integer 100,0.0,0.0,0.0,0,0,20.1,Merge pull request #66 from wojdyr/detail
+124690d7d57fbc76c48163e592c10d427d9c9e9a,2021-04-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,51.1,Merge pull request #66 from wojdyr/detail
+124690d7d57fbc76c48163e592c10d427d9c9e9a,2021-04-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,41.6,Merge pull request #66 from wojdyr/detail
+6c97156f6de7a40119a2f1a4913a457e69d34b12,2021-04-08,ok,price 187.25,0.0,0.0,0.0,0,0,28.8,Merge pull request #68 from fastfloat/dlemire/template_trick
+6c97156f6de7a40119a2f1a4913a457e69d34b12,2021-04-08,ok,integer 100,0.0,0.0,0.0,0,0,20.0,Merge pull request #68 from fastfloat/dlemire/template_trick
+6c97156f6de7a40119a2f1a4913a457e69d34b12,2021-04-08,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.1,Merge pull request #68 from fastfloat/dlemire/template_trick
+6c97156f6de7a40119a2f1a4913a457e69d34b12,2021-04-08,ok,4567.123456789012,0.0,0.0,0.0,0,0,41.3,Merge pull request #68 from fastfloat/dlemire/template_trick
+39911d979995bbc985ad17c152f2a7c3344e7d2f,2021-05-24,ok,price 187.25,0.0,0.0,0.0,0,0,29.4,Merge pull request #75 from Alexhuszagh/endian
+39911d979995bbc985ad17c152f2a7c3344e7d2f,2021-05-24,ok,integer 100,0.0,0.0,0.0,0,0,20.7,Merge pull request #75 from Alexhuszagh/endian
+39911d979995bbc985ad17c152f2a7c3344e7d2f,2021-05-24,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.5,Merge pull request #75 from Alexhuszagh/endian
+39911d979995bbc985ad17c152f2a7c3344e7d2f,2021-05-24,ok,4567.123456789012,0.0,0.0,0.0,0,0,41.9,Merge pull request #75 from Alexhuszagh/endian
+5be8002fc35fead0df0b816295526aa0324c156e,2021-05-24,ok,price 187.25,0.0,0.0,0.0,0,0,28.9,Merge pull request #77 from Alexhuszagh/arch
+5be8002fc35fead0df0b816295526aa0324c156e,2021-05-24,ok,integer 100,0.0,0.0,0.0,0,0,19.4,Merge pull request #77 from Alexhuszagh/arch
+5be8002fc35fead0df0b816295526aa0324c156e,2021-05-24,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,49.6,Merge pull request #77 from Alexhuszagh/arch
+5be8002fc35fead0df0b816295526aa0324c156e,2021-05-24,ok,4567.123456789012,0.0,0.0,0.0,0,0,41.0,Merge pull request #77 from Alexhuszagh/arch
+e3af106668b197a56ea8ec0f325fde07f6e3ec84,2021-06-01,ok,price 187.25,0.0,0.0,0.0,0,0,14.9,Merge pull request #79 from fastfloat/dlemire/vs_studio_persmissive_minus
+e3af106668b197a56ea8ec0f325fde07f6e3ec84,2021-06-01,ok,integer 100,0.0,0.0,0.0,0,0,10.6,Merge pull request #79 from fastfloat/dlemire/vs_studio_persmissive_minus
+e3af106668b197a56ea8ec0f325fde07f6e3ec84,2021-06-01,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,26.1,Merge pull request #79 from fastfloat/dlemire/vs_studio_persmissive_minus
+e3af106668b197a56ea8ec0f325fde07f6e3ec84,2021-06-01,ok,4567.123456789012,0.0,0.0,0.0,0,0,22.4,Merge pull request #79 from fastfloat/dlemire/vs_studio_persmissive_minus
+a7fbcb0a45dd7d145209f58f1744c0aed67742d1,2021-06-07,ok,price 187.25,0.0,0.0,0.0,0,0,29.2,Merge pull request #81 from fastfloat/dlemire/windows_arm
+a7fbcb0a45dd7d145209f58f1744c0aed67742d1,2021-06-07,ok,integer 100,0.0,0.0,0.0,0,0,19.4,Merge pull request #81 from fastfloat/dlemire/windows_arm
+a7fbcb0a45dd7d145209f58f1744c0aed67742d1,2021-06-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.4,Merge pull request #81 from fastfloat/dlemire/windows_arm
+a7fbcb0a45dd7d145209f58f1744c0aed67742d1,2021-06-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,Merge pull request #81 from fastfloat/dlemire/windows_arm
+bfda5881ab965c1dcf5ce568a08f5cf6d661c925,2021-06-07,ok,price 187.25,0.0,0.0,0.0,0,0,29.0,Merge pull request #82 from fastfloat/dlemire/adding_m_arm
+bfda5881ab965c1dcf5ce568a08f5cf6d661c925,2021-06-07,ok,integer 100,0.0,0.0,0.0,0,0,19.2,Merge pull request #82 from fastfloat/dlemire/adding_m_arm
+bfda5881ab965c1dcf5ce568a08f5cf6d661c925,2021-06-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.1,Merge pull request #82 from fastfloat/dlemire/adding_m_arm
+bfda5881ab965c1dcf5ce568a08f5cf6d661c925,2021-06-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,42.0,Merge pull request #82 from fastfloat/dlemire/adding_m_arm
+bb140f0a8752d4d6b647e97950c941dc38009c08,2021-08-03,ok,price 187.25,0.0,0.0,0.0,0,0,16.0,Merge pull request #91 from pitrou/issue90-decimal-point
+bb140f0a8752d4d6b647e97950c941dc38009c08,2021-08-03,ok,integer 100,0.0,0.0,0.0,0,0,11.1,Merge pull request #91 from pitrou/issue90-decimal-point
+bb140f0a8752d4d6b647e97950c941dc38009c08,2021-08-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,26.5,Merge pull request #91 from pitrou/issue90-decimal-point
+bb140f0a8752d4d6b647e97950c941dc38009c08,2021-08-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,22.4,Merge pull request #91 from pitrou/issue90-decimal-point
+898f54f30a7be1d1890cb6d2b7d53914369b1fd3,2021-08-21,ok,price 187.25,0.0,0.0,0.0,0,0,30.2,Merge pull request #95 from Alexhuszagh/ptr
+898f54f30a7be1d1890cb6d2b7d53914369b1fd3,2021-08-21,ok,integer 100,0.0,0.0,0.0,0,0,20.0,Merge pull request #95 from Alexhuszagh/ptr
+898f54f30a7be1d1890cb6d2b7d53914369b1fd3,2021-08-21,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,53.7,Merge pull request #95 from Alexhuszagh/ptr
+898f54f30a7be1d1890cb6d2b7d53914369b1fd3,2021-08-21,ok,4567.123456789012,0.0,0.0,0.0,0,0,42.3,Merge pull request #95 from Alexhuszagh/ptr
+8c4405e76e8bdac4246eb9973e75bdc7962c8dd5,2021-09-03,ok,price 187.25,0.0,0.0,0.0,0,0,30.2,Merge pull request #101 from fastfloat/dlemire/const
+8c4405e76e8bdac4246eb9973e75bdc7962c8dd5,2021-09-03,ok,integer 100,0.0,0.0,0.0,0,0,20.3,Merge pull request #101 from fastfloat/dlemire/const
+8c4405e76e8bdac4246eb9973e75bdc7962c8dd5,2021-09-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,54.3,Merge pull request #101 from fastfloat/dlemire/const
+8c4405e76e8bdac4246eb9973e75bdc7962c8dd5,2021-09-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,43.4,Merge pull request #101 from fastfloat/dlemire/const
+25b240a02d0b1572a8a1a65c793e8f36daafcf40,2021-09-05,ok,price 187.25,0.0,0.0,0.0,0,0,23.7,Merge pull request #102 from jrahlf/reduce_includes
+25b240a02d0b1572a8a1a65c793e8f36daafcf40,2021-09-05,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Merge pull request #102 from jrahlf/reduce_includes
+25b240a02d0b1572a8a1a65c793e8f36daafcf40,2021-09-05,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,38.2,Merge pull request #102 from jrahlf/reduce_includes
+25b240a02d0b1572a8a1a65c793e8f36daafcf40,2021-09-05,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.8,Merge pull request #102 from jrahlf/reduce_includes
+5c85d38eda4d4aab7c18616853a5cbeb859dc703,2021-09-13,ok,price 187.25,0.0,0.0,0.0,0,0,36.8,Merge pull request #104 from fastfloat/dlemire/bigint
+5c85d38eda4d4aab7c18616853a5cbeb859dc703,2021-09-13,ok,integer 100,0.0,0.0,0.0,0,0,26.4,Merge pull request #104 from fastfloat/dlemire/bigint
+5c85d38eda4d4aab7c18616853a5cbeb859dc703,2021-09-13,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.6,Merge pull request #104 from fastfloat/dlemire/bigint
+5c85d38eda4d4aab7c18616853a5cbeb859dc703,2021-09-13,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.8,Merge pull request #104 from fastfloat/dlemire/bigint
+b334317dd201d106d2f0a8b596b7759713b30793,2021-09-14,ok,price 187.25,0.0,0.0,0.0,0,0,36.9,Minor fixes
+b334317dd201d106d2f0a8b596b7759713b30793,2021-09-14,ok,integer 100,0.0,0.0,0.0,0,0,26.3,Minor fixes
+b334317dd201d106d2f0a8b596b7759713b30793,2021-09-14,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.5,Minor fixes
+b334317dd201d106d2f0a8b596b7759713b30793,2021-09-14,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.7,Minor fixes
+6d768256f13c927216f22995ab981c60f30c082a,2021-09-20,ok,price 187.25,0.0,0.0,0.0,0,0,36.8,Merge pull request #112 from fastfloat/dlemire/remove_cxx20
+6d768256f13c927216f22995ab981c60f30c082a,2021-09-20,ok,integer 100,0.0,0.0,0.0,0,0,26.4,Merge pull request #112 from fastfloat/dlemire/remove_cxx20
+6d768256f13c927216f22995ab981c60f30c082a,2021-09-20,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.8,Merge pull request #112 from fastfloat/dlemire/remove_cxx20
+6d768256f13c927216f22995ab981c60f30c082a,2021-09-20,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.9,Merge pull request #112 from fastfloat/dlemire/remove_cxx20
+62a8dba55add60cc85aa0bc14a35188f7f1214c2,2021-11-30,ok,price 187.25,0.0,0.0,0.0,0,0,36.8,Merge pull request #118 from pitrou/issue-117
+62a8dba55add60cc85aa0bc14a35188f7f1214c2,2021-11-30,ok,integer 100,0.0,0.0,0.0,0,0,26.3,Merge pull request #118 from pitrou/issue-117
+62a8dba55add60cc85aa0bc14a35188f7f1214c2,2021-11-30,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.7,Merge pull request #118 from pitrou/issue-117
+62a8dba55add60cc85aa0bc14a35188f7f1214c2,2021-11-30,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.9,Merge pull request #118 from pitrou/issue-117
+d3b164eb52f835f5a73ce562d8792c44c2efb9af,2022-01-18,ok,price 187.25,0.0,0.0,0.0,0,0,36.8,Merge pull request #123 from jwakely/endian
+d3b164eb52f835f5a73ce562d8792c44c2efb9af,2022-01-18,ok,integer 100,0.0,0.0,0.0,0,0,26.5,Merge pull request #123 from jwakely/endian
+d3b164eb52f835f5a73ce562d8792c44c2efb9af,2022-01-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.7,Merge pull request #123 from jwakely/endian
+d3b164eb52f835f5a73ce562d8792c44c2efb9af,2022-01-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.8,Merge pull request #123 from jwakely/endian
+32d21dcecb404514f94fb58660b8029a4673c2c1,2022-01-18,ok,price 187.25,0.0,0.0,0.0,0,0,36.8,Merge pull request #122 from jwakely/patch-1
+32d21dcecb404514f94fb58660b8029a4673c2c1,2022-01-18,ok,integer 100,0.0,0.0,0.0,0,0,26.4,Merge pull request #122 from jwakely/patch-1
+32d21dcecb404514f94fb58660b8029a4673c2c1,2022-01-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.5,Merge pull request #122 from jwakely/patch-1
+32d21dcecb404514f94fb58660b8029a4673c2c1,2022-01-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.7,Merge pull request #122 from jwakely/patch-1
+ac81b016967970dddf0419eb65f1ab50a5d6d79b,2022-08-04,ok,price 187.25,0.0,0.0,0.0,0,0,36.8,Added __EMSCRIPTEN__ patch
+ac81b016967970dddf0419eb65f1ab50a5d6d79b,2022-08-04,ok,integer 100,0.0,0.0,0.0,0,0,26.4,Added __EMSCRIPTEN__ patch
+ac81b016967970dddf0419eb65f1ab50a5d6d79b,2022-08-04,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.6,Added __EMSCRIPTEN__ patch
+ac81b016967970dddf0419eb65f1ab50a5d6d79b,2022-08-04,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.8,Added __EMSCRIPTEN__ patch
+6876616f0f6e69534b42ff0524fd616b56116736,2022-08-04,ok,price 187.25,0.0,0.0,0.0,0,0,36.8,Update float_common.h
+6876616f0f6e69534b42ff0524fd616b56116736,2022-08-04,ok,integer 100,0.0,0.0,0.0,0,0,26.4,Update float_common.h
+6876616f0f6e69534b42ff0524fd616b56116736,2022-08-04,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.5,Update float_common.h
+6876616f0f6e69534b42ff0524fd616b56116736,2022-08-04,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.8,Update float_common.h
+bc3be1253060e91cef1ad888d9d1592adf043c84,2022-08-31,ok,price 187.25,0.0,0.0,0.0,0,0,37.0,Merge pull request #140 from striezel-stash/fix-typos
+bc3be1253060e91cef1ad888d9d1592adf043c84,2022-08-31,ok,integer 100,0.0,0.0,0.0,0,0,26.5,Merge pull request #140 from striezel-stash/fix-typos
+bc3be1253060e91cef1ad888d9d1592adf043c84,2022-08-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.6,Merge pull request #140 from striezel-stash/fix-typos
+bc3be1253060e91cef1ad888d9d1592adf043c84,2022-08-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.8,Merge pull request #140 from striezel-stash/fix-typos
+32a659e03392294eeac1bb25964135225f26d7ab,2022-10-28,ok,price 187.25,0.0,0.0,0.0,0,0,36.9,Merge pull request #147 from kou/mingw
+32a659e03392294eeac1bb25964135225f26d7ab,2022-10-28,ok,integer 100,0.0,0.0,0.0,0,0,26.5,Merge pull request #147 from kou/mingw
+32a659e03392294eeac1bb25964135225f26d7ab,2022-10-28,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.7,Merge pull request #147 from kou/mingw
+32a659e03392294eeac1bb25964135225f26d7ab,2022-10-28,ok,4567.123456789012,0.0,0.0,0.0,0,0,46.8,Merge pull request #147 from kou/mingw
+662497742fea7055f0e0ee27e5a7ddc382c2c38e,2022-11-03,ok,price 187.25,0.0,0.0,0.0,0,0,40.0,Merge pull request #150 from fastfloat/dlemire/simplified_clinger
+662497742fea7055f0e0ee27e5a7ddc382c2c38e,2022-11-03,ok,integer 100,0.0,0.0,0.0,0,0,26.8,Merge pull request #150 from fastfloat/dlemire/simplified_clinger
+662497742fea7055f0e0ee27e5a7ddc382c2c38e,2022-11-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.0,Merge pull request #150 from fastfloat/dlemire/simplified_clinger
+662497742fea7055f0e0ee27e5a7ddc382c2c38e,2022-11-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,49.1,Merge pull request #150 from fastfloat/dlemire/simplified_clinger
+eddf6dff43ec749d09a1fe6273fb5c68a58239ac,2022-11-15,ok,price 187.25,0.0,0.0,0.0,0,0,36.4,Merge pull request #152 from fastfloat/dlemire/reducing_eight_digit_optimization
+eddf6dff43ec749d09a1fe6273fb5c68a58239ac,2022-11-15,ok,integer 100,0.0,0.0,0.0,0,0,24.1,Merge pull request #152 from fastfloat/dlemire/reducing_eight_digit_optimization
+eddf6dff43ec749d09a1fe6273fb5c68a58239ac,2022-11-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.4,Merge pull request #152 from fastfloat/dlemire/reducing_eight_digit_optimization
+eddf6dff43ec749d09a1fe6273fb5c68a58239ac,2022-11-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.8,Merge pull request #152 from fastfloat/dlemire/reducing_eight_digit_optimization
+2ef9abbcf6a11958b6fa685a89d0150022e82e78,2022-11-23,ok,price 187.25,0.0,0.0,0.0,0,0,36.1,Merge branch 'main' of github.com:fastfloat/fast_float
+2ef9abbcf6a11958b6fa685a89d0150022e82e78,2022-11-23,ok,integer 100,0.0,0.0,0.0,0,0,25.7,Merge branch 'main' of github.com:fastfloat/fast_float
+2ef9abbcf6a11958b6fa685a89d0150022e82e78,2022-11-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.9,Merge branch 'main' of github.com:fastfloat/fast_float
+2ef9abbcf6a11958b6fa685a89d0150022e82e78,2022-11-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.2,Merge branch 'main' of github.com:fastfloat/fast_float
+be962361c6f0fd2ab4612eb26096aed7bba0b45f,2022-11-25,ok,price 187.25,0.0,0.0,0.0,0,0,36.3,Merge pull request #156 from fastfloat/dlemire/fix_issue_154
+be962361c6f0fd2ab4612eb26096aed7bba0b45f,2022-11-25,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #156 from fastfloat/dlemire/fix_issue_154
+be962361c6f0fd2ab4612eb26096aed7bba0b45f,2022-11-25,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.0,Merge pull request #156 from fastfloat/dlemire/fix_issue_154
+be962361c6f0fd2ab4612eb26096aed7bba0b45f,2022-11-25,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.5,Merge pull request #156 from fastfloat/dlemire/fix_issue_154
+11223155ce5fc620e78cfe3aa8ccc8a6fab23a47,2022-12-02,ok,price 187.25,0.0,0.0,0.0,0,0,36.3,Merge pull request #157 from kou/add-missing-end-namespace-comment
+11223155ce5fc620e78cfe3aa8ccc8a6fab23a47,2022-12-02,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #157 from kou/add-missing-end-namespace-comment
+11223155ce5fc620e78cfe3aa8ccc8a6fab23a47,2022-12-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.9,Merge pull request #157 from kou/add-missing-end-namespace-comment
+11223155ce5fc620e78cfe3aa8ccc8a6fab23a47,2022-12-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.3,Merge pull request #157 from kou/add-missing-end-namespace-comment
+6d0423720f0a39d5837a06b0304b5fec7f5b449f,2022-12-23,ok,price 187.25,0.0,0.0,0.0,0,0,38.1,Merge pull request #159 from huangqinjin/replace-utf8-chars
+6d0423720f0a39d5837a06b0304b5fec7f5b449f,2022-12-23,ok,integer 100,0.0,0.0,0.0,0,0,25.9,Merge pull request #159 from huangqinjin/replace-utf8-chars
+6d0423720f0a39d5837a06b0304b5fec7f5b449f,2022-12-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,48.3,Merge pull request #159 from huangqinjin/replace-utf8-chars
+6d0423720f0a39d5837a06b0304b5fec7f5b449f,2022-12-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.5,Merge pull request #159 from huangqinjin/replace-utf8-chars
+102e74891f528cc9896bec888fdce8b8828682b8,2022-12-23,ok,price 187.25,0.0,0.0,0.0,0,0,36.3,Merge pull request #160 from huangqinjin/uint64-to-bool
+102e74891f528cc9896bec888fdce8b8828682b8,2022-12-23,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #160 from huangqinjin/uint64-to-bool
+102e74891f528cc9896bec888fdce8b8828682b8,2022-12-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.0,Merge pull request #160 from huangqinjin/uint64-to-bool
+102e74891f528cc9896bec888fdce8b8828682b8,2022-12-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.3,Merge pull request #160 from huangqinjin/uint64-to-bool
+98d46aee9c727ff34563ec1d781b753fdce690c0,2022-12-27,ok,price 187.25,0.0,0.0,0.0,0,0,36.4,Merge pull request #163 from biojppm/suppress_float_equal_warning
+98d46aee9c727ff34563ec1d781b753fdce690c0,2022-12-27,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #163 from biojppm/suppress_float_equal_warning
+98d46aee9c727ff34563ec1d781b753fdce690c0,2022-12-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.1,Merge pull request #163 from biojppm/suppress_float_equal_warning
+98d46aee9c727ff34563ec1d781b753fdce690c0,2022-12-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.5,Merge pull request #163 from biojppm/suppress_float_equal_warning
+02a61971f876c0c43e4c9ac9a07279d4e1b42fd6,2022-12-27,ok,price 187.25,0.0,0.0,0.0,0,0,36.3,Merge pull request #162 from biojppm/fix/testexes
+02a61971f876c0c43e4c9ac9a07279d4e1b42fd6,2022-12-27,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #162 from biojppm/fix/testexes
+02a61971f876c0c43e4c9ac9a07279d4e1b42fd6,2022-12-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.9,Merge pull request #162 from biojppm/fix/testexes
+02a61971f876c0c43e4c9ac9a07279d4e1b42fd6,2022-12-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.2,Merge pull request #162 from biojppm/fix/testexes
+177ef91fc97e4bcb3d4bbb1a0e7bcd9982fdb272,2023-01-09,ok,price 187.25,0.0,0.0,0.0,0,0,36.3,Merge pull request #165 from fastfloat/dlemire/guard_endian
+177ef91fc97e4bcb3d4bbb1a0e7bcd9982fdb272,2023-01-09,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #165 from fastfloat/dlemire/guard_endian
+177ef91fc97e4bcb3d4bbb1a0e7bcd9982fdb272,2023-01-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.9,Merge pull request #165 from fastfloat/dlemire/guard_endian
+177ef91fc97e4bcb3d4bbb1a0e7bcd9982fdb272,2023-01-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.3,Merge pull request #165 from fastfloat/dlemire/guard_endian
+e7d25fb058f0971ded27f827e514a37e439e87a0,2023-01-18,ok,price 187.25,0.0,0.0,0.0,0,0,20.3,Merge pull request #169 from barracuda156/main
+e7d25fb058f0971ded27f827e514a37e439e87a0,2023-01-18,ok,integer 100,0.0,0.0,0.0,0,0,16.4,Merge pull request #169 from barracuda156/main
+e7d25fb058f0971ded27f827e514a37e439e87a0,2023-01-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,32.4,Merge pull request #169 from barracuda156/main
+e7d25fb058f0971ded27f827e514a37e439e87a0,2023-01-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,27.3,Merge pull request #169 from barracuda156/main
+e84f7e7850429a5d83fa7eaa54fba4ca707736e8,2023-01-19,ok,price 187.25,0.0,0.0,0.0,0,0,36.3,Merge pull request #170 from fastfloat/dlemire/rcpp
+e84f7e7850429a5d83fa7eaa54fba4ca707736e8,2023-01-19,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #170 from fastfloat/dlemire/rcpp
+e84f7e7850429a5d83fa7eaa54fba4ca707736e8,2023-01-19,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.9,Merge pull request #170 from fastfloat/dlemire/rcpp
+e84f7e7850429a5d83fa7eaa54fba4ca707736e8,2023-01-19,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.3,Merge pull request #170 from fastfloat/dlemire/rcpp
+f4efe3ccb07b02ee8481d18698c65a5537556e32,2023-02-06,ok,price 187.25,0.0,0.0,0.0,0,0,36.3,Merge pull request #175 from fastfloat/dlemire/broader_alpine
+f4efe3ccb07b02ee8481d18698c65a5537556e32,2023-02-06,ok,integer 100,0.0,0.0,0.0,0,0,25.8,Merge pull request #175 from fastfloat/dlemire/broader_alpine
+f4efe3ccb07b02ee8481d18698c65a5537556e32,2023-02-06,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.9,Merge pull request #175 from fastfloat/dlemire/broader_alpine
+f4efe3ccb07b02ee8481d18698c65a5537556e32,2023-02-06,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.3,Merge pull request #175 from fastfloat/dlemire/broader_alpine
+52fed52d946d70faa6b3ca793e7e08a95bef3ef1,2023-02-28,ok,price 187.25,0.0,0.0,0.0,0,0,38.4,Merge pull request #177 from leni536/easy-constexpr
+52fed52d946d70faa6b3ca793e7e08a95bef3ef1,2023-02-28,ok,integer 100,0.0,0.0,0.0,0,0,31.3,Merge pull request #177 from leni536/easy-constexpr
+52fed52d946d70faa6b3ca793e7e08a95bef3ef1,2023-02-28,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,65.2,Merge pull request #177 from leni536/easy-constexpr
+52fed52d946d70faa6b3ca793e7e08a95bef3ef1,2023-02-28,ok,4567.123456789012,0.0,0.0,0.0,0,0,52.9,Merge pull request #177 from leni536/easy-constexpr
+b1d27734c5443c91847a8fc36e0e32ef23fc9f38,2023-02-28,ok,price 187.25,0.0,0.0,0.0,0,0,39.1,Merge pull request #173 from fastfloat/nofallbacknecessary
+b1d27734c5443c91847a8fc36e0e32ef23fc9f38,2023-02-28,ok,integer 100,0.0,0.0,0.0,0,0,31.4,Merge pull request #173 from fastfloat/nofallbacknecessary
+b1d27734c5443c91847a8fc36e0e32ef23fc9f38,2023-02-28,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,63.7,Merge pull request #173 from fastfloat/nofallbacknecessary
+b1d27734c5443c91847a8fc36e0e32ef23fc9f38,2023-02-28,ok,4567.123456789012,0.0,0.0,0.0,0,0,53.9,Merge pull request #173 from fastfloat/nofallbacknecessary
+a3e00eed59a2331ac87b334b13a5f7efd1d266df,2023-03-02,ok,price 187.25,0.0,0.0,0.0,0,0,39.9,Merge pull request #179 from leni536/simplify-to_float
+a3e00eed59a2331ac87b334b13a5f7efd1d266df,2023-03-02,ok,integer 100,0.0,0.0,0.0,0,0,29.8,Merge pull request #179 from leni536/simplify-to_float
+a3e00eed59a2331ac87b334b13a5f7efd1d266df,2023-03-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,58.9,Merge pull request #179 from leni536/simplify-to_float
+a3e00eed59a2331ac87b334b13a5f7efd1d266df,2023-03-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,52.4,Merge pull request #179 from leni536/simplify-to_float
+c487a69c1bc866eb7370b32b753a70df5d7c1882,2023-03-03,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #180 from leni536/constexpr-big_int
+c487a69c1bc866eb7370b32b753a70df5d7c1882,2023-03-03,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #180 from leni536/constexpr-big_int
+c487a69c1bc866eb7370b32b753a70df5d7c1882,2023-03-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.1,Merge pull request #180 from leni536/constexpr-big_int
+c487a69c1bc866eb7370b32b753a70df5d7c1882,2023-03-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.9,Merge pull request #180 from leni536/constexpr-big_int
+eb8c0012015f9404ecb8b767a57d2669032a890f,2023-03-06,ok,price 187.25,0.0,0.0,0.0,0,0,42.2,Merge pull request #183 from redis-performance/fix.parse_infnan.plus.inf
+eb8c0012015f9404ecb8b767a57d2669032a890f,2023-03-06,ok,integer 100,0.0,0.0,0.0,0,0,31.8,Merge pull request #183 from redis-performance/fix.parse_infnan.plus.inf
+eb8c0012015f9404ecb8b767a57d2669032a890f,2023-03-06,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,61.6,Merge pull request #183 from redis-performance/fix.parse_infnan.plus.inf
+eb8c0012015f9404ecb8b767a57d2669032a890f,2023-03-06,ok,4567.123456789012,0.0,0.0,0.0,0,0,54.0,Merge pull request #183 from redis-performance/fix.parse_infnan.plus.inf
+c09c855ea656648b1e8c523eec392bf7c94b82cd,2023-03-25,ok,price 187.25,0.0,0.0,0.0,0,0,41.8,Merge pull request #186 from leni536/negative_zero_clang
+c09c855ea656648b1e8c523eec392bf7c94b82cd,2023-03-25,ok,integer 100,0.0,0.0,0.0,0,0,16.4,Merge pull request #186 from leni536/negative_zero_clang
+c09c855ea656648b1e8c523eec392bf7c94b82cd,2023-03-25,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,32.4,Merge pull request #186 from leni536/negative_zero_clang
+c09c855ea656648b1e8c523eec392bf7c94b82cd,2023-03-25,ok,4567.123456789012,0.0,0.0,0.0,0,0,27.8,Merge pull request #186 from leni536/negative_zero_clang
+b50a729d93ffc4acb7e6c6932e35f0a121fb3f21,2023-03-25,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #182 from leni536/constexpr-from_chars
+b50a729d93ffc4acb7e6c6932e35f0a121fb3f21,2023-03-25,ok,integer 100,0.0,0.0,0.0,0,0,22.1,Merge pull request #182 from leni536/constexpr-from_chars
+b50a729d93ffc4acb7e6c6932e35f0a121fb3f21,2023-03-25,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.2,Merge pull request #182 from leni536/constexpr-from_chars
+b50a729d93ffc4acb7e6c6932e35f0a121fb3f21,2023-03-25,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.0,Merge pull request #182 from leni536/constexpr-from_chars
+c6303d35939aea1eb531d561e561e8b631ef6a59,2023-03-30,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge branch 'main' of github.com:fastfloat/fast_float
+c6303d35939aea1eb531d561e561e8b631ef6a59,2023-03-30,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge branch 'main' of github.com:fastfloat/fast_float
+c6303d35939aea1eb531d561e561e8b631ef6a59,2023-03-30,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.5,Merge branch 'main' of github.com:fastfloat/fast_float
+c6303d35939aea1eb531d561e561e8b631ef6a59,2023-03-30,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.9,Merge branch 'main' of github.com:fastfloat/fast_float
+f34e880ece3a1410de872c36216ceb5dc0bcff14,2023-04-02,ok,price 187.25,0.0,0.0,0.0,0,0,36.6,Merge pull request #193 from fastfloat/issue_191
+f34e880ece3a1410de872c36216ceb5dc0bcff14,2023-04-02,ok,integer 100,0.0,0.0,0.0,0,0,27.3,Merge pull request #193 from fastfloat/issue_191
+f34e880ece3a1410de872c36216ceb5dc0bcff14,2023-04-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.5,Merge pull request #193 from fastfloat/issue_191
+f34e880ece3a1410de872c36216ceb5dc0bcff14,2023-04-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.9,Merge pull request #193 from fastfloat/issue_191
+ad3ff0575107952908b68503d8d325f0ff5a0f85,2023-04-04,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #194 from aras-p/main
+ad3ff0575107952908b68503d8d325f0ff5a0f85,2023-04-04,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #194 from aras-p/main
+ad3ff0575107952908b68503d8d325f0ff5a0f85,2023-04-04,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.3,Merge pull request #194 from aras-p/main
+ad3ff0575107952908b68503d8d325f0ff5a0f85,2023-04-04,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.9,Merge pull request #194 from aras-p/main
+dc88f6f882ac7eb8ec3765f633835cb76afa0ac2,2023-04-26,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #196 from fastfloat/dlemire/issue195
+dc88f6f882ac7eb8ec3765f633835cb76afa0ac2,2023-04-26,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #196 from fastfloat/dlemire/issue195
+dc88f6f882ac7eb8ec3765f633835cb76afa0ac2,2023-04-26,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.4,Merge pull request #196 from fastfloat/dlemire/issue195
+dc88f6f882ac7eb8ec3765f633835cb76afa0ac2,2023-04-26,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.9,Merge pull request #196 from fastfloat/dlemire/issue195
+fe571b1da7f9a61bf644d6e5ff3044f7ad2e27d8,2023-05-01,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #197 from lemire/other_chars
+fe571b1da7f9a61bf644d6e5ff3044f7ad2e27d8,2023-05-01,ok,integer 100,0.0,0.0,0.0,0,0,22.3,Merge pull request #197 from lemire/other_chars
+fe571b1da7f9a61bf644d6e5ff3044f7ad2e27d8,2023-05-01,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,43.1,Merge pull request #197 from lemire/other_chars
+fe571b1da7f9a61bf644d6e5ff3044f7ad2e27d8,2023-05-01,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.1,Merge pull request #197 from lemire/other_chars
+ff77380a76dd5ab2f5d2fa82aed7120fe96f4bb7,2023-05-08,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #200 from leni536/fix_static_tables
+ff77380a76dd5ab2f5d2fa82aed7120fe96f4bb7,2023-05-08,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #200 from leni536/fix_static_tables
+ff77380a76dd5ab2f5d2fa82aed7120fe96f4bb7,2023-05-08,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.7,Merge pull request #200 from leni536/fix_static_tables
+ff77380a76dd5ab2f5d2fa82aed7120fe96f4bb7,2023-05-08,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.0,Merge pull request #200 from leni536/fix_static_tables
+cc1e01e9eee74128e48d51488a6b1df4a767a810,2023-05-08,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #199 from mayawarrier/cmake_intellisense_fix
+cc1e01e9eee74128e48d51488a6b1df4a767a810,2023-05-08,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #199 from mayawarrier/cmake_intellisense_fix
+cc1e01e9eee74128e48d51488a6b1df4a767a810,2023-05-08,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.8,Merge pull request #199 from mayawarrier/cmake_intellisense_fix
+cc1e01e9eee74128e48d51488a6b1df4a767a810,2023-05-08,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.0,Merge pull request #199 from mayawarrier/cmake_intellisense_fix
+3a63b00d53549dc5a91aa1960ed81dd5f9dd8161,2023-05-30,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #206 from zangruochen/main
+3a63b00d53549dc5a91aa1960ed81dd5f9dd8161,2023-05-30,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #206 from zangruochen/main
+3a63b00d53549dc5a91aa1960ed81dd5f9dd8161,2023-05-30,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.6,Merge pull request #206 from zangruochen/main
+3a63b00d53549dc5a91aa1960ed81dd5f9dd8161,2023-05-30,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.9,Merge pull request #206 from zangruochen/main
+127a6c7cbc879d74ceff418c0547c93967d6d225,2023-06-09,ok,price 187.25,0.0,0.0,0.0,0,0,31.6,Merge pull request #207 from v1gnesh/main
+127a6c7cbc879d74ceff418c0547c93967d6d225,2023-06-09,ok,integer 100,0.0,0.0,0.0,0,0,23.8,Merge pull request #207 from v1gnesh/main
+127a6c7cbc879d74ceff418c0547c93967d6d225,2023-06-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,44.5,Merge pull request #207 from v1gnesh/main
+127a6c7cbc879d74ceff418c0547c93967d6d225,2023-06-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.0,Merge pull request #207 from v1gnesh/main
+8139e164b88e2ef38fa269099092b88b23842bd3,2023-06-09,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #198 from mayawarrier/main
+8139e164b88e2ef38fa269099092b88b23842bd3,2023-06-09,ok,integer 100,0.0,0.0,0.0,0,0,22.3,Merge pull request #198 from mayawarrier/main
+8139e164b88e2ef38fa269099092b88b23842bd3,2023-06-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.7,Merge pull request #198 from mayawarrier/main
+8139e164b88e2ef38fa269099092b88b23842bd3,2023-06-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.0,Merge pull request #198 from mayawarrier/main
+91edc90464ee3339e962b8e10b0a1a24a477c743,2023-06-09,ok,price 187.25,0.0,0.0,0.0,0,0,34.4,Merge pull request #209 from fastfloat/arm_neon_opti
+91edc90464ee3339e962b8e10b0a1a24a477c743,2023-06-09,ok,integer 100,0.0,0.0,0.0,0,0,26.4,Merge pull request #209 from fastfloat/arm_neon_opti
+91edc90464ee3339e962b8e10b0a1a24a477c743,2023-06-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.9,Merge pull request #209 from fastfloat/arm_neon_opti
+91edc90464ee3339e962b8e10b0a1a24a477c743,2023-06-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.1,Merge pull request #209 from fastfloat/arm_neon_opti
+71c2ad1863b6f56edf257689fd32f80bf5a73024,2023-06-10,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #210 from Pharago/main
+71c2ad1863b6f56edf257689fd32f80bf5a73024,2023-06-10,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #210 from Pharago/main
+71c2ad1863b6f56edf257689fd32f80bf5a73024,2023-06-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.7,Merge pull request #210 from Pharago/main
+71c2ad1863b6f56edf257689fd32f80bf5a73024,2023-06-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.0,Merge pull request #210 from Pharago/main
+c80ff7c18a928a15c99b42157bbbed897c458d42,2023-06-10,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #212 from fastfloat/issue211
+c80ff7c18a928a15c99b42157bbbed897c458d42,2023-06-10,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #212 from fastfloat/issue211
+c80ff7c18a928a15c99b42157bbbed897c458d42,2023-06-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.5,Merge pull request #212 from fastfloat/issue211
+c80ff7c18a928a15c99b42157bbbed897c458d42,2023-06-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.9,Merge pull request #212 from fastfloat/issue211
+84e2cb27e0164bfb5a72121772fecb2e655a8e98,2023-06-12,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #213 from mayawarrier/msvc-v140-fix
+84e2cb27e0164bfb5a72121772fecb2e655a8e98,2023-06-12,ok,integer 100,0.0,0.0,0.0,0,0,24.6,Merge pull request #213 from mayawarrier/msvc-v140-fix
+84e2cb27e0164bfb5a72121772fecb2e655a8e98,2023-06-12,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.7,Merge pull request #213 from mayawarrier/msvc-v140-fix
+84e2cb27e0164bfb5a72121772fecb2e655a8e98,2023-06-12,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.8,Merge pull request #213 from mayawarrier/msvc-v140-fix
+33a2f8f203f5de58e7c19821da3dfd5535aed5a9,2023-07-10,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #214 from Coeur/coeur/leading_zeroes_generic
+33a2f8f203f5de58e7c19821da3dfd5535aed5a9,2023-07-10,ok,integer 100,0.0,0.0,0.0,0,0,22.2,Merge pull request #214 from Coeur/coeur/leading_zeroes_generic
+33a2f8f203f5de58e7c19821da3dfd5535aed5a9,2023-07-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,42.6,Merge pull request #214 from Coeur/coeur/leading_zeroes_generic
+33a2f8f203f5de58e7c19821da3dfd5535aed5a9,2023-07-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,38.9,Merge pull request #214 from Coeur/coeur/leading_zeroes_generic
+e6b370dc2cb7bf7a6698eceabc355f6c46c4a059,2023-09-15,ok,price 187.25,0.0,0.0,0.0,0,0,33.4,Merge pull request #220 from mayawarrier/main
+e6b370dc2cb7bf7a6698eceabc355f6c46c4a059,2023-09-15,ok,integer 100,0.0,0.0,0.0,0,0,24.8,Merge pull request #220 from mayawarrier/main
+e6b370dc2cb7bf7a6698eceabc355f6c46c4a059,2023-09-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,44.5,Merge pull request #220 from mayawarrier/main
+e6b370dc2cb7bf7a6698eceabc355f6c46c4a059,2023-09-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,41.1,Merge pull request #220 from mayawarrier/main
+1dfad243ec42a0459a786a621be0b1f8c8a8287e,2023-09-15,ok,price 187.25,0.0,0.0,0.0,0,0,32.4,Merge pull request #221 from fastfloat/fortran
+1dfad243ec42a0459a786a621be0b1f8c8a8287e,2023-09-15,ok,integer 100,0.0,0.0,0.0,0,0,23.5,Merge pull request #221 from fastfloat/fortran
+1dfad243ec42a0459a786a621be0b1f8c8a8287e,2023-09-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.5,Merge pull request #221 from fastfloat/fortran
+1dfad243ec42a0459a786a621be0b1f8c8a8287e,2023-09-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #221 from fastfloat/fortran
+736561cd99e0cb7b84da91949b9690b351610a82,2023-11-27,ok,price 187.25,0.0,0.0,0.0,0,0,32.4,Merge pull request #224 from Coeur/coeur/input_num
+736561cd99e0cb7b84da91949b9690b351610a82,2023-11-27,ok,integer 100,0.0,0.0,0.0,0,0,23.8,Merge pull request #224 from Coeur/coeur/input_num
+736561cd99e0cb7b84da91949b9690b351610a82,2023-11-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.5,Merge pull request #224 from Coeur/coeur/input_num
+736561cd99e0cb7b84da91949b9690b351610a82,2023-11-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #224 from Coeur/coeur/input_num
+35d523195bf7d57aba0e735ad6eba1e6f71ba8d6,2023-11-27,ok,price 187.25,0.0,0.0,0.0,0,0,32.3,Merge pull request #225 from fastfloat/fix_win32_ci
+35d523195bf7d57aba0e735ad6eba1e6f71ba8d6,2023-11-27,ok,integer 100,0.0,0.0,0.0,0,0,23.5,Merge pull request #225 from fastfloat/fix_win32_ci
+35d523195bf7d57aba0e735ad6eba1e6f71ba8d6,2023-11-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.5,Merge pull request #225 from fastfloat/fix_win32_ci
+35d523195bf7d57aba0e735ad6eba1e6f71ba8d6,2023-11-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.6,Merge pull request #225 from fastfloat/fix_win32_ci
+506b01a236f221f7114454021cfbc074c7f95e77,2023-12-13,ok,price 187.25,0.0,0.0,0.0,0,0,32.4,Merge pull request #230 from mayawarrier/fix-arm-neon-macro
+506b01a236f221f7114454021cfbc074c7f95e77,2023-12-13,ok,integer 100,0.0,0.0,0.0,0,0,25.4,Merge pull request #230 from mayawarrier/fix-arm-neon-macro
+506b01a236f221f7114454021cfbc074c7f95e77,2023-12-13,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.5,Merge pull request #230 from mayawarrier/fix-arm-neon-macro
+506b01a236f221f7114454021cfbc074c7f95e77,2023-12-13,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #230 from mayawarrier/fix-arm-neon-macro
+ede1d6b69e7c78073a1d7c7e8018815a1e7bb0e2,2023-12-14,ok,price 187.25,0.0,0.0,0.0,0,0,32.3,Merge pull request #231 from mayawarrier/main
+ede1d6b69e7c78073a1d7c7e8018815a1e7bb0e2,2023-12-14,ok,integer 100,0.0,0.0,0.0,0,0,23.6,Merge pull request #231 from mayawarrier/main
+ede1d6b69e7c78073a1d7c7e8018815a1e7bb0e2,2023-12-14,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.6,Merge pull request #231 from mayawarrier/main
+ede1d6b69e7c78073a1d7c7e8018815a1e7bb0e2,2023-12-14,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #231 from mayawarrier/main
+68b9475585be0839fa0bf3d6bfad3e4a6357d90a,2023-12-28,ok,price 187.25,0.0,0.0,0.0,0,0,32.4,Merge pull request #234 from beached/patch-1
+68b9475585be0839fa0bf3d6bfad3e4a6357d90a,2023-12-28,ok,integer 100,0.0,0.0,0.0,0,0,23.6,Merge pull request #234 from beached/patch-1
+68b9475585be0839fa0bf3d6bfad3e4a6357d90a,2023-12-28,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.3,Merge pull request #234 from beached/patch-1
+68b9475585be0839fa0bf3d6bfad3e4a6357d90a,2023-12-28,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #234 from beached/patch-1
+a642af52353fc4f6c8f4d05dd5d2dfcfea4ed7c1,2024-01-28,ok,price 187.25,0.0,0.0,0.0,0,0,32.3,Merge pull request #236 from fastfloat/issue235
+a642af52353fc4f6c8f4d05dd5d2dfcfea4ed7c1,2024-01-28,ok,integer 100,0.0,0.0,0.0,0,0,23.6,Merge pull request #236 from fastfloat/issue235
+a642af52353fc4f6c8f4d05dd5d2dfcfea4ed7c1,2024-01-28,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.6,Merge pull request #236 from fastfloat/issue235
+a642af52353fc4f6c8f4d05dd5d2dfcfea4ed7c1,2024-01-28,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.6,Merge pull request #236 from fastfloat/issue235
+c7e45fea9fba7ef481d6c6fa446cab8b511fb783,2024-01-28,build failed,,,,,,,,Merge pull request #229 from MTahaK/main
+fade2357ba556a0d65821f7d2f8cda5cb8d54421,2024-01-28,ok,price 187.25,0.0,0.0,0.0,0,0,32.6,fix missing typename
+fade2357ba556a0d65821f7d2f8cda5cb8d54421,2024-01-28,ok,integer 100,0.0,0.0,0.0,0,0,23.9,fix missing typename
+fade2357ba556a0d65821f7d2f8cda5cb8d54421,2024-01-28,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.4,fix missing typename
+fade2357ba556a0d65821f7d2f8cda5cb8d54421,2024-01-28,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,fix missing typename
+8378916ed814bebc4bcbf519c66f7c38c8374594,2024-01-28,ok,price 187.25,0.0,0.0,0.0,0,0,32.5,Merge pull request #237 from fastfloat/release610_candidate
+8378916ed814bebc4bcbf519c66f7c38c8374594,2024-01-28,ok,integer 100,0.0,0.0,0.0,0,0,24.1,Merge pull request #237 from fastfloat/release610_candidate
+8378916ed814bebc4bcbf519c66f7c38c8374594,2024-01-28,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.5,Merge pull request #237 from fastfloat/release610_candidate
+8378916ed814bebc4bcbf519c66f7c38c8374594,2024-01-28,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.5,Merge pull request #237 from fastfloat/release610_candidate
+4b035185e7df115e37a634bfde1977e9fc2cf041,2024-02-03,ok,price 187.25,0.0,0.0,0.0,0,0,32.6,Merge pull request #239 from wojdyr/main
+4b035185e7df115e37a634bfde1977e9fc2cf041,2024-02-03,ok,integer 100,0.0,0.0,0.0,0,0,24.0,Merge pull request #239 from wojdyr/main
+4b035185e7df115e37a634bfde1977e9fc2cf041,2024-02-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.2,Merge pull request #239 from wojdyr/main
+4b035185e7df115e37a634bfde1977e9fc2cf041,2024-02-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.5,Merge pull request #239 from wojdyr/main
+3b54a78805e638d47f43c20342f6f00b9aa3beec,2024-03-17,ok,price 187.25,0.0,0.0,0.0,0,0,32.4,Merge pull request #243 from matthew-wozniczka/patch-1
+3b54a78805e638d47f43c20342f6f00b9aa3beec,2024-03-17,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #243 from matthew-wozniczka/patch-1
+3b54a78805e638d47f43c20342f6f00b9aa3beec,2024-03-17,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.3,Merge pull request #243 from matthew-wozniczka/patch-1
+3b54a78805e638d47f43c20342f6f00b9aa3beec,2024-03-17,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.4,Merge pull request #243 from matthew-wozniczka/patch-1
+1fc3ac3932220b5effaca7203bb1bb771528d256,2024-03-20,ok,price 187.25,0.0,0.0,0.0,0,0,32.6,Merge pull request #245 from fastfloat/removing_dead_function
+1fc3ac3932220b5effaca7203bb1bb771528d256,2024-03-20,ok,integer 100,0.0,0.0,0.0,0,0,24.0,Merge pull request #245 from fastfloat/removing_dead_function
+1fc3ac3932220b5effaca7203bb1bb771528d256,2024-03-20,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.2,Merge pull request #245 from fastfloat/removing_dead_function
+1fc3ac3932220b5effaca7203bb1bb771528d256,2024-03-20,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.5,Merge pull request #245 from fastfloat/removing_dead_function
+c8b3ca0d12edc2007bc9023e07674d9b58b4a07c,2024-06-27,ok,price 187.25,0.0,0.0,0.0,0,0,32.6,Merge pull request #167 from deadalnix/smallest_power_of_ten
+c8b3ca0d12edc2007bc9023e07674d9b58b4a07c,2024-06-27,ok,integer 100,0.0,0.0,0.0,0,0,24.1,Merge pull request #167 from deadalnix/smallest_power_of_ten
+c8b3ca0d12edc2007bc9023e07674d9b58b4a07c,2024-06-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.3,Merge pull request #167 from deadalnix/smallest_power_of_ten
+c8b3ca0d12edc2007bc9023e07674d9b58b4a07c,2024-06-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,Merge pull request #167 from deadalnix/smallest_power_of_ten
+92c79d078b8efd554dd5e127184d831856b8306e,2024-07-16,ok,price 187.25,0.0,0.0,0.0,0,0,30.1,Merge pull request #249 from zejal/main
+92c79d078b8efd554dd5e127184d831856b8306e,2024-07-16,ok,integer 100,0.0,0.0,0.0,0,0,23.4,Merge pull request #249 from zejal/main
+92c79d078b8efd554dd5e127184d831856b8306e,2024-07-16,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.4,Merge pull request #249 from zejal/main
+92c79d078b8efd554dd5e127184d831856b8306e,2024-07-16,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.2,Merge pull request #249 from zejal/main
+9468d50c899dad9332c57a7cf19e2be0f91791a4,2024-07-22,ok,price 187.25,0.0,0.0,0.0,0,0,30.1,Merge pull request #251 from LeszekSwirski/json-empty-exponent
+9468d50c899dad9332c57a7cf19e2be0f91791a4,2024-07-22,ok,integer 100,0.0,0.0,0.0,0,0,23.3,Merge pull request #251 from LeszekSwirski/json-empty-exponent
+9468d50c899dad9332c57a7cf19e2be0f91791a4,2024-07-22,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.5,Merge pull request #251 from LeszekSwirski/json-empty-exponent
+9468d50c899dad9332c57a7cf19e2be0f91791a4,2024-07-22,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.1,Merge pull request #251 from LeszekSwirski/json-empty-exponent
+28e7560c23c2d13f226f60ac859e5e44325feea2,2024-07-22,ok,price 187.25,0.0,0.0,0.0,0,0,30.1,Merge pull request #253 from fastfloat/update_ci_to_ubuntu24
+28e7560c23c2d13f226f60ac859e5e44325feea2,2024-07-22,ok,integer 100,0.0,0.0,0.0,0,0,23.6,Merge pull request #253 from fastfloat/update_ci_to_ubuntu24
+28e7560c23c2d13f226f60ac859e5e44325feea2,2024-07-22,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.8,Merge pull request #253 from fastfloat/update_ci_to_ubuntu24
+28e7560c23c2d13f226f60ac859e5e44325feea2,2024-07-22,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.3,Merge pull request #253 from fastfloat/update_ci_to_ubuntu24
+97036e362cea484279fc22f548f5e7deb5209dc6,2024-07-23,ok,price 187.25,0.0,0.0,0.0,0,0,30.1,Merge pull request #256 from fastfloat/json-accept-empty-exponent
+97036e362cea484279fc22f548f5e7deb5209dc6,2024-07-23,ok,integer 100,0.0,0.0,0.0,0,0,23.5,Merge pull request #256 from fastfloat/json-accept-empty-exponent
+97036e362cea484279fc22f548f5e7deb5209dc6,2024-07-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.3,Merge pull request #256 from fastfloat/json-accept-empty-exponent
+97036e362cea484279fc22f548f5e7deb5209dc6,2024-07-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.3,Merge pull request #256 from fastfloat/json-accept-empty-exponent
+0e7a10ad8091847335c1c623084eb61f65cef93c,2024-08-03,ok,price 187.25,0.0,0.0,0.0,0,0,30.6,Merge pull request #252 from LeszekSwirski/parse-error
+0e7a10ad8091847335c1c623084eb61f65cef93c,2024-08-03,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #252 from LeszekSwirski/parse-error
+0e7a10ad8091847335c1c623084eb61f65cef93c,2024-08-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.3,Merge pull request #252 from LeszekSwirski/parse-error
+0e7a10ad8091847335c1c623084eb61f65cef93c,2024-08-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.1,Merge pull request #252 from LeszekSwirski/parse-error
+d57ca3da1f115afd802394988391fbb6ead6b37c,2024-08-03,ok,price 187.25,0.0,0.0,0.0,0,0,30.6,Merge pull request #259 from fastfloat/issue258
+d57ca3da1f115afd802394988391fbb6ead6b37c,2024-08-03,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #259 from fastfloat/issue258
+d57ca3da1f115afd802394988391fbb6ead6b37c,2024-08-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.3,Merge pull request #259 from fastfloat/issue258
+d57ca3da1f115afd802394988391fbb6ead6b37c,2024-08-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.1,Merge pull request #259 from fastfloat/issue258
+8f3dae6b9f6df6d79af77d67e4a8170abac6acc1,2024-08-14,ok,price 187.25,0.0,0.0,0.0,0,0,30.6,Merge pull request #260 from fastfloat/intrin-for-umul
+8f3dae6b9f6df6d79af77d67e4a8170abac6acc1,2024-08-14,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #260 from fastfloat/intrin-for-umul
+8f3dae6b9f6df6d79af77d67e4a8170abac6acc1,2024-08-14,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.5,Merge pull request #260 from fastfloat/intrin-for-umul
+8f3dae6b9f6df6d79af77d67e4a8170abac6acc1,2024-08-14,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.1,Merge pull request #260 from fastfloat/intrin-for-umul
+5ad6aae0b1c0ac9ba6fb7b0c70a334e3f605d16a,2024-08-14,ok,price 187.25,0.0,0.0,0.0,0,0,30.6,lint
+5ad6aae0b1c0ac9ba6fb7b0c70a334e3f605d16a,2024-08-14,ok,integer 100,0.0,0.0,0.0,0,0,23.9,lint
+5ad6aae0b1c0ac9ba6fb7b0c70a334e3f605d16a,2024-08-14,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.4,lint
+5ad6aae0b1c0ac9ba6fb7b0c70a334e3f605d16a,2024-08-14,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.1,lint
+c8abf9456032df43b5f678095ae0e0d706186ede,2024-08-31,ok,price 187.25,0.0,0.0,0.0,0,0,30.6,Merge pull request #268 from yfeldblum/fix-deprecated-cxx17-cexpr-static-data-defn-out-of-line-redundant
+c8abf9456032df43b5f678095ae0e0d706186ede,2024-08-31,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #268 from yfeldblum/fix-deprecated-cxx17-cexpr-static-data-defn-out-of-line-redundant
+c8abf9456032df43b5f678095ae0e0d706186ede,2024-08-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.3,Merge pull request #268 from yfeldblum/fix-deprecated-cxx17-cexpr-static-data-defn-out-of-line-redundant
+c8abf9456032df43b5f678095ae0e0d706186ede,2024-08-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.3,Merge pull request #268 from yfeldblum/fix-deprecated-cxx17-cexpr-static-data-defn-out-of-line-redundant
+8c911d9b7161d5ae231c880d6bf2402d2df6dea8,2024-09-02,ok,price 187.25,0.0,0.0,0.0,0,0,30.5,Merge pull request #269 from eukarpov/support-aarch64-w64-mingw32-target
+8c911d9b7161d5ae231c880d6bf2402d2df6dea8,2024-09-02,ok,integer 100,0.0,0.0,0.0,0,0,23.8,Merge pull request #269 from eukarpov/support-aarch64-w64-mingw32-target
+8c911d9b7161d5ae231c880d6bf2402d2df6dea8,2024-09-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.2,Merge pull request #269 from eukarpov/support-aarch64-w64-mingw32-target
+8c911d9b7161d5ae231c880d6bf2402d2df6dea8,2024-09-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,43.1,Merge pull request #269 from eukarpov/support-aarch64-w64-mingw32-target
+8e5f76ce7382d1b5ba0b819eaeb5758125550622,2024-11-19,ok,price 187.25,0.0,0.0,0.0,0,0,30.2,Merge pull request #277 from dalle/issue276-plus-minus-infnan
+8e5f76ce7382d1b5ba0b819eaeb5758125550622,2024-11-19,ok,integer 100,0.0,0.0,0.0,0,0,23.8,Merge pull request #277 from dalle/issue276-plus-minus-infnan
+8e5f76ce7382d1b5ba0b819eaeb5758125550622,2024-11-19,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,44.7,Merge pull request #277 from dalle/issue276-plus-minus-infnan
+8e5f76ce7382d1b5ba0b819eaeb5758125550622,2024-11-19,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #277 from dalle/issue276-plus-minus-infnan
+724834fe8e3e0309aa11fbdd44f2b960d11da410,2024-11-20,ok,price 187.25,0.0,0.0,0.0,0,0,30.2,Merge pull request #279 from dalle/issue278-scoped-enum
+724834fe8e3e0309aa11fbdd44f2b960d11da410,2024-11-20,ok,integer 100,0.0,0.0,0.0,0,0,23.8,Merge pull request #279 from dalle/issue278-scoped-enum
+724834fe8e3e0309aa11fbdd44f2b960d11da410,2024-11-20,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,44.7,Merge pull request #279 from dalle/issue278-scoped-enum
+724834fe8e3e0309aa11fbdd44f2b960d11da410,2024-11-20,ok,4567.123456789012,0.0,0.0,0.0,0,0,42.7,Merge pull request #279 from dalle/issue278-scoped-enum
+b9661b41afad068f601d92cc5f0628280c3a9abf,2024-11-21,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #280 from dalle/issue275-deprecate-feature-macros
+b9661b41afad068f601d92cc5f0628280c3a9abf,2024-11-21,ok,integer 100,0.0,0.0,0.0,0,0,23.8,Merge pull request #280 from dalle/issue275-deprecate-feature-macros
+b9661b41afad068f601d92cc5f0628280c3a9abf,2024-11-21,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.5,Merge pull request #280 from dalle/issue275-deprecate-feature-macros
+b9661b41afad068f601d92cc5f0628280c3a9abf,2024-11-21,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #280 from dalle/issue275-deprecate-feature-macros
+3d33762eedd8c90ce7349c502a69804906672fb0,2024-11-22,ok,price 187.25,0.0,0.0,0.0,0,0,23.4,Merge pull request #284 from dalle/issue273-version-macros
+3d33762eedd8c90ce7349c502a69804906672fb0,2024-11-22,ok,integer 100,0.0,0.0,0.0,0,0,20.1,Merge pull request #284 from dalle/issue273-version-macros
+3d33762eedd8c90ce7349c502a69804906672fb0,2024-11-22,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.9,Merge pull request #284 from dalle/issue273-version-macros
+3d33762eedd8c90ce7349c502a69804906672fb0,2024-11-22,ok,4567.123456789012,0.0,0.0,0.0,0,0,35.7,Merge pull request #284 from dalle/issue273-version-macros
+cf771eaa836ce8327378840bd51b25b14352a6dd,2024-11-22,ok,price 187.25,0.0,0.0,0.0,0,0,39.0,Merge pull request #283 from dalle/issue282-better-error-messages
+cf771eaa836ce8327378840bd51b25b14352a6dd,2024-11-22,ok,integer 100,0.0,0.0,0.0,0,0,32.6,Merge pull request #283 from dalle/issue282-better-error-messages
+cf771eaa836ce8327378840bd51b25b14352a6dd,2024-11-22,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,33.5,Merge pull request #283 from dalle/issue282-better-error-messages
+cf771eaa836ce8327378840bd51b25b14352a6dd,2024-11-22,ok,4567.123456789012,0.0,0.0,0.0,0,0,27.7,Merge pull request #283 from dalle/issue282-better-error-messages
+65911af27cd6cc3b5ffc560cc5ace1dcf7f945fb,2024-11-23,ok,price 187.25,0.0,0.0,0.0,0,0,20.9,Merge pull request #287 from dalle/fix-clang-warning-unused-function
+65911af27cd6cc3b5ffc560cc5ace1dcf7f945fb,2024-11-23,ok,integer 100,0.0,0.0,0.0,0,0,17.2,Merge pull request #287 from dalle/fix-clang-warning-unused-function
+65911af27cd6cc3b5ffc560cc5ace1dcf7f945fb,2024-11-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,33.6,Merge pull request #287 from dalle/fix-clang-warning-unused-function
+65911af27cd6cc3b5ffc560cc5ace1dcf7f945fb,2024-11-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,54.5,Merge pull request #287 from dalle/fix-clang-warning-unused-function
+6801b0ca20bef0fda464da95fdeff8ce982cfe4a,2024-11-23,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #289 from dalle/issue288-char8-support
+6801b0ca20bef0fda464da95fdeff8ce982cfe4a,2024-11-23,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #289 from dalle/issue288-char8-support
+6801b0ca20bef0fda464da95fdeff8ce982cfe4a,2024-11-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.6,Merge pull request #289 from dalle/issue288-char8-support
+6801b0ca20bef0fda464da95fdeff8ce982cfe4a,2024-11-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #289 from dalle/issue288-char8-support
+49aed7782ed56ca72c9999488cd33b8e05f31b54,2024-12-01,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #294 from dalle/dalle/equiv_uint_t
+49aed7782ed56ca72c9999488cd33b8e05f31b54,2024-12-01,ok,integer 100,0.0,0.0,0.0,0,0,24.0,Merge pull request #294 from dalle/dalle/equiv_uint_t
+49aed7782ed56ca72c9999488cd33b8e05f31b54,2024-12-01,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.5,Merge pull request #294 from dalle/dalle/equiv_uint_t
+49aed7782ed56ca72c9999488cd33b8e05f31b54,2024-12-01,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.6,Merge pull request #294 from dalle/dalle/equiv_uint_t
+482cc1f251396e31816a7452ab958b8f5e34312c,2025-01-16,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #298 from jrade/main
+482cc1f251396e31816a7452ab958b8f5e34312c,2025-01-16,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #298 from jrade/main
+482cc1f251396e31816a7452ab958b8f5e34312c,2025-01-16,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.5,Merge pull request #298 from jrade/main
+482cc1f251396e31816a7452ab958b8f5e34312c,2025-01-16,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #298 from jrade/main
+1d50f57dd969d1c8d2986859144c98dc1e6b2cfa,2025-02-06,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,better wording.
+1d50f57dd969d1c8d2986859144c98dc1e6b2cfa,2025-02-06,ok,integer 100,0.0,0.0,0.0,0,0,23.9,better wording.
+1d50f57dd969d1c8d2986859144c98dc1e6b2cfa,2025-02-06,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.5,better wording.
+1d50f57dd969d1c8d2986859144c98dc1e6b2cfa,2025-02-06,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.8,better wording.
+7a5ee5af6069d3e25dfcd5a0ef8de75145cb9534,2025-02-06,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #296 from dalle/dalle/float16
+7a5ee5af6069d3e25dfcd5a0ef8de75145cb9534,2025-02-06,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge pull request #296 from dalle/dalle/float16
+7a5ee5af6069d3e25dfcd5a0ef8de75145cb9534,2025-02-06,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.6,Merge pull request #296 from dalle/dalle/float16
+7a5ee5af6069d3e25dfcd5a0ef8de75145cb9534,2025-02-06,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #296 from dalle/dalle/float16
+77cc847c842c49e7e3477c1e95da2b6540166d66,2025-02-08,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,pushing version change
+77cc847c842c49e7e3477c1e95da2b6540166d66,2025-02-08,ok,integer 100,0.0,0.0,0.0,0,0,23.9,pushing version change
+77cc847c842c49e7e3477c1e95da2b6540166d66,2025-02-08,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.4,pushing version change
+77cc847c842c49e7e3477c1e95da2b6540166d66,2025-02-08,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.6,pushing version change
+1504792a9f1b63d3102337b9b49ba5614eeeddf2,2025-03-09,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge branch 'main' of github.com:fastfloat/fast_float
+1504792a9f1b63d3102337b9b49ba5614eeeddf2,2025-03-09,ok,integer 100,0.0,0.0,0.0,0,0,23.9,Merge branch 'main' of github.com:fastfloat/fast_float
+1504792a9f1b63d3102337b9b49ba5614eeeddf2,2025-03-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.6,Merge branch 'main' of github.com:fastfloat/fast_float
+1504792a9f1b63d3102337b9b49ba5614eeeddf2,2025-03-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge branch 'main' of github.com:fastfloat/fast_float
+e019768d4979c773decef78e3c3529ab873424ee,2025-03-10,ok,price 187.25,0.0,0.0,0.0,0,0,29.8,Merge pull request #308 from fastfloat/turing_json_into_macro_parameter
+e019768d4979c773decef78e3c3529ab873424ee,2025-03-10,ok,integer 100,0.0,0.0,0.0,0,0,23.7,Merge pull request #308 from fastfloat/turing_json_into_macro_parameter
+e019768d4979c773decef78e3c3529ab873424ee,2025-03-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.8,Merge pull request #308 from fastfloat/turing_json_into_macro_parameter
+e019768d4979c773decef78e3c3529ab873424ee,2025-03-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,Merge pull request #308 from fastfloat/turing_json_into_macro_parameter
+1bf70101536d37fa9954cc4f03fd0903d045a9f3,2025-03-10,ok,price 187.25,0.0,0.0,0.0,0,0,29.8,v8.0.1
+1bf70101536d37fa9954cc4f03fd0903d045a9f3,2025-03-10,ok,integer 100,0.0,0.0,0.0,0,0,23.7,v8.0.1
+1bf70101536d37fa9954cc4f03fd0903d045a9f3,2025-03-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.9,v8.0.1
+1bf70101536d37fa9954cc4f03fd0903d045a9f3,2025-03-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.8,v8.0.1
+50a80a73ab2ab256ba1c3bf86923ddd8b4202bc7,2025-03-11,ok,price 187.25,0.0,0.0,0.0,0,0,29.8,v8.0.2
+50a80a73ab2ab256ba1c3bf86923ddd8b4202bc7,2025-03-11,ok,integer 100,0.0,0.0,0.0,0,0,23.7,v8.0.2
+50a80a73ab2ab256ba1c3bf86923ddd8b4202bc7,2025-03-11,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.9,v8.0.2
+50a80a73ab2ab256ba1c3bf86923ddd8b4202bc7,2025-03-11,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.8,v8.0.2
+c0582c27f5478b6ac3677b82ed97aa07057f2a5a,2025-09-02,ok,price 187.25,0.0,0.0,0.0,0,0,29.8,typos in the comments
+c0582c27f5478b6ac3677b82ed97aa07057f2a5a,2025-09-02,ok,integer 100,0.0,0.0,0.0,0,0,23.7,typos in the comments
+c0582c27f5478b6ac3677b82ed97aa07057f2a5a,2025-09-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.9,typos in the comments
+c0582c27f5478b6ac3677b82ed97aa07057f2a5a,2025-09-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.7,typos in the comments
+4bb6fd12719a87ae22c60a675be8eff3c28148e7,2025-09-05,ok,price 187.25,0.0,0.0,0.0,0,0,29.8,Merge pull request #314 from fastfloat/P2497R0
+4bb6fd12719a87ae22c60a675be8eff3c28148e7,2025-09-05,ok,integer 100,0.0,0.0,0.0,0,0,23.7,Merge pull request #314 from fastfloat/P2497R0
+4bb6fd12719a87ae22c60a675be8eff3c28148e7,2025-09-05,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.9,Merge pull request #314 from fastfloat/P2497R0
+4bb6fd12719a87ae22c60a675be8eff3c28148e7,2025-09-05,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.8,Merge pull request #314 from fastfloat/P2497R0
+fec4082f014dfa29e307bcdea034fcd3c26f62c8,2025-09-12,ok,price 187.25,0.0,0.0,0.0,0,0,29.8,Merge pull request #322 from leiwen2025/rv-support
+fec4082f014dfa29e307bcdea034fcd3c26f62c8,2025-09-12,ok,integer 100,0.0,0.0,0.0,0,0,23.7,Merge pull request #322 from leiwen2025/rv-support
+fec4082f014dfa29e307bcdea034fcd3c26f62c8,2025-09-12,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.9,Merge pull request #322 from leiwen2025/rv-support
+fec4082f014dfa29e307bcdea034fcd3c26f62c8,2025-09-12,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.8,Merge pull request #322 from leiwen2025/rv-support
+e5612e9f726323859fdc8fb61700521e85861a57,2025-09-18,ok,price 187.25,0.0,0.0,0.0,0,0,29.9,Merge pull request #325 from InvalidUsernameException/emoji-parses-as-int
+e5612e9f726323859fdc8fb61700521e85861a57,2025-09-18,ok,integer 100,0.0,0.0,0.0,0,0,24.0,Merge pull request #325 from InvalidUsernameException/emoji-parses-as-int
+e5612e9f726323859fdc8fb61700521e85861a57,2025-09-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,48.0,Merge pull request #325 from InvalidUsernameException/emoji-parses-as-int
+e5612e9f726323859fdc8fb61700521e85861a57,2025-09-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.9,Merge pull request #325 from InvalidUsernameException/emoji-parses-as-int
+e20c9524563e39f27e2cbce25929abaae16e1379,2025-09-18,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,Merge pull request #320 from toughengineer/int_multiplication_by_power_of_10
+e20c9524563e39f27e2cbce25929abaae16e1379,2025-09-18,ok,integer 100,0.0,0.0,0.0,0,0,24.2,Merge pull request #320 from toughengineer/int_multiplication_by_power_of_10
+e20c9524563e39f27e2cbce25929abaae16e1379,2025-09-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.6,Merge pull request #320 from toughengineer/int_multiplication_by_power_of_10
+e20c9524563e39f27e2cbce25929abaae16e1379,2025-09-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,Merge pull request #320 from toughengineer/int_multiplication_by_power_of_10
+2d6574483d0046ad324f6a8e397b3b120e193a92,2025-09-18,ok,price 187.25,0.0,0.0,0.0,0,0,31.1,Merge pull request #327 from toughengineer/int_multiplication_by_power_of_10
+2d6574483d0046ad324f6a8e397b3b120e193a92,2025-09-18,ok,integer 100,0.0,0.0,0.0,0,0,24.2,Merge pull request #327 from toughengineer/int_multiplication_by_power_of_10
+2d6574483d0046ad324f6a8e397b3b120e193a92,2025-09-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.6,Merge pull request #327 from toughengineer/int_multiplication_by_power_of_10
+2d6574483d0046ad324f6a8e397b3b120e193a92,2025-09-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,Merge pull request #327 from toughengineer/int_multiplication_by_power_of_10
+2aa6d0ba72771a61d24e5dbafe127f29d3242ae9,2025-09-18,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #326 from fastfloat/patch803
+2aa6d0ba72771a61d24e5dbafe127f29d3242ae9,2025-09-18,ok,integer 100,0.0,0.0,0.0,0,0,24.3,Merge pull request #326 from fastfloat/patch803
+2aa6d0ba72771a61d24e5dbafe127f29d3242ae9,2025-09-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.8,Merge pull request #326 from fastfloat/patch803
+2aa6d0ba72771a61d24e5dbafe127f29d3242ae9,2025-09-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.7,Merge pull request #326 from fastfloat/patch803
+88b1e5321c6918cbe091afd76728296290668403,2025-09-18,ok,price 187.25,0.0,0.0,0.0,0,0,34.0,version 8.1.0
+88b1e5321c6918cbe091afd76728296290668403,2025-09-18,ok,integer 100,0.0,0.0,0.0,0,0,24.7,version 8.1.0
+88b1e5321c6918cbe091afd76728296290668403,2025-09-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.7,version 8.1.0
+88b1e5321c6918cbe091afd76728296290668403,2025-09-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.7,version 8.1.0
+23f16adad4e5a2d4caaaea1164be239e5bcae4aa,2025-09-29,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #328 from toughengineer/int_multiplication_by_power_of_10
+23f16adad4e5a2d4caaaea1164be239e5bcae4aa,2025-09-29,ok,integer 100,0.0,0.0,0.0,0,0,24.3,Merge pull request #328 from toughengineer/int_multiplication_by_power_of_10
+23f16adad4e5a2d4caaaea1164be239e5bcae4aa,2025-09-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.8,Merge pull request #328 from toughengineer/int_multiplication_by_power_of_10
+23f16adad4e5a2d4caaaea1164be239e5bcae4aa,2025-09-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,Merge pull request #328 from toughengineer/int_multiplication_by_power_of_10
+7262d9454ea59af171645f1c71b438a99fb66415,2025-09-29,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,lint
+7262d9454ea59af171645f1c71b438a99fb66415,2025-09-29,ok,integer 100,0.0,0.0,0.0,0,0,24.2,lint
+7262d9454ea59af171645f1c71b438a99fb66415,2025-09-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.7,lint
+7262d9454ea59af171645f1c71b438a99fb66415,2025-09-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,lint
+83a4f696d702199d141b11fb97571b162643438f,2025-09-30,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #333 from toughengineer/made_function_non-template
+83a4f696d702199d141b11fb97571b162643438f,2025-09-30,ok,integer 100,0.0,0.0,0.0,0,0,24.3,Merge pull request #333 from toughengineer/made_function_non-template
+83a4f696d702199d141b11fb97571b162643438f,2025-09-30,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,47.8,Merge pull request #333 from toughengineer/made_function_non-template
+83a4f696d702199d141b11fb97571b162643438f,2025-09-30,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.7,Merge pull request #333 from toughengineer/made_function_non-template
+f8c573d7419ab08de382c60005e37caa271e869a,2025-11-23,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #338 from Gravecat/mingw-fix
+f8c573d7419ab08de382c60005e37caa271e869a,2025-11-23,ok,integer 100,0.0,0.0,0.0,0,0,24.9,Merge pull request #338 from Gravecat/mingw-fix
+f8c573d7419ab08de382c60005e37caa271e869a,2025-11-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.6,Merge pull request #338 from Gravecat/mingw-fix
+f8c573d7419ab08de382c60005e37caa271e869a,2025-11-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,41.7,Merge pull request #338 from Gravecat/mingw-fix
+1ad224e42c0bc992ee1c7f9d7e33aa65e66d9110,2025-12-24,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #349 from shikharish/uint8
+1ad224e42c0bc992ee1c7f9d7e33aa65e66d9110,2025-12-24,ok,integer 100,0.0,0.0,0.0,0,0,24.2,Merge pull request #349 from shikharish/uint8
+1ad224e42c0bc992ee1c7f9d7e33aa65e66d9110,2025-12-24,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.7,Merge pull request #349 from shikharish/uint8
+1ad224e42c0bc992ee1c7f9d7e33aa65e66d9110,2025-12-24,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.7,Merge pull request #349 from shikharish/uint8
+43f7c83a55afef4afe1f15f2f09819bcd6553b2e,2025-12-27,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #353 from toughengineer/main
+43f7c83a55afef4afe1f15f2f09819bcd6553b2e,2025-12-27,ok,integer 100,0.0,0.0,0.0,0,0,24.2,Merge pull request #353 from toughengineer/main
+43f7c83a55afef4afe1f15f2f09819bcd6553b2e,2025-12-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.7,Merge pull request #353 from toughengineer/main
+43f7c83a55afef4afe1f15f2f09819bcd6553b2e,2025-12-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.7,Merge pull request #353 from toughengineer/main
+b4d26ec866fe688af148d128c5ef8b8e98823a41,2025-12-27,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,v8.1.1
+b4d26ec866fe688af148d128c5ef8b8e98823a41,2025-12-27,ok,integer 100,0.0,0.0,0.0,0,0,24.2,v8.1.1
+b4d26ec866fe688af148d128c5ef8b8e98823a41,2025-12-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.7,v8.1.1
+b4d26ec866fe688af148d128c5ef8b8e98823a41,2025-12-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,v8.1.1
+dd77fb5e4c3339725775fd61e51034a5e5a55cbb,2025-12-27,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,v8.2.0
+dd77fb5e4c3339725775fd61e51034a5e5a55cbb,2025-12-27,ok,integer 100,0.0,0.0,0.0,0,0,24.3,v8.2.0
+dd77fb5e4c3339725775fd61e51034a5e5a55cbb,2025-12-27,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.8,v8.2.0
+dd77fb5e4c3339725775fd61e51034a5e5a55cbb,2025-12-27,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.6,v8.2.0
+4f776421958ffbc801a54b0618aca6931af8ee67,2025-12-29,ok,price 187.25,0.0,0.0,0.0,0,0,31.0,Merge pull request #355 from fastfloat/issue354
+4f776421958ffbc801a54b0618aca6931af8ee67,2025-12-29,ok,integer 100,0.0,0.0,0.0,0,0,24.2,Merge pull request #355 from fastfloat/issue354
+4f776421958ffbc801a54b0618aca6931af8ee67,2025-12-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.8,Merge pull request #355 from fastfloat/issue354
+4f776421958ffbc801a54b0618aca6931af8ee67,2025-12-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.8,Merge pull request #355 from fastfloat/issue354
+11ce67e5ebcd0e688c7e141bd1420cf40040b59f,2025-12-29,ok,price 187.25,0.0,0.0,0.0,0,0,30.9,v8.2.1
+11ce67e5ebcd0e688c7e141bd1420cf40040b59f,2025-12-29,ok,integer 100,0.0,0.0,0.0,0,0,24.2,v8.2.1
+11ce67e5ebcd0e688c7e141bd1420cf40040b59f,2025-12-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,45.6,v8.2.1
+11ce67e5ebcd0e688c7e141bd1420cf40040b59f,2025-12-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.7,v8.2.1
+6499e20cf9f20546fcf5ee428775f834899ee31b,2025-12-31,ok,price 187.25,0.0,0.0,0.0,0,0,21.1,Merge pull request #357 from shikharish/endian-uint8-fix
+6499e20cf9f20546fcf5ee428775f834899ee31b,2025-12-31,ok,integer 100,0.0,0.0,0.0,0,0,17.2,Merge pull request #357 from shikharish/endian-uint8-fix
+6499e20cf9f20546fcf5ee428775f834899ee31b,2025-12-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,34.2,Merge pull request #357 from shikharish/endian-uint8-fix
+6499e20cf9f20546fcf5ee428775f834899ee31b,2025-12-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,29.2,Merge pull request #357 from shikharish/endian-uint8-fix
+97b54ca9e75f5303507699d27c6b4f4efe4641a1,2025-12-31,ok,price 187.25,0.0,0.0,0.0,0,0,42.1,v8.2.2
+97b54ca9e75f5303507699d27c6b4f4efe4641a1,2025-12-31,ok,integer 100,0.0,0.0,0.0,0,0,34.8,v8.2.2
+97b54ca9e75f5303507699d27c6b4f4efe4641a1,2025-12-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,66.7,v8.2.2
+97b54ca9e75f5303507699d27c6b4f4efe4641a1,2025-12-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,57.3,v8.2.2
+d5bc4e1b2e432d1e34bc5b2b558795949c8204d1,2025-12-31,ok,price 187.25,0.0,0.0,0.0,0,0,40.1,Merge pull request #358 from shikharish/uint8-base-fix
+d5bc4e1b2e432d1e34bc5b2b558795949c8204d1,2025-12-31,ok,integer 100,0.0,0.0,0.0,0,0,32.5,Merge pull request #358 from shikharish/uint8-base-fix
+d5bc4e1b2e432d1e34bc5b2b558795949c8204d1,2025-12-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,63.9,Merge pull request #358 from shikharish/uint8-base-fix
+d5bc4e1b2e432d1e34bc5b2b558795949c8204d1,2025-12-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,54.0,Merge pull request #358 from shikharish/uint8-base-fix
+fd9cad9f0cefce4df64fcdb771aadf569e029b03,2026-01-13,ok,price 187.25,0.0,0.0,0.0,0,0,41.5,Merge pull request #359 from shikharish/uint16
+fd9cad9f0cefce4df64fcdb771aadf569e029b03,2026-01-13,ok,integer 100,0.0,0.0,0.0,0,0,34.4,Merge pull request #359 from shikharish/uint16
+fd9cad9f0cefce4df64fcdb771aadf569e029b03,2026-01-13,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,67.1,Merge pull request #359 from shikharish/uint16
+fd9cad9f0cefce4df64fcdb771aadf569e029b03,2026-01-13,ok,4567.123456789012,0.0,0.0,0.0,0,0,58.4,Merge pull request #359 from shikharish/uint16
+babb1f33351a7c32549707c47b6e94a488fb24f4,2026-01-18,ok,price 187.25,0.0,0.0,0.0,0,0,41.2,Merge pull request #356 from sleepingeight/surya/opt-cmp
+babb1f33351a7c32549707c47b6e94a488fb24f4,2026-01-18,ok,integer 100,0.0,0.0,0.0,0,0,32.8,Merge pull request #356 from sleepingeight/surya/opt-cmp
+babb1f33351a7c32549707c47b6e94a488fb24f4,2026-01-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,66.2,Merge pull request #356 from sleepingeight/surya/opt-cmp
+babb1f33351a7c32549707c47b6e94a488fb24f4,2026-01-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,55.5,Merge pull request #356 from sleepingeight/surya/opt-cmp
+2e4ed7d6fd58b9c23a08cf636c93d947b7038b5d,2026-01-21,ok,price 187.25,0.0,0.0,0.0,0,0,41.5,Merge pull request #362 from sleepingeight/surya/fix-opt-cmp
+2e4ed7d6fd58b9c23a08cf636c93d947b7038b5d,2026-01-21,ok,integer 100,0.0,0.0,0.0,0,0,32.6,Merge pull request #362 from sleepingeight/surya/fix-opt-cmp
+2e4ed7d6fd58b9c23a08cf636c93d947b7038b5d,2026-01-21,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,67.3,Merge pull request #362 from sleepingeight/surya/fix-opt-cmp
+2e4ed7d6fd58b9c23a08cf636c93d947b7038b5d,2026-01-21,ok,4567.123456789012,0.0,0.0,0.0,0,0,55.8,Merge pull request #362 from sleepingeight/surya/fix-opt-cmp
+01ce95dfe46abccf3264fbccf9f5139ea9016cd2,2026-02-03,ok,price 187.25,0.0,0.0,0.0,0,0,41.8,v8.2.3
+01ce95dfe46abccf3264fbccf9f5139ea9016cd2,2026-02-03,ok,integer 100,0.0,0.0,0.0,0,0,32.8,v8.2.3
+01ce95dfe46abccf3264fbccf9f5139ea9016cd2,2026-02-03,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,65.2,v8.2.3
+01ce95dfe46abccf3264fbccf9f5139ea9016cd2,2026-02-03,ok,4567.123456789012,0.0,0.0,0.0,0,0,54.6,v8.2.3
+9f30728ce94ab1fc8f49ef2f987de0f9be3ce01b,2026-02-23,ok,price 187.25,0.0,0.0,0.0,0,0,41.9,Merge pull request #368 from x1sc0/main
+9f30728ce94ab1fc8f49ef2f987de0f9be3ce01b,2026-02-23,ok,integer 100,0.0,0.0,0.0,0,0,32.6,Merge pull request #368 from x1sc0/main
+9f30728ce94ab1fc8f49ef2f987de0f9be3ce01b,2026-02-23,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,66.2,Merge pull request #368 from x1sc0/main
+9f30728ce94ab1fc8f49ef2f987de0f9be3ce01b,2026-02-23,ok,4567.123456789012,0.0,0.0,0.0,0,0,56.0,Merge pull request #368 from x1sc0/main
+3f42ad2272c5969e934c1ff981f49e710d679b8a,2026-03-10,ok,price 187.25,0.0,0.0,0.0,0,0,44.1,Merge pull request #374 from kolemannix/bench_inline
+3f42ad2272c5969e934c1ff981f49e710d679b8a,2026-03-10,ok,integer 100,0.0,0.0,0.0,0,0,34.5,Merge pull request #374 from kolemannix/bench_inline
+3f42ad2272c5969e934c1ff981f49e710d679b8a,2026-03-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,70.3,Merge pull request #374 from kolemannix/bench_inline
+3f42ad2272c5969e934c1ff981f49e710d679b8a,2026-03-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,56.8,Merge pull request #374 from kolemannix/bench_inline
+eb9ab42c0aa86d3cc41871ba7306527d95077b3b,2026-03-10,ok,price 187.25,0.0,0.0,0.0,0,0,43.3,8.2.4
+eb9ab42c0aa86d3cc41871ba7306527d95077b3b,2026-03-10,ok,integer 100,0.0,0.0,0.0,0,0,33.3,8.2.4
+eb9ab42c0aa86d3cc41871ba7306527d95077b3b,2026-03-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,72.6,8.2.4
+eb9ab42c0aa86d3cc41871ba7306527d95077b3b,2026-03-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,56.4,8.2.4
+18e55e48a8d0c845c9262eaf1469d3443c228f57,2026-03-10,ok,price 187.25,0.0,0.0,0.0,0,0,24.2,lint
+18e55e48a8d0c845c9262eaf1469d3443c228f57,2026-03-10,ok,integer 100,0.0,0.0,0.0,0,0,19.1,lint
+18e55e48a8d0c845c9262eaf1469d3443c228f57,2026-03-10,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,32.5,lint
+18e55e48a8d0c845c9262eaf1469d3443c228f57,2026-03-10,ok,4567.123456789012,0.0,0.0,0.0,0,0,29.3,lint
+b57ec064ad7451beb535eaa6a0c7d7d75b4fc1f2,2026-04-16,ok,price 187.25,0.0,0.0,0.0,0,0,32.8,Merge pull request #379 from mlippautz/patch-1
+b57ec064ad7451beb535eaa6a0c7d7d75b4fc1f2,2026-04-16,ok,integer 100,0.0,0.0,0.0,0,0,24.9,Merge pull request #379 from mlippautz/patch-1
+b57ec064ad7451beb535eaa6a0c7d7d75b4fc1f2,2026-04-16,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,49.8,Merge pull request #379 from mlippautz/patch-1
+b57ec064ad7451beb535eaa6a0c7d7d75b4fc1f2,2026-04-16,ok,4567.123456789012,0.0,0.0,0.0,0,0,40.9,Merge pull request #379 from mlippautz/patch-1
+05087a303dad9c98768b33c829d398223a649bc6,2026-04-16,ok,price 187.25,0.0,0.0,0.0,0,0,24.2,8.2.5
+05087a303dad9c98768b33c829d398223a649bc6,2026-04-16,ok,integer 100,0.0,0.0,0.0,0,0,18.7,8.2.5
+05087a303dad9c98768b33c829d398223a649bc6,2026-04-16,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,32.5,8.2.5
+05087a303dad9c98768b33c829d398223a649bc6,2026-04-16,ok,4567.123456789012,0.0,0.0,0.0,0,0,29.3,8.2.5
+0f682cd6ebe7789d0f0a6a92ffd975189d377ce0,2026-06-01,ok,price 187.25,0.0,0.0,0.0,0,0,43.4,Merge pull request #381 from redis-performance/pr/integer-scan-unroll
+0f682cd6ebe7789d0f0a6a92ffd975189d377ce0,2026-06-01,ok,integer 100,0.0,0.0,0.0,0,0,35.1,Merge pull request #381 from redis-performance/pr/integer-scan-unroll
+0f682cd6ebe7789d0f0a6a92ffd975189d377ce0,2026-06-01,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,65.4,Merge pull request #381 from redis-performance/pr/integer-scan-unroll
+0f682cd6ebe7789d0f0a6a92ffd975189d377ce0,2026-06-01,ok,4567.123456789012,0.0,0.0,0.0,0,0,58.2,Merge pull request #381 from redis-performance/pr/integer-scan-unroll
+ed861322d85f6b3136d44a253b9daccfcd3bca7a,2026-06-01,ok,price 187.25,0.0,0.0,0.0,0,0,22.0,Merge pull request #382 from redis-performance/pr/four-digit-followup
+ed861322d85f6b3136d44a253b9daccfcd3bca7a,2026-06-01,ok,integer 100,0.0,0.0,0.0,0,0,16.8,Merge pull request #382 from redis-performance/pr/four-digit-followup
+ed861322d85f6b3136d44a253b9daccfcd3bca7a,2026-06-01,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,32.8,Merge pull request #382 from redis-performance/pr/four-digit-followup
+ed861322d85f6b3136d44a253b9daccfcd3bca7a,2026-06-01,ok,4567.123456789012,0.0,0.0,0.0,0,0,30.1,Merge pull request #382 from redis-performance/pr/four-digit-followup
+cfd12ebcf1f82c4fd44a950b1815dd0549bc8d89,2026-06-01,ok,price 187.25,0.0,0.0,0.0,0,0,21.9,8.2.6
+cfd12ebcf1f82c4fd44a950b1815dd0549bc8d89,2026-06-01,ok,integer 100,0.0,0.0,0.0,0,0,16.8,8.2.6
+cfd12ebcf1f82c4fd44a950b1815dd0549bc8d89,2026-06-01,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,32.8,8.2.6
+cfd12ebcf1f82c4fd44a950b1815dd0549bc8d89,2026-06-01,ok,4567.123456789012,0.0,0.0,0.0,0,0,30.1,8.2.6
+254f10ce39b804154bb04f7c6599789f7fac23ef,2026-06-02,ok,price 187.25,0.0,0.0,0.0,0,0,44.9,Merge pull request #385 from jwakely/patch-2
+254f10ce39b804154bb04f7c6599789f7fac23ef,2026-06-02,ok,integer 100,0.0,0.0,0.0,0,0,33.6,Merge pull request #385 from jwakely/patch-2
+254f10ce39b804154bb04f7c6599789f7fac23ef,2026-06-02,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,61.7,Merge pull request #385 from jwakely/patch-2
+254f10ce39b804154bb04f7c6599789f7fac23ef,2026-06-02,ok,4567.123456789012,0.0,0.0,0.0,0,0,58.0,Merge pull request #385 from jwakely/patch-2
+3044c9b1828f5012dcefb9fb41b03be53bb7c697,2026-06-07,ok,price 187.25,0.0,0.0,0.0,0,0,32.0,Merge pull request #387 from fastfloat/pr386
+3044c9b1828f5012dcefb9fb41b03be53bb7c697,2026-06-07,ok,integer 100,0.0,0.0,0.0,0,0,19.7,Merge pull request #387 from fastfloat/pr386
+3044c9b1828f5012dcefb9fb41b03be53bb7c697,2026-06-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,52.4,Merge pull request #387 from fastfloat/pr386
+3044c9b1828f5012dcefb9fb41b03be53bb7c697,2026-06-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,47.2,Merge pull request #387 from fastfloat/pr386
+e0b53eaf63c6d00e0725788ef1dbb759aa321d79,2026-06-07,ok,price 187.25,0.0,0.0,0.0,0,0,32.0,8.2.7
+e0b53eaf63c6d00e0725788ef1dbb759aa321d79,2026-06-07,ok,integer 100,0.0,0.0,0.0,0,0,20.3,8.2.7
+e0b53eaf63c6d00e0725788ef1dbb759aa321d79,2026-06-07,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,51.8,8.2.7
+e0b53eaf63c6d00e0725788ef1dbb759aa321d79,2026-06-07,ok,4567.123456789012,0.0,0.0,0.0,0,0,47.6,8.2.7
+c05156ff60525628d454b0c5f3e598db24be5ef6,2026-06-08,ok,price 187.25,0.0,0.0,0.0,0,0,25.7,Merge pull request #388 from biojppm/fix/clang_compile_error
+c05156ff60525628d454b0c5f3e598db24be5ef6,2026-06-08,ok,integer 100,0.0,0.0,0.0,0,0,14.5,Merge pull request #388 from biojppm/fix/clang_compile_error
+c05156ff60525628d454b0c5f3e598db24be5ef6,2026-06-08,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.0,Merge pull request #388 from biojppm/fix/clang_compile_error
+c05156ff60525628d454b0c5f3e598db24be5ef6,2026-06-08,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.6,Merge pull request #388 from biojppm/fix/clang_compile_error
+e8ec8e8f34bd6142efdbf4c714734dcff51ea9ac,2026-06-08,ok,price 187.25,0.0,0.0,0.0,0,0,16.5,8.2.8
+e8ec8e8f34bd6142efdbf4c714734dcff51ea9ac,2026-06-08,ok,integer 100,0.0,0.0,0.0,0,0,10.3,8.2.8
+e8ec8e8f34bd6142efdbf4c714734dcff51ea9ac,2026-06-08,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,26.9,8.2.8
+e8ec8e8f34bd6142efdbf4c714734dcff51ea9ac,2026-06-08,ok,4567.123456789012,0.0,0.0,0.0,0,0,24.9,8.2.8
+30868f8734947deeb80cf508c290eae24f3cf261,2026-06-11,ok,price 187.25,0.0,0.0,0.0,0,0,16.5,Merge pull request #392 from biojppm/fix/gcc9_compile_error
+30868f8734947deeb80cf508c290eae24f3cf261,2026-06-11,ok,integer 100,0.0,0.0,0.0,0,0,10.3,Merge pull request #392 from biojppm/fix/gcc9_compile_error
+30868f8734947deeb80cf508c290eae24f3cf261,2026-06-11,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,27.0,Merge pull request #392 from biojppm/fix/gcc9_compile_error
+30868f8734947deeb80cf508c290eae24f3cf261,2026-06-11,ok,4567.123456789012,0.0,0.0,0.0,0,0,24.9,Merge pull request #392 from biojppm/fix/gcc9_compile_error
+0dce102cb48541c424537ecbe429d5fb54c8e491,2026-06-11,ok,price 187.25,0.0,0.0,0.0,0,0,25.5,Merge pull request #391 from sahvx655-wq/int-fast-path-wide-units
+0dce102cb48541c424537ecbe429d5fb54c8e491,2026-06-11,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Merge pull request #391 from sahvx655-wq/int-fast-path-wide-units
+0dce102cb48541c424537ecbe429d5fb54c8e491,2026-06-11,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.8,Merge pull request #391 from sahvx655-wq/int-fast-path-wide-units
+0dce102cb48541c424537ecbe429d5fb54c8e491,2026-06-11,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.6,Merge pull request #391 from sahvx655-wq/int-fast-path-wide-units
+8234a896236a6c98ee66cf214b31ca15e24579ca,2026-06-11,ok,price 187.25,0.0,0.0,0.0,0,0,16.5,8.2.9
+8234a896236a6c98ee66cf214b31ca15e24579ca,2026-06-11,ok,integer 100,0.0,0.0,0.0,0,0,10.3,8.2.9
+8234a896236a6c98ee66cf214b31ca15e24579ca,2026-06-11,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,26.9,8.2.9
+8234a896236a6c98ee66cf214b31ca15e24579ca,2026-06-11,ok,4567.123456789012,0.0,0.0,0.0,0,0,24.9,8.2.9
+4eec7bec38679967c37d7555191564c5429bcf4f,2026-06-14,ok,price 187.25,0.0,0.0,0.0,0,0,25.5,Merge pull request #394 from fastfloat/int-overflow-simdjson-approach
+4eec7bec38679967c37d7555191564c5429bcf4f,2026-06-14,ok,integer 100,0.0,0.0,0.0,0,0,14.4,Merge pull request #394 from fastfloat/int-overflow-simdjson-approach
+4eec7bec38679967c37d7555191564c5429bcf4f,2026-06-14,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.9,Merge pull request #394 from fastfloat/int-overflow-simdjson-approach
+4eec7bec38679967c37d7555191564c5429bcf4f,2026-06-14,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.7,Merge pull request #394 from fastfloat/int-overflow-simdjson-approach
+34164f547b7df3f5d794ff67e9f885c36819ebfc,2026-06-14,ok,price 187.25,0.0,0.0,0.0,0,0,25.6,8.2.10
+34164f547b7df3f5d794ff67e9f885c36819ebfc,2026-06-14,ok,integer 100,0.0,0.0,0.0,0,0,14.4,8.2.10
+34164f547b7df3f5d794ff67e9f885c36819ebfc,2026-06-14,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.0,8.2.10
+34164f547b7df3f5d794ff67e9f885c36819ebfc,2026-06-14,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.6,8.2.10
+8ec5d236e2a9bc6b89a191212920c2237144f936,2026-06-18,ok,price 187.25,0.0,0.0,0.0,0,0,25.6,Merge pull request #395 from sahvx655-wq/is-space-signed-compare
+8ec5d236e2a9bc6b89a191212920c2237144f936,2026-06-18,ok,integer 100,0.0,0.0,0.0,0,0,14.4,Merge pull request #395 from sahvx655-wq/is-space-signed-compare
+8ec5d236e2a9bc6b89a191212920c2237144f936,2026-06-18,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.9,Merge pull request #395 from sahvx655-wq/is-space-signed-compare
+8ec5d236e2a9bc6b89a191212920c2237144f936,2026-06-18,ok,4567.123456789012,0.0,0.0,0.0,0,0,34.7,Merge pull request #395 from sahvx655-wq/is-space-signed-compare
+f6df0f29174054bb1ed06a9945416c8946a01292,2026-07-13,ok,price 187.25,0.0,0.0,0.0,0,0,26.9,Merge pull request #398 from redis-performance/exp062-063-combo
+f6df0f29174054bb1ed06a9945416c8946a01292,2026-07-13,ok,integer 100,0.0,0.0,0.0,0,0,14.4,Merge pull request #398 from redis-performance/exp062-063-combo
+f6df0f29174054bb1ed06a9945416c8946a01292,2026-07-13,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.5,Merge pull request #398 from redis-performance/exp062-063-combo
+f6df0f29174054bb1ed06a9945416c8946a01292,2026-07-13,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.6,Merge pull request #398 from redis-performance/exp062-063-combo
+13ecd70727edbccda961e15c06acba5767b841f2,2026-08-17,ok,price 187.25,0.0,0.0,0.0,0,0,26.9,Merge pull request #399 from dg0yt/max
+13ecd70727edbccda961e15c06acba5767b841f2,2026-08-17,ok,integer 100,0.0,0.0,0.0,0,0,14.4,Merge pull request #399 from dg0yt/max
+13ecd70727edbccda961e15c06acba5767b841f2,2026-08-17,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.5,Merge pull request #399 from dg0yt/max
+13ecd70727edbccda961e15c06acba5767b841f2,2026-08-17,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.6,Merge pull request #399 from dg0yt/max
+a8a02f77480d10c5dc90d39f7b890bc1dff9c1b9,2026-08-20,ok,price 187.25,0.0,0.0,0.0,0,0,26.9,Merge pull request #405 from fastfloat/old-style-cast
+a8a02f77480d10c5dc90d39f7b890bc1dff9c1b9,2026-08-20,ok,integer 100,0.0,0.0,0.0,0,0,14.4,Merge pull request #405 from fastfloat/old-style-cast
+a8a02f77480d10c5dc90d39f7b890bc1dff9c1b9,2026-08-20,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.6,Merge pull request #405 from fastfloat/old-style-cast
+a8a02f77480d10c5dc90d39f7b890bc1dff9c1b9,2026-08-20,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.5,Merge pull request #405 from fastfloat/old-style-cast
+e0e355c073c7be60ee3bc85f2f30e884beeaa0fe,2026-09-15,ok,price 187.25,0.0,0.0,0.0,0,0,26.2,Merge pull request #407 from fastfloat/javascript-format
+e0e355c073c7be60ee3bc85f2f30e884beeaa0fe,2026-09-15,ok,integer 100,0.0,0.0,0.0,0,0,14.0,Merge pull request #407 from fastfloat/javascript-format
+e0e355c073c7be60ee3bc85f2f30e884beeaa0fe,2026-09-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.5,Merge pull request #407 from fastfloat/javascript-format
+e0e355c073c7be60ee3bc85f2f30e884beeaa0fe,2026-09-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.2,Merge pull request #407 from fastfloat/javascript-format
+3254622f741c933fef671c5437d3fdf7f7d5929d,2026-09-15,ok,price 187.25,0.0,0.0,0.0,0,0,24.5,Add chars_format::javascript_sloppy (Annex B NonOctalDecimalIntegerLiteral)
+3254622f741c933fef671c5437d3fdf7f7d5929d,2026-09-15,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Add chars_format::javascript_sloppy (Annex B NonOctalDecimalIntegerLiteral)
+3254622f741c933fef671c5437d3fdf7f7d5929d,2026-09-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.4,Add chars_format::javascript_sloppy (Annex B NonOctalDecimalIntegerLiteral)
+3254622f741c933fef671c5437d3fdf7f7d5929d,2026-09-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.1,Add chars_format::javascript_sloppy (Annex B NonOctalDecimalIntegerLiteral)
+b0ab987b3dfdde13fa1915f65ef2a5c068d9208c,2026-09-15,ok,price 187.25,0.0,0.0,0.0,0,0,24.5,Version 8.3.0
+b0ab987b3dfdde13fa1915f65ef2a5c068d9208c,2026-09-15,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Version 8.3.0
+b0ab987b3dfdde13fa1915f65ef2a5c068d9208c,2026-09-15,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.2,Version 8.3.0
+b0ab987b3dfdde13fa1915f65ef2a5c068d9208c,2026-09-15,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.1,Version 8.3.0
+63735928992cf5ef0cfc2e10a8f73dc3188d3df8,2026-09-21,ok,price 187.25,0.0,0.0,0.0,0,0,26.9,Merge pull request #410 from Algunenano/javascript-fmt-hot-path
+63735928992cf5ef0cfc2e10a8f73dc3188d3df8,2026-09-21,ok,integer 100,0.0,0.0,0.0,0,0,14.4,Merge pull request #410 from Algunenano/javascript-fmt-hot-path
+63735928992cf5ef0cfc2e10a8f73dc3188d3df8,2026-09-21,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,37.6,Merge pull request #410 from Algunenano/javascript-fmt-hot-path
+63735928992cf5ef0cfc2e10a8f73dc3188d3df8,2026-09-21,ok,4567.123456789012,0.0,0.0,0.0,0,0,31.7,Merge pull request #410 from Algunenano/javascript-fmt-hot-path
+e9e04dec19135620a146ecdc687e26fe0f16e3df,2026-09-21,ok,price 187.25,0.0,0.0,0.0,0,0,33.1,Merge pull request #412 from fastfloat/strncasecmp-simple
+e9e04dec19135620a146ecdc687e26fe0f16e3df,2026-09-21,ok,integer 100,0.0,0.0,0.0,0,0,18.3,Merge pull request #412 from fastfloat/strncasecmp-simple
+e9e04dec19135620a146ecdc687e26fe0f16e3df,2026-09-21,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,46.5,Merge pull request #412 from fastfloat/strncasecmp-simple
+e9e04dec19135620a146ecdc687e26fe0f16e3df,2026-09-21,ok,4567.123456789012,0.0,0.0,0.0,0,0,39.2,Merge pull request #412 from fastfloat/strncasecmp-simple
+7969d5089c92138343f5a3c45d097b0e842825c6,2026-09-21,ok,price 187.25,0.0,0.0,0.0,0,0,17.9,Merge pull request #413 from fastfloat/clang-format-fold
+7969d5089c92138343f5a3c45d097b0e842825c6,2026-09-21,ok,integer 100,0.0,0.0,0.0,0,0,10.3,Merge pull request #413 from fastfloat/clang-format-fold
+7969d5089c92138343f5a3c45d097b0e842825c6,2026-09-21,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,26.9,Merge pull request #413 from fastfloat/clang-format-fold
+7969d5089c92138343f5a3c45d097b0e842825c6,2026-09-21,ok,4567.123456789012,0.0,0.0,0.0,0,0,23.0,Merge pull request #413 from fastfloat/clang-format-fold
+cdc385d05899e508e20dd5666e9cc760915cb0fa,2026-09-22,ok,price 187.25,0.0,0.0,0.0,0,0,34.6,Merge pull request #408 from jadidbourbaki/float16-exactness
+cdc385d05899e508e20dd5666e9cc760915cb0fa,2026-09-22,ok,integer 100,0.0,0.0,0.0,0,0,19.6,Merge pull request #408 from jadidbourbaki/float16-exactness
+cdc385d05899e508e20dd5666e9cc760915cb0fa,2026-09-22,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,51.1,Merge pull request #408 from jadidbourbaki/float16-exactness
+cdc385d05899e508e20dd5666e9cc760915cb0fa,2026-09-22,ok,4567.123456789012,0.0,0.0,0.0,0,0,43.3,Merge pull request #408 from jadidbourbaki/float16-exactness
+1dc46a6b8f58a32ca7075253962e0a35951a7abf,2026-09-25,ok,price 187.25,0.0,0.0,0.0,0,0,35.3,Merge pull request #409 from caolanm/main
+1dc46a6b8f58a32ca7075253962e0a35951a7abf,2026-09-25,ok,integer 100,0.0,0.0,0.0,0,0,20.6,Merge pull request #409 from caolanm/main
+1dc46a6b8f58a32ca7075253962e0a35951a7abf,2026-09-25,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,51.7,Merge pull request #409 from caolanm/main
+1dc46a6b8f58a32ca7075253962e0a35951a7abf,2026-09-25,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.2,Merge pull request #409 from caolanm/main
+3e4f80fcc42a22a0083660908ad4cbf65adf8f89,2026-10-04,ok,price 187.25,0.0,0.0,0.0,0,0,34.9,Merge pull request #419 from fastfloat/fix-418-struct-layout
+3e4f80fcc42a22a0083660908ad4cbf65adf8f89,2026-10-04,ok,integer 100,0.0,0.0,0.0,0,0,19.8,Merge pull request #419 from fastfloat/fix-418-struct-layout
+3e4f80fcc42a22a0083660908ad4cbf65adf8f89,2026-10-04,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,50.5,Merge pull request #419 from fastfloat/fix-418-struct-layout
+3e4f80fcc42a22a0083660908ad4cbf65adf8f89,2026-10-04,ok,4567.123456789012,0.0,0.0,0.0,0,0,42.5,Merge pull request #419 from fastfloat/fix-418-struct-layout
+f3f02c8ad0afd8181166dabce6a9e69f8aec24de,2026-10-04,ok,price 187.25,0.0,0.0,0.0,0,0,35.2,Version 8.3.1
+f3f02c8ad0afd8181166dabce6a9e69f8aec24de,2026-10-04,ok,integer 100,0.0,0.0,0.0,0,0,20.2,Version 8.3.1
+f3f02c8ad0afd8181166dabce6a9e69f8aec24de,2026-10-04,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,49.9,Version 8.3.1
+f3f02c8ad0afd8181166dabce6a9e69f8aec24de,2026-10-04,ok,4567.123456789012,0.0,0.0,0.0,0,0,44.3,Version 8.3.1
+54571f86e3a8124c39bc4765ff64d766b4e25efc,2026-10-06,ok,price 187.25,0.0,0.0,0.0,0,0,27.7,Merge pull request #421 from sahvx655-wq/times-pow10-int64-min
+54571f86e3a8124c39bc4765ff64d766b4e25efc,2026-10-06,ok,integer 100,0.0,0.0,0.0,0,0,14.2,Merge pull request #421 from sahvx655-wq/times-pow10-int64-min
+54571f86e3a8124c39bc4765ff64d766b4e25efc,2026-10-06,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.6,Merge pull request #421 from sahvx655-wq/times-pow10-int64-min
+54571f86e3a8124c39bc4765ff64d766b4e25efc,2026-10-06,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.6,Merge pull request #421 from sahvx655-wq/times-pow10-int64-min
+91aef729bd8652c44c9bfcc391425ceffd82c230,2026-10-09,ok,price 187.25,0.0,0.0,0.0,0,0,26.6,Merge pull request #422 from sahvx655-wq/is-integer-signed-overflow
+91aef729bd8652c44c9bfcc391425ceffd82c230,2026-10-09,ok,integer 100,0.0,0.0,0.0,0,0,14.8,Merge pull request #422 from sahvx655-wq/is-integer-signed-overflow
+91aef729bd8652c44c9bfcc391425ceffd82c230,2026-10-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.1,Merge pull request #422 from sahvx655-wq/is-integer-signed-overflow
+91aef729bd8652c44c9bfcc391425ceffd82c230,2026-10-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Merge pull request #422 from sahvx655-wq/is-integer-signed-overflow
+42f254836ee416ffcf2f4e6576260003ac33d48c,2026-10-09,ok,price 187.25,0.0,0.0,0.0,0,0,26.6,Version 8.3.2
+42f254836ee416ffcf2f4e6576260003ac33d48c,2026-10-09,ok,integer 100,0.0,0.0,0.0,0,0,14.8,Version 8.3.2
+42f254836ee416ffcf2f4e6576260003ac33d48c,2026-10-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.0,Version 8.3.2
+42f254836ee416ffcf2f4e6576260003ac33d48c,2026-10-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Version 8.3.2
+166d2b3df29cf8101bb715bde2125610881df791,2026-10-12,ok,price 187.25,0.0,0.0,0.0,0,0,26.6,Merge pull request #425 from fastfloat/fix-424-fixed-width-invalid
+166d2b3df29cf8101bb715bde2125610881df791,2026-10-12,ok,integer 100,0.0,0.0,0.0,0,0,14.9,Merge pull request #425 from fastfloat/fix-424-fixed-width-invalid
+166d2b3df29cf8101bb715bde2125610881df791,2026-10-12,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.0,Merge pull request #425 from fastfloat/fix-424-fixed-width-invalid
+166d2b3df29cf8101bb715bde2125610881df791,2026-10-12,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.8,Merge pull request #425 from fastfloat/fix-424-fixed-width-invalid
+638a8acd6d8683ede2f5b3e0d801f56586b5d68d,2026-10-17,ok,price 187.25,0.0,0.0,0.0,0,0,26.9,Merge pull request #426 from sahvx655-wq/power-negative-shift
+638a8acd6d8683ede2f5b3e0d801f56586b5d68d,2026-10-17,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Merge pull request #426 from sahvx655-wq/power-negative-shift
+638a8acd6d8683ede2f5b3e0d801f56586b5d68d,2026-10-17,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.9,Merge pull request #426 from sahvx655-wq/power-negative-shift
+638a8acd6d8683ede2f5b3e0d801f56586b5d68d,2026-10-17,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.3,Merge pull request #426 from sahvx655-wq/power-negative-shift
+33785d5d61993b8c22eacc58108e1cf109eca490,2026-10-29,ok,price 187.25,0.0,0.0,0.0,0,0,26.9,Merge pull request #431 from aikhanjum/codex/fastfloat-correctness
+33785d5d61993b8c22eacc58108e1cf109eca490,2026-10-29,ok,integer 100,0.0,0.0,0.0,0,0,14.2,Merge pull request #431 from aikhanjum/codex/fastfloat-correctness
+33785d5d61993b8c22eacc58108e1cf109eca490,2026-10-29,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.0,Merge pull request #431 from aikhanjum/codex/fastfloat-correctness
+33785d5d61993b8c22eacc58108e1cf109eca490,2026-10-29,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.3,Merge pull request #431 from aikhanjum/codex/fastfloat-correctness
+9054aa02bec09b69d37c74ed94896df2e47bb0c9,2026-10-31,ok,price 187.25,0.0,0.0,0.0,0,0,27.0,Merge pull request #430 from CODER-7777/fix-427-unlikely-cxx20-ext-warning
+9054aa02bec09b69d37c74ed94896df2e47bb0c9,2026-10-31,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Merge pull request #430 from CODER-7777/fix-427-unlikely-cxx20-ext-warning
+9054aa02bec09b69d37c74ed94896df2e47bb0c9,2026-10-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.2,Merge pull request #430 from CODER-7777/fix-427-unlikely-cxx20-ext-warning
+9054aa02bec09b69d37c74ed94896df2e47bb0c9,2026-10-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.4,Merge pull request #430 from CODER-7777/fix-427-unlikely-cxx20-ext-warning
+dbeabeeb3e6791cb96994c2a7a084c36e62ccfb2,2026-10-31,ok,price 187.25,0.0,0.0,0.0,0,0,27.0,Version 8.3.3
+dbeabeeb3e6791cb96994c2a7a084c36e62ccfb2,2026-10-31,ok,integer 100,0.0,0.0,0.0,0,0,14.3,Version 8.3.3
+dbeabeeb3e6791cb96994c2a7a084c36e62ccfb2,2026-10-31,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,35.9,Version 8.3.3
+dbeabeeb3e6791cb96994c2a7a084c36e62ccfb2,2026-10-31,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.4,Version 8.3.3
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,price 187.25,0.0,0.0,0.0,0,0,26.9,Merge pull request #432 from fastfloat/rounds-to-nearest-macro
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,integer 100,0.0,0.0,0.0,0,0,14.2,Merge pull request #432 from fastfloat/rounds-to-nearest-macro
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,36.0,Merge pull request #432 from fastfloat/rounds-to-nearest-macro
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,32.4,Merge pull request #432 from fastfloat/rounds-to-nearest-macro

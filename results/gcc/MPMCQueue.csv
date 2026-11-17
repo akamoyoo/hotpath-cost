@@ -1,0 +1,15 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+c7ee1820427bbf28c1f5ea196c725d12feb8b4b6,2018-09-13,ok,push+pop,0.0,0.0,0.0,0,0,85.5,Merge pull request #6 from rigtorp/dev
+c7ee1820427bbf28c1f5ea196c725d12feb8b4b6,2018-09-13,ok,try_push+try_pop,0.0,0.0,0.0,0,0,52.9,Merge pull request #6 from rigtorp/dev
+46b194e662955dc5d833fab2bac196a3df863d08,2019-10-03,ok,push+pop,0.0,0.0,0.0,0,0,63.2,Replace use of ssize_t with ptrdiff_t
+46b194e662955dc5d833fab2bac196a3df863d08,2019-10-03,ok,try_push+try_pop,0.0,0.0,0.0,0,0,53.0,Replace use of ssize_t with ptrdiff_t
+0dac08b19b41d6499bd6e76b6afeb0e2fca96e19,2019-10-13,ok,push+pop,0.0,0.0,0.0,0,0,63.8,Use std::hardware_destructive_interference_size if available
+0dac08b19b41d6499bd6e76b6afeb0e2fca96e19,2019-10-13,ok,try_push+try_pop,0.0,0.0,0.0,0,0,52.5,Use std::hardware_destructive_interference_size if available
+b6ec84574560c1922e414e56ae66b686e71e22fd,2020-04-13,ok,push+pop,0.0,0.0,0.0,0,0,82.3,Make MPMCQueue allocator aware
+b6ec84574560c1922e414e56ae66b686e71e22fd,2020-04-13,ok,try_push+try_pop,0.0,0.0,0.0,0,0,62.4,Make MPMCQueue allocator aware
+2729732e374c9819d18dc7b0f0400453abc7f853,2021-08-28,ok,push+pop,0.0,0.0,0.0,0,0,82.4,Fix _WIN32 preprocessor check
+2729732e374c9819d18dc7b0f0400453abc7f853,2021-08-28,ok,try_push+try_pop,0.0,0.0,0.0,0,0,63.1,Fix _WIN32 preprocessor check
+dfce00511b12afec5ba9cf43dc6d6c7f56a3f0f8,2021-12-01,ok,push+pop,0.0,0.0,0.0,0,0,64.1,Add size() and empty() methods
+dfce00511b12afec5ba9cf43dc6d6c7f56a3f0f8,2021-12-01,ok,try_push+try_pop,0.0,0.0,0.0,0,0,52.4,Add size() and empty() methods
+dc0bdf24e2d1b5d85aac269af8b38709b7838d1f,2021-12-01,ok,push+pop,0.0,0.0,0.0,0,0,64.4,Fix for Apple compiler bug
+dc0bdf24e2d1b5d85aac269af8b38709b7838d1f,2021-12-01,ok,try_push+try_pop,0.0,0.0,0.0,0,0,52.8,Fix for Apple compiler bug

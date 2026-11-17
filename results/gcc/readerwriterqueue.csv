@@ -1,0 +1,133 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+9d55022beba7fd51cc4798c089e809aad64ea7a5,2013-02-07,build failed,,,,,,,,Initial dump of completed lock-free queue
+3d3560af131f5a881ed8527efb04b87bada4e6b9,2013-02-14,build failed,,,,,,,,Tidied up a little. Moved stuff into moodycamel namespace
+e525b8a2277ee418b1876c5eb862adc3ceaa1c03,2013-02-14,build failed,,,,,,,,Updated comment
+66cd316bfa5e4a77517a559d247d13ca80fe3dde,2013-04-28,build failed,,,,,,,,Removed 'benign' data races
+893b38ddd96af308d447c8d0c4753f9dfcea7c38,2013-05-01,build failed,,,,,,,,Fixed compile error on MSVC2010
+12d02dacf2edeca345a57d7b9d2324bea7d98c0f,2013-05-01,build failed,,,,,,,,Added preprocessor defines to do re-entrancy checks only in debug mode
+17bc04cb862b23f4faa635a6efa323ea2671de43,2013-05-05,build failed,,,,,,,,Optimizations
+1f3a42def749fed4bf23a3dbb45af68d41feaa4b,2013-05-06,build failed,,,,,,,,Comment tweaks (license and copyright)
+70763e336c3d5fdc7dc5a8215a07d069a9dcbe04,2013-05-21,build failed,,,,,,,,"Removed ""cached value"" in atomic type (was inelegant and can be slower than without)"
+9f321ff12281a3af09abb1cb5fef4ff9bde3a3ae,2013-08-10,build failed,,,,,,,,Fixed rvalue forwarding (issue #1)
+69d9385d345e1b5191a05321a4445ac7c4d76f55,2013-10-06,build failed,,,,,,,,Silenced silly warnings under VS2012
+20f47064589bf9a8520972ab0a60fe29275fbe6f,2013-10-14,build failed,,,,,,,,Merge pull request #2 from teragonaudio/remove-junk-char
+d0e603d0fdbacad8872bc9e6bfe68131e845562e,2013-10-14,build failed,,,,,,,,Merge pull request #3 from teragonaudio/unshadowing
+c3486b1dbf27102ffac4abe20b263f725d653211,2014-01-01,build failed,,,,,,,,Added peek() method
+193a9376c2ddfb53e5ffb1f5bce839fbeec77749,2014-02-24,build failed,,,,,,,,Fixed warnings when compiled with -Wpedantic under GCC
+b1c3c3113a4fa81b0a0d13a1a79f9a971ea64c81,2014-02-24,build failed,,,,,,,,Removed extra semi-colon (oops)
+7a6c01ab8570675fa119e330f9c98e9f6a565ed2,2014-03-24,build failed,,,,,,,,Added pop() method to complement peek(); Changed try_dequeue to allow a type different from T to be passed in (though it must still accept a T being assigned to it); tweaked unit test command-line interface to show list of tests instead of crashing when an unknown test name is selected
+f259dead83229007a4cdfc8c8c6fdad145fb8025,2014-04-06,build failed,,,,,,,,Fix memory leak in destructor.
+1bc8fc1041efeb2cf286083c9d854008201dac87,2014-04-08,build failed,,,,,,,,Merged in hanickadot's fix for memory leak in destructor (f259dead83229007a4cdfc8c8c6fdad145fb8025)
+29d3ca9b7e9353564c992460bfdfb022cbf22cd9,2014-05-20,build failed,,,,,,,,Fixed alignment warning in VS2013 (and added project files for VS2013)
+db1638ce99e5bbc53ecaa13bf4abdff7e60186e8,2014-05-21,build failed,,,,,,,,"Fixed compile error on MSVC10 introduced in last commit, and added x64 platform to MSVC10 projects"
+060e32b4ffbbb07baf144beebceb4c1ac5867881,2014-06-14,build failed,,,,,,,,Added size_approx()
+5a012621b42460f83efdc5d9fada85e35dc4e9c0,2014-08-14,build failed,,,,,,,,Fixed alignment warning C4316 under MSVC when allocating queue via new
+b8f5f9463468974384a1c3bb8846bf81e6eb86f2,2014-10-19,build failed,,,,,,,,Merge pull request #11 from tbeu/patch_memleak
+3f6c8b4a15b0113cee9ab811afac2aee137bc047,2014-10-19,build failed,,,,,,,,Fixed use of member after dtor
+dc57e51af90ce1d818dcaed2146956e1b9fd277f,2014-10-23,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,7.9,Cleaned up block allocation -- now allocation is done all at once for the block and its contents. Also handled malloc() failure a bit more gracefully!
+dc57e51af90ce1d818dcaed2146956e1b9fd277f,2014-10-23,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Cleaned up block allocation -- now allocation is done all at once for the block and its contents. Also handled malloc() failure a bit more gracefully!
+ccb53c631457e4719a860bea64af7c69bd60d0e9,2015-01-16,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,10.9,Attempt to improve performance via cache-locality and limiting the maximum block size
+ccb53c631457e4719a860bea64af7c69bd60d0e9,2015-01-16,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.1,Attempt to improve performance via cache-locality and limiting the maximum block size
+d7c6ca0bdddeefa1ee206add09e8cd627bf0ec36,2015-01-27,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,12.0,"More attempts at optimizing, and fixed bug introduced in previous commit"
+d7c6ca0bdddeefa1ee206add09e8cd627bf0ec36,2015-01-27,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.9,"More attempts at optimizing, and fixed bug introduced in previous commit"
+0f46fc49c9660d0b0fa91d777857065559da4085,2015-01-28,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.2,Merge
+0f46fc49c9660d0b0fa91d777857065559da4085,2015-01-28,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Merge
+23c204c27683e4fb96aa815c71fab5e51503904a,2015-04-09,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,7.5,Added blocking version of queue (issue #12)
+23c204c27683e4fb96aa815c71fab5e51503904a,2015-04-09,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.2,Added blocking version of queue (issue #12)
+c1c369371499ffef1cb9a649ade97e76388ae0c5,2015-04-10,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Fixed mismatched warning directives on VS2012+
+c1c369371499ffef1cb9a649ade97e76388ae0c5,2015-04-10,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Fixed mismatched warning directives on VS2012+
+b70c303eed2b784d046f5cd89a2e7129311fe052,2016-01-14,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,8.0,Got atomicops.h to compile under C++/CLI
+b70c303eed2b784d046f5cd89a2e7129311fe052,2016-01-14,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.0,Got atomicops.h to compile under C++/CLI
+0823c6127331d16ac33679f926be6f9e9f372d98,2016-02-10,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.4,Don't throw from ctor when allocation fails and exceptions are disabled (abort instead)
+0823c6127331d16ac33679f926be6f9e9f372d98,2016-02-10,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Don't throw from ctor when allocation fails and exceptions are disabled (abort instead)
+9fa0b225973698b8d9c4707111b74092bbc486a5,2016-05-08,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.3,Added missing header in attempt to fix issue #30
+9fa0b225973698b8d9c4707111b74092bbc486a5,2016-05-08,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.6,Added missing header in attempt to fix issue #30
+0da535c3ec5a11852957c45037489cb6e8546c4a,2016-05-11,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Added support for timeouts in blocking version of queue (see issues #19 and #26)
+0da535c3ec5a11852957c45037489cb6e8546c4a,2016-05-11,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Added support for timeouts in blocking version of queue (see issues #19 and #26)
+4b1d346bd26e55ff7d83857735946995e47d411d,2016-05-11,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.2,Fixed comparison
+4b1d346bd26e55ff7d83857735946995e47d411d,2016-05-11,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.6,Fixed comparison
+81fbcdcdd3f309165c19552d173f68bfe6553b6d,2016-05-12,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Added missing header for recently introduced code (issue #32)
+81fbcdcdd3f309165c19552d173f68bfe6553b6d,2016-05-12,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Added missing header for recently introduced code (issue #32)
+d493f03b223f6eb2f634f4c8e6b1b733951d532e,2016-06-15,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Added missing include/library reference for clock_gettime (was causing stabtest to fail to compile on Linux)
+d493f03b223f6eb2f634f4c8e6b1b733951d532e,2016-06-15,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Added missing include/library reference for clock_gettime (was causing stabtest to fail to compile on Linux)
+f2c0c6f881a143bcd0a1023b64d8dee24743f5ca,2016-06-23,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Merge pull request #33 from sommern/master
+f2c0c6f881a143bcd0a1023b64d8dee24743f5ca,2016-06-23,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Merge pull request #33 from sommern/master
+66a9b188ed97db4986cdef8763cdc7bff06df5cd,2016-11-23,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Allow VS2012+ to access std::chrono versions of blocking functions too (issue #40)
+66a9b188ed97db4986cdef8763cdc7bff06df5cd,2016-11-23,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Allow VS2012+ to access std::chrono versions of blocking functions too (issue #40)
+5d84f8e32ef6fd9483f7ed55482297a426c68419,2017-06-26,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.2,Merge pull request #46 from trilorez/master
+5d84f8e32ef6fd9483f7ed55482297a426c68419,2017-06-26,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Merge pull request #46 from trilorez/master
+4a3d3bf6e6c3b9415feec33b005f71b49ec48107,2017-09-27,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.2,Fixed issue #49 where nsec could exceed its maximum value by one
+4a3d3bf6e6c3b9415feec33b005f71b49ec48107,2017-09-27,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Fixed issue #49 where nsec could exceed its maximum value by one
+ae143308d64b4da7b81b5cbb4ce947d6341c89c4,2017-10-10,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Added move constructor/assignment operator. Allows vectors of queues to be created (though not without cost -- the move constructor allocates dynamic memory). Fixes #50
+ae143308d64b4da7b81b5cbb4ce947d6341c89c4,2017-10-10,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Added move constructor/assignment operator. Allows vectors of queues to be created (though not without cost -- the move constructor allocates dynamic memory). Fixes #50
+373392d008d5fc13e5b9d5f2cb7f2e683bd2c3fa,2017-11-09,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.2,Merge pull request #56 from jonathonracz/master
+373392d008d5fc13e5b9d5f2cb7f2e683bd2c3fa,2017-11-09,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Merge pull request #56 from jonathonracz/master
+16984c44decc73a1b192d86847d87b5e383cb70d,2017-12-11,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.7,Merge pull request #55 from mark-99/master
+16984c44decc73a1b192d86847d87b5e383cb70d,2017-12-11,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.8,Merge pull request #55 from mark-99/master
+07e22ecdf90501df89ead679bb8294a0b7c80c24,2018-02-20,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,7.7,Fixed infinite loop in blockingreaderwriterqueue on OS X (courtesy of pull request on concurrentqueue by DarkDimius)
+07e22ecdf90501df89ead679bb8294a0b7c80c24,2018-02-20,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,12.5,Fixed infinite loop in blockingreaderwriterqueue on OS X (courtesy of pull request on concurrentqueue by DarkDimius)
+562a7958b49ae17d27dfc5c3ab0d28a09a2b17ab,2018-07-10,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,7.6,Changed weak_atomic to compile with newer glibc std::atomic copy/move ctors (issue #61)
+562a7958b49ae17d27dfc5c3ab0d28a09a2b17ab,2018-07-10,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.7,Changed weak_atomic to compile with newer glibc std::atomic copy/move ctors (issue #61)
+ef7dfbf553288064347d51b8ac335f1ca489032a,2018-07-11,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.6,Made BlockingReaderWriterQueue movable (issue #61)
+ef7dfbf553288064347d51b8ac335f1ca489032a,2018-07-11,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.0,Made BlockingReaderWriterQueue movable (issue #61)
+ade885b688d8d08bd9b521d36fde8b54788cc3a7,2018-11-01,build failed,,,,,,,,"Annotated all functions/methods to ensure thread sanitizer leaves it alone, in an attempt to reduce false positives (issue #65)"
+323dba9a9053607c6fc33a1af7b8738f01eca9f4,2018-11-07,build failed,,,,,,,,Merge pull request #68 from CrushedPixel/master
+adedeb1da30f42611f88d6df887591e87c35ccd0,2018-11-07,build failed,,,,,,,,More fixes to placement of no-tsan attribute (issue #65/pr #68)
+d0f9f0ccb9210e7793c371e2b460c0e0a6d7ab5a,2018-11-07,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,10.1,Attempt to fix compilation on GCC (issue #69)
+d0f9f0ccb9210e7793c371e2b460c0e0a6d7ab5a,2018-11-07,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,14.3,Attempt to fix compilation on GCC (issue #69)
+2a43f29d5e385b1b2b124bf495651096db7c2fc0,2019-01-09,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,7.6,Improved wording of assert message to match common case (see issue #60)
+2a43f29d5e385b1b2b124bf495651096db7c2fc0,2019-01-09,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,12.3,Improved wording of assert message to match common case (see issue #60)
+4e46d129897a75aaaa468e3f5c7b164230479dcf,2019-12-27,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,14.2,Fixed semaphore error handling (see issues 173 and 80 in concurrentqueue repo)
+4e46d129897a75aaaa468e3f5c7b164230479dcf,2019-12-27,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,16.0,Fixed semaphore error handling (see issues 173 and 80 in concurrentqueue repo)
+8824535861d839c3930887b9d92bfbbfeb73c761,2019-12-27,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,7.6,Renamed maxSize to size for clarity (see issue #73)
+8824535861d839c3930887b9d92bfbbfeb73c761,2019-12-27,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.7,Renamed maxSize to size for clarity (see issue #73)
+28ddbb0011dff23c9109aee5bef40ba693b594bf,2019-12-28,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,14.0,Merge branch 'neomantra-capacity'
+28ddbb0011dff23c9109aee5bef40ba693b594bf,2019-12-28,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.7,Merge branch 'neomantra-capacity'
+fc210a2c6d11796c84f56b9ea402c7c400401b3e,2020-01-13,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.8,Merge pull request #77 from halx99/patch-1
+fc210a2c6d11796c84f56b9ea402c7c400401b3e,2020-01-13,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.0,Merge pull request #77 from halx99/patch-1
+265ec3ca37fd530f4d042bc8a23c03382b0f954c,2020-01-19,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.9,Merge branch 'nkari82-master'
+265ec3ca37fd530f4d042bc8a23c03382b0f954c,2020-01-19,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.7,Merge branch 'nkari82-master'
+c37ea3a19967863c6e4b8f47f1c1ae1558cacac2,2020-06-30,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.3,Merge pull request #90 from rotdrop/bugfix/comments
+c37ea3a19967863c6e4b8f47f1c1ae1558cacac2,2020-06-30,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Merge pull request #90 from rotdrop/bugfix/comments
+8bb0cd8baa89c98a67039e69bc825dacbc3d1c71,2020-07-01,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.4,Added missing emplace/try_emplace wrappers to blocking queue (issue #92)
+8bb0cd8baa89c98a67039e69bc825dacbc3d1c71,2020-07-01,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Added missing emplace/try_emplace wrappers to blocking queue (issue #92)
+db18f8d2a8a9b03bcdd4c004c0d343935086f5f8,2020-07-01,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.1,Fixed incorrect method call in previous commit
+db18f8d2a8a9b03bcdd4c004c0d343935086f5f8,2020-07-01,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.7,Fixed incorrect method call in previous commit
+08c295df6bc446abb8e93def7879fd913f1d610a,2020-07-07,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Merge pull request #93 from AGSaidi/padding
+08c295df6bc446abb8e93def7879fd913f1d610a,2020-07-07,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Merge pull request #93 from AGSaidi/padding
+435e36540e306cac40fcfeab8cc0a22d48464509,2020-07-10,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.0,Reduced spins on semaphore wait for improved CPU usage; updated semaphore code with latest changes from concurrentqueue project
+435e36540e306cac40fcfeab8cc0a22d48464509,2020-07-10,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Reduced spins on semaphore wait for improved CPU usage; updated semaphore code with latest changes from concurrentqueue project
+2877099c67c32885c0334c1be0bca5534b1b842b,2020-08-13,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Attempt to fix error when targeting older macOS versions using C++17 (issue #99)
+2877099c67c32885c0334c1be0bca5534b1b842b,2020-08-13,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Attempt to fix error when targeting older macOS versions using C++17 (issue #99)
+dc624684d36dc2669ff9cca9a549dfbc6bed99fd,2020-08-13,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.0,Merge pull request #100 from kletoz/fix_signedness_conversion_warnings
+dc624684d36dc2669ff9cca9a549dfbc6bed99fd,2020-08-13,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Merge pull request #100 from kletoz/fix_signedness_conversion_warnings
+4927fe6d22720366aa249e1abc3d2144498dea09,2020-08-19,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Merge pull request #102 from kletoz/fix_warnings
+4927fe6d22720366aa249e1abc3d2144498dea09,2020-08-19,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Merge pull request #102 from kletoz/fix_warnings
+9ede8aff9c68d6aa2226211f6ecf3f1b28ead036,2020-08-31,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Fixed warning
+9ede8aff9c68d6aa2226211f6ecf3f1b28ead036,2020-08-31,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,Fixed warning
+a500a29fe07c759fa793a95f4782645088ce5b7a,2020-08-31,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.0,Refined OS X compatibility check with overalignment on C++17 (thanks to szarvas) (issue #99)
+a500a29fe07c759fa793a95f4782645088ce5b7a,2020-08-31,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Refined OS X compatibility check with overalignment on C++17 (thanks to szarvas) (issue #99)
+eb1925d0c58dabe5d14fbdf62bb6b38e4a945fc8,2020-11-09,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Fixed warnings in semaphore code as suggested in issue #108
+eb1925d0c58dabe5d14fbdf62bb6b38e4a945fc8,2020-11-09,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Fixed warnings in semaphore code as suggested in issue #108
+c192906c5d566bb76f9988553039fc012a481c1c,2020-11-26,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.2,Changed ReentrantGuard to be quasi-thread-safe since it mostly acts as an illegal concurrency detector most of the time (issue #110)
+c192906c5d566bb76f9988553039fc012a481c1c,2020-11-26,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.5,Changed ReentrantGuard to be quasi-thread-safe since it mostly acts as an illegal concurrency detector most of the time (issue #110)
+4cba249a73120250f1390041ebe0ca619191930b,2021-01-01,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.3,"Initial attempt at doubly-blocking circular buffer (lightly tested, unbenchmarked) (see issue #112)"
+4cba249a73120250f1390041ebe0ca619191930b,2021-01-01,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.4,"Initial attempt at doubly-blocking circular buffer (lightly tested, unbenchmarked) (see issue #112)"
+a3843754109b7a1be813e36fd32a649af1e7e9d6,2021-01-03,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.3,Fixed frivolous -Weffc++ warnings in atomicops.h and readerwritercircularbuffer.h (see issue #112)
+a3843754109b7a1be813e36fd32a649af1e7e9d6,2021-01-03,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.4,Fixed frivolous -Weffc++ warnings in atomicops.h and readerwritercircularbuffer.h (see issue #112)
+1f3c8e4213115484bcc6d49255b65526ed38cf5b,2021-05-29,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.9,Tentative fix for tsan warnings (requires -std=c++17 or higher) based on https://github.com/russellmcc/readerwriterqueue/commit/c2b064a57b2495b027c4457ddd8f50893f421991 (see issue #116)
+1f3c8e4213115484bcc6d49255b65526ed38cf5b,2021-05-29,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,16.0,Tentative fix for tsan warnings (requires -std=c++17 or higher) based on https://github.com/russellmcc/readerwriterqueue/commit/c2b064a57b2495b027c4457ddd8f50893f421991 (see issue #116)
+6026fb43ede52d3501434e3fe85f040b9a728bcf,2021-07-05,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.3,Initial attempt at FreeRTOS semaphore support (see issue #127)
+6026fb43ede52d3501434e3fe85f040b9a728bcf,2021-07-05,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.6,Initial attempt at FreeRTOS semaphore support (see issue #127)
+8e7627d18c2108aca178888d88514179899a044f,2021-08-14,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Attempt to support semaphore use from within FreeRTOS ISR context (see #127)
+8e7627d18c2108aca178888d88514179899a044f,2021-08-14,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,15.5,Attempt to support semaphore use from within FreeRTOS ISR context (see #127)
+2dee33ae3edd1e454ac34fea0a27017613355eff,2023-03-05,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Merge pull request #143 from NeRdTheNed/master
+2dee33ae3edd1e454ac34fea0a27017613355eff,2023-03-05,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Merge pull request #143 from NeRdTheNed/master
+16b48ae1148284e7b40abf72167206a4390a4592,2024-07-09,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Merge pull request #157 from PromyLOPh/master
+16b48ae1148284e7b40abf72167206a4390a4592,2024-07-09,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Merge pull request #157 from PromyLOPh/master
+9ffc91de87452b9c4131137c9d7e7ba5aac1d03d,2026-09-07,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.0,Merge pull request #172 from cppmage/cppmage-fix-tailblock-next-race
+9ffc91de87452b9c4131137c9d7e7ba5aac1d03d,2026-09-07,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Merge pull request #172 from cppmage/cppmage-fix-tailblock-next-race
+6867b56452352acf077fccd5f6cc7e3a8cfde0fb,2026-09-07,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.1,Merge pull request #174 from t0x1c/master
+6867b56452352acf077fccd5f6cc7e3a8cfde0fb,2026-09-07,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.5,Merge pull request #174 from t0x1c/master
+87b1df19256d68a9e093ca1540a5ef96b69145e8,2026-11-07,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,0,0,11.4,Merge pull request #176 from Ethan-y-free/fix/configurable-spin-count
+87b1df19256d68a9e093ca1540a5ef96b69145e8,2026-11-07,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,13.6,Merge pull request #176 from Ethan-y-free/fix/configurable-spin-count

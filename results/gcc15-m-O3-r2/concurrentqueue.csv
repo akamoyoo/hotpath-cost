@@ -1,0 +1,4 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+36c5755dc0789e5bcddbbb9a201d3af2bbf3024c,2026-10-25,ok,try_enqueue+try_dequeue,0.0,0.0,0.0,3,1,59.0,Merge pull request #460 from Ethan-y-free/fix/modules-static-inline
+36c5755dc0789e5bcddbbb9a201d3af2bbf3024c,2026-10-25,ok,try_enqueue_tok+try_dequeue_tok,0.0,0.0,0.0,0,0,30.9,Merge pull request #460 from Ethan-y-free/fix/modules-static-inline
+36c5755dc0789e5bcddbbb9a201d3af2bbf3024c,2026-10-25,ok,enqueue+try_dequeue,0.0,0.0,0.0,0,0,48.4,Merge pull request #460 from Ethan-y-free/fix/modules-static-inline

@@ -1,0 +1,8 @@
+    384 ns    366 insns  14 itoa/utoa calls  -O2
+    321 ns    546 insns   0 itoa/utoa calls  -O2 --param=max-inline-insns-auto=30
+    380 ns    366 insns  14 itoa/utoa calls  -O2 --param=early-inlining-insns=14
+    398 ns    366 insns  14 itoa/utoa calls  -O2 --param=inline-min-speedup=15
+    336 ns    835 insns  16 itoa/utoa calls  -O2 --param=max-inline-insns-single=200
+    384 ns    366 insns  14 itoa/utoa calls  -O2 --param=inline-heuristics-hint-percent=600
+    261 ns   1000 insns   0 itoa/utoa calls  -O2 --param=max-inline-insns-auto=30 --param=early-inlining-insns=14 --param=inline-min-speedup=15 --param=max-inline-insns-single=200 --param=inline-heuristics-hint-percent=600
+    177 ns   6733 insns   0 itoa/utoa calls  -O3

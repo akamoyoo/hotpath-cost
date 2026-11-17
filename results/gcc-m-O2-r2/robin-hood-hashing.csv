@@ -1,0 +1,5 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,find (hit),0.0,0.0,0.0,0,0,45.9,Enable std::is_trivially_copyable in clang (#166)
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,find (miss),0.0,0.0,0.0,0,0,36.2,Enable std::is_trivially_copyable in clang (#166)
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,insert+erase,0.0,0.0,0.0,0,0,151.6,Enable std::is_trivially_copyable in clang (#166)
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,57.0,Enable std::is_trivially_copyable in clang (#166)

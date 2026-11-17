@@ -1,0 +1,4 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+b7f1befe89446752767243c5e5550779a9a5eed2,2026-10-23,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,43.4,Reuse the typename instead of redefining.
+b7f1befe89446752767243c5e5550779a9a5eed2,2026-10-23,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Reuse the typename instead of redefining.
+b7f1befe89446752767243c5e5550779a9a5eed2,2026-10-23,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,Reuse the typename instead of redefining.

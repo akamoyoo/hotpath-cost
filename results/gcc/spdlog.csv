@@ -1,0 +1,333 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+681e40ce46c568f66bcbfb33ad34c39c35f75ab4,2014-01-25,build failed,,,,,,,,Initial import
+005dc7e605ceeabbda80679dbc8af1a184d069dc,2014-02-22,build failed,,,,,,,,underscore first in members
+8494590fb3d4fcc8af9c91c3785d7aed3ce7e0f9,2014-03-22,build failed,,,,,,,,astyle+dos2unix
+bde2d24abb05b439f099712c50c900d77daa0088,2014-03-31,build failed,,,,,,,,astyle
+481fdbcbb19482fe01a430976e982c24d6a5c95b,2014-10-14,build failed,,,,,,,,Added pattern formatter and updated related stuff
+cbddc8796a7ff5ceb903d27fe61ccd95d1166fcc,2014-10-30,build failed,,,,,,,,1. renamed lib to to spitlog 2. Rotating bugfix
+a3a8f107a468a16ae31b2a2c85c1489e0273c854,2014-11-21,build failed,,,,,,,,revert syslog
+fcd1fc037ffbeb3d4d56566d356f920ff903ac86,2014-12-19,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,660.0,append instead of truncate when opening new files
+fcd1fc037ffbeb3d4d56566d356f920ff903ac86,2014-12-19,ok,null sink info(string),0.0,0.0,1.0,0,1,394.2,append instead of truncate when opening new files
+fcd1fc037ffbeb3d4d56566d356f920ff903ac86,2014-12-19,ok,null sink debug below level,0.0,0.0,0.0,0,0,13.4,append instead of truncate when opening new files
+fcd1fc037ffbeb3d4d56566d356f920ff903ac86,2014-12-19,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,719.1,append instead of truncate when opening new files
+b74b28f5c64b67adfa54e01302e939b23628e59a,2015-01-15,build failed,,,,,,,,added includes to common.h
+9fc0ab31d5b54b544bc47392e5870c5ecdbf7294,2015-03-26,build failed,,,,,,,,Update spdlog.h
+32bc807109e1c0aaef7d0555355791698d5786b9,2015-05-09,build failed,,,,,,,,Comments
+06ffde6333d4e8e34d2cd1a48ec584c8161976f5,2015-11-28,build failed,,,,,,,,Fixed flush of logs in async mode
+418dec1e4bda356ec4255e4e4e4c27b7d0c04108,2016-03-28,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1228.7,Merge pull request #188 from PedroRod/master
+418dec1e4bda356ec4255e4e4e4c27b7d0c04108,2016-03-28,ok,null sink info(string),0.0,0.0,1.0,0,1,931.3,Merge pull request #188 from PedroRod/master
+418dec1e4bda356ec4255e4e4e4c27b7d0c04108,2016-03-28,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.2,Merge pull request #188 from PedroRod/master
+418dec1e4bda356ec4255e4e4e4c27b7d0c04108,2016-03-28,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1282.1,Merge pull request #188 from PedroRod/master
+5202a7806f66e3eebd09108fc65fd36e09d4e981,2016-05-16,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1184.8,Merge pull request #210 from GreatFruitOmsk/master
+5202a7806f66e3eebd09108fc65fd36e09d4e981,2016-05-16,ok,null sink info(string),0.0,0.0,1.0,0,1,922.3,Merge pull request #210 from GreatFruitOmsk/master
+5202a7806f66e3eebd09108fc65fd36e09d4e981,2016-05-16,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.6,Merge pull request #210 from GreatFruitOmsk/master
+5202a7806f66e3eebd09108fc65fd36e09d4e981,2016-05-16,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1234.2,Merge pull request #210 from GreatFruitOmsk/master
+916a686f8fd1615016bbd11c67abdc6c866e4840,2016-08-20,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1183.6,astyle
+916a686f8fd1615016bbd11c67abdc6c866e4840,2016-08-20,ok,null sink info(string),0.0,0.0,1.0,0,1,925.3,astyle
+916a686f8fd1615016bbd11c67abdc6c866e4840,2016-08-20,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,astyle
+916a686f8fd1615016bbd11c67abdc6c866e4840,2016-08-20,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1234.8,astyle
+12800ac46627b9a569390c19a9aeee9732f1281a,2016-09-30,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1190.2,fixed shadow warnings in gcc
+12800ac46627b9a569390c19a9aeee9732f1281a,2016-09-30,ok,null sink info(string),0.0,0.0,1.0,0,1,925.4,fixed shadow warnings in gcc
+12800ac46627b9a569390c19a9aeee9732f1281a,2016-09-30,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,fixed shadow warnings in gcc
+12800ac46627b9a569390c19a9aeee9732f1281a,2016-09-30,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1245.0,fixed shadow warnings in gcc
+d6b34d7b5c62a0000d96939ad946b85a2274f2bb,2016-11-19,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1195.6,Updated to fmt version 796beaaddb5226162fe00c2c55e322d80d26f3d8
+d6b34d7b5c62a0000d96939ad946b85a2274f2bb,2016-11-19,ok,null sink info(string),0.0,0.0,1.0,0,1,929.4,Updated to fmt version 796beaaddb5226162fe00c2c55e322d80d26f3d8
+d6b34d7b5c62a0000d96939ad946b85a2274f2bb,2016-11-19,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,Updated to fmt version 796beaaddb5226162fe00c2c55e322d80d26f3d8
+d6b34d7b5c62a0000d96939ad946b85a2274f2bb,2016-11-19,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1319.6,Updated to fmt version 796beaaddb5226162fe00c2c55e322d80d26f3d8
+0e016882d9007179aaa685999e6e700d7fbef40c,2016-12-06,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1255.5,Update os.h
+0e016882d9007179aaa685999e6e700d7fbef40c,2016-12-06,ok,null sink info(string),0.0,0.0,1.0,0,1,723.2,Update os.h
+0e016882d9007179aaa685999e6e700d7fbef40c,2016-12-06,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.7,Update os.h
+0e016882d9007179aaa685999e6e700d7fbef40c,2016-12-06,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1390.2,Update os.h
+fec467da7b86622e646f8f209d0c9757b684c18a,2016-12-10,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1257.9,extra blank line between comments
+fec467da7b86622e646f8f209d0c9757b684c18a,2016-12-10,ok,null sink info(string),0.0,0.0,1.0,0,1,387.0,extra blank line between comments
+fec467da7b86622e646f8f209d0c9757b684c18a,2016-12-10,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,extra blank line between comments
+fec467da7b86622e646f8f209d0c9757b684c18a,2016-12-10,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,713.0,extra blank line between comments
+0a3a3f0ee2d9b55a1c968e26fe2115aff985e92a,2016-12-31,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,644.1,Updated comment on thread safety
+0a3a3f0ee2d9b55a1c968e26fe2115aff985e92a,2016-12-31,ok,null sink info(string),0.0,0.0,1.0,0,1,386.9,Updated comment on thread safety
+0a3a3f0ee2d9b55a1c968e26fe2115aff985e92a,2016-12-31,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,Updated comment on thread safety
+0a3a3f0ee2d9b55a1c968e26fe2115aff985e92a,2016-12-31,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,700.9,Updated comment on thread safety
+38456118d0ff406d1cb9cecbdf91fa0b4bd27b82,2016-12-31,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,631.0,Update null_sink.h
+38456118d0ff406d1cb9cecbdf91fa0b4bd27b82,2016-12-31,ok,null sink info(string),0.0,0.0,0.0,0,0,371.3,Update null_sink.h
+38456118d0ff406d1cb9cecbdf91fa0b4bd27b82,2016-12-31,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,Update null_sink.h
+38456118d0ff406d1cb9cecbdf91fa0b4bd27b82,2016-12-31,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,706.5,Update null_sink.h
+1ab63ffdca3b0910ff13752c08323e0e60cccfdf,2017-05-18,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,652.1,Merge pull request #445 from alzix/message_counter
+1ab63ffdca3b0910ff13752c08323e0e60cccfdf,2017-05-18,ok,null sink info(string),0.0,0.0,0.0,0,0,368.7,Merge pull request #445 from alzix/message_counter
+1ab63ffdca3b0910ff13752c08323e0e60cccfdf,2017-05-18,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.7,Merge pull request #445 from alzix/message_counter
+1ab63ffdca3b0910ff13752c08323e0e60cccfdf,2017-05-18,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,735.2,Merge pull request #445 from alzix/message_counter
+fc14ac23e967d2180cdf19f7c72487ddd044645e,2017-07-23,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,632.9,Merge pull request #478 from snapbug/master
+fc14ac23e967d2180cdf19f7c72487ddd044645e,2017-07-23,ok,null sink info(string),0.0,0.0,0.0,0,0,365.4,Merge pull request #478 from snapbug/master
+fc14ac23e967d2180cdf19f7c72487ddd044645e,2017-07-23,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.7,Merge pull request #478 from snapbug/master
+fc14ac23e967d2180cdf19f7c72487ddd044645e,2017-07-23,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,706.1,Merge pull request #478 from snapbug/master
+dcc7b347caadca6d191c40c8ae59a3320ab277ac,2017-11-25,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,1315.2,"Removed all *_if functions (trace_if, debug_if, info_if,..) because they are redundant and confusing way to preform if"
+dcc7b347caadca6d191c40c8ae59a3320ab277ac,2017-11-25,ok,null sink info(string),0.0,0.0,0.0,0,0,761.5,"Removed all *_if functions (trace_if, debug_if, info_if,..) because they are redundant and confusing way to preform if"
+dcc7b347caadca6d191c40c8ae59a3320ab277ac,2017-11-25,ok,null sink debug below level,0.0,0.0,0.0,0,0,10.2,"Removed all *_if functions (trace_if, debug_if, info_if,..) because they are redundant and confusing way to preform if"
+dcc7b347caadca6d191c40c8ae59a3320ab277ac,2017-11-25,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1446.3,"Removed all *_if functions (trace_if, debug_if, info_if,..) because they are redundant and confusing way to preform if"
+5ab033fba5710fc9fc7fbff901e27a8d9d92778e,2018-02-05,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,647.9,Fix issue #629
+5ab033fba5710fc9fc7fbff901e27a8d9d92778e,2018-02-05,ok,null sink info(string),0.0,0.0,0.0,0,0,382.0,Fix issue #629
+5ab033fba5710fc9fc7fbff901e27a8d9d92778e,2018-02-05,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.7,Fix issue #629
+5ab033fba5710fc9fc7fbff901e27a8d9d92778e,2018-02-05,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,739.0,Fix issue #629
+18c99682a816ccb98898efc035774a1ac8ff5bda,2018-03-17,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,639.4,fixed clang warning about uninitialized values
+18c99682a816ccb98898efc035774a1ac8ff5bda,2018-03-17,ok,null sink info(string),0.0,0.0,0.0,0,0,363.6,fixed clang warning about uninitialized values
+18c99682a816ccb98898efc035774a1ac8ff5bda,2018-03-17,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,fixed clang warning about uninitialized values
+18c99682a816ccb98898efc035774a1ac8ff5bda,2018-03-17,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,707.2,fixed clang warning about uninitialized values
+b393c9d6e62f6f7e09c34f928272ccc36988077d,2018-04-29,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,1272.6,Fixed console traits
+b393c9d6e62f6f7e09c34f928272ccc36988077d,2018-04-29,ok,null sink info(string),0.0,0.0,0.0,0,0,748.8,Fixed console traits
+b393c9d6e62f6f7e09c34f928272ccc36988077d,2018-04-29,ok,null sink debug below level,0.0,0.0,0.0,0,0,10.8,Fixed console traits
+b393c9d6e62f6f7e09c34f928272ccc36988077d,2018-04-29,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1461.2,Fixed console traits
+7f6220d960a8824ef6fc070ffcf9ee6d5da4898c,2018-06-01,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,625.8,increase errno string buffer size
+7f6220d960a8824ef6fc070ffcf9ee6d5da4898c,2018-06-01,ok,null sink info(string),0.0,0.0,0.0,0,0,361.7,increase errno string buffer size
+7f6220d960a8824ef6fc070ffcf9ee6d5da4898c,2018-06-01,ok,null sink debug below level,0.0,0.0,0.0,0,0,6.1,increase errno string buffer size
+7f6220d960a8824ef6fc070ffcf9ee6d5da4898c,2018-06-01,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,698.3,increase errno string buffer size
+5683c06d9af69c3a4531c9d380cd0ef3713df94c,2018-06-13,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,686.4,solve issue #724
+5683c06d9af69c3a4531c9d380cd0ef3713df94c,2018-06-13,ok,null sink info(string),0.0,0.0,0.0,0,0,359.1,solve issue #724
+5683c06d9af69c3a4531c9d380cd0ef3713df94c,2018-06-13,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,solve issue #724
+5683c06d9af69c3a4531c9d380cd0ef3713df94c,2018-06-13,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,741.6,solve issue #724
+58e09dbd336353ec27916153809b5ce244f45e16,2018-06-13,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,667.4,Update common.h
+58e09dbd336353ec27916153809b5ce244f45e16,2018-06-13,ok,null sink info(string),0.0,0.0,0.0,0,0,359.1,Update common.h
+58e09dbd336353ec27916153809b5ce244f45e16,2018-06-13,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,Update common.h
+58e09dbd336353ec27916153809b5ce244f45e16,2018-06-13,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,741.6,Update common.h
+9d7a5c253a05566c366e1a9352c3c00cc78e0f27,2018-06-15,ok,"null sink info(int, double)",0.0,0.0,0.0,9,0,664.4,Moved fmt helpers to new file
+9d7a5c253a05566c366e1a9352c3c00cc78e0f27,2018-06-15,ok,null sink info(string),0.0,0.0,0.0,0,0,344.4,Moved fmt helpers to new file
+9d7a5c253a05566c366e1a9352c3c00cc78e0f27,2018-06-15,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,Moved fmt helpers to new file
+9d7a5c253a05566c366e1a9352c3c00cc78e0f27,2018-06-15,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,739.5,Moved fmt helpers to new file
+0c19bdd7725028fe07751bbef02bdf1326829591,2018-06-24,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1322.0,pattern per sink and pattern caching
+0c19bdd7725028fe07751bbef02bdf1326829591,2018-06-24,ok,null sink info(string),0.0,0.0,1.0,0,1,612.0,pattern per sink and pattern caching
+0c19bdd7725028fe07751bbef02bdf1326829591,2018-06-24,ok,null sink debug below level,0.0,0.0,0.0,0,0,10.2,pattern per sink and pattern caching
+0c19bdd7725028fe07751bbef02bdf1326829591,2018-06-24,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1464.6,pattern per sink and pattern caching
+e574f575111cb41958255d14f4966eb79ec998bd,2018-06-24,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,603.0,Fixed stdout_color_sinks.h namespace
+e574f575111cb41958255d14f4966eb79ec998bd,2018-06-24,ok,null sink info(string),0.0,0.0,1.0,0,1,293.6,Fixed stdout_color_sinks.h namespace
+e574f575111cb41958255d14f4966eb79ec998bd,2018-06-24,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.6,Fixed stdout_color_sinks.h namespace
+e574f575111cb41958255d14f4966eb79ec998bd,2018-06-24,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,662.3,Fixed stdout_color_sinks.h namespace
+92e2cef67fe3f966db1e63f796eb7a3e284f7b9e,2018-06-26,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,482.7,remove unneeded includes from file
+92e2cef67fe3f966db1e63f796eb7a3e284f7b9e,2018-06-26,ok,null sink info(string),0.0,0.0,1.0,0,1,174.3,remove unneeded includes from file
+92e2cef67fe3f966db1e63f796eb7a3e284f7b9e,2018-06-26,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,remove unneeded includes from file
+92e2cef67fe3f966db1e63f796eb7a3e284f7b9e,2018-06-26,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,539.5,remove unneeded includes from file
+ef111ddba2f341e62523f9839b7f35e0e78556a7,2018-07-10,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,923.3,Fix issue #736
+ef111ddba2f341e62523f9839b7f35e0e78556a7,2018-07-10,ok,null sink info(string),0.0,0.0,1.0,0,1,371.4,Fix issue #736
+ef111ddba2f341e62523f9839b7f35e0e78556a7,2018-07-10,ok,null sink debug below level,0.0,0.0,0.0,0,0,10.2,Fix issue #736
+ef111ddba2f341e62523f9839b7f35e0e78556a7,2018-07-10,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1056.4,Fix issue #736
+7d40244a8962ea920f4460c71bf801ad0aa20f5c,2018-07-13,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,1021.4,Fixed issue #726 and changed default filename calculator to dateonly
+7d40244a8962ea920f4460c71bf801ad0aa20f5c,2018-07-13,ok,null sink info(string),0.0,0.0,1.0,0,1,355.3,Fixed issue #726 and changed default filename calculator to dateonly
+7d40244a8962ea920f4460c71bf801ad0aa20f5c,2018-07-13,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.6,Fixed issue #726 and changed default filename calculator to dateonly
+7d40244a8962ea920f4460c71bf801ad0aa20f5c,2018-07-13,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1163.1,Fixed issue #726 and changed default filename calculator to dateonly
+2bc05b6b1789fc2e9e09b3775bf564fe0c896950,2018-07-13,ok,"null sink info(int, double)",0.0,0.0,1.0,9,1,902.5,Merge pull request #752 from baishuai/v1.x
+2bc05b6b1789fc2e9e09b3775bf564fe0c896950,2018-07-13,ok,null sink info(string),0.0,0.0,1.0,0,1,357.1,Merge pull request #752 from baishuai/v1.x
+2bc05b6b1789fc2e9e09b3775bf564fe0c896950,2018-07-13,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.8,Merge pull request #752 from baishuai/v1.x
+2bc05b6b1789fc2e9e09b3775bf564fe0c896950,2018-07-13,ok,"ostream sink info(int, double)",0.0,0.0,1.0,1,1,1000.7,Merge pull request #752 from baishuai/v1.x
+c2a49080aa8e28a059deca838022a512fb088b88,2018-07-14,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,392.3,Refactored sink interface and base_sink
+c2a49080aa8e28a059deca838022a512fb088b88,2018-07-14,ok,null sink info(string),0.0,0.0,1.0,0,1,102.3,Refactored sink interface and base_sink
+c2a49080aa8e28a059deca838022a512fb088b88,2018-07-14,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,Refactored sink interface and base_sink
+c2a49080aa8e28a059deca838022a512fb088b88,2018-07-14,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,516.6,Refactored sink interface and base_sink
+9df2bd256e148c00cbac690558d0c2ebf6b1b52d,2018-07-19,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,772.6,Changed some functions to accept strings instead of ref to strings for better semantics
+9df2bd256e148c00cbac690558d0c2ebf6b1b52d,2018-07-19,ok,null sink info(string),0.0,0.0,1.0,0,1,213.0,Changed some functions to accept strings instead of ref to strings for better semantics
+9df2bd256e148c00cbac690558d0c2ebf6b1b52d,2018-07-19,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.7,Changed some functions to accept strings instead of ref to strings for better semantics
+9df2bd256e148c00cbac690558d0c2ebf6b1b52d,2018-07-19,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1019.6,Changed some functions to accept strings instead of ref to strings for better semantics
+b0059b290f3b6e0697c2a207096b8a48e7e16832,2018-07-20,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,761.5,Fix issue #761
+b0059b290f3b6e0697c2a207096b8a48e7e16832,2018-07-20,ok,null sink info(string),0.0,0.0,1.0,0,1,206.1,Fix issue #761
+b0059b290f3b6e0697c2a207096b8a48e7e16832,2018-07-20,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.5,Fix issue #761
+b0059b290f3b6e0697c2a207096b8a48e7e16832,2018-07-20,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1024.0,Fix issue #761
+85a2bf1c176cff55f3781a809387b8d2c65725b8,2018-08-08,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,753.1,Merge pull request #784 from baishuai/v1.x
+85a2bf1c176cff55f3781a809387b8d2c65725b8,2018-08-08,ok,null sink info(string),0.0,0.0,1.0,0,1,214.1,Merge pull request #784 from baishuai/v1.x
+85a2bf1c176cff55f3781a809387b8d2c65725b8,2018-08-08,ok,null sink debug below level,0.0,0.0,0.0,0,0,9.6,Merge pull request #784 from baishuai/v1.x
+85a2bf1c176cff55f3781a809387b8d2c65725b8,2018-08-08,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1054.5,Merge pull request #784 from baishuai/v1.x
+00acb8ba41a006f94fc1ed0fcb8b97d494d6e7ae,2018-09-01,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,768.5,Update registry.h
+00acb8ba41a006f94fc1ed0fcb8b97d494d6e7ae,2018-09-01,ok,null sink info(string),0.0,0.0,1.0,0,1,216.9,Update registry.h
+00acb8ba41a006f94fc1ed0fcb8b97d494d6e7ae,2018-09-01,ok,null sink debug below level,0.0,0.0,0.0,0,0,10.2,Update registry.h
+00acb8ba41a006f94fc1ed0fcb8b97d494d6e7ae,2018-09-01,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1095.0,Update registry.h
+0b516733db31d911b1f5aac60969841740b3a6a7,2018-09-27,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,347.6,user buffer.clear() insread of resize(0)
+0b516733db31d911b1f5aac60969841740b3a6a7,2018-09-27,ok,null sink info(string),0.0,0.0,1.0,0,1,86.5,user buffer.clear() insread of resize(0)
+0b516733db31d911b1f5aac60969841740b3a6a7,2018-09-27,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,user buffer.clear() insread of resize(0)
+0b516733db31d911b1f5aac60969841740b3a6a7,2018-09-27,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,505.8,user buffer.clear() insread of resize(0)
+45717147f7b3ad250e7ba9670bd34914688cf060,2018-10-13,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,352.1,Improved null_logger factory
+45717147f7b3ad250e7ba9670bd34914688cf060,2018-10-13,ok,null sink info(string),0.0,0.0,1.0,0,1,86.9,Improved null_logger factory
+45717147f7b3ad250e7ba9670bd34914688cf060,2018-10-13,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.6,Improved null_logger factory
+45717147f7b3ad250e7ba9670bd34914688cf060,2018-10-13,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,503.9,Improved null_logger factory
+3ff541cf775954cd261e96a1e7e439d4b2fa4d0d,2018-11-10,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,353.8,Optimized scoped_pad
+3ff541cf775954cd261e96a1e7e439d4b2fa4d0d,2018-11-10,ok,null sink info(string),0.0,0.0,1.0,0,1,84.7,Optimized scoped_pad
+3ff541cf775954cd261e96a1e7e439d4b2fa4d0d,2018-11-10,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.3,Optimized scoped_pad
+3ff541cf775954cd261e96a1e7e439d4b2fa4d0d,2018-11-10,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,508.7,Optimized scoped_pad
+521b0733d4a5e5eb404e927fe0fb682a4ad86061,2018-11-22,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,695.5,Support for source location in async loggers
+521b0733d4a5e5eb404e927fe0fb682a4ad86061,2018-11-22,ok,null sink info(string),0.0,0.0,1.0,0,1,189.7,Support for source location in async loggers
+521b0733d4a5e5eb404e927fe0fb682a4ad86061,2018-11-22,ok,null sink debug below level,0.0,0.0,0.0,0,0,10.5,Support for source location in async loggers
+521b0733d4a5e5eb404e927fe0fb682a4ad86061,2018-11-22,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1028.7,Support for source location in async loggers
+4408e079ff81d21a15b702fe4541ef3fd982f72d,2019-01-10,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,717.7,Refactored log macros
+4408e079ff81d21a15b702fe4541ef3fd982f72d,2019-01-10,ok,null sink info(string),0.0,0.0,1.0,0,1,204.8,Refactored log macros
+4408e079ff81d21a15b702fe4541ef3fd982f72d,2019-01-10,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.5,Refactored log macros
+4408e079ff81d21a15b702fe4541ef3fd982f72d,2019-01-10,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1091.8,Refactored log macros
+bcfa9241b8350537bcddbda012be4939cf906321,2019-06-04,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,355.8,Updated copyright headers
+bcfa9241b8350537bcddbda012be4939cf906321,2019-06-04,ok,null sink info(string),0.0,0.0,1.0,0,1,103.1,Updated copyright headers
+bcfa9241b8350537bcddbda012be4939cf906321,2019-06-04,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.5,Updated copyright headers
+bcfa9241b8350537bcddbda012be4939cf906321,2019-06-04,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,512.0,Updated copyright headers
+e68cf1c9ed9aa64d23488bfd970a850a32666733,2019-06-19,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,357.1,Add formatting option to syslog in ctor. Fix issue #729 #1107
+e68cf1c9ed9aa64d23488bfd970a850a32666733,2019-06-19,ok,null sink info(string),0.0,0.0,1.0,0,1,93.2,Add formatting option to syslog in ctor. Fix issue #729 #1107
+e68cf1c9ed9aa64d23488bfd970a850a32666733,2019-06-19,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Add formatting option to syslog in ctor. Fix issue #729 #1107
+e68cf1c9ed9aa64d23488bfd970a850a32666733,2019-06-19,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,507.6,Add formatting option to syslog in ctor. Fix issue #729 #1107
+ab9e1b3aa7ad63c36400e31482e241384fa80643,2019-06-20,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,354.7,Removed unneeded includes
+ab9e1b3aa7ad63c36400e31482e241384fa80643,2019-06-20,ok,null sink info(string),0.0,0.0,1.0,0,1,91.9,Removed unneeded includes
+ab9e1b3aa7ad63c36400e31482e241384fa80643,2019-06-20,ok,null sink debug below level,0.0,0.0,0.0,0,0,3.3,Removed unneeded includes
+ab9e1b3aa7ad63c36400e31482e241384fa80643,2019-06-20,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,503.4,Removed unneeded includes
+5dd260c336287ffa144b4585fdc28ef9c34206b2,2019-06-25,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,355.1,Added missing include to dist_sink
+5dd260c336287ffa144b4585fdc28ef9c34206b2,2019-06-25,ok,null sink info(string),0.0,0.0,1.0,0,1,91.9,Added missing include to dist_sink
+5dd260c336287ffa144b4585fdc28ef9c34206b2,2019-06-25,ok,null sink debug below level,0.0,0.0,0.0,0,0,3.3,Added missing include to dist_sink
+5dd260c336287ffa144b4585fdc28ef9c34206b2,2019-06-25,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,503.6,Added missing include to dist_sink
+7f3b5fb84dc1fae3b03fd3ae2d1b06835752823a,2019-06-27,ok,"null sink info(int, double)",0.0,0.0,1.0,0,1,354.5,Fix dup filter
+7f3b5fb84dc1fae3b03fd3ae2d1b06835752823a,2019-06-27,ok,null sink info(string),0.0,0.0,1.0,0,1,91.9,Fix dup filter
+7f3b5fb84dc1fae3b03fd3ae2d1b06835752823a,2019-06-27,ok,null sink debug below level,0.0,0.0,0.0,0,0,3.3,Fix dup filter
+7f3b5fb84dc1fae3b03fd3ae2d1b06835752823a,2019-06-27,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,502.1,Fix dup filter
+cf152e603018f6d06befe4b5b8dd7d112b10cd31,2019-06-27,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,393.9,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+cf152e603018f6d06befe4b5b8dd7d112b10cd31,2019-06-27,ok,null sink info(string),0.0,0.0,0.0,0,0,137.6,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+cf152e603018f6d06befe4b5b8dd7d112b10cd31,2019-06-27,ok,null sink debug below level,0.0,0.0,0.0,0,0,3.3,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+cf152e603018f6d06befe4b5b8dd7d112b10cd31,2019-06-27,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,700.1,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+29f2eeea3190d27408ad7305bf643dfd30ae4903,2019-06-27,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,682.2,Removed formatter_ member from the sink interface
+29f2eeea3190d27408ad7305bf643dfd30ae4903,2019-06-27,ok,null sink info(string),0.0,0.0,0.0,0,0,168.0,Removed formatter_ member from the sink interface
+29f2eeea3190d27408ad7305bf643dfd30ae4903,2019-06-27,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.2,Removed formatter_ member from the sink interface
+29f2eeea3190d27408ad7305bf643dfd30ae4903,2019-06-27,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1032.5,Removed formatter_ member from the sink interface
+54456aee9eeb146576f674bfb92e6e5942ec0119,2019-07-15,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,680.4,Refactored padding handling in formatter using templates
+54456aee9eeb146576f674bfb92e6e5942ec0119,2019-07-15,ok,null sink info(string),0.0,0.0,0.0,0,0,80.9,Refactored padding handling in formatter using templates
+54456aee9eeb146576f674bfb92e6e5942ec0119,2019-07-15,ok,null sink debug below level,0.0,0.0,0.0,0,0,3.6,Refactored padding handling in formatter using templates
+54456aee9eeb146576f674bfb92e6e5942ec0119,2019-07-15,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,501.0,Refactored padding handling in formatter using templates
+7ea951613db61e943b11a888d1474273ee1e82ac,2019-08-18,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,676.8,Update logger-inl.h
+7ea951613db61e943b11a888d1474273ee1e82ac,2019-08-18,ok,null sink info(string),0.0,0.0,0.0,0,0,170.9,Update logger-inl.h
+7ea951613db61e943b11a888d1474273ee1e82ac,2019-08-18,ok,null sink debug below level,0.0,0.0,0.0,0,0,5.6,Update logger-inl.h
+7ea951613db61e943b11a888d1474273ee1e82ac,2019-08-18,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,992.9,Update logger-inl.h
+433785dc64fd60276f3a029c84835555280b8411,2019-09-05,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,674.9,fix warnings and build
+433785dc64fd60276f3a029c84835555280b8411,2019-09-05,ok,null sink info(string),0.0,0.0,0.0,0,0,170.1,fix warnings and build
+433785dc64fd60276f3a029c84835555280b8411,2019-09-05,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.0,fix warnings and build
+433785dc64fd60276f3a029c84835555280b8411,2019-09-05,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,963.6,fix warnings and build
+3ad7b9b117bb7b7919b3b685711686aaa2c3955e,2019-09-19,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,699.3,Update log_msg_buffer-inl.h
+3ad7b9b117bb7b7919b3b685711686aaa2c3955e,2019-09-19,ok,null sink info(string),0.0,0.0,0.0,0,0,169.6,Update log_msg_buffer-inl.h
+3ad7b9b117bb7b7919b3b685711686aaa2c3955e,2019-09-19,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.3,Update log_msg_buffer-inl.h
+3ad7b9b117bb7b7919b3b685711686aaa2c3955e,2019-09-19,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1052.2,Update log_msg_buffer-inl.h
+b848ff8db9039ec630451c06f9078e61a5ec9166,2019-10-25,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,699.3,Merge pull request #1285 from masmullin2000/v1.x
+b848ff8db9039ec630451c06f9078e61a5ec9166,2019-10-25,ok,null sink info(string),0.0,0.0,0.0,0,0,167.7,Merge pull request #1285 from masmullin2000/v1.x
+b848ff8db9039ec630451c06f9078e61a5ec9166,2019-10-25,ok,null sink debug below level,0.0,0.0,0.0,0,0,14.9,Merge pull request #1285 from masmullin2000/v1.x
+b848ff8db9039ec630451c06f9078e61a5ec9166,2019-10-25,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1022.4,Merge pull request #1285 from masmullin2000/v1.x
+2d264855cca8b187921f8689269ddd48954e1692,2019-11-28,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,678.1,Merge pull request #1331 from 0x8000-0000/fix-warnings
+2d264855cca8b187921f8689269ddd48954e1692,2019-11-28,ok,null sink info(string),0.0,0.0,0.0,0,0,163.1,Merge pull request #1331 from 0x8000-0000/fix-warnings
+2d264855cca8b187921f8689269ddd48954e1692,2019-11-28,ok,null sink debug below level,0.0,0.0,0.0,0,0,14.4,Merge pull request #1331 from 0x8000-0000/fix-warnings
+2d264855cca8b187921f8689269ddd48954e1692,2019-11-28,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,1006.9,Merge pull request #1331 from 0x8000-0000/fix-warnings
+cd8d7e6de99c3e3617f7d5a71d5a406507897393,2019-12-13,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,192.1,wip
+cd8d7e6de99c3e3617f7d5a71d5a406507897393,2019-12-13,ok,null sink info(string),0.0,0.0,0.0,0,0,85.3,wip
+cd8d7e6de99c3e3617f7d5a71d5a406507897393,2019-12-13,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,wip
+cd8d7e6de99c3e3617f7d5a71d5a406507897393,2019-12-13,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,352.4,wip
+67561f97ec5f5a55e779536d8e45f0ee7ae9e7a3,2020-03-06,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,191.2,Update argv.h
+67561f97ec5f5a55e779536d8e45f0ee7ae9e7a3,2020-03-06,ok,null sink info(string),0.0,0.0,0.0,0,0,85.4,Update argv.h
+67561f97ec5f5a55e779536d8e45f0ee7ae9e7a3,2020-03-06,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Update argv.h
+67561f97ec5f5a55e779536d8e45f0ee7ae9e7a3,2020-03-06,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,352.6,Update argv.h
+92d27b0aa3d542e66703304d76508eeb5e5fe651,2020-04-04,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,192.0,Minor update to fmt_helper
+92d27b0aa3d542e66703304d76508eeb5e5fe651,2020-04-04,ok,null sink info(string),0.0,0.0,0.0,0,0,87.9,Minor update to fmt_helper
+92d27b0aa3d542e66703304d76508eeb5e5fe651,2020-04-04,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Minor update to fmt_helper
+92d27b0aa3d542e66703304d76508eeb5e5fe651,2020-04-04,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,348.4,Minor update to fmt_helper
+0317731dc91c951a075ff48e2939144a2a1a634b,2020-05-26,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,198.5,Fix #1569
+0317731dc91c951a075ff48e2939144a2a1a634b,2020-05-26,ok,null sink info(string),0.0,0.0,0.0,0,0,96.4,Fix #1569
+0317731dc91c951a075ff48e2939144a2a1a634b,2020-05-26,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Fix #1569
+0317731dc91c951a075ff48e2939144a2a1a634b,2020-05-26,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,354.5,Fix #1569
+9cd25dd21664be8752c3c96df2d58c0544d28c29,2020-09-01,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,150.5,Remove un needed hasher declaration
+9cd25dd21664be8752c3c96df2d58c0544d28c29,2020-09-01,ok,null sink info(string),0.0,0.0,0.0,0,0,73.7,Remove un needed hasher declaration
+9cd25dd21664be8752c3c96df2d58c0544d28c29,2020-09-01,ok,null sink debug below level,0.0,0.0,0.0,0,0,13.3,Remove un needed hasher declaration
+9cd25dd21664be8752c3c96df2d58c0544d28c29,2020-09-01,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,312.9,Remove un needed hasher declaration
+456b24134d29e4b6ebc156926c737c76c053753d,2020-11-20,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,324.6,Merge pull request #1742 from jwittbrodt/v1.x
+456b24134d29e4b6ebc156926c737c76c053753d,2020-11-20,ok,null sink info(string),0.0,0.0,0.0,0,0,149.0,Merge pull request #1742 from jwittbrodt/v1.x
+456b24134d29e4b6ebc156926c737c76c053753d,2020-11-20,ok,null sink debug below level,0.0,0.0,0.0,0,0,16.1,Merge pull request #1742 from jwittbrodt/v1.x
+456b24134d29e4b6ebc156926c737c76c053753d,2020-11-20,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,653.6,Merge pull request #1742 from jwittbrodt/v1.x
+3135b6a33dc72c1afc06e54d67e297086425341f,2021-02-26,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,188.4,Update comment
+3135b6a33dc72c1afc06e54d67e297086425341f,2021-02-26,ok,null sink info(string),0.0,0.0,0.0,0,0,85.2,Update comment
+3135b6a33dc72c1afc06e54d67e297086425341f,2021-02-26,ok,null sink debug below level,0.0,0.0,0.0,0,0,16.6,Update comment
+3135b6a33dc72c1afc06e54d67e297086425341f,2021-02-26,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,355.3,Update comment
+9ebc4b24d989dbe12d49332cc9c161af0721cf45,2021-06-24,build failed,,,,,,,,Added missing args.h file
+dc38b7c3c40839a9dd81bc4db58801c8b646ed9c,2021-07-19,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,168.2,Update logger.h
+dc38b7c3c40839a9dd81bc4db58801c8b646ed9c,2021-07-19,ok,null sink info(string),0.0,0.0,0.0,0,0,81.2,Update logger.h
+dc38b7c3c40839a9dd81bc4db58801c8b646ed9c,2021-07-19,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Update logger.h
+dc38b7c3c40839a9dd81bc4db58801c8b646ed9c,2021-07-19,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,328.0,Update logger.h
+deb178a0b17bec80d3af13fc449ea913b6c86d37,2021-08-17,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,349.9,Merge pull request #2048 from D-r-P-3-p-p-3-r/feature/2046_improved_error_handler_message
+deb178a0b17bec80d3af13fc449ea913b6c86d37,2021-08-17,ok,null sink info(string),0.0,0.0,0.0,0,0,156.0,Merge pull request #2048 from D-r-P-3-p-p-3-r/feature/2046_improved_error_handler_message
+deb178a0b17bec80d3af13fc449ea913b6c86d37,2021-08-17,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.5,Merge pull request #2048 from D-r-P-3-p-p-3-r/feature/2046_improved_error_handler_message
+deb178a0b17bec80d3af13fc449ea913b6c86d37,2021-08-17,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,678.3,Merge pull request #2048 from D-r-P-3-p-p-3-r/feature/2046_improved_error_handler_message
+e3e4c4bc950ebeda4479c177509079825450af43,2021-10-18,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,371.6,minor changes added const ref params
+e3e4c4bc950ebeda4479c177509079825450af43,2021-10-18,ok,null sink info(string),0.0,0.0,0.0,0,0,163.6,minor changes added const ref params
+e3e4c4bc950ebeda4479c177509079825450af43,2021-10-18,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.2,minor changes added const ref params
+e3e4c4bc950ebeda4479c177509079825450af43,2021-10-18,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,687.7,minor changes added const ref params
+083ea59fbd06add6f973636acca93ae0dfc0b73f,2022-03-30,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,182.6,Merge pull request #2324 from Delgan/GH-2320-add-systemd-formatter
+083ea59fbd06add6f973636acca93ae0dfc0b73f,2022-03-30,ok,null sink info(string),0.0,0.0,0.0,0,0,86.4,Merge pull request #2324 from Delgan/GH-2320-add-systemd-formatter
+083ea59fbd06add6f973636acca93ae0dfc0b73f,2022-03-30,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Merge pull request #2324 from Delgan/GH-2320-add-systemd-formatter
+083ea59fbd06add6f973636acca93ae0dfc0b73f,2022-03-30,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,336.4,Merge pull request #2324 from Delgan/GH-2320-add-systemd-formatter
+3499dfeeb4f246b96814d8a442e06ac73d260ac8,2022-10-31,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,168.3,Bump bundled fmtlib to version 1.9.1
+3499dfeeb4f246b96814d8a442e06ac73d260ac8,2022-10-31,ok,null sink info(string),0.0,0.0,0.0,0,0,78.8,Bump bundled fmtlib to version 1.9.1
+3499dfeeb4f246b96814d8a442e06ac73d260ac8,2022-10-31,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Bump bundled fmtlib to version 1.9.1
+3499dfeeb4f246b96814d8a442e06ac73d260ac8,2022-10-31,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,321.5,Bump bundled fmtlib to version 1.9.1
+78e86ba01f4ea9f0583eb7efa94ee8a703d73485,2023-01-15,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,168.3,Update os-inl.h
+78e86ba01f4ea9f0583eb7efa94ee8a703d73485,2023-01-15,ok,null sink info(string),0.0,0.0,0.0,0,0,78.1,Update os-inl.h
+78e86ba01f4ea9f0583eb7efa94ee8a703d73485,2023-01-15,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Update os-inl.h
+78e86ba01f4ea9f0583eb7efa94ee8a703d73485,2023-01-15,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,321.2,Update os-inl.h
+3a6ee663baefbfc1348a974cbf5562423292bb16,2023-06-06,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,343.7,Update qt_sinks.h
+3a6ee663baefbfc1348a974cbf5562423292bb16,2023-06-06,ok,null sink info(string),0.0,0.0,0.0,0,0,147.8,Update qt_sinks.h
+3a6ee663baefbfc1348a974cbf5562423292bb16,2023-06-06,ok,null sink debug below level,0.0,0.0,0.0,0,0,14.4,Update qt_sinks.h
+3a6ee663baefbfc1348a974cbf5562423292bb16,2023-06-06,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,620.4,Update qt_sinks.h
+01b3724c484eebb42d83fa21aa8d71a57b2b8fb6,2023-07-06,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,424.2,sinks: android: handle when message is not loggable (#2801)
+01b3724c484eebb42d83fa21aa8d71a57b2b8fb6,2023-07-06,ok,null sink info(string),0.0,0.0,0.0,0,0,203.1,sinks: android: handle when message is not loggable (#2801)
+01b3724c484eebb42d83fa21aa8d71a57b2b8fb6,2023-07-06,ok,null sink debug below level,0.0,0.0,0.0,0,0,14.5,sinks: android: handle when message is not loggable (#2801)
+01b3724c484eebb42d83fa21aa8d71a57b2b8fb6,2023-07-06,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,710.7,sinks: android: handle when message is not loggable (#2801)
+7c02e204c92545f869e2f04edaab1f19fe8b19fd,2024-01-12,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,369.6,Bump version to 1.13.0
+7c02e204c92545f869e2f04edaab1f19fe8b19fd,2024-01-12,ok,null sink info(string),0.0,0.0,0.0,0,0,78.2,Bump version to 1.13.0
+7c02e204c92545f869e2f04edaab1f19fe8b19fd,2024-01-12,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Bump version to 1.13.0
+7c02e204c92545f869e2f04edaab1f19fe8b19fd,2024-01-12,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,320.5,Bump version to 1.13.0
+2969dde400199b22d8645828ebc4dc68c091d089,2024-03-29,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,177.3,"Revert ""Updated bundled fmt to 10.2.1"""
+2969dde400199b22d8645828ebc4dc68c091d089,2024-03-29,ok,null sink info(string),0.0,0.0,0.0,0,0,78.9,"Revert ""Updated bundled fmt to 10.2.1"""
+2969dde400199b22d8645828ebc4dc68c091d089,2024-03-29,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,"Revert ""Updated bundled fmt to 10.2.1"""
+2969dde400199b22d8645828ebc4dc68c091d089,2024-03-29,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,322.7,"Revert ""Updated bundled fmt to 10.2.1"""
+cba66029e2ee8c15f0657f0b05b2de3c1ba90c15,2024-03-29,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,173.1,Update mdc
+cba66029e2ee8c15f0657f0b05b2de3c1ba90c15,2024-03-29,ok,null sink info(string),0.0,0.0,0.0,0,0,78.8,Update mdc
+cba66029e2ee8c15f0657f0b05b2de3c1ba90c15,2024-03-29,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Update mdc
+cba66029e2ee8c15f0657f0b05b2de3c1ba90c15,2024-03-29,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,325.7,Update mdc
+1253a57db644a07a13c202ad73f00f9ed66f9aed,2024-03-29,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,173.3,Add mdc support for default format
+1253a57db644a07a13c202ad73f00f9ed66f9aed,2024-03-29,ok,null sink info(string),0.0,0.0,0.0,0,0,78.8,Add mdc support for default format
+1253a57db644a07a13c202ad73f00f9ed66f9aed,2024-03-29,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Add mdc support for default format
+1253a57db644a07a13c202ad73f00f9ed66f9aed,2024-03-29,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,327.8,Add mdc support for default format
+8fed530bdffbe69304a330be2096c65793b722c2,2024-03-29,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,358.1,Update mdc.h
+8fed530bdffbe69304a330be2096c65793b722c2,2024-03-29,ok,null sink info(string),0.0,0.0,0.0,0,0,161.0,Update mdc.h
+8fed530bdffbe69304a330be2096c65793b722c2,2024-03-29,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.8,Update mdc.h
+8fed530bdffbe69304a330be2096c65793b722c2,2024-03-29,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,662.4,Update mdc.h
+fd61ea93485ffae572a4e3ffc51fa0d5156f6bfa,2024-04-26,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,436.8,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+fd61ea93485ffae572a4e3ffc51fa0d5156f6bfa,2024-04-26,ok,null sink info(string),0.0,0.0,0.0,0,0,210.1,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+fd61ea93485ffae572a4e3ffc51fa0d5156f6bfa,2024-04-26,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.6,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+fd61ea93485ffae572a4e3ffc51fa0d5156f6bfa,2024-04-26,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,771.6,Merge branch 'v1.x' of https://github.com/gabime/spdlog into v1.x
+22b0f4fc06980d82fb06d82a249215b98e3142fe,2024-04-30,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,413.4,Clang format
+22b0f4fc06980d82fb06d82a249215b98e3142fe,2024-04-30,ok,null sink info(string),0.0,0.0,0.0,0,0,199.0,Clang format
+22b0f4fc06980d82fb06d82a249215b98e3142fe,2024-04-30,ok,null sink debug below level,0.0,0.0,0.0,0,0,14.6,Clang format
+22b0f4fc06980d82fb06d82a249215b98e3142fe,2024-04-30,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,705.8,Clang format
+7cbf2a696764f3c2c84ff4b8eb592fce5924919e,2025-01-18,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,173.7,Gabime/ansicolor sink improvements (#3323)
+7cbf2a696764f3c2c84ff4b8eb592fce5924919e,2025-01-18,ok,null sink info(string),0.0,0.0,0.0,0,0,82.0,Gabime/ansicolor sink improvements (#3323)
+7cbf2a696764f3c2c84ff4b8eb592fce5924919e,2025-01-18,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Gabime/ansicolor sink improvements (#3323)
+7cbf2a696764f3c2c84ff4b8eb592fce5924919e,2025-01-18,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,353.8,Gabime/ansicolor sink improvements (#3323)
+b3688ba10251e01d108adfef9c6d2794ecaedfb1,2025-11-28,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,148.6,"Set IndentPPDirectives to ""None"" on clang-format"
+b3688ba10251e01d108adfef9c6d2794ecaedfb1,2025-11-28,ok,null sink info(string),0.0,0.0,0.0,0,0,80.1,"Set IndentPPDirectives to ""None"" on clang-format"
+b3688ba10251e01d108adfef9c6d2794ecaedfb1,2025-11-28,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,"Set IndentPPDirectives to ""None"" on clang-format"
+b3688ba10251e01d108adfef9c6d2794ecaedfb1,2025-11-28,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,312.6,"Set IndentPPDirectives to ""None"" on clang-format"
+38523c67f5d70f0feae10e1bc9681fcf0830b0af,2026-06-26,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,144.6,Treat ENOENT as success in remove_if_exists (#3626)
+38523c67f5d70f0feae10e1bc9681fcf0830b0af,2026-06-26,ok,null sink info(string),0.0,0.0,0.0,0,0,79.1,Treat ENOENT as success in remove_if_exists (#3626)
+38523c67f5d70f0feae10e1bc9681fcf0830b0af,2026-06-26,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Treat ENOENT as success in remove_if_exists (#3626)
+38523c67f5d70f0feae10e1bc9681fcf0830b0af,2026-06-26,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,302.4,Treat ENOENT as success in remove_if_exists (#3626)
+d6c93f38a08b4ea0f8ffcfd7f7857307d5d5c3fa,2026-10-03,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,143.2,Support custom file buffer size for file sinks (#1799) (#3671)
+d6c93f38a08b4ea0f8ffcfd7f7857307d5d5c3fa,2026-10-03,ok,null sink info(string),0.0,0.0,0.0,0,0,76.5,Support custom file buffer size for file sinks (#1799) (#3671)
+d6c93f38a08b4ea0f8ffcfd7f7857307d5d5c3fa,2026-10-03,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Support custom file buffer size for file sinks (#1799) (#3671)
+d6c93f38a08b4ea0f8ffcfd7f7857307d5d5c3fa,2026-10-03,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,302.0,Support custom file buffer size for file sinks (#1799) (#3671)
+08155a51c532126597db917c42aabdac1b20f011,2026-10-12,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,297.2,Fix initializer order in dup_filter_sink sink-list constructor (#3679)
+08155a51c532126597db917c42aabdac1b20f011,2026-10-12,ok,null sink info(string),0.0,0.0,0.0,0,0,153.2,Fix initializer order in dup_filter_sink sink-list constructor (#3679)
+08155a51c532126597db917c42aabdac1b20f011,2026-10-12,ok,null sink debug below level,0.0,0.0,0.0,0,0,14.8,Fix initializer order in dup_filter_sink sink-list constructor (#3679)
+08155a51c532126597db917c42aabdac1b20f011,2026-10-12,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,691.3,Fix initializer order in dup_filter_sink sink-list constructor (#3679)
+76d458055b006fd8b86675b67ad51bccc66274c7,2026-10-16,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,143.5,Preserve event timestamps in duplicate-message summaries (#3682)
+76d458055b006fd8b86675b67ad51bccc66274c7,2026-10-16,ok,null sink info(string),0.0,0.0,0.0,0,0,76.6,Preserve event timestamps in duplicate-message summaries (#3682)
+76d458055b006fd8b86675b67ad51bccc66274c7,2026-10-16,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Preserve event timestamps in duplicate-message summaries (#3682)
+76d458055b006fd8b86675b67ad51bccc66274c7,2026-10-16,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,305.4,Preserve event timestamps in duplicate-message summaries (#3682)
+db4959497a79eca7fdb415f484e7dc5b060afc21,2026-10-24,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,292.7,Fix several self assignment cases (#3690)
+db4959497a79eca7fdb415f484e7dc5b060afc21,2026-10-24,ok,null sink info(string),0.0,0.0,0.0,0,0,152.7,Fix several self assignment cases (#3690)
+db4959497a79eca7fdb415f484e7dc5b060afc21,2026-10-24,ok,null sink debug below level,0.0,0.0,0.0,0,0,15.8,Fix several self assignment cases (#3690)
+db4959497a79eca7fdb415f484e7dc5b060afc21,2026-10-24,ok,"ostream sink info(int, double)",0.0,0.0,1.0,11,1,627.0,Fix several self assignment cases (#3690)
+bfa795e5aa6315f0b1ad6ee1a02aa8467b2974a8,2026-10-24,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,143.2,Avoid creating the mdc thread-local context when it is unused (#3693)
+bfa795e5aa6315f0b1ad6ee1a02aa8467b2974a8,2026-10-24,ok,null sink info(string),0.0,0.0,0.0,0,0,78.9,Avoid creating the mdc thread-local context when it is unused (#3693)
+bfa795e5aa6315f0b1ad6ee1a02aa8467b2974a8,2026-10-24,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Avoid creating the mdc thread-local context when it is unused (#3693)
+bfa795e5aa6315f0b1ad6ee1a02aa8467b2974a8,2026-10-24,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,302.0,Avoid creating the mdc thread-local context when it is unused (#3693)
+9af9f48d3d43f8ac202ff5e1cd15c1230f666850,2026-10-24,ok,"null sink info(int, double)",0.0,0.0,0.0,0,0,145.4,Fix refused Windows TCP connections with a timeout (#3683)
+9af9f48d3d43f8ac202ff5e1cd15c1230f666850,2026-10-24,ok,null sink info(string),0.0,0.0,0.0,0,0,88.0,Fix refused Windows TCP connections with a timeout (#3683)
+9af9f48d3d43f8ac202ff5e1cd15c1230f666850,2026-10-24,ok,null sink debug below level,0.0,0.0,0.0,0,0,11.8,Fix refused Windows TCP connections with a timeout (#3683)
+9af9f48d3d43f8ac202ff5e1cd15c1230f666850,2026-10-24,ok,"ostream sink info(int, double)",0.0,0.0,1.0,10,1,301.9,Fix refused Windows TCP connections with a timeout (#3683)

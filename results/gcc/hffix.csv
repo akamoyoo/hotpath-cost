@@ -1,0 +1,100 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+ea81805364e423fc9165ec57ffa74105a6824642,2014-04-02,build failed,,,,,,,,Init.
+d2539d5602672e596c0bb34e1fe642918df7b14f,2014-08-30,build failed,,,,,,,,codegen from FIX specs.
+c402ec3a56fed7f1ea3466548484309d7375d8fb,2014-09-14,build failed,,,,,,,,Version-independent writer.
+43ff3bc71048e1964c409dab255e1d9850520acb,2014-09-20,build failed,,,,,,,,"Formatting, tag namespace."
+dc0aecbe10502b0af6e97660269db4b761e1fe68,2014-09-21,build failed,,,,,,,,Documentation.
+1464e46e577ce60fba021c5a780209804cb10913,2014-09-21,build failed,,,,,,,,astyle --style=stroustrup --indent=spaces=4
+c9c10a75c70f8d85238b45ca7681a473b69dc27a,2014-09-22,build failed,,,,,,,,"Documentation, refactoring, missing tags."
+2bd19c132c1442cd919365d648ab7f40e93437a9,2014-09-23,build failed,,,,,,,,fixprint color. Doxyfile update. codegen MsgTypes and repeating groups. Documentation.
+0095e645e6cb9d509907f5e8262215861507493e,2014-09-26,build failed,,,,,,,,README.md is mainpage. writer01.cpp. Boost Date_Time include bugfix.
+babc1a3e229f01864048661cbe5da6ea2f16282e,2014-09-28,build failed,,,,,,,,Documentation. reader01.cpp.
+e32c49f0c810c86621437297303028c343424dc5,2014-10-08,build failed,,,,,,,,Documentation. Inlines. Includes.
+e17bcbc3ddf79d3f8655fd99e603a3fa335137e7,2014-10-08,build failed,,,,,,,,Fix linking.
+255f431067309dac372adab696811fabbbda02da,2014-10-08,build failed,,,,,,,,".gitignore, streamer bugfix, tt markup."
+4cfc4122af314952268c122f20224cd4546b73ef,2014-10-11,build failed,,,,,,,,length_fields doxygen reference.
+6c736fcced0f1242f60cd47b0f8e335f15573cc7,2014-12-23,build failed,,,,,,,,"Const correctness, Example docs editing."
+19c3b34e3c7512ceb65181da9556114bab34371a,2015-09-07,build failed,,,,,,,,Various documentation.
+39994e91d0b17bf8b5949cbfacc4b176b25c4b1b,2017-01-22,build failed,,,,,,,,Bugfix invalid FIX buffer overrun
+e19fa7242b5b0d9bfa44d329d408ef6c217466dc,2017-01-22,build failed,,,,,,,,Docs find_with_hint
+5f5508502f5a4a45533c567e1b5c0cde2f52f1cf,2017-01-22,build failed,,,,,,,,Docs various
+b18069d6fe6fbb0b53e938e2c2d06720e90f8aed,2017-01-25,build failed,,,,,,,,message_begin no precondition
+ea267daa073a07e7592effb66cf953de6bda12ab,2017-01-25,build failed,,,,,,,,Docs reference fixup
+099b4b542d2e103b6af5b05c60ba36a0df78373a,2017-09-12,build failed,,,,,,,,Merge pull request #1 from j0nnyw/feature-add_missing_tags
+04a47a5129eea42d353aacb0252a4297789c80cf,2017-09-12,build failed,,,,,,,,Merge branch 'arvidn-string-view'
+40093985fb7b2f53bf684f97adabc83cde404a2e,2017-09-12,build failed,,,,,,,,delete trailing whitespace
+9477b83ffb21a9cb0beedf1f8fe4306963e5e94e,2017-09-12,build failed,,,,,,,,Don't need type_traits.
+863f7bb03fdc3fc2a097a1158f28a2fccae78f5e,2017-09-12,build failed,,,,,,,,Merge branch 'reject-reason-message-size' of https://github.com/arvidn/hffix into arvidn-reject-reason-message-size
+bca78982d1913b4d17ff4de69e8ae2653a6349b8,2017-09-12,build failed,,,,,,,,codegen: MaxMessageSize and SessionRejectReason
+13407cbb39a7a401d3354f68b11bd5a2c17edbdc,2017-09-12,build failed,,,,,,,,Merge branch 'reverse' of https://github.com/arvidn/hffix into arvidn-reverse
+fe91d42328f3af82c8804814efeab571e073be77,2017-09-12,build failed,,,,,,,,std::reverse comments
+a2180cda25527fd49dcebf5c34baff58bcaaf337,2017-09-15,build failed,,,,,,,,field_value inequality operator
+fdf2f4c1ea32737d5132ee7c5340ff4a5f94bfff,2017-09-15,build failed,,,,,,,,revert this string comparison in operator==
+072bd7b3d4a67bee34fc6a04094cad33f086998a,2017-09-21,build failed,,,,,,,,Merge pull request #7 from j0nnyw/feature-add_missing_tags
+c9e724312bb57d9ab744d8ba56e8b537a85d59f2,2017-09-21,build failed,,,,,,,,message_reader_const_iterator public empty constructor
+696093c57c663e3dc39b51b505174432e8926b1e,2017-10-24,build failed,,,,,,,,Add NewSeqNo <36> field
+0b85f2fa24178173de46058d5a5425cb1b2f4b95,2017-10-24,build failed,,,,,,,,Reorder field_value operator== overloads.
+c0660bbfb75d76b582b5c178dc864823b1a70aca,2017-10-25,build failed,,,,,,,,"Compare field_value to string_view, c++17 only."
+ec169cec070861daa5f8d22920ff58c7d4955644,2018-01-19,build failed,,,,,,,,Merge pull request #10 from aqk/master
+e3e23cb47078a81d3889943c6fa51859d7edc017,2018-02-12,build failed,,,,,,,,add bounds checking to message_writer. throw exception if a message would exceed the size of the buffer passed in to the message_writer constructor
+bfe2c9b39554e5f37525fa776aa605757c6b1ac4,2018-02-16,build failed,,,,,,,,Array reference constructors
+1fb88a92c1755fe2c09f4ba777162fef25a7fce8,2018-02-16,build failed,,,,,,,,Additions to arvidn's bounds-checking code
+c1064952b337020fdfafdab0e6721f3dec7bfb9d,2018-02-18,build failed,,,,,,,,Checksum reference implementation
+b0206e36a863efb19455386ded25ab3c2ad5e437,2018-02-18,build failed,,,,,,,,"add unit tests for checksum. use std::accumulate for checksum calculation, print digits more efficiently"
+e7c3ded5c1cb168440b47e1c04c0ce94182b53a2,2018-02-19,build failed,,,,,,,,Docs keep in mind optional serialization
+0cf3b0a4e84d71802e1d90b8f4ab366b1f9e8019,2018-03-09,build failed,,,,,,,,Docs serialization extension
+aacc6167261599c4eb2c3dedc05307394ea8fbd8,2018-03-25,build failed,,,,,,,,Bugfix message_reader_const_iterator null fields
+8c7045d37ed89c78a6de414175b057fbc0064bca,2018-03-29,build failed,,,,,,,,Bugfix buffer_size_remaining
+32e51bb4ba223bce3e6d074aadb4ac55b30232e6,2018-12-06,build failed,,,,,,,,chrono: initial support for std::chrono
+a8b33bd90523d448c2145798c8785d427acde121,2018-12-06,build failed,,,,,,,,timepoint: fix spacing in details conversion fcns
+b705e08cd217d3889850e9bbf041e7d075e304b2,2018-12-08,build failed,,,,,,,,Merge branch 'master' into std-chrono
+e4417d31128b076648bb360c3522f80dcc65fb04,2018-12-09,build failed,,,,,,,,std::chrono cleanup and unit tests
+816455f2ff9837925d0d1d125ab72d7f88d17f80,2018-12-09,build failed,,,,,,,,SFINAE is_time_point function not in public API
+0fecc46472441fdf14697ee4e47dab0699f327e1,2018-12-09,build failed,,,,,,,,std::chrono::duration support
+940b2e22ac216e1113853c919a44c502793b01a2,2018-12-09,build failed,,,,,,,,README for std::chrono
+00a43c4616ced6dcb6ff1e52912ef08f1c036c00,2018-12-10,build failed,,,,,,,,Merge branch 'fixrepo'
+80a99155ef0d7e3726167a1128da951ca0cfc9b5,2018-12-10,ok,write_new_order,0.0,0.0,0.0,0,0,399.1,message_reader::calculate_check_sum()
+80a99155ef0d7e3726167a1128da951ca0cfc9b5,2018-12-10,ok,read_all,0.0,0.0,0.0,0,0,819.1,message_reader::calculate_check_sum()
+80a99155ef0d7e3726167a1128da951ca0cfc9b5,2018-12-10,ok,check,0.0,0.0,0.0,0,0,108.4,message_reader::calculate_check_sum()
+0f28b2d185dec31f494e3a07b9dcca3146daa0eb,2019-01-11,ok,write_new_order,0.0,0.0,0.0,0,0,399.0,bugfix is_tag_a_data_length
+0f28b2d185dec31f494e3a07b9dcca3146daa0eb,2019-01-11,ok,read_all,0.0,0.0,0.0,0,0,379.5,bugfix is_tag_a_data_length
+0f28b2d185dec31f494e3a07b9dcca3146daa0eb,2019-01-11,ok,check,0.0,0.0,0.0,0,0,108.2,bugfix is_tag_a_data_length
+b5c5dea4d932129b152616c2ab560826b1193653,2019-03-27,ok,write_new_order,0.0,0.0,0.0,0,0,398.8,Add field ExecTransType
+b5c5dea4d932129b152616c2ab560826b1193653,2019-03-27,ok,read_all,0.0,0.0,0.0,0,0,389.7,Add field ExecTransType
+b5c5dea4d932129b152616c2ab560826b1193653,2019-03-27,ok,check,0.0,0.0,0.0,0,0,107.6,Add field ExecTransType
+e96b8fb96791533e4887d50293f593760bec69f6,2019-03-27,ok,write_new_order,0.0,0.0,0.0,0,0,399.3,Correct fixspec path in comments
+e96b8fb96791533e4887d50293f593760bec69f6,2019-03-27,ok,read_all,0.0,0.0,0.0,0,0,381.0,Correct fixspec path in comments
+e96b8fb96791533e4887d50293f593760bec69f6,2019-03-27,ok,check,0.0,0.0,0.0,0,0,106.3,Correct fixspec path in comments
+a495aa8095ab61be29a895d1bedaf4358504bf40,2019-08-20,ok,write_new_order,0.0,0.0,0.0,0,0,400.6,Merge pull request #22 from kylrth/master
+a495aa8095ab61be29a895d1bedaf4358504bf40,2019-08-20,ok,read_all,0.0,0.0,0.0,0,0,380.3,Merge pull request #22 from kylrth/master
+a495aa8095ab61be29a895d1bedaf4358504bf40,2019-08-20,ok,check,0.0,0.0,0.0,0,0,107.2,Merge pull request #22 from kylrth/master
+d37824cb5529d932dbd9bfb54cbe2693b4bfc07b,2020-10-11,ok,write_new_order,0.0,0.0,0.0,0,0,398.6,Merge pull request #32 from mvanslobbe/master
+d37824cb5529d932dbd9bfb54cbe2693b4bfc07b,2020-10-11,ok,read_all,0.0,0.0,0.0,0,0,382.2,Merge pull request #32 from mvanslobbe/master
+d37824cb5529d932dbd9bfb54cbe2693b4bfc07b,2020-10-11,ok,check,0.0,0.0,0.0,0,0,107.4,Merge pull request #32 from mvanslobbe/master
+f04df27796efac9ac1bea55826611c58e0505890,2020-10-11,ok,write_new_order,0.0,0.0,0.0,0,0,399.6,message_reader docs
+f04df27796efac9ac1bea55826611c58e0505890,2020-10-11,ok,read_all,0.0,0.0,0.0,0,0,381.5,message_reader docs
+f04df27796efac9ac1bea55826611c58e0505890,2020-10-11,ok,check,0.0,0.0,0.0,0,0,108.2,message_reader docs
+76a55e908927ce8252e38c7813e46ee48cd74f9a,2021-05-17,ok,write_new_order,0.0,0.0,0.0,0,0,741.7,Merge pull request #42 from neomantra/nanos
+76a55e908927ce8252e38c7813e46ee48cd74f9a,2021-05-17,ok,read_all,0.0,0.0,0.0,0,0,691.1,Merge pull request #42 from neomantra/nanos
+76a55e908927ce8252e38c7813e46ee48cd74f9a,2021-05-17,ok,check,0.0,0.0,0.0,0,0,150.1,Merge pull request #42 from neomantra/nanos
+be3bc50fcee9a289c42ac22280f3d82874a80636,2021-10-11,ok,write_new_order,0.0,0.0,0.0,0,0,404.4,Bugfix: `message_reader::prefix_size()`
+be3bc50fcee9a289c42ac22280f3d82874a80636,2021-10-11,ok,read_all,0.0,0.0,0.0,0,0,385.6,Bugfix: `message_reader::prefix_size()`
+be3bc50fcee9a289c42ac22280f3d82874a80636,2021-10-11,ok,check,0.0,0.0,0.0,0,0,107.0,Bugfix: `message_reader::prefix_size()`
+b7addf6798544a45113acebc77ae93ccd86bb93b,2022-05-22,ok,write_new_order,0.0,0.0,0.0,0,0,399.3,Merge pull request #45 from jamesdbrock/maxmessagesize
+b7addf6798544a45113acebc77ae93ccd86bb93b,2022-05-22,ok,read_all,0.0,0.0,0.0,0,0,382.4,Merge pull request #45 from jamesdbrock/maxmessagesize
+b7addf6798544a45113acebc77ae93ccd86bb93b,2022-05-22,ok,check,0.0,0.0,0.0,0,0,108.3,Merge pull request #45 from jamesdbrock/maxmessagesize
+06a1d4e848f6468e3b0eec5f768e260f8da4d766,2023-04-23,ok,write_new_order,0.0,0.0,0.0,0,0,399.5,Add msg_type to hffix_fields.hpp
+06a1d4e848f6468e3b0eec5f768e260f8da4d766,2023-04-23,ok,read_all,0.0,0.0,0.0,0,0,382.8,Add msg_type to hffix_fields.hpp
+06a1d4e848f6468e3b0eec5f768e260f8da4d766,2023-04-23,ok,check,0.0,0.0,0.0,0,0,108.3,Add msg_type to hffix_fields.hpp
+533a8d46aeacbb7a3488e8667f1b9254e6a8111a,2024-02-16,ok,write_new_order,0.0,0.0,0.0,0,0,399.0,Added few convenience methods.
+533a8d46aeacbb7a3488e8667f1b9254e6a8111a,2024-02-16,ok,read_all,0.0,0.0,0.0,0,0,382.8,Added few convenience methods.
+533a8d46aeacbb7a3488e8667f1b9254e6a8111a,2024-02-16,ok,check,0.0,0.0,0.0,0,0,108.3,Added few convenience methods.
+8db3581b7549b4cdacba545586932495d4f5e7b0,2024-02-18,ok,write_new_order,0.0,0.0,0.0,0,0,399.3,Dropped boolean push. Added unit tests.
+8db3581b7549b4cdacba545586932495d4f5e7b0,2024-02-18,ok,read_all,0.0,0.0,0.0,0,0,383.5,Dropped boolean push. Added unit tests.
+8db3581b7549b4cdacba545586932495d4f5e7b0,2024-02-18,ok,check,0.0,0.0,0.0,0,0,108.2,Dropped boolean push. Added unit tests.
+e50b76466469617df8be834a180794357b8eda38,2024-02-19,ok,write_new_order,0.0,0.0,0.0,0,0,399.2,v1.4.0
+e50b76466469617df8be834a180794357b8eda38,2024-02-19,ok,read_all,0.0,0.0,0.0,0,0,382.4,v1.4.0
+e50b76466469617df8be834a180794357b8eda38,2024-02-19,ok,check,0.0,0.0,0.0,0,0,107.9,v1.4.0
+3026761cee69be3501f76bbb0713f13a89b0a7fa,2024-04-17,ok,write_new_order,0.0,0.0,0.0,0,0,399.3,Fix for std::basic_string_view<char>::const_iterator not being convertible to const char * in Windows (issue #43)
+3026761cee69be3501f76bbb0713f13a89b0a7fa,2024-04-17,ok,read_all,0.0,0.0,0.0,0,0,382.4,Fix for std::basic_string_view<char>::const_iterator not being convertible to const char * in Windows (issue #43)
+3026761cee69be3501f76bbb0713f13a89b0a7fa,2024-04-17,ok,check,0.0,0.0,0.0,0,0,108.4,Fix for std::basic_string_view<char>::const_iterator not being convertible to const char * in Windows (issue #43)

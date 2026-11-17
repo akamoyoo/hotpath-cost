@@ -1,0 +1,39 @@
+== same bytes (hash of 200000 messages, per compiler: all variants must agree)
+gcc13 orig hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+gcc13 inline hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+gcc13 fast hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+gcc13 both hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+gcc15 orig hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+gcc15 inline hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+gcc15 fast hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+gcc15 both hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+clang21 orig hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+clang21 inline hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+clang21 fast hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+clang21 both hash 5f3d5ec4a060c073 bytes 23199591 range_errors 3993
+== timing (ns per call, median of 3 runs on core 2)
+build                     write_new_order         read_all            check
+gcc13 -O2 orig                        384              374              111
+gcc13 -O2 inline                      335              377              107
+gcc13 -O2 fast                        344              370              111
+gcc13 -O2 both                        332              378              109
+gcc13 -O3 orig                        178              315               29
+gcc13 -O3 inline                      181              318               30
+gcc13 -O3 fast                        218              327               29
+gcc13 -O3 both                        196              313               29
+gcc15 -O2 orig                        301              444               32
+gcc15 -O2 inline                      232              444               33
+gcc15 -O2 fast                        262              444               32
+gcc15 -O2 both                        229              444               32
+gcc15 -O3 orig                        137              361               31
+gcc15 -O3 inline                      134              360               31
+gcc15 -O3 fast                        152              371               31
+gcc15 -O3 both                        110              372               31
+clang21 -O2 orig                      342              412               34
+clang21 -O2 inline                    349              414               33
+clang21 -O2 fast                      317              418               34
+clang21 -O2 both                      312              408               33
+clang21 -O3 orig                      344              392               33
+clang21 -O3 inline                    326              393               34
+clang21 -O3 fast                      254              392               33
+clang21 -O3 both                      286              393               34

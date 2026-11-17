@@ -1,0 +1,2 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+2427613b32f1667abae68a01df6af9ba8270f8e7,2019-05-22,ok,add+cancel,2.0,2.0,0.0,2,0,429.0,experimental STOP support

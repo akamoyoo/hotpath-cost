@@ -1,0 +1,888 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+90854d5b86436db5b121592a164839ce97c35ead,2018-12-16,build failed,,,,,,,,shuffle files around
+6180dad59eabf96c922071c7084afb1252ba6cc7,2018-12-16,ok,find (hit),0.0,0.0,0.0,0,0,37.7,more cleanup
+6180dad59eabf96c922071c7084afb1252ba6cc7,2018-12-16,ok,find (miss),0.0,0.0,0.0,0,0,38.1,more cleanup
+6180dad59eabf96c922071c7084afb1252ba6cc7,2018-12-16,ok,insert+erase,0.0,0.0,0.0,0,0,124.2,more cleanup
+6180dad59eabf96c922071c7084afb1252ba6cc7,2018-12-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.5,more cleanup
+2811b60831f1896d494c2278a582b6d80f0a63e7,2018-12-16,ok,find (hit),0.0,0.0,0.0,0,0,39.3,playing a bit with hash function
+2811b60831f1896d494c2278a582b6d80f0a63e7,2018-12-16,ok,find (miss),0.0,0.0,0.0,0,0,35.3,playing a bit with hash function
+2811b60831f1896d494c2278a582b6d80f0a63e7,2018-12-16,ok,insert+erase,0.0,0.0,0.0,0,0,124.2,playing a bit with hash function
+2811b60831f1896d494c2278a582b6d80f0a63e7,2018-12-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,playing a bit with hash function
+81a0d0a9fc011de562dd33770820a2919c007d02,2018-12-17,ok,find (hit),0.0,0.0,0.0,0,0,37.2,bugfix in map when iterating empty range
+81a0d0a9fc011de562dd33770820a2919c007d02,2018-12-17,ok,find (miss),0.0,0.0,0.0,0,0,35.2,bugfix in map when iterating empty range
+81a0d0a9fc011de562dd33770820a2919c007d02,2018-12-17,ok,insert+erase,0.0,0.0,0.0,0,0,124.7,bugfix in map when iterating empty range
+81a0d0a9fc011de562dd33770820a2919c007d02,2018-12-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,bugfix in map when iterating empty range
+d0f49966c1dd167f68faedbcc0afe6d3ce3c6d98,2018-12-18,ok,find (hit),0.0,0.0,0.0,0,0,48.2,"more cleanup, more tests, more output"
+d0f49966c1dd167f68faedbcc0afe6d3ce3c6d98,2018-12-18,ok,find (miss),0.0,0.0,0.0,0,0,50.2,"more cleanup, more tests, more output"
+d0f49966c1dd167f68faedbcc0afe6d3ce3c6d98,2018-12-18,ok,insert+erase,0.0,0.0,0.0,0,0,182.1,"more cleanup, more tests, more output"
+d0f49966c1dd167f68faedbcc0afe6d3ce3c6d98,2018-12-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.5,"more cleanup, more tests, more output"
+baedf4edbb60a683a06bf6f9be5d95deab2ad5f0,2018-12-18,ok,find (hit),0.0,0.0,0.0,0,0,36.5,"added more tests, and some benchmarks"
+baedf4edbb60a683a06bf6f9be5d95deab2ad5f0,2018-12-18,ok,find (miss),0.0,0.0,0.0,0,0,35.1,"added more tests, and some benchmarks"
+baedf4edbb60a683a06bf6f9be5d95deab2ad5f0,2018-12-18,ok,insert+erase,0.0,0.0,0.0,0,0,123.2,"added more tests, and some benchmarks"
+baedf4edbb60a683a06bf6f9be5d95deab2ad5f0,2018-12-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,"added more tests, and some benchmarks"
+3bf7ae9d7a7557e23b50ee6de641673ea36a3194,2018-12-19,ok,find (hit),0.0,0.0,0.0,0,0,47.0,much less copies & moves for node map
+3bf7ae9d7a7557e23b50ee6de641673ea36a3194,2018-12-19,ok,find (miss),0.0,0.0,0.0,0,0,47.5,much less copies & moves for node map
+3bf7ae9d7a7557e23b50ee6de641673ea36a3194,2018-12-19,ok,insert+erase,0.0,0.0,0.0,0,0,168.3,much less copies & moves for node map
+3bf7ae9d7a7557e23b50ee6de641673ea36a3194,2018-12-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,much less copies & moves for node map
+935a9bba89d4b15112376f5ab042dd9097b74bc8,2018-12-20,ok,find (hit),0.0,0.0,0.0,0,0,37.0,removed copied insert method: getters in pair & Node implementation
+935a9bba89d4b15112376f5ab042dd9097b74bc8,2018-12-20,ok,find (miss),0.0,0.0,0.0,0,0,35.7,removed copied insert method: getters in pair & Node implementation
+935a9bba89d4b15112376f5ab042dd9097b74bc8,2018-12-20,ok,insert+erase,0.0,0.0,0.0,0,0,124.7,removed copied insert method: getters in pair & Node implementation
+935a9bba89d4b15112376f5ab042dd9097b74bc8,2018-12-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.9,removed copied insert method: getters in pair & Node implementation
+1a12d4ac100ba3b3ce3a6a34d365f6c782f208ce,2018-12-21,ok,find (hit),0.0,0.0,0.0,0,0,36.8,add avalanching
+1a12d4ac100ba3b3ce3a6a34d365f6c782f208ce,2018-12-21,ok,find (miss),0.0,0.0,0.0,0,0,35.5,add avalanching
+1a12d4ac100ba3b3ce3a6a34d365f6c782f208ce,2018-12-21,ok,insert+erase,0.0,0.0,0.0,0,0,123.7,add avalanching
+1a12d4ac100ba3b3ce3a6a34d365f6c782f208ce,2018-12-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,add avalanching
+7fde6cbb956ada8f1de49770673c63279affa315,2018-12-24,ok,find (hit),0.0,0.0,0.0,0,0,35.5,got rid of shift stuff. Added two hash functions
+7fde6cbb956ada8f1de49770673c63279affa315,2018-12-24,ok,find (miss),0.0,0.0,0.0,0,0,33.5,got rid of shift stuff. Added two hash functions
+7fde6cbb956ada8f1de49770673c63279affa315,2018-12-24,ok,insert+erase,0.0,0.0,0.0,0,0,121.6,got rid of shift stuff. Added two hash functions
+7fde6cbb956ada8f1de49770673c63279affa315,2018-12-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.3,got rid of shift stuff. Added two hash functions
+09e227095269f9a53f59d8fff218d4d179a0e6d7,2018-12-27,ok,find (hit),0.0,0.0,0.0,0,0,44.7,currently all tests pass in 32bit and 64bit. Still needs work on the hash.
+09e227095269f9a53f59d8fff218d4d179a0e6d7,2018-12-27,ok,find (miss),0.0,0.0,0.0,0,0,43.5,currently all tests pass in 32bit and 64bit. Still needs work on the hash.
+09e227095269f9a53f59d8fff218d4d179a0e6d7,2018-12-27,ok,insert+erase,0.0,0.0,0.0,0,0,177.4,currently all tests pass in 32bit and 64bit. Still needs work on the hash.
+09e227095269f9a53f59d8fff218d4d179a0e6d7,2018-12-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.7,currently all tests pass in 32bit and 64bit. Still needs work on the hash.
+d42536d6d6c58f3bd5da5326622e0b376f3e73ad,2018-12-28,ok,find (hit),0.0,0.0,0.0,0,0,34.9,all tests work in 64bit and 32bit
+d42536d6d6c58f3bd5da5326622e0b376f3e73ad,2018-12-28,ok,find (miss),0.0,0.0,0.0,0,0,33.6,all tests work in 64bit and 32bit
+d42536d6d6c58f3bd5da5326622e0b376f3e73ad,2018-12-28,ok,insert+erase,0.0,0.0,0.0,0,0,124.8,all tests work in 64bit and 32bit
+d42536d6d6c58f3bd5da5326622e0b376f3e73ad,2018-12-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.0,all tests work in 64bit and 32bit
+a3f1aa02c3e529e981a0bfda6031028fa8062c8b,2018-12-28,ok,find (hit),0.0,0.0,0.0,0,0,35.8,configurable MaxLoadFactor: optimizer uses max
+a3f1aa02c3e529e981a0bfda6031028fa8062c8b,2018-12-28,ok,find (miss),0.0,0.0,0.0,0,0,34.5,configurable MaxLoadFactor: optimizer uses max
+a3f1aa02c3e529e981a0bfda6031028fa8062c8b,2018-12-28,ok,insert+erase,0.0,0.0,0.0,0,0,125.9,configurable MaxLoadFactor: optimizer uses max
+a3f1aa02c3e529e981a0bfda6031028fa8062c8b,2018-12-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.1,configurable MaxLoadFactor: optimizer uses max
+4d6e97c542baa015ba9d3c6e8908f3cbe02075a6,2018-12-28,ok,find (hit),0.0,0.0,0.0,0,0,45.5,fixed 32bit Wconversion
+4d6e97c542baa015ba9d3c6e8908f3cbe02075a6,2018-12-28,ok,find (miss),0.0,0.0,0.0,0,0,44.2,fixed 32bit Wconversion
+4d6e97c542baa015ba9d3c6e8908f3cbe02075a6,2018-12-28,ok,insert+erase,0.0,0.0,0.0,0,0,176.9,fixed 32bit Wconversion
+4d6e97c542baa015ba9d3c6e8908f3cbe02075a6,2018-12-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,45.0,fixed 32bit Wconversion
+9c1d74b7f12d1c365da2714fac36fb48dfb39b11,2018-12-29,build failed,,,,,,,,Works in VS2017 with c++14
+ba224168de85a079dec670e3cdaeb182c6c1de65,2018-12-29,ok,find (hit),0.0,0.0,0.0,0,0,36.3,more refactoring to make VS2017 and g++ and clang hppy
+ba224168de85a079dec670e3cdaeb182c6c1de65,2018-12-29,ok,find (miss),0.0,0.0,0.0,0,0,33.5,more refactoring to make VS2017 and g++ and clang hppy
+ba224168de85a079dec670e3cdaeb182c6c1de65,2018-12-29,ok,insert+erase,0.0,0.0,0.0,0,0,123.8,more refactoring to make VS2017 and g++ and clang hppy
+ba224168de85a079dec670e3cdaeb182c6c1de65,2018-12-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.0,more refactoring to make VS2017 and g++ and clang hppy
+c34330eea657771670d42c006d380f6b41716312,2018-12-29,ok,find (hit),0.0,0.0,0.0,0,0,34.8,better constants
+c34330eea657771670d42c006d380f6b41716312,2018-12-29,ok,find (miss),0.0,0.0,0.0,0,0,33.8,better constants
+c34330eea657771670d42c006d380f6b41716312,2018-12-29,ok,insert+erase,0.0,0.0,0.0,0,0,122.0,better constants
+c34330eea657771670d42c006d380f6b41716312,2018-12-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.7,better constants
+8ea91af596770d43e734517fd2400e30dfa6b899,2018-12-30,ok,find (hit),0.0,0.0,0.0,0,0,45.5,some cleanup
+8ea91af596770d43e734517fd2400e30dfa6b899,2018-12-30,ok,find (miss),0.0,0.0,0.0,0,0,44.7,some cleanup
+8ea91af596770d43e734517fd2400e30dfa6b899,2018-12-30,ok,insert+erase,0.0,0.0,0.0,0,0,163.0,some cleanup
+8ea91af596770d43e734517fd2400e30dfa6b899,2018-12-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.3,some cleanup
+ff5327a0c95a96759dd801218ff5e2bf7ceef8f3,2018-12-31,ok,find (hit),0.0,0.0,0.0,0,0,34.9,move's instead of swap's: much faster shifting elements around.
+ff5327a0c95a96759dd801218ff5e2bf7ceef8f3,2018-12-31,ok,find (miss),0.0,0.0,0.0,0,0,33.3,move's instead of swap's: much faster shifting elements around.
+ff5327a0c95a96759dd801218ff5e2bf7ceef8f3,2018-12-31,ok,insert+erase,0.0,0.0,0.0,0,0,95.2,move's instead of swap's: much faster shifting elements around.
+ff5327a0c95a96759dd801218ff5e2bf7ceef8f3,2018-12-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,move's instead of swap's: much faster shifting elements around.
+0fdfe5c802cdd19e73736f62ac59a830952433df,2019-01-01,ok,find (hit),0.0,0.0,0.0,0,0,34.9,"corrected benchmark, some cleanup, better constants"
+0fdfe5c802cdd19e73736f62ac59a830952433df,2019-01-01,ok,find (miss),0.0,0.0,0.0,0,0,33.5,"corrected benchmark, some cleanup, better constants"
+0fdfe5c802cdd19e73736f62ac59a830952433df,2019-01-01,ok,insert+erase,0.0,0.0,0.0,0,0,95.5,"corrected benchmark, some cleanup, better constants"
+0fdfe5c802cdd19e73736f62ac59a830952433df,2019-01-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.6,"corrected benchmark, some cleanup, better constants"
+235d526710eff8fc882a2ffb9ce527d97aa7eff7,2019-01-02,ok,find (hit),0.0,0.0,0.0,0,0,36.1,constants
+235d526710eff8fc882a2ffb9ce527d97aa7eff7,2019-01-02,ok,find (miss),0.0,0.0,0.0,0,0,33.4,constants
+235d526710eff8fc882a2ffb9ce527d97aa7eff7,2019-01-02,ok,insert+erase,0.0,0.0,0.0,0,0,95.5,constants
+235d526710eff8fc882a2ffb9ce527d97aa7eff7,2019-01-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,constants
+f813fb98ed01801f2e24c4f6bc3f01e848387815,2019-01-02,ok,find (hit),0.0,0.0,0.0,0,0,44.0,"add string hash, string benchmark, header"
+f813fb98ed01801f2e24c4f6bc3f01e848387815,2019-01-02,ok,find (miss),0.0,0.0,0.0,0,0,41.4,"add string hash, string benchmark, header"
+f813fb98ed01801f2e24c4f6bc3f01e848387815,2019-01-02,ok,insert+erase,0.0,0.0,0.0,0,0,96.0,"add string hash, string benchmark, header"
+f813fb98ed01801f2e24c4f6bc3f01e848387815,2019-01-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,"add string hash, string benchmark, header"
+f2228e95e4590ba8143aac6444e02c2c12883429,2019-01-02,ok,find (hit),0.0,0.0,0.0,0,0,36.0,add versions as defines
+f2228e95e4590ba8143aac6444e02c2c12883429,2019-01-02,ok,find (miss),0.0,0.0,0.0,0,0,33.5,add versions as defines
+f2228e95e4590ba8143aac6444e02c2c12883429,2019-01-02,ok,insert+erase,0.0,0.0,0.0,0,0,98.3,add versions as defines
+f2228e95e4590ba8143aac6444e02c2c12883429,2019-01-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.8,add versions as defines
+12dc130f2fb71ef11289ba36bf65346c1af8111b,2019-01-02,ok,find (hit),0.0,0.0,0.0,0,0,36.0,removed unnecessary include iostream
+12dc130f2fb71ef11289ba36bf65346c1af8111b,2019-01-02,ok,find (miss),0.0,0.0,0.0,0,0,33.9,removed unnecessary include iostream
+12dc130f2fb71ef11289ba36bf65346c1af8111b,2019-01-02,ok,insert+erase,0.0,0.0,0.0,0,0,96.2,removed unnecessary include iostream
+12dc130f2fb71ef11289ba36bf65346c1af8111b,2019-01-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.7,removed unnecessary include iostream
+203fbeb95466ff4f25bafb1a1980c379e885c5ba,2019-01-03,ok,find (hit),0.0,0.0,0.0,0,0,36.7,Compiles & runs in windows (64bit and 32bit)
+203fbeb95466ff4f25bafb1a1980c379e885c5ba,2019-01-03,ok,find (miss),0.0,0.0,0.0,0,0,33.7,Compiles & runs in windows (64bit and 32bit)
+203fbeb95466ff4f25bafb1a1980c379e885c5ba,2019-01-03,ok,insert+erase,0.0,0.0,0.0,0,0,96.0,Compiles & runs in windows (64bit and 32bit)
+203fbeb95466ff4f25bafb1a1980c379e885c5ba,2019-01-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.7,Compiles & runs in windows (64bit and 32bit)
+85019e4f790b7b168583919036aa64422833fac9,2019-01-04,ok,find (hit),0.0,0.0,0.0,0,0,39.5,"as far as possible, make clang-tidy happy"
+85019e4f790b7b168583919036aa64422833fac9,2019-01-04,ok,find (miss),0.0,0.0,0.0,0,0,33.8,"as far as possible, make clang-tidy happy"
+85019e4f790b7b168583919036aa64422833fac9,2019-01-04,ok,insert+erase,0.0,0.0,0.0,0,0,96.5,"as far as possible, make clang-tidy happy"
+85019e4f790b7b168583919036aa64422833fac9,2019-01-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.8,"as far as possible, make clang-tidy happy"
+00f2c237638f9214beec47c524fbbb24c94dedf5,2019-01-04,ok,find (hit),0.0,0.0,0.0,0,0,46.0,fix MaxLoadFactor128 compile error
+00f2c237638f9214beec47c524fbbb24c94dedf5,2019-01-04,ok,find (miss),0.0,0.0,0.0,0,0,44.4,fix MaxLoadFactor128 compile error
+00f2c237638f9214beec47c524fbbb24c94dedf5,2019-01-04,ok,insert+erase,0.0,0.0,0.0,0,0,141.4,fix MaxLoadFactor128 compile error
+00f2c237638f9214beec47c524fbbb24c94dedf5,2019-01-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,fix MaxLoadFactor128 compile error
+1b65a690f259f3dcffec9335d2b7f0a6028ff5fd,2019-01-04,ok,find (hit),0.0,0.0,0.0,0,0,45.9,incompatible API change: MaxLoadFactor128 to MaxLoadFactor100. Easier to use.
+1b65a690f259f3dcffec9335d2b7f0a6028ff5fd,2019-01-04,ok,find (miss),0.0,0.0,0.0,0,0,45.3,incompatible API change: MaxLoadFactor128 to MaxLoadFactor100. Easier to use.
+1b65a690f259f3dcffec9335d2b7f0a6028ff5fd,2019-01-04,ok,insert+erase,0.0,0.0,0.0,0,0,141.8,incompatible API change: MaxLoadFactor128 to MaxLoadFactor100. Easier to use.
+1b65a690f259f3dcffec9335d2b7f0a6028ff5fd,2019-01-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,45.6,incompatible API change: MaxLoadFactor128 to MaxLoadFactor100. Easier to use.
+68877cb971b5d50b6f53a2fc2fe9b7e3039c385b,2019-01-04,ok,find (hit),0.0,0.0,0.0,0,0,40.0,"make lgtm happy, add cppcheck"
+68877cb971b5d50b6f53a2fc2fe9b7e3039c385b,2019-01-04,ok,find (miss),0.0,0.0,0.0,0,0,33.9,"make lgtm happy, add cppcheck"
+68877cb971b5d50b6f53a2fc2fe9b7e3039c385b,2019-01-04,ok,insert+erase,0.0,0.0,0.0,0,0,96.7,"make lgtm happy, add cppcheck"
+68877cb971b5d50b6f53a2fc2fe9b7e3039c385b,2019-01-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.6,"make lgtm happy, add cppcheck"
+9e7279b6219f1ce9dabf6188f859bd78aad7a618,2019-01-05,ok,find (hit),0.0,0.0,0.0,0,0,34.9,comment
+9e7279b6219f1ce9dabf6188f859bd78aad7a618,2019-01-05,ok,find (miss),0.0,0.0,0.0,0,0,33.3,comment
+9e7279b6219f1ce9dabf6188f859bd78aad7a618,2019-01-05,ok,insert+erase,0.0,0.0,0.0,0,0,96.2,comment
+9e7279b6219f1ce9dabf6188f859bd78aad7a618,2019-01-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.8,comment
+a772dd11cea690504596b682734f7aebe8362f90,2019-01-06,ok,find (hit),0.0,0.0,0.0,0,0,35.4,minor cleanup for lgtm
+a772dd11cea690504596b682734f7aebe8362f90,2019-01-06,ok,find (miss),0.0,0.0,0.0,0,0,34.1,minor cleanup for lgtm
+a772dd11cea690504596b682734f7aebe8362f90,2019-01-06,ok,insert+erase,0.0,0.0,0.0,0,0,109.8,minor cleanup for lgtm
+a772dd11cea690504596b682734f7aebe8362f90,2019-01-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.4,minor cleanup for lgtm
+c2a9410b5fac423b27d50c3a299741790272a1cf,2019-01-06,ok,find (hit),0.0,0.0,0.0,0,0,34.9,more warnings checked
+c2a9410b5fac423b27d50c3a299741790272a1cf,2019-01-06,ok,find (miss),0.0,0.0,0.0,0,0,33.5,more warnings checked
+c2a9410b5fac423b27d50c3a299741790272a1cf,2019-01-06,ok,insert+erase,0.0,0.0,0.0,0,0,96.7,more warnings checked
+c2a9410b5fac423b27d50c3a299741790272a1cf,2019-01-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.0,more warnings checked
+5da57d2a4548ac6682beedfaa7210ecb5564b29d,2019-01-06,ok,find (hit),0.0,0.0,0.0,0,0,45.1,add missing include type_traits
+5da57d2a4548ac6682beedfaa7210ecb5564b29d,2019-01-06,ok,find (miss),0.0,0.0,0.0,0,0,44.0,add missing include type_traits
+5da57d2a4548ac6682beedfaa7210ecb5564b29d,2019-01-06,ok,insert+erase,0.0,0.0,0.0,0,0,137.6,add missing include type_traits
+5da57d2a4548ac6682beedfaa7210ecb5564b29d,2019-01-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.9,add missing include type_traits
+94d45f01f61a4ab7441ea3ca60cd4c85c8fa5277,2019-01-06,ok,find (hit),0.0,0.0,0.0,0,0,35.5,"use struct instead of class for hash, use typename in all templates. Travis fix"
+94d45f01f61a4ab7441ea3ca60cd4c85c8fa5277,2019-01-06,ok,find (miss),0.0,0.0,0.0,0,0,33.7,"use struct instead of class for hash, use typename in all templates. Travis fix"
+94d45f01f61a4ab7441ea3ca60cd4c85c8fa5277,2019-01-06,ok,insert+erase,0.0,0.0,0.0,0,0,96.3,"use struct instead of class for hash, use typename in all templates. Travis fix"
+94d45f01f61a4ab7441ea3ca60cd4c85c8fa5277,2019-01-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.7,"use struct instead of class for hash, use typename in all templates. Travis fix"
+67c6178c19ed4ee8ee253fa050809260c16d68ed,2019-01-07,ok,find (hit),0.0,0.0,0.0,0,0,46.0,more warnings enabled
+67c6178c19ed4ee8ee253fa050809260c16d68ed,2019-01-07,ok,find (miss),0.0,0.0,0.0,0,0,44.7,more warnings enabled
+67c6178c19ed4ee8ee253fa050809260c16d68ed,2019-01-07,ok,insert+erase,0.0,0.0,0.0,0,0,139.2,more warnings enabled
+67c6178c19ed4ee8ee253fa050809260c16d68ed,2019-01-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,45.4,more warnings enabled
+c6091d4a510e3f9567f0e0aa127b03de811e6960,2019-01-07,ok,find (hit),0.0,0.0,0.0,0,0,34.6,code cleanup
+c6091d4a510e3f9567f0e0aa127b03de811e6960,2019-01-07,ok,find (miss),0.0,0.0,0.0,0,0,33.5,code cleanup
+c6091d4a510e3f9567f0e0aa127b03de811e6960,2019-01-07,ok,insert+erase,0.0,0.0,0.0,0,0,95.5,code cleanup
+c6091d4a510e3f9567f0e0aa127b03de811e6960,2019-01-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.8,code cleanup
+82543a79b98063eeadb9f6af2f571ed8302f6d4d,2019-01-11,ok,find (hit),0.0,0.0,0.0,0,0,35.3,code cleanup: removed duplicated code parts
+82543a79b98063eeadb9f6af2f571ed8302f6d4d,2019-01-11,ok,find (miss),0.0,0.0,0.0,0,0,33.9,code cleanup: removed duplicated code parts
+82543a79b98063eeadb9f6af2f571ed8302f6d4d,2019-01-11,ok,insert+erase,0.0,0.0,0.0,0,0,95.8,code cleanup: removed duplicated code parts
+82543a79b98063eeadb9f6af2f571ed8302f6d4d,2019-01-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.6,code cleanup: removed duplicated code parts
+c1f47aece1747815c3572cdd317178005752f010,2019-01-12,ok,find (hit),0.0,0.0,0.0,0,0,35.0,bugfix: use robin_hood::pair in check for IsDirect
+c1f47aece1747815c3572cdd317178005752f010,2019-01-12,ok,find (miss),0.0,0.0,0.0,0,0,33.6,bugfix: use robin_hood::pair in check for IsDirect
+c1f47aece1747815c3572cdd317178005752f010,2019-01-12,ok,insert+erase,0.0,0.0,0.0,0,0,96.0,bugfix: use robin_hood::pair in check for IsDirect
+c1f47aece1747815c3572cdd317178005752f010,2019-01-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.6,bugfix: use robin_hood::pair in check for IsDirect
+d798b42b97f13ae6f82f17091bf3d31fbc0858ca,2019-01-13,ok,find (hit),0.0,0.0,0.0,0,0,35.1,"bump version because is_flat_map, renmaed IsDirect -> IsFlatMap"
+d798b42b97f13ae6f82f17091bf3d31fbc0858ca,2019-01-13,ok,find (miss),0.0,0.0,0.0,0,0,33.5,"bump version because is_flat_map, renmaed IsDirect -> IsFlatMap"
+d798b42b97f13ae6f82f17091bf3d31fbc0858ca,2019-01-13,ok,insert+erase,0.0,0.0,0.0,0,0,95.9,"bump version because is_flat_map, renmaed IsDirect -> IsFlatMap"
+d798b42b97f13ae6f82f17091bf3d31fbc0858ca,2019-01-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.7,"bump version because is_flat_map, renmaed IsDirect -> IsFlatMap"
+e1d2b9bafc4f7b153405973b2c727ad5d58a87d4,2019-01-13,ok,find (hit),0.0,0.0,0.0,0,0,44.5,set patch to zero according to semver rules
+e1d2b9bafc4f7b153405973b2c727ad5d58a87d4,2019-01-13,ok,find (miss),0.0,0.0,0.0,0,0,43.6,set patch to zero according to semver rules
+e1d2b9bafc4f7b153405973b2c727ad5d58a87d4,2019-01-13,ok,insert+erase,0.0,0.0,0.0,0,0,140.2,set patch to zero according to semver rules
+e1d2b9bafc4f7b153405973b2c727ad5d58a87d4,2019-01-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.3,set patch to zero according to semver rules
+29d763077d09200c09a33caee40047300227b7f6,2019-01-15,ok,find (hit),0.0,0.0,0.0,0,0,38.1,moving impl into detail and adding using seems to lead to faster code
+29d763077d09200c09a33caee40047300227b7f6,2019-01-15,ok,find (miss),0.0,0.0,0.0,0,0,36.5,moving impl into detail and adding using seems to lead to faster code
+29d763077d09200c09a33caee40047300227b7f6,2019-01-15,ok,insert+erase,0.0,0.0,0.0,0,0,101.2,moving impl into detail and adding using seems to lead to faster code
+29d763077d09200c09a33caee40047300227b7f6,2019-01-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.9,moving impl into detail and adding using seems to lead to faster code
+bd58ecb0c8a3637e13e1e2bf9b8745a3c679ff75,2019-01-17,ok,find (hit),0.0,0.0,0.0,0,0,38.5,better hash
+bd58ecb0c8a3637e13e1e2bf9b8745a3c679ff75,2019-01-17,ok,find (miss),0.0,0.0,0.0,0,0,36.5,better hash
+bd58ecb0c8a3637e13e1e2bf9b8745a3c679ff75,2019-01-17,ok,insert+erase,0.0,0.0,0.0,0,0,99.7,better hash
+bd58ecb0c8a3637e13e1e2bf9b8745a3c679ff75,2019-01-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.6,better hash
+e6ee2e1c6f44611718920cc039498a8d8de38105,2019-01-18,ok,find (hit),0.0,0.0,0.0,0,0,38.1,better constants found with quickmix
+e6ee2e1c6f44611718920cc039498a8d8de38105,2019-01-18,ok,find (miss),0.0,0.0,0.0,0,0,36.5,better constants found with quickmix
+e6ee2e1c6f44611718920cc039498a8d8de38105,2019-01-18,ok,insert+erase,0.0,0.0,0.0,0,0,97.9,better constants found with quickmix
+e6ee2e1c6f44611718920cc039498a8d8de38105,2019-01-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.4,better constants found with quickmix
+39821efe0130dd88f624d864659a29d2b9e45681,2019-01-18,ok,find (hit),0.0,0.0,0.0,0,0,37.0,inline instead of static so it's easier to play with the code
+39821efe0130dd88f624d864659a29d2b9e45681,2019-01-18,ok,find (miss),0.0,0.0,0.0,0,0,35.8,inline instead of static so it's easier to play with the code
+39821efe0130dd88f624d864659a29d2b9e45681,2019-01-18,ok,insert+erase,0.0,0.0,0.0,0,0,96.5,inline instead of static so it's easier to play with the code
+39821efe0130dd88f624d864659a29d2b9e45681,2019-01-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,inline instead of static so it's easier to play with the code
+9b9e98b251f5a6bd392335ebb9bc376534ac0c64,2019-01-20,ok,find (hit),0.0,0.0,0.0,0,0,37.5,3.0.0: InfoInc
+9b9e98b251f5a6bd392335ebb9bc376534ac0c64,2019-01-20,ok,find (miss),0.0,0.0,0.0,0,0,36.0,3.0.0: InfoInc
+9b9e98b251f5a6bd392335ebb9bc376534ac0c64,2019-01-20,ok,insert+erase,0.0,0.0,0.0,0,0,97.3,3.0.0: InfoInc
+9b9e98b251f5a6bd392335ebb9bc376534ac0c64,2019-01-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.1,3.0.0: InfoInc
+153474a693b321b768e3173f7ac882a4628fec2a,2019-01-20,ok,find (hit),0.0,0.0,0.0,0,0,33.1,automatic hash size seems to work
+153474a693b321b768e3173f7ac882a4628fec2a,2019-01-20,ok,find (miss),0.0,0.0,0.0,0,0,29.7,automatic hash size seems to work
+153474a693b321b768e3173f7ac882a4628fec2a,2019-01-20,ok,insert+erase,0.0,0.0,0.0,0,0,112.1,automatic hash size seems to work
+153474a693b321b768e3173f7ac882a4628fec2a,2019-01-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,automatic hash size seems to work
+b1dc28abc750a80eeb19eba867e14e22714e76d4,2019-01-21,ok,find (hit),0.0,0.0,0.0,0,0,42.2,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+b1dc28abc750a80eeb19eba867e14e22714e76d4,2019-01-21,ok,find (miss),0.0,0.0,0.0,0,0,38.6,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+b1dc28abc750a80eeb19eba867e14e22714e76d4,2019-01-21,ok,insert+erase,0.0,0.0,0.0,0,0,155.6,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+b1dc28abc750a80eeb19eba867e14e22714e76d4,2019-01-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.0,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+08098d6ed1ef28a76d09e2338d1ef75805d7f111,2019-01-21,ok,find (hit),0.0,0.0,0.0,0,0,33.8,"bump to 3.0.0, add logger"
+08098d6ed1ef28a76d09e2338d1ef75805d7f111,2019-01-21,ok,find (miss),0.0,0.0,0.0,0,0,29.7,"bump to 3.0.0, add logger"
+08098d6ed1ef28a76d09e2338d1ef75805d7f111,2019-01-21,ok,insert+erase,0.0,0.0,0.0,0,0,105.6,"bump to 3.0.0, add logger"
+08098d6ed1ef28a76d09e2338d1ef75805d7f111,2019-01-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.4,"bump to 3.0.0, add logger"
+80d2f510b334e448c30cae6f70502618857ed77a,2019-01-22,ok,find (hit),0.0,0.0,0.0,0,0,32.9,"make sure placement new is not hijacked, reorder template args"
+80d2f510b334e448c30cae6f70502618857ed77a,2019-01-22,ok,find (miss),0.0,0.0,0.0,0,0,34.7,"make sure placement new is not hijacked, reorder template args"
+80d2f510b334e448c30cae6f70502618857ed77a,2019-01-22,ok,insert+erase,0.0,0.0,0.0,0,0,104.5,"make sure placement new is not hijacked, reorder template args"
+80d2f510b334e448c30cae6f70502618857ed77a,2019-01-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.4,"make sure placement new is not hijacked, reorder template args"
+3d9d82c57b2e44b31a1c8bddf1ddc2d71def649d,2019-01-22,ok,find (hit),0.0,0.0,0.0,0,0,33.4,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+3d9d82c57b2e44b31a1c8bddf1ddc2d71def649d,2019-01-22,ok,find (miss),0.0,0.0,0.0,0,0,29.0,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+3d9d82c57b2e44b31a1c8bddf1ddc2d71def649d,2019-01-22,ok,insert+erase,0.0,0.0,0.0,0,0,105.6,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+3d9d82c57b2e44b31a1c8bddf1ddc2d71def649d,2019-01-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.6,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+344020113f3e130a2291f48897b42fd261ffcad9,2019-01-22,ok,find (hit),0.0,0.0,0.0,0,0,32.5,newly generated constants
+344020113f3e130a2291f48897b42fd261ffcad9,2019-01-22,ok,find (miss),0.0,0.0,0.0,0,0,29.1,newly generated constants
+344020113f3e130a2291f48897b42fd261ffcad9,2019-01-22,ok,insert+erase,0.0,0.0,0.0,0,0,104.6,newly generated constants
+344020113f3e130a2291f48897b42fd261ffcad9,2019-01-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,newly generated constants
+e60363661150def6ad17a3e0d241df659e1a68bf,2019-01-22,ok,find (hit),0.0,0.0,0.0,0,0,32.9,semver correct versioning means it's 2.2.0 and not 3.0.0
+e60363661150def6ad17a3e0d241df659e1a68bf,2019-01-22,ok,find (miss),0.0,0.0,0.0,0,0,29.0,semver correct versioning means it's 2.2.0 and not 3.0.0
+e60363661150def6ad17a3e0d241df659e1a68bf,2019-01-22,ok,insert+erase,0.0,0.0,0.0,0,0,105.0,semver correct versioning means it's 2.2.0 and not 3.0.0
+e60363661150def6ad17a3e0d241df659e1a68bf,2019-01-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.7,semver correct versioning means it's 2.2.0 and not 3.0.0
+8c42fcccc7737136368e82f6bc19ce1507eb2245,2019-01-23,ok,find (hit),0.0,0.0,0.0,0,0,32.8,Increased size for flat_map selection: now works for std::string  key
+8c42fcccc7737136368e82f6bc19ce1507eb2245,2019-01-23,ok,find (miss),0.0,0.0,0.0,0,0,29.6,Increased size for flat_map selection: now works for std::string  key
+8c42fcccc7737136368e82f6bc19ce1507eb2245,2019-01-23,ok,insert+erase,0.0,0.0,0.0,0,0,104.3,Increased size for flat_map selection: now works for std::string  key
+8c42fcccc7737136368e82f6bc19ce1507eb2245,2019-01-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.7,Increased size for flat_map selection: now works for std::string  key
+173b32d0c0b5d5b5acdb41f1a3a319b6f3b2d23c,2019-01-25,ok,find (hit),0.0,0.0,0.0,0,0,33.2,do .. while seems to be faster (less code?)
+173b32d0c0b5d5b5acdb41f1a3a319b6f3b2d23c,2019-01-25,ok,find (miss),0.0,0.0,0.0,0,0,23.9,do .. while seems to be faster (less code?)
+173b32d0c0b5d5b5acdb41f1a3a319b6f3b2d23c,2019-01-25,ok,insert+erase,0.0,0.0,0.0,0,0,103.3,do .. while seems to be faster (less code?)
+173b32d0c0b5d5b5acdb41f1a3a319b6f3b2d23c,2019-01-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,do .. while seems to be faster (less code?)
+47e6bdb8a9144709cf825b25f3946d07eaf13895,2019-01-25,ok,find (hit),0.0,0.0,0.0,0,0,32.8,"for doCreateByKey, old style looping is faster"
+47e6bdb8a9144709cf825b25f3946d07eaf13895,2019-01-25,ok,find (miss),0.0,0.0,0.0,0,0,23.9,"for doCreateByKey, old style looping is faster"
+47e6bdb8a9144709cf825b25f3946d07eaf13895,2019-01-25,ok,insert+erase,0.0,0.0,0.0,0,0,103.5,"for doCreateByKey, old style looping is faster"
+47e6bdb8a9144709cf825b25f3946d07eaf13895,2019-01-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,"for doCreateByKey, old style looping is faster"
+c5b67e162de33677e32ff7d50546401f52461830,2019-01-25,ok,find (hit),0.0,0.0,0.0,0,0,32.1,much faster iteration with clz
+c5b67e162de33677e32ff7d50546401f52461830,2019-01-25,ok,find (miss),0.0,0.0,0.0,0,0,23.9,much faster iteration with clz
+c5b67e162de33677e32ff7d50546401f52461830,2019-01-25,ok,insert+erase,0.0,0.0,0.0,0,0,103.8,much faster iteration with clz
+c5b67e162de33677e32ff7d50546401f52461830,2019-01-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.7,much faster iteration with clz
+458040cecd8acdad615d1465869f79aa038acab3,2019-01-25,ok,find (hit),0.0,0.0,0.0,0,0,40.9,"indnet preproc macros, bump version to 2.3.0"
+458040cecd8acdad615d1465869f79aa038acab3,2019-01-25,ok,find (miss),0.0,0.0,0.0,0,0,24.7,"indnet preproc macros, bump version to 2.3.0"
+458040cecd8acdad615d1465869f79aa038acab3,2019-01-25,ok,insert+erase,0.0,0.0,0.0,0,0,105.2,"indnet preproc macros, bump version to 2.3.0"
+458040cecd8acdad615d1465869f79aa038acab3,2019-01-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.7,"indnet preproc macros, bump version to 2.3.0"
+ab4144b381b7eb8f62265b227cc0af39b1169ef4,2019-01-25,ok,find (hit),0.0,0.0,0.0,0,0,41.5,simplified umulh macro
+ab4144b381b7eb8f62265b227cc0af39b1169ef4,2019-01-25,ok,find (miss),0.0,0.0,0.0,0,0,34.1,simplified umulh macro
+ab4144b381b7eb8f62265b227cc0af39b1169ef4,2019-01-25,ok,insert+erase,0.0,0.0,0.0,0,0,151.1,simplified umulh macro
+ab4144b381b7eb8f62265b227cc0af39b1169ef4,2019-01-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.0,simplified umulh macro
+99e0f8cd4340088cd459f6fafa6ebfc77b474c48,2019-01-26,ok,find (hit),0.0,0.0,0.0,0,0,33.3,"working code, with _BitScanForward"
+99e0f8cd4340088cd459f6fafa6ebfc77b474c48,2019-01-26,ok,find (miss),0.0,0.0,0.0,0,0,27.7,"working code, with _BitScanForward"
+99e0f8cd4340088cd459f6fafa6ebfc77b474c48,2019-01-26,ok,insert+erase,0.0,0.0,0.0,0,0,106.2,"working code, with _BitScanForward"
+99e0f8cd4340088cd459f6fafa6ebfc77b474c48,2019-01-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.1,"working code, with _BitScanForward"
+c0326ecd144ce9b561b95f260c6d154b467364fe,2019-01-26,ok,find (hit),0.0,0.0,0.0,0,0,33.6,"windows clz works, It's faster (but not as much as Linux gains)"
+c0326ecd144ce9b561b95f260c6d154b467364fe,2019-01-26,ok,find (miss),0.0,0.0,0.0,0,0,24.0,"windows clz works, It's faster (but not as much as Linux gains)"
+c0326ecd144ce9b561b95f260c6d154b467364fe,2019-01-26,ok,insert+erase,0.0,0.0,0.0,0,0,105.0,"windows clz works, It's faster (but not as much as Linux gains)"
+c0326ecd144ce9b561b95f260c6d154b467364fe,2019-01-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.4,"windows clz works, It's faster (but not as much as Linux gains)"
+43b699802bb8261f9a7b75780eec983d7a35cfdf,2019-01-27,ok,find (hit),0.0,0.0,0.0,0,0,33.8,unrolling findIdx is a tiny bit faster
+43b699802bb8261f9a7b75780eec983d7a35cfdf,2019-01-27,ok,find (miss),0.0,0.0,0.0,0,0,18.8,unrolling findIdx is a tiny bit faster
+43b699802bb8261f9a7b75780eec983d7a35cfdf,2019-01-27,ok,insert+erase,0.0,0.0,0.0,0,0,104.5,unrolling findIdx is a tiny bit faster
+43b699802bb8261f9a7b75780eec983d7a35cfdf,2019-01-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.1,unrolling findIdx is a tiny bit faster
+f51aa3cc9abdd37f3d6d34ea75d4670ff436c6b7,2019-01-27,ok,find (hit),0.0,0.0,0.0,0,0,43.5,comment
+f51aa3cc9abdd37f3d6d34ea75d4670ff436c6b7,2019-01-27,ok,find (miss),0.0,0.0,0.0,0,0,29.2,comment
+f51aa3cc9abdd37f3d6d34ea75d4670ff436c6b7,2019-01-27,ok,insert+erase,0.0,0.0,0.0,0,0,110.2,comment
+f51aa3cc9abdd37f3d6d34ea75d4670ff436c6b7,2019-01-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,comment
+674bbd47adb6d86ed51da632a5f166a6f61e7c9d,2019-01-27,ok,find (hit),0.0,0.0,0.0,0,0,32.6,bump version
+674bbd47adb6d86ed51da632a5f166a6f61e7c9d,2019-01-27,ok,find (miss),0.0,0.0,0.0,0,0,18.1,bump version
+674bbd47adb6d86ed51da632a5f166a6f61e7c9d,2019-01-27,ok,insert+erase,0.0,0.0,0.0,0,0,104.2,bump version
+674bbd47adb6d86ed51da632a5f166a6f61e7c9d,2019-01-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.0,bump version
+b399a377c128551254122699dd5dbcad1bd08196,2019-01-31,ok,find (hit),0.0,0.0,0.0,0,0,32.7,interface update: renamed flat_map -> unordered_flat_map use const Key in pair
+b399a377c128551254122699dd5dbcad1bd08196,2019-01-31,ok,find (miss),0.0,0.0,0.0,0,0,18.2,interface update: renamed flat_map -> unordered_flat_map use const Key in pair
+b399a377c128551254122699dd5dbcad1bd08196,2019-01-31,ok,insert+erase,0.0,0.0,0.0,0,0,102.9,interface update: renamed flat_map -> unordered_flat_map use const Key in pair
+b399a377c128551254122699dd5dbcad1bd08196,2019-01-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,interface update: renamed flat_map -> unordered_flat_map use const Key in pair
+61d1030b1a9973e865b5032f3ccef5c65cd6b5b3,2019-02-01,ok,find (hit),0.0,0.0,0.0,0,0,33.6,new identation rules
+61d1030b1a9973e865b5032f3ccef5c65cd6b5b3,2019-02-01,ok,find (miss),0.0,0.0,0.0,0,0,18.4,new identation rules
+61d1030b1a9973e865b5032f3ccef5c65cd6b5b3,2019-02-01,ok,insert+erase,0.0,0.0,0.0,0,0,105.1,new identation rules
+61d1030b1a9973e865b5032f3ccef5c65cd6b5b3,2019-02-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,new identation rules
+20041829cfa5c6da54eb743e626b860ccd7176a1,2019-02-04,ok,find (hit),0.0,0.0,0.0,0,0,45.6,"code cleanup. force compiler to make compile time constants, lgtm should work again"
+20041829cfa5c6da54eb743e626b860ccd7176a1,2019-02-04,ok,find (miss),0.0,0.0,0.0,0,0,29.8,"code cleanup. force compiler to make compile time constants, lgtm should work again"
+20041829cfa5c6da54eb743e626b860ccd7176a1,2019-02-04,ok,insert+erase,0.0,0.0,0.0,0,0,142.0,"code cleanup. force compiler to make compile time constants, lgtm should work again"
+20041829cfa5c6da54eb743e626b860ccd7176a1,2019-02-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.2,"code cleanup. force compiler to make compile time constants, lgtm should work again"
+81de2867b1c9b42b68ccf1c7bf695c70115d60e8,2019-02-06,ok,find (hit),0.0,0.0,0.0,0,0,36.3,fixes #14
+81de2867b1c9b42b68ccf1c7bf695c70115d60e8,2019-02-06,ok,find (miss),0.0,0.0,0.0,0,0,18.3,fixes #14
+81de2867b1c9b42b68ccf1c7bf695c70115d60e8,2019-02-06,ok,insert+erase,0.0,0.0,0.0,0,0,103.4,fixes #14
+81de2867b1c9b42b68ccf1c7bf695c70115d60e8,2019-02-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,fixes #14
+4095f31ca456f69dc402b62a82e20d2c689aea9f,2019-02-06,ok,find (hit),0.0,0.0,0.0,0,0,33.0,bump version because of bug fix
+4095f31ca456f69dc402b62a82e20d2c689aea9f,2019-02-06,ok,find (miss),0.0,0.0,0.0,0,0,18.4,bump version because of bug fix
+4095f31ca456f69dc402b62a82e20d2c689aea9f,2019-02-06,ok,insert+erase,0.0,0.0,0.0,0,0,102.0,bump version because of bug fix
+4095f31ca456f69dc402b62a82e20d2c689aea9f,2019-02-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.0,bump version because of bug fix
+b3ba1bb8eaf15b2a9ed3358d19ac0fd3776b5c0e,2019-02-07,ok,find (hit),0.0,0.0,0.0,0,0,32.8,add default constructible iterator
+b3ba1bb8eaf15b2a9ed3358d19ac0fd3776b5c0e,2019-02-07,ok,find (miss),0.0,0.0,0.0,0,0,18.1,add default constructible iterator
+b3ba1bb8eaf15b2a9ed3358d19ac0fd3776b5c0e,2019-02-07,ok,insert+erase,0.0,0.0,0.0,0,0,102.4,add default constructible iterator
+b3ba1bb8eaf15b2a9ed3358d19ac0fd3776b5c0e,2019-02-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.7,add default constructible iterator
+fc0d4d074c23ba92e14b2fd897822fccb1fde5ee,2019-02-07,ok,find (hit),0.0,0.0,0.0,0,0,42.2,"support for .at(), fixes #16"
+fc0d4d074c23ba92e14b2fd897822fccb1fde5ee,2019-02-07,ok,find (miss),0.0,0.0,0.0,0,0,18.6,"support for .at(), fixes #16"
+fc0d4d074c23ba92e14b2fd897822fccb1fde5ee,2019-02-07,ok,insert+erase,0.0,0.0,0.0,0,0,103.9,"support for .at(), fixes #16"
+fc0d4d074c23ba92e14b2fd897822fccb1fde5ee,2019-02-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,"support for .at(), fixes #16"
+d390efcc3b1ee7d82e85858dcbb846af88fe7491,2019-02-08,ok,find (hit),0.0,0.0,0.0,0,0,33.4,better handling if null-hash is used
+d390efcc3b1ee7d82e85858dcbb846af88fe7491,2019-02-08,ok,find (miss),0.0,0.0,0.0,0,0,18.8,better handling if null-hash is used
+d390efcc3b1ee7d82e85858dcbb846af88fe7491,2019-02-08,ok,insert+erase,0.0,0.0,0.0,0,0,103.4,better handling if null-hash is used
+d390efcc3b1ee7d82e85858dcbb846af88fe7491,2019-02-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,better handling if null-hash is used
+48010d39767f1a13306bfce3ce0444d39e4bbda7,2019-02-10,ok,find (hit),0.0,0.0,0.0,0,0,33.5,add reserve() and rehash(). Both are not yet much tested. Sprinkle a few UNLIKELY/LIKELY around to speed things a bit up
+48010d39767f1a13306bfce3ce0444d39e4bbda7,2019-02-10,ok,find (miss),0.0,0.0,0.0,0,0,19.7,add reserve() and rehash(). Both are not yet much tested. Sprinkle a few UNLIKELY/LIKELY around to speed things a bit up
+48010d39767f1a13306bfce3ce0444d39e4bbda7,2019-02-10,ok,insert+erase,0.0,0.0,0.0,0,0,105.4,add reserve() and rehash(). Both are not yet much tested. Sprinkle a few UNLIKELY/LIKELY around to speed things a bit up
+48010d39767f1a13306bfce3ce0444d39e4bbda7,2019-02-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,add reserve() and rehash(). Both are not yet much tested. Sprinkle a few UNLIKELY/LIKELY around to speed things a bit up
+92df9db9185c6ee85de6855d1c2bc530230adfe7,2019-02-10,ok,find (hit),0.0,0.0,0.0,0,0,34.8,don't use std::max to prevent undefined reference to static constexpr
+92df9db9185c6ee85de6855d1c2bc530230adfe7,2019-02-10,ok,find (miss),0.0,0.0,0.0,0,0,18.2,don't use std::max to prevent undefined reference to static constexpr
+92df9db9185c6ee85de6855d1c2bc530230adfe7,2019-02-10,ok,insert+erase,0.0,0.0,0.0,0,0,101.8,don't use std::max to prevent undefined reference to static constexpr
+92df9db9185c6ee85de6855d1c2bc530230adfe7,2019-02-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.2,don't use std::max to prevent undefined reference to static constexpr
+184b6c0e1805b6529f40ee321e0f19c0a2f31dc0,2019-02-11,ok,find (hit),0.0,0.0,0.0,0,0,34.1,"robin_hood hash back to normal, hopefully that's better"
+184b6c0e1805b6529f40ee321e0f19c0a2f31dc0,2019-02-11,ok,find (miss),0.0,0.0,0.0,0,0,18.2,"robin_hood hash back to normal, hopefully that's better"
+184b6c0e1805b6529f40ee321e0f19c0a2f31dc0,2019-02-11,ok,insert+erase,0.0,0.0,0.0,0,0,101.3,"robin_hood hash back to normal, hopefully that's better"
+184b6c0e1805b6529f40ee321e0f19c0a2f31dc0,2019-02-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,"robin_hood hash back to normal, hopefully that's better"
+1e2d2437cbdfaa9440dc7011e3b2b9ef170bb1f4,2019-02-11,ok,find (hit),0.0,0.0,0.0,0,0,41.8,some hash improvements
+1e2d2437cbdfaa9440dc7011e3b2b9ef170bb1f4,2019-02-11,ok,find (miss),0.0,0.0,0.0,0,0,19.0,some hash improvements
+1e2d2437cbdfaa9440dc7011e3b2b9ef170bb1f4,2019-02-11,ok,insert+erase,0.0,0.0,0.0,0,0,102.0,some hash improvements
+1e2d2437cbdfaa9440dc7011e3b2b9ef170bb1f4,2019-02-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.9,some hash improvements
+ac5826a28046fe4032cc1f253dcbfb252349130a,2019-02-11,ok,find (hit),0.0,0.0,0.0,0,0,32.7,32bit compile fix
+ac5826a28046fe4032cc1f253dcbfb252349130a,2019-02-11,ok,find (miss),0.0,0.0,0.0,0,0,18.4,32bit compile fix
+ac5826a28046fe4032cc1f253dcbfb252349130a,2019-02-11,ok,insert+erase,0.0,0.0,0.0,0,0,103.2,32bit compile fix
+ac5826a28046fe4032cc1f253dcbfb252349130a,2019-02-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.5,32bit compile fix
+208431ad051a426fd66eda85a2019b15085c79d9,2019-02-18,ok,find (hit),0.0,0.0,0.0,0,0,45.2,"use newer hash, based on absl's"
+208431ad051a426fd66eda85a2019b15085c79d9,2019-02-18,ok,find (miss),0.0,0.0,0.0,0,0,30.6,"use newer hash, based on absl's"
+208431ad051a426fd66eda85a2019b15085c79d9,2019-02-18,ok,insert+erase,0.0,0.0,0.0,0,0,157.7,"use newer hash, based on absl's"
+208431ad051a426fd66eda85a2019b15085c79d9,2019-02-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,48.6,"use newer hash, based on absl's"
+d0c7605694216924ebc6521c0b262a3df5c64e65,2019-02-19,ok,find (hit),0.0,0.0,0.0,0,0,34.8,bugfix 32bit hash
+d0c7605694216924ebc6521c0b262a3df5c64e65,2019-02-19,ok,find (miss),0.0,0.0,0.0,0,0,19.4,bugfix 32bit hash
+d0c7605694216924ebc6521c0b262a3df5c64e65,2019-02-19,ok,insert+erase,0.0,0.0,0.0,0,0,105.8,bugfix 32bit hash
+d0c7605694216924ebc6521c0b262a3df5c64e65,2019-02-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.7,bugfix 32bit hash
+b148210d3f8bf9e5bdf2f65aa270272a68935b4c,2019-04-17,ok,find (hit),0.0,0.0,0.0,0,0,33.4,"minor bugfix: overflow check with 0x100 to make sure there are 127 elements per bucket. IN 32bit case with the 123 bit test failed because 0xff would have been used, which is still valid."
+b148210d3f8bf9e5bdf2f65aa270272a68935b4c,2019-04-17,ok,find (miss),0.0,0.0,0.0,0,0,18.9,"minor bugfix: overflow check with 0x100 to make sure there are 127 elements per bucket. IN 32bit case with the 123 bit test failed because 0xff would have been used, which is still valid."
+b148210d3f8bf9e5bdf2f65aa270272a68935b4c,2019-04-17,ok,insert+erase,0.0,0.0,0.0,0,0,103.5,"minor bugfix: overflow check with 0x100 to make sure there are 127 elements per bucket. IN 32bit case with the 123 bit test failed because 0xff would have been used, which is still valid."
+b148210d3f8bf9e5bdf2f65aa270272a68935b4c,2019-04-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.3,"minor bugfix: overflow check with 0x100 to make sure there are 127 elements per bucket. IN 32bit case with the 123 bit test failed because 0xff would have been used, which is still valid."
+379697e49b79c66367fa2a50a776f9f88ed85772,2019-04-17,ok,find (hit),0.0,0.0,0.0,0,0,34.2,"dammit, my bugfix was buggy. Should work now."
+379697e49b79c66367fa2a50a776f9f88ed85772,2019-04-17,ok,find (miss),0.0,0.0,0.0,0,0,19.0,"dammit, my bugfix was buggy. Should work now."
+379697e49b79c66367fa2a50a776f9f88ed85772,2019-04-17,ok,insert+erase,0.0,0.0,0.0,0,0,110.2,"dammit, my bugfix was buggy. Should work now."
+379697e49b79c66367fa2a50a776f9f88ed85772,2019-04-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.2,"dammit, my bugfix was buggy. Should work now."
+5ccc5996618f80a863e45d6731ec301c7cf1de4d,2019-04-22,ok,find (hit),0.0,0.0,0.0,0,0,32.5,extracted hash_bytes
+5ccc5996618f80a863e45d6731ec301c7cf1de4d,2019-04-22,ok,find (miss),0.0,0.0,0.0,0,0,18.1,extracted hash_bytes
+5ccc5996618f80a863e45d6731ec301c7cf1de4d,2019-04-22,ok,insert+erase,0.0,0.0,0.0,0,0,101.8,extracted hash_bytes
+5ccc5996618f80a863e45d6731ec301c7cf1de4d,2019-04-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,extracted hash_bytes
+32451d6e6685a773f5bb182cac65fab9ebc4aa85,2019-04-23,ok,find (hit),0.0,0.0,0.0,0,0,44.7,"In case of overflow, make sure the map is in consistent state"
+32451d6e6685a773f5bb182cac65fab9ebc4aa85,2019-04-23,ok,find (miss),0.0,0.0,0.0,0,0,30.2,"In case of overflow, make sure the map is in consistent state"
+32451d6e6685a773f5bb182cac65fab9ebc4aa85,2019-04-23,ok,insert+erase,0.0,0.0,0.0,0,0,149.2,"In case of overflow, make sure the map is in consistent state"
+32451d6e6685a773f5bb182cac65fab9ebc4aa85,2019-04-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.1,"In case of overflow, make sure the map is in consistent state"
+cbac3daae2d7797973617a9a34b3fff19b447192,2019-04-24,ok,find (hit),0.0,0.0,0.0,0,0,32.8,fix build on darwin
+cbac3daae2d7797973617a9a34b3fff19b447192,2019-04-24,ok,find (miss),0.0,0.0,0.0,0,0,18.6,fix build on darwin
+cbac3daae2d7797973617a9a34b3fff19b447192,2019-04-24,ok,insert+erase,0.0,0.0,0.0,0,0,100.0,fix build on darwin
+cbac3daae2d7797973617a9a34b3fff19b447192,2019-04-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,fix build on darwin
+3e13f62584b8ab9e92ef74198f29073daa683918,2019-04-24,ok,find (hit),0.0,0.0,0.0,0,0,33.3,clang fix: no use curly brackets for base ctors
+3e13f62584b8ab9e92ef74198f29073daa683918,2019-04-24,ok,find (miss),0.0,0.0,0.0,0,0,19.2,clang fix: no use curly brackets for base ctors
+3e13f62584b8ab9e92ef74198f29073daa683918,2019-04-24,ok,insert+erase,0.0,0.0,0.0,0,0,103.8,clang fix: no use curly brackets for base ctors
+3e13f62584b8ab9e92ef74198f29073daa683918,2019-04-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.8,clang fix: no use curly brackets for base ctors
+dc66e3320a0449bae9aa42e3b01c4cd4a112b256,2019-04-26,ok,find (hit),0.0,0.0,0.0,0,0,41.6,"removed static variable, get rid of potential undefined behavior (out of bounds pointer)"
+dc66e3320a0449bae9aa42e3b01c4cd4a112b256,2019-04-26,ok,find (miss),0.0,0.0,0.0,0,0,31.8,"removed static variable, get rid of potential undefined behavior (out of bounds pointer)"
+dc66e3320a0449bae9aa42e3b01c4cd4a112b256,2019-04-26,ok,insert+erase,0.0,0.0,0.0,0,0,148.9,"removed static variable, get rid of potential undefined behavior (out of bounds pointer)"
+dc66e3320a0449bae9aa42e3b01c4cd4a112b256,2019-04-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.5,"removed static variable, get rid of potential undefined behavior (out of bounds pointer)"
+d8aef381a566222362c92f654b83ec536e0eb156,2019-04-29,ok,find (hit),0.0,0.0,0.0,0,0,32.9,bugfix for count() and at() for empty maps
+d8aef381a566222362c92f654b83ec536e0eb156,2019-04-29,ok,find (miss),0.0,0.0,0.0,0,0,18.4,bugfix for count() and at() for empty maps
+d8aef381a566222362c92f654b83ec536e0eb156,2019-04-29,ok,insert+erase,0.0,0.0,0.0,0,0,104.9,bugfix for count() and at() for empty maps
+d8aef381a566222362c92f654b83ec536e0eb156,2019-04-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.9,bugfix for count() and at() for empty maps
+117d826255d2219b570b675cb606cdd2b1bdb4dc,2019-04-29,ok,find (hit),0.0,0.0,0.0,0,0,32.4,fix move
+117d826255d2219b570b675cb606cdd2b1bdb4dc,2019-04-29,ok,find (miss),0.0,0.0,0.0,0,0,18.0,fix move
+117d826255d2219b570b675cb606cdd2b1bdb4dc,2019-04-29,ok,insert+erase,0.0,0.0,0.0,0,0,102.9,fix move
+117d826255d2219b570b675cb606cdd2b1bdb4dc,2019-04-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.1,fix move
+7c3ed5a9d242516d1a0aa2e52582ee1553c28bb2,2019-05-03,ok,find (hit),0.0,0.0,0.0,0,0,42.7,Updated all from dev
+7c3ed5a9d242516d1a0aa2e52582ee1553c28bb2,2019-05-03,ok,find (miss),0.0,0.0,0.0,0,0,28.5,Updated all from dev
+7c3ed5a9d242516d1a0aa2e52582ee1553c28bb2,2019-05-03,ok,insert+erase,0.0,0.0,0.0,0,0,154.0,Updated all from dev
+7c3ed5a9d242516d1a0aa2e52582ee1553c28bb2,2019-05-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,50.1,Updated all from dev
+e481672115a1b75aec8961553e0b6362f8f7da76,2019-05-08,build failed,,,,,,,,Merge branch 'master' into dev
+62b83dd838f8febcfc29fa8ce76d86c950180ebf,2019-05-10,ok,find (hit),0.0,0.0,0.0,0,0,45.2,Merge branch 'master' into dev
+62b83dd838f8febcfc29fa8ce76d86c950180ebf,2019-05-10,ok,find (miss),0.0,0.0,0.0,0,0,33.7,Merge branch 'master' into dev
+62b83dd838f8febcfc29fa8ce76d86c950180ebf,2019-05-10,ok,insert+erase,0.0,0.0,0.0,0,0,155.1,Merge branch 'master' into dev
+62b83dd838f8febcfc29fa8ce76d86c950180ebf,2019-05-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,48.5,Merge branch 'master' into dev
+76b4a2ebaebe46f51b729866c3cb14ff0a50fc39,2019-05-13,ok,find (hit),0.0,0.0,0.0,0,0,33.8,Merge branch 'master' into dev
+76b4a2ebaebe46f51b729866c3cb14ff0a50fc39,2019-05-13,ok,find (miss),0.0,0.0,0.0,0,0,19.0,Merge branch 'master' into dev
+76b4a2ebaebe46f51b729866c3cb14ff0a50fc39,2019-05-13,ok,insert+erase,0.0,0.0,0.0,0,0,104.9,Merge branch 'master' into dev
+76b4a2ebaebe46f51b729866c3cb14ff0a50fc39,2019-05-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.7,Merge branch 'master' into dev
+8df694ae4bc009ec956298d000419d905d5b2f00,2019-05-14,ok,find (hit),0.0,0.0,0.0,0,0,43.5,Merge branch 'master' into dev
+8df694ae4bc009ec956298d000419d905d5b2f00,2019-05-14,ok,find (miss),0.0,0.0,0.0,0,0,29.4,Merge branch 'master' into dev
+8df694ae4bc009ec956298d000419d905d5b2f00,2019-05-14,ok,insert+erase,0.0,0.0,0.0,0,0,151.3,Merge branch 'master' into dev
+8df694ae4bc009ec956298d000419d905d5b2f00,2019-05-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,47.6,Merge branch 'master' into dev
+2c2380da70e98a39dcd5b51289cd73e1477397c8,2019-05-30,ok,find (hit),0.0,0.0,0.0,0,0,32.9,correct noexcept
+2c2380da70e98a39dcd5b51289cd73e1477397c8,2019-05-30,ok,find (miss),0.0,0.0,0.0,0,0,18.3,correct noexcept
+2c2380da70e98a39dcd5b51289cd73e1477397c8,2019-05-30,ok,insert+erase,0.0,0.0,0.0,0,0,101.5,correct noexcept
+2c2380da70e98a39dcd5b51289cd73e1477397c8,2019-05-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,correct noexcept
+4023b8fa0fb27bbbda970e9e647ad7cd6720b281,2019-05-31,ok,find (hit),0.0,0.0,0.0,0,0,33.4,fix #23
+4023b8fa0fb27bbbda970e9e647ad7cd6720b281,2019-05-31,ok,find (miss),0.0,0.0,0.0,0,0,18.7,fix #23
+4023b8fa0fb27bbbda970e9e647ad7cd6720b281,2019-05-31,ok,insert+erase,0.0,0.0,0.0,0,0,103.6,fix #23
+4023b8fa0fb27bbbda970e9e647ad7cd6720b281,2019-05-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.4,fix #23
+82459240cfa566987ab962bd0935417c2f64db9b,2019-05-31,ok,find (hit),0.0,0.0,0.0,0,0,33.3,fix #25
+82459240cfa566987ab962bd0935417c2f64db9b,2019-05-31,ok,find (miss),0.0,0.0,0.0,0,0,18.4,fix #25
+82459240cfa566987ab962bd0935417c2f64db9b,2019-05-31,ok,insert+erase,0.0,0.0,0.0,0,0,103.9,fix #25
+82459240cfa566987ab962bd0935417c2f64db9b,2019-05-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.1,fix #25
+1d967f5693291f0affff6d13a1142fa57fd1ef16,2019-05-31,ok,find (hit),0.0,0.0,0.0,0,0,44.0,Merge pull request #24 from wyattoday/master
+1d967f5693291f0affff6d13a1142fa57fd1ef16,2019-05-31,ok,find (miss),0.0,0.0,0.0,0,0,32.5,Merge pull request #24 from wyattoday/master
+1d967f5693291f0affff6d13a1142fa57fd1ef16,2019-05-31,ok,insert+erase,0.0,0.0,0.0,0,0,107.7,Merge pull request #24 from wyattoday/master
+1d967f5693291f0affff6d13a1142fa57fd1ef16,2019-05-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.9,Merge pull request #24 from wyattoday/master
+456fe9a0893f7fdecd640628642ac302d10bd64c,2019-06-01,ok,find (hit),0.0,0.0,0.0,0,0,41.9,make ROBIN_HOOD_UMULH work in any namespace
+456fe9a0893f7fdecd640628642ac302d10bd64c,2019-06-01,ok,find (miss),0.0,0.0,0.0,0,0,27.7,make ROBIN_HOOD_UMULH work in any namespace
+456fe9a0893f7fdecd640628642ac302d10bd64c,2019-06-01,ok,insert+erase,0.0,0.0,0.0,0,0,103.8,make ROBIN_HOOD_UMULH work in any namespace
+456fe9a0893f7fdecd640628642ac302d10bd64c,2019-06-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,make ROBIN_HOOD_UMULH work in any namespace
+c8376ca6c001666a8f4ff3cb6064c64655c4ac77,2019-06-01,ok,find (hit),0.0,0.0,0.0,0,0,33.1,removed unused ROBIN_HOOD_UMULH
+c8376ca6c001666a8f4ff3cb6064c64655c4ac77,2019-06-01,ok,find (miss),0.0,0.0,0.0,0,0,18.3,removed unused ROBIN_HOOD_UMULH
+c8376ca6c001666a8f4ff3cb6064c64655c4ac77,2019-06-01,ok,insert+erase,0.0,0.0,0.0,0,0,105.2,removed unused ROBIN_HOOD_UMULH
+c8376ca6c001666a8f4ff3cb6064c64655c4ac77,2019-06-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.6,removed unused ROBIN_HOOD_UMULH
+e68a19382a81a099b80993936d6d7475b062a15c,2019-06-04,ok,find (hit),0.0,0.0,0.0,0,0,32.9,Merge pull request #27 from wyattoday/master
+e68a19382a81a099b80993936d6d7475b062a15c,2019-06-04,ok,find (miss),0.0,0.0,0.0,0,0,18.1,Merge pull request #27 from wyattoday/master
+e68a19382a81a099b80993936d6d7475b062a15c,2019-06-04,ok,insert+erase,0.0,0.0,0.0,0,0,101.8,Merge pull request #27 from wyattoday/master
+e68a19382a81a099b80993936d6d7475b062a15c,2019-06-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,Merge pull request #27 from wyattoday/master
+8932098edcfe98dc93b778a0a44465524d3b1a76,2019-06-04,ok,find (hit),0.0,0.0,0.0,0,0,42.9,"gnu c < 4 doesn't support C++14, thus redundant (#28)"
+8932098edcfe98dc93b778a0a44465524d3b1a76,2019-06-04,ok,find (miss),0.0,0.0,0.0,0,0,28.9,"gnu c < 4 doesn't support C++14, thus redundant (#28)"
+8932098edcfe98dc93b778a0a44465524d3b1a76,2019-06-04,ok,insert+erase,0.0,0.0,0.0,0,0,148.2,"gnu c < 4 doesn't support C++14, thus redundant (#28)"
+8932098edcfe98dc93b778a0a44465524d3b1a76,2019-06-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,48.1,"gnu c < 4 doesn't support C++14, thus redundant (#28)"
+4438ec56c5f3a94c87ab9cb1223edf287fb6819c,2019-06-06,ok,find (hit),0.0,0.0,0.0,0,0,32.4,fix critical bug when assigning to moved map
+4438ec56c5f3a94c87ab9cb1223edf287fb6819c,2019-06-06,ok,find (miss),0.0,0.0,0.0,0,0,18.2,fix critical bug when assigning to moved map
+4438ec56c5f3a94c87ab9cb1223edf287fb6819c,2019-06-06,ok,insert+erase,0.0,0.0,0.0,0,0,106.6,fix critical bug when assigning to moved map
+4438ec56c5f3a94c87ab9cb1223edf287fb6819c,2019-06-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,46.8,fix critical bug when assigning to moved map
+2f3414ef74719d88d4859a46e5b6480f7d961582,2019-06-06,ok,find (hit),0.0,0.0,0.0,0,0,32.9,fixed problematic .swap() member
+2f3414ef74719d88d4859a46e5b6480f7d961582,2019-06-06,ok,find (miss),0.0,0.0,0.0,0,0,18.1,fixed problematic .swap() member
+2f3414ef74719d88d4859a46e5b6480f7d961582,2019-06-06,ok,insert+erase,0.0,0.0,0.0,0,0,103.8,fixed problematic .swap() member
+2f3414ef74719d88d4859a46e5b6480f7d961582,2019-06-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,fixed problematic .swap() member
+267d5eb485e3aa364fb3a9f34e5d2aea14f1f2bb,2019-06-07,ok,find (hit),0.0,0.0,0.0,0,0,32.7,Minor cleanups and clang-tidy fixes (#29)
+267d5eb485e3aa364fb3a9f34e5d2aea14f1f2bb,2019-06-07,ok,find (miss),0.0,0.0,0.0,0,0,18.3,Minor cleanups and clang-tidy fixes (#29)
+267d5eb485e3aa364fb3a9f34e5d2aea14f1f2bb,2019-06-07,ok,insert+erase,0.0,0.0,0.0,0,0,99.3,Minor cleanups and clang-tidy fixes (#29)
+267d5eb485e3aa364fb3a9f34e5d2aea14f1f2bb,2019-06-07,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.0,Minor cleanups and clang-tidy fixes (#29)
+b4eebf804d42e73950e58a86d18bdc866149fc7f,2019-06-08,ok,find (hit),0.0,0.0,0.0,0,0,32.3,"enable clang-tidy, added lots of cleanups"
+b4eebf804d42e73950e58a86d18bdc866149fc7f,2019-06-08,ok,find (miss),0.0,0.0,0.0,0,0,18.1,"enable clang-tidy, added lots of cleanups"
+b4eebf804d42e73950e58a86d18bdc866149fc7f,2019-06-08,ok,insert+erase,0.0,0.0,0.0,0,0,99.4,"enable clang-tidy, added lots of cleanups"
+b4eebf804d42e73950e58a86d18bdc866149fc7f,2019-06-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,"enable clang-tidy, added lots of cleanups"
+0ff122badc130fd97d3edf7031baa892a24f87f9,2019-06-08,ok,find (hit),0.0,0.0,0.0,0,0,33.2,"Revert ""enable clang-tidy, added lots of cleanups"""
+0ff122badc130fd97d3edf7031baa892a24f87f9,2019-06-08,ok,find (miss),0.0,0.0,0.0,0,0,18.5,"Revert ""enable clang-tidy, added lots of cleanups"""
+0ff122badc130fd97d3edf7031baa892a24f87f9,2019-06-08,ok,insert+erase,0.0,0.0,0.0,0,0,99.7,"Revert ""enable clang-tidy, added lots of cleanups"""
+0ff122badc130fd97d3edf7031baa892a24f87f9,2019-06-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,"Revert ""enable clang-tidy, added lots of cleanups"""
+8bd12617474ceb0788c6f15ae78378d5a87869cc,2019-06-09,ok,find (hit),0.0,0.0,0.0,0,0,32.9,"Revert ""Revert ""enable clang-tidy, added lots of cleanups"""""
+8bd12617474ceb0788c6f15ae78378d5a87869cc,2019-06-09,ok,find (miss),0.0,0.0,0.0,0,0,17.9,"Revert ""Revert ""enable clang-tidy, added lots of cleanups"""""
+8bd12617474ceb0788c6f15ae78378d5a87869cc,2019-06-09,ok,insert+erase,0.0,0.0,0.0,0,0,100.1,"Revert ""Revert ""enable clang-tidy, added lots of cleanups"""""
+8bd12617474ceb0788c6f15ae78378d5a87869cc,2019-06-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,"Revert ""Revert ""enable clang-tidy, added lots of cleanups"""""
+edab245cb3e58c86106870116e0f3df11b3190fb,2019-06-09,ok,find (hit),0.0,0.0,0.0,0,0,43.2,try to fix compile
+edab245cb3e58c86106870116e0f3df11b3190fb,2019-06-09,ok,find (miss),0.0,0.0,0.0,0,0,28.8,try to fix compile
+edab245cb3e58c86106870116e0f3df11b3190fb,2019-06-09,ok,insert+erase,0.0,0.0,0.0,0,0,106.7,try to fix compile
+edab245cb3e58c86106870116e0f3df11b3190fb,2019-06-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,try to fix compile
+e4569887866d1e9ab3dc35ae3a5ed4b3d710a6ad,2019-06-09,ok,find (hit),0.0,0.0,0.0,0,0,32.3,no more useless-cast warning
+e4569887866d1e9ab3dc35ae3a5ed4b3d710a6ad,2019-06-09,ok,find (miss),0.0,0.0,0.0,0,0,17.9,no more useless-cast warning
+e4569887866d1e9ab3dc35ae3a5ed4b3d710a6ad,2019-06-09,ok,insert+erase,0.0,0.0,0.0,0,0,101.5,no more useless-cast warning
+e4569887866d1e9ab3dc35ae3a5ed4b3d710a6ad,2019-06-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,no more useless-cast warning
+4c36d593e86ac1f42892bc4bd5fbe7d10773692c,2019-06-10,ok,find (hit),0.0,0.0,0.0,0,0,32.0,"add test with vector of maps, add noexcept constructor"
+4c36d593e86ac1f42892bc4bd5fbe7d10773692c,2019-06-10,ok,find (miss),0.0,0.0,0.0,0,0,17.8,"add test with vector of maps, add noexcept constructor"
+4c36d593e86ac1f42892bc4bd5fbe7d10773692c,2019-06-10,ok,insert+erase,0.0,0.0,0.0,0,0,99.9,"add test with vector of maps, add noexcept constructor"
+4c36d593e86ac1f42892bc4bd5fbe7d10773692c,2019-06-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.0,"add test with vector of maps, add noexcept constructor"
+6ef6db426d1035a5b34cff1ddac3033731663a99,2019-06-23,ok,find (hit),0.0,0.0,0.0,0,0,31.9,Add C++11 compatibility  (#33)
+6ef6db426d1035a5b34cff1ddac3033731663a99,2019-06-23,ok,find (miss),0.0,0.0,0.0,0,0,17.8,Add C++11 compatibility  (#33)
+6ef6db426d1035a5b34cff1ddac3033731663a99,2019-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,99.7,Add C++11 compatibility  (#33)
+6ef6db426d1035a5b34cff1ddac3033731663a99,2019-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,Add C++11 compatibility  (#33)
+d36cdfd81765b8d6c95ab69050539784f2b88bdc,2019-06-23,ok,find (hit),0.0,0.0,0.0,0,0,32.2,"minor stuff: formatting, include order, c++11"
+d36cdfd81765b8d6c95ab69050539784f2b88bdc,2019-06-23,ok,find (miss),0.0,0.0,0.0,0,0,18.0,"minor stuff: formatting, include order, c++11"
+d36cdfd81765b8d6c95ab69050539784f2b88bdc,2019-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,100.2,"minor stuff: formatting, include order, c++11"
+d36cdfd81765b8d6c95ab69050539784f2b88bdc,2019-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,"minor stuff: formatting, include order, c++11"
+ecd99d2f4f35d9b2f4263e691a052c8fd905119b,2019-06-23,ok,find (hit),0.0,0.0,0.0,0,0,32.2,"updated macros, minor cleanup"
+ecd99d2f4f35d9b2f4263e691a052c8fd905119b,2019-06-23,ok,find (miss),0.0,0.0,0.0,0,0,17.8,"updated macros, minor cleanup"
+ecd99d2f4f35d9b2f4263e691a052c8fd905119b,2019-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,100.8,"updated macros, minor cleanup"
+ecd99d2f4f35d9b2f4263e691a052c8fd905119b,2019-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,"updated macros, minor cleanup"
+3c7d005cbff91ea39c61d90f46cf151e248037fe,2019-06-26,ok,find (hit),0.0,0.0,0.0,0,0,32.3,operator= did not set mInfoInc correctly when it already had the correct data size (fixes #34)
+3c7d005cbff91ea39c61d90f46cf151e248037fe,2019-06-26,ok,find (miss),0.0,0.0,0.0,0,0,18.3,operator= did not set mInfoInc correctly when it already had the correct data size (fixes #34)
+3c7d005cbff91ea39c61d90f46cf151e248037fe,2019-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,104.0,operator= did not set mInfoInc correctly when it already had the correct data size (fixes #34)
+3c7d005cbff91ea39c61d90f46cf151e248037fe,2019-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,operator= did not set mInfoInc correctly when it already had the correct data size (fixes #34)
+888b2a3cd5bbb84ca986183828c0db851faf1101,2019-06-26,ok,find (hit),0.0,0.0,0.0,0,0,40.2,Support compile with g++4.9
+888b2a3cd5bbb84ca986183828c0db851faf1101,2019-06-26,ok,find (miss),0.0,0.0,0.0,0,0,24.9,Support compile with g++4.9
+888b2a3cd5bbb84ca986183828c0db851faf1101,2019-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,118.4,Support compile with g++4.9
+888b2a3cd5bbb84ca986183828c0db851faf1101,2019-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,Support compile with g++4.9
+8fdc0b89e7898df2a9d21f5f1018897a64d6d9a5,2019-06-26,ok,find (hit),0.0,0.0,0.0,0,0,32.1,bump to 3.3.2 for g++4.9 fix
+8fdc0b89e7898df2a9d21f5f1018897a64d6d9a5,2019-06-26,ok,find (miss),0.0,0.0,0.0,0,0,17.8,bump to 3.3.2 for g++4.9 fix
+8fdc0b89e7898df2a9d21f5f1018897a64d6d9a5,2019-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,100.9,bump to 3.3.2 for g++4.9 fix
+8fdc0b89e7898df2a9d21f5f1018897a64d6d9a5,2019-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,bump to 3.3.2 for g++4.9 fix
+413b52d18f90f9f65fe5047fe613cbfd03caa31c,2019-06-28,ok,find (hit),0.0,0.0,0.0,0,0,32.1,"add a few noexcept, where it's fairly obvious"
+413b52d18f90f9f65fe5047fe613cbfd03caa31c,2019-06-28,ok,find (miss),0.0,0.0,0.0,0,0,17.9,"add a few noexcept, where it's fairly obvious"
+413b52d18f90f9f65fe5047fe613cbfd03caa31c,2019-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,100.5,"add a few noexcept, where it's fairly obvious"
+413b52d18f90f9f65fe5047fe613cbfd03caa31c,2019-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,"add a few noexcept, where it's fairly obvious"
+501634a3c678b7dfe209b4f4bc269e04999bb8cc,2019-06-28,ok,find (hit),0.0,0.0,0.0,0,0,32.0,"noexcept fix, travis update, build script update"
+501634a3c678b7dfe209b4f4bc269e04999bb8cc,2019-06-28,ok,find (miss),0.0,0.0,0.0,0,0,17.8,"noexcept fix, travis update, build script update"
+501634a3c678b7dfe209b4f4bc269e04999bb8cc,2019-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,99.8,"noexcept fix, travis update, build script update"
+501634a3c678b7dfe209b4f4bc269e04999bb8cc,2019-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,"noexcept fix, travis update, build script update"
+105cc37db9fe59ff562a04418d1794b3301f7ee2,2019-06-30,ok,find (hit),0.0,0.0,0.0,0,0,32.1,"less warnings for clang-tidy, macro improvements"
+105cc37db9fe59ff562a04418d1794b3301f7ee2,2019-06-30,ok,find (miss),0.0,0.0,0.0,0,0,17.8,"less warnings for clang-tidy, macro improvements"
+105cc37db9fe59ff562a04418d1794b3301f7ee2,2019-06-30,ok,insert+erase,0.0,0.0,0.0,0,0,100.5,"less warnings for clang-tidy, macro improvements"
+105cc37db9fe59ff562a04418d1794b3301f7ee2,2019-06-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,"less warnings for clang-tidy, macro improvements"
+1173b3aec1a6e0e9b3fcb74a65ed954d2d2837db,2019-06-30,ok,find (hit),0.0,0.0,0.0,0,0,32.4,"clang-tidy fixes, better build scripts for local builds"
+1173b3aec1a6e0e9b3fcb74a65ed954d2d2837db,2019-06-30,ok,find (miss),0.0,0.0,0.0,0,0,26.4,"clang-tidy fixes, better build scripts for local builds"
+1173b3aec1a6e0e9b3fcb74a65ed954d2d2837db,2019-06-30,ok,insert+erase,0.0,0.0,0.0,0,0,111.0,"clang-tidy fixes, better build scripts for local builds"
+1173b3aec1a6e0e9b3fcb74a65ed954d2d2837db,2019-06-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.9,"clang-tidy fixes, better build scripts for local builds"
+45962b3aa2de00cfab93c76785f059c183c5bed8,2019-07-02,ok,find (hit),0.0,0.0,0.0,0,0,32.5,quite a few noexcept improvements
+45962b3aa2de00cfab93c76785f059c183c5bed8,2019-07-02,ok,find (miss),0.0,0.0,0.0,0,0,18.2,quite a few noexcept improvements
+45962b3aa2de00cfab93c76785f059c183c5bed8,2019-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,117.9,quite a few noexcept improvements
+45962b3aa2de00cfab93c76785f059c183c5bed8,2019-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,quite a few noexcept improvements
+6c9b798f10fe4b8ebb6346b45628405aed16a41e,2019-07-02,ok,find (hit),0.0,0.0,0.0,0,0,32.4,"lots of noexcept, correcting nothrow swappable"
+6c9b798f10fe4b8ebb6346b45628405aed16a41e,2019-07-02,ok,find (miss),0.0,0.0,0.0,0,0,17.9,"lots of noexcept, correcting nothrow swappable"
+6c9b798f10fe4b8ebb6346b45628405aed16a41e,2019-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,100.2,"lots of noexcept, correcting nothrow swappable"
+6c9b798f10fe4b8ebb6346b45628405aed16a41e,2019-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,"lots of noexcept, correcting nothrow swappable"
+81493555a8fefa26f99d3fb77bae073984a67741,2019-07-02,ok,find (hit),0.0,0.0,0.0,0,0,32.1,get rid of lgtm warning by bringing back std::max
+81493555a8fefa26f99d3fb77bae073984a67741,2019-07-02,ok,find (miss),0.0,0.0,0.0,0,0,17.8,get rid of lgtm warning by bringing back std::max
+81493555a8fefa26f99d3fb77bae073984a67741,2019-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,100.3,get rid of lgtm warning by bringing back std::max
+81493555a8fefa26f99d3fb77bae073984a67741,2019-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,get rid of lgtm warning by bringing back std::max
+7daa54d48f93d814a41921f96cd1f42bd5b2edbb,2019-07-03,ok,find (hit),0.0,0.0,0.0,0,0,32.5,pair now fully noexcept
+7daa54d48f93d814a41921f96cd1f42bd5b2edbb,2019-07-03,ok,find (miss),0.0,0.0,0.0,0,0,17.9,pair now fully noexcept
+7daa54d48f93d814a41921f96cd1f42bd5b2edbb,2019-07-03,ok,insert+erase,0.0,0.0,0.0,0,0,100.2,pair now fully noexcept
+7daa54d48f93d814a41921f96cd1f42bd5b2edbb,2019-07-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,pair now fully noexcept
+05a02bd6df20ad8071bb0c5ec13647edeb80d696,2019-07-05,ok,find (hit),0.0,0.0,0.0,0,0,32.4,32bit warning fixes
+05a02bd6df20ad8071bb0c5ec13647edeb80d696,2019-07-05,ok,find (miss),0.0,0.0,0.0,0,0,18.0,32bit warning fixes
+05a02bd6df20ad8071bb0c5ec13647edeb80d696,2019-07-05,ok,insert+erase,0.0,0.0,0.0,0,0,100.2,32bit warning fixes
+05a02bd6df20ad8071bb0c5ec13647edeb80d696,2019-07-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,32bit warning fixes
+d77b4d5826ae23b6892dd5f5c18cc06e1d58d7b8,2019-07-06,ok,find (hit),0.0,0.0,0.0,0,0,32.6,"more pair tests, self assignment"
+d77b4d5826ae23b6892dd5f5c18cc06e1d58d7b8,2019-07-06,ok,find (miss),0.0,0.0,0.0,0,0,18.8,"more pair tests, self assignment"
+d77b4d5826ae23b6892dd5f5c18cc06e1d58d7b8,2019-07-06,ok,insert+erase,0.0,0.0,0.0,0,0,104.7,"more pair tests, self assignment"
+d77b4d5826ae23b6892dd5f5c18cc06e1d58d7b8,2019-07-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,"more pair tests, self assignment"
+a9ea64971e8a90d9dc63a67727eefd134cfe7963,2019-07-06,ok,find (hit),0.0,0.0,0.0,0,0,32.0,add default constructor (with eanble_if)
+a9ea64971e8a90d9dc63a67727eefd134cfe7963,2019-07-06,ok,find (miss),0.0,0.0,0.0,0,0,17.9,add default constructor (with eanble_if)
+a9ea64971e8a90d9dc63a67727eefd134cfe7963,2019-07-06,ok,insert+erase,0.0,0.0,0.0,0,0,100.9,add default constructor (with eanble_if)
+a9ea64971e8a90d9dc63a67727eefd134cfe7963,2019-07-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,add default constructor (with eanble_if)
+222b254d1af3f9aa08336f1f170d426a0d34af75,2019-07-06,ok,find (hit),0.0,0.0,0.0,0,0,34.1,refactored robin_hood::pair a bit
+222b254d1af3f9aa08336f1f170d426a0d34af75,2019-07-06,ok,find (miss),0.0,0.0,0.0,0,0,18.8,refactored robin_hood::pair a bit
+222b254d1af3f9aa08336f1f170d426a0d34af75,2019-07-06,ok,insert+erase,0.0,0.0,0.0,0,0,100.9,refactored robin_hood::pair a bit
+222b254d1af3f9aa08336f1f170d426a0d34af75,2019-07-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,refactored robin_hood::pair a bit
+783f5d06178d411443650d4265f877a08c8245fa,2019-07-06,ok,find (hit),0.0,0.0,0.0,0,0,32.3,pair
+783f5d06178d411443650d4265f877a08c8245fa,2019-07-06,ok,find (miss),0.0,0.0,0.0,0,0,17.8,pair
+783f5d06178d411443650d4265f877a08c8245fa,2019-07-06,ok,insert+erase,0.0,0.0,0.0,0,0,101.0,pair
+783f5d06178d411443650d4265f877a08c8245fa,2019-07-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,pair
+d2217970ae8f2e5fc8fedd5592f4adf5fad60237,2019-07-09,ok,find (hit),0.0,0.0,0.0,0,0,43.6,make names a bit shorter
+d2217970ae8f2e5fc8fedd5592f4adf5fad60237,2019-07-09,ok,find (miss),0.0,0.0,0.0,0,0,29.6,make names a bit shorter
+d2217970ae8f2e5fc8fedd5592f4adf5fad60237,2019-07-09,ok,insert+erase,0.0,0.0,0.0,0,0,153.8,make names a bit shorter
+d2217970ae8f2e5fc8fedd5592f4adf5fad60237,2019-07-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,49.3,make names a bit shorter
+68e1803d75551e6ac2fe1b27ab0ddb1e65d8f957,2019-07-09,ok,find (hit),0.0,0.0,0.0,0,0,32.4,improve iterator's conversion constructor so it can't act as a deprecated copy constructor
+68e1803d75551e6ac2fe1b27ab0ddb1e65d8f957,2019-07-09,ok,find (miss),0.0,0.0,0.0,0,0,18.1,improve iterator's conversion constructor so it can't act as a deprecated copy constructor
+68e1803d75551e6ac2fe1b27ab0ddb1e65d8f957,2019-07-09,ok,insert+erase,0.0,0.0,0.0,0,0,98.9,improve iterator's conversion constructor so it can't act as a deprecated copy constructor
+68e1803d75551e6ac2fe1b27ab0ddb1e65d8f957,2019-07-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,improve iterator's conversion constructor so it can't act as a deprecated copy constructor
+669efb82991a2d10959a81b2d9e6d21b6caf017d,2019-07-11,ok,find (hit),0.0,0.0,0.0,0,0,32.6,better overflow check
+669efb82991a2d10959a81b2d9e6d21b6caf017d,2019-07-11,ok,find (miss),0.0,0.0,0.0,0,0,18.1,better overflow check
+669efb82991a2d10959a81b2d9e6d21b6caf017d,2019-07-11,ok,insert+erase,0.0,0.0,0.0,0,0,99.8,better overflow check
+669efb82991a2d10959a81b2d9e6d21b6caf017d,2019-07-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,better overflow check
+c8989373f40cb200626b2d36bae1c589a876f9e6,2019-07-11,ok,find (hit),0.0,0.0,0.0,0,0,32.3,tested and redid calcMaxNumElementsAllowed
+c8989373f40cb200626b2d36bae1c589a876f9e6,2019-07-11,ok,find (miss),0.0,0.0,0.0,0,0,17.8,tested and redid calcMaxNumElementsAllowed
+c8989373f40cb200626b2d36bae1c589a876f9e6,2019-07-11,ok,insert+erase,0.0,0.0,0.0,0,0,98.7,tested and redid calcMaxNumElementsAllowed
+c8989373f40cb200626b2d36bae1c589a876f9e6,2019-07-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,tested and redid calcMaxNumElementsAllowed
+eecb66bf28c9545abefc267a24f125fb30347b22,2019-07-11,ok,find (hit),0.0,0.0,0.0,0,0,32.6,made rehash private so it can't be abused
+eecb66bf28c9545abefc267a24f125fb30347b22,2019-07-11,ok,find (miss),0.0,0.0,0.0,0,0,18.2,made rehash private so it can't be abused
+eecb66bf28c9545abefc267a24f125fb30347b22,2019-07-11,ok,insert+erase,0.0,0.0,0.0,0,0,99.5,made rehash private so it can't be abused
+eecb66bf28c9545abefc267a24f125fb30347b22,2019-07-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,made rehash private so it can't be abused
+fa8ca0ccb0c273001b5f190ebdfd6b3052890b56,2019-07-12,ok,find (hit),0.0,0.0,0.0,0,0,32.2,add nodiscard
+fa8ca0ccb0c273001b5f190ebdfd6b3052890b56,2019-07-12,ok,find (miss),0.0,0.0,0.0,0,0,18.2,add nodiscard
+fa8ca0ccb0c273001b5f190ebdfd6b3052890b56,2019-07-12,ok,insert+erase,0.0,0.0,0.0,0,0,99.3,add nodiscard
+fa8ca0ccb0c273001b5f190ebdfd6b3052890b56,2019-07-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,add nodiscard
+d6079c3306a472e5b876a13a0663abf440716f70,2019-07-12,ok,find (hit),0.0,0.0,0.0,0,0,33.2,forgot noexcept
+d6079c3306a472e5b876a13a0663abf440716f70,2019-07-12,ok,find (miss),0.0,0.0,0.0,0,0,18.8,forgot noexcept
+d6079c3306a472e5b876a13a0663abf440716f70,2019-07-12,ok,insert+erase,0.0,0.0,0.0,0,0,99.5,forgot noexcept
+d6079c3306a472e5b876a13a0663abf440716f70,2019-07-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,forgot noexcept
+fe633cb20d750c8731466cebcb0350a6fcb2a66f,2019-07-13,ok,find (hit),0.0,0.0,0.0,0,0,45.2,bugfix: pair without default constructor now works
+fe633cb20d750c8731466cebcb0350a6fcb2a66f,2019-07-13,ok,find (miss),0.0,0.0,0.0,0,0,31.0,bugfix: pair without default constructor now works
+fe633cb20d750c8731466cebcb0350a6fcb2a66f,2019-07-13,ok,insert+erase,0.0,0.0,0.0,0,0,142.2,bugfix: pair without default constructor now works
+fe633cb20d750c8731466cebcb0350a6fcb2a66f,2019-07-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,bugfix: pair without default constructor now works
+699b1e37b539326b45e2992c34e42d7eb4fbab59,2019-07-31,ok,find (hit),0.0,0.0,0.0,0,0,32.4,support -fno-exceptions #41
+699b1e37b539326b45e2992c34e42d7eb4fbab59,2019-07-31,ok,find (miss),0.0,0.0,0.0,0,0,17.9,support -fno-exceptions #41
+699b1e37b539326b45e2992c34e42d7eb4fbab59,2019-07-31,ok,insert+erase,0.0,0.0,0.0,0,0,101.0,support -fno-exceptions #41
+699b1e37b539326b45e2992c34e42d7eb4fbab59,2019-07-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,support -fno-exceptions #41
+ada7e5e9a99803599bf46748847c29caed15c541,2019-08-01,ok,find (hit),0.0,0.0,0.0,0,0,32.3,updated title
+ada7e5e9a99803599bf46748847c29caed15c541,2019-08-01,ok,find (miss),0.0,0.0,0.0,0,0,17.8,updated title
+ada7e5e9a99803599bf46748847c29caed15c541,2019-08-01,ok,insert+erase,0.0,0.0,0.0,0,0,98.9,updated title
+ada7e5e9a99803599bf46748847c29caed15c541,2019-08-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,updated title
+1400eca8f9a79022d7904bdd19a2b6fce7ade6c6,2019-08-06,ok,find (hit),0.0,0.0,0.0,0,0,42.2,prevent diamond problem with wrapper classes #43
+1400eca8f9a79022d7904bdd19a2b6fce7ade6c6,2019-08-06,ok,find (miss),0.0,0.0,0.0,0,0,28.4,prevent diamond problem with wrapper classes #43
+1400eca8f9a79022d7904bdd19a2b6fce7ade6c6,2019-08-06,ok,insert+erase,0.0,0.0,0.0,0,0,146.0,prevent diamond problem with wrapper classes #43
+1400eca8f9a79022d7904bdd19a2b6fce7ade6c6,2019-08-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,46.7,prevent diamond problem with wrapper classes #43
+5cd6e790d404c9cd4886c2585054f6aac0c85d02,2019-08-06,ok,find (hit),0.0,0.0,0.0,0,0,40.4,bump version to 3.4.1
+5cd6e790d404c9cd4886c2585054f6aac0c85d02,2019-08-06,ok,find (miss),0.0,0.0,0.0,0,0,18.3,bump version to 3.4.1
+5cd6e790d404c9cd4886c2585054f6aac0c85d02,2019-08-06,ok,insert+erase,0.0,0.0,0.0,0,0,100.8,bump version to 3.4.1
+5cd6e790d404c9cd4886c2585054f6aac0c85d02,2019-08-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.8,bump version to 3.4.1
+80348aca898fadc91813c74ab7e576eb43303055,2019-10-25,ok,find (hit),0.0,0.0,0.0,0,0,43.2,fix #50: Add an additional check
+80348aca898fadc91813c74ab7e576eb43303055,2019-10-25,ok,find (miss),0.0,0.0,0.0,0,0,21.4,fix #50: Add an additional check
+80348aca898fadc91813c74ab7e576eb43303055,2019-10-25,ok,insert+erase,0.0,0.0,0.0,0,0,105.0,fix #50: Add an additional check
+80348aca898fadc91813c74ab7e576eb43303055,2019-10-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,fix #50: Add an additional check
+fee5e6af22f093776f8ec93af7a83947b04a7f69,2019-10-25,ok,find (hit),0.0,0.0,0.0,0,0,33.2,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+fee5e6af22f093776f8ec93af7a83947b04a7f69,2019-10-25,ok,find (miss),0.0,0.0,0.0,0,0,18.1,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+fee5e6af22f093776f8ec93af7a83947b04a7f69,2019-10-25,ok,insert+erase,0.0,0.0,0.0,0,0,99.6,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+fee5e6af22f093776f8ec93af7a83947b04a7f69,2019-10-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.0,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+17d9568a4a4612af7d780369644a0ccfa4d3efba,2019-10-30,ok,find (hit),0.0,0.0,0.0,0,0,32.5,just some cleanup
+17d9568a4a4612af7d780369644a0ccfa4d3efba,2019-10-30,ok,find (miss),0.0,0.0,0.0,0,0,18.3,just some cleanup
+17d9568a4a4612af7d780369644a0ccfa4d3efba,2019-10-30,ok,insert+erase,0.0,0.0,0.0,0,0,99.8,just some cleanup
+17d9568a4a4612af7d780369644a0ccfa4d3efba,2019-10-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.1,just some cleanup
+e5d3e22474002e710059be9b6382363909b05fe0,2019-11-10,ok,find (hit),0.0,0.0,0.0,0,0,32.9,all tests green! needs optimization though
+e5d3e22474002e710059be9b6382363909b05fe0,2019-11-10,ok,find (miss),0.0,0.0,0.0,0,0,19.6,all tests green! needs optimization though
+e5d3e22474002e710059be9b6382363909b05fe0,2019-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,91.1,all tests green! needs optimization though
+e5d3e22474002e710059be9b6382363909b05fe0,2019-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.4,all tests green! needs optimization though
+78a4ca3d9b9f5410f0399292fa231d660cf4e8dd,2019-11-10,ok,find (hit),0.0,0.0,0.0,0,0,32.1,faster code when not found
+78a4ca3d9b9f5410f0399292fa231d660cf4e8dd,2019-11-10,ok,find (miss),0.0,0.0,0.0,0,0,17.7,faster code when not found
+78a4ca3d9b9f5410f0399292fa231d660cf4e8dd,2019-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,90.2,faster code when not found
+78a4ca3d9b9f5410f0399292fa231d660cf4e8dd,2019-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.4,faster code when not found
+542587ba3c890c66ec8b1451917bcfd2fe7eb847,2019-11-10,ok,find (hit),0.0,0.0,0.0,0,0,41.5,bumped version to 3.4.3
+542587ba3c890c66ec8b1451917bcfd2fe7eb847,2019-11-10,ok,find (miss),0.0,0.0,0.0,0,0,28.1,bumped version to 3.4.3
+542587ba3c890c66ec8b1451917bcfd2fe7eb847,2019-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,133.1,bumped version to 3.4.3
+542587ba3c890c66ec8b1451917bcfd2fe7eb847,2019-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.2,bumped version to 3.4.3
+737cb1c7a091077e16f7adc216bf91c4715fe273,2019-11-10,ok,find (hit),0.0,0.0,0.0,0,0,32.0,exclude line in lcov
+737cb1c7a091077e16f7adc216bf91c4715fe273,2019-11-10,ok,find (miss),0.0,0.0,0.0,0,0,17.6,exclude line in lcov
+737cb1c7a091077e16f7adc216bf91c4715fe273,2019-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,94.9,exclude line in lcov
+737cb1c7a091077e16f7adc216bf91c4715fe273,2019-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.6,exclude line in lcov
+165dad28f0e70a5b211242eaa22e9486034a18a8,2020-01-16,ok,find (hit),0.0,0.0,0.0,0,0,32.1,"Fixes undefined behavior in issue #57. This replaces the unaligned load with unaligned_load and memcpy, which are compiled to the same code but are not undefined behavior."
+165dad28f0e70a5b211242eaa22e9486034a18a8,2020-01-16,ok,find (miss),0.0,0.0,0.0,0,0,17.7,"Fixes undefined behavior in issue #57. This replaces the unaligned load with unaligned_load and memcpy, which are compiled to the same code but are not undefined behavior."
+165dad28f0e70a5b211242eaa22e9486034a18a8,2020-01-16,ok,insert+erase,0.0,0.0,0.0,0,0,92.3,"Fixes undefined behavior in issue #57. This replaces the unaligned load with unaligned_load and memcpy, which are compiled to the same code but are not undefined behavior."
+165dad28f0e70a5b211242eaa22e9486034a18a8,2020-01-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.8,"Fixes undefined behavior in issue #57. This replaces the unaligned load with unaligned_load and memcpy, which are compiled to the same code but are not undefined behavior."
+875d4da90774dcf6c4993b5fda5637376ed7cd47,2020-01-22,ok,find (hit),0.0,0.0,0.0,0,0,32.4,minor tuning
+875d4da90774dcf6c4993b5fda5637376ed7cd47,2020-01-22,ok,find (miss),0.0,0.0,0.0,0,0,17.6,minor tuning
+875d4da90774dcf6c4993b5fda5637376ed7cd47,2020-01-22,ok,insert+erase,0.0,0.0,0.0,0,0,94.5,minor tuning
+875d4da90774dcf6c4993b5fda5637376ed7cd47,2020-01-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,minor tuning
+927dc1d2159942cea79465489cc596232f8465a0,2020-01-25,ok,find (hit),0.0,0.0,0.0,0,0,32.1,"Support void for mapped type, effectively creating a set. (#58)"
+927dc1d2159942cea79465489cc596232f8465a0,2020-01-25,ok,find (miss),0.0,0.0,0.0,0,0,17.7,"Support void for mapped type, effectively creating a set. (#58)"
+927dc1d2159942cea79465489cc596232f8465a0,2020-01-25,ok,insert+erase,0.0,0.0,0.0,0,0,93.5,"Support void for mapped type, effectively creating a set. (#58)"
+927dc1d2159942cea79465489cc596232f8465a0,2020-01-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,"Support void for mapped type, effectively creating a set. (#58)"
+1f1bfc7e52712364e4e7bbae8e5dd38349d0ee0f,2020-01-26,ok,find (hit),0.0,0.0,0.0,0,0,32.4,interface cleanup
+1f1bfc7e52712364e4e7bbae8e5dd38349d0ee0f,2020-01-26,ok,find (miss),0.0,0.0,0.0,0,0,17.6,interface cleanup
+1f1bfc7e52712364e4e7bbae8e5dd38349d0ee0f,2020-01-26,ok,insert+erase,0.0,0.0,0.0,0,0,93.7,interface cleanup
+1f1bfc7e52712364e4e7bbae8e5dd38349d0ee0f,2020-01-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,interface cleanup
+1805a4ec8ab03f5335f6a65a1acfb58b0a24c849,2020-02-18,ok,find (hit),0.0,0.0,0.0,0,0,41.7,"fixes #59, template argument for unordered_set"
+1805a4ec8ab03f5335f6a65a1acfb58b0a24c849,2020-02-18,ok,find (miss),0.0,0.0,0.0,0,0,28.6,"fixes #59, template argument for unordered_set"
+1805a4ec8ab03f5335f6a65a1acfb58b0a24c849,2020-02-18,ok,insert+erase,0.0,0.0,0.0,0,0,135.0,"fixes #59, template argument for unordered_set"
+1805a4ec8ab03f5335f6a65a1acfb58b0a24c849,2020-02-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.1,"fixes #59, template argument for unordered_set"
+1c0413aed516f1581767b6b32b511bdbeb0fb737,2020-02-29,ok,find (hit),0.0,0.0,0.0,0,0,32.0,operator== and operator!= work with unordered_set
+1c0413aed516f1581767b6b32b511bdbeb0fb737,2020-02-29,ok,find (miss),0.0,0.0,0.0,0,0,17.5,operator== and operator!= work with unordered_set
+1c0413aed516f1581767b6b32b511bdbeb0fb737,2020-02-29,ok,insert+erase,0.0,0.0,0.0,0,0,94.4,operator== and operator!= work with unordered_set
+1c0413aed516f1581767b6b32b511bdbeb0fb737,2020-02-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.7,operator== and operator!= work with unordered_set
+915b7abb5674f19439e36bf265669503f057b8fa,2020-02-29,ok,find (hit),0.0,0.0,0.0,0,0,41.5,add nodiscard
+915b7abb5674f19439e36bf265669503f057b8fa,2020-02-29,ok,find (miss),0.0,0.0,0.0,0,0,28.6,add nodiscard
+915b7abb5674f19439e36bf265669503f057b8fa,2020-02-29,ok,insert+erase,0.0,0.0,0.0,0,0,125.1,add nodiscard
+915b7abb5674f19439e36bf265669503f057b8fa,2020-02-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.8,add nodiscard
+64a1add2e2c8bedfa98e1cc9c90a97fbb0048bcd,2020-03-14,ok,find (hit),0.0,0.0,0.0,0,0,31.9,#62: provide comparison operators for robin_hood::pair
+64a1add2e2c8bedfa98e1cc9c90a97fbb0048bcd,2020-03-14,ok,find (miss),0.0,0.0,0.0,0,0,17.5,#62: provide comparison operators for robin_hood::pair
+64a1add2e2c8bedfa98e1cc9c90a97fbb0048bcd,2020-03-14,ok,insert+erase,0.0,0.0,0.0,0,0,92.5,#62: provide comparison operators for robin_hood::pair
+64a1add2e2c8bedfa98e1cc9c90a97fbb0048bcd,2020-03-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.4,#62: provide comparison operators for robin_hood::pair
+b21730713f4b5296bec411917c46919f7b38b178,2020-03-14,ok,find (hit),0.0,0.0,0.0,0,0,40.4,bump version for pair comparators
+b21730713f4b5296bec411917c46919f7b38b178,2020-03-14,ok,find (miss),0.0,0.0,0.0,0,0,18.0,bump version for pair comparators
+b21730713f4b5296bec411917c46919f7b38b178,2020-03-14,ok,insert+erase,0.0,0.0,0.0,0,0,93.3,bump version for pair comparators
+b21730713f4b5296bec411917c46919f7b38b178,2020-03-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.8,bump version for pair comparators
+8cac2da06548bea2e91725dc73b54d10db3e8a45,2020-06-20,ok,find (hit),0.0,0.0,0.0,0,0,32.0,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+8cac2da06548bea2e91725dc73b54d10db3e8a45,2020-06-20,ok,find (miss),0.0,0.0,0.0,0,0,17.5,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+8cac2da06548bea2e91725dc73b54d10db3e8a45,2020-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,92.1,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+8cac2da06548bea2e91725dc73b54d10db3e8a45,2020-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.5,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+68fd8e33d33aa817bc4fcfc4709e1f3f8e3a8f55,2020-06-20,ok,find (hit),0.0,0.0,0.0,0,0,33.7,switch to other hash
+68fd8e33d33aa817bc4fcfc4709e1f3f8e3a8f55,2020-06-20,ok,find (miss),0.0,0.0,0.0,0,0,19.3,switch to other hash
+68fd8e33d33aa817bc4fcfc4709e1f3f8e3a8f55,2020-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,99.2,switch to other hash
+68fd8e33d33aa817bc4fcfc4709e1f3f8e3a8f55,2020-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.2,switch to other hash
+d490d5966ba5ba51a29417f749b03879807a6d37,2020-06-20,ok,find (hit),0.0,0.0,0.0,0,0,33.9,fix performance regression for highly empty hashmap
+d490d5966ba5ba51a29417f749b03879807a6d37,2020-06-20,ok,find (miss),0.0,0.0,0.0,0,0,19.3,fix performance regression for highly empty hashmap
+d490d5966ba5ba51a29417f749b03879807a6d37,2020-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,100.3,fix performance regression for highly empty hashmap
+d490d5966ba5ba51a29417f749b03879807a6d37,2020-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.8,fix performance regression for highly empty hashmap
+6fa63f9c98c014dd2068e65263b7ecccd563312d,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.1,replaced hash with CRC32
+6fa63f9c98c014dd2068e65263b7ecccd563312d,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,17.8,replaced hash with CRC32
+6fa63f9c98c014dd2068e65263b7ecccd563312d,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,97.8,replaced hash with CRC32
+6fa63f9c98c014dd2068e65263b7ecccd563312d,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,replaced hash with CRC32
+d32403a092ec48df07f37c2201ee8a6ce5c08e71,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.0,"bump version, fix local builds and clang-tidy"
+d32403a092ec48df07f37c2201ee8a6ce5c08e71,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,17.9,"bump version, fix local builds and clang-tidy"
+d32403a092ec48df07f37c2201ee8a6ce5c08e71,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,94.8,"bump version, fix local builds and clang-tidy"
+d32403a092ec48df07f37c2201ee8a6ce5c08e71,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.2,"bump version, fix local builds and clang-tidy"
+8178a30650672dc46895916850d0acd320b3c795,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,43.9,clang tidy fixes
+8178a30650672dc46895916850d0acd320b3c795,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,29.5,clang tidy fixes
+8178a30650672dc46895916850d0acd320b3c795,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,144.8,clang tidy fixes
+8178a30650672dc46895916850d0acd320b3c795,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,clang tidy fixes
+558f7b5a2edc598c26a162e7af2e69df2ef8875b,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.0,fix nolint
+558f7b5a2edc598c26a162e7af2e69df2ef8875b,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,17.7,fix nolint
+558f7b5a2edc598c26a162e7af2e69df2ef8875b,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,95.4,fix nolint
+558f7b5a2edc598c26a162e7af2e69df2ef8875b,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.6,fix nolint
+3bc6447dbc13775089ed16ba16a5b1a21cfd3131,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.2,fix gcc -O2 -Wstrict-aliasing=2 warning. Fixes #66
+3bc6447dbc13775089ed16ba16a5b1a21cfd3131,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,18.1,fix gcc -O2 -Wstrict-aliasing=2 warning. Fixes #66
+3bc6447dbc13775089ed16ba16a5b1a21cfd3131,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,98.6,fix gcc -O2 -Wstrict-aliasing=2 warning. Fixes #66
+3bc6447dbc13775089ed16ba16a5b1a21cfd3131,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.6,fix gcc -O2 -Wstrict-aliasing=2 warning. Fixes #66
+2a65070d1a500bd0adfac6eea7195659d93ee2de,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,31.7,ifdefs
+2a65070d1a500bd0adfac6eea7195659d93ee2de,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,17.8,ifdefs
+2a65070d1a500bd0adfac6eea7195659d93ee2de,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,95.4,ifdefs
+2a65070d1a500bd0adfac6eea7195659d93ee2de,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.7,ifdefs
+e81b21931efa63e094addf3c4439aa6bd0c340db,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.8,fixed count
+e81b21931efa63e094addf3c4439aa6bd0c340db,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,18.4,fixed count
+e81b21931efa63e094addf3c4439aa6bd0c340db,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,96.4,fixed count
+e81b21931efa63e094addf3c4439aa6bd0c340db,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.7,fixed count
+51fa21885129a7e5b7dba29d20307d58f52d081e,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,31.8,no trailing ;
+51fa21885129a7e5b7dba29d20307d58f52d081e,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,17.7,no trailing ;
+51fa21885129a7e5b7dba29d20307d58f52d081e,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,97.1,no trailing ;
+51fa21885129a7e5b7dba29d20307d58f52d081e,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,no trailing ;
+091c479165f50970a169ec3d98d40ac057a49cd5,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.2,ROBIN_HOOD_LOG trailing ; removed
+091c479165f50970a169ec3d98d40ac057a49cd5,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,18.0,ROBIN_HOOD_LOG trailing ; removed
+091c479165f50970a169ec3d98d40ac057a49cd5,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,96.1,ROBIN_HOOD_LOG trailing ; removed
+091c479165f50970a169ec3d98d40ac057a49cd5,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.4,ROBIN_HOOD_LOG trailing ; removed
+2eff2cb03d5eaf1c459d8c282cc4f0892ccba60f,2020-06-21,ok,find (hit),0.0,0.0,0.0,0,0,32.4,crc based hash_bytes
+2eff2cb03d5eaf1c459d8c282cc4f0892ccba60f,2020-06-21,ok,find (miss),0.0,0.0,0.0,0,0,18.0,crc based hash_bytes
+2eff2cb03d5eaf1c459d8c282cc4f0892ccba60f,2020-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,98.1,crc based hash_bytes
+2eff2cb03d5eaf1c459d8c282cc4f0892ccba60f,2020-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.6,crc based hash_bytes
+ef6ced338e39d08df16bc1ddbb06d6761e4b00f2,2020-06-23,ok,find (hit),0.0,0.0,0.0,0,0,32.6,Fix intrinsics & add Windows ARM64 compilation. (#76)
+ef6ced338e39d08df16bc1ddbb06d6761e4b00f2,2020-06-23,ok,find (miss),0.0,0.0,0.0,0,0,18.0,Fix intrinsics & add Windows ARM64 compilation. (#76)
+ef6ced338e39d08df16bc1ddbb06d6761e4b00f2,2020-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,95.8,Fix intrinsics & add Windows ARM64 compilation. (#76)
+ef6ced338e39d08df16bc1ddbb06d6761e4b00f2,2020-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,Fix intrinsics & add Windows ARM64 compilation. (#76)
+f3d7116898e17e833febc1b0d2ee346668b85cbe,2020-06-23,ok,find (hit),0.0,0.0,0.0,0,0,33.3,get rid of crc and 128bit multiplication
+f3d7116898e17e833febc1b0d2ee346668b85cbe,2020-06-23,ok,find (miss),0.0,0.0,0.0,0,0,19.1,get rid of crc and 128bit multiplication
+f3d7116898e17e833febc1b0d2ee346668b85cbe,2020-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,112.4,get rid of crc and 128bit multiplication
+f3d7116898e17e833febc1b0d2ee346668b85cbe,2020-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.1,get rid of crc and 128bit multiplication
+5ba71127f53afd62a41d3a693db2f3558e68c86a,2020-06-23,ok,find (hit),0.0,0.0,0.0,0,0,33.9,static_cast size_t
+5ba71127f53afd62a41d3a693db2f3558e68c86a,2020-06-23,ok,find (miss),0.0,0.0,0.0,0,0,18.8,static_cast size_t
+5ba71127f53afd62a41d3a693db2f3558e68c86a,2020-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,98.0,static_cast size_t
+5ba71127f53afd62a41d3a693db2f3558e68c86a,2020-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.1,static_cast size_t
+2949c83e59a0e98bf0737afb495b0ab1f2461192,2020-06-23,ok,find (hit),0.0,0.0,0.0,0,0,43.6,hash cleanup
+2949c83e59a0e98bf0737afb495b0ab1f2461192,2020-06-23,ok,find (miss),0.0,0.0,0.0,0,0,30.3,hash cleanup
+2949c83e59a0e98bf0737afb495b0ab1f2461192,2020-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,97.4,hash cleanup
+2949c83e59a0e98bf0737afb495b0ab1f2461192,2020-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.2,hash cleanup
+d0b7cc9a18d69bff21d9620c9c61ab09291d1b36,2020-06-23,ok,find (hit),0.0,0.0,0.0,0,0,32.8,"minor hash improvement: faster, better constants"
+d0b7cc9a18d69bff21d9620c9c61ab09291d1b36,2020-06-23,ok,find (miss),0.0,0.0,0.0,0,0,18.1,"minor hash improvement: faster, better constants"
+d0b7cc9a18d69bff21d9620c9c61ab09291d1b36,2020-06-23,ok,insert+erase,0.0,0.0,0.0,0,0,95.4,"minor hash improvement: faster, better constants"
+d0b7cc9a18d69bff21d9620c9c61ab09291d1b36,2020-06-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.1,"minor hash improvement: faster, better constants"
+8d81b04c007e3dfb228480a89e079860b316b855,2020-06-26,ok,find (hit),0.0,0.0,0.0,0,0,33.5,Fix is_transparent typedef detection (#78)
+8d81b04c007e3dfb228480a89e079860b316b855,2020-06-26,ok,find (miss),0.0,0.0,0.0,0,0,18.0,Fix is_transparent typedef detection (#78)
+8d81b04c007e3dfb228480a89e079860b316b855,2020-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,96.0,Fix is_transparent typedef detection (#78)
+8d81b04c007e3dfb228480a89e079860b316b855,2020-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,Fix is_transparent typedef detection (#78)
+159e53baca64a44e3e792741a51b47539b9debc7,2020-06-26,ok,find (hit),0.0,0.0,0.0,0,0,43.7,Add member functions from C++17 (#79)
+159e53baca64a44e3e792741a51b47539b9debc7,2020-06-26,ok,find (miss),0.0,0.0,0.0,0,0,29.4,Add member functions from C++17 (#79)
+159e53baca64a44e3e792741a51b47539b9debc7,2020-06-26,ok,insert+erase,0.0,0.0,0.0,0,0,142.4,Add member functions from C++17 (#79)
+159e53baca64a44e3e792741a51b47539b9debc7,2020-06-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.5,Add member functions from C++17 (#79)
+f45a309af7d08cb98fc08dc7903ac9a7091db6d5,2020-06-28,ok,find (hit),0.0,0.0,0.0,0,0,42.4,"Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"
+f45a309af7d08cb98fc08dc7903ac9a7091db6d5,2020-06-28,ok,find (miss),0.0,0.0,0.0,0,0,29.1,"Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"
+f45a309af7d08cb98fc08dc7903ac9a7091db6d5,2020-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,140.0,"Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"
+f45a309af7d08cb98fc08dc7903ac9a7091db6d5,2020-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,"Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"
+0c15ed74c850a7a4c619165337594443337f3552,2020-06-28,ok,find (hit),0.0,0.0,0.0,0,0,32.9,"Revert ""Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"""
+0c15ed74c850a7a4c619165337594443337f3552,2020-06-28,ok,find (miss),0.0,0.0,0.0,0,0,18.2,"Revert ""Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"""
+0c15ed74c850a7a4c619165337594443337f3552,2020-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,95.9,"Revert ""Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"""
+0c15ed74c850a7a4c619165337594443337f3552,2020-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,"Revert ""Removes dependency to fast CLZ/bitscanforward. Instead. Now robin_hood map is plain C++ code, without any need for intrinsics!"""
+efa5be813f2fb46e829544704e642e7c6438460d,2020-06-28,ok,find (hit),0.0,0.0,0.0,0,0,32.8,"formatting, bump to 3.8.0 (forgot this)"
+efa5be813f2fb46e829544704e642e7c6438460d,2020-06-28,ok,find (miss),0.0,0.0,0.0,0,0,18.1,"formatting, bump to 3.8.0 (forgot this)"
+efa5be813f2fb46e829544704e642e7c6438460d,2020-06-28,ok,insert+erase,0.0,0.0,0.0,0,0,94.8,"formatting, bump to 3.8.0 (forgot this)"
+efa5be813f2fb46e829544704e642e7c6438460d,2020-06-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.1,"formatting, bump to 3.8.0 (forgot this)"
+7e0d847dab4d47a95a1b4d514f321cab1a92a4d2,2020-07-18,ok,find (hit),0.0,0.0,0.0,0,0,42.7,support for string_view hash and shared ptr hash
+7e0d847dab4d47a95a1b4d514f321cab1a92a4d2,2020-07-18,ok,find (miss),0.0,0.0,0.0,0,0,29.0,support for string_view hash and shared ptr hash
+7e0d847dab4d47a95a1b4d514f321cab1a92a4d2,2020-07-18,ok,insert+erase,0.0,0.0,0.0,0,0,144.1,support for string_view hash and shared ptr hash
+7e0d847dab4d47a95a1b4d514f321cab1a92a4d2,2020-07-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,45.7,support for string_view hash and shared ptr hash
+48f817625fc9226710a98ca9013446077b531d0e,2020-07-18,ok,find (hit),0.0,0.0,0.0,0,0,42.7,generic string and string_view
+48f817625fc9226710a98ca9013446077b531d0e,2020-07-18,ok,find (miss),0.0,0.0,0.0,0,0,29.4,generic string and string_view
+48f817625fc9226710a98ca9013446077b531d0e,2020-07-18,ok,insert+erase,0.0,0.0,0.0,0,0,144.6,generic string and string_view
+48f817625fc9226710a98ca9013446077b531d0e,2020-07-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.8,generic string and string_view
+82f0b7bdd5376d5c83926bd13e70467d73809d21,2020-07-22,ok,find (hit),0.0,0.0,0.0,0,0,42.5,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+82f0b7bdd5376d5c83926bd13e70467d73809d21,2020-07-22,ok,find (miss),0.0,0.0,0.0,0,0,28.9,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+82f0b7bdd5376d5c83926bd13e70467d73809d21,2020-07-22,ok,insert+erase,0.0,0.0,0.0,0,0,138.3,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+82f0b7bdd5376d5c83926bd13e70467d73809d21,2020-07-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.8,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+ed07b2987bfe26efc587983a78f4460417cdb66e,2020-07-30,ok,find (hit),0.0,0.0,0.0,0,0,33.1,code cleanup #87
+ed07b2987bfe26efc587983a78f4460417cdb66e,2020-07-30,ok,find (miss),0.0,0.0,0.0,0,0,18.1,code cleanup #87
+ed07b2987bfe26efc587983a78f4460417cdb66e,2020-07-30,ok,insert+erase,0.0,0.0,0.0,0,0,94.1,code cleanup #87
+ed07b2987bfe26efc587983a78f4460417cdb66e,2020-07-30,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.7,code cleanup #87
+8eb44ddef7118f1045781895108cdd4d6cbbd0e2,2020-08-06,ok,find (hit),0.0,0.0,0.0,0,0,66.9,add  test for postinc
+8eb44ddef7118f1045781895108cdd4d6cbbd0e2,2020-08-06,ok,find (miss),0.0,0.0,0.0,0,0,41.9,add  test for postinc
+8eb44ddef7118f1045781895108cdd4d6cbbd0e2,2020-08-06,ok,insert+erase,0.0,0.0,0.0,0,0,203.8,add  test for postinc
+8eb44ddef7118f1045781895108cdd4d6cbbd0e2,2020-08-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,66.3,add  test for postinc
+6c841b79ee78b2ecf9d15170e943f1be76424028,2020-08-13,ok,find (hit),0.0,0.0,0.0,0,0,33.1,* improve hash usage: use only lower 5 bits for info (NOT upper! Thus e.g. 32bit CRC hash would be good enough too) * Fix ambiguous free
+6c841b79ee78b2ecf9d15170e943f1be76424028,2020-08-13,ok,find (miss),0.0,0.0,0.0,0,0,18.5,* improve hash usage: use only lower 5 bits for info (NOT upper! Thus e.g. 32bit CRC hash would be good enough too) * Fix ambiguous free
+6c841b79ee78b2ecf9d15170e943f1be76424028,2020-08-13,ok,insert+erase,0.0,0.0,0.0,0,0,97.7,* improve hash usage: use only lower 5 bits for info (NOT upper! Thus e.g. 32bit CRC hash would be good enough too) * Fix ambiguous free
+6c841b79ee78b2ecf9d15170e943f1be76424028,2020-08-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.2,* improve hash usage: use only lower 5 bits for info (NOT upper! Thus e.g. 32bit CRC hash would be good enough too) * Fix ambiguous free
+dff8135026ba2146dba246d4aab64ef6150bd347,2020-08-13,ok,find (hit),0.0,0.0,0.0,0,0,43.3,"CRC32 for int and string, provide specialization for enums"
+dff8135026ba2146dba246d4aab64ef6150bd347,2020-08-13,ok,find (miss),0.0,0.0,0.0,0,0,19.1,"CRC32 for int and string, provide specialization for enums"
+dff8135026ba2146dba246d4aab64ef6150bd347,2020-08-13,ok,insert+erase,0.0,0.0,0.0,0,0,98.6,"CRC32 for int and string, provide specialization for enums"
+dff8135026ba2146dba246d4aab64ef6150bd347,2020-08-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.2,"CRC32 for int and string, provide specialization for enums"
+e28dc84627f79d685ab44df30a0e158836692398,2020-08-13,ok,find (hit),0.0,0.0,0.0,0,0,33.5,removed duplicated version
+e28dc84627f79d685ab44df30a0e158836692398,2020-08-13,ok,find (miss),0.0,0.0,0.0,0,0,19.0,removed duplicated version
+e28dc84627f79d685ab44df30a0e158836692398,2020-08-13,ok,insert+erase,0.0,0.0,0.0,0,0,96.9,removed duplicated version
+e28dc84627f79d685ab44df30a0e158836692398,2020-08-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.6,removed duplicated version
+d42c43244d64ec6fc02c7b18130e7709b1ff7635,2020-08-13,ok,find (hit),0.0,0.0,0.0,0,0,44.4,windows cpuid compile fix
+d42c43244d64ec6fc02c7b18130e7709b1ff7635,2020-08-13,ok,find (miss),0.0,0.0,0.0,0,0,31.3,windows cpuid compile fix
+d42c43244d64ec6fc02c7b18130e7709b1ff7635,2020-08-13,ok,insert+erase,0.0,0.0,0.0,0,0,140.9,windows cpuid compile fix
+d42c43244d64ec6fc02c7b18130e7709b1ff7635,2020-08-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.9,windows cpuid compile fix
+a1602390dcfd1fad9d0b438a30ca2ef85d8f50aa,2020-08-13,ok,find (hit),0.0,0.0,0.0,0,0,35.3,windows cpuid fix
+a1602390dcfd1fad9d0b438a30ca2ef85d8f50aa,2020-08-13,ok,find (miss),0.0,0.0,0.0,0,0,19.4,windows cpuid fix
+a1602390dcfd1fad9d0b438a30ca2ef85d8f50aa,2020-08-13,ok,insert+erase,0.0,0.0,0.0,0,0,120.1,windows cpuid fix
+a1602390dcfd1fad9d0b438a30ca2ef85d8f50aa,2020-08-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.6,windows cpuid fix
+3c7703d514bfa3ef2fa4a8fd61bac5b25685571d,2020-08-14,ok,find (hit),0.0,0.0,0.0,0,0,33.7,"don't include cpuid.h, it has no include guard and can clash."
+3c7703d514bfa3ef2fa4a8fd61bac5b25685571d,2020-08-14,ok,find (miss),0.0,0.0,0.0,0,0,19.0,"don't include cpuid.h, it has no include guard and can clash."
+3c7703d514bfa3ef2fa4a8fd61bac5b25685571d,2020-08-14,ok,insert+erase,0.0,0.0,0.0,0,0,98.0,"don't include cpuid.h, it has no include guard and can clash."
+3c7703d514bfa3ef2fa4a8fd61bac5b25685571d,2020-08-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,"don't include cpuid.h, it has no include guard and can clash."
+171dc4e74d8d8093996668bd63b5178b3b772b5c,2020-08-14,ok,find (hit),0.0,0.0,0.0,0,0,41.6,disregard hicpp-no-assembler for cpuid
+171dc4e74d8d8093996668bd63b5178b3b772b5c,2020-08-14,ok,find (miss),0.0,0.0,0.0,0,0,28.5,disregard hicpp-no-assembler for cpuid
+171dc4e74d8d8093996668bd63b5178b3b772b5c,2020-08-14,ok,insert+erase,0.0,0.0,0.0,0,0,144.6,disregard hicpp-no-assembler for cpuid
+171dc4e74d8d8093996668bd63b5178b3b772b5c,2020-08-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.9,disregard hicpp-no-assembler for cpuid
+4eb4bf49189153c6839e4702d4595938c805fae6,2020-08-14,ok,find (hit),0.0,0.0,0.0,0,0,33.9,_mm_crc32_u64 actualle needs uin64_t as inputs
+4eb4bf49189153c6839e4702d4595938c805fae6,2020-08-14,ok,find (miss),0.0,0.0,0.0,0,0,19.3,_mm_crc32_u64 actualle needs uin64_t as inputs
+4eb4bf49189153c6839e4702d4595938c805fae6,2020-08-14,ok,insert+erase,0.0,0.0,0.0,0,0,98.2,_mm_crc32_u64 actualle needs uin64_t as inputs
+4eb4bf49189153c6839e4702d4595938c805fae6,2020-08-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.1,_mm_crc32_u64 actualle needs uin64_t as inputs
+15d3e71341d1d16ff1e078ae7bf20b76812f80fe,2020-08-14,ok,find (hit),0.0,0.0,0.0,0,0,34.1,32bit crc improvement
+15d3e71341d1d16ff1e078ae7bf20b76812f80fe,2020-08-14,ok,find (miss),0.0,0.0,0.0,0,0,19.4,32bit crc improvement
+15d3e71341d1d16ff1e078ae7bf20b76812f80fe,2020-08-14,ok,insert+erase,0.0,0.0,0.0,0,0,97.7,32bit crc improvement
+15d3e71341d1d16ff1e078ae7bf20b76812f80fe,2020-08-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.1,32bit crc improvement
+e9a25190d4235cf219f75e9262f3f522d55933cb,2020-08-14,ok,find (hit),0.0,0.0,0.0,0,0,33.9,fix #87: define ROBIN_HOOD_DISABLE_INTRINSICS to disable intrinsics
+e9a25190d4235cf219f75e9262f3f522d55933cb,2020-08-14,ok,find (miss),0.0,0.0,0.0,0,0,19.2,fix #87: define ROBIN_HOOD_DISABLE_INTRINSICS to disable intrinsics
+e9a25190d4235cf219f75e9262f3f522d55933cb,2020-08-14,ok,insert+erase,0.0,0.0,0.0,0,0,98.8,fix #87: define ROBIN_HOOD_DISABLE_INTRINSICS to disable intrinsics
+e9a25190d4235cf219f75e9262f3f522d55933cb,2020-08-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,fix #87: define ROBIN_HOOD_DISABLE_INTRINSICS to disable intrinsics
+d6ef9e96c552000ed854fbbb695fd7b125a9a26f,2020-08-14,ok,find (hit),0.0,0.0,0.0,0,0,33.7,try to fix osx build ambiguity
+d6ef9e96c552000ed854fbbb695fd7b125a9a26f,2020-08-14,ok,find (miss),0.0,0.0,0.0,0,0,19.2,try to fix osx build ambiguity
+d6ef9e96c552000ed854fbbb695fd7b125a9a26f,2020-08-14,ok,insert+erase,0.0,0.0,0.0,0,0,97.6,try to fix osx build ambiguity
+d6ef9e96c552000ed854fbbb695fd7b125a9a26f,2020-08-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.3,try to fix osx build ambiguity
+f56168730b751d10b7e65cfd2f50f584ce71765a,2020-08-14,ok,find (hit),0.0,0.0,0.0,0,0,34.5,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+f56168730b751d10b7e65cfd2f50f584ce71765a,2020-08-14,ok,find (miss),0.0,0.0,0.0,0,0,19.4,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+f56168730b751d10b7e65cfd2f50f584ce71765a,2020-08-14,ok,insert+erase,0.0,0.0,0.0,0,0,98.3,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+f56168730b751d10b7e65cfd2f50f584ce71765a,2020-08-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.4,Merge branch 'master' of https://github.com/martinus/robin-hood-hashing
+b9a43a01c81b884027add1351628b75817345fcc,2020-08-15,ok,find (hit),0.0,0.0,0.0,0,0,33.5,"ARM64 fix: add missing include, make sure we have a 64bit result for hash"
+b9a43a01c81b884027add1351628b75817345fcc,2020-08-15,ok,find (miss),0.0,0.0,0.0,0,0,19.2,"ARM64 fix: add missing include, make sure we have a 64bit result for hash"
+b9a43a01c81b884027add1351628b75817345fcc,2020-08-15,ok,insert+erase,0.0,0.0,0.0,0,0,97.7,"ARM64 fix: add missing include, make sure we have a 64bit result for hash"
+b9a43a01c81b884027add1351628b75817345fcc,2020-08-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.9,"ARM64 fix: add missing include, make sure we have a 64bit result for hash"
+445d7fce5b7cdc747bca21d68282a3abea889ccb,2020-08-15,ok,find (hit),0.0,0.0,0.0,0,0,34.7,fix ARM64 compile error
+445d7fce5b7cdc747bca21d68282a3abea889ccb,2020-08-15,ok,find (miss),0.0,0.0,0.0,0,0,20.8,fix ARM64 compile error
+445d7fce5b7cdc747bca21d68282a3abea889ccb,2020-08-15,ok,insert+erase,0.0,0.0,0.0,0,0,104.8,fix ARM64 compile error
+445d7fce5b7cdc747bca21d68282a3abea889ccb,2020-08-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.6,fix ARM64 compile error
+91f992710150aef6e231a982d670433a3f73cf9c,2020-08-19,ok,find (hit),0.0,0.0,0.0,0,0,34.7,fix linux 32 build problem
+91f992710150aef6e231a982d670433a3f73cf9c,2020-08-19,ok,find (miss),0.0,0.0,0.0,0,0,20.0,fix linux 32 build problem
+91f992710150aef6e231a982d670433a3f73cf9c,2020-08-19,ok,insert+erase,0.0,0.0,0.0,0,0,104.6,fix linux 32 build problem
+91f992710150aef6e231a982d670433a3f73cf9c,2020-08-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.3,fix linux 32 build problem
+cd7d9d0139532253f77fb33322a854ca81172408,2020-08-19,ok,find (hit),0.0,0.0,0.0,0,0,34.1,"Reverted #73. The find code was rewritten a bit so this shouldn't be such a big performance penalty any more, and the code is much easier."
+cd7d9d0139532253f77fb33322a854ca81172408,2020-08-19,ok,find (miss),0.0,0.0,0.0,0,0,19.3,"Reverted #73. The find code was rewritten a bit so this shouldn't be such a big performance penalty any more, and the code is much easier."
+cd7d9d0139532253f77fb33322a854ca81172408,2020-08-19,ok,insert+erase,0.0,0.0,0.0,0,0,98.6,"Reverted #73. The find code was rewritten a bit so this shouldn't be such a big performance penalty any more, and the code is much easier."
+cd7d9d0139532253f77fb33322a854ca81172408,2020-08-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,"Reverted #73. The find code was rewritten a bit so this shouldn't be such a big performance penalty any more, and the code is much easier."
+e9437e59a86ae72e78c360ab4747be96a0b70f2a,2020-08-26,ok,find (hit),0.0,0.0,0.0,0,0,46.9,#91 add tuned hash_bytes algorithm
+e9437e59a86ae72e78c360ab4747be96a0b70f2a,2020-08-26,ok,find (miss),0.0,0.0,0.0,0,0,33.5,#91 add tuned hash_bytes algorithm
+e9437e59a86ae72e78c360ab4747be96a0b70f2a,2020-08-26,ok,insert+erase,0.0,0.0,0.0,0,0,144.7,#91 add tuned hash_bytes algorithm
+e9437e59a86ae72e78c360ab4747be96a0b70f2a,2020-08-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.4,#91 add tuned hash_bytes algorithm
+052526484893ea2655c679e741878fdcbadd2046,2020-10-24,ok,find (hit),0.0,0.0,0.0,0,0,36.4,fix issue 97
+052526484893ea2655c679e741878fdcbadd2046,2020-10-24,ok,find (miss),0.0,0.0,0.0,0,0,30.2,fix issue 97
+052526484893ea2655c679e741878fdcbadd2046,2020-10-24,ok,insert+erase,0.0,0.0,0.0,0,0,130.5,fix issue 97
+052526484893ea2655c679e741878fdcbadd2046,2020-10-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.1,fix issue 97
+1e4700e3fcf5fa9add3fd6c503ca22b3c87caeb1,2020-10-24,ok,find (hit),0.0,0.0,0.0,0,0,33.4,get rid of CRC
+1e4700e3fcf5fa9add3fd6c503ca22b3c87caeb1,2020-10-24,ok,find (miss),0.0,0.0,0.0,0,0,19.3,get rid of CRC
+1e4700e3fcf5fa9add3fd6c503ca22b3c87caeb1,2020-10-24,ok,insert+erase,0.0,0.0,0.0,0,0,103.6,get rid of CRC
+1e4700e3fcf5fa9add3fd6c503ca22b3c87caeb1,2020-10-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.1,get rid of CRC
+0eee6c3ba79e7bfa3b5b9c8123f9d3a8e65fa9e6,2020-10-24,ok,find (hit),0.0,0.0,0.0,0,0,33.3,not using auxv.h any more
+0eee6c3ba79e7bfa3b5b9c8123f9d3a8e65fa9e6,2020-10-24,ok,find (miss),0.0,0.0,0.0,0,0,21.1,not using auxv.h any more
+0eee6c3ba79e7bfa3b5b9c8123f9d3a8e65fa9e6,2020-10-24,ok,insert+erase,0.0,0.0,0.0,0,0,105.7,not using auxv.h any more
+0eee6c3ba79e7bfa3b5b9c8123f9d3a8e65fa9e6,2020-10-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.0,not using auxv.h any more
+d37a799b9a791a46950c4df0220da214a1f2dc0e,2020-10-25,ok,find (hit),0.0,0.0,0.0,0,0,32.3,"try to reproduce false positive ""attempt to free a non-heap object"". Disable sanitizer on g++8, it's overeager."
+d37a799b9a791a46950c4df0220da214a1f2dc0e,2020-10-25,ok,find (miss),0.0,0.0,0.0,0,0,18.1,"try to reproduce false positive ""attempt to free a non-heap object"". Disable sanitizer on g++8, it's overeager."
+d37a799b9a791a46950c4df0220da214a1f2dc0e,2020-10-25,ok,insert+erase,0.0,0.0,0.0,0,0,96.1,"try to reproduce false positive ""attempt to free a non-heap object"". Disable sanitizer on g++8, it's overeager."
+d37a799b9a791a46950c4df0220da214a1f2dc0e,2020-10-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.9,"try to reproduce false positive ""attempt to free a non-heap object"". Disable sanitizer on g++8, it's overeager."
+3a4205232e2c65d619bb058d71bd6faf52fb21af,2020-10-25,ok,find (hit),0.0,0.0,0.0,0,0,35.9,silence overeager warning
+3a4205232e2c65d619bb058d71bd6faf52fb21af,2020-10-25,ok,find (miss),0.0,0.0,0.0,0,0,18.5,silence overeager warning
+3a4205232e2c65d619bb058d71bd6faf52fb21af,2020-10-25,ok,insert+erase,0.0,0.0,0.0,0,0,100.8,silence overeager warning
+3a4205232e2c65d619bb058d71bd6faf52fb21af,2020-10-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.2,silence overeager warning
+c0801327ea589d8f0f941aa5d3ca4f9f770f4ea9,2020-10-28,ok,find (hit),0.0,0.0,0.0,0,0,32.7,Remove non-ASCII character (#99)
+c0801327ea589d8f0f941aa5d3ca4f9f770f4ea9,2020-10-28,ok,find (miss),0.0,0.0,0.0,0,0,18.8,Remove non-ASCII character (#99)
+c0801327ea589d8f0f941aa5d3ca4f9f770f4ea9,2020-10-28,ok,insert+erase,0.0,0.0,0.0,0,0,138.7,Remove non-ASCII character (#99)
+c0801327ea589d8f0f941aa5d3ca4f9f770f4ea9,2020-10-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.0,Remove non-ASCII character (#99)
+628cfdd629035e997f181e63b1c62c8ac0caea29,2020-11-13,ok,find (hit),0.0,0.0,0.0,0,0,32.7,"Fix memleak, reported by @BearishSun in PR #103"
+628cfdd629035e997f181e63b1c62c8ac0caea29,2020-11-13,ok,find (miss),0.0,0.0,0.0,0,0,18.3,"Fix memleak, reported by @BearishSun in PR #103"
+628cfdd629035e997f181e63b1c62c8ac0caea29,2020-11-13,ok,insert+erase,0.0,0.0,0.0,0,0,97.2,"Fix memleak, reported by @BearishSun in PR #103"
+628cfdd629035e997f181e63b1c62c8ac0caea29,2020-11-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.2,"Fix memleak, reported by @BearishSun in PR #103"
+7121a276a2e00a4f49e178e8652913c81ae40bfd,2020-11-13,ok,find (hit),0.0,0.0,0.0,0,0,35.3,No ; to prevent -Wextra-semi-stmt
+7121a276a2e00a4f49e178e8652913c81ae40bfd,2020-11-13,ok,find (miss),0.0,0.0,0.0,0,0,18.5,No ; to prevent -Wextra-semi-stmt
+7121a276a2e00a4f49e178e8652913c81ae40bfd,2020-11-13,ok,insert+erase,0.0,0.0,0.0,0,0,98.6,No ; to prevent -Wextra-semi-stmt
+7121a276a2e00a4f49e178e8652913c81ae40bfd,2020-11-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.0,No ; to prevent -Wextra-semi-stmt
+4869243035a2732fdb96407db234bdc7a3a985cc,2020-11-23,ok,find (hit),0.0,0.0,0.0,0,0,33.2,"Add new API call compact() which compacts the map, if possible. Useful to free memory after lots of elements have been removed."
+4869243035a2732fdb96407db234bdc7a3a985cc,2020-11-23,ok,find (miss),0.0,0.0,0.0,0,0,18.7,"Add new API call compact() which compacts the map, if possible. Useful to free memory after lots of elements have been removed."
+4869243035a2732fdb96407db234bdc7a3a985cc,2020-11-23,ok,insert+erase,0.0,0.0,0.0,0,0,114.1,"Add new API call compact() which compacts the map, if possible. Useful to free memory after lots of elements have been removed."
+4869243035a2732fdb96407db234bdc7a3a985cc,2020-11-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.4,"Add new API call compact() which compacts the map, if possible. Useful to free memory after lots of elements have been removed."
+feed3ad447ee33fc1e5d7fefae06de54c4ece695,2021-03-12,ok,find (hit),0.0,0.0,0.0,0,0,59.3,hash_int back to murmurhash finalizer
+feed3ad447ee33fc1e5d7fefae06de54c4ece695,2021-03-12,ok,find (miss),0.0,0.0,0.0,0,0,32.4,hash_int back to murmurhash finalizer
+feed3ad447ee33fc1e5d7fefae06de54c4ece695,2021-03-12,ok,insert+erase,0.0,0.0,0.0,0,0,144.2,hash_int back to murmurhash finalizer
+feed3ad447ee33fc1e5d7fefae06de54c4ece695,2021-03-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,45.3,hash_int back to murmurhash finalizer
+a8f297b4304cdb8f1f636698ebd4dc66cb8fcf0f,2021-03-14,ok,find (hit),0.0,0.0,0.0,0,0,37.8,Single lookup for try_emplace and insert_or_assign (#116)
+a8f297b4304cdb8f1f636698ebd4dc66cb8fcf0f,2021-03-14,ok,find (miss),0.0,0.0,0.0,0,0,21.2,Single lookup for try_emplace and insert_or_assign (#116)
+a8f297b4304cdb8f1f636698ebd4dc66cb8fcf0f,2021-03-14,ok,insert+erase,0.0,0.0,0.0,0,0,103.0,Single lookup for try_emplace and insert_or_assign (#116)
+a8f297b4304cdb8f1f636698ebd4dc66cb8fcf0f,2021-03-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.9,Single lookup for try_emplace and insert_or_assign (#116)
+eee46f9985c3c65a05b35660c6866f8f8f1a3ba3,2021-03-17,ok,find (hit),0.0,0.0,0.0,0,0,45.0,Fix compiling with MSVC 2015 (#118)
+eee46f9985c3c65a05b35660c6866f8f8f1a3ba3,2021-03-17,ok,find (miss),0.0,0.0,0.0,0,0,20.0,Fix compiling with MSVC 2015 (#118)
+eee46f9985c3c65a05b35660c6866f8f8f1a3ba3,2021-03-17,ok,insert+erase,0.0,0.0,0.0,0,0,100.7,Fix compiling with MSVC 2015 (#118)
+eee46f9985c3c65a05b35660c6866f8f8f1a3ba3,2021-03-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.0,Fix compiling with MSVC 2015 (#118)
+186be670c91637ff81d0b7e59690f46b854e4721,2021-03-19,ok,find (hit),0.0,0.0,0.0,0,0,35.7,Support insert with initializer list
+186be670c91637ff81d0b7e59690f46b854e4721,2021-03-19,ok,find (miss),0.0,0.0,0.0,0,0,20.8,Support insert with initializer list
+186be670c91637ff81d0b7e59690f46b854e4721,2021-03-19,ok,insert+erase,0.0,0.0,0.0,0,0,103.2,Support insert with initializer list
+186be670c91637ff81d0b7e59690f46b854e4721,2021-03-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.1,Support insert with initializer list
+36e5eb80f02a894e4cc8509be888869fa475f9f0,2021-03-19,ok,find (hit),0.0,0.0,0.0,0,0,35.3,updated copyright dates
+36e5eb80f02a894e4cc8509be888869fa475f9f0,2021-03-19,ok,find (miss),0.0,0.0,0.0,0,0,20.4,updated copyright dates
+36e5eb80f02a894e4cc8509be888869fa475f9f0,2021-03-19,ok,insert+erase,0.0,0.0,0.0,0,0,104.3,updated copyright dates
+36e5eb80f02a894e4cc8509be888869fa475f9f0,2021-03-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.0,updated copyright dates
+0345343cfb220e1e1588687d480a197b748e599d,2021-03-25,ok,find (hit),0.0,0.0,0.0,0,0,35.6,overflow fix: rehash with different hash instead (#121)
+0345343cfb220e1e1588687d480a197b748e599d,2021-03-25,ok,find (miss),0.0,0.0,0.0,0,0,20.9,overflow fix: rehash with different hash instead (#121)
+0345343cfb220e1e1588687d480a197b748e599d,2021-03-25,ok,insert+erase,0.0,0.0,0.0,0,0,106.0,overflow fix: rehash with different hash instead (#121)
+0345343cfb220e1e1588687d480a197b748e599d,2021-03-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.5,overflow fix: rehash with different hash instead (#121)
+f2cae2e6b8231c46fe9c324e31b0a1f64e0de8c6,2021-05-16,ok,find (hit),0.0,0.0,0.0,0,0,42.3,fix #125: add missing include
+f2cae2e6b8231c46fe9c324e31b0a1f64e0de8c6,2021-05-16,ok,find (miss),0.0,0.0,0.0,0,0,28.9,fix #125: add missing include
+f2cae2e6b8231c46fe9c324e31b0a1f64e0de8c6,2021-05-16,ok,insert+erase,0.0,0.0,0.0,0,0,130.8,fix #125: add missing include
+f2cae2e6b8231c46fe9c324e31b0a1f64e0de8c6,2021-05-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.5,fix #125: add missing include
+8d27714ca77234494a4e14e172716e7cec23a116,2021-06-21,ok,find (hit),0.0,0.0,0.0,0,0,35.4,"Don't change hash multiplier when hash works well, this introduces the danger of getting an overflow"
+8d27714ca77234494a4e14e172716e7cec23a116,2021-06-21,ok,find (miss),0.0,0.0,0.0,0,0,20.0,"Don't change hash multiplier when hash works well, this introduces the danger of getting an overflow"
+8d27714ca77234494a4e14e172716e7cec23a116,2021-06-21,ok,insert+erase,0.0,0.0,0.0,0,0,102.4,"Don't change hash multiplier when hash works well, this introduces the danger of getting an overflow"
+8d27714ca77234494a4e14e172716e7cec23a116,2021-06-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.6,"Don't change hash multiplier when hash works well, this introduces the danger of getting an overflow"
+24b3f50f9532153edc23b29ae277dcccfd75a462,2021-07-12,ok,find (hit),0.0,0.0,0.0,0,0,45.3,Bump version to 3.11.3
+24b3f50f9532153edc23b29ae277dcccfd75a462,2021-07-12,ok,find (miss),0.0,0.0,0.0,0,0,32.2,Bump version to 3.11.3
+24b3f50f9532153edc23b29ae277dcccfd75a462,2021-07-12,ok,insert+erase,0.0,0.0,0.0,0,0,145.9,Bump version to 3.11.3
+24b3f50f9532153edc23b29ae277dcccfd75a462,2021-07-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.4,Bump version to 3.11.3
+53994329d0c3297334eac880b37c22a6f9ecad22,2021-12-10,ok,find (hit),0.0,0.0,0.0,0,0,35.0,Adds missing methods with the const_iterator hint.
+53994329d0c3297334eac880b37c22a6f9ecad22,2021-12-10,ok,find (miss),0.0,0.0,0.0,0,0,19.9,Adds missing methods with the const_iterator hint.
+53994329d0c3297334eac880b37c22a6f9ecad22,2021-12-10,ok,insert+erase,0.0,0.0,0.0,0,0,99.5,Adds missing methods with the const_iterator hint.
+53994329d0c3297334eac880b37c22a6f9ecad22,2021-12-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.8,Adds missing methods with the const_iterator hint.
+363753c1fdba7ac14362aefb4b9803ab60a70e49,2021-12-11,ok,find (hit),0.0,0.0,0.0,0,0,35.0,The return type of functions that use hints should be consistent with std (#138)
+363753c1fdba7ac14362aefb4b9803ab60a70e49,2021-12-11,ok,find (miss),0.0,0.0,0.0,0,0,19.8,The return type of functions that use hints should be consistent with std (#138)
+363753c1fdba7ac14362aefb4b9803ab60a70e49,2021-12-11,ok,insert+erase,0.0,0.0,0.0,0,0,101.6,The return type of functions that use hints should be consistent with std (#138)
+363753c1fdba7ac14362aefb4b9803ab60a70e49,2021-12-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.1,The return type of functions that use hints should be consistent with std (#138)
+91f612cab8a956509311f4001159dd76080881e0,2022-01-12,ok,find (hit),0.0,0.0,0.0,0,0,34.8,Use malloc + memset instead of calloc
+91f612cab8a956509311f4001159dd76080881e0,2022-01-12,ok,find (miss),0.0,0.0,0.0,0,0,19.9,Use malloc + memset instead of calloc
+91f612cab8a956509311f4001159dd76080881e0,2022-01-12,ok,insert+erase,0.0,0.0,0.0,0,0,101.0,Use malloc + memset instead of calloc
+91f612cab8a956509311f4001159dd76080881e0,2022-01-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.1,Use malloc + memset instead of calloc
+9145f963d80d6a02f0f96a47758050a89184a3ed,2022-01-14,ok,find (hit),0.0,0.0,0.0,0,0,34.6,bump version to 3.11.5
+9145f963d80d6a02f0f96a47758050a89184a3ed,2022-01-14,ok,find (miss),0.0,0.0,0.0,0,0,19.6,bump version to 3.11.5
+9145f963d80d6a02f0f96a47758050a89184a3ed,2022-01-14,ok,insert+erase,0.0,0.0,0.0,0,0,101.0,bump version to 3.11.5
+9145f963d80d6a02f0f96a47758050a89184a3ed,2022-01-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.9,bump version to 3.11.5
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,find (hit),0.0,0.0,0.0,0,0,34.8,Enable std::is_trivially_copyable in clang (#166)
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,find (miss),0.0,0.0,0.0,0,0,19.6,Enable std::is_trivially_copyable in clang (#166)
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,insert+erase,0.0,0.0,0.0,0,0,101.0,Enable std::is_trivially_copyable in clang (#166)
+bd632059ea0bb5cf444b33bdfb4eba2118300c62,2023-01-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.0,Enable std::is_trivially_copyable in clang (#166)

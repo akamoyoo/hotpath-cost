@@ -1,0 +1,5 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,find (hit),0.0,0.0,0.0,0,0,17.8,Rename functions to ``*_with_hash``
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,find (miss),0.0,0.0,0.0,0,0,21.1,Rename functions to ``*_with_hash``
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,insert+erase,0.0,0.0,0.0,0,0,39.1,Rename functions to ``*_with_hash``
+91362aab8f2c63ef90bf7c21fb2c3283ded5ae48,2026-06-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.2,Rename functions to ``*_with_hash``

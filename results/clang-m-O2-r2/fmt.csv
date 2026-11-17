@@ -1,0 +1,5 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+14ac0d5a9d40aef14f50954069c1e10971abb0b2,2026-11-16,ok,format_to(memory_buffer),0.0,0.0,0.0,0,0,88.8,Use float_traits for the significand type of decimal_fp
+14ac0d5a9d40aef14f50954069c1e10971abb0b2,2026-11-16,ok,format int (short string),0.0,0.0,0.0,0,0,27.9,Use float_traits for the significand type of decimal_fp
+14ac0d5a9d40aef14f50954069c1e10971abb0b2,2026-11-16,ok,format double {:.4f},0.0,0.0,0.0,0,0,154.9,Use float_traits for the significand type of decimal_fp
+14ac0d5a9d40aef14f50954069c1e10971abb0b2,2026-11-16,ok,format long string,1.0,1.0,0.0,1,0,149.6,Use float_traits for the significand type of decimal_fp

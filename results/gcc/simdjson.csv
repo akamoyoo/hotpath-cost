@@ -1,0 +1,85 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+36d7151e8d18e4646ce5f415a4fcb0af2b2d9cdf,2018-12-30,build failed,,,,,,,,Merge branch 'workingonmsvs'
+3e74059cc38b62f2be1c1386362c071c07847c0d,2019-01-04,build failed,,,,,,,,Fix the shuffle.
+105ced3b01a8da1401881dead89ef2d101ae4d74,2019-02-26,build failed,,,,,,,,Update single-header version as well as fix c++11 -> c++17 in scripts for this version
+d873ee9983c7ec041293a5dc5289ba8206256aed,2019-03-06,build failed,,,,,,,,Reuse aligned_malloc (#108)
+bf9b1b14576c5708549ec74a7a047be1d1c7c562,2019-03-13,build failed,,,,,,,,New version (mostly setting the singleheader version in sync).
+43143f643499c26d3815a9060b703f31071733a4,2019-07-03,build failed,,,,,,,,Merge pull request #200 from lemire/merging_namespace
+467831e3d8fcc661ba6093496b8de061f321bb52,2019-07-11,build failed,,,,,,,,Refreshing the single header files.
+2ca574d9e69be9c2a158362b3ed1823cd4753694,2019-08-12,build failed,,,,,,,,Removing windows.h (#273)
+aef3f4be9958d7bc81d4a7e1b406a5a18bda6f52,2019-08-28,build failed,,,,,,,,Merge pull request #296 from lemire/wide_mask
+bdc2b073396b7b237151580832f1dd103b90767f,2019-11-08,build failed,,,,,,,,Streams of JSON documents + Large files (>4GB) (#350) (#364)
+102262c7abe64b517a36a6049b39d95f58bf4aea,2019-12-16,build failed,,,,,,,,Fixing issue386 (#396)
+ab6d4871d885ef7b225d7c9d552b7ca09398d28c,2020-01-15,build failed,,,,,,,,Adding haswell amal. tests (#447)
+0c8f2b9d85850e5a5f7e048a5550024275ed7f3b,2020-02-03,build failed,,,,,,,,"Make ""make amalgamate"" more automatic (#480)"
+b3ea8c406ee32e52e8dca3d717797bbaccaf3eba,2020-03-02,build failed,,,,,,,,Add simdjson.cpp for unified use (#515)
+7cf3a7511bca96c061028972a7186a53df824fa4,2020-03-16,build failed,,,,,,,,Add fallback implementation to CI
+3116e29d16a6c575c6e267db137dbe9fe8fbd779,2020-03-31,build failed,,,,,,,,Release candidate (#655)
+a116e68a47e5df162b65263fc3f4480c5e97da00,2020-04-22,build failed,,,,,,,,Merge pull request #729 from simdjson/jkeiser/cmake-amalgamate
+25fe6d7dde512703c7dedfdb9180ea69946261a3,2020-05-05,build failed,,,,,,,,Merge pull request #859 from simdjson/jkeiser/vsquickstart
+40d57da83c0eb888ad130afb69511ccbfff84810,2020-05-20,build failed,,,,,,,,fixes issue 891 (#893)
+eef117194478115f842e08682bc769051a0a863f,2020-06-23,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,472.1,Merge pull request #954 from simdjson/jkeiser/parse-many-result
+6b85b9a416ca464289bb5673ce277b5bbf3f912a,2020-06-26,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,467.9,Merge pull request #998 from simdjson/issue976
+e38fe3d361f34a918bc5e0a063073e44bc96115e,2020-06-30,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,226.3,Version update
+d2bea0c228b46766e928ec6e8836ff1eb36b4b49,2020-07-21,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,481.2,Add support for C++ 20 ranges. (#1050)
+5be4d37aff3074f1713e8902670aad65fd4a2182,2020-08-19,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,468.8,Merge pull request #1129 from simdjson/jkeiser/inl
+6a86ef5a7dd3381535a7f8047c0c067ce06dfcea,2020-10-23,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,515.5,Issue release
+af4db55e669cf0c9d4ea281685ae51039c382d76,2020-11-03,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,456.7,remove trailing whitespace (#1284)
+920f5355001f053ae98f87d391d69bda0a886a5e,2021-01-07,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,469.9,Reamalgamate
+9577c54999f3bec39b80a02209cf1a155ebc7216,2021-02-26,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,495.8,Provide the CMake install the necessarily information (and flags) to hand Windows DLL and add Windows installation tests (#1457)
+8b8af6aee59c0b45173f10e1a1b1af4322a3f5e7,2021-03-09,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,262.1,Making input capacity more robust. (#1488)
+2db4592571bec79a7e91fee1ad0e0e59217b4fde,2021-03-17,build failed,,,,,,,,Last commit for version 0.9.0. (#1503)
+62cd5f798425d0423726acf567bf4dc9a182eb7e,2021-03-18,build failed,,,,,,,,get_root_value is dead code that should have been removed.
+8a3b2f20e47b2eb28b7085d388422de94bdae634,2021-03-18,build failed,,,,,,,,Version 0.9.1
+b6cce3d744cf9a40738895d6c788c3234059defb,2021-03-18,build failed,,,,,,,,Let us stop evoluating. (#1506)
+b79261eebcd7b9a784f1e2d17de904841713f80c,2021-07-25,build failed,,,,,,,,"This cleans a bit the current code, especially with respect to EOF guards. (#1669)"
+40813752f48544bacdd3fbea0d6c92e8185e254d,2021-08-07,build failed,,,,,,,,This will update the amalgamate_demo.cpp file to use On Demand. (#1689)
+d6b5124c88cd1a271d93696bf263391bd1ffc81e,2021-09-01,build failed,,,,,,,,Pushing the release 1.0.0 candidate. (#1709)
+af4ff7cc330411f0d2ba1b8f6522aa3bdf3c4007,2021-09-07,build failed,,,,,,,,"Adding fast ""get_number_type()"" function, bypassing ""get_number()"" (#1713)"
+3bd8b0b575f43403705dcce57d427944c11421f8,2021-09-07,build failed,,,,,,,,Refreshing the single-header files.
+e5c9a310cf14ac8ca0533e4131c1dd091941dbdf,2021-10-20,build failed,,,,,,,,Preparing release 1.0.1.
+17f3148ac73da9895bdbd26ed2c4848fd77571a8,2021-10-27,build failed,,,,,,,,Version 1.0.2.
+b4b1927b0fc755e093f819b508c301fd905d1942,2021-12-21,build failed,,,,,,,,Making the documentation more explicit. (#1765)
+c6f9c93c33b403f3b4e06bb2f0753dfbaf277107,2022-01-03,ok,"dom parse, reused parser",0.0,0.0,0.0,10,0,263.8,Use static variables to enforce initialization order. (#1773) (#1777)
+ce74ece545668a46f2e3122442d018f87c3a449b,2022-05-25,ok,"dom parse, reused parser",0.0,0.0,0.0,10,0,574.9,Preparing release.
+f91a1ae07eb1d634a57b688b6052580973372bd1,2022-05-26,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,266.3,Let us time minify and make sure AVX-512 is used by default. (#1830)
+a410c723c81096ffa196519d8877fe8e352705b0,2022-05-26,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,263.7,Patch release.
+a49ac04046932391580bb84ea06d420fdf272fe2,2022-06-02,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,517.1,Version 2.0.3
+3fde8a4eac96c88c352ff7819bbd116291611155,2022-07-04,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,262.1,New release candidate (#1856)
+a1aab1fafe71728bdc3e94fcfa393a52f8838016,2022-10-02,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,262.1,Preparing release 2.2.3
+f151300a76afed8f51a7b79466feead7ae44ccd5,2023-01-03,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,526.9,Disabling fallback kernel on systems where it is not needed (#1930)
+22cc523fd4e2fd6d4a941cd41662e251f241b2dc,2023-02-06,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,509.1,Patching release script.
+ec0b48b7722112e4fa005e557aa0531756c1718a,2023-03-02,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,511.6,Version bump.
+14d927128ba14e13913fc0e7c2cf538790bd1622,2023-04-08,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,522.4,New release
+1e97af7dfb4f78f2c96436c0fbca10792b6b49fc,2023-07-17,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,528.0,Merge pull request #2031 from simdjson/jkeiser/vscode-green
+f043db4dcaed08513b9bce798e4ef84a62cdf7f8,2023-08-02,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,264.2,Preparing release.
+9dd6e9c959c8168c3e5933ae4ab6adcf28e0b44b,2023-10-25,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,249.8,version bump
+3bb2f0a18621d9fcd6a67f0397551409818776ac,2023-11-26,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,251.8,Return a better error when a user tries to cast a document that has already been accessed to a value (#2085)
+5541e7840211440403ab91355d034060060a3c3c,2023-12-01,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,251.3,version bump
+4d2fc31b2738282021ab3d7bc9474b772adf39c4,2024-02-05,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,250.8,removes simdjson.cpp include from the amalgated demo (#2119)
+78325888ea661896c576e3c2e3dd4ef9db9d3386,2024-02-26,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,255.5,Add functionality to detect big integers (#2139)
+646bd3f2c3b68135f2543296ff0d4406b3d380a8,2024-04-04,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,488.8,version bump
+69ab8848bfdfd880fc7226d38f056bea6d79b22a,2024-05-07,ok,"dom parse, reused parser",0.0,0.0,0.0,11,0,479.7,fix: satisfy a C++20 compiler warning (#2177)
+bf7834179c1f8fc523c9fd73d29b46348ae1d576,2024-05-07,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,251.5,version bump
+deefc88b9cc4a28d8b45c5736e244bf722b4d2d4,2024-05-30,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,251.4,Adding path for parsing incomplete json. (#2189)
+3964f3e5d20c2eaf43e97141511c9e2a85a0089c,2024-06-03,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,252.1,pull size_t from the std namespace (#2191)
+e341c8b43861b43de29c48ab65f292d997096953,2024-08-26,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,252.0,release candidate
+79126ca3236266d2702965c48465f6c3229bab8d,2024-12-03,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,461.6,fix: processor checks inconsistently problem (#2299)
+d4bf0cc7ec12c30c68cb7ed443895df546390283,2024-12-09,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,459.4,sync
+1b23a77e0348aa212290e8acc5b1c509fb2a978e,2025-01-14,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,255.7,3.11.6
+f3b034ac38060303c856c83f51f4156a4d1da8c1,2025-03-06,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,252.2,Address 'whitespace in literal' decreation warning from clang++-20
+0c0ce1bd48baa0677dc7c0945ea7cd1e8b52b297,2025-06-04,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,252.0,3.13.0
+faf921bc7e76e4c2756d964165d60c8d10ff7705,2025-08-13,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,254.4,introducing a thread-local parser and removing ranges (#2412)
+f249e7e12812c288fac2c296171f1a182b241c2e,2025-09-12,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,250.6,patch release
+ddc7b8c7ddf4fee741e6ac82ade4bf48579b0288,2025-09-17,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,254.2,update
+b84a4ec2b98002326977c0d25166f96e93fd498c,2025-09-29,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,472.8,Fix: Correct narrowing conversion in lsx string parsing (#2481)
+bf52d8198b823036b33f8b9ede529e4511752582,2025-10-27,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,487.6,4.1.0
+b1c31b428d03f3c10df9142fe709b876bef455c2,2025-11-11,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,489.2,update
+06c774c655d5bb8dfb34ea0fac3d48cfb86d80de,2026-02-18,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,252.2,4.3.0
+b4a0fd3ff4f00c4a5a9ab86046f06daa471a3b57,2026-03-20,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,253.2,4.4.2
+73e69a5e8463acadda6b9618ba236b25d9dd9b30,2026-04-03,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,250.7,Get reflection working without warnings under GCC 16 (#2658)
+9572dd093917b8b004e25e06bb25110529c0016e,2026-09-14,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,257.3,arm64: use integer umaxv for SIMD zero tests
+2a690bc52b8f2737aaac786a25e6fe550875a808,2026-10-01,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,230.7,Regenerate the single header for 5.0.2 (#2900)
+3b0b2b53aaffb46208817821dce2cd47a5e6bb2a,2026-10-12,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,232.9,5.0.4
+92624828e9933813c6997da1efb272cba3077fc1,2026-10-29,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,223.9,5.0.8
+a0d5ad9798f9e51706399b649929dafb91d9b714,2026-11-15,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,221.1,5.2.0

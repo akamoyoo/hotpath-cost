@@ -1,0 +1,12 @@
+r1 single   q1 gcc/5e82=29.47 gcc/cf9a=28.79 gcc/5596=29.43 gcc/b7f1=28.73 clang/5e82=28.97 clang/cf9a=28.84 clang/5596=29.29 clang/b7f1=28.74 
+r1 single   q2 gcc/5e82=34.02 gcc/cf9a=34.05 gcc/5596=34.15 gcc/b7f1=34.05 clang/5e82=36.38 clang/cf9a=34.06 clang/5596=34.08 clang/b7f1=36.37 
+r1 pingpong q1 gcc/5e82=274.27 gcc/cf9a=272.33 gcc/5596=275.41 gcc/b7f1=271.09 clang/5e82=281.84 clang/cf9a=283.76 clang/5596=281.15 clang/b7f1=282.85 
+r1 pingpong q2 gcc/5e82=343.15 gcc/cf9a=344.29 gcc/5596=343.17 gcc/b7f1=346.38 clang/5e82=344.92 clang/cf9a=354.27 clang/5596=348.68 clang/b7f1=346.31 
+r1 stream   q1 gcc/5e82=39.17 gcc/cf9a=37.42 gcc/5596=42.40 gcc/b7f1=37.41 clang/5e82=39.39 clang/cf9a=37.27 clang/5596=38.91 clang/b7f1=38.49 
+r1 stream   q2 gcc/5e82=64.69 gcc/cf9a=59.68 gcc/5596=72.61 gcc/b7f1=54.58 clang/5e82=59.93 clang/cf9a=77.66 clang/5596=70.45 clang/b7f1=48.50 
+r2 single   q1 gcc/5e82=29.47 gcc/cf9a=28.80 gcc/5596=29.44 gcc/b7f1=28.72 clang/5e82=29.03 clang/cf9a=28.86 clang/5596=29.24 clang/b7f1=28.74 
+r2 single   q2 gcc/5e82=34.06 gcc/cf9a=34.08 gcc/5596=34.05 gcc/b7f1=34.07 clang/5e82=36.37 clang/cf9a=34.10 clang/5596=34.06 clang/b7f1=36.33 
+r2 pingpong q1 gcc/5e82=271.74 gcc/cf9a=271.79 gcc/5596=274.25 gcc/b7f1=267.79 clang/5e82=282.05 clang/cf9a=283.20 clang/5596=282.71 clang/b7f1=281.19 
+r2 pingpong q2 gcc/5e82=347.39 gcc/cf9a=347.11 gcc/5596=346.23 gcc/b7f1=348.89 clang/5e82=346.19 clang/cf9a=350.38 clang/5596=345.68 clang/b7f1=350.45 
+r2 stream   q1 gcc/5e82=36.40 gcc/cf9a=37.72 gcc/5596=38.33 gcc/b7f1=35.06 clang/5e82=39.10 clang/cf9a=36.59 clang/5596=37.92 clang/b7f1=35.94 
+r2 stream   q2 gcc/5e82=63.55 gcc/cf9a=62.18 gcc/5596=74.51 gcc/b7f1=60.68 clang/5e82=60.07 clang/cf9a=52.08 clang/5596=74.70 clang/b7f1=73.23 

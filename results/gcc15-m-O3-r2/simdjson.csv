@@ -1,0 +1,2 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+a0d5ad9798f9e51706399b649929dafb91d9b714,2026-11-15,ok,"dom parse, reused parser",0.0,0.0,0.0,6,0,213.1,5.2.0

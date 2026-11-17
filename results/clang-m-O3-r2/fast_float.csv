@@ -1,0 +1,5 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,price 187.25,0.0,0.0,0.0,0,0,21.8,Merge pull request #432 from fastfloat/rounds-to-nearest-macro
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,integer 100,0.0,0.0,0.0,0,0,16.2,Merge pull request #432 from fastfloat/rounds-to-nearest-macro
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,"17 digits, exponent",0.0,0.0,0.0,0,0,26.6,Merge pull request #432 from fastfloat/rounds-to-nearest-macro
+0b21c2eadbee3abfc63069d911417a7d4f99add6,2026-11-09,ok,4567.123456789012,0.0,0.0,0.0,0,0,20.7,Merge pull request #432 from fastfloat/rounds-to-nearest-macro

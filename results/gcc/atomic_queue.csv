@@ -1,0 +1,352 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject
+1572c61cd56ce5b8d3dbe3ee11a1bba5c81ac688,2020-06-09,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.3,More traditional file structure with include and src directories.
+1572c61cd56ce5b8d3dbe3ee11a1bba5c81ac688,2020-06-09,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,More traditional file structure with include and src directories.
+1572c61cd56ce5b8d3dbe3ee11a1bba5c81ac688,2020-06-09,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,More traditional file structure with include and src directories.
+0efb8610d611aef823397e3f0da359e41d034220,2020-06-30,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.2,Moved away benchmark implementation headers.
+0efb8610d611aef823397e3f0da359e41d034220,2020-06-30,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Moved away benchmark implementation headers.
+0efb8610d611aef823397e3f0da359e41d034220,2020-06-30,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.4,Moved away benchmark implementation headers.
+748f82cbb08560b651dda34c9348651fcdee79ad,2020-07-18,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.3,TicketSpinlock benchmark added.
+748f82cbb08560b651dda34c9348651fcdee79ad,2020-07-18,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,TicketSpinlock benchmark added.
+748f82cbb08560b651dda34c9348651fcdee79ad,2020-07-18,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.1,TicketSpinlock benchmark added.
+95bbd40048037af51d1a27ec6b0a77c381096332,2020-11-08,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.5,Bugfix. Use acquire semantics when loading states of non-atomic elements.
+95bbd40048037af51d1a27ec6b0a77c381096332,2020-11-08,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Bugfix. Use acquire semantics when loading states of non-atomic elements.
+95bbd40048037af51d1a27ec6b0a77c381096332,2020-11-08,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.1,Bugfix. Use acquire semantics when loading states of non-atomic elements.
+2396ed1d23a1b7bdce9b1525e8b3263bbaedbbd7,2021-09-10,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.5,round_up_to_power_of_2 unittest added.
+2396ed1d23a1b7bdce9b1525e8b3263bbaedbbd7,2021-09-10,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,round_up_to_power_of_2 unittest added.
+2396ed1d23a1b7bdce9b1525e8b3263bbaedbbd7,2021-09-10,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,round_up_to_power_of_2 unittest added.
+ee3d91cf131e56aa3302a43aeebf7b57a3c97b06,2021-10-20,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.3,ppc64 support added. Warn on unknown architecture and use the defaults.
+ee3d91cf131e56aa3302a43aeebf7b57a3c97b06,2021-10-20,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,ppc64 support added. Warn on unknown architecture and use the defaults.
+ee3d91cf131e56aa3302a43aeebf7b57a3c97b06,2021-10-20,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.1,ppc64 support added. Warn on unknown architecture and use the defaults.
+f2a36a392e02cc2643b07292e639c4a2ae7d4a35,2021-10-20,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,41.9,"Set CACHE_LINE_SIZE to 128 for __powerpc64__, and 256 for __s390x__."
+f2a36a392e02cc2643b07292e639c4a2ae7d4a35,2021-10-20,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,44.6,"Set CACHE_LINE_SIZE to 128 for __powerpc64__, and 256 for __s390x__."
+f2a36a392e02cc2643b07292e639c4a2ae7d4a35,2021-10-20,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,55.9,"Set CACHE_LINE_SIZE to 128 for __powerpc64__, and 256 for __s390x__."
+e50e567ff86b029c6680e696d509c4b7bed13095,2021-10-21,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Support L1 cache line size up to 256 bytes.
+e50e567ff86b029c6680e696d509c4b7bed13095,2021-10-21,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Support L1 cache line size up to 256 bytes.
+e50e567ff86b029c6680e696d509c4b7bed13095,2021-10-21,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Support L1 cache line size up to 256 bytes.
+fad31557de3acc40e704ad63bb11e7089190c16a,2022-01-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.6,Merge pull request #38 from Xeonacid/add-riscv-support
+fad31557de3acc40e704ad63bb11e7089190c16a,2022-01-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Merge pull request #38 from Xeonacid/add-riscv-support
+fad31557de3acc40e704ad63bb11e7089190c16a,2022-01-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Merge pull request #38 from Xeonacid/add-riscv-support
+7d75e9ed0359650224b29cdf6728c5fe0a19fffb,2022-03-12,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Merge pull request #43 from XieJiSS/patch-1
+7d75e9ed0359650224b29cdf6728c5fe0a19fffb,2022-03-12,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Merge pull request #43 from XieJiSS/patch-1
+7d75e9ed0359650224b29cdf6728c5fe0a19fffb,2022-03-12,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Merge pull request #43 from XieJiSS/patch-1
+a5362fa84eddc8ce37abac38a5ab484f299a83f9,2023-01-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,42.0,Better compile-time error message in C++17 for non-atomic elements and queue type mismatch.
+a5362fa84eddc8ce37abac38a5ab484f299a83f9,2023-01-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,44.2,Better compile-time error message in C++17 for non-atomic elements and queue type mismatch.
+a5362fa84eddc8ce37abac38a5ab484f299a83f9,2023-01-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,55.3,Better compile-time error message in C++17 for non-atomic elements and queue type mismatch.
+6b65e8f6bdd7b627bf68e6e525a31a4c256a951e,2023-03-31,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Relax memory order of head/tail stores.
+6b65e8f6bdd7b627bf68e6e525a31a4c256a951e,2023-03-31,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,43.5,Relax memory order of head/tail stores.
+6b65e8f6bdd7b627bf68e6e525a31a4c256a951e,2023-03-31,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Relax memory order of head/tail stores.
+2bc627d7a452efaefbb49547e06b6b52881b4304,2023-04-01,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.6,Fix missing acquire memory order on pop for atomic elements.
+2bc627d7a452efaefbb49547e06b6b52881b4304,2023-04-01,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Fix missing acquire memory order on pop for atomic elements.
+2bc627d7a452efaefbb49547e06b6b52881b4304,2023-04-01,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.3,Fix missing acquire memory order on pop for atomic elements.
+681544fd62c0b953a33d30bcfb1a15b9eb7da64b,2023-04-02,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Remove unnecessary release memory order on spsc pop.
+681544fd62c0b953a33d30bcfb1a15b9eb7da64b,2023-04-02,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Remove unnecessary release memory order on spsc pop.
+681544fd62c0b953a33d30bcfb1a15b9eb7da64b,2023-04-02,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Remove unnecessary release memory order on spsc pop.
+996a85caac611459eb2db716ff2fbf142253bd1d,2023-04-30,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.5,"Enable narrowing conversion warning in remap_index, should index type change."
+996a85caac611459eb2db716ff2fbf142253bd1d,2023-04-30,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,"Enable narrowing conversion warning in remap_index, should index type change."
+996a85caac611459eb2db716ff2fbf142253bd1d,2023-04-30,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,"Enable narrowing conversion warning in remap_index, should index type change."
+3a654d5402e36762163a926e7ae75f91768e3189,2023-06-29,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.5,Merge pull request #53 from jhasse/patch-1
+3a654d5402e36762163a926e7ae75f91768e3189,2023-06-29,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Merge pull request #53 from jhasse/patch-1
+3a654d5402e36762163a926e7ae75f91768e3189,2023-06-29,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.3,Merge pull request #53 from jhasse/patch-1
+b770bb2c98debbaa3155c090c63475ebb1915840,2023-06-29,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.7,Merge pull request #54 from jhasse/patch-2
+b770bb2c98debbaa3155c090c63475ebb1915840,2023-06-29,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Merge pull request #54 from jhasse/patch-2
+b770bb2c98debbaa3155c090c63475ebb1915840,2023-06-29,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Merge pull request #54 from jhasse/patch-2
+d40fd93aa9d9f02950762d6b809198bef57705e5,2023-11-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.5,Changed `compare_exchange_strong` to `compare_exchange_weak` as it's used in loops that are immune to spurious failures.
+d40fd93aa9d9f02950762d6b809198bef57705e5,2023-11-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Changed `compare_exchange_strong` to `compare_exchange_weak` as it's used in loops that are immune to spurious failures.
+d40fd93aa9d9f02950762d6b809198bef57705e5,2023-11-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Changed `compare_exchange_strong` to `compare_exchange_weak` as it's used in loops that are immune to spurious failures.
+e18e42a51f7503f32e3a86ad8054886be7a16fba,2023-11-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Missing exception specification added.
+e18e42a51f7503f32e3a86ad8054886be7a16fba,2023-11-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Missing exception specification added.
+e18e42a51f7503f32e3a86ad8054886be7a16fba,2023-11-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.1,Missing exception specification added.
+7c8c456a4331c35544a2656571e1d87df54d90e2,2024-02-12,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,37.2,Stateful allocator support added. Resolves #45.
+7c8c456a4331c35544a2656571e1d87df54d90e2,2024-02-12,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.7,Stateful allocator support added. Resolves #45.
+7c8c456a4331c35544a2656571e1d87df54d90e2,2024-02-12,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.8,Stateful allocator support added. Resolves #45.
+bc9400c08b461c2ad0a8ee6aa94a88debae1ff82,2024-02-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,CMake Support added.
+bc9400c08b461c2ad0a8ee6aa94a88debae1ff82,2024-02-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.8,CMake Support added.
+bc9400c08b461c2ad0a8ee6aa94a88debae1ff82,2024-02-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.9,CMake Support added.
+ed6d58703d1d12bb973f9f12105be481960e9315,2024-03-03,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.3,Comments added.
+ed6d58703d1d12bb973f9f12105be481960e9315,2024-03-03,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Comments added.
+ed6d58703d1d12bb973f9f12105be481960e9315,2024-03-03,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.0,Comments added.
+5d5be8ab3a74c5b69dc51825d23b3d02b6cfce8f,2024-03-03,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.4,Duplicated code extracted into a function.
+5d5be8ab3a74c5b69dc51825d23b3d02b6cfce8f,2024-03-03,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.7,Duplicated code extracted into a function.
+5d5be8ab3a74c5b69dc51825d23b3d02b6cfce8f,2024-03-03,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.4,Duplicated code extracted into a function.
+eb0a1bd9f54f09f8e3eeec5b4a215b29d23af302,2024-03-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.9,Don't require std::atomic to be trivial. Fixes C++20 compile errors. Resolves #66.
+eb0a1bd9f54f09f8e3eeec5b4a215b29d23af302,2024-03-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Don't require std::atomic to be trivial. Fixes C++20 compile errors. Resolves #66.
+eb0a1bd9f54f09f8e3eeec5b4a215b29d23af302,2024-03-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.3,Don't require std::atomic to be trivial. Fixes C++20 compile errors. Resolves #66.
+7c36f0997979a0fee5be84c9511ee0f6032057ec,2024-03-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,42.7,Unused include removed.
+7c36f0997979a0fee5be84c9511ee0f6032057ec,2024-03-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,45.8,Unused include removed.
+7c36f0997979a0fee5be84c9511ee0f6032057ec,2024-03-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.1,Unused include removed.
+eaf3037bdb17b63b86523d0449d63645f6c0a151,2024-10-01,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.5,Fix -Wmissing-template-arg-list-after-template-kw issued by Clang 19 (#73)
+eaf3037bdb17b63b86523d0449d63645f6c0a151,2024-10-01,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,44.1,Fix -Wmissing-template-arg-list-after-template-kw issued by Clang 19 (#73)
+eaf3037bdb17b63b86523d0449d63645f6c0a151,2024-10-01,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.8,Fix -Wmissing-template-arg-list-after-template-kw issued by Clang 19 (#73)
+78716efb6f8505fafa734012b5339e46fb563b76,2024-10-30,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.6,Add support for loong64 (#74)
+78716efb6f8505fafa734012b5339e46fb563b76,2024-10-30,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.8,Add support for loong64 (#74)
+78716efb6f8505fafa734012b5339e46fb563b76,2024-10-30,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.7,Add support for loong64 (#74)
+78d5964b53b6e75aa281572c16875fcfc1be2a08,2025-05-01,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Fix Werror=sign-compare (#81)
+78d5964b53b6e75aa281572c16875fcfc1be2a08,2025-05-01,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.8,Fix Werror=sign-compare (#81)
+78d5964b53b6e75aa281572c16875fcfc1be2a08,2025-05-01,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.4,Fix Werror=sign-compare (#81)
+64ab128f73c490a74c1f0165071c7ecd349d5346,2025-07-20,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,std::max call replaced with inline code to work-around Windows headers breaking std::min/max by default.
+64ab128f73c490a74c1f0165071c7ecd349d5346,2025-07-20,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,std::max call replaced with inline code to work-around Windows headers breaking std::min/max by default.
+64ab128f73c490a74c1f0165071c7ecd349d5346,2025-07-20,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.1,std::max call replaced with inline code to work-around Windows headers breaking std::min/max by default.
+6005ada411f76d7676f4bf7d6a3a1112efabf4c5,2025-07-20,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Static linkage for functions in details namespace to prevent compilers from emitting unnecessary external definitions.
+6005ada411f76d7676f4bf7d6a3a1112efabf4c5,2025-07-20,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Static linkage for functions in details namespace to prevent compilers from emitting unnecessary external definitions.
+6005ada411f76d7676f4bf7d6a3a1112efabf4c5,2025-07-20,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,48.1,Static linkage for functions in details namespace to prevent compilers from emitting unnecessary external definitions.
+961847fafcaa0dbb9d8dffdcfc615d92b66001e9,2025-07-20,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,41.2,Always inline push and pop functions with gcc and clang to prevent compilers from emitting unnecessary external definitions.
+961847fafcaa0dbb9d8dffdcfc615d92b66001e9,2025-07-20,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,43.7,Always inline push and pop functions with gcc and clang to prevent compilers from emitting unnecessary external definitions.
+961847fafcaa0dbb9d8dffdcfc615d92b66001e9,2025-07-20,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,54.2,Always inline push and pop functions with gcc and clang to prevent compilers from emitting unnecessary external definitions.
+627fc6fefed6b8c3b71897f3cddca796a29de8fb,2026-03-13,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Support cmake install (#97)
+627fc6fefed6b8c3b71897f3cddca796a29de8fb,2026-03-13,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Support cmake install (#97)
+627fc6fefed6b8c3b71897f3cddca796a29de8fb,2026-03-13,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.0,Support cmake install (#97)
+f70d8067598620220b6684afe3c1d312d0640070,2026-03-19,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,41.3,Add B variant stress tests for MPMC and SPSC modes
+f70d8067598620220b6684afe3c1d312d0640070,2026-03-19,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Add B variant stress tests for MPMC and SPSC modes
+f70d8067598620220b6684afe3c1d312d0640070,2026-03-19,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Add B variant stress tests for MPMC and SPSC modes
+30ecf49ec097db4fe7c5587e0adfbbe0ee506859,2026-03-20,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Better CapacityArgAdaptor name.
+30ecf49ec097db4fe7c5587e0adfbbe0ee506859,2026-03-20,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Better CapacityArgAdaptor name.
+30ecf49ec097db4fe7c5587e0adfbbe0ee506859,2026-03-20,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.1,Better CapacityArgAdaptor name.
+8ad53fcdc3fd2e64e49b63d66b7ac00979022992,2026-03-08,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.3,De-alias dynamically allocated arrays explicitly. Compiler strict aliasing rules may not de-alias these.
+8ad53fcdc3fd2e64e49b63d66b7ac00979022992,2026-03-08,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,De-alias dynamically allocated arrays explicitly. Compiler strict aliasing rules may not de-alias these.
+8ad53fcdc3fd2e64e49b63d66b7ac00979022992,2026-03-08,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,De-alias dynamically allocated arrays explicitly. Compiler strict aliasing rules may not de-alias these.
+25bc9b7e31a357baed45d113d906ffd8ee89ed91,2026-03-21,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.7,"Revert ""De-alias dynamically allocated arrays explicitly. Compiler strict aliasing rules may not de-alias these."""
+25bc9b7e31a357baed45d113d906ffd8ee89ed91,2026-03-21,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,"Revert ""De-alias dynamically allocated arrays explicitly. Compiler strict aliasing rules may not de-alias these."""
+25bc9b7e31a357baed45d113d906ffd8ee89ed91,2026-03-21,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.4,"Revert ""De-alias dynamically allocated arrays explicitly. Compiler strict aliasing rules may not de-alias these."""
+d1460ea9ad6935e2f22a3e7d42f1505c0149c929,2026-03-22,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,44.2,Explicitly de-alias pointers to dynamically allocated queue buffers.
+d1460ea9ad6935e2f22a3e7d42f1505c0149c929,2026-03-22,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,46.0,Explicitly de-alias pointers to dynamically allocated queue buffers.
+d1460ea9ad6935e2f22a3e7d42f1505c0149c929,2026-03-22,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,56.5,Explicitly de-alias pointers to dynamically allocated queue buffers.
+c9d470b00c8ec40249e1acfa2603c752260ff1a3,2026-03-22,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.9,Unduplicate namespace declarations.
+c9d470b00c8ec40249e1acfa2603c752260ff1a3,2026-03-22,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.0,Unduplicate namespace declarations.
+c9d470b00c8ec40249e1acfa2603c752260ff1a3,2026-03-22,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.5,Unduplicate namespace declarations.
+e482bc8ac2e40ad4e36062d3a73d8ce84d90d9fb,2026-03-22,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,44.4,"Comment asm ""memory"" clobber potentially limiting performance in ARM code-paths. [no ci]"
+e482bc8ac2e40ad4e36062d3a73d8ce84d90d9fb,2026-03-22,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,45.7,"Comment asm ""memory"" clobber potentially limiting performance in ARM code-paths. [no ci]"
+e482bc8ac2e40ad4e36062d3a73d8ce84d90d9fb,2026-03-22,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,56.6,"Comment asm ""memory"" clobber potentially limiting performance in ARM code-paths. [no ci]"
+a64933da91256287e8a6064b3788accbcc1dcafa,2026-03-25,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.5,Explicit restrict qualifier for queue elements parameter of index mapping function.
+a64933da91256287e8a6064b3788accbcc1dcafa,2026-03-25,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.1,Explicit restrict qualifier for queue elements parameter of index mapping function.
+a64933da91256287e8a6064b3788accbcc1dcafa,2026-03-25,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.9,Explicit restrict qualifier for queue elements parameter of index mapping function.
+3bfe09504488b1d1312df8dc86aa48b352094337,2026-04-14,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.6,Remove accidental CapacityArgAdaptor from atomic_queue.h.
+3bfe09504488b1d1312df8dc86aa48b352094337,2026-04-14,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,40.7,Remove accidental CapacityArgAdaptor from atomic_queue.h.
+3bfe09504488b1d1312df8dc86aa48b352094337,2026-04-14,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.5,Remove accidental CapacityArgAdaptor from atomic_queue.h.
+6dca5714b3c81bc3b2a1cd433f8ef4e2a4ef5347,2026-04-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,More efficient bit swapping with BMI instructions.
+6dca5714b3c81bc3b2a1cd433f8ef4e2a4ef5347,2026-04-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,More efficient bit swapping with BMI instructions.
+6dca5714b3c81bc3b2a1cd433f8ef4e2a4ef5347,2026-04-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.6,More efficient bit swapping with BMI instructions.
+40543819d4a3aef20f841005fcd8f64c30b5d918,2026-04-15,build failed,,,,,,,,Better BMI mask load. Comments added.
+3ae8dffff835a481f0485f4d1414a38be3ad1efc,2026-04-15,run failed,,,,,,,,Fix clang-20 error.
+1f16e78a117db3900822d8082117ba00af92b6b1,2026-04-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Inline asm retired.
+1f16e78a117db3900822d8082117ba00af92b6b1,2026-04-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Inline asm retired.
+1f16e78a117db3900822d8082117ba00af92b6b1,2026-04-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,40.7,Inline asm retired.
+21800fc68c39fb68aa7c55654e2c493b9f803a45,2026-04-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.2,Shorter BMI mask load bytecode.
+21800fc68c39fb68aa7c55654e2c493b9f803a45,2026-04-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,39.8,Shorter BMI mask load bytecode.
+21800fc68c39fb68aa7c55654e2c493b9f803a45,2026-04-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.2,Shorter BMI mask load bytecode.
+214cbe24e48c48d79bb1367330475ed1e5fbdf91,2026-04-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.4,Comments added. [no ci]
+214cbe24e48c48d79bb1367330475ed1e5fbdf91,2026-04-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.5,Comments added. [no ci]
+214cbe24e48c48d79bb1367330475ed1e5fbdf91,2026-04-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.1,Comments added. [no ci]
+9dae634be7461fd8835578cf067290e8a46d036f,2026-04-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.0,+1% faster throughput benchmark with BMI instructions. Makefile targets run_benchmarks_n and run_benchmarks_perf added.
+9dae634be7461fd8835578cf067290e8a46d036f,2026-04-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,40.6,+1% faster throughput benchmark with BMI instructions. Makefile targets run_benchmarks_n and run_benchmarks_perf added.
+9dae634be7461fd8835578cf067290e8a46d036f,2026-04-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.0,+1% faster throughput benchmark with BMI instructions. Makefile targets run_benchmarks_n and run_benchmarks_perf added.
+5f70f4f4c792cee2806aa72f1330d49448034fac,2026-04-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.6,Enable BMI index remapping for variants with non-atomic elements.
+5f70f4f4c792cee2806aa72f1330d49448034fac,2026-04-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.1,Enable BMI index remapping for variants with non-atomic elements.
+5f70f4f4c792cee2806aa72f1330d49448034fac,2026-04-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.6,Enable BMI index remapping for variants with non-atomic elements.
+89affefffdd4928be2e1a3284a6a1d02dd51d010,2026-04-16,build failed,,,,,,,,Remap fewer bits in non-atomic element indexes for better performance. Assert that MINIMIZE_CONTENTION is honoured. API breaking change.
+20f2dc65d404fa9f4c416e62744c3afb21980056,2026-04-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,51.2,Unde Remap fewer bits in non-atomic element indexes (only).
+20f2dc65d404fa9f4c416e62744c3afb21980056,2026-04-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.7,Unde Remap fewer bits in non-atomic element indexes (only).
+20f2dc65d404fa9f4c416e62744c3afb21980056,2026-04-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.3,Unde Remap fewer bits in non-atomic element indexes (only).
+2b459760d4be5ce9cddc459849c2d2030476377a,2026-04-17,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.2,Faster index remapping.
+2b459760d4be5ce9cddc459849c2d2030476377a,2026-04-17,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Faster index remapping.
+2b459760d4be5ce9cddc459849c2d2030476377a,2026-04-17,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.7,Faster index remapping.
+f45df87835f555307ac44569eb3a3831352e95c7,2026-04-17,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,34.2,RetryDecorator implementation detail removed from the API.
+f45df87835f555307ac44569eb3a3831352e95c7,2026-04-17,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.7,RetryDecorator implementation detail removed from the API.
+f45df87835f555307ac44569eb3a3831352e95c7,2026-04-17,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.8,RetryDecorator implementation detail removed from the API.
+352a5dc255f6e4455581dd6371e0272fcf8e33e5,2026-04-17,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,42.1,Better unit-test error messages.
+352a5dc255f6e4455581dd6371e0272fcf8e33e5,2026-04-17,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Better unit-test error messages.
+352a5dc255f6e4455581dd6371e0272fcf8e33e5,2026-04-17,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.5,Better unit-test error messages.
+c395ea517b8dd4deb7667907f7de1f76fa8f6272,2026-04-17,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.4,Faster index remapping with BMI instructions.
+c395ea517b8dd4deb7667907f7de1f76fa8f6272,2026-04-17,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,Faster index remapping with BMI instructions.
+c395ea517b8dd4deb7667907f7de1f76fa8f6272,2026-04-17,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.5,Faster index remapping with BMI instructions.
+b12a0922e2e47e547b9a6f2932ffdec892bfd8f4,2026-04-18,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.9,Index remapping optimization for BMI1 only when BMI2 is unavailable.
+b12a0922e2e47e547b9a6f2932ffdec892bfd8f4,2026-04-18,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Index remapping optimization for BMI1 only when BMI2 is unavailable.
+b12a0922e2e47e547b9a6f2932ffdec892bfd8f4,2026-04-18,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,Index remapping optimization for BMI1 only when BMI2 is unavailable.
+1d2e8a4cbdd7e627e67c5b1061a3026e3595739d,2026-04-18,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.6,Better names.
+1d2e8a4cbdd7e627e67c5b1061a3026e3595739d,2026-04-18,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.6,Better names.
+1d2e8a4cbdd7e627e67c5b1061a3026e3595739d,2026-04-18,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.8,Better names.
+026bb59add241af7c4820aa9e9a2ff11bc91c118,2026-04-18,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.8,More accurate benchmark timing.
+026bb59add241af7c4820aa9e9a2ff11bc91c118,2026-04-18,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,More accurate benchmark timing.
+026bb59add241af7c4820aa9e9a2ff11bc91c118,2026-04-18,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.1,More accurate benchmark timing.
+36344c751c8cdb38a84df3fd16e33923752f5338,2026-04-19,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,41.8,Fix Windows build.
+36344c751c8cdb38a84df3fd16e33923752f5338,2026-04-19,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Fix Windows build.
+36344c751c8cdb38a84df3fd16e33923752f5338,2026-04-19,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,Fix Windows build.
+05eb459e48b17c3bbc6743e61ca83bb65c4faae8,2026-04-19,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.8,Fix clang build error.
+05eb459e48b17c3bbc6743e61ca83bb65c4faae8,2026-04-19,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.0,Fix clang build error.
+05eb459e48b17c3bbc6743e61ca83bb65c4faae8,2026-04-19,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.3,Fix clang build error.
+1697803bce7a69604879b5342e9a92adbc8b3ead,2026-04-19,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.9,Better clang machine code for BMI remapping.
+1697803bce7a69604879b5342e9a92adbc8b3ead,2026-04-19,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,40.8,Better clang machine code for BMI remapping.
+1697803bce7a69604879b5342e9a92adbc8b3ead,2026-04-19,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.0,Better clang machine code for BMI remapping.
+73f05ab3ec07d2e87bb24a586212e58af2d1b61d,2026-04-19,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.6,Fix typos.
+73f05ab3ec07d2e87bb24a586212e58af2d1b61d,2026-04-19,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.1,Fix typos.
+73f05ab3ec07d2e87bb24a586212e58af2d1b61d,2026-04-19,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.1,Fix typos.
+7737ce72eed82028ae95a2cbcd67b4a07bb15225,2026-04-20,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.7,Truncate index to size while remapping to merge 2 AND instructions into one.
+7737ce72eed82028ae95a2cbcd67b4a07bb15225,2026-04-20,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,Truncate index to size while remapping to merge 2 AND instructions into one.
+7737ce72eed82028ae95a2cbcd67b4a07bb15225,2026-04-20,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.3,Truncate index to size while remapping to merge 2 AND instructions into one.
+e883cb64c082a17fafeabf08193024e3d314b312,2026-04-22,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.7,More efficient maintenance of state.
+e883cb64c082a17fafeabf08193024e3d314b312,2026-04-22,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.7,More efficient maintenance of state.
+e883cb64c082a17fafeabf08193024e3d314b312,2026-04-22,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.1,More efficient maintenance of state.
+a64f503ceda6cd839c9d47c09b148f074688ad38,2026-04-23,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,32.8,Faster code-paths for non-atomic elements (queues with 2 in typename). Not ideal yet.
+a64f503ceda6cd839c9d47c09b148f074688ad38,2026-04-23,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,38.9,Faster code-paths for non-atomic elements (queues with 2 in typename). Not ideal yet.
+a64f503ceda6cd839c9d47c09b148f074688ad38,2026-04-23,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.7,Faster code-paths for non-atomic elements (queues with 2 in typename). Not ideal yet.
+f6778d70db85f8c9d6243745cb1536051927b01a,2026-04-23,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,32.8,Fix order of evaluation.
+f6778d70db85f8c9d6243745cb1536051927b01a,2026-04-23,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.6,Fix order of evaluation.
+f6778d70db85f8c9d6243745cb1536051927b01a,2026-04-23,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.6,Fix order of evaluation.
+439b739f49c544f0722dce4884c0be5e5074c5db,2026-04-28,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,32.8,Merge branch 'maxim'.
+439b739f49c544f0722dce4884c0be5e5074c5db,2026-04-28,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.3,Merge branch 'maxim'.
+439b739f49c544f0722dce4884c0be5e5074c5db,2026-04-28,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.2,Merge branch 'maxim'.
+86d66e9461b800092b739b802055106f7e813f9d,2026-05-01,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.2,"Use more portable identifiers __rdtsc, __bextr_u32 instead of gcc-specific ones."
+86d66e9461b800092b739b802055106f7e813f9d,2026-05-01,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,40.5,"Use more portable identifiers __rdtsc, __bextr_u32 instead of gcc-specific ones."
+86d66e9461b800092b739b802055106f7e813f9d,2026-05-01,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.9,"Use more portable identifiers __rdtsc, __bextr_u32 instead of gcc-specific ones."
+0efc29e9aaae6718ef15e484aa5aa11c3ee815a0,2026-05-02,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.7,ATOMIC_QUEUE_WANT_RESOLVE_ADDR_EARLY added.
+0efc29e9aaae6718ef15e484aa5aa11c3ee815a0,2026-05-02,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.5,ATOMIC_QUEUE_WANT_RESOLVE_ADDR_EARLY added.
+0efc29e9aaae6718ef15e484aa5aa11c3ee815a0,2026-05-02,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.2,ATOMIC_QUEUE_WANT_RESOLVE_ADDR_EARLY added.
+4227e5873299433987ad4bc08463a1cd2bc3163b,2026-05-02,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.4,"Revert ""ATOMIC_QUEUE_WANT_RESOLVE_ADDR_EARLY added."""
+4227e5873299433987ad4bc08463a1cd2bc3163b,2026-05-02,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.8,"Revert ""ATOMIC_QUEUE_WANT_RESOLVE_ADDR_EARLY added."""
+4227e5873299433987ad4bc08463a1cd2bc3163b,2026-05-02,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.5,"Revert ""ATOMIC_QUEUE_WANT_RESOLVE_ADDR_EARLY added."""
+16e493ce874c6049d672f8d9d5a1a0b2df42ac70,2026-05-02,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,32.9,BMI code paths optimization for ideal instruction scheduling.
+16e493ce874c6049d672f8d9d5a1a0b2df42ac70,2026-05-02,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,BMI code paths optimization for ideal instruction scheduling.
+16e493ce874c6049d672f8d9d5a1a0b2df42ac70,2026-05-02,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,BMI code paths optimization for ideal instruction scheduling.
+3d2b6bdda262d69969e3cae7b30b2dd3b60946c6,2026-05-03,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.3,Minimize asm order constraints.
+3d2b6bdda262d69969e3cae7b30b2dd3b60946c6,2026-05-03,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Minimize asm order constraints.
+3d2b6bdda262d69969e3cae7b30b2dd3b60946c6,2026-05-03,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,44.7,Minimize asm order constraints.
+deed0d3989cfd0c14d92dc1ed62751b122a1df2d,2026-05-03,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,32.8,Shorter type aliases.
+deed0d3989cfd0c14d92dc1ed62751b122a1df2d,2026-05-03,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,Shorter type aliases.
+deed0d3989cfd0c14d92dc1ed62751b122a1df2d,2026-05-03,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,44.5,Shorter type aliases.
+513d168fd7ae0a6382fdbce2fb26b495361655d9,2026-05-03,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,42.3,Development checkpoint.
+513d168fd7ae0a6382fdbce2fb26b495361655d9,2026-05-03,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,45.6,Development checkpoint.
+513d168fd7ae0a6382fdbce2fb26b495361655d9,2026-05-03,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.9,Development checkpoint.
+5e82e9b5e6c4ca2ddcfdf3a851cdecfba31d5b76,2026-05-03,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.0,Relax ordering constraints.
+5e82e9b5e6c4ca2ddcfdf3a851cdecfba31d5b76,2026-05-03,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.9,Relax ordering constraints.
+5e82e9b5e6c4ca2ddcfdf3a851cdecfba31d5b76,2026-05-03,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.5,Relax ordering constraints.
+4cf02b3c24494cede3f60122ad49b089d84c5e35,2026-05-03,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.5,Hint compilers to resolve array addresses early.
+4cf02b3c24494cede3f60122ad49b089d84c5e35,2026-05-03,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,40.6,Hint compilers to resolve array addresses early.
+4cf02b3c24494cede3f60122ad49b089d84c5e35,2026-05-03,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,49.9,Hint compilers to resolve array addresses early.
+cf9ab816144ad0b7610d8b311b4a2d7b6637e8f5,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.1,Hint compilers to resolve array addresses early.
+cf9ab816144ad0b7610d8b311b4a2d7b6637e8f5,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.9,Hint compilers to resolve array addresses early.
+cf9ab816144ad0b7610d8b311b4a2d7b6637e8f5,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.2,Hint compilers to resolve array addresses early.
+3a01c4d88ad935012d92ada3183224bd3273a8c6,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.3,Minimize x86 bytecode for state.compare_exchange_weak.
+3a01c4d88ad935012d92ada3183224bd3273a8c6,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,43.0,Minimize x86 bytecode for state.compare_exchange_weak.
+3a01c4d88ad935012d92ada3183224bd3273a8c6,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.9,Minimize x86 bytecode for state.compare_exchange_weak.
+bb675d4b39cc7afc93349773b9a9f41e4d36efb0,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.3,Minimize x86 bytecode and branching in all push/pop.
+bb675d4b39cc7afc93349773b9a9f41e4d36efb0,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Minimize x86 bytecode and branching in all push/pop.
+bb675d4b39cc7afc93349773b9a9f41e4d36efb0,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.9,Minimize x86 bytecode and branching in all push/pop.
+4e1c8b9c1f79fdd29bc54e1f27d9045b799f25c4,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,51.4,Remove unnecessary pessimisation volatile qualifier from ARM spin_loop_pause implementations.
+4e1c8b9c1f79fdd29bc54e1f27d9045b799f25c4,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Remove unnecessary pessimisation volatile qualifier from ARM spin_loop_pause implementations.
+4e1c8b9c1f79fdd29bc54e1f27d9045b799f25c4,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,Remove unnecessary pessimisation volatile qualifier from ARM spin_loop_pause implementations.
+97633cf836ce687ed0a56b9ff7f0b7fc9f765df7,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.3,Define ATOMIC_QUEUE_FULL_THROTTLE on x86_64 only.
+97633cf836ce687ed0a56b9ff7f0b7fc9f765df7,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Define ATOMIC_QUEUE_FULL_THROTTLE on x86_64 only.
+97633cf836ce687ed0a56b9ff7f0b7fc9f765df7,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.4,Define ATOMIC_QUEUE_FULL_THROTTLE on x86_64 only.
+49158d1dff0d833a486136668f8da885adaba01f,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.6,Define ATOMIC_QUEUE_FULL_THROTTLE=1 on x86_64 only.
+49158d1dff0d833a486136668f8da885adaba01f,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Define ATOMIC_QUEUE_FULL_THROTTLE=1 on x86_64 only.
+49158d1dff0d833a486136668f8da885adaba01f,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.2,Define ATOMIC_QUEUE_FULL_THROTTLE=1 on x86_64 only.
+3c50df697ebaf25f6649d27f84fb5ed5a35f9390,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,48.1,Removed unused code.
+3c50df697ebaf25f6649d27f84fb5ed5a35f9390,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Removed unused code.
+3c50df697ebaf25f6649d27f84fb5ed5a35f9390,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.7,Removed unused code.
+cc4138183cdf0f320145218b44e8b7d5524946d7,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,31.8,throughput benchmark optimzation for x86.
+cc4138183cdf0f320145218b44e8b7d5524946d7,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.1,throughput benchmark optimzation for x86.
+cc4138183cdf0f320145218b44e8b7d5524946d7,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.6,throughput benchmark optimzation for x86.
+dcc690ca52a696dcabe38138ab1303449e408f42,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.6,Fix clang compiler error.
+dcc690ca52a696dcabe38138ab1303449e408f42,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.2,Fix clang compiler error.
+dcc690ca52a696dcabe38138ab1303449e408f42,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.0,Fix clang compiler error.
+559656fd3e651d730fc5022e4da2a21c899a5a75,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.8,Optimal queue element address resoution without asm constraints.
+559656fd3e651d730fc5022e4da2a21c899a5a75,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Optimal queue element address resoution without asm constraints.
+559656fd3e651d730fc5022e4da2a21c899a5a75,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.5,Optimal queue element address resoution without asm constraints.
+e24b8c0ba6866727212493d04dffcd2cd74c4115,2026-05-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.9,Simpler AtomicQueueCommon protected interface.
+e24b8c0ba6866727212493d04dffcd2cd74c4115,2026-05-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Simpler AtomicQueueCommon protected interface.
+e24b8c0ba6866727212493d04dffcd2cd74c4115,2026-05-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.7,Simpler AtomicQueueCommon protected interface.
+ae619044d729afdc8376b1ec01a05117e5e91352,2026-05-05,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.1,Simpler AtomicQueueCommon protected interface for atomic elements.
+ae619044d729afdc8376b1ec01a05117e5e91352,2026-05-05,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Simpler AtomicQueueCommon protected interface for atomic elements.
+ae619044d729afdc8376b1ec01a05117e5e91352,2026-05-05,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.6,Simpler AtomicQueueCommon protected interface for atomic elements.
+33d185d71346e5bf68133611dbad9c8d4d3e1193,2026-05-05,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,41.7,ATOMIC_QUEUE_NOINLINE means function clones aren't desirable either.
+33d185d71346e5bf68133611dbad9c8d4d3e1193,2026-05-05,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.6,ATOMIC_QUEUE_NOINLINE means function clones aren't desirable either.
+33d185d71346e5bf68133611dbad9c8d4d3e1193,2026-05-05,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.3,ATOMIC_QUEUE_NOINLINE means function clones aren't desirable either.
+5180220f991ff8cf9fbe232fde4cc20a4ca86132,2026-05-05,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.5,Align uncontended paths branching to match default the CPU branch prediction.
+5180220f991ff8cf9fbe232fde4cc20a4ca86132,2026-05-05,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.4,Align uncontended paths branching to match default the CPU branch prediction.
+5180220f991ff8cf9fbe232fde4cc20a4ca86132,2026-05-05,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.7,Align uncontended paths branching to match default the CPU branch prediction.
+051203d956e13d4324d45467863a34ebb11a780c,2026-05-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,42.7,Unsigned sum accumulator. Unused code removed.
+051203d956e13d4324d45467863a34ebb11a780c,2026-05-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,43.2,Unsigned sum accumulator. Unused code removed.
+051203d956e13d4324d45467863a34ebb11a780c,2026-05-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.5,Unsigned sum accumulator. Unused code removed.
+9e29acfb25110f5e4d0b014075c7b44615249781,2026-05-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,41.3,Branch and register hints added to queue functions.
+9e29acfb25110f5e4d0b014075c7b44615249781,2026-05-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,45.0,Branch and register hints added to queue functions.
+9e29acfb25110f5e4d0b014075c7b44615249781,2026-05-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,52.0,Branch and register hints added to queue functions.
+8c4417e1a9fefb24f20e39e235b700e58fdebccc,2026-05-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,37.9,ATOMIC_QUEUE_ORDER added.
+8c4417e1a9fefb24f20e39e235b700e58fdebccc,2026-05-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,40.9,ATOMIC_QUEUE_ORDER added.
+8c4417e1a9fefb24f20e39e235b700e58fdebccc,2026-05-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.9,ATOMIC_QUEUE_ORDER added.
+e0a9b97da577184088f66543b9d398ea833b3c0f,2026-05-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.2,Branch and register hints added to queue functions.
+e0a9b97da577184088f66543b9d398ea833b3c0f,2026-05-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.4,Branch and register hints added to queue functions.
+e0a9b97da577184088f66543b9d398ea833b3c0f,2026-05-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,50.8,Branch and register hints added to queue functions.
+92d114b7897a238f164f306996c8ac2d9b62f0d8,2026-05-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.8,Minimize accidental noise.
+92d114b7897a238f164f306996c8ac2d9b62f0d8,2026-05-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Minimize accidental noise.
+92d114b7897a238f164f306996c8ac2d9b62f0d8,2026-05-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.0,Minimize accidental noise.
+9b98671330daf908fdd0c8359a4f44d25660d623,2026-05-06,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.2,Unnecessary memory clobber removed from asm statements for ARM.
+9b98671330daf908fdd0c8359a4f44d25660d623,2026-05-06,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Unnecessary memory clobber removed from asm statements for ARM.
+9b98671330daf908fdd0c8359a4f44d25660d623,2026-05-06,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.2,Unnecessary memory clobber removed from asm statements for ARM.
+602829e5942e7b6abd0f94de92a3fcfb39f0c6e6,2026-05-08,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.2,Unnecessary clutter removed.
+602829e5942e7b6abd0f94de92a3fcfb39f0c6e6,2026-05-08,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Unnecessary clutter removed.
+602829e5942e7b6abd0f94de92a3fcfb39f0c6e6,2026-05-08,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.3,Unnecessary clutter removed.
+7e7a81a6f993420f3e794b8a2943250344b258e2,2026-05-18,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.0,Make AtomicQueueMutexT::was_full/empty data-race free. These functions aren't used by the benchmarks or tests.
+7e7a81a6f993420f3e794b8a2943250344b258e2,2026-05-18,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Make AtomicQueueMutexT::was_full/empty data-race free. These functions aren't used by the benchmarks or tests.
+7e7a81a6f993420f3e794b8a2943250344b258e2,2026-05-18,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.9,Make AtomicQueueMutexT::was_full/empty data-race free. These functions aren't used by the benchmarks or tests.
+f744f4266a2827c42f54df9cf3810883164c4389,2026-07-30,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,42.7,Fix cache line size on Apple Silicon (#106)
+f744f4266a2827c42f54df9cf3810883164c4389,2026-07-30,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,44.6,Fix cache line size on Apple Silicon (#106)
+f744f4266a2827c42f54df9cf3810883164c4389,2026-07-30,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,52.7,Fix cache line size on Apple Silicon (#106)
+97396278e150acba2625d9b45ff476bbf871aec3,2026-08-26,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.4,Run a minimal 4-CPU benchmark in CI. Fix cpu_base_frequency on AMD and ARM.
+97396278e150acba2625d9b45ff476bbf871aec3,2026-08-26,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.2,Run a minimal 4-CPU benchmark in CI. Fix cpu_base_frequency on AMD and ARM.
+97396278e150acba2625d9b45ff476bbf871aec3,2026-08-26,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,53.2,Run a minimal 4-CPU benchmark in CI. Fix cpu_base_frequency on AMD and ARM.
+91166022740adef86aaa499eabe716921203ea68,2026-09-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.0,Better is_always_lock_free assertion with C++17.
+91166022740adef86aaa499eabe716921203ea68,2026-09-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Better is_always_lock_free assertion with C++17.
+91166022740adef86aaa499eabe716921203ea68,2026-09-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.1,Better is_always_lock_free assertion with C++17.
+957f45765e98ddc918787745bbd15a302af3d091,2026-09-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.0,Strong exception safety for AtomicQueueB2 constructor.
+957f45765e98ddc918787745bbd15a302af3d091,2026-09-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,Strong exception safety for AtomicQueueB2 constructor.
+957f45765e98ddc918787745bbd15a302af3d091,2026-09-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.1,Strong exception safety for AtomicQueueB2 constructor.
+bf1e17e675232e46b2e9f359825368e6ded0f37e,2026-09-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,42.3,Add nodiscard attribute to try_push and try_pop.
+bf1e17e675232e46b2e9f359825368e6ded0f37e,2026-09-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,44.3,Add nodiscard attribute to try_push and try_pop.
+bf1e17e675232e46b2e9f359825368e6ded0f37e,2026-09-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,53.6,Add nodiscard attribute to try_push and try_pop.
+f1acd6a5da6443088a294fba7891484ce3defffb,2026-09-04,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.1,Add capacity limits assertions.
+f1acd6a5da6443088a294fba7891484ce3defffb,2026-09-04,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.5,Add capacity limits assertions.
+f1acd6a5da6443088a294fba7891484ce3defffb,2026-09-04,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,52.6,Add capacity limits assertions.
+da4ac73a3ca49a4d206c66b1f9fdf4ecd93e4986,2026-09-13,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.6,constructor_strong_exception_safety allocation size tests added.
+da4ac73a3ca49a4d206c66b1f9fdf4ecd93e4986,2026-09-13,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.4,constructor_strong_exception_safety allocation size tests added.
+da4ac73a3ca49a4d206c66b1f9fdf4ecd93e4986,2026-09-13,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,52.6,constructor_strong_exception_safety allocation size tests added.
+1fc28fa349899a02dc94c4022b303f87a8e7e753,2026-09-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.5,Add contructor explicitly to AtomicQueueB2 Rollback (#110)
+1fc28fa349899a02dc94c4022b303f87a8e7e753,2026-09-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,42.5,Add contructor explicitly to AtomicQueueB2 Rollback (#110)
+1fc28fa349899a02dc94c4022b303f87a8e7e753,2026-09-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,52.4,Add contructor explicitly to AtomicQueueB2 Rollback (#110)
+d966ad66da703fc51af0ff483a8d1570348601bb,2026-09-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.7,RollbackState class extracted.
+d966ad66da703fc51af0ff483a8d1570348601bb,2026-09-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,RollbackState class extracted.
+d966ad66da703fc51af0ff483a8d1570348601bb,2026-09-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.0,RollbackState class extracted.
+3f1f835adffec5b55e06a7b987a4af83aa7b533f,2026-09-22,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,38.4,Align Queue data member names with the README schematics.
+3f1f835adffec5b55e06a7b987a4af83aa7b533f,2026-09-22,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,41.5,Align Queue data member names with the README schematics.
+3f1f835adffec5b55e06a7b987a4af83aa7b533f,2026-09-22,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,51.3,Align Queue data member names with the README schematics.
+f0f9cffa1ace8a45b0aa0795da6be72161a35690,2026-10-11,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.8,Fix TicketSpinlock::unlock() skipping a ticket.
+f0f9cffa1ace8a45b0aa0795da6be72161a35690,2026-10-11,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Fix TicketSpinlock::unlock() skipping a ticket.
+f0f9cffa1ace8a45b0aa0795da6be72161a35690,2026-10-11,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.9,Fix TicketSpinlock::unlock() skipping a ticket.
+ec0d77793c249dbb7e361f8c5d5b3ed3ee488699,2026-10-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.0,Fix index collisions after counter wraparound for non-power-of-2 sizes. (#113)
+ec0d77793c249dbb7e361f8c5d5b3ed3ee488699,2026-10-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Fix index collisions after counter wraparound for non-power-of-2 sizes. (#113)
+ec0d77793c249dbb7e361f8c5d5b3ed3ee488699,2026-10-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.8,Fix index collisions after counter wraparound for non-power-of-2 sizes. (#113)
+c0a32b9646237a9a6a1eade5f6505b852ca5d119,2026-10-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,49.3,Fix AtomicQueueMutex was_empty() and was_full() compilation. (#114)
+c0a32b9646237a9a6a1eade5f6505b852ca5d119,2026-10-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Fix AtomicQueueMutex was_empty() and was_full() compilation. (#114)
+c0a32b9646237a9a6a1eade5f6505b852ca5d119,2026-10-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,41.3,Fix AtomicQueueMutex was_empty() and was_full() compilation. (#114)
+70b6af0fd9b6bb8ca7d72fd6d93e8d80b27940f9,2026-10-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.3,Merge branch 'fix-unfair-spinlock-default-ctor3'
+70b6af0fd9b6bb8ca7d72fd6d93e8d80b27940f9,2026-10-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Merge branch 'fix-unfair-spinlock-default-ctor3'
+70b6af0fd9b6bb8ca7d72fd6d93e8d80b27940f9,2026-10-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.9,Merge branch 'fix-unfair-spinlock-default-ctor3'
+9bdb057ab4e76a9a07410facacb3a7645f0fa74f,2026-10-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.1,Faster remap2 for B variants.
+9bdb057ab4e76a9a07410facacb3a7645f0fa74f,2026-10-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Faster remap2 for B variants.
+9bdb057ab4e76a9a07410facacb3a7645f0fa74f,2026-10-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.9,Faster remap2 for B variants.
+b4b8233f78f5fc324a7e6de25ee594b7c5237a41,2026-10-15,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,39.0,Unnecessary code removed.
+b4b8233f78f5fc324a7e6de25ee594b7c5237a41,2026-10-15,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Unnecessary code removed.
+b4b8233f78f5fc324a7e6de25ee594b7c5237a41,2026-10-15,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.8,Unnecessary code removed.
+46acf2aeec8e52543b42c75498d2e273304af060,2026-10-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.0,Queue template class declarations extracted.
+46acf2aeec8e52543b42c75498d2e273304af060,2026-10-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Queue template class declarations extracted.
+46acf2aeec8e52543b42c75498d2e273304af060,2026-10-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.9,Queue template class declarations extracted.
+d257b955254b9abc32e2e82eeab2eb8668c563fa,2026-10-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,33.3,Shorten identifiers.
+d257b955254b9abc32e2e82eeab2eb8668c563fa,2026-10-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Shorten identifiers.
+d257b955254b9abc32e2e82eeab2eb8668c563fa,2026-10-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.8,Shorten identifiers.
+6ea2e50ea58350abb4c7e976e97d5cdeecec4fa2,2026-10-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.8,CounterType extracted.
+6ea2e50ea58350abb4c7e976e97d5cdeecec4fa2,2026-10-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,37.0,CounterType extracted.
+6ea2e50ea58350abb4c7e976e97d5cdeecec4fa2,2026-10-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,43.2,CounterType extracted.
+9481e0f2bf82b01f3649efa33c8718e35240dd0d,2026-10-16,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.8,Fastest x86_64 was_size.
+9481e0f2bf82b01f3649efa33c8718e35240dd0d,2026-10-16,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Fastest x86_64 was_size.
+9481e0f2bf82b01f3649efa33c8718e35240dd0d,2026-10-16,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.5,Fastest x86_64 was_size.
+b7f1befe89446752767243c5e5550779a9a5eed2,2026-10-23,ok,AtomicQueue push+pop,0.0,0.0,0.0,0,0,40.8,Reuse the typename instead of redefining.
+b7f1befe89446752767243c5e5550779a9a5eed2,2026-10-23,ok,AtomicQueue2 try_push+try_pop,0.0,0.0,0.0,0,0,36.9,Reuse the typename instead of redefining.
+b7f1befe89446752767243c5e5550779a9a5eed2,2026-10-23,ok,AtomicQueueB2 try_push+try_pop,0.0,0.0,0.0,0,0,42.9,Reuse the typename instead of redefining.

@@ -1,0 +1,168 @@
+== null sink info(int, double), first call
+== null sink info(int, double), steady state
+== null sink info(string), first call
+== null sink info(string), steady state
+== null sink debug below level, first call
+== null sink debug below level, steady state
+== ostream sink info(int, double), first call
+  mutex lock 1.000 per call
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+  allocation 1.000 per call
+      __GI___strdup  ./string/./string/strdup.c:42
+      tzset_internal  ./time/./time/tzset.c:402
+      __tz_convert  ./time/./time/tzset.c:577
+      spdlog::details::os::localtime(long const&)  include/spdlog/details/os-inl.h:94
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:995
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:993
+      spdlog::pattern_formatter::format(spdlog::details::log_msg const&, fmt::v9::basic_memory_buffer<char  include/spdlog/pattern_formatter-inl.h:973
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:26
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+  allocation 1.000 per call
+      __fopen_internal  ./libio/./libio/iofopen.c:65
+      _IO_new_fopen  ./libio/./libio/iofopen.c:86
+      __tzfile_read  ./time/./time/tzfile.c:167
+      tzset_internal  ./time/./time/tzset.c:405
+      __tz_convert  ./time/./time/tzset.c:577
+      spdlog::details::os::localtime(long const&)  include/spdlog/details/os-inl.h:94
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:995
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:993
+      spdlog::pattern_formatter::format(spdlog::details::log_msg const&, fmt::v9::basic_memory_buffer<char  include/spdlog/pattern_formatter-inl.h:973
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:26
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+  allocation 1.000 per call
+      __GI__IO_file_doallocate  ./libio/./libio/filedoalloc.c:101
+      __GI__IO_doallocbuf  ./libio/./libio/genops.c:347
+      __GI__IO_file_xsgetn  ./libio/./libio/fileops.c:1290
+      __GI___fread_unlocked  ./libio/./libio/iofread_u.c:40
+      __tzfile_read  ./time/./time/tzfile.c:187
+      tzset_internal  ./time/./time/tzset.c:405
+      __tz_convert  ./time/./time/tzset.c:577
+      spdlog::details::os::localtime(long const&)  include/spdlog/details/os-inl.h:94
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:995
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:993
+      spdlog::pattern_formatter::format(spdlog::details::log_msg const&, fmt::v9::basic_memory_buffer<char  include/spdlog/pattern_formatter-inl.h:973
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:26
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+  allocation 1.000 per call
+      __tzfile_read  ./time/./time/tzfile.c:280
+      tzset_internal  ./time/./time/tzset.c:405
+      __tz_convert  ./time/./time/tzset.c:577
+      spdlog::details::os::localtime(long const&)  include/spdlog/details/os-inl.h:94
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:995
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:993
+      spdlog::pattern_formatter::format(spdlog::details::log_msg const&, fmt::v9::basic_memory_buffer<char  include/spdlog/pattern_formatter-inl.h:973
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:26
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+  allocation 1.000 per call
+      __tzstring_len  ./time/./time/tzset.c:98
+      __tzfile_read  ./time/./time/tzfile.c:413
+      tzset_internal  ./time/./time/tzset.c:405
+      __tz_convert  ./time/./time/tzset.c:577
+      spdlog::details::os::localtime(long const&)  include/spdlog/details/os-inl.h:94
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:995
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:993
+      spdlog::pattern_formatter::format(spdlog::details::log_msg const&, fmt::v9::basic_memory_buffer<char  include/spdlog/pattern_formatter-inl.h:973
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:26
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+  allocation 4.000 per call
+      __tzstring_len  ./time/./time/tzset.c:98
+      __tzfile_read  ./time/./time/tzfile.c:413
+      tzset_internal  ./time/./time/tzset.c:405
+      __tz_convert  ./time/./time/tzset.c:577
+      spdlog::details::os::localtime(long const&)  include/spdlog/details/os-inl.h:94
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:995
+      spdlog::pattern_formatter::get_time_(spdlog::details::log_msg const&)  include/spdlog/pattern_formatter-inl.h:993
+      spdlog::pattern_formatter::format(spdlog::details::log_msg const&, fmt::v9::basic_memory_buffer<char  include/spdlog/pattern_formatter-inl.h:973
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:26
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+  allocation 1.000 per call
+      __cxa_thread_atexit_impl  ./stdlib/./stdlib/cxa_thread_atexit_impl.c:106
+      spdlog::mdc::get_context[abi:cxx11]()  include/spdlog/mdc.h:29
+      spdlog::mdc::get_context[abi:cxx11]()  include/spdlog/mdc.h:28
+      spdlog::details::full_formatter::format(spdlog::details::log_msg const&, tm const&, fmt::v9::basic_m  include/spdlog/pattern_formatter-inl.h:907
+      spdlog::pattern_formatter::format(spdlog::details::log_msg const&, fmt::v9::basic_memory_buffer<char  include/spdlog/pattern_formatter-inl.h:979
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:26
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+  allocation 1.000 per call
+      spdlog::sinks::ostream_sink<std::mutex>::sink_it_(spdlog::details::log_msg const&)  include/spdlog/sinks/ostream_sink.h:27
+      spdlog::sinks::base_sink<std::mutex>::log(spdlog::details::log_msg const&)  include/spdlog/sinks/base_sink-inl.h:28
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
+== ostream sink info(int, double), steady state
+  mutex lock 1.000 per call
+      spdlog::logger::sink_it_(spdlog::details::log_msg const&)  include/spdlog/logger-inl.h:138
+      spdlog::logger::log_it_(spdlog::details::log_msg const&, bool, bool)  include/spdlog/logger-inl.h:128
+      void spdlog::logger::log_<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::bas  include/spdlog/logger.h:332
+      void spdlog::logger::log<int&, double&>(spdlog::source_loc, spdlog::level::level_enum, fmt::v9::basi  include/spdlog/logger.h:80
+      void spdlog::logger::log<int&, double&>(spdlog::level::level_enum, fmt::v9::basic_format_string<char  include/spdlog/logger.h:85
+      void spdlog::logger::info<int&, double&>(fmt::v9::basic_format_string<char, fmt::v9::type_identity<i  include/spdlog/logger.h:140
+      hp_entry::sp_info(spdlog::logger&, int, double)  replay/bench/spdlog.cpp:10
+      main  replay/bench/spdlog.cpp:22
