@@ -169,6 +169,9 @@ versions). In one of the two complete runs of the script, two of the clang rows 
 off) came out about twice as slow as in every other run of the same binaries. The table is from the
 run that agrees with fifteen separate runs of each binary.
 
+Reported as [MPMCQueue#57](https://github.com/rigtorp/MPMCQueue/issues/57) with the change as
+[#58](https://github.com/rigtorp/MPMCQueue/pull/58), which the author merged on November 18, 2026.
+
 ## Case 5: Eigen 5's 4x4 Cholesky solve is 1.5x slower with GCC
 
 Found by the instruction replay, not by timing releases. Eigen's history, sampled every 100th
