@@ -62,7 +62,9 @@ Two views of the same code, matched site by site:
 
 `combine.py` puts the two side by side: what the workload exercised, what the static analysis says is
 reachable but the workload never reached, and anything seen at run time that the analysis missed
-(none, on Liquibook and concurrentqueue, where the two were matched). Liquibook's order book, release 2.0.0's code against the fix:
+(none, on Liquibook and concurrentqueue, where the two were matched). Because throwing a C++ exception
+allocates (`__cxa_allocate_exception`), the counts also reveal exceptions thrown inside a library,
+including those the library catches itself and nobody sees; the reports mark them. Liquibook's order book, release 2.0.0's code against the fix:
 
 ```
 $ replay/combine.py liquibook 25b0c5ec
@@ -124,7 +126,10 @@ Each of these changed how the tool works ([evidence](docs/insights.md)):
 5. **Static analysis and run-time counts find different things, and work best together.** Only the
    counts could tell two Liquibook versions apart; only the static analysis showed the 80 allocating
    paths that the test workload never ran. A random order flow sent down those paths reached 14 of the
-   85 instead of 5, and found a memory-corruption bug.
+   85 instead of 5, and one of the "allocations" it counted was an exception the order book threw and
+   swallowed in ordinary trading. Following that exception led to the out-of-bounds write. A tool
+   built to count allocations found a memory-corruption bug, because the static view said where to
+   look and an exception is an allocation.
 6. **These costs come in through ordinary refactorings, and tests do not catch them.** Some were
    fixed and then came back, and some stayed in a library's last release. None of the cases above was
    caught by the library's own tests.

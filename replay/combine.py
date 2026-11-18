@@ -103,8 +103,11 @@ def dynamic_sites(proj, h):
         if entry is None: continue
         users = tuple((fn, loc.split(" ")[0]) for fn, loc in e["frames"] if is_user_file(loc.split(" ")[0]) and is_user_fn(fn))
         user = users[0] if users else None
-        rec = out[entry].setdefault((e["kind"], user), dict(steady=0.0, first=0.0, stack=users))
+        rec = out[entry].setdefault((e["kind"], user), dict(steady=0.0, first=0.0, stack=users, throw=False))
         rec["steady" if e["phase"] == "steady state" else "first"] += e["per_call"]
+        # an allocation by __cxa_allocate_exception is a C++ exception being thrown, often caught and
+        # swallowed inside the library: in ordinary use, a sign that something went wrong
+        rec["throw"] |= any("__cxa_allocate_exception" in fn for fn, _ in e["frames"])
     return out
 
 def bare_name(fn):
@@ -156,14 +159,14 @@ def main():
                                          capture_output=True, text=True).stdout.splitlines()
         try: return cache[path][int(line) - 1]
         except (ValueError, IndexError): return ""
-    report = {}; totals = [0, 0, 0]
+    report = {}; totals = [0, 0, 0, 0]
     for entry in sorted(set(st) | set(dy)):
         s, by_fn = st.get(entry, ({}, {})); d = dy.get(entry, {})
         used = set(); exercised = []; miss = []
         for (kind, user), cnt in sorted(d.items(), key=lambda kv: str(kv[0])):
             hit, how = match(kind, user, cnt.get("stack", ()), s, by_fn, source)
             row = dict(kind=kind, function=user[0] if user else "?", loc=user[1] if user else "?", how=how,
-                       steady=cnt["steady"], first=cnt["first"])
+                       steady=cnt["steady"], first=cnt["first"], throw=cnt.get("throw", False))
             if hit: used.add(hit); exercised.append(row)
             else: miss.append(row)
         notex = [dict(kind=k[0], key=k[2], **v) for k, v in sorted(s.items()) if k not in used]
@@ -172,6 +175,7 @@ def main():
         report[entry] = dict(exercised=exercised, not_exercised=notex, static_miss=miss,
                              hot_sites=n_static, hot_sites_reached=n_reached)
         totals[0] += n_static; totals[1] += n_reached; totals[2] += len(miss)
+        totals[3] += sum(1 for r in exercised + miss if r.get("throw"))
         print(f"== {entry}")
         if n_static: print(f"   reached {n_reached} of the {n_static} static sites not marked cold")
         if entry not in dy:
@@ -183,7 +187,8 @@ def main():
             continue
         print(f"   exercised ({len(exercised)}):")
         for r in exercised:
-            print(f"      {r['kind']:5} {r['loc']:32} {short(r['function'])[:52]:52} per call {r['steady']:.2f}, first call {r['first']:.0f}  ({r['how']})")
+            print(f"      {r['kind']:5} {r['loc']:32} {short(r['function'])[:52]:52} per call {r['steady']:.2f}, first call {r['first']:.0f}  ({r['how']})"
+                  + ("   <- AN EXCEPTION thrown inside the library" if r.get("throw") else ""))
         hot = [r for r in notex if r["temp"] != "c"]; cold = [r for r in notex if r["temp"] == "c"]
         print(f"   not exercised: {len(hot)} not marked cold, {len(cold)} cold (error or unlikely paths)")
         for r in hot:
@@ -193,6 +198,9 @@ def main():
         for r in miss:
             print(f"      {r['kind']:5} {r['loc']:32} {short(r['function'])[:60]:60} per call {r['steady']:.2f}, first call {r['first']:.0f}")
     print(f"all entries: reached {totals[1]} of {totals[0]} static sites not marked cold; {totals[2]} static misses")
+    if totals[3]:
+        print(f"{totals[3]} run-time site(s) are exceptions thrown inside the library (__cxa_allocate_exception). In ordinary\n"
+              "use that is a sign of a fault; look at the stack: attribute.py LIB COMMIT --cc clang --json")
     if "--json" in sys.argv:
         json.dump(report, open(sys.argv[sys.argv.index("--json") + 1], "w"), indent=1)
 

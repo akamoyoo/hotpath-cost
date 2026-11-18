@@ -42,6 +42,8 @@ SLOW += [
 STATIC = [
     ("combine.py: Liquibook's fixed workload reaches 5 of 85 hot sites, no static miss",
      ["combine.py", "liquibook", "25b0c5ec"], ["reached 5 of 85 static sites not marked cold; 0 static misses"]),
+    ("combine.py: the random order flow reaches 14 of 85 and flags the exception behind Liquibook #44",
+     ["combine.py", "liquibook-explore", "2427613b32"], ["reached 14 of 85", "AN EXCEPTION thrown inside the library"]),
 ]
 
 def run(cmd, env):

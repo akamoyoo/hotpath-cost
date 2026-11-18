@@ -43,6 +43,11 @@ def stacks(events):
         out[key] = (pc + e["per_call"], top or (lib[0] if lib else lib_top))
     return out
 
+def throw_keys(events):
+    """The stack keys of events that are a C++ exception being thrown (an allocation by __cxa_allocate_exception)."""
+    return {(e["op"], e["phase"], e["kind"], tuple(fn for fn, _ in library_frames(e["frames"])))
+            for e in events if any("__cxa_allocate_exception" in fn for fn, _ in e["frames"])}
+
 def base_of(proj, cc, h):
     order = rp.outdir(proj, cc) / "order.json"
     if order.exists():
@@ -64,11 +69,13 @@ def main():
                                    capture_output=True, text=True, check=True).stdout.strip()
     h = rev(h); b = rev(args[2]) if len(args) > 2 else base_of(proj, cc, h)
     try:
-        before, after = stacks(at.trace(proj, b, cc)), stacks(at.trace(proj, h, cc))
+        before_ev, after_ev = at.trace(proj, b, cc), at.trace(proj, h, cc)
+        before, after = stacks(before_ev), stacks(after_ev)
     except RuntimeError as e:
         sys.exit(str(e))
     print(f"{proj} {cc}: {b[:8]} -> {h[:8]}")
     every = "--all" in sys.argv
+    throws = throw_keys(before_ev) | throw_keys(after_ev)
     total = lambda st, op, ph, k: sum(v[0] for key, v in st.items() if key[:3] == (op, ph, k))
     def lines(op, ph):
         """The report of one operation and phase: totals per kind, then the stacks that changed."""
@@ -80,7 +87,7 @@ def main():
             x, y = before.get(key, (0.0, None)), after.get(key, (0.0, None))
             if abs(x[0] - y[0]) < 0.01 and not every: continue
             tag = "new" if x[1] is None else "gone" if y[1] is None else "changed"
-            out.append(f"    {key[2]:5} {x[0]:6.2f} -> {y[0]:6.2f}  ({tag})")
+            out.append(f"    {key[2]:5} {x[0]:6.2f} -> {y[0]:6.2f}  ({tag})" + ("   <- an exception thrown" if key in throws else ""))
             for label, top in (("before", x[1]), ("after", y[1])):
                 if top: out.append(f"        {label:6} {short(top[0])}  {top[1]}")
             out += [f"          via  {short(fn)}" for fn in key[3][1:4]]

@@ -79,9 +79,11 @@ sequence of realistic operations; the report counts, per entry, how many of the 
 exercised. To write one for another library, prepare every action and object before `run_ops` so that
 only the library's own allocations are counted, and call the same driver entries as the fixed
 workload (add an entry when a path needs a parameter the existing ones fix, such as order conditions).
-An event in an exploration run that is reached only through `__cxa_allocate_exception` is an exception
-thrown by the library during normal-looking use; look at the full stack with
-`attribute.py <lib>-explore COMMIT --cc clang --json`.
+`combine.py`, `attribute.py` and `explain.py` mark an allocation made by `__cxa_allocate_exception` as an
+exception thrown inside the library (`<- AN EXCEPTION ...`), and `combine.py` counts them at the end. In
+ordinary use that is a sign of a fault, often one the library catches and hides: look at the full stack
+with `attribute.py <lib>-explore COMMIT --cc clang --json`, then reduce the flow to the shortest prefix
+that still throws (Liquibook #44 came down to ten orders).
 
 **Find where a cost entered the history.** Sample with `--stride` (about 50 to 70 samples), then run
 `--refine` until it stops, then `diff.py`, then `explain.py LIB COMMIT` on each commit it reports

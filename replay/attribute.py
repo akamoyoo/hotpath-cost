@@ -57,7 +57,9 @@ def main():
     for e in events:
         if (e["op"], e["phase"]) != last:
             print(f"== {e['op']}, {e['phase']}"); last = (e["op"], e["phase"])
-        print(("  allocation " if e["kind"] == "alloc" else "  mutex lock ") + f"{e['per_call']:.3f} per call")
+        throw = any("__cxa_allocate_exception" in fn for fn, _ in e["frames"])
+        print(("  allocation " if e["kind"] == "alloc" else "  mutex lock ") + f"{e['per_call']:.3f} per call"
+              + ("   <- an exception thrown here (__cxa_allocate_exception)" if throw else ""))
         for fn, loc in e["frames"]:
             if not every and (any(s in loc for s in SKIP) or fn.startswith(("operator new", "std::", "__gnu_cxx"))): continue
             print(f"      {fn[:100]}  {loc}")
