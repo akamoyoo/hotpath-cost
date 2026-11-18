@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The README's figure: one history replayed by the tool, and one compiler gap it found and fixed.
+"""The README's figure: abseil's flat_hash_map lookups across its history, replayed by the tool.
 
   docs/figures/history.py        reads out/ (replay.py results), writes history.svg
 """
@@ -49,31 +49,10 @@ def main(out_png=None):
     D = dt.date
     ab = [p for p in series("gcc-instr", "abseil", "operator[] (hit)", "instr") if p[0] >= D(2024, 10, 1)]
     for mode, t in THEMES.items():
-        fig, axes = plt.subplots(2, 1, figsize=(10, 5.6), gridspec_kw=dict(hspace=0.7, height_ratios=(1, 0.8)))
+        fig, ax0 = plt.subplots(1, 1, figsize=(10, 3.4))
+        axes = [ax0]
         fig.patch.set_facecolor("#ffffff")   # opaque: the same image reads on GitHub's light and dark pages
         for ax in axes: ax.set_facecolor("#ffffff")
-        # MPMCQueue, try_push + try_pop, ns per call (cases/mpmcqueue/RESULT.txt): an arrow from before to after
-        ax = axes[1]
-        rows = [("GCC 13", 52.5, 29.6), ("clang 21", 30.3, 26.6)]
-        for k, (name, a, b) in enumerate(rows):
-            y = len(rows) - 1 - k
-            ax.annotate("", xy=(b, y), xytext=(a, y),
-                        arrowprops=dict(arrowstyle="-|>,head_length=0.9,head_width=0.45", color=t["line"], lw=2.4,
-                                        shrinkA=6, shrinkB=2))
-            ax.plot([a], [y], "o", ms=9, color=t["before"], zorder=3)
-            ax.plot([b], [y], "o", ms=9, color=t["line"], zorder=3)
-            ax.text(a + 1.2, y, f"before: {a:.1f} ns", va="center", ha="left", fontsize=10, color=t["fg2"])
-            ax.text(b - 1.2, y, f"after: {b:.1f} ns", va="center", ha="right", fontsize=10, color=t["fg"], fontweight="bold")
-        ax.set_yticks(range(len(rows))); ax.set_yticklabels([r[0] for r in reversed(rows)], fontsize=11, color=t["fg"])
-        ax.set_ylim(-0.6, len(rows) - 0.4)
-        ax.set_xlim(10, 70); ax.set_xlabel("time per try_push + try_pop, ns (lower is faster)", fontsize=9.5, color=t["fg2"])
-        ax.set_title("MPMCQueue: our fix, merged upstream, makes it 1.8x faster with GCC",
-                     loc="left", fontsize=12, fontweight="bold", color=t["fg"], pad=24)
-        ax.text(0, 1.03, "GCC divided by the queue's capacity twice per operation and was 1.7x slower than clang; "
-                "the fix divides once", transform=ax.transAxes, ha="left", va="bottom", fontsize=9.5, color=t["fg2"])
-        ax.grid(axis="x", color=t["grid"], lw=0.8); ax.set_axisbelow(True)
-        for sp in ("top", "right", "left"): ax.spines[sp].set_visible(False)
-        ax.spines["bottom"].set_color(t["grid"]); ax.tick_params(colors=t["fg2"], labelsize=9, length=0)
         panel(axes[0], t, ab,
               "abseil: three refactorings in 2025, each adding 40 to 50 % to a hash-map lookup",
               "instructions per call", [(D(2025, 2, 18), D(2025, 3, 11)), (D(2025, 9, 2), D(2025, 9, 12))],
@@ -83,8 +62,8 @@ def main(out_png=None):
               (D(2024, 10, 1), D(2026, 12, 31)), (50, 175), [50, 100, 150])
         axes[0].xaxis.set_major_locator(mdates.MonthLocator(bymonth=(1, 7)))
         axes[0].xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
-        fig.text(0.0, -0.05, "Top: instructions per call at every measured library commit, replayed by hotpath-cost "
-                 "under callgrind. Bottom: medians of runs on one idle core, -O2.", fontsize=9, color=t["fg2"])
+        fig.text(0.0, -0.02, "operator[] on a map of 100,000 keys, instructions per call under callgrind at every measured "
+                 "library commit (GCC 13, -O2). Each step is one commit.", fontsize=9, color=t["fg2"])
         fig.savefig(HERE / "history.svg", bbox_inches="tight", facecolor="#ffffff", pad_inches=0.25)
         if out_png: fig.savefig(f"{out_png}.png", bbox_inches="tight", dpi=110, facecolor="#ffffff", pad_inches=0.25)
         plt.close(fig)

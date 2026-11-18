@@ -16,11 +16,11 @@ Two other comparisons find what history cannot: the same code under GCC and clan
 `-O3` (why one build is faster), and a static analysis of what the code *may* do against what the
 tests actually run (paths nobody exercises). It works on existing code, unmodified.
 
-<img alt="Two findings. abseil's flat_hash_map, replayed across its history: three refactorings in 2025 each add 40 to 50 % to the instructions of a lookup; two are undone within weeks, one stays a year. MPMCQueue, compared across compilers: GCC divided by the capacity twice per operation and took 52.5 ns against 30.3 with clang; our four-line fix, merged upstream, brings GCC to 29.6 ns and clang to 26.6." src="docs/figures/history.svg">
+<img alt="abseil's flat_hash_map operator[], instructions per call at every measured commit from October 2024 to November 2026: three refactorings in 2025 add 40, 44 and 50 % to a lookup; the first is undone in three weeks, the third in ten days, the second stays a year." src="docs/figures/history.svg">
 
-Top: comparing a library with its own past, every step is one commit, found and named by the replay.
-Bottom: comparing it with itself under another compiler. Drawn from the tool's results by
-[`docs/figures/history.py`](docs/figures/history.py).
+Each step is one commit, found and named by replaying the library's history: costs come in through
+ordinary refactorings, some leave within days and some stay for a year, and none of them was caught by
+the library's tests. Drawn from the tool's results by [`docs/figures/history.py`](docs/figures/history.py).
 
 ## Problems it found in real projects
 
