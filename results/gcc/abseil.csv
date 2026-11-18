@@ -2,285 +2,288 @@ commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_allo
 c2e754829628d1e9b7a16b3389cfdace76950fdf,2017-09-19,build failed,,,,,,,,Initial Commit
 5b535401665cc6aa96d54a5c9b0901153d97210f,2018-04-18,build failed,,,,,,,,"  - ed0ba496fe01eb8edfa86beade8a37768e7c12ef Updates the API for Exception Safety testing to use build... by Abseil Team <absl-team@google.com>   - c4b7a4e517c9404932c45f2f9f92eb7dc694e45d Internal change by Abseil Team <absl-team@google.com>   - 76c78ed9385f65d881511645446e0bb8ababf6ec Add missing ABSL_PREDICT_FALSE to one of FixedArray::at()... by Abseil Team <absl-team@google.com>   - 1204fb1c46f007dd9dfb7d9abf3e96c58835d193 Internal change. by Greg Falcon <gfalcon@google.com>   - f1f47c98a026bc5e425ae83ff4a2eb391bbd3d9b Add internal-only functionality to examine the stack, to ... by Derek Mauro <dmauro@google.com>   - 30d63097cd268d912f917526f6511005580465c4 fix typo by Abseil Team <absl-team@google.com>   - 942d7efa6cf54cd248ca57dcaf3c245188b52a76 Remove unnecessary semicolons from comment examples. by Abseil Team <absl-team@google.com>   - 7db0669cf23a06d934d3ed8c76aee4e4e23b7e04 Remove malloc_hook and malloc_extension from our internal... by Greg Falcon <gfalcon@google.com>   - 0190f1063d101b1ded355019df2e1d325931f6c7 Make the maximum length of a string view equal difference... by Abseil Team <absl-team@google.com>   - c8ae37cbce29449b02115a0ebd435ddc3d7ab062 Add namespace qualification. by Shaindel Schwartz <shaindel@google.com>   - ff70afe2e6e3dd39f51ce9829e3e1f18231bf4d7 Fix internal/direct_mmap.h for non-linux builds. by Greg Falcon <gfalcon@google.com>"
 2125e6444a9de9e41f21ecdc674dd7d8759c149d,2018-08-01,build failed,,,,,,,,Export of internal Abseil changes. -- ac7508120c60dfe689c40929e416b6a486f83ee3 by Gennadiy Rozental <rogeeff@google.com>:
-c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,find (hit),0.0,0.0,0.0,0,0,37.5,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
-c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,find (miss),0.0,0.0,0.0,0,0,31.7,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
-c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,insert+erase,0.0,0.0,0.0,0,0,94.1,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
-c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,45.9,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
-f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,find (hit),0.0,0.0,0.0,0,0,35.8,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
-f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,find (miss),0.0,0.0,0.0,0,0,29.3,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
-f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,insert+erase,0.0,0.0,0.0,0,0,88.1,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
-f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.8,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,find (hit),0.0,0.0,0.0,0,0,18.8,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,find (miss),0.0,0.0,0.0,0,0,17.7,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,insert+erase,0.0,0.0,0.0,0,0,61.4,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
+c16d5557cd05119b5b7b1318ef778ebe3195b4a1,2018-10-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.5,Export of internal Abseil changes. -- 4e043a11b4c10a24e84046827ee16f47e11e35cc by Abseil Team <absl-team@google.com>:
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,find (hit),0.0,0.0,0.0,0,0,34.0,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,find (miss),0.0,0.0,0.0,0,0,27.8,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,insert+erase,0.0,0.0,0.0,0,0,84.4,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
+f197d7c72a54064cfde5a2058f1513a4a0ee36fb,2018-12-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,22.7,Export of internal Abseil changes. -- 1a5fb4eb5bc6c0332962f659470a07908168aa5c by CJ Johnson <johnsoncj@google.com>:
 5e0dcf72c64fae912184d2e0de87195fe8f0a425,2019-01-25,build failed,,,,,,,,Export of internal Abseil changes. -- a9115ecdf91183528f677fbbd9294652ab68c35f by CJ Johnson <johnsoncj@google.com>:
 7c7754fb3ed9ffb57d35fe8658f3ba4d73a31e72,2019-03-13,build failed,,,,,,,,Export of internal Abseil changes. -- 89b5e681db1d4f0b039daebb86c49bda77c8931b by Tom Manshreck <shreck@google.com>:
 27c2f6e2f3b5929fbd322b0f0ca392eb02efd9f8,2019-05-08,build failed,,,,,,,,Export of internal Abseil changes. -- 9fa04b5fb4b6aeb47226b9095b3bc36a53669c39 by Abseil Team <absl-team@google.com>:
 e6b050212c859fbaf67abac76105da10ec348274,2019-07-02,build failed,,,,,,,,Export of internal Abseil changes. -- c2e2e2b21c3fe59b63279e7418c93c7289ee3e27 by Mark Barolak <mbar@google.com>:
 f0afae0d49af3e15a7169e019634d7719143d94d,2019-08-20,build failed,,,,,,,,Export of internal Abseil changes
 7f4fe64af80fe3c84db8ea938276c3690573c45e,2019-11-25,build failed,,,,,,,,Export of internal Abseil changes
-d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,find (hit),0.0,0.0,0.0,0,0,19.9,Export of internal Abseil changes
-d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,find (miss),0.0,0.0,0.0,0,0,18.1,Export of internal Abseil changes
-d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,insert+erase,0.0,0.0,0.0,0,0,64.6,Export of internal Abseil changes
-d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.3,Export of internal Abseil changes
-d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,find (hit),0.0,0.0,0.0,0,0,35.8,Export of internal Abseil changes
-d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,find (miss),0.0,0.0,0.0,0,0,28.9,Export of internal Abseil changes
-d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,insert+erase,0.0,0.0,0.0,0,0,92.6,Export of internal Abseil changes
-d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.9,Export of internal Abseil changes
-41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,find (hit),0.0,0.0,0.0,0,0,19.2,Export of internal Abseil changes
-41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,find (miss),0.0,0.0,0.0,0,0,17.3,Export of internal Abseil changes
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,find (hit),0.0,0.0,0.0,0,0,34.5,Export of internal Abseil changes
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,find (miss),0.0,0.0,0.0,0,0,29.0,Export of internal Abseil changes
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,insert+erase,0.0,0.0,0.0,0,0,74.7,Export of internal Abseil changes
+d936052d32a5b7ca08b0199a6724724aea432309,2020-03-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.8,Export of internal Abseil changes
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,find (hit),0.0,0.0,0.0,0,0,33.8,Export of internal Abseil changes
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,find (miss),0.0,0.0,0.0,0,0,26.9,Export of internal Abseil changes
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,insert+erase,0.0,0.0,0.0,0,0,87.8,Export of internal Abseil changes
+d85783fd0b1bb32b3d3e04d18367cec8d96c9e9a,2020-05-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.7,Export of internal Abseil changes
+41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,find (hit),0.0,0.0,0.0,0,0,17.8,Export of internal Abseil changes
+41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Export of internal Abseil changes
 41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,insert+erase,0.0,0.0,0.0,0,0,64.8,Export of internal Abseil changes
-41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.8,Export of internal Abseil changes
-9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,find (hit),0.0,0.0,0.0,0,0,17.6,Export of internal Abseil changes
-9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Export of internal Abseil changes
-9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,insert+erase,0.0,0.0,0.0,0,0,62.4,Export of internal Abseil changes
-9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.5,Export of internal Abseil changes
-1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,find (hit),0.0,0.0,0.0,0,0,33.3,Export of internal Abseil changes
-1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,find (miss),0.0,0.0,0.0,0,0,26.4,Export of internal Abseil changes
-1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,insert+erase,0.0,0.0,0.0,0,0,82.7,Export of internal Abseil changes
-1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.3,Export of internal Abseil changes
+41a6263fd0bcc93a90ff739785f17260f8ea061e,2020-07-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.5,Export of internal Abseil changes
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,find (hit),0.0,0.0,0.0,0,0,33.2,Export of internal Abseil changes
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,find (miss),0.0,0.0,0.0,0,0,28.1,Export of internal Abseil changes
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,insert+erase,0.0,0.0,0.0,0,0,86.7,Export of internal Abseil changes
+9927a09898f1287e0ecd1276f42ec7a252667dad,2020-09-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.3,Export of internal Abseil changes
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,find (hit),0.0,0.0,0.0,0,0,35.0,Export of internal Abseil changes
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,find (miss),0.0,0.0,0.0,0,0,29.4,Export of internal Abseil changes
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,insert+erase,0.0,0.0,0.0,0,0,89.3,Export of internal Abseil changes
+1b465af3bf865f588251470ea0dec60851a24041,2020-11-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.5,Export of internal Abseil changes
 20869f89edbc38139f46bdc49c8b6c3a1f7bee4c,2021-02-01,build failed,,,,,,,,Export of internal Abseil changes
 7ba826e50dff1878e6ecc6b9af44097c040c8968,2021-05-10,build failed,,,,,,,,Export of internal Abseil changes
 0ce3ca95fd56d1ff32ec6cec69a28f589064f8e6,2021-07-21,build failed,,,,,,,,Export of internal Abseil changes
-1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,find (hit),0.0,0.0,0.0,0,0,18.4,Export of internal Abseil changes
-1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Export of internal Abseil changes
-1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,insert+erase,0.0,0.0,0.0,0,0,63.0,Export of internal Abseil changes
-1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.9,Export of internal Abseil changes
-e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,find (hit),0.0,0.0,0.0,0,0,18.0,Export of internal Abseil changes
-e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Export of internal Abseil changes
-e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,insert+erase,0.0,0.0,0.0,0,0,63.4,Export of internal Abseil changes
-e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.6,Export of internal Abseil changes
-0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,find (hit),0.0,0.0,0.0,0,0,33.2,Export of internal Abseil changes
-0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,find (miss),0.0,0.0,0.0,0,0,27.8,Export of internal Abseil changes
-0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,insert+erase,0.0,0.0,0.0,0,0,87.3,Export of internal Abseil changes
-0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,Export of internal Abseil changes
-384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,find (hit),0.0,0.0,0.0,0,0,34.3,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
-384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,find (miss),0.0,0.0,0.0,0,0,28.8,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
-384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,insert+erase,0.0,0.0,0.0,0,0,86.9,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
-384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
-8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,find (hit),0.0,0.0,0.0,0,0,17.7,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
-8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,find (miss),0.0,0.0,0.0,0,0,16.6,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
-8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,62.5,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
-8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.4,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
-4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,find (hit),0.0,0.0,0.0,0,0,34.7,Fix ClangTidy warnings in btree.h and btree_test.cc.
-4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,find (miss),0.0,0.0,0.0,0,0,29.1,Fix ClangTidy warnings in btree.h and btree_test.cc.
-4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,insert+erase,0.0,0.0,0.0,0,0,88.4,Fix ClangTidy warnings in btree.h and btree_test.cc.
-4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.2,Fix ClangTidy warnings in btree.h and btree_test.cc.
-f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,find (hit),0.0,0.0,0.0,0,0,17.6,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
-f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,find (miss),0.0,0.0,0.0,0,0,16.9,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
-f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,insert+erase,0.0,0.0,0.0,0,0,65.1,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
-f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.3,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
-04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,find (hit),0.0,0.0,0.0,0,0,17.7,Improve error messages when comparing btree iterators.
-04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Improve error messages when comparing btree iterators.
-04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,62.9,Improve error messages when comparing btree iterators.
-04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.4,Improve error messages when comparing btree iterators.
-f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,find (hit),0.0,0.0,0.0,0,0,18.8,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
-f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
-f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,insert+erase,0.0,0.0,0.0,0,0,69.0,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
-f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.9,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
-15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,find (hit),0.0,0.0,0.0,0,0,46.8,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
-15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,find (miss),0.0,0.0,0.0,0,0,32.9,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
-15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,insert+erase,0.0,0.0,0.0,0,0,97.6,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
-15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.6,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
-ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,find (hit),0.0,0.0,0.0,0,0,33.9,inlined_vector: stop sharing the memcpy-based move-assignment path.
-ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,find (miss),0.0,0.0,0.0,0,0,28.2,inlined_vector: stop sharing the memcpy-based move-assignment path.
-ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,insert+erase,0.0,0.0,0.0,0,0,90.1,inlined_vector: stop sharing the memcpy-based move-assignment path.
-ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.2,inlined_vector: stop sharing the memcpy-based move-assignment path.
-20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,find (hit),0.0,0.0,0.0,0,0,33.3,Add lifetimebound attribute to some Abseil containers
-20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,find (miss),0.0,0.0,0.0,0,0,31.2,Add lifetimebound attribute to some Abseil containers
-20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,insert+erase,0.0,0.0,0.0,0,0,85.8,Add lifetimebound attribute to some Abseil containers
-20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.3,Add lifetimebound attribute to some Abseil containers
-5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,find (hit),0.0,0.0,0.0,0,0,18.1,Move growth_left to the backing array.
-5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Move growth_left to the backing array.
-5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,insert+erase,0.0,0.0,0.0,0,0,70.2,Move growth_left to the backing array.
-5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.2,Move growth_left to the backing array.
-861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,find (hit),0.0,0.0,0.0,0,0,17.8,Add missing includes in raw_hash_set.h.
-861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Add missing includes in raw_hash_set.h.
-861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,insert+erase,0.0,0.0,0.0,0,0,69.9,Add missing includes in raw_hash_set.h.
-861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.1,Add missing includes in raw_hash_set.h.
-cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,find (hit),0.0,0.0,0.0,0,0,18.2,Add an internal wrapper for `abi::__cxa_demangle()`.
-cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Add an internal wrapper for `abi::__cxa_demangle()`.
-cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,insert+erase,0.0,0.0,0.0,0,0,69.1,Add an internal wrapper for `abi::__cxa_demangle()`.
-cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.4,Add an internal wrapper for `abi::__cxa_demangle()`.
-7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,find (hit),0.0,0.0,0.0,0,0,36.6,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
-7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,find (miss),0.0,0.0,0.0,0,0,29.9,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
-7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,89.8,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
-7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.9,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
-0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,find (hit),0.0,0.0,0.0,0,0,34.9,`btree_map`: avoid a copy in `map_params::key`.
-0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,find (miss),0.0,0.0,0.0,0,0,29.3,`btree_map`: avoid a copy in `map_params::key`.
-0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,insert+erase,0.0,0.0,0.0,0,0,88.5,`btree_map`: avoid a copy in `map_params::key`.
-0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.2,`btree_map`: avoid a copy in `map_params::key`.
-f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,find (hit),0.0,0.0,0.0,0,0,18.1,Remove code pieces for no longer supported GCC versions.
-f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Remove code pieces for no longer supported GCC versions.
-f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,insert+erase,0.0,0.0,0.0,0,0,63.4,Remove code pieces for no longer supported GCC versions.
-f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.8,Remove code pieces for no longer supported GCC versions.
-760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,find (hit),0.0,0.0,0.0,0,0,18.0,Make `begin()` to return `end()` on empty tables.
-760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,find (miss),0.0,0.0,0.0,0,0,17.2,Make `begin()` to return `end()` on empty tables.
-760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,insert+erase,0.0,0.0,0.0,0,0,62.8,Make `begin()` to return `end()` on empty tables.
-760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.4,Make `begin()` to return `end()` on empty tables.
-d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,find (hit),0.0,0.0,0.0,0,0,32.4,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
-d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,find (miss),0.0,0.0,0.0,0,0,27.2,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
-d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,insert+erase,0.0,0.0,0.0,0,0,81.4,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
-d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.2,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
-1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,find (hit),0.0,0.0,0.0,0,0,35.2,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
-1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,find (miss),0.0,0.0,0.0,0,0,29.3,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
-1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,insert+erase,0.0,0.0,0.0,0,0,90.8,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
-1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.6,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
-9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,find (hit),0.0,0.0,0.0,0,0,38.6,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
-9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,find (miss),0.0,0.0,0.0,0,0,29.6,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
-9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,insert+erase,0.0,0.0,0.0,0,0,94.6,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
-9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.4,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
-e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,find (hit),0.0,0.0,0.0,0,0,19.1,Document that swisstable and b-tree containers are not exception-safe.
-e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,find (miss),0.0,0.0,0.0,0,0,17.7,Document that swisstable and b-tree containers are not exception-safe.
-e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,71.5,Document that swisstable and b-tree containers are not exception-safe.
-e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.9,Document that swisstable and b-tree containers are not exception-safe.
-f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,find (hit),0.0,0.0,0.0,0,0,36.3,Add validation against use of moved-from hash tables.
-f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,find (miss),0.0,0.0,0.0,0,0,30.1,Add validation against use of moved-from hash tables.
-f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,insert+erase,0.0,0.0,0.0,0,0,101.0,Add validation against use of moved-from hash tables.
-f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.6,Add validation against use of moved-from hash tables.
-79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,find (hit),0.0,0.0,0.0,0,0,33.4,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
-79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,find (miss),0.0,0.0,0.0,0,0,26.7,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
-79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,insert+erase,0.0,0.0,0.0,0,0,98.5,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
-79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.2,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
-50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,find (hit),0.0,0.0,0.0,0,0,19.1,Add more debug capacity validation checks on moves.
-50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,find (miss),0.0,0.0,0.0,0,0,18.0,Add more debug capacity validation checks on moves.
-50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,insert+erase,0.0,0.0,0.0,0,0,75.2,Add more debug capacity validation checks on moves.
-50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.0,Add more debug capacity validation checks on moves.
-81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,find (hit),0.0,0.0,0.0,0,0,18.4,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
-81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,find (miss),0.0,0.0,0.0,0,0,17.0,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
-81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,insert+erase,0.0,0.0,0.0,0,0,72.4,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
-81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.1,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
-ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,find (hit),0.0,0.0,0.0,0,0,18.3,Update comments for Read4To8 and Read1To3.
-ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,find (miss),0.0,0.0,0.0,0,0,16.9,Update comments for Read4To8 and Read1To3.
-ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,insert+erase,0.0,0.0,0.0,0,0,71.6,Update comments for Read4To8 and Read1To3.
-ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.0,Update comments for Read4To8 and Read1To3.
-3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,find (hit),0.0,0.0,0.0,0,0,35.8,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
-3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,find (miss),0.0,0.0,0.0,0,0,29.3,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
-3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,insert+erase,0.0,0.0,0.0,0,0,102.5,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
-3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,58.0,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
-35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,find (hit),0.0,0.0,0.0,0,0,19.7,PR #1846: Fix build on big endian
-35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,find (miss),0.0,0.0,0.0,0,0,17.2,PR #1846: Fix build on big endian
-35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,insert+erase,0.0,0.0,0.0,0,0,72.0,PR #1846: Fix build on big endian
-35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.6,PR #1846: Fix build on big endian
-9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,find (hit),0.0,0.0,0.0,0,0,38.8,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
-9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,find (miss),0.0,0.0,0.0,0,0,29.5,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
-9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,insert+erase,0.0,0.0,0.0,0,0,100.0,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
-9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.8,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
-ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,find (hit),0.0,0.0,0.0,0,0,19.2,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
-ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,find (miss),0.0,0.0,0.0,0,0,17.3,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
-ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,insert+erase,0.0,0.0,0.0,0,0,74.1,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
-ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.9,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
-b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,find (hit),0.0,0.0,0.0,0,0,19.9,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
-b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,find (miss),0.0,0.0,0.0,0,0,17.4,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
-b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,insert+erase,0.0,0.0,0.0,0,0,67.1,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
-b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.7,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
-a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,find (hit),0.0,0.0,0.0,0,0,17.9,Refactor to use hash_of(key) instead of hash_ref()(key).
-a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,find (miss),0.0,0.0,0.0,0,0,18.6,Refactor to use hash_of(key) instead of hash_ref()(key).
-a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,insert+erase,0.0,0.0,0.0,0,0,68.2,Refactor to use hash_of(key) instead of hash_ref()(key).
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,find (hit),0.0,0.0,0.0,0,0,34.9,Export of internal Abseil changes
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,find (miss),0.0,0.0,0.0,0,0,28.9,Export of internal Abseil changes
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,insert+erase,0.0,0.0,0.0,0,0,86.7,Export of internal Abseil changes
+1ce4ceca2b2931bc4d7e470228c2dbb2f3dfea0f,2021-09-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,Export of internal Abseil changes
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Export of internal Abseil changes
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,find (miss),0.0,0.0,0.0,0,0,16.8,Export of internal Abseil changes
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,insert+erase,0.0,0.0,0.0,0,0,62.1,Export of internal Abseil changes
+e11e039e02ef30a98a7928ce6c59cebe096dd753,2021-12-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.4,Export of internal Abseil changes
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,find (hit),0.0,0.0,0.0,0,0,32.0,Export of internal Abseil changes
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,find (miss),0.0,0.0,0.0,0,0,26.7,Export of internal Abseil changes
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,insert+erase,0.0,0.0,0.0,0,0,84.1,Export of internal Abseil changes
+0ad7994f10624cd1538b1287e56cae5ac9c0cb40,2022-02-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.5,Export of internal Abseil changes
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,find (hit),0.0,0.0,0.0,0,0,35.1,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,find (miss),0.0,0.0,0.0,0,0,29.7,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,insert+erase,0.0,0.0,0.0,0,0,93.0,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
+384a25d5e19228ceb7641676aefd58c4ca7a9568,2022-05-04,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.5,"Improve analysis of the number of extra `==` operations, which was overly complicated, slightly incorrect."
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,find (hit),0.0,0.0,0.0,0,0,35.4,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,find (miss),0.0,0.0,0.0,0,0,28.9,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,insert+erase,0.0,0.0,0.0,0,0,90.0,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
+8e27a61883cdfc66a4cfb8482f994de6664e1dd9,2022-06-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.5,Use ABSL_INTERNAL_HAS_SSE2 instead of __SSE2__
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,find (hit),0.0,0.0,0.0,0,0,34.8,Fix ClangTidy warnings in btree.h and btree_test.cc.
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,find (miss),0.0,0.0,0.0,0,0,29.5,Fix ClangTidy warnings in btree.h and btree_test.cc.
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,insert+erase,0.0,0.0,0.0,0,0,92.4,Fix ClangTidy warnings in btree.h and btree_test.cc.
+4a1ccf16ed98c876bf1e1985afb080baeff5101f,2022-09-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.9,Fix ClangTidy warnings in btree.h and btree_test.cc.
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,find (hit),0.0,0.0,0.0,0,0,32.7,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,find (miss),0.0,0.0,0.0,0,0,26.5,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,insert+erase,0.0,0.0,0.0,0,0,86.9,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
+f19051447ff8f3feb5f1f9abb8d0df2337347781,2022-10-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.1,CMake: Mark absl::cord_test_helpers and absl::spy_hash_state PUBLIC
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,find (hit),0.0,0.0,0.0,0,0,34.3,Improve error messages when comparing btree iterators.
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,find (miss),0.0,0.0,0.0,0,0,28.9,Improve error messages when comparing btree iterators.
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,insert+erase,0.0,0.0,0.0,0,0,89.0,Improve error messages when comparing btree iterators.
+04658377111baab53430755431b2b9b4da925e5c,2022-11-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.4,Improve error messages when comparing btree iterators.
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,find (hit),0.0,0.0,0.0,0,0,39.0,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,find (miss),0.0,0.0,0.0,0,0,31.7,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,insert+erase,0.0,0.0,0.0,0,0,93.0,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
+f7affaf32a6a396465507dd10520a3fe183d4e40,2022-12-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.4,Fix a bug in iterator validation code in which we don't update the table's reserved growth if the reservation wouldn't grow the table.
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,find (hit),0.0,0.0,0.0,0,0,34.1,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,find (miss),0.0,0.0,0.0,0,0,28.6,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,insert+erase,0.0,0.0,0.0,0,0,88.4,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
+15957950d997cd9e09c61add5200361d5d1e7e11,2023-02-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.9,Make default-constructed swisstable iterators use EmptyGroup() for ctrl_ so that we can distinguish between end() iterators and default-constructed iterators in debug mode.
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,find (hit),0.0,0.0,0.0,0,0,17.7,inlined_vector: stop sharing the memcpy-based move-assignment path.
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,find (miss),0.0,0.0,0.0,0,0,27.1,inlined_vector: stop sharing the memcpy-based move-assignment path.
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,insert+erase,0.0,0.0,0.0,0,0,89.8,inlined_vector: stop sharing the memcpy-based move-assignment path.
+ea980d1963457526f8094e86f8b3f59144ea3f31,2023-03-31,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.2,inlined_vector: stop sharing the memcpy-based move-assignment path.
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,find (hit),0.0,0.0,0.0,0,0,32.1,Add lifetimebound attribute to some Abseil containers
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,find (miss),0.0,0.0,0.0,0,0,27.0,Add lifetimebound attribute to some Abseil containers
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,insert+erase,0.0,0.0,0.0,0,0,84.5,Add lifetimebound attribute to some Abseil containers
+20c087a795638e904792c471d8de158cc97c208a,2023-05-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.1,Add lifetimebound attribute to some Abseil containers
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,find (hit),0.0,0.0,0.0,0,0,35.5,Move growth_left to the backing array.
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,find (miss),0.0,0.0,0.0,0,0,30.0,Move growth_left to the backing array.
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,insert+erase,0.0,0.0,0.0,0,0,91.2,Move growth_left to the backing array.
+5be22f98733c674d532598454ae729253bc53e82,2023-07-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.7,Move growth_left to the backing array.
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,find (hit),0.0,0.0,0.0,0,0,40.4,Add missing includes in raw_hash_set.h.
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,find (miss),0.0,0.0,0.0,0,0,31.6,Add missing includes in raw_hash_set.h.
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,insert+erase,0.0,0.0,0.0,0,0,93.8,Add missing includes in raw_hash_set.h.
+861e53c8f075c8c4d67bd4c82217c57239fc97cf,2023-08-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.7,Add missing includes in raw_hash_set.h.
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,find (hit),0.0,0.0,0.0,0,0,36.1,Add an internal wrapper for `abi::__cxa_demangle()`.
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,find (miss),0.0,0.0,0.0,0,0,29.5,Add an internal wrapper for `abi::__cxa_demangle()`.
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,insert+erase,0.0,0.0,0.0,0,0,95.3,Add an internal wrapper for `abi::__cxa_demangle()`.
+cced061b3e68da386aaadca0d87e03538ce2bc72,2023-09-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.1,Add an internal wrapper for `abi::__cxa_demangle()`.
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,find (hit),0.0,0.0,0.0,0,0,19.6,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,find (miss),0.0,0.0,0.0,0,0,17.9,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,insert+erase,0.0,0.0,0.0,0,0,64.6,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
+7676c565eedd2581b66839c239f3825d8e381119,2023-10-17,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.4,Rollback: Add sanitizer mode checks that element constructors/destructors don't make reentrant calls to raw_hash_set member functions.
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,find (hit),0.0,0.0,0.0,0,0,35.1,`btree_map`: avoid a copy in `map_params::key`.
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,find (miss),0.0,0.0,0.0,0,0,29.7,`btree_map`: avoid a copy in `map_params::key`.
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,insert+erase,0.0,0.0,0.0,0,0,92.0,`btree_map`: avoid a copy in `map_params::key`.
+0c09fd0ff0d502c30831ff2ccf59894e36d2b60a,2023-11-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.4,`btree_map`: avoid a copy in `map_params::key`.
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,find (hit),0.0,0.0,0.0,0,0,33.8,Remove code pieces for no longer supported GCC versions.
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,find (miss),0.0,0.0,0.0,0,0,27.5,Remove code pieces for no longer supported GCC versions.
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,insert+erase,0.0,0.0,0.0,0,0,86.2,Remove code pieces for no longer supported GCC versions.
+f7d2b13ef2466a5a3b7bcc535c49d3962a5c89f9,2024-01-22,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.3,Remove code pieces for no longer supported GCC versions.
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,find (hit),0.0,0.0,0.0,0,0,34.2,Make `begin()` to return `end()` on empty tables.
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,find (miss),0.0,0.0,0.0,0,0,30.8,Make `begin()` to return `end()` on empty tables.
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,insert+erase,0.0,0.0,0.0,0,0,94.3,Make `begin()` to return `end()` on empty tables.
+760b21530ffc22ef4859356e543022b18de7d2ce,2024-02-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.0,Make `begin()` to return `end()` on empty tables.
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,find (hit),0.0,0.0,0.0,0,0,19.5,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,find (miss),0.0,0.0,0.0,0,0,17.5,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,insert+erase,0.0,0.0,0.0,0,0,62.1,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
+d802708117c6ef6b9783efe499b2a2d0d0536c77,2024-03-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.7,"Replace usages of absl::move, absl::forward, and absl::exchange with their std:: equivalents"
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,find (hit),0.0,0.0,0.0,0,0,35.4,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,find (miss),0.0,0.0,0.0,0,0,28.1,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,insert+erase,0.0,0.0,0.0,0,0,86.8,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
+1cd7128b5697045562dc1bed4ad17c819d4ab166,2024-03-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,`layout`: Delete outdated comments about ElementType alias not being used because of MSVC
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,find (hit),0.0,0.0,0.0,0,0,18.6,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,find (miss),0.0,0.0,0.0,0,0,18.0,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,insert+erase,0.0,0.0,0.0,0,0,69.1,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
+9a61b00dde4031f17ed4fa4bdc0e0e9ad8859846,2024-04-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.3,[absl] Re-use the existing `std::type_identity` backfill instead of redefining it again
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,find (hit),0.0,0.0,0.0,0,0,21.0,Document that swisstable and b-tree containers are not exception-safe.
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,find (miss),0.0,0.0,0.0,0,0,18.1,Document that swisstable and b-tree containers are not exception-safe.
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,insert+erase,0.0,0.0,0.0,0,0,102.0,Document that swisstable and b-tree containers are not exception-safe.
+e181410198b58b8dffe6e62e24ad56e5d78e2790,2024-06-20,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.5,Document that swisstable and b-tree containers are not exception-safe.
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,find (hit),0.0,0.0,0.0,0,0,35.8,Add validation against use of moved-from hash tables.
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,find (miss),0.0,0.0,0.0,0,0,27.7,Add validation against use of moved-from hash tables.
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,insert+erase,0.0,0.0,0.0,0,0,71.0,Add validation against use of moved-from hash tables.
+f61aac8c41848c7814935ec9fb8361c4058ffc74,2024-08-28,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.6,Add validation against use of moved-from hash tables.
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,find (hit),0.0,0.0,0.0,0,0,19.0,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,find (miss),0.0,0.0,0.0,0,0,18.4,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,insert+erase,0.0,0.0,0.0,0,0,73.0,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
+79e414672f447ac1b27f8cb27ad61df315a3792b,2024-10-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.6,Add suggestions to enable sanitizers for asserts when doing so may be helpful.
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,find (hit),0.0,0.0,0.0,0,0,19.0,Add more debug capacity validation checks on moves.
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,find (miss),0.0,0.0,0.0,0,0,18.2,Add more debug capacity validation checks on moves.
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,insert+erase,0.0,0.0,0.0,0,0,73.5,Add more debug capacity validation checks on moves.
+50292b7d50fd0b40dfdfeb53ff455a4336996ec2,2024-12-19,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.6,Add more debug capacity validation checks on moves.
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,find (hit),0.0,0.0,0.0,0,0,18.2,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,find (miss),0.0,0.0,0.0,0,0,16.7,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,insert+erase,0.0,0.0,0.0,0,0,69.6,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
+81d48b3e436c1d1d47649ccd8ceb5e38d77a6a69,2025-01-10,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.9,Annotate some Abseil container methods with [[clang::lifetime_capture_by(...)]]
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,find (hit),0.0,0.0,0.0,0,0,36.2,Update comments for Read4To8 and Read1To3.
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,find (miss),0.0,0.0,0.0,0,0,30.8,Update comments for Read4To8 and Read1To3.
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,insert+erase,0.0,0.0,0.0,0,0,104.2,Update comments for Read4To8 and Read1To3.
+ee2839208a402d548a6638d235fcd8b9d94aad0d,2025-02-03,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.5,Update comments for Read4To8 and Read1To3.
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,find (hit),0.0,0.0,0.0,0,0,35.6,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,find (miss),0.0,0.0,0.0,0,0,29.4,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,insert+erase,0.0,0.0,0.0,0,0,102.6,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
+3ae63243e25832252aafd52854c4f2043f700b46,2025-02-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,61.6,Add return for opt mode in AssertNotDebugCapacity to make sure that code is not evaluated in opt mode.
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,find (hit),0.0,0.0,0.0,0,0,36.2,PR #1846: Fix build on big endian
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,find (miss),0.0,0.0,0.0,0,0,30.1,PR #1846: Fix build on big endian
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,insert+erase,0.0,0.0,0.0,0,0,104.8,PR #1846: Fix build on big endian
+35d35604d6d57850699b5a8cb9da2a5ea418ff88,2025-02-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,60.3,PR #1846: Fix build on big endian
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,find (hit),0.0,0.0,0.0,0,0,19.8,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,find (miss),0.0,0.0,0.0,0,0,17.1,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,insert+erase,0.0,0.0,0.0,0,0,70.0,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
+9941a270d0c3113870b8359414c1937d6dc367a0,2025-03-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,22.0,Move GrowFullSooTableToNextCapacity implementation with some dependencies to cc file.
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,find (hit),0.0,0.0,0.0,0,0,35.3,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,find (miss),0.0,0.0,0.0,0,0,29.9,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,insert+erase,0.0,0.0,0.0,0,0,101.2,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
+ab9e509dbb630d2a79787856568ca15970568a4d,2025-04-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.6,Update TestIntrinsicInt128 test to print the indices with the conflicting hashes.
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,find (hit),0.0,0.0,0.0,0,0,38.3,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,find (miss),0.0,0.0,0.0,0,0,30.3,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,insert+erase,0.0,0.0,0.0,0,0,103.3,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
+b3d3348226977e935639e2d9f235f8f7c395f011,2025-04-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.8,"Add latency benchmarks for Hash for strings with size 3, 5 and 17."
+a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,find (hit),0.0,0.0,0.0,0,0,18.7,Refactor to use hash_of(key) instead of hash_ref()(key).
+a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,find (miss),0.0,0.0,0.0,0,0,18.7,Refactor to use hash_of(key) instead of hash_ref()(key).
+a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,insert+erase,0.0,0.0,0.0,0,0,68.3,Refactor to use hash_of(key) instead of hash_ref()(key).
 a2c8588daf1b256319144a60a3b71395ccd46755,2025-04-25,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.9,Refactor to use hash_of(key) instead of hash_ref()(key).
-472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,find (hit),0.0,0.0,0.0,0,0,30.9,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
-472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,find (miss),0.0,0.0,0.0,0,0,27.7,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
-472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,insert+erase,0.0,0.0,0.0,0,0,89.8,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
-472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,30.9,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
-bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,find (hit),0.0,0.0,0.0,0,0,39.0,Avoid hashing the key in prefetch() for small tables.
-bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,find (miss),0.0,0.0,0.0,0,0,28.9,Avoid hashing the key in prefetch() for small tables.
-bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,insert+erase,0.0,0.0,0.0,0,0,95.1,Avoid hashing the key in prefetch() for small tables.
-bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.8,Avoid hashing the key in prefetch() for small tables.
-52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,find (hit),0.0,0.0,0.0,0,0,29.7,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
-52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,find (miss),0.0,0.0,0.0,0,0,30.1,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
-52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,insert+erase,0.0,0.0,0.0,0,0,100.5,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
-52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,47.2,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
-cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,find (hit),0.0,0.0,0.0,0,0,29.9,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.
-cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,find (miss),0.0,0.0,0.0,0,0,29.6,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,find (hit),0.0,0.0,0.0,0,0,33.9,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,find (miss),0.0,0.0,0.0,0,0,29.9,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,insert+erase,0.0,0.0,0.0,0,0,96.0,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
+472365f85636ab757e4668991dfac00c042b5008,2025-05-14,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.2,Remove the `salt` parameter from low level hash and use a global constant. That may potentially remove some loads.
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,find (hit),0.0,0.0,0.0,0,0,38.8,Avoid hashing the key in prefetch() for small tables.
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,find (miss),0.0,0.0,0.0,0,0,30.1,Avoid hashing the key in prefetch() for small tables.
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,insert+erase,0.0,0.0,0.0,0,0,99.0,Avoid hashing the key in prefetch() for small tables.
+bd4bfed9ba625ebf9b992dc425202d59ee3ca90c,2025-05-27,ok,operator[] (hit),0.0,0.0,0.0,0,0,33.3,Avoid hashing the key in prefetch() for small tables.
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,find (hit),0.0,0.0,0.0,0,0,28.8,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,find (miss),0.0,0.0,0.0,0,0,29.2,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,insert+erase,0.0,0.0,0.0,0,0,98.1,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
+52227846bbc04c5fc112a0e724c4b340828d50dd,2025-06-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.1,Pass swisstable seed as seed to absl::Hash so we can save an XOR in H1.
+cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,find (hit),0.0,0.0,0.0,0,0,29.0,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.
+cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,find (miss),0.0,0.0,0.0,0,0,29.4,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.
 cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,insert+erase,0.0,0.0,0.0,0,0,97.6,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.
-cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.3,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.
-7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,find (hit),0.0,0.0,0.0,0,0,27.6,Disallow using a hash function whose return type is smaller than size_t.
-7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,find (miss),0.0,0.0,0.0,0,0,27.4,Disallow using a hash function whose return type is smaller than size_t.
-7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,insert+erase,0.0,0.0,0.0,0,0,97.6,Disallow using a hash function whose return type is smaller than size_t.
-7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.3,Disallow using a hash function whose return type is smaller than size_t.
-b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,find (hit),0.0,0.0,0.0,0,0,31.5,Refactor raw_hash_set range insertion to call private insert_range function.
-b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,find (miss),0.0,0.0,0.0,0,0,31.9,Refactor raw_hash_set range insertion to call private insert_range function.
-b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,insert+erase,0.0,0.0,0.0,0,0,97.5,Refactor raw_hash_set range insertion to call private insert_range function.
-b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.3,Refactor raw_hash_set range insertion to call private insert_range function.
-a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,find (hit),0.0,0.0,0.0,0,0,29.6,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
-a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,find (miss),0.0,0.0,0.0,0,0,29.7,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
-a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,insert+erase,0.0,0.0,0.0,0,0,97.3,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
-a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,46.5,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
-647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,find (hit),0.0,0.0,0.0,0,0,29.3,Add a latency benchmark for hashing a pair of integers.
-647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,find (miss),0.0,0.0,0.0,0,0,29.7,Add a latency benchmark for hashing a pair of integers.
-647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,insert+erase,0.0,0.0,0.0,0,0,96.8,Add a latency benchmark for hashing a pair of integers.
-647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,44.2,Add a latency benchmark for hashing a pair of integers.
-81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,find (hit),0.0,0.0,0.0,0,0,29.0,Open up the throw_delegate library to public usage
-81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,find (miss),0.0,0.0,0.0,0,0,29.3,Open up the throw_delegate library to public usage
-81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,insert+erase,0.0,0.0,0.0,0,0,94.6,Open up the throw_delegate library to public usage
-81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.7,Open up the throw_delegate library to public usage
-896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,find (hit),0.0,0.0,0.0,0,0,28.6,Add benchmark for string erase/emplace.
-896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,find (miss),0.0,0.0,0.0,0,0,29.0,Add benchmark for string erase/emplace.
-896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,insert+erase,0.0,0.0,0.0,0,0,96.6,Add benchmark for string erase/emplace.
-896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,52.3,Add benchmark for string erase/emplace.
+cf2b48cf458c18c9c5ff726ff27de273a4740d8b,2025-07-08,ok,operator[] (hit),0.0,0.0,0.0,0,0,42.1,Perform stronger mixing on 32-bit platforms and enable the LowEntropyStrings test.
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,find (hit),0.0,0.0,0.0,0,0,28.7,Disallow using a hash function whose return type is smaller than size_t.
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,find (miss),0.0,0.0,0.0,0,0,29.7,Disallow using a hash function whose return type is smaller than size_t.
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,insert+erase,0.0,0.0,0.0,0,0,96.3,Disallow using a hash function whose return type is smaller than size_t.
+7ece455c2527fa7f001a5f734a7efa42df4e767a,2025-07-24,ok,operator[] (hit),0.0,0.0,0.0,0,0,41.0,Disallow using a hash function whose return type is smaller than size_t.
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,find (hit),0.0,0.0,0.0,0,0,36.9,Refactor raw_hash_set range insertion to call private insert_range function.
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,find (miss),0.0,0.0,0.0,0,0,28.9,Refactor raw_hash_set range insertion to call private insert_range function.
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,insert+erase,0.0,0.0,0.0,0,0,96.0,Refactor raw_hash_set range insertion to call private insert_range function.
+b2574e9da3b999f51bc8d007479c0af8b56fbffd,2025-09-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.8,Refactor raw_hash_set range insertion to call private insert_range function.
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,find (hit),0.0,0.0,0.0,0,0,15.8,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,find (miss),0.0,0.0,0.0,0,0,18.3,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,insert+erase,0.0,0.0,0.0,0,0,70.2,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
+a5e3599b234ff11cb6e7e52a77fd4811a24a851a,2025-11-18,ok,operator[] (hit),0.0,0.0,0.0,0,0,23.9,"Revert: Add an attribute to HashtablezInfo which performs a bitwise XOR on all hashes. The purposes of this attribute is to identify if identical hash tables are being created. If we see a large number of identical tables, it's likely the code can be improved by using a common table as opposed to keep rebuilding the same one."
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,find (hit),0.0,0.0,0.0,0,0,29.6,Add a latency benchmark for hashing a pair of integers.
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,find (miss),0.0,0.0,0.0,0,0,29.6,Add a latency benchmark for hashing a pair of integers.
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,insert+erase,0.0,0.0,0.0,0,0,96.1,Add a latency benchmark for hashing a pair of integers.
+647ed70eff043c28436c047906e2d7281b55ff27,2025-12-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.8,Add a latency benchmark for hashing a pair of integers.
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,find (hit),0.0,0.0,0.0,0,0,30.7,Open up the throw_delegate library to public usage
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,find (miss),0.0,0.0,0.0,0,0,30.2,Open up the throw_delegate library to public usage
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,insert+erase,0.0,0.0,0.0,0,0,101.4,Open up the throw_delegate library to public usage
+81839fc522eaaaa3c29c180cc7503aa72556bafe,2026-02-09,ok,operator[] (hit),0.0,0.0,0.0,0,0,46.1,Open up the throw_delegate library to public usage
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,find (hit),0.0,0.0,0.0,0,0,29.3,Add benchmark for string erase/emplace.
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,find (miss),0.0,0.0,0.0,0,0,29.1,Add benchmark for string erase/emplace.
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,insert+erase,0.0,0.0,0.0,0,0,97.3,Add benchmark for string erase/emplace.
+896d91506936877a47712e7f42e1c639301c66d4,2026-03-12,ok,operator[] (hit),0.0,0.0,0.0,0,0,53.5,Add benchmark for string erase/emplace.
 271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,find (hit),0.0,0.0,0.0,0,0,29.7,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions
-271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,find (miss),0.0,0.0,0.0,0,0,28.7,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions
-271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,insert+erase,0.0,0.0,0.0,0,0,93.5,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions
-271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,47.1,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions
-0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,build failed,,,,,,,,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).
-3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,find (hit),0.0,0.0,0.0,0,0,28.8,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
-3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,find (miss),0.0,0.0,0.0,0,0,28.7,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
-3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,insert+erase,0.0,0.0,0.0,0,0,116.5,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
-3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,47.0,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
-2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,find (hit),0.0,0.0,0.0,0,0,30.3,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
-2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,find (miss),0.0,0.0,0.0,0,0,29.5,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
-2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,112.7,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
-2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,49.8,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
-bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,find (hit),0.0,0.0,0.0,0,0,29.6,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
-bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,find (miss),0.0,0.0,0.0,0,0,29.8,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
-bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,insert+erase,0.0,0.0,0.0,0,0,113.4,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
-bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,39.0,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
-5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,find (hit),0.0,0.0,0.0,0,0,28.8,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
-5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,find (miss),0.0,0.0,0.0,0,0,27.3,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
-5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,insert+erase,0.0,0.0,0.0,0,0,107.7,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
-5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.4,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
-3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,find (hit),0.0,0.0,0.0,0,0,16.0,Reorder platform-specific #include directives after the others
-3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,find (miss),0.0,0.0,0.0,0,0,18.4,Reorder platform-specific #include directives after the others
-3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,insert+erase,0.0,0.0,0.0,0,0,73.5,Reorder platform-specific #include directives after the others
-3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.8,Reorder platform-specific #include directives after the others
-403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,find (hit),0.0,0.0,0.0,0,0,29.1,PR #2150: Fix some missing includes for std::-symbols
-403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,find (miss),0.0,0.0,0.0,0,0,28.9,PR #2150: Fix some missing includes for std::-symbols
-403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,insert+erase,0.0,0.0,0.0,0,0,100.1,PR #2150: Fix some missing includes for std::-symbols
-403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.2,PR #2150: Fix some missing includes for std::-symbols
-d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,find (hit),0.0,0.0,0.0,0,0,16.1,Update TransparentHash documentation and test to use an implicit conversion operator.
-d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,find (miss),0.0,0.0,0.0,0,0,18.6,Update TransparentHash documentation and test to use an implicit conversion operator.
+271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,find (miss),0.0,0.0,0.0,0,0,29.7,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions
+271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,insert+erase,0.0,0.0,0.0,0,0,96.8,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions
+271ba2770d24346e165a95608dce4620c13aa5e2,2026-05-06,ok,operator[] (hit),0.0,0.0,0.0,0,0,60.8,Change abseil hardening assertions in chunked_queue and fixed_array from macros to functions
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,find (hit),0.0,0.0,0.0,0,0,29.3,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,find (miss),0.0,0.0,0.0,0,0,29.4,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,insert+erase,0.0,0.0,0.0,0,0,109.3,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).
+0ee7a18a4ca2709b9fd6abe2c49f3dc5f788e91e,2026-06-01,ok,operator[] (hit),0.0,0.0,0.0,0,0,49.1,Introduce blocked elements for reserved tables in small capacities (3 and 7 for x86 and just 3 for ARM).
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,find (hit),0.0,0.0,0.0,0,0,16.0,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,find (miss),0.0,0.0,0.0,0,0,18.5,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,insert+erase,0.0,0.0,0.0,0,0,75.1,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
+3d8b364287967eb3a6e2feaf6e8b7a17adc1bf77,2026-06-15,ok,operator[] (hit),0.0,0.0,0.0,0,0,27.2,Add explicit cast to size_t for GetGrowthLeftTotalBigCapacity.
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,find (hit),0.0,0.0,0.0,0,0,15.7,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,find (miss),0.0,0.0,0.0,0,0,18.4,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,insert+erase,0.0,0.0,0.0,0,0,75.4,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
+2a486410aa11dc2c894c69d32fcc58034f21f13e,2026-07-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,26.3,Change the default visibility for packages to //visibility:private and then change individual build rules back to their prior visibility.
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,find (hit),0.0,0.0,0.0,0,0,16.2,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,find (miss),0.0,0.0,0.0,0,0,18.5,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,insert+erase,0.0,0.0,0.0,0,0,77.3,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
+bc93ee9401186a745446d8c709d6a67286b118d7,2026-07-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.7,Make AbslHashValue(std::filesystem::path) hash the path directly instead of hashing the standard library's hash
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,find (hit),0.0,0.0,0.0,0,0,16.4,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,find (miss),0.0,0.0,0.0,0,0,18.6,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,insert+erase,0.0,0.0,0.0,0,0,78.2,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
+5b1163c46f5603b662030c898f981815611fb164,2026-08-13,ok,operator[] (hit),0.0,0.0,0.0,0,0,22.1,"Remove unused includes from `absl/hash/hash.h` and `absl/hash/internal/hash.h`, and remove corresponding unused dependencies from `BUILD` and `CMakeLists.txt`."
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,find (hit),0.0,0.0,0.0,0,0,29.7,Reorder platform-specific #include directives after the others
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,find (miss),0.0,0.0,0.0,0,0,30.1,Reorder platform-specific #include directives after the others
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,insert+erase,0.0,0.0,0.0,0,0,107.9,Reorder platform-specific #include directives after the others
+3a430f808aac3f4113cf306725fcc214bcd85ec9,2026-08-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.9,Reorder platform-specific #include directives after the others
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,find (hit),0.0,0.0,0.0,0,0,29.4,PR #2150: Fix some missing includes for std::-symbols
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,find (miss),0.0,0.0,0.0,0,0,29.8,PR #2150: Fix some missing includes for std::-symbols
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,insert+erase,0.0,0.0,0.0,0,0,102.0,PR #2150: Fix some missing includes for std::-symbols
+403de00f4369dcfc3e5cf82299c18ec16559d405,2026-09-02,ok,operator[] (hit),0.0,0.0,0.0,0,0,36.6,PR #2150: Fix some missing includes for std::-symbols
+d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,find (hit),0.0,0.0,0.0,0,0,16.2,Update TransparentHash documentation and test to use an implicit conversion operator.
+d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,find (miss),0.0,0.0,0.0,0,0,18.5,Update TransparentHash documentation and test to use an implicit conversion operator.
 d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,insert+erase,0.0,0.0,0.0,0,0,74.5,Update TransparentHash documentation and test to use an implicit conversion operator.
-d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.9,Update TransparentHash documentation and test to use an implicit conversion operator.
-cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,find (hit),0.0,0.0,0.0,0,0,30.2,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
-cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,find (miss),0.0,0.0,0.0,0,0,30.4,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
-cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,insert+erase,0.0,0.0,0.0,0,0,106.8,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
-cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.9,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
-d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,find (hit),0.0,0.0,0.0,0,0,30.0,Store the swisstable per-table seed in a byte-addressable field.
-d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,find (miss),0.0,0.0,0.0,0,0,30.3,Store the swisstable per-table seed in a byte-addressable field.
-d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,insert+erase,0.0,0.0,0.0,0,0,101.9,Store the swisstable per-table seed in a byte-addressable field.
-d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,38.1,Store the swisstable per-table seed in a byte-addressable field.
-f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,find (hit),0.0,0.0,0.0,0,0,29.7,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
-f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,find (miss),0.0,0.0,0.0,0,0,35.8,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
-f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,insert+erase,0.0,0.0,0.0,0,0,102.6,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
-f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.8,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
-7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,find (hit),0.0,0.0,0.0,0,0,29.0,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
-7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,find (miss),0.0,0.0,0.0,0,0,29.1,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
-7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,insert+erase,0.0,0.0,0.0,0,0,103.8,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
-7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.4,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
-599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,find (hit),0.0,0.0,0.0,0,0,15.9,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
-599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,find (miss),0.0,0.0,0.0,0,0,18.5,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
-599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,insert+erase,0.0,0.0,0.0,0,0,73.5,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
-599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,20.8,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
-1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,find (hit),0.0,0.0,0.0,0,0,29.5,Remove `soo_enabled()` from raw_hash_set policy traits.
-1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,find (miss),0.0,0.0,0.0,0,0,29.8,Remove `soo_enabled()` from raw_hash_set policy traits.
-1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,insert+erase,0.0,0.0,0.0,0,0,97.5,Remove `soo_enabled()` from raw_hash_set policy traits.
-1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.4,Remove `soo_enabled()` from raw_hash_set policy traits.
-4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,find (hit),0.0,0.0,0.0,0,0,29.3,Always-inline SwissTable slot_array() accessors.
-4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,find (miss),0.0,0.0,0.0,0,0,29.8,Always-inline SwissTable slot_array() accessors.
-4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,insert+erase,0.0,0.0,0.0,0,0,98.6,Always-inline SwissTable slot_array() accessors.
-4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.7,Always-inline SwissTable slot_array() accessors.
-bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,find (hit),0.0,0.0,0.0,0,0,17.5,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
-bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,find (miss),0.0,0.0,0.0,0,0,18.6,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
-bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,insert+erase,0.0,0.0,0.0,0,0,69.9,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
-bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,19.9,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
+d2d44c668b7321ac157e9c085bd083d0db9d58f9,2026-09-23,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.0,Update TransparentHash documentation and test to use an implicit conversion operator.
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,find (hit),0.0,0.0,0.0,0,0,17.4,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,find (miss),0.0,0.0,0.0,0,0,18.8,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,insert+erase,0.0,0.0,0.0,0,0,105.0,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
+cf62c3469488a919a5f924d8a282b3af60da6d1d,2026-09-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,37.3,Undo removal of std::tuple uses in absl::container_internal::raw_hash_map::try_emplace_impl
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,find (hit),0.0,0.0,0.0,0,0,19.2,Store the swisstable per-table seed in a byte-addressable field.
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,find (miss),0.0,0.0,0.0,0,0,18.9,Store the swisstable per-table seed in a byte-addressable field.
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,insert+erase,0.0,0.0,0.0,0,0,77.3,Store the swisstable per-table seed in a byte-addressable field.
+d2d245bc1bba8e3863408cebff484ea90e5cf0a2,2026-10-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,22.1,Store the swisstable per-table seed in a byte-addressable field.
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,find (hit),0.0,0.0,0.0,0,0,30.4,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,find (miss),0.0,0.0,0.0,0,0,30.7,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,insert+erase,0.0,0.0,0.0,0,0,105.4,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
+f78eecf810299ad943e5bd26200c6bc9942cfeac,2026-10-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,40.7,Tail-call infoz reporting in PrepareInsertLargeImpl to avoid stack frame.
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,find (hit),0.0,0.0,0.0,0,0,16.8,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,find (miss),0.0,0.0,0.0,0,0,18.4,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,insert+erase,0.0,0.0,0.0,0,0,74.5,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
+7a55cd2f657d4a2f233cef74eadf73a24a200cdb,2026-10-21,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.6,Move second-chance lookup in TryFindNewIndexWithoutProbing into type-erased encode_probed_element to reduce binary size.
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,find (hit),0.0,0.0,0.0,0,0,28.6,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,find (miss),0.0,0.0,0.0,0,0,28.8,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,insert+erase,0.0,0.0,0.0,0,0,98.3,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
+599a04aef68d86af98233b03c96b5337a7f828ee,2026-10-26,ok,operator[] (hit),0.0,0.0,0.0,0,0,21.0,Store `alignof(slot_type) - 1` instead of `alignof(slot_type)` in raw_hash_set policies.
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,find (hit),0.0,0.0,0.0,0,0,30.2,Remove `soo_enabled()` from raw_hash_set policy traits.
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,find (miss),0.0,0.0,0.0,0,0,30.3,Remove `soo_enabled()` from raw_hash_set policy traits.
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,insert+erase,0.0,0.0,0.0,0,0,98.3,Remove `soo_enabled()` from raw_hash_set policy traits.
+1246ce661adcdec292f8c6b5f7d66e03e713da86,2026-10-29,ok,operator[] (hit),0.0,0.0,0.0,0,0,35.6,Remove `soo_enabled()` from raw_hash_set policy traits.
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,find (hit),0.0,0.0,0.0,0,0,29.6,Always-inline SwissTable slot_array() accessors.
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,find (miss),0.0,0.0,0.0,0,0,29.9,Always-inline SwissTable slot_array() accessors.
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,insert+erase,0.0,0.0,0.0,0,0,99.8,Always-inline SwissTable slot_array() accessors.
+4d39ddc1f1fbc2afac58c27cd7dae426436ed1f6,2026-11-05,ok,operator[] (hit),0.0,0.0,0.0,0,0,43.1,Always-inline SwissTable slot_array() accessors.
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,find (hit),0.0,0.0,0.0,0,0,29.6,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,find (miss),0.0,0.0,0.0,0,0,30.1,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,insert+erase,0.0,0.0,0.0,0,0,95.7,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
+bc69ad6eff7c27300bcdf13e33cfaa8bd6f05f5a,2026-11-11,ok,operator[] (hit),0.0,0.0,0.0,0,0,34.9,Use type-erased slot hash functions for all flat_hash_map and node_hash_map types.
 41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,find (hit),0.0,0.0,0.0,0,0,17.0,Report accurate allocated capacity in SwissTable hashtablez samples.
-41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,find (miss),0.0,0.0,0.0,0,0,18.4,Report accurate allocated capacity in SwissTable hashtablez samples.
-41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,insert+erase,0.0,0.0,0.0,0,0,69.4,Report accurate allocated capacity in SwissTable hashtablez samples.
+41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,find (miss),0.0,0.0,0.0,0,0,18.3,Report accurate allocated capacity in SwissTable hashtablez samples.
+41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,insert+erase,0.0,0.0,0.0,0,0,69.8,Report accurate allocated capacity in SwissTable hashtablez samples.
 41a6e8c212c6d6cd2ae5abf77e8d3680c2801cfb,2026-11-16,ok,operator[] (hit),0.0,0.0,0.0,0,0,18.8,Report accurate allocated capacity in SwissTable hashtablez samples.
