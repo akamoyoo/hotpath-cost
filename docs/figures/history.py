@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The README's figure: abseil's flat_hash_map lookups across its history, replayed by the tool.
 
-  docs/figures/history.py        reads out/ (replay.py results), writes history.svg
+  docs/figures/history.py        reads out/ (replay.py results), writes abseil-history.svg
 """
 import datetime as dt, json
 from pathlib import Path
@@ -64,7 +64,7 @@ def main(out_png=None):
         axes[0].xaxis.set_major_formatter(mdates.DateFormatter("%b %Y"))
         fig.text(0.0, -0.02, "operator[] on a map of 100,000 keys, instructions per call under callgrind at every measured "
                  "library commit (GCC 13, -O2). Each step is one commit.", fontsize=9, color=t["fg2"])
-        fig.savefig(HERE / "history.svg", bbox_inches="tight", facecolor="#ffffff", pad_inches=0.25)
+        fig.savefig(HERE / "abseil-history.svg", bbox_inches="tight", facecolor="#ffffff", pad_inches=0.25)
         if out_png: fig.savefig(f"{out_png}.png", bbox_inches="tight", dpi=110, facecolor="#ffffff", pad_inches=0.25)
         plt.close(fig)
 
