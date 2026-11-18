@@ -1,0 +1,447 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+44c402137f324c31e8c248d6bb71b4ad412ce48a,2008-01-06,build failed,,,,,,,,Add Boost.Unordered and add to the documentation. Not fully integrated yet.
+e847046f9553f04e5f6bfa3712194136f1dbff6d,2008-01-08,build failed,,,,,,,,Merge in latest unordered developments (revisions 42607-42611).
+6aa582a90eb306ffe292cae148403d488b69de66,2008-03-27,build failed,,,,,,,,Merged revisions 43838-43894 via svnmerge from https://svn.boost.org/svn/boost/branches/unordered/trunk
+9689f844f49d89a5ba88440c7e92b0e80c06c79b,2008-04-17,build failed,,,,,,,,Fix an error on compilers without SFINAE.
+94932ae026f79079b55065d02ff5ee1927e816e7,2008-04-23,build failed,,,,,,,,"Merge support for emplace for compilers with rvalue references and variadic templates arguments, and better use of C++0x allocators. Merged revisions 44058-44075,44078-44084,44086-44108,44110-44365,44367,44369-44414,44416-44419,44421-44457,44467-44469,44471-44511,44513-44535,44537-44737 via svnmerge from https://svn.boost.org/svn/boost/branches/unordered/trunk"
+980d3f87c5939d7cc82eeee759bea2771f442746,2008-05-10,build failed,,,,,,,,"Remove some code that doesn't even make it past preprocessing, I should have removed it when I wrote separate allocation code for C++0x compilers."
+c85c8dbeef6a393cdbeff41255d16f82e9bfd931,2008-05-21,build failed,,,,,,,,"Some compilers don't like the use of sizeof with a static template member array, so I'm hardcoding the prime number list length. Pity."
+ec1e809fc32f71fcc69d2cae4d2a88093d995b43,2008-06-22,build failed,,,,,,,,Extract the hash and equality functions from hash_table_data_*.
+4305d10264bf7482dfc5c1f68e6c5e2b504e6d90,2008-07-15,build failed,,,,,,,,"On second thoughts, I'll just completely remove hash_value for ordered containers. It's low quality and not very generic (it uses boost::hash for mapped values). Should be a painless change."
+d98f72c4e18ecbc52f95bb458f48799737357a05,2008-10-10,build failed,,,,,,,,Change includes of <cmath> to <boost/config/no_tr1/config.hpp>.
+601daa0e5d2664c80dc6fef1fdc03280a5ec6617,2008-11-24,build failed,,,,,,,,Use a larger prime number list. Fixes #1710
+fe3873b28f07c9b83e13ed4f3ac4659dcaf28dae,2008-12-04,build failed,,,,,,,,Add support for initializer lists to config and the unordered containers.
+638accbec470b3634ef0934b34b6943fd12fe7ea,2009-03-09,build failed,,,,,,,,Update copyright dates in hash and unordered.
+4ac0a12a836b2f35869c6224d27f6c8da9d2fe57,2009-04-06,build failed,,,,,,,,Avoid an unnecessary copy in 'operator[]'
+f8e1ec8d2b364b7eade8fd3dbb97226fd81317c1,2009-04-30,build failed,,,,,,,,"Revert changes to unordered, as the test fails on most compilers."
+09b239ed287e6b959d4739f047b4137fcafe08bc,2009-05-10,build failed,,,,,,,,Merge emplace support for sandbox - but without move support.
+caa0b7cdf68dbc8bda90340f9f6bb9bbcd891446,2009-05-27,build failed,,,,,,,,Fix a change accidentally included in the last commit.
+ca018bfba658bcdead1ea7b3c25ba75b71f57dad,2009-07-23,build failed,,,,,,,,Remove the emulation of single argument C++0x std::pair constructor.
+c40cb50fe56087c211a488b7ede03720500061ff,2009-08-31,build failed,,,,,,,,Detab.
+7fe53ef5a32051a3779ea7b098970e8f03b82d11,2009-09-03,build failed,,,,,,,,Combine hash_structure and hash_table_manager.
+965c2ae89c5e5e04ee01fda2573ed926d9d17d00,2009-09-21,build failed,,,,,,,,Slightly more consistent variable names. In detail 'n' is now always a node pointer.
+f76af2d0c88b5426f1d1d599897537810441a7c4,2009-09-22,build failed,,,,,,,,Another std::max.
+1e24f85fbc7375fb2a586b17f46b5de3c7d1881d,2009-10-03,build failed,,,,,,,,Insert using initializer lists.
+854dc0b353cdbb8304d8e7f649cbc68263fc79ea,2009-10-05,build failed,,,,,,,,Various inspect fixes.
+060acb3f250f84eca898c49e3a5d4fd680a406e5,2009-10-25,build failed,,,,,,,,Slightly rearrange the unordered container headers so that prev_prime is defined before it's used.
+55957bbab57e973b8cb0edf61e59998ce997f8a8,2009-11-16,build failed,,,,,,,,Some more warning fixes for Visual C++ 7.1
+3e638049eca5a36e6f7122758aa6537892cef26e,2009-11-28,build failed,,,,,,,,Try to support incomplete types for Sun - at the expense of zero argument emplace.
+4e6292b439f7109f0f308411fd6728840eef3e60,2009-12-15,build failed,,,,,,,,Implement an alternative erase function that doesn't return an iterator. Ref #3693
+06f63fdc0d6e12247f379434469f03f39d7491e7,2010-02-15,build failed,,,,,,,,Stop using the deprecated BOOST_HAS_ macros in unordered and hash.
+ef79fea0b7d9f6f27bc72ba0c931514c153d3d1b,2010-04-24,build failed,,,,,,,,"The clang workaround broke some compilers, so only use it for clang."
+5edc45349f07e4252cd3f5d92a7962ff050a73bb,2010-05-21,build failed,,,,,,,,Revert changes for sun 5.9.
+2c1a8894cb8f09c6977380fa2d241bbece5cf243,2010-11-13,build failed,,,,,,,,Remove clang workaround.
+547e1411669c119f5cc5b22f7bf3f92c7b1cb19d,2011-04-16,build failed,,,,,,,,Unordered: Overhaul the implementation.
+b1912055a92d00a527bb0590e2809fa0e5c2f562,2011-04-17,build failed,,,,,,,,Unordered: Fix some errors in the equality tests.
+8b610a6d345de92769041bdcc186a9021ede09d6,2011-06-09,build failed,,,,,,,,Unordered: Work around for compilers which don't support template friend members.
+d86a4b0c2f1aa1eee08285a69575bcfd275757af,2011-08-03,build failed,,,,,,,,Unordered: Use Boost.Move for emplace and insert.
+eacca89d4e3295d80c809cf527c22d6222c21b49,2011-08-11,build failed,,,,,,,,Unordered: Starting to implement allocator propagation.
+f030480e442e27e3e15bc038113b4c4c811ae4e2,2011-08-14,build failed,,,,,,,,Unordered: detab.
+559122f67a2c01474c9e76e0ff7465424f63a9b2,2011-08-14,build failed,,,,,,,,Unordered: Small improvements for windows.
+ce779452baf94dce7aca56af38bf0ed28224ddfc,2011-08-17,build failed,,,,,,,,Unordered: Fix gcc error + warning.
+785a6def3b199d8a2efdcd6d93abbcf9f0c90fb3,2011-08-20,build failed,,,,,,,,Unordered: Remove another use of BOOST_RV_REF for sun.
+3f4d031c43955fdca9849a5e16dc15d78453cc55,2011-08-26,build failed,,,,,,,,Unordered: Remove extra ';'.
+09e856562aa6d8d7770a99ff2aae2a2609d70e18,2011-08-28,build failed,,,,,,,,Unordered: Try to avoid warning on sun.
+395c744d6fb00bfd5beac6f024dd6c4d4f26e70a,2011-08-29,build failed,,,,,,,,Unordered: More portability changes.
+1154b5729a864bbad505725253a5155cedc1ef87,2011-08-31,build failed,,,,,,,,Unordered: Deprecate variadic pair construction emulation.
+965e25c989732705ae7f3ecba1b9750ce7a97e65,2011-09-02,build failed,,,,,,,,Unordered: Try to fix issues with moving non-class types.
+70c39ad5ea88605195da43e6f3a6d96b8ddc3acf,2011-09-07,build failed,,,,,,,,Unordered: Revert [74236].
+340c98d89a65e3910e33412c1c3ac95684983d53,2011-09-22,build failed,,,,,,,,Unordered: New member function detection.
+dac1dc5837800fd6283b5556cbdbab1b1eb05d7b,2011-10-05,build failed,,,,,,,,Unordered: Reorganization to use void pointers and other things.
+3d7b6c64b5c7bd0e5f5d53795000e43f3ae0ff85,2011-10-06,build failed,,,,,,,,Unordered: some more formatting + namespaces
+674d635024cf4af771770209f9119d087c0b94c8,2011-10-08,build failed,,,,,,,,Unordered: Move has_member into nested struct for sun.
+b56a5ead666fa91c06383870fe0fbc904a019765,2011-10-11,build failed,,,,,,,,Unordered: Some inspect fixes.
+c3477b2624361c5e111c19fe6f8e50ab64f8b0e5,2011-10-29,build failed,,,,,,,,Unordered: Don't use SFINAE expression hack on Visual C++.
+2507fd78e3a464a116f2306acd39df59a299ade2,2011-11-30,build failed,,,,,,,,Unordered: Move rebind into 'types' classes.
+d70fcb8c25e680d9fc56ccc6722f0f6bf22ecc2b,2012-01-06,build failed,,,,,,,,Unordered: Make using Boost.Move optional.
+2aee3add16f5be08cf9407789a2c3275e91e3e58,2012-02-11,build failed,,,,,,,,Unordered: Remove some of the smaller primes.
+4e759b4444af458f162497867cc7b6eeaf4fbe22,2012-04-08,build failed,,,,,,,,Unordered: Call policy functions as static functions.
+030fd55d026fb2d4bc260ee973f02ed49ee2a21c,2012-04-08,build failed,,,,,,,,Unordered: Pull forward declarations out of detail/fwd.hpp
+8cb85937c478a5e8422ba57ee1be853337d3462c,2012-05-06,build failed,,,,,,,,"Unordered: Reactivate std::allocator_traits for gcc 4.7, and try for Visual C++ 11"
+cd88cb4a30a7c87021ec39a60a4aef5b5249ca61,2012-05-07,build failed,,,,,,,,Unordered: 'full construct' requires SFINAE expressions.
+24c08646f4619e452ca1e820d3044e2b2fd31060,2012-05-08,build failed,,,,,,,,Unordered: Fix macros for picking construct/destroy.
+1eac47a275b7a8282b694f36c0f0dd58d466d27c,2012-05-21,build failed,,,,,,,,Unordered: Use Boost.Move in a few more places.
+68edec9f9758403e79f32b482ab8060a1432c1dc,2012-07-08,build failed,,,,,,,,"Unordered: Remove old, unused function."
+61516be1db7fbaf188b7f980e663ddcea863ecf1,2012-07-22,build failed,,,,,,,,Unordered: Remove use of try..catch.
+3a163b5449eb34f7238ce44053a4a64363aeb0a0,2012-08-25,build failed,,,,,,,,Unordered: Move some things around.
+f8968ab022ca1ac055b7643ee0f8498928dd1dad,2012-08-25,build failed,,,,,,,,Unordered: Better swap assertion.
+31f3a10d33a51d5a0aa1d97597d9dd6e3a524283,2012-09-03,build failed,,,,,,,,Unordered: Tweak node_construct functions.
+a1bdd82bd50dada7bf29d16e4293b526be523220,2012-09-03,build failed,,,,,,,,Unordered: Get rid of `buckets`.
+8e5ffbbe6cfa62d8d9842390dc95d5047ec8dabb,2012-09-03,build failed,,,,,,,,Unordered: Clean up swap.
+ec6219fe139bae899bcf2d53c152ea79c7751474,2012-09-12,build failed,,,,,,,,Unordered: Fix incorrect assertion.
+53f278312fd6d9e4f8e348e4d35b300ae98758da,2012-09-17,build failed,,,,,,,,Unordered: Get rid of get_start.
+38d8d052d1d1502b0089eb0b8831449be39ee036,2012-11-05,build failed,,,,,,,,Unordered: Simplify pointer use.
+7eefe62efef2a6441a5b83ccae08bf82a0ba8641,2012-11-17,build failed,,,,,,,,Unordered: Remove deprecated variadic pair constructors.
+85d2657ac144923a1110dd0e9ddd53fcc5a77964,2012-11-21,build failed,,,,,,,,Remove usage of deprecated macros
+d603e75d033b01043a099e99249bb05da0641d94,2013-05-13,build failed,,,,,,,,"Use nothrow move construction for function objects, when available."
+29660f9c4d300d9b7c362ee90e903d379f9aaa9f,2013-08-08,build failed,,,,,,,,Remove unused typedef. Refs #8874.
+b4d62e46706c95ad1c869093e915cff81fe701c3,2013-10-24,build failed,,,,,,,,Attempt to work around Visual C++ initializer list overload bug.
+6f3dee13a88622d4a4ed5ffc0447658db7a5e88f,2013-10-28,build failed,,,,,,,,Extend the Visual C++ workaround to 3 parameters.
+57819d1dd98d23f2a59f59bdb752420b5ae11d52,2014-02-23,build failed,,,,,,,,Always use prime policy for integers. Fixes trac #9282.
+2f5d98a0cd8464d429768180ed034f6e08400c6d,2014-07-12,build failed,,,,,,,,Don't use allocator to construct/destroy anything other than elements.
+8c5aa5086d77d62ecf80ea10e0c684335435d6e7,2014-09-02,build failed,,,,,,,,Initialize data_ in value_base default constructor
+0cedaf7ad624beaf55db1faa6a036b8297ac0978,2014-11-08,build failed,,,,,,,,Rename iterator typedef to n_iterator.
+68eb654e7ad0c2e321abb140bc98ebb027ddded0,2014-12-09,build failed,,,,,,,,Merge pull request #4 from tempoz/patch-2
+b4a3c6f46076059bbf9acedb91fe5c1503a2483d,2016-05-30,build failed,,,,,,,,Fix exception safety in assignment for multimap/multiset.
+37a69038318e78370e326eea422c2ec1431810a7,2016-08-14,build failed,,,,,,,,Move node construction into allocate.hpp
+3fe46a1769e55301c18c54bbafce9605263ca159,2016-08-14,build failed,,,,,,,,Cleaner emplace_impl in equivalent.
+09717ffca49aedd95f4ca8a4a388db7046d15178,2016-08-14,build failed,,,,,,,,Remove a few unnecessary internal includes.
+e58370b4fff4f4c920450dfb65daa81a93d1b20e,2016-08-17,build failed,,,,,,,,Move emplace before emplace_impl in equivalent.hpp
+9decbe0cbd1936644dc2b1b4bebd96631ee22aea,2016-09-30,build failed,,,,,,,,Manually write out emplace_args for small numbers.
+ff0228e7523c81e7e8b52ea18e4e05b1d1eb9b3f,2016-10-02,build failed,,,,,,,,Support for std::piecewise_construct.
+b907cee69170a90bd0cc6be146d815ce74ea3acb,2016-10-14,build failed,,,,,,,,Use std::allocator_traits where available.
+9772c01161e2bbfb93127416c6c5429b51b55e30,2016-10-22,build failed,,,,,,,,Replace several uses of iterators with node pointers.
+0d1cfba823b4780879d3e2dbb8720cefbfc87714,2016-10-22,build failed,,,,,,,,Rename functions in allocate.hpp
+a7546e298e0663538e74b6d588445d819070ce44,2016-11-02,build failed,,,,,,,,Support 10 arguments in emplace_args
+67ab88b064e479e5e07f0ecd64fda447988ab258,2017-02-19,build failed,,,,,,,,Combine most of the detail headers into a single header
+ddee1b686a1876379e1dd984f38786855a59342c,2017-02-23,build failed,,,,,,,,Move config and declaration to the start of implementataion.hpp
+79cf0c4bfb4117b3864420ff80bb4b3a5ce11d74,2017-02-23,build failed,,,,,,,,pair_traits for getting pair types without instantiating.
+9c4c3a754a2c1454afdde5c4eee978272bd0b392,2017-02-27,build failed,,,,,,,,Const methods in value_base.
+13322fe8583da439cd66edc093cc5cdc54d3575c,2017-02-27,build failed,,,,,,,,Option to use same node type everywhere.
+91bbd5fcb220302d04f01e2855b72f0ae826869c,2017-03-01,build failed,,,,,,,,Make emplace_args1 constructor explicit
+97b68ea05e6c87a6e8d8eca1011ba66d27ab7f10,2017-04-15,build failed,,,,,,,,Rename (grouped_)table_impl to table_unique/equiv
+2bfc59c46149642d09a12014259f81038e452147,2017-04-15,build failed,,,,,,,,Make node_handler constructor private + additional compile tests
+3ae9930979edcae84815911e68cfed894e0c77dd,2017-04-18,build failed,,,,,,,,Merge branch 'feature/better-construction' into develop
+1e491533fa11c81c5ae11b6e3f749b6b961bd7f3,2017-04-21,build failed,,,,,,,,More consistent std::tuple configuration
+12545204389934fda53ded13f31597564f8209d2,2017-04-23,build failed,,,,,,,,Merge branch 'feature/expand-calls' into develop
+1c8edf0298b2f49aaf73b6aa948556595e7858c9,2017-04-25,build failed,,,,,,,,Remove early exit for empty containers
+61df9479e57fb0885c4315d0580d16d914fd422b,2017-04-25,build failed,,,,,,,,Rename unique_node
+28f529100dfa34571a9d88e1ab8a4c23511b14d5,2017-04-27,build failed,,,,,,,,Merge branch 'feature/simpler-data-structure' into develop
+899248acbfdf984fdcd89f44867d3fcd73b30eb0,2017-04-29,build failed,,,,,,,,Avoid shadow warning on older versions off GCC
+e7a3487df49d965bb47ddcf84986fb983f425609,2017-04-30,build failed,,,,,,,,Remove policy template parameter from local iterators
+338a94e577a5ed4f84b1532e605f1c6525252cb8,2017-05-01,build failed,,,,,,,,Better rvalue emulation support in extractors
+d05619095c00fb5af8f537b64047022c072e60b7,2017-05-03,build failed,,,,,,,,Workaround problems with forward_as_tuple in older versions of clang
+d49d0e90a8737e91f378573421ffb134a08e358c,2017-05-03,build failed,,,,,,,,Delete nodes directly instead of through previous node
+b6c6bfbe7f652ee032d3ae22c0a3e084e7f47f86,2017-05-06,build failed,,,,,,,,Statically handle 'is_unique' in assignments
+e0227618bba0bbc92cf008736a28f0b3d231c8a7,2017-05-17,build failed,,,,,,,,Move a few things around to match the order in the standard
+7775aa83df4504f3b5e5544a928cc644a51cc97d,2017-05-25,build failed,,,,,,,,Decrease the limit for SunOS workaround
+6b5b968b97fef99c462244502b95daf528d9637c,2017-10-05,build failed,,,,,,,,Format with clang-format 4.0
+978944fab2389bc9817e185e6b4511a7bae952c0,2017-10-05,build failed,,,,,,,,Use same code for move constructing all containers
+b50e0d610f96780d5551bcdc20bf1028a09f7536,2017-12-19,build failed,,,,,,,,Initial implementation of template deduction guides
+9d558b010d4029a2e4da1d9754c5c9a908db97b7,2017-12-28,build failed,,,,,,,,Reformat
+5854090dc79d73657fe2589eec73af0171c452b3,2018-01-05,build failed,,,,,,,,Swap noexcept support
+00a4185cf1875e8c3a864a2188f37e3aa1f2b2fd,2018-01-08,build failed,,,,,,,,Reformat
+ea599a66b7a053388922e75c17fd9af051021695,2018-01-23,build failed,,,,,,,,Disable 'conditional expression is constant' on older Visual C++
+09be9bae046d8f795bad286795bb2ca8d0f77139,2018-01-27,build failed,,,,,,,,"Use boost::is_nothrow_swappable, now that it's available everywhere"
+4a90ae5b0f0707e0164a6946ef5d5e69e2dea2e6,2021-11-19,build failed,,,,,,,,Merge pull request #38 from LeonineKing1199/ambiguous-reversed-operator
+6249660e1f733765b2554d9bfa5f46426dad0bc2,2021-11-30,build failed,,,,,,,,Merge pull request #51 from LeonineKing1199/heterogeneous-find
+ff3f5067c85c8429ac50180b744e9e334b61fa11,2021-12-08,build failed,,,,,,,,Merge pull request #56 from LeonineKing1199/feature/allocator-traits
+973c72bdf0fe892d421d75ef9d0f544b1a975faf,2021-12-20,build failed,,,,,,,,Merge pull request #61 from cmazakas/multimap-heterogeneous-equal-range
+79ab9800c04192035b3f72e72d16e6ffa4d542b0,2021-12-23,build failed,,,,,,,,Merge pull request #65 from cmazakas/set-heterogeneous-find
+ce6ca0cf9d2cf50643b88443fdb39a58323dbb6a,2022-01-03,build failed,,,,,,,,Merge pull request #69 from cmazakas/multiset-heterogeneous-find
+b797862a91d0be0254d3662bb89593bb9dc31e08,2022-01-05,build failed,,,,,,,,Merge pull request #73 from cmazakas/set-heterogeneous-extract
+e1c58b45845ef756fd4a192310f744315d7146cc,2022-01-13,build failed,,,,,,,,Merge pull request #81 from cmazakas/set-contains
+98494420c5d9fbf10045faa7b6dc23aa1e0081d1,2022-01-18,build failed,,,,,,,,Add a BOOST_ASSERT to mix64_policy to check that the bucket_count is a power of two
+2f331b7a8b42ce8579f17aa2f019a21ebec271cd,2022-01-19,build failed,,,,,,,,Update mix64_policy to use Fibonacci hashing
+3dc83e4075aeb6f2733b00067e91cb3c6e23b04b,2022-02-24,build failed,,,,,,,,Merge pull request #105 from cmazakas/feature/erase_if
+712d20079a683129eb1f9f62b575fa996d081488,2022-06-02,build failed,,,,,,,,Fix alignment_of include
+20ac32c34cc6b213aa57fde082d693cbfb315100,2022-06-09,build failed,,,,,,,,Merge pull request #114 from Flamefire/ci
+fb733483c6d2c3624839974ff2531bb0b304c4e5,2022-06-26,build failed,,,,,,,,made fast_modulo universally available in 64 bits and never used in 32 bits
+010dfa52e35c6048b3d2c2bf95f5df1f5976757b,2022-08-31,build failed,,,,,,,,Merge pull request #143 from cmazakas/feature/no-alloc-default-construction
+ad352a6703e062650b7d9bb8fa7a8988ef02d6ef,2022-09-26,build failed,,,,,,,,Fix cast warning in mark_overflow()
+ba5cbd5ca60c30a8185f849e58ae38e40ee07d03,2022-09-26,build failed,,,,,,,,Add simple initial draft of unordered_flat_map
+b64b88eb654a9a147a75491724b46d1591d3ad80,2022-09-27,build failed,,,,,,,,Add intial erase() impl for benchmarks
+f4940d9344566ee4db4d3ca0adc367fa1f3427e2,2022-09-28,build failed,,,,,,,,avoided ugly casts in table_iterator::increment
+5293b328b7d03ad99b0869d3403ca9efe86c1d9a,2022-09-28,build failed,,,,,,,,made emplace_impl rehashing more robust
+c487f246116a7409300318b9af8c55173bca2cf1,2022-09-28,build failed,,,,,,,,honored select_on_container_copy_construction
+85324f9a433cff6d8fae6019c4543224fd4ce86a,2022-09-28,build failed,,,,,,,,made microchange in find_impl to see if it impacts performance
+63fdf675689edc65f2b74211abcfee0788316cba,2022-09-28,build failed,,,,,,,,un-inlined pow2_quadratic_prober memfuns to see it impacts performance
+855d538ea335ba44927730bacfbfee3f9e8f844f,2022-09-28,build failed,,,,,,,,Fix typo in foa table's empty() implementation
+86956b0be13b69b9414efbc324035b4e91163e29,2022-09-29,build failed,,,,,,,,added non-SIMD support
+cb673135d29b02d08dbb4ce840039ae1d9784962,2022-09-29,build failed,,,,,,,,Use static_cast to silence conversion warnings
+6110a0827c3096315387a691af6623324aa53abb,2022-09-29,build failed,,,,,,,,"Fix default initialiation warning for clang-3.7, clang-3.8"
+ac41bf6e864d513e5b5c0316749581011e6bd375,2022-09-30,build failed,,,,,,,,temporarily reverted 6110a0827c3096315387a691af6623324aa53abb
+cec09e1c61ed3cf222f2f5f5d20888eedb84aed5,2022-10-01,build failed,,,,,,,,fixed alignment issues apparent 32bit builds
+b926dbbbe9519a90e0a984c20f8c57f514b9dd9c,2022-10-01,build failed,,,,,,,,eliminated shadowed declaration
+d370ae1095e3b889dbf0cf4e15395f472e9377a4,2022-10-03,build failed,,,,,,,,stopped relying on __STDCPP_DEFAULT_NEW_ALIGNMENT__ for now
+b0c03844016437595bf1b124b62d1ffe41c36586,2022-10-03,build failed,,,,,,,,Fix small typo in `increment()` function to silence VS warnings
+e69bb3aece736b24b60880cc37a9d61f02df1b38,2022-10-04,build failed,,,,,,,,unnamed unused parameters
+8e9b7cf2598773013db2b6e7d3b8d9d6dd4418da,2022-10-04,build failed,,,,,,,,Add move semantics to FOA containers
+48816135df30a7246fdd7e1e8f851a319755200e,2022-10-05,build failed,,,,,,,,refactored move assignment to silence warnings
+c15bd0092dbd6f55eb796cad16e51f2d3f0a2419,2022-10-05,build failed,,,,,,,,introduced init_type/value_type
+a3c6235f3a980ec9dbfcdc6af6b64745dd8985f3,2022-10-05,ok,find (hit),,,,,,,Add insert_hint_tests,59.07
+a3c6235f3a980ec9dbfcdc6af6b64745dd8985f3,2022-10-05,ok,find (miss),,,,,,,Add insert_hint_tests,64.91
+a3c6235f3a980ec9dbfcdc6af6b64745dd8985f3,2022-10-05,ok,insert+erase,,,,,,,Add insert_hint_tests,144.57
+a3c6235f3a980ec9dbfcdc6af6b64745dd8985f3,2022-10-05,ok,operator[] (hit),,,,,,,Add insert_hint_tests,77.04
+f1eb5d2106d666bb7fd620430e4ce48c257605e2,2022-10-06,ok,find (hit),,,,,,,Workaround visibility bug in gcc-6 by un-nesting lambdas,59.07
+f1eb5d2106d666bb7fd620430e4ce48c257605e2,2022-10-06,ok,find (miss),,,,,,,Workaround visibility bug in gcc-6 by un-nesting lambdas,64.91
+f1eb5d2106d666bb7fd620430e4ce48c257605e2,2022-10-06,ok,insert+erase,,,,,,,Workaround visibility bug in gcc-6 by un-nesting lambdas,144.57
+f1eb5d2106d666bb7fd620430e4ce48c257605e2,2022-10-06,ok,operator[] (hit),,,,,,,Workaround visibility bug in gcc-6 by un-nesting lambdas,77.04
+dc7b8f3ff20daf0c2b601dbcdd88186741bf7cf3,2022-10-06,ok,find (hit),,,,,,,Remove extraneous overloads of key_from,59.07
+dc7b8f3ff20daf0c2b601dbcdd88186741bf7cf3,2022-10-06,ok,find (miss),,,,,,,Remove extraneous overloads of key_from,64.91
+dc7b8f3ff20daf0c2b601dbcdd88186741bf7cf3,2022-10-06,ok,insert+erase,,,,,,,Remove extraneous overloads of key_from,144.57
+dc7b8f3ff20daf0c2b601dbcdd88186741bf7cf3,2022-10-06,ok,operator[] (hit),,,,,,,Remove extraneous overloads of key_from,77.04
+74ca1e50f3eabc0997c0b7504d828a7cd92822d7,2022-10-07,ok,find (hit),,,,,,,return one lambda expression back in place (related to f1eb5d2106d666bb7fd620430e4ce48c257605e2),59.07
+74ca1e50f3eabc0997c0b7504d828a7cd92822d7,2022-10-07,ok,find (miss),,,,,,,return one lambda expression back in place (related to f1eb5d2106d666bb7fd620430e4ce48c257605e2),64.91
+74ca1e50f3eabc0997c0b7504d828a7cd92822d7,2022-10-07,ok,insert+erase,,,,,,,return one lambda expression back in place (related to f1eb5d2106d666bb7fd620430e4ce48c257605e2),144.57
+74ca1e50f3eabc0997c0b7504d828a7cd92822d7,2022-10-07,ok,operator[] (hit),,,,,,,return one lambda expression back in place (related to f1eb5d2106d666bb7fd620430e4ce48c257605e2),77.04
+38f9cb750aa45b9b69125ea3387b517f5f60cc15,2022-10-07,ok,find (hit),,,,,,,s/value_type/init_type,59.07
+38f9cb750aa45b9b69125ea3387b517f5f60cc15,2022-10-07,ok,find (miss),,,,,,,s/value_type/init_type,64.91
+38f9cb750aa45b9b69125ea3387b517f5f60cc15,2022-10-07,ok,insert+erase,,,,,,,s/value_type/init_type,144.57
+38f9cb750aa45b9b69125ea3387b517f5f60cc15,2022-10-07,ok,operator[] (hit),,,,,,,s/value_type/init_type,77.04
+6be32f3ba4e7bf7f7f0e8181b9ff450978d1aa47,2022-10-07,ok,find (hit),,,,,,,reverted 74c2ae627a8694ce6c3922cbd7fce8b7db998814 and explicitly silenced VS warning,59.07
+6be32f3ba4e7bf7f7f0e8181b9ff450978d1aa47,2022-10-07,ok,find (miss),,,,,,,reverted 74c2ae627a8694ce6c3922cbd7fce8b7db998814 and explicitly silenced VS warning,64.91
+6be32f3ba4e7bf7f7f0e8181b9ff450978d1aa47,2022-10-07,ok,insert+erase,,,,,,,reverted 74c2ae627a8694ce6c3922cbd7fce8b7db998814 and explicitly silenced VS warning,144.57
+6be32f3ba4e7bf7f7f0e8181b9ff450978d1aa47,2022-10-07,ok,operator[] (hit),,,,,,,reverted 74c2ae627a8694ce6c3922cbd7fce8b7db998814 and explicitly silenced VS warning,77.04
+b964fa777cde8ffd736a41a0b03bf10a4ad61e8b,2022-10-07,ok,find (hit),,,,,,,Add at_tests,59.07
+b964fa777cde8ffd736a41a0b03bf10a4ad61e8b,2022-10-07,ok,find (miss),,,,,,,Add at_tests,64.91
+b964fa777cde8ffd736a41a0b03bf10a4ad61e8b,2022-10-07,ok,insert+erase,,,,,,,Add at_tests,144.57
+b964fa777cde8ffd736a41a0b03bf10a4ad61e8b,2022-10-07,ok,operator[] (hit),,,,,,,Add at_tests,77.04
+9560d107718218858548c46ac974a3d0eea2f079,2022-10-07,ok,find (hit),,,,,,,Fix shadowing warning in early gcc,59.07
+9560d107718218858548c46ac974a3d0eea2f079,2022-10-07,ok,find (miss),,,,,,,Fix shadowing warning in early gcc,64.91
+9560d107718218858548c46ac974a3d0eea2f079,2022-10-07,ok,insert+erase,,,,,,,Fix shadowing warning in early gcc,144.57
+9560d107718218858548c46ac974a3d0eea2f079,2022-10-07,ok,operator[] (hit),,,,,,,Fix shadowing warning in early gcc,77.04
+16f86b0770752d517942ddbdfc09c8db58d5c232,2022-10-08,ok,find (hit),,,,,,,relied on implicit conversion for second overload of value_from,59.07
+16f86b0770752d517942ddbdfc09c8db58d5c232,2022-10-08,ok,find (miss),,,,,,,relied on implicit conversion for second overload of value_from,64.91
+16f86b0770752d517942ddbdfc09c8db58d5c232,2022-10-08,ok,insert+erase,,,,,,,relied on implicit conversion for second overload of value_from,144.57
+16f86b0770752d517942ddbdfc09c8db58d5c232,2022-10-08,ok,operator[] (hit),,,,,,,relied on implicit conversion for second overload of value_from,77.04
+3913fce63855d70e417b6339e0931e0f44f023a2,2022-10-08,ok,find (hit),,,,,,,dropped foa_mixer in favor of internal mix policy governed by hash_traits,69.06
+3913fce63855d70e417b6339e0931e0f44f023a2,2022-10-08,ok,find (miss),,,,,,,dropped foa_mixer in favor of internal mix policy governed by hash_traits,74.67
+3913fce63855d70e417b6339e0931e0f44f023a2,2022-10-08,ok,insert+erase,,,,,,,dropped foa_mixer in favor of internal mix policy governed by hash_traits,153.15
+3913fce63855d70e417b6339e0931e0f44f023a2,2022-10-08,ok,operator[] (hit),,,,,,,dropped foa_mixer in favor of internal mix policy governed by hash_traits,86.04
+32a7ed74e838ac4041683f1851af7365eba1fa9a,2022-10-08,ok,find (hit),,,,,,,added missing const qualifier,69.06
+32a7ed74e838ac4041683f1851af7365eba1fa9a,2022-10-08,ok,find (miss),,,,,,,added missing const qualifier,74.67
+32a7ed74e838ac4041683f1851af7365eba1fa9a,2022-10-08,ok,insert+erase,,,,,,,added missing const qualifier,153.15
+32a7ed74e838ac4041683f1851af7365eba1fa9a,2022-10-08,ok,operator[] (hit),,,,,,,added missing const qualifier,86.04
+2955a966cf5a7b3445f5ed52da995cd0b9f102c5,2022-10-10,ok,find (hit),,,,,,,shut down unavoidable VS warning,69.06
+2955a966cf5a7b3445f5ed52da995cd0b9f102c5,2022-10-10,ok,find (miss),,,,,,,shut down unavoidable VS warning,74.67
+2955a966cf5a7b3445f5ed52da995cd0b9f102c5,2022-10-10,ok,insert+erase,,,,,,,shut down unavoidable VS warning,153.15
+2955a966cf5a7b3445f5ed52da995cd0b9f102c5,2022-10-10,ok,operator[] (hit),,,,,,,shut down unavoidable VS warning,86.04
+f776ffa0085aa1e6602253d94fe026a1c17ea336,2022-10-10,ok,find (hit),,,,,,,removed temporary const ref in emplace_impl,69.06
+f776ffa0085aa1e6602253d94fe026a1c17ea336,2022-10-10,ok,find (miss),,,,,,,removed temporary const ref in emplace_impl,74.67
+f776ffa0085aa1e6602253d94fe026a1c17ea336,2022-10-10,ok,insert+erase,,,,,,,removed temporary const ref in emplace_impl,153.15
+f776ffa0085aa1e6602253d94fe026a1c17ea336,2022-10-10,ok,operator[] (hit),,,,,,,removed temporary const ref in emplace_impl,86.04
+1fa2e84774aaab1314c571be51eca17ca5ee5a36,2022-10-10,ok,find (hit),,,,,,,reverted 7caab660113c2c2d1b62024dadd21942ec5ef267 and f776ffa0085aa1e6602253d94fe026a1c17ea336,69.06
+1fa2e84774aaab1314c571be51eca17ca5ee5a36,2022-10-10,ok,find (miss),,,,,,,reverted 7caab660113c2c2d1b62024dadd21942ec5ef267 and f776ffa0085aa1e6602253d94fe026a1c17ea336,74.67
+1fa2e84774aaab1314c571be51eca17ca5ee5a36,2022-10-10,ok,insert+erase,,,,,,,reverted 7caab660113c2c2d1b62024dadd21942ec5ef267 and f776ffa0085aa1e6602253d94fe026a1c17ea336,153.15
+1fa2e84774aaab1314c571be51eca17ca5ee5a36,2022-10-10,ok,operator[] (hit),,,,,,,reverted 7caab660113c2c2d1b62024dadd21942ec5ef267 and f776ffa0085aa1e6602253d94fe026a1c17ea336,86.04
+c4cc805063bfd0c78e8f0febaea23347ad10b1a5,2022-10-10,ok,find (hit),,,,,,,embed xmx code directly into xmx_mix,69.06
+c4cc805063bfd0c78e8f0febaea23347ad10b1a5,2022-10-10,ok,find (miss),,,,,,,embed xmx code directly into xmx_mix,74.67
+c4cc805063bfd0c78e8f0febaea23347ad10b1a5,2022-10-10,ok,insert+erase,,,,,,,embed xmx code directly into xmx_mix,153.15
+c4cc805063bfd0c78e8f0febaea23347ad10b1a5,2022-10-10,ok,operator[] (hit),,,,,,,embed xmx code directly into xmx_mix,86.04
+58b78f8ff0b351ae440adf819123a38a94277ffd,2022-10-10,ok,find (hit),,,,,,,Add transparent_tests,69.06
+58b78f8ff0b351ae440adf819123a38a94277ffd,2022-10-10,ok,find (miss),,,,,,,Add transparent_tests,74.67
+58b78f8ff0b351ae440adf819123a38a94277ffd,2022-10-10,ok,insert+erase,,,,,,,Add transparent_tests,153.15
+58b78f8ff0b351ae440adf819123a38a94277ffd,2022-10-10,ok,operator[] (hit),,,,,,,Add transparent_tests,86.04
+e9a94cb62a2b0395e7ce9efc17d42651362fb328,2022-10-10,ok,find (hit),,,,,,,Force inlining for find() member functions in the flat containers,69.06
+e9a94cb62a2b0395e7ce9efc17d42651362fb328,2022-10-10,ok,find (miss),,,,,,,Force inlining for find() member functions in the flat containers,74.67
+e9a94cb62a2b0395e7ce9efc17d42651362fb328,2022-10-10,ok,insert+erase,,,,,,,Force inlining for find() member functions in the flat containers,153.15
+e9a94cb62a2b0395e7ce9efc17d42651362fb328,2022-10-10,ok,operator[] (hit),,,,,,,Force inlining for find() member functions in the flat containers,86.04
+545ad4f7adf8b97e8bdb013d7dae976848615f66,2022-10-11,ok,find (hit),,,,,,,temporarily s/init_type/value_type in brace-init insert,69.06
+545ad4f7adf8b97e8bdb013d7dae976848615f66,2022-10-11,ok,find (miss),,,,,,,temporarily s/init_type/value_type in brace-init insert,74.67
+545ad4f7adf8b97e8bdb013d7dae976848615f66,2022-10-11,ok,insert+erase,,,,,,,temporarily s/init_type/value_type in brace-init insert,153.15
+545ad4f7adf8b97e8bdb013d7dae976848615f66,2022-10-11,ok,operator[] (hit),,,,,,,temporarily s/init_type/value_type in brace-init insert,86.04
+becd6078b3c58264966aca5f7f1c10893ed30af6,2022-10-11,ok,find (hit),,,,,,,temporarily used value_type&& for brace-init insert,69.06
+becd6078b3c58264966aca5f7f1c10893ed30af6,2022-10-11,ok,find (miss),,,,,,,temporarily used value_type&& for brace-init insert,74.67
+becd6078b3c58264966aca5f7f1c10893ed30af6,2022-10-11,ok,insert+erase,,,,,,,temporarily used value_type&& for brace-init insert,153.15
+becd6078b3c58264966aca5f7f1c10893ed30af6,2022-10-11,ok,operator[] (hit),,,,,,,temporarily used value_type&& for brace-init insert,86.04
+35118b5a71952dee234a3e3f2a929e0c852495f6,2022-10-11,ok,find (hit),,,,,,,reverted,69.06
+35118b5a71952dee234a3e3f2a929e0c852495f6,2022-10-11,ok,find (miss),,,,,,,reverted,74.67
+35118b5a71952dee234a3e3f2a929e0c852495f6,2022-10-11,ok,insert+erase,,,,,,,reverted,153.15
+35118b5a71952dee234a3e3f2a929e0c852495f6,2022-10-11,ok,operator[] (hit),,,,,,,reverted,86.04
+334dcb91acf0af6f79a23b1243cd182b6f40c26e,2022-10-12,ok,find (hit),,,,,,,removed unused typedef,69.06
+334dcb91acf0af6f79a23b1243cd182b6f40c26e,2022-10-12,ok,find (miss),,,,,,,removed unused typedef,74.67
+334dcb91acf0af6f79a23b1243cd182b6f40c26e,2022-10-12,ok,insert+erase,,,,,,,removed unused typedef,153.15
+334dcb91acf0af6f79a23b1243cd182b6f40c26e,2022-10-12,ok,operator[] (hit),,,,,,,removed unused typedef,86.04
+3f9bd00f014cb2e1cdd6073ebceb0a2c161d3029,2022-10-12,ok,find (hit),,,,,,,Add compile_map tests,69.06
+3f9bd00f014cb2e1cdd6073ebceb0a2c161d3029,2022-10-12,ok,find (miss),,,,,,,Add compile_map tests,74.67
+3f9bd00f014cb2e1cdd6073ebceb0a2c161d3029,2022-10-12,ok,insert+erase,,,,,,,Add compile_map tests,153.15
+3f9bd00f014cb2e1cdd6073ebceb0a2c161d3029,2022-10-12,ok,operator[] (hit),,,,,,,Add compile_map tests,86.04
+8c58ffe546e6823b75e2b6e3cd995628e2d4c7a8,2022-10-14,ok,find (hit),,,,,,,made sure BOOST_[UN]LIKELY is passed a boolean everywhere,69.06
+8c58ffe546e6823b75e2b6e3cd995628e2d4c7a8,2022-10-14,ok,find (miss),,,,,,,made sure BOOST_[UN]LIKELY is passed a boolean everywhere,74.67
+8c58ffe546e6823b75e2b6e3cd995628e2d4c7a8,2022-10-14,ok,insert+erase,,,,,,,made sure BOOST_[UN]LIKELY is passed a boolean everywhere,153.15
+8c58ffe546e6823b75e2b6e3cd995628e2d4c7a8,2022-10-14,ok,operator[] (hit),,,,,,,made sure BOOST_[UN]LIKELY is passed a boolean everywhere,86.04
+fc5c8c3669ec207f7484b0bd3b2bf0aba7fe9324,2022-10-14,ok,find (hit),,,,,,,removed unused typedef,69.06
+fc5c8c3669ec207f7484b0bd3b2bf0aba7fe9324,2022-10-14,ok,find (miss),,,,,,,removed unused typedef,74.67
+fc5c8c3669ec207f7484b0bd3b2bf0aba7fe9324,2022-10-14,ok,insert+erase,,,,,,,removed unused typedef,153.15
+fc5c8c3669ec207f7484b0bd3b2bf0aba7fe9324,2022-10-14,ok,operator[] (hit),,,,,,,removed unused typedef,86.04
+e3c91ad812224081a46eb132081840b18c56d84e,2022-10-14,ok,find (hit),,,,,,,Add erase_if tests,69.06
+e3c91ad812224081a46eb132081840b18c56d84e,2022-10-14,ok,find (miss),,,,,,,Add erase_if tests,74.67
+e3c91ad812224081a46eb132081840b18c56d84e,2022-10-14,ok,insert+erase,,,,,,,Add erase_if tests,153.15
+e3c91ad812224081a46eb132081840b18c56d84e,2022-10-14,ok,operator[] (hit),,,,,,,Add erase_if tests,86.04
+3bf28d7b61c52701824fd9906d5a38e3c61c1856,2022-10-15,ok,find (hit),,,,,,,stylistic,69.06
+3bf28d7b61c52701824fd9906d5a38e3c61c1856,2022-10-15,ok,find (miss),,,,,,,stylistic,74.67
+3bf28d7b61c52701824fd9906d5a38e3c61c1856,2022-10-15,ok,insert+erase,,,,,,,stylistic,153.15
+3bf28d7b61c52701824fd9906d5a38e3c61c1856,2022-10-15,ok,operator[] (hit),,,,,,,stylistic,86.04
+3a0b75236319db72eb67e6acfdcd075f8f26666c,2022-10-15,ok,find (hit),,,,,,,reorganized function definitions,69.06
+3a0b75236319db72eb67e6acfdcd075f8f26666c,2022-10-15,ok,find (miss),,,,,,,reorganized function definitions,74.67
+3a0b75236319db72eb67e6acfdcd075f8f26666c,2022-10-15,ok,insert+erase,,,,,,,reorganized function definitions,153.15
+3a0b75236319db72eb67e6acfdcd075f8f26666c,2022-10-15,ok,operator[] (hit),,,,,,,reorganized function definitions,86.04
+5535faf3ccc19a3cb8034b1c0a498b5b0b4147ec,2022-10-15,ok,find (hit),,,,,,,introduced internal noshrink_reserve,69.06
+5535faf3ccc19a3cb8034b1c0a498b5b0b4147ec,2022-10-15,ok,find (miss),,,,,,,introduced internal noshrink_reserve,74.67
+5535faf3ccc19a3cb8034b1c0a498b5b0b4147ec,2022-10-15,ok,insert+erase,,,,,,,introduced internal noshrink_reserve,153.15
+5535faf3ccc19a3cb8034b1c0a498b5b0b4147ec,2022-10-15,ok,operator[] (hit),,,,,,,introduced internal noshrink_reserve,86.04
+0389e0bc16416446c05fe8d509d4b79432913bb1,2022-10-16,ok,find (hit),,,,,,,reverted,69.06
+0389e0bc16416446c05fe8d509d4b79432913bb1,2022-10-16,ok,find (miss),,,,,,,reverted,74.67
+0389e0bc16416446c05fe8d509d4b79432913bb1,2022-10-16,ok,insert+erase,,,,,,,reverted,153.15
+0389e0bc16416446c05fe8d509d4b79432913bb1,2022-10-16,ok,operator[] (hit),,,,,,,reverted,86.04
+eb5351b2c6b814e833dc185d2659ab5dd847b9e4,2022-10-17,ok,find (hit),,,,,,,used regular method for group resetting in clear,69.06
+eb5351b2c6b814e833dc185d2659ab5dd847b9e4,2022-10-17,ok,find (miss),,,,,,,used regular method for group resetting in clear,74.67
+eb5351b2c6b814e833dc185d2659ab5dd847b9e4,2022-10-17,ok,insert+erase,,,,,,,used regular method for group resetting in clear,153.15
+eb5351b2c6b814e833dc185d2659ab5dd847b9e4,2022-10-17,ok,operator[] (hit),,,,,,,used regular method for group resetting in clear,86.04
+ac2bc8d615e9a0e9c7936437c1c4fde650c8fa96,2022-10-18,ok,find (hit),,,,,,,made group initialization more straightforward,69.06
+ac2bc8d615e9a0e9c7936437c1c4fde650c8fa96,2022-10-18,ok,find (miss),,,,,,,made group initialization more straightforward,74.67
+ac2bc8d615e9a0e9c7936437c1c4fde650c8fa96,2022-10-18,ok,insert+erase,,,,,,,made group initialization more straightforward,153.15
+ac2bc8d615e9a0e9c7936437c1c4fde650c8fa96,2022-10-18,ok,operator[] (hit),,,,,,,made group initialization more straightforward,86.04
+c76f44a8b3c2d5e5e5fbf1f45dedb761f1040abf,2022-10-18,ok,find (hit),,,,,,,hardened unchecked_rehash against exceptions thrown in the middle of value move construction,69.06
+c76f44a8b3c2d5e5e5fbf1f45dedb761f1040abf,2022-10-18,ok,find (miss),,,,,,,hardened unchecked_rehash against exceptions thrown in the middle of value move construction,74.67
+c76f44a8b3c2d5e5e5fbf1f45dedb761f1040abf,2022-10-18,ok,insert+erase,,,,,,,hardened unchecked_rehash against exceptions thrown in the middle of value move construction,153.15
+c76f44a8b3c2d5e5e5fbf1f45dedb761f1040abf,2022-10-18,ok,operator[] (hit),,,,,,,hardened unchecked_rehash against exceptions thrown in the middle of value move construction,86.04
+8e42367a6231193259b09fe79ab4191973b5211b,2022-10-18,ok,find (hit),,,,,,,stylistic,69.06
+8e42367a6231193259b09fe79ab4191973b5211b,2022-10-18,ok,find (miss),,,,,,,stylistic,74.67
+8e42367a6231193259b09fe79ab4191973b5211b,2022-10-18,ok,insert+erase,,,,,,,stylistic,153.15
+8e42367a6231193259b09fe79ab4191973b5211b,2022-10-18,ok,operator[] (hit),,,,,,,stylistic,86.04
+8a1562cc7819925422d82dc5bc0c14b86b100fcc,2022-10-19,ok,find (hit),,,,,,,implemented strong exception guarantee on rehash and single insert/emplace,69.06
+8a1562cc7819925422d82dc5bc0c14b86b100fcc,2022-10-19,ok,find (miss),,,,,,,implemented strong exception guarantee on rehash and single insert/emplace,74.67
+8a1562cc7819925422d82dc5bc0c14b86b100fcc,2022-10-19,ok,insert+erase,,,,,,,implemented strong exception guarantee on rehash and single insert/emplace,164.15
+8a1562cc7819925422d82dc5bc0c14b86b100fcc,2022-10-19,ok,operator[] (hit),,,,,,,implemented strong exception guarantee on rehash and single insert/emplace,95.04
+f3353c9be3f019951c6727252db6a13a67000471,2022-10-19,ok,find (hit),,,,,,,made sure source values are destroyed on copy-based rehash,69.06
+f3353c9be3f019951c6727252db6a13a67000471,2022-10-19,ok,find (miss),,,,,,,made sure source values are destroyed on copy-based rehash,74.67
+f3353c9be3f019951c6727252db6a13a67000471,2022-10-19,ok,insert+erase,,,,,,,made sure source values are destroyed on copy-based rehash,164.15
+f3353c9be3f019951c6727252db6a13a67000471,2022-10-19,ok,operator[] (hit),,,,,,,made sure source values are destroyed on copy-based rehash,95.04
+c1d5902911425f5760dfc7d211c6e738b5c26b6f,2022-10-20,ok,find (hit),,,,,,,Remove unnecessary value_type conversion by expanding overloads for value_from(),69.06
+c1d5902911425f5760dfc7d211c6e738b5c26b6f,2022-10-20,ok,find (miss),,,,,,,Remove unnecessary value_type conversion by expanding overloads for value_from(),74.67
+c1d5902911425f5760dfc7d211c6e738b5c26b6f,2022-10-20,ok,insert+erase,,,,,,,Remove unnecessary value_type conversion by expanding overloads for value_from(),164.15
+c1d5902911425f5760dfc7d211c6e738b5c26b6f,2022-10-20,ok,operator[] (hit),,,,,,,Remove unnecessary value_type conversion by expanding overloads for value_from(),95.04
+fe32f153a2b4a40a852a71ae6091803978f24c1a,2022-10-20,ok,find (hit),,,,,,,Add draft of insert(init_type&&) for unordered_flat_map,69.06
+fe32f153a2b4a40a852a71ae6091803978f24c1a,2022-10-20,ok,find (miss),,,,,,,Add draft of insert(init_type&&) for unordered_flat_map,74.67
+fe32f153a2b4a40a852a71ae6091803978f24c1a,2022-10-20,ok,insert+erase,,,,,,,Add draft of insert(init_type&&) for unordered_flat_map,164.15
+fe32f153a2b4a40a852a71ae6091803978f24c1a,2022-10-20,ok,operator[] (hit),,,,,,,Add draft of insert(init_type&&) for unordered_flat_map,95.04
+2aa62c63c154870fd8b799f0f319e804b90a363c,2022-10-21,ok,find (hit),,,,,,,stylistic,69.06
+2aa62c63c154870fd8b799f0f319e804b90a363c,2022-10-21,ok,find (miss),,,,,,,stylistic,74.67
+2aa62c63c154870fd8b799f0f319e804b90a363c,2022-10-21,ok,insert+erase,,,,,,,stylistic,164.15
+2aa62c63c154870fd8b799f0f319e804b90a363c,2022-10-21,ok,operator[] (hit),,,,,,,stylistic,95.04
+627ffe4ed7a8e6e826fadec63d371a419682e9a6,2022-10-21,build failed,,,,,,,,Push up partial refactor for older msvc
+d8f226d429809ea41f0b6c8ac83499c018717335,2022-10-22,ok,find (hit),,,,,,,"reverted ""Push up partial refactor for older msvc""",69.06
+d8f226d429809ea41f0b6c8ac83499c018717335,2022-10-22,ok,find (miss),,,,,,,"reverted ""Push up partial refactor for older msvc""",74.67
+d8f226d429809ea41f0b6c8ac83499c018717335,2022-10-22,ok,insert+erase,,,,,,,"reverted ""Push up partial refactor for older msvc""",164.15
+d8f226d429809ea41f0b6c8ac83499c018717335,2022-10-22,ok,operator[] (hit),,,,,,,"reverted ""Push up partial refactor for older msvc""",95.04
+7857582ea2225e59963192da10f42d534b7f9374,2022-11-07,ok,find (hit),,,,,,,Merge branch 'develop' into feature/foa_rc_docs,69.06
+7857582ea2225e59963192da10f42d534b7f9374,2022-11-07,ok,find (miss),,,,,,,Merge branch 'develop' into feature/foa_rc_docs,74.67
+7857582ea2225e59963192da10f42d534b7f9374,2022-11-07,ok,insert+erase,,,,,,,Merge branch 'develop' into feature/foa_rc_docs,169.0
+7857582ea2225e59963192da10f42d534b7f9374,2022-11-07,ok,operator[] (hit),,,,,,,Merge branch 'develop' into feature/foa_rc_docs,91.04
+5aff5b943f1255716a9dfecc243127234291c59e,2022-11-22,ok,find (hit),,,,,,,Fix Missing CTAD (#169),69.06
+5aff5b943f1255716a9dfecc243127234291c59e,2022-11-22,ok,find (miss),,,,,,,Fix Missing CTAD (#169),74.67
+5aff5b943f1255716a9dfecc243127234291c59e,2022-11-22,ok,insert+erase,,,,,,,Fix Missing CTAD (#169),169.0
+5aff5b943f1255716a9dfecc243127234291c59e,2022-11-22,ok,operator[] (hit),,,,,,,Fix Missing CTAD (#169),91.04
+879de5fab8c1a04058a5b8316203f2f902d09fe6,2022-11-25,ok,find (hit),,,,,,,Add BOOST_FORCEINLINE to unordered_flat_map::operator[],69.06
+879de5fab8c1a04058a5b8316203f2f902d09fe6,2022-11-25,ok,find (miss),,,,,,,Add BOOST_FORCEINLINE to unordered_flat_map::operator[],74.67
+879de5fab8c1a04058a5b8316203f2f902d09fe6,2022-11-25,ok,insert+erase,,,,,,,Add BOOST_FORCEINLINE to unordered_flat_map::operator[],169.0
+879de5fab8c1a04058a5b8316203f2f902d09fe6,2022-11-25,ok,operator[] (hit),,,,,,,Add BOOST_FORCEINLINE to unordered_flat_map::operator[],81.04
+79dc3bb6d42681ae77623597878e7ecf3d73170c,2022-11-25,ok,find (hit),,,,,,,"Add BOOST_FORCEINLINE to unordered_flat_set::count, unordered_flat_map::count",69.06
+79dc3bb6d42681ae77623597878e7ecf3d73170c,2022-11-25,ok,find (miss),,,,,,,"Add BOOST_FORCEINLINE to unordered_flat_set::count, unordered_flat_map::count",74.67
+79dc3bb6d42681ae77623597878e7ecf3d73170c,2022-11-25,ok,insert+erase,,,,,,,"Add BOOST_FORCEINLINE to unordered_flat_set::count, unordered_flat_map::count",169.0
+79dc3bb6d42681ae77623597878e7ecf3d73170c,2022-11-25,ok,operator[] (hit),,,,,,,"Add BOOST_FORCEINLINE to unordered_flat_set::count, unordered_flat_map::count",81.04
+d0369942373abb64eef1459a8c0ddd8af6436dfd,2022-11-28,ok,find (hit),,,,,,,Merge pull request #165 from cmazakas/fix/msvc-rtc,69.06
+d0369942373abb64eef1459a8c0ddd8af6436dfd,2022-11-28,ok,find (miss),,,,,,,Merge pull request #165 from cmazakas/fix/msvc-rtc,74.67
+d0369942373abb64eef1459a8c0ddd8af6436dfd,2022-11-28,ok,insert+erase,,,,,,,Merge pull request #165 from cmazakas/fix/msvc-rtc,169.0
+d0369942373abb64eef1459a8c0ddd8af6436dfd,2022-11-28,ok,operator[] (hit),,,,,,,Merge pull request #165 from cmazakas/fix/msvc-rtc,81.04
+7040c57750e97fd1b09ac39ca6222ad915ec8de8,2022-12-08,ok,find (hit),,,,,,,Add mulx_mix,69.06
+7040c57750e97fd1b09ac39ca6222ad915ec8de8,2022-12-08,ok,find (miss),,,,,,,Add mulx_mix,74.67
+7040c57750e97fd1b09ac39ca6222ad915ec8de8,2022-12-08,ok,insert+erase,,,,,,,Add mulx_mix,169.0
+7040c57750e97fd1b09ac39ca6222ad915ec8de8,2022-12-08,ok,operator[] (hit),,,,,,,Add mulx_mix,81.04
+e56aac2e98a53e8abf25c0b98866ae0155c44c7b,2023-01-27,ok,find (hit),,,,,,,Merge branch 'develop' into feature/mulx,69.06
+e56aac2e98a53e8abf25c0b98866ae0155c44c7b,2023-01-27,ok,find (miss),,,,,,,Merge branch 'develop' into feature/mulx,74.67
+e56aac2e98a53e8abf25c0b98866ae0155c44c7b,2023-01-27,ok,insert+erase,,,,,,,Merge branch 'develop' into feature/mulx,169.0
+e56aac2e98a53e8abf25c0b98866ae0155c44c7b,2023-01-27,ok,operator[] (hit),,,,,,,Merge branch 'develop' into feature/mulx,73.04
+9bc471310e24c3b62295b24619fdbf984b374cd5,2023-01-27,ok,find (hit),,,,,,,Update mulx multipliers,69.06
+9bc471310e24c3b62295b24619fdbf984b374cd5,2023-01-27,ok,find (miss),,,,,,,Update mulx multipliers,74.67
+9bc471310e24c3b62295b24619fdbf984b374cd5,2023-01-27,ok,insert+erase,,,,,,,Update mulx multipliers,169.0
+9bc471310e24c3b62295b24619fdbf984b374cd5,2023-01-27,ok,operator[] (hit),,,,,,,Update mulx multipliers,73.04
+0f8dd003a3ff051e29662ba1c94fb5c6d361a54a,2023-01-27,ok,find (hit),,,,,,,Switch default mixing policy from xmx to mulx,68.07
+0f8dd003a3ff051e29662ba1c94fb5c6d361a54a,2023-01-27,ok,find (miss),,,,,,,Switch default mixing policy from xmx to mulx,73.76
+0f8dd003a3ff051e29662ba1c94fb5c6d361a54a,2023-01-27,ok,insert+erase,,,,,,,Switch default mixing policy from xmx to mulx,164.8
+0f8dd003a3ff051e29662ba1c94fb5c6d361a54a,2023-01-27,ok,operator[] (hit),,,,,,,Switch default mixing policy from xmx to mulx,70.04
+3b3ba7d6f782b473c87c1691bfd2b0bded302b49,2023-01-27,ok,find (hit),,,,,,,Avoid false -Warray-bounds positive under mingw32 gcc-12,68.07
+3b3ba7d6f782b473c87c1691bfd2b0bded302b49,2023-01-27,ok,find (miss),,,,,,,Avoid false -Warray-bounds positive under mingw32 gcc-12,73.76
+3b3ba7d6f782b473c87c1691bfd2b0bded302b49,2023-01-27,ok,insert+erase,,,,,,,Avoid false -Warray-bounds positive under mingw32 gcc-12,165.8
+3b3ba7d6f782b473c87c1691bfd2b0bded302b49,2023-01-27,ok,operator[] (hit),,,,,,,Avoid false -Warray-bounds positive under mingw32 gcc-12,70.04
+aebefaef0d969e9e519d419288b85ba57e52a1f7,2023-02-22,ok,find (hit),,,,,,,Merge pull request #183 from boostorg/unordered_node_map_rc,68.06
+aebefaef0d969e9e519d419288b85ba57e52a1f7,2023-02-22,ok,find (miss),,,,,,,Merge pull request #183 from boostorg/unordered_node_map_rc,73.5
+aebefaef0d969e9e519d419288b85ba57e52a1f7,2023-02-22,ok,insert+erase,,,,,,,Merge pull request #183 from boostorg/unordered_node_map_rc,166.2
+aebefaef0d969e9e519d419288b85ba57e52a1f7,2023-02-22,ok,operator[] (hit),,,,,,,Merge pull request #183 from boostorg/unordered_node_map_rc,70.03
+dbba3cec7b3f868cbb02c8542d5f78a30ecd5d01,2023-03-06,ok,find (hit),,,,,,,Add C++03 deprecation notice,68.06
+dbba3cec7b3f868cbb02c8542d5f78a30ecd5d01,2023-03-06,ok,find (miss),,,,,,,Add C++03 deprecation notice,73.5
+dbba3cec7b3f868cbb02c8542d5f78a30ecd5d01,2023-03-06,ok,insert+erase,,,,,,,Add C++03 deprecation notice,166.2
+dbba3cec7b3f868cbb02c8542d5f78a30ecd5d01,2023-03-06,ok,operator[] (hit),,,,,,,Add C++03 deprecation notice,70.03
+9aedb95296acff88e377d6e06d317b5538980ec1,2023-03-06,ok,find (hit),,,,,,,Merge pull request #185 from boostorg/fix/uses-allocator,68.06
+9aedb95296acff88e377d6e06d317b5538980ec1,2023-03-06,ok,find (miss),,,,,,,Merge pull request #185 from boostorg/fix/uses-allocator,73.5
+9aedb95296acff88e377d6e06d317b5538980ec1,2023-03-06,ok,insert+erase,,,,,,,Merge pull request #185 from boostorg/fix/uses-allocator,172.46
+9aedb95296acff88e377d6e06d317b5538980ec1,2023-03-06,ok,operator[] (hit),,,,,,,Merge pull request #185 from boostorg/fix/uses-allocator,70.03
+5724adbbe9fd4b36345b8ce6efedb77d0fff5f6e,2023-03-20,ok,find (hit),,,,,,,Merge pull request #187 from boostorg/feature/foa_fast_iteration,68.06
+5724adbbe9fd4b36345b8ce6efedb77d0fff5f6e,2023-03-20,ok,find (miss),,,,,,,Merge pull request #187 from boostorg/feature/foa_fast_iteration,73.5
+5724adbbe9fd4b36345b8ce6efedb77d0fff5f6e,2023-03-20,ok,insert+erase,,,,,,,Merge pull request #187 from boostorg/feature/foa_fast_iteration,172.46
+5724adbbe9fd4b36345b8ce6efedb77d0fff5f6e,2023-03-20,ok,operator[] (hit),,,,,,,Merge pull request #187 from boostorg/feature/foa_fast_iteration,70.03
+d65d9a65b7e70a0f8cc432e023419efc5ff68bab,2023-06-17,ok,find (hit),,,,,,,Merge pull request #188 from boostorg/feature/cfoa,66.06
+d65d9a65b7e70a0f8cc432e023419efc5ff68bab,2023-06-17,ok,find (miss),,,,,,,Merge pull request #188 from boostorg/feature/cfoa,71.5
+d65d9a65b7e70a0f8cc432e023419efc5ff68bab,2023-06-17,ok,insert+erase,,,,,,,Merge pull request #188 from boostorg/feature/cfoa,168.88
+d65d9a65b7e70a0f8cc432e023419efc5ff68bab,2023-06-17,ok,operator[] (hit),,,,,,,Merge pull request #188 from boostorg/feature/cfoa,76.03
+de8c2a5ad97e7a9ea3e60dc8bd1d741186459651,2023-06-20,ok,find (hit),,,,,,,Merge pull request #193 from boostorg/feature/proxy-erase,66.06
+de8c2a5ad97e7a9ea3e60dc8bd1d741186459651,2023-06-20,ok,find (miss),,,,,,,Merge pull request #193 from boostorg/feature/proxy-erase,71.5
+de8c2a5ad97e7a9ea3e60dc8bd1d741186459651,2023-06-20,ok,insert+erase,,,,,,,Merge pull request #193 from boostorg/feature/proxy-erase,168.88
+de8c2a5ad97e7a9ea3e60dc8bd1d741186459651,2023-06-20,ok,operator[] (hit),,,,,,,Merge pull request #193 from boostorg/feature/proxy-erase,76.03
+7d39b68e466dfb178b86fd5018b1c4bed986cf70,2023-06-19,ok,find (hit),,,,,,,Fix -Wsign-conversion issue,66.06
+7d39b68e466dfb178b86fd5018b1c4bed986cf70,2023-06-19,ok,find (miss),,,,,,,Fix -Wsign-conversion issue,71.5
+7d39b68e466dfb178b86fd5018b1c4bed986cf70,2023-06-19,ok,insert+erase,,,,,,,Fix -Wsign-conversion issue,168.88
+7d39b68e466dfb178b86fd5018b1c4bed986cf70,2023-06-19,ok,operator[] (hit),,,,,,,Fix -Wsign-conversion issue,76.03
+ee1974dc87762ec2f2e219638121b0839c8ff3a6,2023-08-12,ok,find (hit),,,,,,,Merge pull request #198 from boostorg/feature/concurrent_unordered_interop,66.06
+ee1974dc87762ec2f2e219638121b0839c8ff3a6,2023-08-12,ok,find (miss),,,,,,,Merge pull request #198 from boostorg/feature/concurrent_unordered_interop,71.5
+ee1974dc87762ec2f2e219638121b0839c8ff3a6,2023-08-12,ok,insert+erase,,,,,,,Merge pull request #198 from boostorg/feature/concurrent_unordered_interop,168.88
+ee1974dc87762ec2f2e219638121b0839c8ff3a6,2023-08-12,ok,operator[] (hit),,,,,,,Merge pull request #198 from boostorg/feature/concurrent_unordered_interop,76.03
+067884a4e213352e7c81c441f1453c54735c39f3,2023-08-28,ok,find (hit),,,,,,,Merge pull request #210 from boostorg/fix/gh-205,66.06
+067884a4e213352e7c81c441f1453c54735c39f3,2023-08-28,ok,find (miss),,,,,,,Merge pull request #210 from boostorg/fix/gh-205,71.5
+067884a4e213352e7c81c441f1453c54735c39f3,2023-08-28,ok,insert+erase,,,,,,,Merge pull request #210 from boostorg/fix/gh-205,168.88
+067884a4e213352e7c81c441f1453c54735c39f3,2023-08-28,ok,operator[] (hit),,,,,,,Merge pull request #210 from boostorg/fix/gh-205,76.03
+215d8e82cb3de69ee60dca29b3531c588c560b91,2023-08-29,ok,find (hit),,,,,,,Merge pull request #207 from boostorg/feature/serialization_support,66.06
+215d8e82cb3de69ee60dca29b3531c588c560b91,2023-08-29,ok,find (miss),,,,,,,Merge pull request #207 from boostorg/feature/serialization_support,71.5
+215d8e82cb3de69ee60dca29b3531c588c560b91,2023-08-29,ok,insert+erase,,,,,,,Merge pull request #207 from boostorg/feature/serialization_support,168.88
+215d8e82cb3de69ee60dca29b3531c588c560b91,2023-08-29,ok,operator[] (hit),,,,,,,Merge pull request #207 from boostorg/feature/serialization_support,76.03
+a3a1ab6ad27d767e80cd14f1c6abf37fb6f48599,2023-09-15,ok,find (hit),,,,,,,Merge pull request #211 from boostorg/fix/gh-189,68.06
+a3a1ab6ad27d767e80cd14f1c6abf37fb6f48599,2023-09-15,ok,find (miss),,,,,,,Merge pull request #211 from boostorg/fix/gh-189,73.5
+a3a1ab6ad27d767e80cd14f1c6abf37fb6f48599,2023-09-15,ok,insert+erase,,,,,,,Merge pull request #211 from boostorg/fix/gh-189,172.88
+a3a1ab6ad27d767e80cd14f1c6abf37fb6f48599,2023-09-15,ok,operator[] (hit),,,,,,,Merge pull request #211 from boostorg/fix/gh-189,77.03
+44b669a71c9565a592187c31b392d59dc393fe9d,2023-09-29,build failed,,,,,,,,Merge pull request #215 from cmazakas/cxx03_deprecation
+ea4fc5e66d1dfb658e16dcefc1159fc5d7c56be5,2023-10-18,ok,find (hit),,,,,,,fine-tuned element prefetching in unprotected_bulk_visit,68.06
+ea4fc5e66d1dfb658e16dcefc1159fc5d7c56be5,2023-10-18,ok,find (miss),,,,,,,fine-tuned element prefetching in unprotected_bulk_visit,73.5
+ea4fc5e66d1dfb658e16dcefc1159fc5d7c56be5,2023-10-18,ok,insert+erase,,,,,,,fine-tuned element prefetching in unprotected_bulk_visit,172.88
+ea4fc5e66d1dfb658e16dcefc1159fc5d7c56be5,2023-10-18,ok,operator[] (hit),,,,,,,fine-tuned element prefetching in unprotected_bulk_visit,77.03
+0d2751c5e1a99b1275717e26c16eb672150da77b,2023-12-19,ok,find (hit),,,,,,,Extract `at()`'s throw_exception calls into noinline function (#223),68.06
+0d2751c5e1a99b1275717e26c16eb672150da77b,2023-12-19,ok,find (miss),,,,,,,Extract `at()`'s throw_exception calls into noinline function (#223),73.5
+0d2751c5e1a99b1275717e26c16eb672150da77b,2023-12-19,ok,insert+erase,,,,,,,Extract `at()`'s throw_exception calls into noinline function (#223),172.88
+0d2751c5e1a99b1275717e26c16eb672150da77b,2023-12-19,ok,operator[] (hit),,,,,,,Extract `at()`'s throw_exception calls into noinline function (#223),77.03
+15cfef696763907f5a930e29b80440bb45e15237,2024-02-17,ok,find (hit),,,,,,,Fixed support for allocators with `explicit` copy constructors (#234),68.06
+15cfef696763907f5a930e29b80440bb45e15237,2024-02-17,ok,find (miss),,,,,,,Fixed support for allocators with `explicit` copy constructors (#234),73.5
+15cfef696763907f5a930e29b80440bb45e15237,2024-02-17,ok,insert+erase,,,,,,,Fixed support for allocators with `explicit` copy constructors (#234),169.52
+15cfef696763907f5a930e29b80440bb45e15237,2024-02-17,ok,operator[] (hit),,,,,,,Fixed support for allocators with `explicit` copy constructors (#234),77.03
+38acf9c619f91d8e0f6280004431b0b0347bb667,2024-06-02,ok,find (hit),,,,,,,Sync from upstream.,68.06
+38acf9c619f91d8e0f6280004431b0b0347bb667,2024-06-02,ok,find (miss),,,,,,,Sync from upstream.,73.5
+38acf9c619f91d8e0f6280004431b0b0347bb667,2024-06-02,ok,insert+erase,,,,,,,Sync from upstream.,169.52
+38acf9c619f91d8e0f6280004431b0b0347bb667,2024-06-02,ok,operator[] (hit),,,,,,,Sync from upstream.,77.03
+a6a0cd0a136257584464fa02abec1e6f3e6775ab,2024-08-08,ok,find (hit),,,,,,,Sync from upstream.,68.06
+a6a0cd0a136257584464fa02abec1e6f3e6775ab,2024-08-08,ok,find (miss),,,,,,,Sync from upstream.,73.5
+a6a0cd0a136257584464fa02abec1e6f3e6775ab,2024-08-08,ok,insert+erase,,,,,,,Sync from upstream.,169.52
+a6a0cd0a136257584464fa02abec1e6f3e6775ab,2024-08-08,ok,operator[] (hit),,,,,,,Sync from upstream.,77.03
+cdb31c8309b9620210ab517d901b34c80447d28b,2024-09-09,ok,find (hit),,,,,,,Sync from upstream.,68.06
+cdb31c8309b9620210ab517d901b34c80447d28b,2024-09-09,ok,find (miss),,,,,,,Sync from upstream.,73.5
+cdb31c8309b9620210ab517d901b34c80447d28b,2024-09-09,ok,insert+erase,,,,,,,Sync from upstream.,169.52
+cdb31c8309b9620210ab517d901b34c80447d28b,2024-09-09,ok,operator[] (hit),,,,,,,Sync from upstream.,77.03
+a36937d9b5c5b1a3637b4a7eccd2890d745ac5a7,2024-10-09,ok,find (hit),,,,,,,Ensure fca containers have the embedded GDB pretty-printers if none of the [c]foa containers have also been included.  (#291),68.06
+a36937d9b5c5b1a3637b4a7eccd2890d745ac5a7,2024-10-09,ok,find (miss),,,,,,,Ensure fca containers have the embedded GDB pretty-printers if none of the [c]foa containers have also been included.  (#291),73.5
+a36937d9b5c5b1a3637b4a7eccd2890d745ac5a7,2024-10-09,ok,insert+erase,,,,,,,Ensure fca containers have the embedded GDB pretty-printers if none of the [c]foa containers have also been included.  (#291),169.52
+a36937d9b5c5b1a3637b4a7eccd2890d745ac5a7,2024-10-09,ok,operator[] (hit),,,,,,,Ensure fca containers have the embedded GDB pretty-printers if none of the [c]foa containers have also been included.  (#291),77.03
+59e2a562edf0759e0ac52f659d25e0907ed7bec6,2025-06-02,ok,find (hit),,,,,,,deprecated `boost::unordered::hash_is_avalanching` in favor of `boost::hash_is_avalanching` (#313),68.06
+59e2a562edf0759e0ac52f659d25e0907ed7bec6,2025-06-02,ok,find (miss),,,,,,,deprecated `boost::unordered::hash_is_avalanching` in favor of `boost::hash_is_avalanching` (#313),73.5
+59e2a562edf0759e0ac52f659d25e0907ed7bec6,2025-06-02,ok,insert+erase,,,,,,,deprecated `boost::unordered::hash_is_avalanching` in favor of `boost::hash_is_avalanching` (#313),169.52
+59e2a562edf0759e0ac52f659d25e0907ed7bec6,2025-06-02,ok,operator[] (hit),,,,,,,deprecated `boost::unordered::hash_is_avalanching` in favor of `boost::hash_is_avalanching` (#313),77.03
+df2dfe614041c0d88e7ed561c006088bec2451b4,2026-01-27,ok,find (hit),,,,,,,Fix GDB pretty-printers to work with GCC and C++26 (#342),68.06
+df2dfe614041c0d88e7ed561c006088bec2451b4,2026-01-27,ok,find (miss),,,,,,,Fix GDB pretty-printers to work with GCC and C++26 (#342),73.5
+df2dfe614041c0d88e7ed561c006088bec2451b4,2026-01-27,ok,insert+erase,,,,,,,Fix GDB pretty-printers to work with GCC and C++26 (#342),169.52
+df2dfe614041c0d88e7ed561c006088bec2451b4,2026-01-27,ok,operator[] (hit),,,,,,,Fix GDB pretty-printers to work with GCC and C++26 (#342),77.03
+02c0fc5faae425ad6889ddb0f19e840131025077,2026-05-29,ok,find (hit),,,,,,,Fix float bugs in reserve_for_insert and min_buckets (#348),68.06
+02c0fc5faae425ad6889ddb0f19e840131025077,2026-05-29,ok,find (miss),,,,,,,Fix float bugs in reserve_for_insert and min_buckets (#348),73.5
+02c0fc5faae425ad6889ddb0f19e840131025077,2026-05-29,ok,insert+erase,,,,,,,Fix float bugs in reserve_for_insert and min_buckets (#348),169.52
+02c0fc5faae425ad6889ddb0f19e840131025077,2026-05-29,ok,operator[] (hit),,,,,,,Fix float bugs in reserve_for_insert and min_buckets (#348),77.03
+88f984e890524cee15d66f0377b321d35c148f3b,2026-06-17,ok,find (hit),,,,,,,added interoperability with C++20 ranges (#355),68.06
+88f984e890524cee15d66f0377b321d35c148f3b,2026-06-17,ok,find (miss),,,,,,,added interoperability with C++20 ranges (#355),73.5
+88f984e890524cee15d66f0377b321d35c148f3b,2026-06-17,ok,insert+erase,,,,,,,added interoperability with C++20 ranges (#355),169.52
+88f984e890524cee15d66f0377b321d35c148f3b,2026-06-17,ok,operator[] (hit),,,,,,,added interoperability with C++20 ranges (#355),77.03

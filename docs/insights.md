@@ -34,8 +34,8 @@ concerned, alternately, on one idle physical core (`replay/price.py`).
 
 ## 2. Instruction counts find performance changes; they do not price them
 
-Every change in instructions per call of 5 % or more that was timed afterwards moved time in the same
-direction. The size of the effect on time varied by a factor of more than 20:
+Nearly every change in instructions per call of 5 % or more that was timed afterwards moved time in the
+same direction, by amounts that varied by a factor of more than 20. The exceptions are divisions:
 
 | change | instructions | time |
 |---|---:|---:|
@@ -54,11 +54,25 @@ direction. The size of the effect on time varied by a factor of more than 20:
 | abseil `f2f4fa2c`, `flat_hash_map::operator[]` | +50 % | +37 % |
 | abseil `f2f4fa2c`, insert+erase | +21 % | +9 % |
 | abseil `179d2e39` (the fix ten days later), `operator[]` | -32 % | -25 % |
+| Boost.Unordered `unordered_map` `2fed2fbd` (2012), find of a present key | **+45 %** | **-11 %** |
+| Boost.Unordered `unordered_map` `99fdce0b` (2014), find of a present key / insert+erase | **-32 %** / -5 % | **+13 %** / +36 % |
+| Boost.Unordered `unordered_map` `2f331b7a` (2022), find of a present key | -27 % | -17 % |
+| Boost.Unordered `unordered_map`, 2008 to 2026, find of a present key | **+37 %** | **-26 %** |
 
 Code bound by a dependency chain (a multiply chain in XXH64, square roots and divisions in Cholesky)
 hides most of an instruction change. Code bound by the number of instructions passes it on almost
 one to one (fast_float). The Eigen cases go the other way: time grew more than instructions, up to twice
 as much.
+Boost.Unordered's node-based map shows the other direction. Its bucket policy for integer keys was a
+prime number of buckets (safe with `boost::hash`, which is the identity for integers), so finding a
+bucket took two 64-bit divisions; the alternative was a power of two and a mixing step, a few
+multiplications. In 2012 to 2014 integer keys used the second policy by accident (the policy was
+picked on the map's value type, not its key); the 2014 commit "Fix policy typedefs" restored the
+prime policy: 32 % fewer instructions per lookup, and 13 to 26 % slower lookups and 36 % slower
+insert+erase. It stayed until 2022, when a benchmark report (#50) led to removing it. `gap.py --commits`
+shows it directly: 2 divisions in the lookup path before and after. A division is one instruction
+and tens of cycles; instruction counts hide it, as LLVM's division bypass hid MPMCQueue's (case 4).
+
 An instruction count is a detector, and the price has to be measured.
 
 The same holds for allocation counts. rapidjson's extra allocation per parse since #1858 costs 5 %

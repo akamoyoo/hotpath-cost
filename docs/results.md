@@ -4,7 +4,7 @@ What the tool reported for every library it was applied to, then the compiler ma
 
 ## What was found
 
-Thirty-eight libraries, 25,567 library commits in their first-parent histories, 4,703 of them measured.
+Forty libraries, 26,815 library commits in their first-parent histories, 5,632 of them measured.
 Twenty-four of them were measured at every library commit where the driver compiles. quill was sampled
 every fifth commit, spdlog every 30th, fmt every 50th, simdjson, rapidjson and flatbuffers every 4th, Eigen
 every 100th, json and cereal every 10th, Taskflow and abseil every 15th, xsimd every 30th, glaze and Highway
@@ -49,6 +49,8 @@ every 40th, and every interval whose counts differed was bisected. Built with GC
 | [glaze](https://github.com/stephenberry/glaze) (JSON) | 45 of 2,689, sampled | 1 | reading into a reused struct and writing to a reused string: 0; first read 4 -> 2 allocations in 2024 (`f8cb7923`, statically sized decode buffer) |
 | [abseil](https://github.com/abseil/abseil-cpp) (`flat_hash_map`) | 69 of 1,197, sampled | 0 | 0 and 0 (the 2019 versions that sample every table by default are not built: the workload does not link the sampler). Instructions, 179 commits: 24 changes of 5 % or more since 2025, mostly refactorings followed by a fix within weeks: `f2f4fa2c` +50 % per `operator[]` (+37 % time), `179d2e39` -32 % ten days later; `3b23f75e` +40 %, `762b5238` -25 %. Net since October 2018 (`c16d5557`): insert+erase 193 -> 278 instructions, 61 -> 69 ns with GCC 13 and 61 -> 70 with clang 21; find of a missing key +4 % and +12 %; find of a present key no slower (100,000 `uint64_t` keys) |
 | [Aeron](https://github.com/real-logic/aeron) (messaging; the C client's ring buffers and broadcast buffer) | 237 of 393 | 0 | 0 and 0 at every measured commit since December 2020: the zero-allocation, lock-free design holds. Instructions: the broadcast receive +8 % (`2dfe1446`, 2024, an expandable scratch buffer), the one-to-one ring buffer -14 % (`b322e972`, 2026). Commits before December 2020 lack `try_claim` or the broadcast headers the workload uses |
+| [Boost.Unordered](https://github.com/boostorg/unordered) `unordered_flat_map` | 210 of 855 (the container exists since October 2022) | 0 | 0 and 0. Instructions: 5 changes, four of them before its first release (hash mixing, strong exception guarantee, and inlining fixes); the concurrent version's merge (`d65d9a65`, 2023) left the sequential `operator[]` 9 % more instructions and 5 % slower with GCC |
+| [Boost.Unordered](https://github.com/boostorg/unordered) `unordered_map` | 692 of 855, since 2008 | 0 | 1 allocation per insert+erase, throughout. Instructions: 8 changes; the bucket policy for integer keys used two 64-bit divisions per lookup from 2014 (`99fdce0b`, a typedef fix that applied the intended policy) to 2022 (`d6576ed2`, after #50): 13 to 36 % slower in this workload, with 32 % fewer instructions (docs/insights.md, lesson 2) |
 | [gtl](https://github.com/greg7mdp/gtl) (hash map) | 179 of 179 | 0 | 0 and 0; instructions per call unchanged at every other commit |
 | [emhash](https://github.com/ktprime/emhash) (hash map) | 219 of 228 | 0 | 0 and 0. Instructions per `find`: +6 to +7 % in June 2026 at `ba124419` "fix:overflow", which also turned on a prefetch, and back a month later at `280842c5` "disable prefetch by default ... (no performance gain)" |
 | [Highway](https://github.com/google/highway) (SIMD) | 36 of 2,329, sampled | 0 | 0 and 0; instructions per 1,024-float sum and dot unchanged |

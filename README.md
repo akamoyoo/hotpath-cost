@@ -18,7 +18,7 @@ tests actually run (paths nobody exercises). It works on existing code, unmodifi
 
 ## Problems it found in real projects
 
-Applied to 38 open-source C++ libraries used in trading, messaging and numerics (25,567 library
+Applied to 40 open-source C++ libraries used in trading, messaging and numerics (26,815 library
 commits replayed, 148 open pull requests checked). What we reported upstream, with a fix where one
 was ours to write:
 
@@ -49,6 +49,7 @@ November 17, 2026.
 | [Liquibook](https://github.com/enewhuis/liquibook) | **Its last release allocates twice as often per order** (1 -> 4 per add+cancel, 433 against 383 ns); fixed the next day in a commit no release contains, and there has been no release since 2017 | the history replay |
 | [spdlog](https://github.com/gabime/spdlog) (logger) | **A mutex lock per message** on the null sink came back in a 2018 refactoring for six releases; **an allocation and a TLS destructor on every thread's first message** for eight releases (2024-2026); both since fixed by the maintainers | the history replay, bisected to single commits |
 | [abseil](https://github.com/abseil/abseil-cpp) (`flat_hash_map`) | **Refactorings that cost and fixes that follow:** one made `operator[]` 50 % more instructions and 37 % slower, undone by the maintainers ten days later; insert+erase is 13 to 16 % slower than in 2018 | instructions per call across the history, then timing |
+| [Boost.Unordered](https://github.com/boostorg/unordered) (`unordered_map`) | **Two 64-bit divisions per lookup for integer keys for eight years**: the policy meant for them (a prime number of buckets) took effect through a 2014 typedef fix and made lookups 13 to 26 % slower and insert+erase 36 % slower in this workload; removed in 2022 after a benchmark report (#50). Since 2008: 37 % more instructions per lookup, and 26 % faster | instructions per call across 18 years, then timing and division counts |
 | [concurrentqueue](https://github.com/cameron314/concurrentqueue) | **A malloc and a free per 32 elements** whenever the queue's length crosses its initial capacity, since 2022; deliberate, documented, switched off by a trait, and close to free on one thread | a random enqueue/dequeue flow aimed at the sites the static analysis listed |
 
 Details and how each was found: [docs/cases.md](docs/cases.md). All libraries, including the quiet
@@ -138,9 +139,11 @@ Each of these changed how the tool works ([evidence](docs/insights.md)):
    measured 2x apart, just because other work was running on the machine. The number of allocations,
    locks and instructions in one call is the same on every run. So the tool finds changes by counting,
    and times only the commits where a count changed, alternating the two builds on an idle core.
-2. **More instructions usually means slower, but not by a predictable amount.** In every change we
-   timed, time moved the same way as the instruction count, but by anything from a tenth of it to
-   twice it. An instruction change is a reason to time, not a verdict.
+2. **More instructions usually means slower, but not always, and never by a predictable amount.**
+   Usually time moved the same way as the instruction count, by anything from a tenth of it to twice
+   it. But a Boost.Unordered change that replaced two 64-bit divisions per lookup with a few
+   multiplications added 45 % instructions and made lookups up to 21 % faster. An instruction change
+   is a reason to time, not a verdict.
 3. **Different machine code, or even an extra allocation, may cost nothing.** Compiler hints that
    visibly changed a queue's machine code made no measurable difference. A malloc and a free for
    every 32 elements cost concurrentqueue 0.5 % on one thread. Only a measurement says it costs.
