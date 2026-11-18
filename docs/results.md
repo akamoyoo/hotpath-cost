@@ -110,6 +110,12 @@ no instruction count by 3 % or more; 2 do not build with the workload. The other
 | msgpack-c #1103 | first unpack into a zone: 2 -> 3 allocations | | |
 | msgpack-c #1223 (from this work) | unpack into a reused zone: 2 -> 0 allocations | | case 8 |
 
+Checked later the same way (November 18): Boost.JSON's 17 open pull requests that touch its headers,
+Aeron's 3 that touch the measured C sources, and 9 of oneTBB's (the run stopped at its time limit: each
+oneTBB build compiles the whole library, and its instructions are measured three times because of the
+worker thread). None changes a count or the instructions per call by 3 % or more; Boost.Unordered's one
+open pull request does not touch its headers.
+
 Taskflow's pull requests first showed instruction changes for most of them, including one that only
 touches MSVC module builds: with a worker thread, one build's count varies by up to 8 % between runs.
 `check.py` now measures such workloads three times and compares ranges, and none of them is left.
