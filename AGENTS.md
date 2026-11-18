@@ -18,6 +18,25 @@ prints. `README.md` says what the tool is and what it found; `docs/insights.md` 
 | Did a commit change the work done per call (for code that never allocates)? | `replay/replay.py LIB --metric instr`, then `replay/diff.py LIB --instr 5` | yes: instructions per call under callgrind |
 | What does a change cost in time? | `replay/price.py LIB A B` | on an idle core, alternating rounds |
 | Why is one compiler or level faster? | `replay/gap.py LIB ENTRY` | facts, not proof: read the code |
+| What changed in the machine code between two commits? | `replay/gap.py LIB ENTRY --commits A,B` | facts, not proof |
+
+## Where to start
+
+For an open question about a library ("does its hot path have problems?"), in this order:
+1. `replay/replay.py LIB --commits <latest library commit>`: what one call costs today, first call and
+   steady state.
+2. The history: `replay.py LIB --stride N`, `--refine`, `diff.py LIB` (counts), and for code that never
+   allocates `--metric instr` and `diff.py LIB --instr 5`. Its last lines give the net change from the
+   first measured commit to the latest. A long, active history is where most findings came from.
+3. `replay/combine.py LIB COMMIT`: which allocating or locking sites the workload never reaches, if
+   the library has a driver and `static/` is built.
+4. The compiler matrix and `gap.py`, if the latency differs between compilers or levels.
+5. `replay/prs.py LIB`: whether an open pull request changes any of it.
+
+What it costs: a count replay of one library is minutes to an hour (seconds to a minute per commit, in
+parallel over `REPLAY_CORES`); an instruction replay runs every workload under callgrind and takes
+hours for a long history, so sample it (`--stride`) and refine. `-j` defaults to the number of cores
+given, divided by the cores the workload needs.
 
 ## Setup
 
@@ -29,6 +48,10 @@ prints. `README.md` says what the tool is and what it found; `docs/insights.md` 
 
 After changing the tool, run `replay/selftest.py` (about a minute; `--quick` and `--no-static` skip
 parts): it checks exact counts and reports the documents rely on, in a temporary output directory.
+
+Measured results already in the repository: `results/gcc/LIB.csv` (counts per commit),
+`results/gcc-instr/LIB.csv` (instructions per commit), `results/matrix/` (the compiler matrix).
+`replay/export.py` writes them from `out/`.
 
 Environment variables: `CXX_GCC`, `CXX_GCC15`, `CXX_CLANG` (compilers), `REPLAY_OPT` (default `-O2`),
 `REPLAY_TAG` (suffix of the output directory), `REPLAY_CORES` (comma-separated cores to pin runs to),
@@ -59,11 +82,20 @@ its cost is not known: price it with `replay/price.py LIB BASE HEAD` before call
 an improvement. In the changes measured so far, time moved in the same direction as instructions by
 anything from less than a tenth to twice as much (`docs/insights.md`).
 
+**Check a library's open pull requests.** `replay/prs.py LIB` (needs `gh`) fetches every open pull
+request that touches the paths in `P` as `refs/hp/pr<N>`, with its target branch, and runs `check.py`
+from the merge base. One line per pull request: `no change`, `COUNT CHANGED`, `instructions changed` or
+`build or run failed` (the full report follows for the first two). The fetched refs stay in the clone,
+so `price.py LIB <base> refs/hp/pr<N>` and `gap.py LIB ENTRY --commits <base>,refs/hp/pr<N>` work on
+them afterwards.
+
 **Explain a compiler gap.** Run `replay/gap.py LIB ENTRY` (ENTRY: a substring of the entry function's
 name). Look first at helpers that are out of line in the slow builds only (with their call sites), then
 at the number of divisions, then at 256-bit vector instructions. Confirm the cause by changing the
 source and timing every compiler with `cases/*/run.sh`-style scripts; a fix for one compiler can slow
-another.
+another. To see what a commit changed in the machine code of one entry, use
+`gap.py LIB ENTRY --commits A,B` (one build, two commits): instructions, call sites, divisions, vector
+instructions and loops over everything the entry reaches, and the helpers out of line in one only.
 
 **Find which paths the workload misses.** Run `replay/combine.py LIB COMMIT` and report the "not
 exercised" sites that are not marked cold. The line "reached k of the n static sites not marked
@@ -93,7 +125,10 @@ build, look at why (`out/<build>/LIB/<commit>.fail`): a workaround in `P` often 
 included a header GCC rejects for a month). Otherwise report the interval, and use `git log -S'<the
 line>'` on the line `explain.py` names to find the commit.
 
-**Add a library.** Write `replay/drivers/LIB/main.cpp` (operations as `HP_ENTRY` functions with
+**Add a library.** A useful workload calls each hot operation the way production does, with
+realistic sizes (a book with resting orders, a map of 100,000 keys, a message of the usual length);
+prepares every input before `run_ops`, so that only the library's own work is counted; keeps any data
+structure in a steady state; and puts one operation in each entry function. Write `replay/drivers/LIB/main.cpp` (operations as `HP_ENTRY` functions with
 opaque arguments, and a `main`) and `replay/workloads/LIB.cpp` (calls them through `run_ops`), or one
 self-contained `replay/workloads/LIB.cpp`. Add an entry to `P` in `replay/replay.py`: the paths whose
 commits matter, the include directories, extra sources and flags. Check the latest commit first

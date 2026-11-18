@@ -1,14 +1,20 @@
 # hotpath-cost
 
-**An analysis tool for the hot paths of C++ code.** Point it at an operation that has to be cheap
-(adding an order, logging a message, parsing a quote, pushing to a queue) and it tells you what one call
-costs, counted exactly (allocations, locks, instructions), where each cost comes from, which commit
-changed it, which paths your tests never take, and why one compiler is faster than another. It works
-on existing code, unmodified, and every answer names the commit and the line.
+**An analysis tool that finds performance problems in C++ hot paths by comparing the code with
+itself: with its own past, commit by commit, before and after a pull request, and also under another
+compiler and against the paths it could take.**
 
-A refactoring, a dependency update or a compiler upgrade can add an allocation or a lock to a hot path,
-or make it slower. It passes review and tests, and timing every commit is too noisy to see it. Exact
-counts are not.
+Whether a hot path (adding an order, logging a message, parsing a quote, pushing to a queue) is fast
+*enough* is hard to say. Whether it *changed* can be said exactly: the tool counts the allocations,
+locks and instructions of one call, which are the same on every run, so it can replay a library's
+whole history, find every commit that changed them, name the line, and check an open pull request the
+same way before it is merged. A long-maintained project with a rich history is where this pays off
+most: the project is its own baseline, every cost it carries came in through some commit, and that
+commit's message says what it was for.
+
+Two other comparisons find what history cannot: the same code under GCC and clang, or `-O2` and
+`-O3` (why one build is faster), and a static analysis of what the code *may* do against what the
+tests actually run (paths nobody exercises). It works on existing code, unmodified.
 
 ## Problems it found in real projects
 
@@ -47,6 +53,25 @@ November 17, 2026.
 
 Details and how each was found: [docs/cases.md](docs/cases.md). All libraries, including the quiet
 ones and the other open pull requests: [docs/results.md](docs/results.md).
+
+## Why history
+
+- **Costs come in through ordinary commits, and stay.** A refactoring put a mutex lock back on spdlog's
+  null sink for six releases; a simplification made Liquibook's last release allocate four times per
+  order instead of one; one abseil refactoring made `operator[]` 37 % slower until a fix ten days
+  later; msgpack-c's extra allocation per message has been there since 2016. Each passed review and
+  tests. Each is one line in the replay, at the commit that made it.
+- **Exact counts make every commit comparable.** Timing every commit does not work: two builds with
+  identical machine code measured 2x apart. Counts do not move between runs, so a single extra
+  allocation is visible among 1,856 commits, and bisection is sound.
+- **The richer the history, the more there is to find.** Over 38 libraries, the replay found 20
+  count changes in Taskflow's 1,069 commits, 11 in nlohmann/json's 822 and 24 instruction changes in
+  abseil's 1,197; in SPSCQueue's 22 commits, nothing.
+- **The same comparison runs forward.** `check.py` compares a pull request with its merge base, and
+  `prs.py` does it for every open pull request: 148 of them, in 14 libraries.
+- **Its limit is how far back the workload compiles.** When a library's API changes, old commits do
+  not build with today's workload: 97 of msgpack-c's 290 library commits, 54 of hffix's 69. A change
+  across such a gap is reported as an interval, not a commit.
 
 ## How it works
 
@@ -130,9 +155,6 @@ Each of these changed how the tool works ([evidence](docs/insights.md)):
    swallowed in ordinary trading. Following that exception led to the out-of-bounds write. A tool
    built to count allocations found a memory-corruption bug, because the static view said where to
    look and an exception is an allocation.
-6. **These costs come in through ordinary refactorings, and tests do not catch them.** Some were
-   fixed and then came back, and some stayed in a library's last release. None of the cases above was
-   caught by the library's own tests.
 
 ## Repository
 

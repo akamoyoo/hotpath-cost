@@ -163,3 +163,37 @@ stack recording and matching attribute everything it reaches.
 
 None of these was a bug, and none was caught by tests. Each is a one-line difference in an exact count
 at the commit that made it.
+
+## 8. A project's own history is the best baseline
+
+Whether a hot path is fast enough has no general answer; whether it changed has an exact one. Most of
+what this tool found came from comparing a library with its own past:
+
+| library | first-parent commits | measured | count changes | instruction changes (5 % or more) |
+|---|---:|---:|---:|---:|
+| Taskflow | 1,069 | 428 | 20 | (not measured) |
+| nlohmann/json | 822 | 115 | 11 | |
+| spdlog | 1,856 | 80 | 6 | |
+| abseil | 1,197 | 69 (179 for instructions) | 0 | 24 |
+| emhash | 228 | 219 (121 for instructions) | 0 | 7 |
+| msgpack-c | 290 | 193 | 3 | |
+| SPSCQueue | 22 | 22 | 0 | |
+
+The changes cluster where development is active: refactorings, a feature that touches the hot path,
+an optimisation and its follow-up fix. abseil shows the pattern most clearly: of its 24 instruction
+changes since 2025, several are a refactoring that cost (`f2f4fa2c`, +50 % instructions and +37 % time
+per `operator[]`) and the commit that undid it (`179d2e39`, ten days later). spdlog's mutex came back
+in a refactoring and stayed for six releases; Liquibook's extra allocations were introduced by a
+simplification and fixed the next day, with the release tag in between. Every one passed review and
+the library's tests, and every one is a single line of `diff.py` output at the commit that made it.
+
+The comparison does not need a specification of what the hot path should cost, and the commit that
+changed it explains itself. It extends forward: a pull request compared with its merge base
+(`check.py`, `prs.py`) is the same comparison, made before the change is merged.
+
+What limits it is how far back the workload compiles. When an API changes, older commits do not build
+with today's workload: 97 of msgpack-c's 290 library commits, 83 of bitsery's 94, 54 of hffix's 69,
+30 of the 75 glaze commits tried. A change across such a gap is reported as an interval
+(`A..B (N commits in between not measured: ...)`). Sometimes a workaround in the build configuration
+closes the gap: abseil from May to June 2026 included a header GCC rejects, and one compiler flag made
+that month of commits measurable.
