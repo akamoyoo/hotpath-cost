@@ -107,21 +107,27 @@ coding agent running the tool: every command, how to read its output, the known 
 
 Each of these changed how the tool works ([evidence](docs/insights.md)):
 
-1. **Count, don't time.** Per-commit timings jumped 2x between builds with identical machine code.
-   Allocations, locks and instructions per call are exact; counts find a change, and only an
-   alternating timing on an idle core, confirmed by a second harness, prices it.
-2. **Instruction counts find performance changes but do not price them.** Time moved in the same
-   direction in every change timed, by anything from a tenth of the instruction change to twice it.
-3. **A machine-code difference is not a cost**, and an allocation is not always one either: a malloc
-   and a free per 32 elements cost concurrentqueue 0.5 % on one thread.
-4. **A gap between compilers is a lead, with a few usual causes**: a helper left out of line, a
-   repeated division, vectorisation in one build only. The fix belongs in the source and has to be
-   timed with every compiler.
-5. **The static and the run-time view each see what the other cannot**, and **the static view tells a
-   workload where to go**: aimed at the sites the analysis listed, a random order flow raised
-   Liquibook's coverage from 5 to 14 of 85 hot sites and found a memory-corruption bug.
-6. **Costs enter through refactorings, come back, and stay unreleased.** None of the cases above was
-   caught by the library's tests.
+1. **Timing every commit does not work; counting does.** Two builds with the same machine code
+   measured 2x apart, just because other work was running on the machine. The number of allocations,
+   locks and instructions in one call is the same on every run. So the tool finds changes by counting,
+   and times only the commits where a count changed, alternating the two builds on an idle core.
+2. **More instructions usually means slower, but not by a predictable amount.** In every change we
+   timed, time moved the same way as the instruction count, but by anything from a tenth of it to
+   twice it. An instruction change is a reason to time, not a verdict.
+3. **Different machine code, or even an extra allocation, may cost nothing.** Compiler hints that
+   visibly changed a queue's machine code made no measurable difference. A malloc and a free for
+   every 32 elements cost concurrentqueue 0.5 % on one thread. Only a measurement says it costs.
+4. **When one compiler is much slower, the cause is usually one of a few things**: a small helper
+   that one compiler did not inline, a division computed twice, or a loop vectorised by only one
+   compiler. The fix goes in the library's source, and has to be checked with every compiler, since a
+   fix for one can slow another.
+5. **Static analysis and run-time counts find different things, and work best together.** Only the
+   counts could tell two Liquibook versions apart; only the static analysis showed the 80 allocating
+   paths that the test workload never ran. A random order flow sent down those paths reached 14 of the
+   85 instead of 5, and found a memory-corruption bug.
+6. **These costs come in through ordinary refactorings, and tests do not catch them.** Some were
+   fixed and then came back, and some stayed in a library's last release. None of the cases above was
+   caught by the library's own tests.
 
 ## Repository
 
