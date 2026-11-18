@@ -136,7 +136,7 @@ commits matter, the include directories, extra sources and flags. Check the late
 (`--commits <head>`), then the whole history. If older commits fail with missing standard types
 (`uint64_t`, `std::string`, `std::numeric_limits`), include those headers in the workload before the
 library's header; older headers relied on transitive includes. Sources that exist only in some versions
-go in `srcs_if_present`; C sources go in `csrcs` or `csrcs_if_present` and are compiled with the C
+go in `srcs_if_present`, and a library's whole source directory in `srcs_glob` (oneTBB: `src/tbb/*.cpp`); C sources go in `csrcs` or `csrcs_if_present` and are compiled with the C
 compiler of the same family (Aeron's C client). A C header that does not declare `extern "C"` itself
 is wrapped in the workload, after the headers that switch to C++ headers under C++. Libraries to link go in `libs`, after the sources (Boost.JSON
 links Boost.Charconv from the installed release). A library that

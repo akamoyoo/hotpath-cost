@@ -96,6 +96,9 @@ P = {
                             sysinc=(BOOST_INC, ["boost/unordered*"])),
     # Boost.JSON: since Boost 1.85 it formats doubles with Boost.Charconv, a compiled library, taken from
     # the installed release next to BOOST_INC
+    # oneTBB: the library's own sources compiled in (src/tbb/*.cpp); the task group runs a worker thread
+    "onetbb": dict(workload="onetbb", paths=["include", "src/tbb"], inc=["include", "src"], srcs=[],
+                   srcs_glob=["src/tbb/*.cpp"], flags=["-D__TBB_BUILD", "-DUSE_PTHREAD"], cores=2),
     "boost-json": dict(workload="boost-json", paths=["include"], inc=["include"], srcs=[],
                        sysinc=(BOOST_INC, ["boost/json*"]),
                        libs=[f"-L{Path(BOOST_INC).parent / 'lib'}", f"-Wl,-rpath,{Path(BOOST_INC).parent / 'lib'}",
@@ -164,7 +167,8 @@ def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
     return [CXX[cc], std, OPT, "-DNDEBUG", "-pthread", "-march=x86-64-v3", "-w", *extra,
             *[f"-I{tree / i}" for i in cfg["inc"]], *drv, *cfg.get("flags", []),
             str(workload), *[str(tree / s) for s in cfg["srcs"]],
-            *[str(tree / s) for s in cfg.get("srcs_if_present", []) if (tree / s).exists()], *cfg.get("libs", []),
+            *[str(tree / s) for s in cfg.get("srcs_if_present", []) if (tree / s).exists()],
+            *[str(p) for g in cfg.get("srcs_glob", []) for p in sorted(tree.glob(g))], *cfg.get("libs", []),
             "-o", str(exe), "-ldl"]
 
 def build(proj, cc, h, tree, exe, extra=()):
