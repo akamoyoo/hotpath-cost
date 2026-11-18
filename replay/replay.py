@@ -98,7 +98,9 @@ P = {
     # the installed release next to BOOST_INC
     # oneTBB: the library's own sources compiled in (src/tbb/*.cpp); the task group runs a worker thread
     "onetbb": dict(workload="onetbb", paths=["include", "src/tbb"], inc=["include", "src"], srcs=[],
-                   srcs_glob=["src/tbb/*.cpp"], flags=["-D__TBB_BUILD", "-DUSE_PTHREAD"], cores=2),
+                   # -mwaitpkg: versions before 2024 call _tpause without a target attribute, which GCC 13
+                   # rejects; the library checks the CPU before executing it
+                   srcs_glob=["src/tbb/*.cpp"], flags=["-D__TBB_BUILD", "-DUSE_PTHREAD", "-mwaitpkg"], cores=2),
     "boost-json": dict(workload="boost-json", paths=["include"], inc=["include"], srcs=[],
                        sysinc=(BOOST_INC, ["boost/json*"]),
                        libs=[f"-L{Path(BOOST_INC).parent / 'lib'}", f"-Wl,-rpath,{Path(BOOST_INC).parent / 'lib'}",

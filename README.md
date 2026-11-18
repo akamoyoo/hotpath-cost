@@ -18,7 +18,7 @@ tests actually run (paths nobody exercises). It works on existing code, unmodifi
 
 ## Problems it found in real projects
 
-Applied to 41 open-source C++ libraries used in trading, messaging and numerics (27,651 library
+Applied to 42 open-source C++ libraries used in trading, messaging and numerics (27,997 library
 commits replayed, 148 open pull requests checked). What we reported upstream, with a fix where one
 was ours to write:
 
@@ -65,7 +65,7 @@ ones and the other open pull requests: [docs/results.md](docs/results.md).
 - **Exact counts make every commit comparable.** Timing every commit does not work: two builds with
   identical machine code measured 2x apart. Counts do not move between runs, so a single extra
   allocation is visible among 1,856 commits, and bisection is sound.
-- **The richer the history, the more there is to find.** Over 41 libraries, the replay found 20
+- **The richer the history, the more there is to find.** Over 42 libraries, the replay found 20
   count changes in Taskflow's 1,069 commits, 11 in nlohmann/json's 822 and 24 instruction changes in
   abseil's 1,197; in SPSCQueue's 22 commits, nothing.
 - **The same comparison runs forward.** `check.py` compares a pull request with its merge base, and
