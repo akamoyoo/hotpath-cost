@@ -30,6 +30,7 @@ TAG = os.environ.get("REPLAY_TAG", "" if OPT == "-O2" else OPT)
 METRIC = sys.argv[sys.argv.index("--metric") + 1] if "--metric" in sys.argv else "counts"
 VALGRIND = os.environ.get("VALGRIND", "valgrind")
 VALGRIND_INC = os.environ.get("VALGRIND_INC", "")   # directory holding valgrind/callgrind.h
+BOOST_INC = os.environ.get("BOOST_INC", "/usr/include")   # an installed Boost, for libraries that need its other modules
 
 # drv: replay/drivers/<drv>/main.cpp holds the entry functions, replay/workloads/<drv>.cpp the workload that
 # calls them; workload only: replay/workloads/<workload>.cpp holds both.
@@ -79,6 +80,22 @@ P = {
     "flatbuffers": dict(workload="flatbuffers", paths=["include/flatbuffers"], inc=["include"], srcs=[]),
     "msgpack-c": dict(workload="msgpack-c", paths=["include"], inc=["include"], srcs=[], flags=["-DMSGPACK_NO_BOOST"]),
     "gtl": dict(workload="gtl", paths=["include"], inc=["include"], srcs=[]),
+    # Aeron's C client: the concurrent buffers and the few C files they need
+    "aeron": dict(workload="aeron", paths=["aeron-client/src/main/c/concurrent", "aeron-client/src/main/c/util",
+                                          "aeron-client/src/main/c/aeron_alloc.c"],
+                  inc=["aeron-client/src/main/c"], srcs=[],
+                  csrcs_if_present=[f"aeron-client/src/main/c/{f}" for f in (
+                      "concurrent/aeron_mpsc_rb.c", "concurrent/aeron_spsc_rb.c", "concurrent/aeron_broadcast_transmitter.c",
+                      "concurrent/aeron_broadcast_receiver.c", "concurrent/aeron_atomic.c", "concurrent/aeron_thread.c",
+                      "aeron_alloc.c", "util/aeron_error.c", "util/aeron_bitutil.c", "util/aeron_strutil.c",
+                      "util/aeron_platform.c")]),
+    # Boost.Unordered: the commit's include/, and the other Boost modules from one installed release
+    # (BOOST_INC, its include directory) with that release's own boost/unordered* hidden, so that a
+    # header missing at an old commit is missing, not taken from the release
+    "boost-unordered": dict(workload="boost-unordered", paths=["include"], inc=["include"], srcs=[],
+                            sysinc=(BOOST_INC, ["boost/unordered*"])),
+    "boost-unordered-map": dict(workload="boost-unordered-map", paths=["include"], inc=["include"], srcs=[],
+                                sysinc=(BOOST_INC, ["boost/unordered*"])),
     "emhash": dict(workload="emhash", paths=["include", "hash_table8.hpp"], inc=["include/emhash", "."], srcs=[]),
     "abseil": dict(workload="abseil", paths=["absl/container", "absl/hash"], inc=["."],
                    # each compiled where it exists at the commit; the hashtablez sampling functions are left
@@ -153,6 +170,37 @@ def build(proj, cc, h, tree, exe, extra=()):
         if len(ls) >= 3 and ls[1] == "commit":
             (tree / path).mkdir(parents=True, exist_ok=True)
             subprocess.run(f"git -C {TOP / 'src' / clone} archive {ls[2]} | tar -x -C {tree / path}", shell=True)
+    # an installed include directory for what the library needs besides itself ("sysinc": the directory
+    # and the patterns of the library's own files in it): mirrored with links, without those files, so
+    # that the commit's own headers are the only ones of the library that can be found
+    if "sysinc" in P[proj]:
+        import fnmatch
+        src, hide = P[proj]["sysinc"]
+        def mirror(s_dir, d_dir, rel):
+            d_dir.mkdir(parents=True, exist_ok=True)
+            for e in Path(s_dir).iterdir():
+                r = f"{rel}{e.name}"
+                if any(fnmatch.fnmatch(r, h) for h in hide): continue
+                if e.is_dir() and any(h.startswith(r + "/") for h in hide):   # a hidden file is below it
+                    mirror(e, d_dir / e.name, r + "/")
+                else: (d_dir / e.name).symlink_to(e)
+        mirror(src, tree / "_sysinc", "")
+        extra = (*extra, f"-isystem{tree / '_sysinc'}")
+    # C sources ("csrcs", and "csrcs_if_present" where they exist at the commit): compiled with the C
+    # compiler of the same family, then linked with the workload
+    cfg = P[proj]; objs = []
+    csrcs = list(cfg.get("csrcs", [])) + [c for c in cfg.get("csrcs_if_present", []) if (tree / c).exists()]
+    if csrcs:
+        cc_c = CXX[cc].replace("clang++", "clang").replace("g++", "gcc")
+        keep = [x for x in extra if x == "-g" or x.startswith(("-D", "-I"))]
+        for k, c in enumerate(csrcs):
+            o = tree / f"_c{k}.o"
+            r = subprocess.run([cc_c, "-std=gnu11", OPT, "-DNDEBUG", "-march=x86-64-v3", "-w", "-c", *keep,
+                                *[f"-I{tree / i}" for i in cfg["inc"]], *cfg.get("cflags", []), str(tree / c), "-o", str(o)],
+                               capture_output=True, text=True)
+            if r.returncode: return r
+            objs.append(str(o))
+        extra = (*extra, *objs)
     std0 = "-std=" + P[proj].get("std", "c++17")   # a project may need a newer standard throughout
     # functions named in "unresolved_ok" may stay undefined (paths the workload never reaches): they get a
     # stub that traps (ud2), so that reaching one crashes the run. Any other undefined symbol, and every

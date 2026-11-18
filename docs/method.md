@@ -74,6 +74,11 @@ head names the new line.
   left undefined, and the native run decremented a word of thread-local storage near address 0 and
   carried on; only callgrind crashed. Builds now name the functions that may stay undefined and fail on
   anything else.
+- **An installed release on the include path.** Boost.Unordered needs the rest of Boost, which came
+  from an installed release searched after the commit's own headers. At commits from before
+  `unordered_flat_map` existed, the compiler found the release's copy, and 770 commits back to 2008
+  "measured" the 2026 code. The counts were all zero, so nothing looked wrong. The installed tree is
+  now mirrored without the library's own files.
 - **Results cached across workload changes.** A replay compared a cached result of an earlier version
   of the concurrentqueue exploration workload with a result of the current one, and reported a change
   at a commit that only removed `static` from inline functions. Cached results now carry a fingerprint

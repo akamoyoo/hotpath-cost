@@ -56,7 +56,8 @@ Measured results already in the repository: `results/gcc/LIB.csv` (counts per co
 Environment variables: `CXX_GCC`, `CXX_GCC15`, `CXX_CLANG` (compilers), `REPLAY_OPT` (default `-O2`),
 `REPLAY_TAG` (suffix of the output directory), `REPLAY_CORES` (comma-separated cores to pin runs to),
 `LLVM_BIN` and `FN_EFFECTS` (for `combine.py`), `VALGRIND` and `VALGRIND_INC` (the valgrind binary and
-the directory holding `valgrind/callgrind.h`, for `--metric instr`). Output goes to `out/` (not committed); `replay/export.py`
+the directory holding `valgrind/callgrind.h`, for `--metric instr`), `BOOST_INC` (the include directory
+of an installed Boost, for Boost libraries). Output goes to `out/` (not committed); `replay/export.py`
 writes the CSVs in `results/`.
 
 ## Recipes
@@ -135,7 +136,12 @@ commits matter, the include directories, extra sources and flags. Check the late
 (`--commits <head>`), then the whole history. If older commits fail with missing standard types
 (`uint64_t`, `std::string`, `std::numeric_limits`), include those headers in the workload before the
 library's header; older headers relied on transitive includes. Sources that exist only in some versions
-go in `srcs_if_present`. When a library's compiled sources reference functions the workload never
+go in `srcs_if_present`; C sources go in `csrcs` or `csrcs_if_present` and are compiled with the C
+compiler of the same family (Aeron's C client). A C header that does not declare `extern "C"` itself
+is wrapped in the workload, after the headers that switch to C++ headers under C++. A library that
+needs others from an installed tree (a Boost library and the rest of Boost) uses `sysinc=(DIR,
+[patterns])`: the build mirrors DIR with the library's own files (the patterns) left out, so a header
+missing at an old commit fails to build instead of being taken from the installed release. When a library's compiled sources reference functions the workload never
 reaches and whose definitions pull in much more (abseil's hash-table sampling), name them in
 `unresolved_ok`: each gets a stub that traps if called (a run that reaches one fails), while any
 other undefined symbol, and every undefined variable, fails the build.

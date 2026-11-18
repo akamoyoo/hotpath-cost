@@ -44,6 +44,9 @@ abseil https://github.com/abseil/abseil-cpp
 highway https://github.com/google/highway
 flatbuffers https://github.com/google/flatbuffers
 msgpack-c https://github.com/msgpack/msgpack-c cpp_master
+boost-unordered https://github.com/boostorg/unordered develop
+aeron https://github.com/real-logic/aeron
 LIST
 ln -sfn liquibook src/liquibook-explore             # exploration workloads run on the same clones
 ln -sfn concurrentqueue src/concurrentqueue-explore
+ln -sfn boost-unordered src/boost-unordered-map     # boost::unordered_map, from the same clone

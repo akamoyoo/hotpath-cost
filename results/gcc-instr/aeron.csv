@@ -1,0 +1,382 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+63c7509b1fd28c2098e605c71fe98f2c4caba78f,2020-03-08,build failed,,,,,,,,"[C]: add initial support for C API. Only temporary linkage. Bringing over needed functions and base support. Later, driver will use libaeron (C API lib) for the duplicate functions."
+38b7aec3b826968320bc9d3de42fae0a34e91b7c,2020-03-13,build failed,,,,,,,,[C]: align file/dir creation mask with Java driver.
+e61ab0ee4fec1d281e74b1a9df21d6955a9e51d0,2020-03-23,build failed,,,,,,,,[C]: add feature tests to help with warnings on CentOS.
+fdb394dad0ae279ac47d761a3b6f44c76c36eb8c,2020-03-23,build failed,,,,,,,,[C]: iterate on defines for CentOS.
+94d9bb51a506249d1c3855f1af5710affabc399f,2020-03-23,build failed,,,,,,,,[C]: correct windows include.
+1028954979b16087ef4a8aab86d09e1c101fbddb,2020-03-31,build failed,,,,,,,,[C] Fix warnings.
+81ff98b11a9deaeccfb075c9d924e2fac72ac04f,2020-03-31,build failed,,,,,,,,[C] Put back stdbool.h for MSVC.
+87c727e9caa44a65f0985a7953895cfa8df69a0d,2020-04-06,build failed,,,,,,,,[C]: fix Windows
+3eaec0faf0d3b9210073e1cd6530d8ecab1095b8,2020-04-10,build failed,,,,,,,,[C]: add the unfragmented term appender functions.
+5ee66c44bd9e5af62c17cc0e5729e2f5f425ca5e,2020-04-11,build failed,,,,,,,,[C]: add non-vector term appender tests.
+71f68fef1a722af1728c7ceb92a6db5ab82cb094,2020-04-12,build failed,,,,,,,,[C]: rename for clarity.
+bee6b7ed256804b7cf00ae654729635a970a5219,2020-04-13,build failed,,,,,,,,[C]: move counter type ids into client. Clean up various context values.
+016069ae8d6ffb372964bde9688df361012709da,2020-04-20,build failed,,,,,,,,[C]: align C 1to1 ring buffer with Java operation.
+fb7bc3f1da9ee677bea5c9460a66525e5218d700,2020-04-23,build failed,,,,,,,,[C]: pull out counter structs into client and into header file.
+877f9363e01e759ce2e74cb6e60e5fff8c58fc05,2020-04-28,build failed,,,,,,,,[C]: add more test infrastructure for conductor and publication. Small fixes.
+e2129a0da57e0dd3a1c2d6d9245fd8c9c0eef155,2020-05-04,build failed,,,,,,,,"Archive parity c driver and tests, #632 and #621 (#908)"
+4968be3a2b9dcf49f72a2550ba80b4d4c3a18885,2020-05-08,build failed,,,,,,,,[C] Ensure key layout structs are the same as the size of the key .
+b580f1581a0f8aa363df12e6176c7c683dbd8225,2020-05-24,build failed,,,,,,,,[C]: change subscription fragment_limit to size_t and make publication buffers const.
+047c4906017b6f396ef20165ee7b41cdf8ea35b8,2020-06-01,build failed,,,,,,,,[C]: add windows getopt equivalent from Windows open source with APL 2.0 license.
+d9ac66ea840e6ed27f55be50bb160f2be6799c88,2020-06-22,build failed,,,,,,,,[C] Fix aeron_ftruncate on Windows so it behaves like linux.
+2711ea1ef5cb53d2ef93343d67e713cf9aa133e6,2020-07-10,build failed,,,,,,,,[C] Allow configuration of pre-touch mapped memory in the c client. (#971)
+6307b00698aab30c87842c288d380012dc23617f,2020-07-17,build failed,,,,,,,,[C] Max counter id should be of type int32_t.
+567e6f2fd695f75df24bd4e4f57e9f9c8ef456bb,2020-07-24,build failed,,,,,,,,Move aeron_micro_sleep and aeron_nano_sleep to the right place. (#985)
+45555da346cf30a49fd3663bacd5d2271868ebe8,2020-07-24,build failed,,,,,,,,[C] Move Windows.h out of aeron_dlopen.h (#983)
+f15c24a612400ea26eda2cb3a695ec9b9914da48,2020-07-25,build failed,,,,,,,,"Use the shared aeron_clock_gettime_monotonic, aeron_clock_gettime_realtime and aeron_epoch_clock (#982)"
+5e276eda478779573baa3cd008402c030298c035,2020-07-28,build failed,,,,,,,,[C] Always calling to aeron_set_errno in aeron_set_err (#1005)
+746ad81a039bc8c0ec872244ee3b4c4394cd742a,2020-07-28,build failed,,,,,,,,[C] Warning and formatting clean up.
+0cdaa566ff7d03bfcbd9bdb7d996bcde78b027be,2020-07-30,build failed,,,,,,,,[C] Formatting and warnings tidy up.
+0506aa99df061f555a77064376a9e332e5ab205c,2020-07-30,build failed,,,,,,,,[C] Add missing atomic operation in broadcast transmitter.
+7c62a9b7b82e7421d777bfdc940dc940aeebc4b3,2020-07-30,build failed,,,,,,,,[C] Avoid warning on unused variable in aeron_release without needing a pragma.
+3c566f5db39edad245cc5959ce539ca9ef29fba4,2020-08-02,build failed,,,,,,,,Remove usage AERON_CPU_X64 as much as possible. (#994)
+21ceacdcaedff3d9e6f573e06795ea6bea09f285,2020-08-07,build failed,,,,,,,,[C] Replace the usage of malloc/free with aeron_alloc/aeron_free (#1022)
+3fe255889fb80eef07f66532002cf0c6cd92798e,2020-08-07,build failed,,,,,,,,[C] Formatting.
+fec789f3325e712ba827113551312e6e0eca1271,2020-08-08,build failed,,,,,,,,[C] Tidy up after merge of PR #989.
+d29711c7804228f122a85e8f684b051ff4d3edb0,2020-08-16,build failed,,,,,,,,[C] include intrin.h in bitutil instead of windows.h  but still preserve standalone property. (#1042)
+1d4562387bfa726dcba2b2494b3d5e53d9d0eaff,2020-08-16,build failed,,,,,,,,[C] Warnings clean up.
+54a8e1ce0cd169a3fbb4bdc0435fbfcd252bc7ed,2020-08-16,build failed,,,,,,,,[C] Remove redundant include of winnt.h.
+ae6710ac3f389d12c7ae25aafd17b8fa40c0740e,2020-08-22,build failed,,,,,,,,[C] Be consistent with use of volatile in counters manager.
+f01d6fbe628ded29b06b4dccc87b49c6706e4b45,2020-08-26,build failed,,,,,,,,[C] Warnings clean up.
+d408d7038a259c5435b8d525a23cca31a182e974,2020-08-31,build failed,,,,,,,,[C] Formatting.
+4235969a6ca07641ac12ecf719591c05409bafb7,2020-09-03,build failed,,,,,,,,[C] Move some function prototypes to aeronc.h for counters reader.  A… (#1048)
+c1ea04bcd87eafa30bfa56615d0093a23669a051,2020-09-11,build failed,,,,,,,,[C/C++] C++ wrapper of the C API. (#992)
+91d5ac173eaa7d409955318c9ead200755c8ff22,2020-09-12,build failed,,,,,,,,[C] Set ANY address for endpoint based on protocol family used for control address. Issue #1057.
+547119d10fec3cd17b7a301d1e588ec2398f3c1d,2020-09-14,build failed,,,,,,,,[C] Use size_t for queue capacity and indexing.
+986b207d01ec7aef1896f6e853500093f2980273,2020-09-15,build failed,,,,,,,,[C] Atomics naming consistency.
+4a0a390373e2e26259b897950df07d9e8dd4b98a,2020-09-20,build failed,,,,,,,,[C] Group externs.
+cba473845a3872122b862465fca83a31c0cd4bc0,2020-10-03,build failed,,,,,,,,Merge remote-tracking branch 'origin/master' into master
+c7f4974e3b36911b46b1b91721c53405bbd32afd,2020-10-17,build failed,,,,,,,,[C] Add support for higher resolution sleep function on Windows for C Media Driver and Client.
+63c21c54173b8ff3e2860cb3ca08f2698790deff,2020-10-25,build failed,,,,,,,,[C] Clean up ring buffer test warnings.
+9819f1910ba04b42cd49ee78c0a36e1a4f738185,2020-10-28,build failed,,,,,,,,[C] Add volatile where appropriate in error log.
+671e7db00c0c7d84834018cbdae8823d15ab35a8,2020-11-19,build failed,,,,,,,,[C] Remove unnecessary compiler barrier.
+6cfdad9db4be8daa4dd951bd8beab50e22af88ff,2020-11-26,build failed,,,,,,,,[C/Java] Align event logging between Java and C (#1091)
+fba07a61ef77bef22048b70200fb6a25347e6655,2020-12-07,ok,mpsc write+read,,,,,,,Merge remote-tracking branch 'origin/master',219.03
+fba07a61ef77bef22048b70200fb6a25347e6655,2020-12-07,ok,mpsc try_claim+commit+read,,,,,,,Merge remote-tracking branch 'origin/master',236.03
+fba07a61ef77bef22048b70200fb6a25347e6655,2020-12-07,ok,spsc write+read,,,,,,,Merge remote-tracking branch 'origin/master',216.03
+fba07a61ef77bef22048b70200fb6a25347e6655,2020-12-07,ok,broadcast transmit+receive,,,,,,,Merge remote-tracking branch 'origin/master',170.01
+3dc6884928638ef5b18f98f7367e313d519fee60,2020-12-09,ok,mpsc write+read,,,,,,,[C] Fix includes for aeron_alloc.c,219.03
+3dc6884928638ef5b18f98f7367e313d519fee60,2020-12-09,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix includes for aeron_alloc.c,236.03
+3dc6884928638ef5b18f98f7367e313d519fee60,2020-12-09,ok,spsc write+read,,,,,,,[C] Fix includes for aeron_alloc.c,219.03
+3dc6884928638ef5b18f98f7367e313d519fee60,2020-12-09,ok,broadcast transmit+receive,,,,,,,[C] Fix includes for aeron_alloc.c,170.01
+5d13e7e066a080d03aff96dc273551192f3db623,2020-12-14,ok,mpsc write+read,,,,,,,[C] Double null terminate directory name when calling into SHFileOperation on Windows. Issue #1108.,219.03
+5d13e7e066a080d03aff96dc273551192f3db623,2020-12-14,ok,mpsc try_claim+commit+read,,,,,,,[C] Double null terminate directory name when calling into SHFileOperation on Windows. Issue #1108.,236.03
+5d13e7e066a080d03aff96dc273551192f3db623,2020-12-14,ok,spsc write+read,,,,,,,[C] Double null terminate directory name when calling into SHFileOperation on Windows. Issue #1108.,219.03
+5d13e7e066a080d03aff96dc273551192f3db623,2020-12-14,ok,broadcast transmit+receive,,,,,,,[C] Double null terminate directory name when calling into SHFileOperation on Windows. Issue #1108.,170.01
+61da9f54957c1bbe2557dd2c8c9724e8b084a5a2,2020-12-15,ok,mpsc write+read,,,,,,,[C] Allow for longer path to aeron directory when deleting.,219.03
+61da9f54957c1bbe2557dd2c8c9724e8b084a5a2,2020-12-15,ok,mpsc try_claim+commit+read,,,,,,,[C] Allow for longer path to aeron directory when deleting.,236.03
+61da9f54957c1bbe2557dd2c8c9724e8b084a5a2,2020-12-15,ok,spsc write+read,,,,,,,[C] Allow for longer path to aeron directory when deleting.,219.03
+61da9f54957c1bbe2557dd2c8c9724e8b084a5a2,2020-12-15,ok,broadcast transmit+receive,,,,,,,[C] Allow for longer path to aeron directory when deleting.,170.01
+11f0195b580f1165a3d7f9db6de9fde887d9369a,2021-02-03,ok,mpsc write+read,,,,,,,Error Stack Experiment (#1099),219.03
+11f0195b580f1165a3d7f9db6de9fde887d9369a,2021-02-03,ok,mpsc try_claim+commit+read,,,,,,,Error Stack Experiment (#1099),236.03
+11f0195b580f1165a3d7f9db6de9fde887d9369a,2021-02-03,ok,spsc write+read,,,,,,,Error Stack Experiment (#1099),219.03
+11f0195b580f1165a3d7f9db6de9fde887d9369a,2021-02-03,ok,broadcast transmit+receive,,,,,,,Error Stack Experiment (#1099),171.01
+1beef1a430f47654f93cc89149a837ea9182582e,2021-02-08,ok,mpsc write+read,,,,,,,[C] Close file descriptor on error in file util.,219.03
+1beef1a430f47654f93cc89149a837ea9182582e,2021-02-08,ok,mpsc try_claim+commit+read,,,,,,,[C] Close file descriptor on error in file util.,236.03
+1beef1a430f47654f93cc89149a837ea9182582e,2021-02-08,ok,spsc write+read,,,,,,,[C] Close file descriptor on error in file util.,219.03
+1beef1a430f47654f93cc89149a837ea9182582e,2021-02-08,ok,broadcast transmit+receive,,,,,,,[C] Close file descriptor on error in file util.,171.01
+a5c9e06dbc257ba30dada163c1c79d2a9b2b3f4b,2021-02-22,ok,mpsc write+read,,,,,,,[C] Remove more const warnings.,219.03
+a5c9e06dbc257ba30dada163c1c79d2a9b2b3f4b,2021-02-22,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove more const warnings.,236.03
+a5c9e06dbc257ba30dada163c1c79d2a9b2b3f4b,2021-02-22,ok,spsc write+read,,,,,,,[C] Remove more const warnings.,219.03
+a5c9e06dbc257ba30dada163c1c79d2a9b2b3f4b,2021-02-22,ok,broadcast transmit+receive,,,,,,,[C] Remove more const warnings.,171.01
+2fd07fe739f56bab7cd26993f883e86339feb648,2021-03-05,ok,mpsc write+read,,,,,,,[C] Better handling of races when loading CnC file for connecting to driver.,219.03
+2fd07fe739f56bab7cd26993f883e86339feb648,2021-03-05,ok,mpsc try_claim+commit+read,,,,,,,[C] Better handling of races when loading CnC file for connecting to driver.,236.03
+2fd07fe739f56bab7cd26993f883e86339feb648,2021-03-05,ok,spsc write+read,,,,,,,[C] Better handling of races when loading CnC file for connecting to driver.,219.03
+2fd07fe739f56bab7cd26993f883e86339feb648,2021-03-05,ok,broadcast transmit+receive,,,,,,,[C] Better handling of races when loading CnC file for connecting to driver.,171.01
+b6b8e1d73053cf9a0550e8e1a2e63b490d1d7755,2021-03-15,ok,mpsc write+read,,,,,,,Channel uri receiver window (#1148),219.03
+b6b8e1d73053cf9a0550e8e1a2e63b490d1d7755,2021-03-15,ok,mpsc try_claim+commit+read,,,,,,,Channel uri receiver window (#1148),236.03
+b6b8e1d73053cf9a0550e8e1a2e63b490d1d7755,2021-03-15,ok,spsc write+read,,,,,,,Channel uri receiver window (#1148),219.03
+b6b8e1d73053cf9a0550e8e1a2e63b490d1d7755,2021-03-15,ok,broadcast transmit+receive,,,,,,,Channel uri receiver window (#1148),171.01
+1bdd6d0001e5a3467b770b05d5795a12681f3529,2021-05-04,ok,mpsc write+read,,,,,,,[C] Verify free operation is on a valid counter in the counters manager.,219.03
+1bdd6d0001e5a3467b770b05d5795a12681f3529,2021-05-04,ok,mpsc try_claim+commit+read,,,,,,,[C] Verify free operation is on a valid counter in the counters manager.,236.03
+1bdd6d0001e5a3467b770b05d5795a12681f3529,2021-05-04,ok,spsc write+read,,,,,,,[C] Verify free operation is on a valid counter in the counters manager.,219.03
+1bdd6d0001e5a3467b770b05d5795a12681f3529,2021-05-04,ok,broadcast transmit+receive,,,,,,,[C] Verify free operation is on a valid counter in the counters manager.,171.01
+024f2b65377077d96fb6baebd228e9e1afdb0434,2021-05-05,ok,mpsc write+read,,,,,,,[C] Remove need to linger list in distinct error log by doing it under the lock.,219.03
+024f2b65377077d96fb6baebd228e9e1afdb0434,2021-05-05,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove need to linger list in distinct error log by doing it under the lock.,236.03
+024f2b65377077d96fb6baebd228e9e1afdb0434,2021-05-05,ok,spsc write+read,,,,,,,[C] Remove need to linger list in distinct error log by doing it under the lock.,219.03
+024f2b65377077d96fb6baebd228e9e1afdb0434,2021-05-05,ok,broadcast transmit+receive,,,,,,,[C] Remove need to linger list in distinct error log by doing it under the lock.,171.01
+7ba921041eaa11f21f7d5cc8e51ce45e7a985994,2021-05-19,ok,mpsc write+read,,,,,,,[C] Common hash functions. (#1178),219.03
+7ba921041eaa11f21f7d5cc8e51ce45e7a985994,2021-05-19,ok,mpsc try_claim+commit+read,,,,,,,[C] Common hash functions. (#1178),236.03
+7ba921041eaa11f21f7d5cc8e51ce45e7a985994,2021-05-19,ok,spsc write+read,,,,,,,[C] Common hash functions. (#1178),219.03
+7ba921041eaa11f21f7d5cc8e51ce45e7a985994,2021-05-19,ok,broadcast transmit+receive,,,,,,,[C] Common hash functions. (#1178),171.01
+7278cded3c9bac14a1a2b2b546e1e964d4cb9946,2021-07-14,ok,mpsc write+read,,,,,,,[C] Fix varargs use for error append macro usage.,219.03
+7278cded3c9bac14a1a2b2b546e1e964d4cb9946,2021-07-14,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix varargs use for error append macro usage.,236.03
+7278cded3c9bac14a1a2b2b546e1e964d4cb9946,2021-07-14,ok,spsc write+read,,,,,,,[C] Fix varargs use for error append macro usage.,219.03
+7278cded3c9bac14a1a2b2b546e1e964d4cb9946,2021-07-14,ok,broadcast transmit+receive,,,,,,,[C] Fix varargs use for error append macro usage.,171.01
+8463ed167ad12eeeb2fa4bb640ad609dee81d0ef,2021-08-30,ok,mpsc write+read,,,,,,,[C]: align C/C++ with Java user.name for default CnC file path.,219.03
+8463ed167ad12eeeb2fa4bb640ad609dee81d0ef,2021-08-30,ok,mpsc try_claim+commit+read,,,,,,,[C]: align C/C++ with Java user.name for default CnC file path.,236.03
+8463ed167ad12eeeb2fa4bb640ad609dee81d0ef,2021-08-30,ok,spsc write+read,,,,,,,[C]: align C/C++ with Java user.name for default CnC file path.,219.03
+8463ed167ad12eeeb2fa4bb640ad609dee81d0ef,2021-08-30,ok,broadcast transmit+receive,,,,,,,[C]: align C/C++ with Java user.name for default CnC file path.,171.01
+05f6cdfb11a7beb993029d1f734f113507da5d2f,2021-10-18,ok,mpsc write+read,,,,,,,[C] Improve code for getting username.,219.03
+05f6cdfb11a7beb993029d1f734f113507da5d2f,2021-10-18,ok,mpsc try_claim+commit+read,,,,,,,[C] Improve code for getting username.,236.03
+05f6cdfb11a7beb993029d1f734f113507da5d2f,2021-10-18,ok,spsc write+read,,,,,,,[C] Improve code for getting username.,219.03
+05f6cdfb11a7beb993029d1f734f113507da5d2f,2021-10-18,ok,broadcast transmit+receive,,,,,,,[C] Improve code for getting username.,171.01
+70c4263a6bf87af2cb95a5c6befd63c3f9d64815,2021-10-18,ok,mpsc write+read,,,,,,,Merge remote-tracking branch 'origin/master',219.03
+70c4263a6bf87af2cb95a5c6befd63c3f9d64815,2021-10-18,ok,mpsc try_claim+commit+read,,,,,,,Merge remote-tracking branch 'origin/master',236.03
+70c4263a6bf87af2cb95a5c6befd63c3f9d64815,2021-10-18,ok,spsc write+read,,,,,,,Merge remote-tracking branch 'origin/master',219.03
+70c4263a6bf87af2cb95a5c6befd63c3f9d64815,2021-10-18,ok,broadcast transmit+receive,,,,,,,Merge remote-tracking branch 'origin/master',171.01
+f3525dfb5259defe952b1b8a8b9addede67173c7,2021-11-06,ok,mpsc write+read,,,,,,,[C] Fix introduced warning.,219.03
+f3525dfb5259defe952b1b8a8b9addede67173c7,2021-11-06,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix introduced warning.,236.03
+f3525dfb5259defe952b1b8a8b9addede67173c7,2021-11-06,ok,spsc write+read,,,,,,,[C] Fix introduced warning.,219.03
+f3525dfb5259defe952b1b8a8b9addede67173c7,2021-11-06,ok,broadcast transmit+receive,,,,,,,[C] Fix introduced warning.,171.01
+4e2f6ce8dc4d47bde652d7f04b70885bce8498ff,2022-01-08,ok,mpsc write+read,,,,,,,Update copyright.,219.03
+4e2f6ce8dc4d47bde652d7f04b70885bce8498ff,2022-01-08,ok,mpsc try_claim+commit+read,,,,,,,Update copyright.,236.03
+4e2f6ce8dc4d47bde652d7f04b70885bce8498ff,2022-01-08,ok,spsc write+read,,,,,,,Update copyright.,219.03
+4e2f6ce8dc4d47bde652d7f04b70885bce8498ff,2022-01-08,ok,broadcast transmit+receive,,,,,,,Update copyright.,171.01
+6aa491dbc1521ba95a187dae0ce2ac9018a6543f,2022-01-28,ok,mpsc write+read,,,,,,,[C] Fix type used for term count.,219.03
+6aa491dbc1521ba95a187dae0ce2ac9018a6543f,2022-01-28,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix type used for term count.,236.03
+6aa491dbc1521ba95a187dae0ce2ac9018a6543f,2022-01-28,ok,spsc write+read,,,,,,,[C] Fix type used for term count.,219.03
+6aa491dbc1521ba95a187dae0ce2ac9018a6543f,2022-01-28,ok,broadcast transmit+receive,,,,,,,[C] Fix type used for term count.,171.01
+915a7e043d0dd8e3750cc641239d0be36cdb1376,2022-03-09,ok,mpsc write+read,,,,,,,Use connect and send for handling single packets to improve latency (#1289),219.03
+915a7e043d0dd8e3750cc641239d0be36cdb1376,2022-03-09,ok,mpsc try_claim+commit+read,,,,,,,Use connect and send for handling single packets to improve latency (#1289),236.03
+915a7e043d0dd8e3750cc641239d0be36cdb1376,2022-03-09,ok,spsc write+read,,,,,,,Use connect and send for handling single packets to improve latency (#1289),219.03
+915a7e043d0dd8e3750cc641239d0be36cdb1376,2022-03-09,ok,broadcast transmit+receive,,,,,,,Use connect and send for handling single packets to improve latency (#1289),171.01
+1b01ec133312927c76cf2e9bb31731e72cf3c5c5,2022-03-29,ok,mpsc write+read,,,,,,,[C] Fixed implementation defined behaviour in term appender.,219.03
+1b01ec133312927c76cf2e9bb31731e72cf3c5c5,2022-03-29,ok,mpsc try_claim+commit+read,,,,,,,[C] Fixed implementation defined behaviour in term appender.,236.03
+1b01ec133312927c76cf2e9bb31731e72cf3c5c5,2022-03-29,ok,spsc write+read,,,,,,,[C] Fixed implementation defined behaviour in term appender.,219.03
+1b01ec133312927c76cf2e9bb31731e72cf3c5c5,2022-03-29,ok,broadcast transmit+receive,,,,,,,[C] Fixed implementation defined behaviour in term appender.,167.02
+7ad474845f22b92c8b4889a98a1975e62bbe258b,2022-07-06,ok,mpsc write+read,,,,,,,[C] Use CLOCK_REALTIME for send/receive timestamps.,219.03
+7ad474845f22b92c8b4889a98a1975e62bbe258b,2022-07-06,ok,mpsc try_claim+commit+read,,,,,,,[C] Use CLOCK_REALTIME for send/receive timestamps.,236.03
+7ad474845f22b92c8b4889a98a1975e62bbe258b,2022-07-06,ok,spsc write+read,,,,,,,[C] Use CLOCK_REALTIME for send/receive timestamps.,219.03
+7ad474845f22b92c8b4889a98a1975e62bbe258b,2022-07-06,ok,broadcast transmit+receive,,,,,,,[C] Use CLOCK_REALTIME for send/receive timestamps.,167.02
+75de086a2c3822406d877853d7a6aff831e4eab5,2022-09-14,ok,mpsc write+read,,,,,,,[C] Handle log buffer files with `term_length == AERON_LOGBUFFER_TERM_MAX_LENGTH` on Windows. (#1360),219.03
+75de086a2c3822406d877853d7a6aff831e4eab5,2022-09-14,ok,mpsc try_claim+commit+read,,,,,,,[C] Handle log buffer files with `term_length == AERON_LOGBUFFER_TERM_MAX_LENGTH` on Windows. (#1360),236.03
+75de086a2c3822406d877853d7a6aff831e4eab5,2022-09-14,ok,spsc write+read,,,,,,,[C] Handle log buffer files with `term_length == AERON_LOGBUFFER_TERM_MAX_LENGTH` on Windows. (#1360),225.03
+75de086a2c3822406d877853d7a6aff831e4eab5,2022-09-14,ok,broadcast transmit+receive,,,,,,,[C] Handle log buffer files with `term_length == AERON_LOGBUFFER_TERM_MAX_LENGTH` on Windows. (#1360),167.02
+97546a94af3d6333030d85019770ecb040551c4e,2022-09-27,ok,mpsc write+read,,,,,,,[C] Fix warnings around missing prototype with clang-15.,219.03
+97546a94af3d6333030d85019770ecb040551c4e,2022-09-27,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix warnings around missing prototype with clang-15.,236.03
+97546a94af3d6333030d85019770ecb040551c4e,2022-09-27,ok,spsc write+read,,,,,,,[C] Fix warnings around missing prototype with clang-15.,225.03
+97546a94af3d6333030d85019770ecb040551c4e,2022-09-27,ok,broadcast transmit+receive,,,,,,,[C] Fix warnings around missing prototype with clang-15.,167.02
+f3793979dee2ba07073b108c04cd4e261daa3aa2,2022-10-13,ok,mpsc write+read,,,,,,,[C] Due to termOffset being cast to an int we need to protect against negative value which is a change from existing long behaviour.,219.03
+f3793979dee2ba07073b108c04cd4e261daa3aa2,2022-10-13,ok,mpsc try_claim+commit+read,,,,,,,[C] Due to termOffset being cast to an int we need to protect against negative value which is a change from existing long behaviour.,236.03
+f3793979dee2ba07073b108c04cd4e261daa3aa2,2022-10-13,ok,spsc write+read,,,,,,,[C] Due to termOffset being cast to an int we need to protect against negative value which is a change from existing long behaviour.,225.03
+f3793979dee2ba07073b108c04cd4e261daa3aa2,2022-10-13,ok,broadcast transmit+receive,,,,,,,[C] Due to termOffset being cast to an int we need to protect against negative value which is a change from existing long behaviour.,167.02
+c8226863dddbf29f82bc20e465d9926f05b88989,2022-10-19,ok,mpsc write+read,,,,,,,[C] Remove exclusive_term_appender and fold functionality into exclusive_publication.,219.03
+c8226863dddbf29f82bc20e465d9926f05b88989,2022-10-19,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove exclusive_term_appender and fold functionality into exclusive_publication.,236.03
+c8226863dddbf29f82bc20e465d9926f05b88989,2022-10-19,ok,spsc write+read,,,,,,,[C] Remove exclusive_term_appender and fold functionality into exclusive_publication.,225.03
+c8226863dddbf29f82bc20e465d9926f05b88989,2022-10-19,ok,broadcast transmit+receive,,,,,,,[C] Remove exclusive_term_appender and fold functionality into exclusive_publication.,167.02
+1351df1260c1a5acba2adc7c8e9844b3448fc15f,2022-11-07,ok,mpsc write+read,,,,,,,[C] Warnings and autoformatting tidy up.,219.03
+1351df1260c1a5acba2adc7c8e9844b3448fc15f,2022-11-07,ok,mpsc try_claim+commit+read,,,,,,,[C] Warnings and autoformatting tidy up.,236.03
+1351df1260c1a5acba2adc7c8e9844b3448fc15f,2022-11-07,ok,spsc write+read,,,,,,,[C] Warnings and autoformatting tidy up.,225.03
+1351df1260c1a5acba2adc7c8e9844b3448fc15f,2022-11-07,ok,broadcast transmit+receive,,,,,,,[C] Warnings and autoformatting tidy up.,167.02
+8c2e26e9fb389b69fa57128a23b84fad14b20dcf,2022-11-23,ok,mpsc write+read,,,,,,,[Java/C] Improve handling of the out of disc space errors. (#1370),219.03
+8c2e26e9fb389b69fa57128a23b84fad14b20dcf,2022-11-23,ok,mpsc try_claim+commit+read,,,,,,,[Java/C] Improve handling of the out of disc space errors. (#1370),236.03
+8c2e26e9fb389b69fa57128a23b84fad14b20dcf,2022-11-23,ok,spsc write+read,,,,,,,[Java/C] Improve handling of the out of disc space errors. (#1370),225.03
+8c2e26e9fb389b69fa57128a23b84fad14b20dcf,2022-11-23,ok,broadcast transmit+receive,,,,,,,[Java/C] Improve handling of the out of disc space errors. (#1370),167.02
+b7dd10f0520de20b6d9f595ce6d824bce99cccc8,2023-01-01,ok,mpsc write+read,,,,,,,Update copyright.,219.03
+b7dd10f0520de20b6d9f595ce6d824bce99cccc8,2023-01-01,ok,mpsc try_claim+commit+read,,,,,,,Update copyright.,236.03
+b7dd10f0520de20b6d9f595ce6d824bce99cccc8,2023-01-01,ok,spsc write+read,,,,,,,Update copyright.,225.03
+b7dd10f0520de20b6d9f595ce6d824bce99cccc8,2023-01-01,ok,broadcast transmit+receive,,,,,,,Update copyright.,167.02
+1ff796bf10a845793210e6746de3a1cd1aeb14ff,2023-01-25,ok,mpsc write+read,,,,,,,[C] Fix CodeQL warnings.,219.03
+1ff796bf10a845793210e6746de3a1cd1aeb14ff,2023-01-25,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix CodeQL warnings.,236.03
+1ff796bf10a845793210e6746de3a1cd1aeb14ff,2023-01-25,ok,spsc write+read,,,,,,,[C] Fix CodeQL warnings.,225.03
+1ff796bf10a845793210e6746de3a1cd1aeb14ff,2023-01-25,ok,broadcast transmit+receive,,,,,,,[C] Fix CodeQL warnings.,167.02
+71d1593d2c09c600f8a88109341c158e6d70fa75,2023-02-10,ok,mpsc write+read,,,,,,,[C] Fix name resolver neighbour removal that deleted memory of the adjacent entry.,219.03
+71d1593d2c09c600f8a88109341c158e6d70fa75,2023-02-10,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix name resolver neighbour removal that deleted memory of the adjacent entry.,236.03
+71d1593d2c09c600f8a88109341c158e6d70fa75,2023-02-10,ok,spsc write+read,,,,,,,[C] Fix name resolver neighbour removal that deleted memory of the adjacent entry.,225.03
+71d1593d2c09c600f8a88109341c158e6d70fa75,2023-02-10,ok,broadcast transmit+receive,,,,,,,[C] Fix name resolver neighbour removal that deleted memory of the adjacent entry.,167.02
+db6d7bdf5e6d0e4fb678ad9b26328cedc4ed7650,2023-08-02,ok,mpsc write+read,,,,,,,[C] clean up Apple M1 compilation. Move loss recporter function into compilation unit. Add pragmas to account for unused but set variables.,219.03
+db6d7bdf5e6d0e4fb678ad9b26328cedc4ed7650,2023-08-02,ok,mpsc try_claim+commit+read,,,,,,,[C] clean up Apple M1 compilation. Move loss recporter function into compilation unit. Add pragmas to account for unused but set variables.,236.03
+db6d7bdf5e6d0e4fb678ad9b26328cedc4ed7650,2023-08-02,ok,spsc write+read,,,,,,,[C] clean up Apple M1 compilation. Move loss recporter function into compilation unit. Add pragmas to account for unused but set variables.,225.03
+db6d7bdf5e6d0e4fb678ad9b26328cedc4ed7650,2023-08-02,ok,broadcast transmit+receive,,,,,,,[C] clean up Apple M1 compilation. Move loss recporter function into compilation unit. Add pragmas to account for unused but set variables.,167.02
+6955d1e93f74da76db507e062ffb11b1831c5167,2023-10-02,ok,mpsc write+read,,,,,,,[C] Refactor aeron_counters_reader_counter_type_id(). (#1510),219.03
+6955d1e93f74da76db507e062ffb11b1831c5167,2023-10-02,ok,mpsc try_claim+commit+read,,,,,,,[C] Refactor aeron_counters_reader_counter_type_id(). (#1510),236.03
+6955d1e93f74da76db507e062ffb11b1831c5167,2023-10-02,ok,spsc write+read,,,,,,,[C] Refactor aeron_counters_reader_counter_type_id(). (#1510),225.03
+6955d1e93f74da76db507e062ffb11b1831c5167,2023-10-02,ok,broadcast transmit+receive,,,,,,,[C] Refactor aeron_counters_reader_counter_type_id(). (#1510),167.02
+a5ebbc5ceaa6af86f21222045fbb51bddcddbf26,2023-12-22,ok,mpsc write+read,,,,,,,[C] Track `snd-bpe` when the available window is too small to send the next available data fragment.,219.03
+a5ebbc5ceaa6af86f21222045fbb51bddcddbf26,2023-12-22,ok,mpsc try_claim+commit+read,,,,,,,[C] Track `snd-bpe` when the available window is too small to send the next available data fragment.,236.03
+a5ebbc5ceaa6af86f21222045fbb51bddcddbf26,2023-12-22,ok,spsc write+read,,,,,,,[C] Track `snd-bpe` when the available window is too small to send the next available data fragment.,225.03
+a5ebbc5ceaa6af86f21222045fbb51bddcddbf26,2023-12-22,ok,broadcast transmit+receive,,,,,,,[C] Track `snd-bpe` when the available window is too small to send the next available data fragment.,167.02
+6960e67137f7a79738f3098496d92974a68f8994,2024-02-07,ok,mpsc write+read,,,,,,,"Revert ""[C] Tidy up include defines.""",219.03
+6960e67137f7a79738f3098496d92974a68f8994,2024-02-07,ok,mpsc try_claim+commit+read,,,,,,,"Revert ""[C] Tidy up include defines.""",236.03
+6960e67137f7a79738f3098496d92974a68f8994,2024-02-07,ok,spsc write+read,,,,,,,"Revert ""[C] Tidy up include defines.""",225.03
+6960e67137f7a79738f3098496d92974a68f8994,2024-02-07,ok,broadcast transmit+receive,,,,,,,"Revert ""[C] Tidy up include defines.""",167.02
+cbb493cfa2fdc5653b82bf786f8b41999fdcdceb,2024-03-25,ok,mpsc write+read,,,,,,,[C/C++] Warnings cleanup.,219.03
+cbb493cfa2fdc5653b82bf786f8b41999fdcdceb,2024-03-25,ok,mpsc try_claim+commit+read,,,,,,,[C/C++] Warnings cleanup.,236.03
+cbb493cfa2fdc5653b82bf786f8b41999fdcdceb,2024-03-25,ok,spsc write+read,,,,,,,[C/C++] Warnings cleanup.,225.03
+cbb493cfa2fdc5653b82bf786f8b41999fdcdceb,2024-03-25,ok,broadcast transmit+receive,,,,,,,[C/C++] Warnings cleanup.,167.02
+f6b2f824981c36a60d0a8774c1671c1f04495bc5,2024-04-04,ok,mpsc write+read,,,,,,,[C] Fix buffer overflow when updating counter labels.,219.03
+f6b2f824981c36a60d0a8774c1671c1f04495bc5,2024-04-04,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix buffer overflow when updating counter labels.,236.03
+f6b2f824981c36a60d0a8774c1671c1f04495bc5,2024-04-04,ok,spsc write+read,,,,,,,[C] Fix buffer overflow when updating counter labels.,225.03
+f6b2f824981c36a60d0a8774c1671c1f04495bc5,2024-04-04,ok,broadcast transmit+receive,,,,,,,[C] Fix buffer overflow when updating counter labels.,167.02
+98b9cf31673aa8b4f97c55a0faae5ca71426c8c1,2024-05-26,ok,mpsc write+read,,,,,,,[C] add and use aeron_mkdir_recursive (#1602),219.03
+98b9cf31673aa8b4f97c55a0faae5ca71426c8c1,2024-05-26,ok,mpsc try_claim+commit+read,,,,,,,[C] add and use aeron_mkdir_recursive (#1602),236.03
+98b9cf31673aa8b4f97c55a0faae5ca71426c8c1,2024-05-26,ok,spsc write+read,,,,,,,[C] add and use aeron_mkdir_recursive (#1602),225.03
+98b9cf31673aa8b4f97c55a0faae5ca71426c8c1,2024-05-26,ok,broadcast transmit+receive,,,,,,,[C] add and use aeron_mkdir_recursive (#1602),167.02
+bda99dbc26f72d8a7138c3676414f54c9db8e69e,2024-07-03,ok,mpsc write+read,,,,,,,[C] Dismiss CodeQL warnings attempt 2.,219.03
+bda99dbc26f72d8a7138c3676414f54c9db8e69e,2024-07-03,ok,mpsc try_claim+commit+read,,,,,,,[C] Dismiss CodeQL warnings attempt 2.,236.03
+bda99dbc26f72d8a7138c3676414f54c9db8e69e,2024-07-03,ok,spsc write+read,,,,,,,[C] Dismiss CodeQL warnings attempt 2.,225.03
+bda99dbc26f72d8a7138c3676414f54c9db8e69e,2024-07-03,ok,broadcast transmit+receive,,,,,,,[C] Dismiss CodeQL warnings attempt 2.,167.02
+21bd6a740cef8432c33b623a34adf9a2431c1768,2024-07-31,ok,mpsc write+read,,,,,,,[Java/C/C++ wrapper] Add new API to create static counters. (#1625),219.03
+21bd6a740cef8432c33b623a34adf9a2431c1768,2024-07-31,ok,mpsc try_claim+commit+read,,,,,,,[Java/C/C++ wrapper] Add new API to create static counters. (#1625),236.03
+21bd6a740cef8432c33b623a34adf9a2431c1768,2024-07-31,ok,spsc write+read,,,,,,,[Java/C/C++ wrapper] Add new API to create static counters. (#1625),225.03
+21bd6a740cef8432c33b623a34adf9a2431c1768,2024-07-31,ok,broadcast transmit+receive,,,,,,,[Java/C/C++ wrapper] Add new API to create static counters. (#1625),167.02
+3a8877ebe421748c83c9679ca3603e602aac50ed,2024-09-26,ok,mpsc write+read,,,,,,,[C] Remove `AERON_PUT_VOLATILE`.,219.03
+3a8877ebe421748c83c9679ca3603e602aac50ed,2024-09-26,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove `AERON_PUT_VOLATILE`.,236.03
+3a8877ebe421748c83c9679ca3603e602aac50ed,2024-09-26,ok,spsc write+read,,,,,,,[C] Remove `AERON_PUT_VOLATILE`.,225.03
+3a8877ebe421748c83c9679ca3603e602aac50ed,2024-09-26,ok,broadcast transmit+receive,,,,,,,[C] Remove `AERON_PUT_VOLATILE`.,167.02
+428ece8c0803efd52872346f7eb8261745d6144c,2024-11-28,build failed,,,,,,,,[C] Move `aeron_randomised_int32` implementation to `aeron_bitutil.c`.
+8cf89a45392e1278f8e01b95ce1de43da85fa690,2024-11-29,ok,mpsc write+read,,,,,,,[C] Fix compilation issues on Windows.,219.03
+8cf89a45392e1278f8e01b95ce1de43da85fa690,2024-11-29,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix compilation issues on Windows.,236.03
+8cf89a45392e1278f8e01b95ce1de43da85fa690,2024-11-29,ok,spsc write+read,,,,,,,[C] Fix compilation issues on Windows.,225.03
+8cf89a45392e1278f8e01b95ce1de43da85fa690,2024-11-29,ok,broadcast transmit+receive,,,,,,,[C] Fix compilation issues on Windows.,167.02
+1f177e3176fa03676b6b19e227bd224ab22ca02f,2024-12-11,ok,mpsc write+read,,,,,,,[C] Fix the order of symbol definitions.,219.03
+1f177e3176fa03676b6b19e227bd224ab22ca02f,2024-12-11,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix the order of symbol definitions.,236.03
+1f177e3176fa03676b6b19e227bd224ab22ca02f,2024-12-11,ok,spsc write+read,,,,,,,[C] Fix the order of symbol definitions.,225.03
+1f177e3176fa03676b6b19e227bd224ab22ca02f,2024-12-11,ok,broadcast transmit+receive,,,,,,,[C] Fix the order of symbol definitions.,167.02
+2dfe1446b9e705b0499ee734a55fbbee218bccd9,2024-12-12,ok,mpsc write+read,,,,,,,[C] Make broadcast_receiver scratch buffer expandable to accommodate for large responses from the media driver.,219.03
+2dfe1446b9e705b0499ee734a55fbbee218bccd9,2024-12-12,ok,mpsc try_claim+commit+read,,,,,,,[C] Make broadcast_receiver scratch buffer expandable to accommodate for large responses from the media driver.,236.03
+2dfe1446b9e705b0499ee734a55fbbee218bccd9,2024-12-12,ok,spsc write+read,,,,,,,[C] Make broadcast_receiver scratch buffer expandable to accommodate for large responses from the media driver.,225.03
+2dfe1446b9e705b0499ee734a55fbbee218bccd9,2024-12-12,ok,broadcast transmit+receive,,,,,,,[C] Make broadcast_receiver scratch buffer expandable to accommodate for large responses from the media driver.,180.02
+9eb689f6ea6a4e935bda5ce7732413adfcc808c9,2024-12-20,ok,mpsc write+read,,,,,,,[C] Move `_Static_assert` out of the header file.,219.03
+9eb689f6ea6a4e935bda5ce7732413adfcc808c9,2024-12-20,ok,mpsc try_claim+commit+read,,,,,,,[C] Move `_Static_assert` out of the header file.,236.03
+9eb689f6ea6a4e935bda5ce7732413adfcc808c9,2024-12-20,ok,spsc write+read,,,,,,,[C] Move `_Static_assert` out of the header file.,225.03
+9eb689f6ea6a4e935bda5ce7732413adfcc808c9,2024-12-20,ok,broadcast transmit+receive,,,,,,,[C] Move `_Static_assert` out of the header file.,180.02
+b24a85d702feaa9209281ea6287d0b6b709cee0f,2025-01-09,ok,mpsc write+read,,,,,,,[C] Fix compiler warnings.,219.03
+b24a85d702feaa9209281ea6287d0b6b709cee0f,2025-01-09,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix compiler warnings.,236.03
+b24a85d702feaa9209281ea6287d0b6b709cee0f,2025-01-09,ok,spsc write+read,,,,,,,[C] Fix compiler warnings.,225.03
+b24a85d702feaa9209281ea6287d0b6b709cee0f,2025-01-09,ok,broadcast transmit+receive,,,,,,,[C] Fix compiler warnings.,180.02
+ae665d9e53eba4427b3f64b6549caa985fa3cf11,2025-01-30,ok,mpsc write+read,,,,,,,[C] Add support for setting CPU affinity for the async executor thread (`aeron.driver.async.executor.cpu.affinity`).,219.03
+ae665d9e53eba4427b3f64b6549caa985fa3cf11,2025-01-30,ok,mpsc try_claim+commit+read,,,,,,,[C] Add support for setting CPU affinity for the async executor thread (`aeron.driver.async.executor.cpu.affinity`).,236.03
+ae665d9e53eba4427b3f64b6549caa985fa3cf11,2025-01-30,ok,spsc write+read,,,,,,,[C] Add support for setting CPU affinity for the async executor thread (`aeron.driver.async.executor.cpu.affinity`).,225.03
+ae665d9e53eba4427b3f64b6549caa985fa3cf11,2025-01-30,ok,broadcast transmit+receive,,,,,,,[C] Add support for setting CPU affinity for the async executor thread (`aeron.driver.async.executor.cpu.affinity`).,180.02
+65faaa7415fb92da18dcd2a2eb712d58ebabf979,2025-02-12,ok,mpsc write+read,,,,,,,[C] Remove `FILE_SHARE_DELETE` share mode option when creating/opening a file.,219.03
+65faaa7415fb92da18dcd2a2eb712d58ebabf979,2025-02-12,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove `FILE_SHARE_DELETE` share mode option when creating/opening a file.,236.03
+65faaa7415fb92da18dcd2a2eb712d58ebabf979,2025-02-12,ok,spsc write+read,,,,,,,[C] Remove `FILE_SHARE_DELETE` share mode option when creating/opening a file.,225.03
+65faaa7415fb92da18dcd2a2eb712d58ebabf979,2025-02-12,ok,broadcast transmit+receive,,,,,,,[C] Remove `FILE_SHARE_DELETE` share mode option when creating/opening a file.,180.02
+80a97bddea769d21d19cb274fd581810be02da86,2025-02-12,ok,mpsc write+read,,,,,,,[C] Restore `FILE_SHARE_DELETE`.,219.03
+80a97bddea769d21d19cb274fd581810be02da86,2025-02-12,ok,mpsc try_claim+commit+read,,,,,,,[C] Restore `FILE_SHARE_DELETE`.,236.03
+80a97bddea769d21d19cb274fd581810be02da86,2025-02-12,ok,spsc write+read,,,,,,,[C] Restore `FILE_SHARE_DELETE`.,225.03
+80a97bddea769d21d19cb274fd581810be02da86,2025-02-12,ok,broadcast transmit+receive,,,,,,,[C] Restore `FILE_SHARE_DELETE`.,180.02
+a7d0c3598f547d611019352e3178ae871e2a7717,2025-02-12,ok,mpsc write+read,,,,,,,"Revert ""[C] Close HANDLE before returning file descriptor.""",219.03
+a7d0c3598f547d611019352e3178ae871e2a7717,2025-02-12,ok,mpsc try_claim+commit+read,,,,,,,"Revert ""[C] Close HANDLE before returning file descriptor.""",236.03
+a7d0c3598f547d611019352e3178ae871e2a7717,2025-02-12,ok,spsc write+read,,,,,,,"Revert ""[C] Close HANDLE before returning file descriptor.""",225.03
+a7d0c3598f547d611019352e3178ae871e2a7717,2025-02-12,ok,broadcast transmit+receive,,,,,,,"Revert ""[C] Close HANDLE before returning file descriptor.""",180.02
+1393b8347e6a9a4a803b2178ce6def3b744c90ff,2025-02-12,ok,mpsc write+read,,,,,,,"Revert ""[C] Drop `FILE_SHARE_DELETE` option.""",219.03
+1393b8347e6a9a4a803b2178ce6def3b744c90ff,2025-02-12,ok,mpsc try_claim+commit+read,,,,,,,"Revert ""[C] Drop `FILE_SHARE_DELETE` option.""",236.03
+1393b8347e6a9a4a803b2178ce6def3b744c90ff,2025-02-12,ok,spsc write+read,,,,,,,"Revert ""[C] Drop `FILE_SHARE_DELETE` option.""",225.03
+1393b8347e6a9a4a803b2178ce6def3b744c90ff,2025-02-12,ok,broadcast transmit+receive,,,,,,,"Revert ""[C] Drop `FILE_SHARE_DELETE` option.""",180.02
+dce33f908d998311b6b2eb032c4c1c4283eff80f,2025-03-06,ok,mpsc write+read,,,,,,,[C] Align counter API with the Java implementation: - Rename `*volatile` methods to `*release`. - Rename all `*_ordered` methods to `*_release`. - Add missing `_plain` methods.,219.03
+dce33f908d998311b6b2eb032c4c1c4283eff80f,2025-03-06,ok,mpsc try_claim+commit+read,,,,,,,[C] Align counter API with the Java implementation: - Rename `*volatile` methods to `*release`. - Rename all `*_ordered` methods to `*_release`. - Add missing `_plain` methods.,236.03
+dce33f908d998311b6b2eb032c4c1c4283eff80f,2025-03-06,ok,spsc write+read,,,,,,,[C] Align counter API with the Java implementation: - Rename `*volatile` methods to `*release`. - Rename all `*_ordered` methods to `*_release`. - Add missing `_plain` methods.,225.03
+dce33f908d998311b6b2eb032c4c1c4283eff80f,2025-03-06,ok,broadcast transmit+receive,,,,,,,[C] Align counter API with the Java implementation: - Rename `*volatile` methods to `*release`. - Rename all `*_ordered` methods to `*_release`. - Add missing `_plain` methods.,180.02
+c9477c49cf52c0c9630f8167a495c4645ec88cc0,2025-05-23,ok,mpsc write+read,,,,,,,Publication revoke (#1781),219.03
+c9477c49cf52c0c9630f8167a495c4645ec88cc0,2025-05-23,ok,mpsc try_claim+commit+read,,,,,,,Publication revoke (#1781),236.03
+c9477c49cf52c0c9630f8167a495c4645ec88cc0,2025-05-23,ok,spsc write+read,,,,,,,Publication revoke (#1781),225.03
+c9477c49cf52c0c9630f8167a495c4645ec88cc0,2025-05-23,ok,broadcast transmit+receive,,,,,,,Publication revoke (#1781),180.02
+997a6053d351116df56180dba0a732f8d44d149b,2025-07-08,ok,mpsc write+read,,,,,,,[C] Fallback to `/dev/urandom` if `arc4random` is not available.,219.03
+997a6053d351116df56180dba0a732f8d44d149b,2025-07-08,ok,mpsc try_claim+commit+read,,,,,,,[C] Fallback to `/dev/urandom` if `arc4random` is not available.,236.03
+997a6053d351116df56180dba0a732f8d44d149b,2025-07-08,ok,spsc write+read,,,,,,,[C] Fallback to `/dev/urandom` if `arc4random` is not available.,225.03
+997a6053d351116df56180dba0a732f8d44d149b,2025-07-08,ok,broadcast transmit+receive,,,,,,,[C] Fallback to `/dev/urandom` if `arc4random` is not available.,180.02
+f7ad3c207c5ea795eedc4cf1fe706ef27ed9773d,2025-11-07,ok,mpsc write+read,,,,,,,[C] Add ability to counter number of digits in a 32-bit number (`aeron_digit_count`). This is useful for various formatting tasks.,219.03
+f7ad3c207c5ea795eedc4cf1fe706ef27ed9773d,2025-11-07,ok,mpsc try_claim+commit+read,,,,,,,[C] Add ability to counter number of digits in a 32-bit number (`aeron_digit_count`). This is useful for various formatting tasks.,236.03
+f7ad3c207c5ea795eedc4cf1fe706ef27ed9773d,2025-11-07,ok,spsc write+read,,,,,,,[C] Add ability to counter number of digits in a 32-bit number (`aeron_digit_count`). This is useful for various formatting tasks.,225.03
+f7ad3c207c5ea795eedc4cf1fe706ef27ed9773d,2025-11-07,ok,broadcast transmit+receive,,,,,,,[C] Add ability to counter number of digits in a 32-bit number (`aeron_digit_count`). This is useful for various formatting tasks.,180.02
+cfab33d06a56dbfa9efd09e3c76888921bf6b892,2025-11-07,ok,mpsc write+read,,,,,,,[C] Remove `assert` around intrinsics usage which invocations outside of CI if used.,219.03
+cfab33d06a56dbfa9efd09e3c76888921bf6b892,2025-11-07,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove `assert` around intrinsics usage which invocations outside of CI if used.,236.03
+cfab33d06a56dbfa9efd09e3c76888921bf6b892,2025-11-07,ok,spsc write+read,,,,,,,[C] Remove `assert` around intrinsics usage which invocations outside of CI if used.,225.03
+cfab33d06a56dbfa9efd09e3c76888921bf6b892,2025-11-07,ok,broadcast transmit+receive,,,,,,,[C] Remove `assert` around intrinsics usage which invocations outside of CI if used.,180.02
+98f3b85dedf7ed30bbcb772f39fc3dd8c89d971a,2025-11-27,ok,mpsc write+read,,,,,,,"[C] Create `aeron_mutex_t` as recursive/reentrant on POSIX systems, i.e. match behavior on Windows and the Java implementation.",219.03
+98f3b85dedf7ed30bbcb772f39fc3dd8c89d971a,2025-11-27,ok,mpsc try_claim+commit+read,,,,,,,"[C] Create `aeron_mutex_t` as recursive/reentrant on POSIX systems, i.e. match behavior on Windows and the Java implementation.",236.03
+98f3b85dedf7ed30bbcb772f39fc3dd8c89d971a,2025-11-27,ok,spsc write+read,,,,,,,"[C] Create `aeron_mutex_t` as recursive/reentrant on POSIX systems, i.e. match behavior on Windows and the Java implementation.",225.03
+98f3b85dedf7ed30bbcb772f39fc3dd8c89d971a,2025-11-27,ok,broadcast transmit+receive,,,,,,,"[C] Create `aeron_mutex_t` as recursive/reentrant on POSIX systems, i.e. match behavior on Windows and the Java implementation.",180.02
+a3b5ecc0a2be909c62cfc0615b7d1d77ee4eec01,2025-11-27,ok,mpsc write+read,,,,,,,[C] Fix `aeron_mutex_init` on POSIX systems.,219.03
+a3b5ecc0a2be909c62cfc0615b7d1d77ee4eec01,2025-11-27,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix `aeron_mutex_init` on POSIX systems.,236.03
+a3b5ecc0a2be909c62cfc0615b7d1d77ee4eec01,2025-11-27,ok,spsc write+read,,,,,,,[C] Fix `aeron_mutex_init` on POSIX systems.,225.03
+a3b5ecc0a2be909c62cfc0615b7d1d77ee4eec01,2025-11-27,ok,broadcast transmit+receive,,,,,,,[C] Fix `aeron_mutex_init` on POSIX systems.,180.02
+042dc6a8d0fb1fe13243e5dab2eaea1e4db41c51,2025-12-19,ok,mpsc write+read,,,,,,,aeron_atomic64_gcc_x86_64.h acquire/release fixes (#1904),219.03
+042dc6a8d0fb1fe13243e5dab2eaea1e4db41c51,2025-12-19,ok,mpsc try_claim+commit+read,,,,,,,aeron_atomic64_gcc_x86_64.h acquire/release fixes (#1904),236.03
+042dc6a8d0fb1fe13243e5dab2eaea1e4db41c51,2025-12-19,ok,spsc write+read,,,,,,,aeron_atomic64_gcc_x86_64.h acquire/release fixes (#1904),225.03
+042dc6a8d0fb1fe13243e5dab2eaea1e4db41c51,2025-12-19,ok,broadcast transmit+receive,,,,,,,aeron_atomic64_gcc_x86_64.h acquire/release fixes (#1904),175.02
+ee388456641cbfbce3e5ca4bc7351359ca7de322,2025-12-22,ok,mpsc write+read,,,,,,,[C] Add `#define _Static_assert static_assert` for MSVC compiler.,215.03
+ee388456641cbfbce3e5ca4bc7351359ca7de322,2025-12-22,ok,mpsc try_claim+commit+read,,,,,,,[C] Add `#define _Static_assert static_assert` for MSVC compiler.,235.03
+ee388456641cbfbce3e5ca4bc7351359ca7de322,2025-12-22,ok,spsc write+read,,,,,,,[C] Add `#define _Static_assert static_assert` for MSVC compiler.,225.03
+ee388456641cbfbce3e5ca4bc7351359ca7de322,2025-12-22,ok,broadcast transmit+receive,,,,,,,[C] Add `#define _Static_assert static_assert` for MSVC compiler.,175.02
+8b29bc04eca7d9701681e7233b4f30a47e2b863f,2025-12-25,ok,mpsc write+read,,,,,,,[C] Refactor duration and size parsing.,215.03
+8b29bc04eca7d9701681e7233b4f30a47e2b863f,2025-12-25,ok,mpsc try_claim+commit+read,,,,,,,[C] Refactor duration and size parsing.,235.03
+8b29bc04eca7d9701681e7233b4f30a47e2b863f,2025-12-25,ok,spsc write+read,,,,,,,[C] Refactor duration and size parsing.,225.03
+8b29bc04eca7d9701681e7233b4f30a47e2b863f,2025-12-25,ok,broadcast transmit+receive,,,,,,,[C] Refactor duration and size parsing.,175.02
+9d33487c4ea9d7661ccf8a00a6f00a8bce04ddd2,2025-12-26,ok,mpsc write+read,,,,,,,[C] Add `aeron_format_duration_ns`.,215.03
+9d33487c4ea9d7661ccf8a00a6f00a8bce04ddd2,2025-12-26,ok,mpsc try_claim+commit+read,,,,,,,[C] Add `aeron_format_duration_ns`.,235.03
+9d33487c4ea9d7661ccf8a00a6f00a8bce04ddd2,2025-12-26,ok,spsc write+read,,,,,,,[C] Add `aeron_format_duration_ns`.,225.03
+9d33487c4ea9d7661ccf8a00a6f00a8bce04ddd2,2025-12-26,ok,broadcast transmit+receive,,,,,,,[C] Add `aeron_format_duration_ns`.,175.02
+b0333f4c0db2712ac7c192f8326ad684669f058b,2026-01-10,ok,mpsc write+read,,,,,,,[C] Fix `aeron_reallocf` return value on macOS when size is zero. Simplify Linux code. Add more tests.,215.03
+b0333f4c0db2712ac7c192f8326ad684669f058b,2026-01-10,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix `aeron_reallocf` return value on macOS when size is zero. Simplify Linux code. Add more tests.,235.03
+b0333f4c0db2712ac7c192f8326ad684669f058b,2026-01-10,ok,spsc write+read,,,,,,,[C] Fix `aeron_reallocf` return value on macOS when size is zero. Simplify Linux code. Add more tests.,225.03
+b0333f4c0db2712ac7c192f8326ad684669f058b,2026-01-10,ok,broadcast transmit+receive,,,,,,,[C] Fix `aeron_reallocf` return value on macOS when size is zero. Simplify Linux code. Add more tests.,175.02
+5199e94d33348e781db7c13bb87af725170f4b7c,2026-01-16,ok,mpsc write+read,,,,,,,Fixes false sharing on mpsc and spsc queue. (#1915),215.03
+5199e94d33348e781db7c13bb87af725170f4b7c,2026-01-16,ok,mpsc try_claim+commit+read,,,,,,,Fixes false sharing on mpsc and spsc queue. (#1915),235.03
+5199e94d33348e781db7c13bb87af725170f4b7c,2026-01-16,ok,spsc write+read,,,,,,,Fixes false sharing on mpsc and spsc queue. (#1915),225.03
+5199e94d33348e781db7c13bb87af725170f4b7c,2026-01-16,ok,broadcast transmit+receive,,,,,,,Fixes false sharing on mpsc and spsc queue. (#1915),175.02
+4ecdb6b239b51034b40db118f977590b7469b747,2026-03-02,ok,mpsc write+read,,,,,,,[C] Remove `attr` parameter from the `aeron_mutex_init` function.,215.03
+4ecdb6b239b51034b40db118f977590b7469b747,2026-03-02,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove `attr` parameter from the `aeron_mutex_init` function.,235.03
+4ecdb6b239b51034b40db118f977590b7469b747,2026-03-02,ok,spsc write+read,,,,,,,[C] Remove `attr` parameter from the `aeron_mutex_init` function.,225.03
+4ecdb6b239b51034b40db118f977590b7469b747,2026-03-02,ok,broadcast transmit+receive,,,,,,,[C] Remove `attr` parameter from the `aeron_mutex_init` function.,175.02
+074e40066df685c994edbda43ab1878bf5f4e530,2026-03-10,ok,mpsc write+read,,,,,,,[C] Remove redundant check.,215.03
+074e40066df685c994edbda43ab1878bf5f4e530,2026-03-10,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove redundant check.,235.03
+074e40066df685c994edbda43ab1878bf5f4e530,2026-03-10,ok,spsc write+read,,,,,,,[C] Remove redundant check.,225.03
+074e40066df685c994edbda43ab1878bf5f4e530,2026-03-10,ok,broadcast transmit+receive,,,,,,,[C] Remove redundant check.,175.02
+3421366ac76a288973a7d6662f7e739c72ccf3ac,2026-03-10,ok,mpsc write+read,,,,,,,[C] Remove `aeron_executor_task_do_complete` and simplify interactions when return queue is not used.,215.03
+3421366ac76a288973a7d6662f7e739c72ccf3ac,2026-03-10,ok,mpsc try_claim+commit+read,,,,,,,[C] Remove `aeron_executor_task_do_complete` and simplify interactions when return queue is not used.,235.03
+3421366ac76a288973a7d6662f7e739c72ccf3ac,2026-03-10,ok,spsc write+read,,,,,,,[C] Remove `aeron_executor_task_do_complete` and simplify interactions when return queue is not used.,225.03
+3421366ac76a288973a7d6662f7e739c72ccf3ac,2026-03-10,ok,broadcast transmit+receive,,,,,,,[C] Remove `aeron_executor_task_do_complete` and simplify interactions when return queue is not used.,175.02
+0f884c9e6aa37ae90a7e5345468995a5d2fe0e19,2026-04-02,ok,mpsc write+read,,,,,,,Added support for C/C++ builds using MSVC on Windows ARM (#1975),215.03
+0f884c9e6aa37ae90a7e5345468995a5d2fe0e19,2026-04-02,ok,mpsc try_claim+commit+read,,,,,,,Added support for C/C++ builds using MSVC on Windows ARM (#1975),235.03
+0f884c9e6aa37ae90a7e5345468995a5d2fe0e19,2026-04-02,ok,spsc write+read,,,,,,,Added support for C/C++ builds using MSVC on Windows ARM (#1975),225.03
+0f884c9e6aa37ae90a7e5345468995a5d2fe0e19,2026-04-02,ok,broadcast transmit+receive,,,,,,,Added support for C/C++ builds using MSVC on Windows ARM (#1975),175.02
+8c232544cb3206fa590173ec6bd5cd52395a45ae,2026-04-06,ok,mpsc write+read,,,,,,,[C] Fix compilation error on Windows.,215.03
+8c232544cb3206fa590173ec6bd5cd52395a45ae,2026-04-06,ok,mpsc try_claim+commit+read,,,,,,,[C] Fix compilation error on Windows.,235.03
+8c232544cb3206fa590173ec6bd5cd52395a45ae,2026-04-06,ok,spsc write+read,,,,,,,[C] Fix compilation error on Windows.,225.03
+8c232544cb3206fa590173ec6bd5cd52395a45ae,2026-04-06,ok,broadcast transmit+receive,,,,,,,[C] Fix compilation error on Windows.,175.02
+24aa5d59beb13e82d4557afebfd4f393f6f060bb,2026-04-13,ok,mpsc write+read,,,,,,,"[C] Make `AERON_CLIENT_ERROR_` codes positive to match the rest of Aeron-specific error codes. Handle client error codes when setting errors, i.e. write user-friendly message.",215.03
+24aa5d59beb13e82d4557afebfd4f393f6f060bb,2026-04-13,ok,mpsc try_claim+commit+read,,,,,,,"[C] Make `AERON_CLIENT_ERROR_` codes positive to match the rest of Aeron-specific error codes. Handle client error codes when setting errors, i.e. write user-friendly message.",235.03
+24aa5d59beb13e82d4557afebfd4f393f6f060bb,2026-04-13,ok,spsc write+read,,,,,,,"[C] Make `AERON_CLIENT_ERROR_` codes positive to match the rest of Aeron-specific error codes. Handle client error codes when setting errors, i.e. write user-friendly message.",225.03
+24aa5d59beb13e82d4557afebfd4f393f6f060bb,2026-04-13,ok,broadcast transmit+receive,,,,,,,"[C] Make `AERON_CLIENT_ERROR_` codes positive to match the rest of Aeron-specific error codes. Handle client error codes when setting errors, i.e. write user-friendly message.",175.02
+0fd3b89e7476103d7e0ce9117d2f3a24eb93d1f1,2026-04-17,ok,mpsc write+read,,,,,,,[C] Match async executor configuration with the new Java implementation.,215.03
+0fd3b89e7476103d7e0ce9117d2f3a24eb93d1f1,2026-04-17,ok,mpsc try_claim+commit+read,,,,,,,[C] Match async executor configuration with the new Java implementation.,235.03
+0fd3b89e7476103d7e0ce9117d2f3a24eb93d1f1,2026-04-17,ok,spsc write+read,,,,,,,[C] Match async executor configuration with the new Java implementation.,225.03
+0fd3b89e7476103d7e0ce9117d2f3a24eb93d1f1,2026-04-17,ok,broadcast transmit+receive,,,,,,,[C] Match async executor configuration with the new Java implementation.,175.02
+68f96dc07504f96ac4809ccbd2b9cfcf7e96a32b,2026-04-24,ok,mpsc write+read,,,,,,,Added AERON_RB_IS_CAPACITY_VALID upper bound check. (#2017),215.03
+68f96dc07504f96ac4809ccbd2b9cfcf7e96a32b,2026-04-24,ok,mpsc try_claim+commit+read,,,,,,,Added AERON_RB_IS_CAPACITY_VALID upper bound check. (#2017),235.03
+68f96dc07504f96ac4809ccbd2b9cfcf7e96a32b,2026-04-24,ok,spsc write+read,,,,,,,Added AERON_RB_IS_CAPACITY_VALID upper bound check. (#2017),222.04
+68f96dc07504f96ac4809ccbd2b9cfcf7e96a32b,2026-04-24,ok,broadcast transmit+receive,,,,,,,Added AERON_RB_IS_CAPACITY_VALID upper bound check. (#2017),175.02
+fe0f580198e583b202c2f849c0c9d4388970361d,2026-05-11,ok,mpsc write+read,,,,,,,Support using Cpusets to handle thread affinity. (#2042),215.03
+fe0f580198e583b202c2f849c0c9d4388970361d,2026-05-11,ok,mpsc try_claim+commit+read,,,,,,,Support using Cpusets to handle thread affinity. (#2042),235.03
+fe0f580198e583b202c2f849c0c9d4388970361d,2026-05-11,ok,spsc write+read,,,,,,,Support using Cpusets to handle thread affinity. (#2042),222.04
+fe0f580198e583b202c2f849c0c9d4388970361d,2026-05-11,ok,broadcast transmit+receive,,,,,,,Support using Cpusets to handle thread affinity. (#2042),175.02
+3a7c08365fa023b7084f6f75ac3ab39d74f7992b,2026-06-08,ok,mpsc write+read,,,,,,,Add PowerPC 64-bit (ppc64le) support to C and C++ clients (#2060),215.03
+3a7c08365fa023b7084f6f75ac3ab39d74f7992b,2026-06-08,ok,mpsc try_claim+commit+read,,,,,,,Add PowerPC 64-bit (ppc64le) support to C and C++ clients (#2060),235.03
+3a7c08365fa023b7084f6f75ac3ab39d74f7992b,2026-06-08,ok,spsc write+read,,,,,,,Add PowerPC 64-bit (ppc64le) support to C and C++ clients (#2060),222.04
+3a7c08365fa023b7084f6f75ac3ab39d74f7992b,2026-06-08,ok,broadcast transmit+receive,,,,,,,Add PowerPC 64-bit (ppc64le) support to C and C++ clients (#2060),175.02
+e6fc0250680859391c3c735949720fefa1c775ca,2026-06-11,ok,mpsc write+read,,,,,,,"[Driver/C] Align async execution with Java, i.e.: - rename `async_executor` to `native_resource_agent` - introduce `native_resource_agent_proxy` - make `native_resource_agent` top-level component - remove `aeron_blocking_linked_queue`",215.03
+e6fc0250680859391c3c735949720fefa1c775ca,2026-06-11,ok,mpsc try_claim+commit+read,,,,,,,"[Driver/C] Align async execution with Java, i.e.: - rename `async_executor` to `native_resource_agent` - introduce `native_resource_agent_proxy` - make `native_resource_agent` top-level component - remove `aeron_blocking_linked_queue`",235.03
+e6fc0250680859391c3c735949720fefa1c775ca,2026-06-11,ok,spsc write+read,,,,,,,"[Driver/C] Align async execution with Java, i.e.: - rename `async_executor` to `native_resource_agent` - introduce `native_resource_agent_proxy` - make `native_resource_agent` top-level component - remove `aeron_blocking_linked_queue`",222.04
+e6fc0250680859391c3c735949720fefa1c775ca,2026-06-11,ok,broadcast transmit+receive,,,,,,,"[Driver/C] Align async execution with Java, i.e.: - rename `async_executor` to `native_resource_agent` - introduce `native_resource_agent_proxy` - make `native_resource_agent` top-level component - remove `aeron_blocking_linked_queue`",175.02
+b322e972c856a0d328edcc7bac9c8242daf67d63,2026-06-11,ok,mpsc write+read,,,,,,,[Driver/C] Remove `aeron_spsc_rb_writev` and restore compilation on Windows.,215.03
+b322e972c856a0d328edcc7bac9c8242daf67d63,2026-06-11,ok,mpsc try_claim+commit+read,,,,,,,[Driver/C] Remove `aeron_spsc_rb_writev` and restore compilation on Windows.,235.03
+b322e972c856a0d328edcc7bac9c8242daf67d63,2026-06-11,ok,spsc write+read,,,,,,,[Driver/C] Remove `aeron_spsc_rb_writev` and restore compilation on Windows.,191.04
+b322e972c856a0d328edcc7bac9c8242daf67d63,2026-06-11,ok,broadcast transmit+receive,,,,,,,[Driver/C] Remove `aeron_spsc_rb_writev` and restore compilation on Windows.,175.02
+05d6220fa89e1e799c2782695923db672dc84e18,2026-06-29,ok,mpsc write+read,,,,,,,[Driver/C] Move log buffer creation to a background thread.,215.03
+05d6220fa89e1e799c2782695923db672dc84e18,2026-06-29,ok,mpsc try_claim+commit+read,,,,,,,[Driver/C] Move log buffer creation to a background thread.,235.03
+05d6220fa89e1e799c2782695923db672dc84e18,2026-06-29,ok,spsc write+read,,,,,,,[Driver/C] Move log buffer creation to a background thread.,191.04
+05d6220fa89e1e799c2782695923db672dc84e18,2026-06-29,ok,broadcast transmit+receive,,,,,,,[Driver/C] Move log buffer creation to a background thread.,175.02
+af383b24d536433498545f5f03d7cb84ea5d86f6,2026-08-18,ok,mpsc write+read,,,,,,,[C/C++ Archive Client] Surface errors from the archive as the actual errors from the archive instead of using a generic error. (#2108),215.03
+af383b24d536433498545f5f03d7cb84ea5d86f6,2026-08-18,ok,mpsc try_claim+commit+read,,,,,,,[C/C++ Archive Client] Surface errors from the archive as the actual errors from the archive instead of using a generic error. (#2108),235.03
+af383b24d536433498545f5f03d7cb84ea5d86f6,2026-08-18,ok,spsc write+read,,,,,,,[C/C++ Archive Client] Surface errors from the archive as the actual errors from the archive instead of using a generic error. (#2108),191.04
+af383b24d536433498545f5f03d7cb84ea5d86f6,2026-08-18,ok,broadcast transmit+receive,,,,,,,[C/C++ Archive Client] Surface errors from the archive as the actual errors from the archive instead of using a generic error. (#2108),175.02
+be90f7d9a391ccc5ae9353121139e6d42be340dc,2026-09-25,ok,mpsc write+read,,,,,,,fix(c): ignore missing properties files in aeron_properties_file_load (#2088),215.03
+be90f7d9a391ccc5ae9353121139e6d42be340dc,2026-09-25,ok,mpsc try_claim+commit+read,,,,,,,fix(c): ignore missing properties files in aeron_properties_file_load (#2088),235.03
+be90f7d9a391ccc5ae9353121139e6d42be340dc,2026-09-25,ok,spsc write+read,,,,,,,fix(c): ignore missing properties files in aeron_properties_file_load (#2088),191.04
+be90f7d9a391ccc5ae9353121139e6d42be340dc,2026-09-25,ok,broadcast transmit+receive,,,,,,,fix(c): ignore missing properties files in aeron_properties_file_load (#2088),175.02
+7ca0c1c8403609933b456d41ee3b301236a46255,2026-10-12,ok,mpsc write+read,,,,,,,[C] Reject a raw log file too short for its metadata or terms when mapping an existing log (#2191),215.03
+7ca0c1c8403609933b456d41ee3b301236a46255,2026-10-12,ok,mpsc try_claim+commit+read,,,,,,,[C] Reject a raw log file too short for its metadata or terms when mapping an existing log (#2191),235.03
+7ca0c1c8403609933b456d41ee3b301236a46255,2026-10-12,ok,spsc write+read,,,,,,,[C] Reject a raw log file too short for its metadata or terms when mapping an existing log (#2191),191.04
+7ca0c1c8403609933b456d41ee3b301236a46255,2026-10-12,ok,broadcast transmit+receive,,,,,,,[C] Reject a raw log file too short for its metadata or terms when mapping an existing log (#2191),175.02
+6fb57cd932269233322118f066221a2e0b6b2b84,2026-10-26,ok,mpsc write+read,,,,,,,[Client/C] Fail fast when invoking `aeron_t` or `aeron_archive_t` operations if object is in invalid state.,215.03
+6fb57cd932269233322118f066221a2e0b6b2b84,2026-10-26,ok,mpsc try_claim+commit+read,,,,,,,[Client/C] Fail fast when invoking `aeron_t` or `aeron_archive_t` operations if object is in invalid state.,235.03
+6fb57cd932269233322118f066221a2e0b6b2b84,2026-10-26,ok,spsc write+read,,,,,,,[Client/C] Fail fast when invoking `aeron_t` or `aeron_archive_t` operations if object is in invalid state.,191.04
+6fb57cd932269233322118f066221a2e0b6b2b84,2026-10-26,ok,broadcast transmit+receive,,,,,,,[Client/C] Fail fast when invoking `aeron_t` or `aeron_archive_t` operations if object is in invalid state.,175.02
+364154d1e7dd5f8a48eeb5bf09dcded505a3c82b,2026-11-06,ok,mpsc write+read,,,,,,,"[C] Only compile tmp_dir and has_file_separator_at_end on the platforms whose aeron_default_path calls them, flagged by CodeQL. (#2237)",215.03
+364154d1e7dd5f8a48eeb5bf09dcded505a3c82b,2026-11-06,ok,mpsc try_claim+commit+read,,,,,,,"[C] Only compile tmp_dir and has_file_separator_at_end on the platforms whose aeron_default_path calls them, flagged by CodeQL. (#2237)",235.03
+364154d1e7dd5f8a48eeb5bf09dcded505a3c82b,2026-11-06,ok,spsc write+read,,,,,,,"[C] Only compile tmp_dir and has_file_separator_at_end on the platforms whose aeron_default_path calls them, flagged by CodeQL. (#2237)",191.04
+364154d1e7dd5f8a48eeb5bf09dcded505a3c82b,2026-11-06,ok,broadcast transmit+receive,,,,,,,"[C] Only compile tmp_dir and has_file_separator_at_end on the platforms whose aeron_default_path calls them, flagged by CodeQL. (#2237)",175.02
