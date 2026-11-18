@@ -18,11 +18,12 @@ tests actually run (paths nobody exercises). It works on existing code, unmodifi
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/history-dark.svg">
-  <img alt="Two histories replayed by hotpath-cost. abseil's flat_hash_map: three refactorings in 2025 each add 40 to 50 % to the instructions of a lookup; two are undone within weeks, one stays a year. msgpack-c: unpacking into a reused zone makes 2 heap allocations per message instead of 1 since a 2016 commit, still today; our fix makes it 0." src="docs/figures/history-light.svg">
+  <img alt="Two findings. abseil's flat_hash_map, replayed across its history: three refactorings in 2025 each add 40 to 50 % to the instructions of a lookup; two are undone within weeks, one stays a year. MPMCQueue, compared across compilers: GCC divided by the capacity twice per operation, 52.5 ns against 30.3 with clang; our four-line fix, merged upstream, brings GCC to 29.6 ns and clang to 26.6." src="docs/figures/history-light.svg">
 </picture>
 
-Each step is one commit, found and named by replaying the library's history; the figure is drawn from
-the replay's results by [`docs/figures/history.py`](docs/figures/history.py).
+Top: comparing a library with its own past, every step is one commit, found and named by the replay.
+Bottom: comparing it with itself under another compiler. Drawn from the tool's results by
+[`docs/figures/history.py`](docs/figures/history.py).
 
 ## Problems it found in real projects
 
