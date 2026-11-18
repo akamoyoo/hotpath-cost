@@ -1,0 +1,594 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+a8773de80f6d1db3b01886c4fcfc9bb6cba42f32,2019-09-20,build failed,,,,,,,,Add files
+d48c26220fd077ea48093b3724df481e2eabc661,2019-09-20,build failed,,,,,,,,Workaround for allocator_traits
+2b62d0d5fbbd5e75b496ac979799c251f6152fc8,2019-09-20,build failed,,,,,,,,Add static_const
+81bb36751ec9c7ac6448d019cf938a3d19c4c08e,2019-09-26,build failed,,,,,,,,Parser overwrites duplicate keys
+f573eb98eee815f1a472ad5d7a1b2bab669c911a,2019-09-27,build failed,,,,,,,,Tidy up object declarations
+27fba5aaf2f8664362be10a30e54a52fcdaa2f61,2019-09-28,build failed,,,,,,,,storage_ptr is a shared pointer
+6a58677e0087a80b5d3e7b4605a2089b7e279d9e,2019-09-28,build failed,,,,,,,,Construction from kind is explicit
+0e00cbd1e10839ef8e997cd86251c27886d24665,2019-09-28,build failed,,,,,,,,Constrain some array and object ctors
+ec6e8c60b31d4bddada671f8c4df977341a4d47c,2019-10-02,build failed,,,,,,,,array coverage
+1e8a4178eb6f832ba3b01b493492791b75c2a84b,2019-10-04,build failed,,,,,,,,More value work
+a44fc4f4530ae559e52e77da36172f6b2cd7cbb7,2019-10-06,build failed,,,,,,,,string work
+7d067021d501693b258917996c0d8c27a3726c49,2019-10-09,build failed,,,,,,,,string work
+0bde1e8fa7c467d57eabf795ce0b1871f0250fab,2019-10-12,build failed,,,,,,,,Fix integer warnings
+195944c23fecbf9eab93a27f22a4597803a9c743,2019-10-13,build failed,,,,,,,,Remove object bucket APIs
+0c232111c6b75765354bd3c656167d2aefbc7022,2019-10-14,build failed,,,,,,,,basic_parser work
+96e2ff987d04238ac467652bb40c9afea5c9c494,2019-10-17,build failed,,,,,,,,Stored key lengths are regular integers
+6c4379c1edcd516999e024ef8ff6826966b01e05,2019-10-19,build failed,,,,,,,,Add ryu
+c02c21086c6c840a00bcfeb3a2ec37b739321f52,2019-10-20,build failed,,,,,,,,array coverage
+7cf994611940d178d272a9b9cec8a5c8949ffc9c,2019-10-21,build failed,,,,,,,,string coverage
+cb348218345cfe2bea09d4a8ca8ea4c0f13f8bc3,2019-10-21,build failed,,,,,,,,coverage odds and ends
+0ea33fb9c4835251bfd70eb78dadeaecf01c6660,2019-10-24,build failed,,,,,,,,Add fixed_storage
+c811a9388f256c5ce2cc74070c3ff032e42de849,2019-10-26,build failed,,,,,,,,parser work
+1754d9cadd082f6b28116cef62460cb9ab90cdbe,2019-10-27,build failed,,,,,,,,Various optimizations
+96c4b77d86c9b8b0d70e507f985e8e23f26bdb7c,2019-10-30,build failed,,,,,,,,Refactor storage
+97bb08c4467314125beface9ecbfe256874677c9,2019-10-31,build failed,,,,,,,,Fix memmove of trivial types
+3150db1069e4df4933b6b316e92c2b8df2920253,2019-11-01,build failed,,,,,,,,Improve string fast loop
+687833dce62c1c657980edb386c17871471cf368,2019-11-01,build failed,,,,,,,,Refactor string
+072a9e64f604962f37c6f463303e6dd2eac3a8e2,2019-11-03,build failed,,,,,,,,Tidying
+2b730cdb85381c0f8631f06e1a3c4adf6030bd31,2019-11-03,build failed,,,,,,,,Add copyright credit
+bcab8190e652ecacb8c1f4dcc709741723fc5398,2019-11-03,build failed,,,,,,,,Tidy up warnings and errors
+42f5235e7fcf0a606a44faf0fce895da7de7857d,2019-11-06,build failed,,,,,,,,Rename to static_stack
+c278db382510e23971b41ad3b32657955af8a727,2019-11-09,build failed,,,,,,,,Configurable limits
+2a195a0193abe8b67ca81da889d9136db2d7009e,2019-11-09,build failed,,,,,,,,Tune-up on storage_ptr
+92bc307eb3b3cb9adc81d49e5d0f1b8e386011fe,2019-11-10,build failed,,,,,,,,Test utilities
+f66d74a863283d2f882df6fa0a677356118e7df9,2019-11-11,build failed,,,,,,,,parser::destroy
+36f353c9564e60698b3df80cf9782c2635b89256,2019-11-12,build failed,,,,,,,,coverage
+548d48ef224cf79cd2a77d6232cba8e0850bd2df,2019-11-12,build failed,,,,,,,,Make string impl data private
+8941a77f11af039c3fdb4614616a3fbb3fef41c3,2019-11-13,build failed,,,,,,,,shrink sizeof(value)
+83778c50054e54bda9cee8a5f1c540701fb45395,2019-11-14,build failed,,,,,,,,doc work
+8f1348ed40f5a6566dda723a17be8fcf8abb3733,2019-11-15,build failed,,,,,,,,Add examples
+79c1090f89c38bf26d0cc0598b1c7cfda42209f7,2019-11-15,build failed,,,,,,,,Safe pointer arithmetic
+66fe6deff988e8da737c72ef13916bd86f8df59d,2019-11-17,build failed,,,,,,,,Fix string tests
+a5a147e6fb5666c3b8199f5fd889a4b2a2830f59,2019-11-18,build failed,,,,,,,,Doc work
+62ad5a296d2c3666639da0090b7c03168f76575e,2019-11-20,build failed,,,,,,,,Charts
+c08721906d67c17eb8bda679550ca7710856d917,2019-12-02,build failed,,,,,,,,Don't parse past the input
+08dcc28218deb253995742190dde0903f576abca,2019-12-03,build failed,,,,,,,,Don't overflow temp buffer during parse
+3844c0eb09e59799c094a5f954311f8d22c24954,2019-12-08,build failed,,,,,,,,Add value_ref for initializer lists
+94647c341d568db055dea6462936527ddffe8403,2019-12-09,build failed,,,,,,,,Refactor value conversions
+cabbb853dbbe7822aed433cad47f3c9eb89e3e97,2019-12-18,build failed,,,,,,,,Tidy up config
+61a06915834b05804ccf40932b9d6f66910da27d,2019-12-19,build failed,,,,,,,,Use move in value_ref
+75528587ff45c9aa0b7d7e0ca379a4f5b36d49fe,2020-02-03,build failed,,,,,,,,Refactor string
+129b10ad9d35b5dd8b90fad905f9f0a03de49ceb,2020-03-07,build failed,,,,,,,,Avoid redefinition of BOOST_JSON_SOURCE macro
+8d13f6feebde9daca146bc453d0d70e0db3532dd,2020-03-11,build failed,,,,,,,,Faster number parsing
+171b36d825ad94b44353c7b881287c0bb446b9d7,2020-03-25,build failed,,,,,,,,Fix stream clip
+71f82e2c9a2d1378a971309d531a8340f1be2d8a,2020-03-26,build failed,,,,,,,,Rewrite serializer
+2d3271681f6784484821cffe00478e3a12b84fdb,2020-03-27,build failed,,,,,,,,Change parse_unsigned trailer from loop to switch
+ece8c663e5bf065c387460e41ac2d3c88b43f6f0,2020-03-27,build failed,,,,,,,,Tidy and update benchmarks
+7e11ebbd1fb3850e58ca0668c6e5c0dd78a91d8e,2020-03-27,build failed,,,,,,,,"Move count_leading before count_whitespace; add an alternative implementation, but leave it commented out, as it's not a win"
+79ba1a81982bc6adfcd7f3093f22a3d037fd630f,2020-03-28,build failed,,,,,,,,Use return channel in parser
+26906cce99503952c58ebbd7f617abaa439156be,2020-03-29,build failed,,,,,,,,Define BOOST_JSON_DOCS as needed
+1e737075933004cefcc09f3621890c27441ad152,2020-03-30,build failed,,,,,,,,Faster integer serialization
+8e0356ef7a1f1f26222ba45f6e12b17bc9f9075e,2020-04-04,build failed,,,,,,,,Refactor parser write
+3404eed7df37b4eb0445f0e58bdb4c8ebfa16a51,2020-04-05,build failed,,,,,,,,Better is_equal
+fc0b74f986ca520d81e2dda6f00cd3941e956d55,2020-04-17,build failed,,,,,,,,Refactor memory resource includes
+73b757fc4de0cdf8f94ffba2b6450eec3cd66075,2020-05-01,build failed,,,,,,,,Remove string::substr:
+4a6a6e7cc3f02f6980e68557b9843095a578934c,2020-05-02,build failed,,,,,,,,Parser limits are error codes
+5a9b314c45b30a8a209824e39e14459adcf41d3f,2020-05-19,build failed,,,,,,,,Refactor allocator docs
+f47fbeb1a54b832221a35c17912febb7a2c3a317,2020-05-11,build failed,,,,,,,,Refactor value conversions
+387a26e54ca7db468c3a8a7df4e8809842078cbc,2020-06-19,build failed,,,,,,,,Remove redundant branch from parse_string
+904252de0b19e4ce2b77e14ed250aea3dc6f861d,2020-07-01,build failed,,,,,,,,Fix repo links
+098be8a6c7f7cb7ede3fb5259ee0ef3741652971,2020-06-27,build failed,,,,,,,,Add storage_ptr constructor to parser
+3ac73ec531c586634d33c6a395fb84f3b909fc77,2020-07-06,build failed,,,,,,,,Comment and trailing comma support
+b6719ef78f79fb8361561f227fae1669923be5d4,2020-07-29,build failed,,,,,,,,Number parsing bug fixes
+bbe88df37c977ba9752179fe3f043b9b422c3c6d,2020-07-27,build failed,,,,,,,,Doc work
+360c5a47d98bed2dd9f34e1a3d59a508f416206c,2020-08-11,build failed,,,,,,,,Discard all but last duplicate key
+400136a292fda23452c5d914cda7fef70939a2b5,2020-08-16,build failed,,,,,,,,Fix unintended move from initializer list elements
+c6b4fcfbe0e1c08eacb3e903139d7df165a9b819,2020-08-16,build failed,,,,,,,,basic_parser is a data member
+939b1fe6e5a45f3493a4dd5a6e29fab878499a1b,2020-08-17,build failed,,,,,,,,Rename variables and suspend functions
+bf2bf442afed56b9f8b7da3611acadc562b5f7dd,2020-08-19,build failed,,,,,,,,Annotate parse_array and parse_object
+1d09eca16ab61df817401ccfccbdaa530b18ffbf,2020-08-19,build failed,,,,,,,,Make is_key_ a NTTP
+a342c936e43eb4eb2708226b77662713656af46e,2020-08-19,build failed,,,,,,,,Check for overflow in basic_parser
+a0bd6372c6e7ce60120530b2dfb07185dbb0b8fd,2020-08-21,build failed,,,,,,,,storage_ptr always points to memory_resource
+1afb703398b3454bca5fc80cc02543795a98f9dd,2020-08-22,build failed,,,,,,,,Don't pass nullptr to memcpy
+6ef5776fda40dfa100421abdc3557462fbdf2708,2020-08-24,build failed,,,,,,,,Check for memory_resource and string_view in standalone
+418cfe2b415c925492a203bae2a9cda1fbebdee8,2020-08-25,build failed,,,,,,,,parse accepts parse_options
+832d1fb5178c6ba9765f96765173d2c6e450fbd8,2020-08-27,build failed,,,,,,,,Refactor parsing interfaces (API change)
+65ce326a7a34745a1a98a0cc4c03feabff386cd5,2020-08-27,build failed,,,,,,,,Doc work
+b9a77751adc5b21f270a41e47ae148c72e54b833,2020-08-27,build failed,,,,,,,,rename to value_stack and refactor (API Change)
+d9b5667bb29410b20e00ba4cad0a93766d0659f0,2020-08-31,build failed,,,,,,,,Rename to is_deallocate_trivial and tidy docs
+dd3254413f63e328af3e36a3eea250f262536790,2020-09-01,build failed,,,,,,,,pilfer is in boost::json
+bd05f57b5399769bb512004e0a20e38922756a03,2020-09-02,build failed,,,,,,,,Tidy basic_parser javadoc
+085069be8132d2494fd61363c58dc5f124c44ad7,2020-09-02,build failed,,,,,,,,Tidy up docs
+81272c36c3a695e9667d4f26681f99c009db5fce,2020-09-02,build failed,,,,,,,,Tidy up serializer
+367138d52927f33e4fae779c18c36a3e61e7b8a0,2020-09-04,build failed,,,,,,,,Tidy up monotonic resource docs
+8b11ca3586a4509fc3a26603cb8ad47ec224c493,2020-09-04,build failed,,,,,,,,Replace value::if_ with value::is_
+2cd7b39a84c9366d6737af43f575838b0ef8e14c,2020-09-05,build failed,,,,,,,,Add missing parameter to on_array_end docs
+588b7509bca46a6ab0e480d16c0cd6184774ef41,2020-09-06,build failed,,,,,,,,workaround for msvc inline namespace bug
+c0bfb4a47902a01403cf5753b314508bc75697f0,2020-09-06,build failed,,,,,,,,silence alignment warning in 32-bit
+47a729cf34361e8552b18db22eafeeba9e3138cc,2020-09-06,build failed,,,,,,,,Tidy up error codes
+24c073edeb7ae49b2d98e78ebc7c3a48f2a54194,2020-09-07,build failed,,,,,,,,Friendly parser ctor overloads:
+2a1fddc9652c26b70673f59f7f0a199d48b1615c,2020-09-08,build failed,,,,,,,,include json.hpp in src.hpp just in case
+7b7a977fd469fe3caf6c2bf17e5e190eb587d741,2020-09-11,build failed,,,,,,,,value is Regular
+76d8c9c8b18a6864b9ac1a6bcae7f06864ac106e,2020-09-12,ok,parse + read px,,,,,,,parser has exception interface,6670.0
+76d8c9c8b18a6864b9ac1a6bcae7f06864ac106e,2020-09-12,ok,parse into a fixed buffer,,,,,,,parser has exception interface,4796.0
+76d8c9c8b18a6864b9ac1a6bcae7f06864ac106e,2020-09-12,ok,"reused parser, fixed buffer",,,,,,,parser has exception interface,4484.0
+76d8c9c8b18a6864b9ac1a6bcae7f06864ac106e,2020-09-12,ok,serialize to std::string,,,,,,,parser has exception interface,3284.0
+a08936593575138eaffee127b1ae8d86c3b80351,2020-09-13,ok,parse + read px,,,,,,,parser never produces UB,6651.0
+a08936593575138eaffee127b1ae8d86c3b80351,2020-09-13,ok,parse into a fixed buffer,,,,,,,parser never produces UB,4871.0
+a08936593575138eaffee127b1ae8d86c3b80351,2020-09-13,ok,"reused parser, fixed buffer",,,,,,,parser never produces UB,4521.0
+a08936593575138eaffee127b1ae8d86c3b80351,2020-09-13,ok,serialize to std::string,,,,,,,parser never produces UB,3284.0
+fbdffd26afed594edd7871ce6afd50f9c3a3d45e,2020-09-07,ok,parse + read px,,,,,,,string doesn't perform utf8 validation,6651.0
+fbdffd26afed594edd7871ce6afd50f9c3a3d45e,2020-09-07,ok,parse into a fixed buffer,,,,,,,string doesn't perform utf8 validation,4871.0
+fbdffd26afed594edd7871ce6afd50f9c3a3d45e,2020-09-07,ok,"reused parser, fixed buffer",,,,,,,string doesn't perform utf8 validation,4521.0
+fbdffd26afed594edd7871ce6afd50f9c3a3d45e,2020-09-07,ok,serialize to std::string,,,,,,,string doesn't perform utf8 validation,3284.0
+360b611612c88cd5691d7fbd5efe9bfab8fe5c12,2020-09-15,ok,parse + read px,,,,,,,Roll back value kind interface changes:,6648.0
+360b611612c88cd5691d7fbd5efe9bfab8fe5c12,2020-09-15,ok,parse into a fixed buffer,,,,,,,Roll back value kind interface changes:,4868.0
+360b611612c88cd5691d7fbd5efe9bfab8fe5c12,2020-09-15,ok,"reused parser, fixed buffer",,,,,,,Roll back value kind interface changes:,4520.0
+360b611612c88cd5691d7fbd5efe9bfab8fe5c12,2020-09-15,ok,serialize to std::string,,,,,,,Roll back value kind interface changes:,3281.0
+78c2bd301278bd9590b627451abcffe08b9ae67a,2020-09-17,ok,parse + read px,,,,,,,Fix standalone compilation with gcc8.3:,6648.0
+78c2bd301278bd9590b627451abcffe08b9ae67a,2020-09-17,ok,parse into a fixed buffer,,,,,,,Fix standalone compilation with gcc8.3:,4868.0
+78c2bd301278bd9590b627451abcffe08b9ae67a,2020-09-17,ok,"reused parser, fixed buffer",,,,,,,Fix standalone compilation with gcc8.3:,4520.0
+78c2bd301278bd9590b627451abcffe08b9ae67a,2020-09-17,ok,serialize to std::string,,,,,,,Fix standalone compilation with gcc8.3:,3281.0
+50b5c52b321e0eff987bbad9fd28d44ba9067f84,2020-09-18,ok,parse + read px,,,,,,,Refactor array,6651.0
+50b5c52b321e0eff987bbad9fd28d44ba9067f84,2020-09-18,ok,parse into a fixed buffer,,,,,,,Refactor array,4876.0
+50b5c52b321e0eff987bbad9fd28d44ba9067f84,2020-09-18,ok,"reused parser, fixed buffer",,,,,,,Refactor array,4528.0
+50b5c52b321e0eff987bbad9fd28d44ba9067f84,2020-09-18,ok,serialize to std::string,,,,,,,Refactor array,3280.0
+b9fcfb04fac0205db676b84a95d5251a88c8397b,2020-09-21,ok,parse + read px,,,,,,,StringLike uses const char*,6660.0
+b9fcfb04fac0205db676b84a95d5251a88c8397b,2020-09-21,ok,parse into a fixed buffer,,,,,,,StringLike uses const char*,4883.0
+b9fcfb04fac0205db676b84a95d5251a88c8397b,2020-09-21,ok,"reused parser, fixed buffer",,,,,,,StringLike uses const char*,4533.0
+b9fcfb04fac0205db676b84a95d5251a88c8397b,2020-09-21,ok,serialize to std::string,,,,,,,StringLike uses const char*,3280.0
+78288aabba1d91c59d1bf24352b2cb33531bfd07,2020-09-24,ok,parse + read px,,,,,,,parser javadoc tidy,6658.0
+78288aabba1d91c59d1bf24352b2cb33531bfd07,2020-09-24,ok,parse into a fixed buffer,,,,,,,parser javadoc tidy,4883.0
+78288aabba1d91c59d1bf24352b2cb33531bfd07,2020-09-24,ok,"reused parser, fixed buffer",,,,,,,parser javadoc tidy,4533.0
+78288aabba1d91c59d1bf24352b2cb33531bfd07,2020-09-24,ok,serialize to std::string,,,,,,,parser javadoc tidy,3280.0
+0da206074fbee99877ae82bb73afbc567e19a7b6,2020-09-24,ok,parse + read px,,,,,,,document pilfer and pilfer construction,6658.0
+0da206074fbee99877ae82bb73afbc567e19a7b6,2020-09-24,ok,parse into a fixed buffer,,,,,,,document pilfer and pilfer construction,4883.0
+0da206074fbee99877ae82bb73afbc567e19a7b6,2020-09-24,ok,"reused parser, fixed buffer",,,,,,,document pilfer and pilfer construction,4533.0
+0da206074fbee99877ae82bb73afbc567e19a7b6,2020-09-24,ok,serialize to std::string,,,,,,,document pilfer and pilfer construction,3280.0
+31653abb51a21ac01780a9c0fa3ca9c0de56cac6,2020-09-25,ok,parse + read px,,,,,,,storage() returns by value,6727.0
+31653abb51a21ac01780a9c0fa3ca9c0de56cac6,2020-09-25,ok,parse into a fixed buffer,,,,,,,storage() returns by value,4910.0
+31653abb51a21ac01780a9c0fa3ca9c0de56cac6,2020-09-25,ok,"reused parser, fixed buffer",,,,,,,storage() returns by value,4560.0
+31653abb51a21ac01780a9c0fa3ca9c0de56cac6,2020-09-25,ok,serialize to std::string,,,,,,,storage() returns by value,3280.0
+d34c25740c6d40896347e491fa0a05adf312b1da,2020-09-26,ok,parse + read px,,,,,,,Refactor parse_escaped to take integral_constants,6728.0
+d34c25740c6d40896347e491fa0a05adf312b1da,2020-09-26,ok,parse into a fixed buffer,,,,,,,Refactor parse_escaped to take integral_constants,4910.0
+d34c25740c6d40896347e491fa0a05adf312b1da,2020-09-26,ok,"reused parser, fixed buffer",,,,,,,Refactor parse_escaped to take integral_constants,4560.0
+d34c25740c6d40896347e491fa0a05adf312b1da,2020-09-26,ok,serialize to std::string,,,,,,,Refactor parse_escaped to take integral_constants,3280.0
+9137489908aef52928e31a169a2620b8a879cbeb,2020-09-26,ok,parse + read px,,,,,,,Refactor bool template parameters into integral constants,6788.0
+9137489908aef52928e31a169a2620b8a879cbeb,2020-09-26,ok,parse into a fixed buffer,,,,,,,Refactor bool template parameters into integral constants,4913.0
+9137489908aef52928e31a169a2620b8a879cbeb,2020-09-26,ok,"reused parser, fixed buffer",,,,,,,Refactor bool template parameters into integral constants,4468.0
+9137489908aef52928e31a169a2620b8a879cbeb,2020-09-26,ok,serialize to std::string,,,,,,,Refactor bool template parameters into integral constants,3280.0
+97789ff3b0b74302b11055977284ae3ec4012af3,2020-09-26,ok,parse + read px,,,,,,,Switch to runtime parameters where it was determined to not be detrimental to performance,6960.0
+97789ff3b0b74302b11055977284ae3ec4012af3,2020-09-26,ok,parse into a fixed buffer,,,,,,,Switch to runtime parameters where it was determined to not be detrimental to performance,5059.0
+97789ff3b0b74302b11055977284ae3ec4012af3,2020-09-26,ok,"reused parser, fixed buffer",,,,,,,Switch to runtime parameters where it was determined to not be detrimental to performance,4618.0
+97789ff3b0b74302b11055977284ae3ec4012af3,2020-09-26,ok,serialize to std::string,,,,,,,Switch to runtime parameters where it was determined to not be detrimental to performance,3280.0
+3872c480d563c7f7c41f3a43c29a415e90873d6e,2020-09-26,ok,parse + read px,,,,,,,Factor out handler,6960.0
+3872c480d563c7f7c41f3a43c29a415e90873d6e,2020-09-26,ok,parse into a fixed buffer,,,,,,,Factor out handler,5059.0
+3872c480d563c7f7c41f3a43c29a415e90873d6e,2020-09-26,ok,"reused parser, fixed buffer",,,,,,,Factor out handler,4618.0
+3872c480d563c7f7c41f3a43c29a415e90873d6e,2020-09-26,ok,serialize to std::string,,,,,,,Factor out handler,3280.0
+d026d5daeda436cce3962bfc469114961a5b48e8,2020-09-26,build failed,,,,,,,,Rename to stream_parser
+c92461baf359eb961f8dc0144e17809a6ee0e7e5,2020-09-26,ok,parse + read px,,,,,,,Add parser,6554.0
+c92461baf359eb961f8dc0144e17809a6ee0e7e5,2020-09-26,ok,parse into a fixed buffer,,,,,,,Add parser,4691.0
+c92461baf359eb961f8dc0144e17809a6ee0e7e5,2020-09-26,ok,"reused parser, fixed buffer",,,,,,,Add parser,4564.0
+c92461baf359eb961f8dc0144e17809a6ee0e7e5,2020-09-26,ok,serialize to std::string,,,,,,,Add parser,3280.0
+47fdfb0840d727b57d89dfcba1564569a8e7c893,2020-09-27,ok,parse + read px,,,,,,,basic_parser has no undefined behavior,6604.0
+47fdfb0840d727b57d89dfcba1564569a8e7c893,2020-09-27,ok,parse into a fixed buffer,,,,,,,basic_parser has no undefined behavior,4777.0
+47fdfb0840d727b57d89dfcba1564569a8e7c893,2020-09-27,ok,"reused parser, fixed buffer",,,,,,,basic_parser has no undefined behavior,4587.0
+47fdfb0840d727b57d89dfcba1564569a8e7c893,2020-09-27,ok,serialize to std::string,,,,,,,basic_parser has no undefined behavior,3280.0
+9b4ccb0743f6eb5463f67e4894527fd6a69769ba,2020-09-28,ok,parse + read px,,,,,,,Allow comments is a runtime parameter,6563.0
+9b4ccb0743f6eb5463f67e4894527fd6a69769ba,2020-09-28,ok,parse into a fixed buffer,,,,,,,Allow comments is a runtime parameter,4769.0
+9b4ccb0743f6eb5463f67e4894527fd6a69769ba,2020-09-28,ok,"reused parser, fixed buffer",,,,,,,Allow comments is a runtime parameter,4585.0
+9b4ccb0743f6eb5463f67e4894527fd6a69769ba,2020-09-28,ok,serialize to std::string,,,,,,,Allow comments is a runtime parameter,3275.0
+531287af2bc23e842142e682f738c5488b8cfe47,2020-10-03,ok,parse + read px,,,,,,,long double is not a fundamental type:,6658.0
+531287af2bc23e842142e682f738c5488b8cfe47,2020-10-03,ok,parse into a fixed buffer,,,,,,,long double is not a fundamental type:,4873.0
+531287af2bc23e842142e682f738c5488b8cfe47,2020-10-03,ok,"reused parser, fixed buffer",,,,,,,long double is not a fundamental type:,4689.0
+531287af2bc23e842142e682f738c5488b8cfe47,2020-10-03,ok,serialize to std::string,,,,,,,long double is not a fundamental type:,3275.0
+a2c1b7e9e53bb46d9f5f348b4ebcd8469d969a5a,2020-10-03,ok,parse + read px,,,,,,,monotonic_resource has an upstream,6658.0
+a2c1b7e9e53bb46d9f5f348b4ebcd8469d969a5a,2020-10-03,ok,parse into a fixed buffer,,,,,,,monotonic_resource has an upstream,4942.0
+a2c1b7e9e53bb46d9f5f348b4ebcd8469d969a5a,2020-10-03,ok,"reused parser, fixed buffer",,,,,,,monotonic_resource has an upstream,4715.0
+a2c1b7e9e53bb46d9f5f348b4ebcd8469d969a5a,2020-10-03,ok,serialize to std::string,,,,,,,monotonic_resource has an upstream,3275.0
+8faf950b7936580a53f67d5d14950484bbca5b9c,2020-10-04,ok,parse + read px,,,,,,,storage_ptr thread safety doc and tidy,6641.0
+8faf950b7936580a53f67d5d14950484bbca5b9c,2020-10-04,ok,parse into a fixed buffer,,,,,,,storage_ptr thread safety doc and tidy,4906.0
+8faf950b7936580a53f67d5d14950484bbca5b9c,2020-10-04,ok,"reused parser, fixed buffer",,,,,,,storage_ptr thread safety doc and tidy,4679.0
+8faf950b7936580a53f67d5d14950484bbca5b9c,2020-10-04,ok,serialize to std::string,,,,,,,storage_ptr thread safety doc and tidy,3275.0
+592783499e9a9154e1a797cfacf65b3e8a59d705,2020-10-05,ok,parse + read px,,,,,,,Tidy up value and tests,6641.0
+592783499e9a9154e1a797cfacf65b3e8a59d705,2020-10-05,ok,parse into a fixed buffer,,,,,,,Tidy up value and tests,4906.0
+592783499e9a9154e1a797cfacf65b3e8a59d705,2020-10-05,ok,"reused parser, fixed buffer",,,,,,,Tidy up value and tests,4679.0
+592783499e9a9154e1a797cfacf65b3e8a59d705,2020-10-05,ok,serialize to std::string,,,,,,,Tidy up value and tests,3275.0
+018a5b555dc5f971eb252cab9782f318471e04da,2020-10-05,ok,parse + read px,,,,,,,Use static_cast,6627.0
+018a5b555dc5f971eb252cab9782f318471e04da,2020-10-05,ok,parse into a fixed buffer,,,,,,,Use static_cast,4910.0
+018a5b555dc5f971eb252cab9782f318471e04da,2020-10-05,ok,"reused parser, fixed buffer",,,,,,,Use static_cast,4683.0
+018a5b555dc5f971eb252cab9782f318471e04da,2020-10-05,ok,serialize to std::string,,,,,,,Use static_cast,3275.0
+0a905acf9d244963a3200b3bdbb58476c507f7ce,2020-10-06,ok,parse + read px,,,,,,,Tidy up pilfering,6627.0
+0a905acf9d244963a3200b3bdbb58476c507f7ce,2020-10-06,ok,parse into a fixed buffer,,,,,,,Tidy up pilfering,4910.0
+0a905acf9d244963a3200b3bdbb58476c507f7ce,2020-10-06,ok,"reused parser, fixed buffer",,,,,,,Tidy up pilfering,4691.0
+0a905acf9d244963a3200b3bdbb58476c507f7ce,2020-10-06,ok,serialize to std::string,,,,,,,Tidy up pilfering,3275.0
+8f26e86b2f19f9697f1635078ca7546e96e48c83,2020-10-06,ok,parse + read px,,,,,,,Don't destroy in object_impl::build,6374.0
+8f26e86b2f19f9697f1635078ca7546e96e48c83,2020-10-06,ok,parse into a fixed buffer,,,,,,,Don't destroy in object_impl::build,4924.0
+8f26e86b2f19f9697f1635078ca7546e96e48c83,2020-10-06,ok,"reused parser, fixed buffer",,,,,,,Don't destroy in object_impl::build,4705.0
+8f26e86b2f19f9697f1635078ca7546e96e48c83,2020-10-06,ok,serialize to std::string,,,,,,,Don't destroy in object_impl::build,3275.0
+ff6a090680a3ee53f899618878b3f65cf9abba6d,2020-10-06,ok,parse + read px,,,,,,,Fix parsing of double with >16 mantissa digits,6371.0
+ff6a090680a3ee53f899618878b3f65cf9abba6d,2020-10-06,ok,parse into a fixed buffer,,,,,,,Fix parsing of double with >16 mantissa digits,4921.0
+ff6a090680a3ee53f899618878b3f65cf9abba6d,2020-10-06,ok,"reused parser, fixed buffer",,,,,,,Fix parsing of double with >16 mantissa digits,4702.0
+ff6a090680a3ee53f899618878b3f65cf9abba6d,2020-10-06,ok,serialize to std::string,,,,,,,Fix parsing of double with >16 mantissa digits,3275.0
+1b5a00e96856d41d98e4884e13aec5ff70146bc6,2020-10-08,ok,parse + read px,,,,,,,Return storage_ptr by reference,6299.0
+1b5a00e96856d41d98e4884e13aec5ff70146bc6,2020-10-08,ok,parse into a fixed buffer,,,,,,,Return storage_ptr by reference,4891.0
+1b5a00e96856d41d98e4884e13aec5ff70146bc6,2020-10-08,ok,"reused parser, fixed buffer",,,,,,,Return storage_ptr by reference,4672.0
+1b5a00e96856d41d98e4884e13aec5ff70146bc6,2020-10-08,ok,serialize to std::string,,,,,,,Return storage_ptr by reference,3275.0
+844851c6ab8bd13c455a971c2313291e5231aecb,2020-10-05,ok,parse + read px,,,,,,,Refactor object,6650.0
+844851c6ab8bd13c455a971c2313291e5231aecb,2020-10-05,ok,parse into a fixed buffer,,,,,,,Refactor object,5069.0
+844851c6ab8bd13c455a971c2313291e5231aecb,2020-10-05,ok,"reused parser, fixed buffer",,,,,,,Refactor object,4897.0
+844851c6ab8bd13c455a971c2313291e5231aecb,2020-10-05,ok,serialize to std::string,,,,,,,Refactor object,3274.0
+18a50dae831bbafa8df0cd1302eeb6cddba27af0,2020-10-09,ok,parse + read px,,,,,,,Better decimal to float accuracy,6652.0
+18a50dae831bbafa8df0cd1302eeb6cddba27af0,2020-10-09,ok,parse into a fixed buffer,,,,,,,Better decimal to float accuracy,5071.0
+18a50dae831bbafa8df0cd1302eeb6cddba27af0,2020-10-09,ok,"reused parser, fixed buffer",,,,,,,Better decimal to float accuracy,4899.0
+18a50dae831bbafa8df0cd1302eeb6cddba27af0,2020-10-09,ok,serialize to std::string,,,,,,,Better decimal to float accuracy,3274.0
+980ae37dbcac323a8700eca380dee87642805705,2020-10-21,ok,parse + read px,,,,,,,Fix msvc anonymous union member lookup bug,6609.0
+980ae37dbcac323a8700eca380dee87642805705,2020-10-21,ok,parse into a fixed buffer,,,,,,,Fix msvc anonymous union member lookup bug,5028.0
+980ae37dbcac323a8700eca380dee87642805705,2020-10-21,ok,"reused parser, fixed buffer",,,,,,,Fix msvc anonymous union member lookup bug,4856.0
+980ae37dbcac323a8700eca380dee87642805705,2020-10-21,ok,serialize to std::string,,,,,,,Fix msvc anonymous union member lookup bug,3274.0
+b4e40998e551a889f521ae34fdd5961df9cd30aa,2020-10-23,ok,parse + read px,,,,,,,digest is inline,6609.0
+b4e40998e551a889f521ae34fdd5961df9cd30aa,2020-10-23,ok,parse into a fixed buffer,,,,,,,digest is inline,5028.0
+b4e40998e551a889f521ae34fdd5961df9cd30aa,2020-10-23,ok,"reused parser, fixed buffer",,,,,,,digest is inline,4856.0
+b4e40998e551a889f521ae34fdd5961df9cd30aa,2020-10-23,ok,serialize to std::string,,,,,,,digest is inline,3274.0
+c02fd6339ac041ac7c88eedff8ec9cafdeece7ff,2020-10-25,ok,parse + read px,,,,,,,object::at is inline,6609.0
+c02fd6339ac041ac7c88eedff8ec9cafdeece7ff,2020-10-25,ok,parse into a fixed buffer,,,,,,,object::at is inline,5028.0
+c02fd6339ac041ac7c88eedff8ec9cafdeece7ff,2020-10-25,ok,"reused parser, fixed buffer",,,,,,,object::at is inline,4856.0
+c02fd6339ac041ac7c88eedff8ec9cafdeece7ff,2020-10-25,ok,serialize to std::string,,,,,,,object::at is inline,3274.0
+2b074ee053b8ca2c993b63dae41512ac979e1d8b,2020-09-28,ok,parse + read px,,,,,,,value_to/from don't use user-provided conversion functions,6609.0
+2b074ee053b8ca2c993b63dae41512ac979e1d8b,2020-09-28,ok,parse into a fixed buffer,,,,,,,value_to/from don't use user-provided conversion functions,5028.0
+2b074ee053b8ca2c993b63dae41512ac979e1d8b,2020-09-28,ok,"reused parser, fixed buffer",,,,,,,value_to/from don't use user-provided conversion functions,4856.0
+2b074ee053b8ca2c993b63dae41512ac979e1d8b,2020-09-28,ok,serialize to std::string,,,,,,,value_to/from don't use user-provided conversion functions,3274.0
+52f1d0b30b7190a2595432fcd3e2d9858d15488f,2020-10-25,ok,parse + read px,,,,,,,Small object uses linear search,6378.0
+52f1d0b30b7190a2595432fcd3e2d9858d15488f,2020-10-25,ok,parse into a fixed buffer,,,,,,,Small object uses linear search,4822.0
+52f1d0b30b7190a2595432fcd3e2d9858d15488f,2020-10-25,ok,"reused parser, fixed buffer",,,,,,,Small object uses linear search,4650.0
+52f1d0b30b7190a2595432fcd3e2d9858d15488f,2020-10-25,ok,serialize to std::string,,,,,,,Small object uses linear search,3274.0
+74fb1effd1ea7cf2b5ef93322b6bf0816dc42489,2020-10-29,ok,parse + read px,,,,,,,Squelch class dllexport warning,6378.0
+74fb1effd1ea7cf2b5ef93322b6bf0816dc42489,2020-10-29,ok,parse into a fixed buffer,,,,,,,Squelch class dllexport warning,4822.0
+74fb1effd1ea7cf2b5ef93322b6bf0816dc42489,2020-10-29,ok,"reused parser, fixed buffer",,,,,,,Squelch class dllexport warning,4650.0
+74fb1effd1ea7cf2b5ef93322b6bf0816dc42489,2020-10-29,ok,serialize to std::string,,,,,,,Squelch class dllexport warning,3274.0
+099a82957a75bf088a8bc45a379f81b3c6661d18,2020-11-16,ok,parse + read px,,,,,,,Add value::is_integral,6378.0
+099a82957a75bf088a8bc45a379f81b3c6661d18,2020-11-16,ok,parse into a fixed buffer,,,,,,,Add value::is_integral,4822.0
+099a82957a75bf088a8bc45a379f81b3c6661d18,2020-11-16,ok,"reused parser, fixed buffer",,,,,,,Add value::is_integral,4650.0
+099a82957a75bf088a8bc45a379f81b3c6661d18,2020-11-16,ok,serialize to std::string,,,,,,,Add value::is_integral,3274.0
+9e67899cd5ef017e02435809481581e8d8193672,2020-11-17,ok,parse + read px,,,,,,,Support standalone shared libraries,6372.0
+9e67899cd5ef017e02435809481581e8d8193672,2020-11-17,ok,parse into a fixed buffer,,,,,,,Support standalone shared libraries,4817.0
+9e67899cd5ef017e02435809481581e8d8193672,2020-11-17,ok,"reused parser, fixed buffer",,,,,,,Support standalone shared libraries,4645.0
+9e67899cd5ef017e02435809481581e8d8193672,2020-11-17,ok,serialize to std::string,,,,,,,Support standalone shared libraries,3274.0
+2b422f0a9517ecf6ea81120660bb4c28f62164c7,2021-02-25,ok,parse + read px,,,,,,,Remove trailing whitespace,6372.0
+2b422f0a9517ecf6ea81120660bb4c28f62164c7,2021-02-25,ok,parse into a fixed buffer,,,,,,,Remove trailing whitespace,4817.0
+2b422f0a9517ecf6ea81120660bb4c28f62164c7,2021-02-25,ok,"reused parser, fixed buffer",,,,,,,Remove trailing whitespace,4645.0
+2b422f0a9517ecf6ea81120660bb4c28f62164c7,2021-02-25,ok,serialize to std::string,,,,,,,Remove trailing whitespace,3274.0
+1c60f6434602b66179761613512f71d5da56367a,2021-03-17,ok,parse + read px,,,,,,,Remove trailing whitespace,6373.0
+1c60f6434602b66179761613512f71d5da56367a,2021-03-17,ok,parse into a fixed buffer,,,,,,,Remove trailing whitespace,4818.0
+1c60f6434602b66179761613512f71d5da56367a,2021-03-17,ok,"reused parser, fixed buffer",,,,,,,Remove trailing whitespace,4646.0
+1c60f6434602b66179761613512f71d5da56367a,2021-03-17,ok,serialize to std::string,,,,,,,Remove trailing whitespace,3274.0
+0d65b0ada0d6304fea431a6dc4b187189b89c859,2021-04-21,ok,parse + read px,,,,,,,json::string is convertible to string_view,6373.0
+0d65b0ada0d6304fea431a6dc4b187189b89c859,2021-04-21,ok,parse into a fixed buffer,,,,,,,json::string is convertible to string_view,4818.0
+0d65b0ada0d6304fea431a6dc4b187189b89c859,2021-04-21,ok,"reused parser, fixed buffer",,,,,,,json::string is convertible to string_view,4646.0
+0d65b0ada0d6304fea431a6dc4b187189b89c859,2021-04-21,ok,serialize to std::string,,,,,,,json::string is convertible to string_view,3274.0
+40b7acc199c5fc7f55803dab1cf1fa05f10fcd70,2021-03-06,ok,parse + read px,,,,,,,Add missing BOOST_JSON_DECL declarations,6373.0
+40b7acc199c5fc7f55803dab1cf1fa05f10fcd70,2021-03-06,ok,parse into a fixed buffer,,,,,,,Add missing BOOST_JSON_DECL declarations,4818.0
+40b7acc199c5fc7f55803dab1cf1fa05f10fcd70,2021-03-06,ok,"reused parser, fixed buffer",,,,,,,Add missing BOOST_JSON_DECL declarations,4646.0
+40b7acc199c5fc7f55803dab1cf1fa05f10fcd70,2021-03-06,ok,serialize to std::string,,,,,,,Add missing BOOST_JSON_DECL declarations,3274.0
+a46690714c4970fa3b67bae4a17a70a460a5d01b,2021-05-07,ok,parse + read px,,,,,,,Fix array constructor from iterators,6373.0
+a46690714c4970fa3b67bae4a17a70a460a5d01b,2021-05-07,ok,parse into a fixed buffer,,,,,,,Fix array constructor from iterators,4818.0
+a46690714c4970fa3b67bae4a17a70a460a5d01b,2021-05-07,ok,"reused parser, fixed buffer",,,,,,,Fix array constructor from iterators,4646.0
+a46690714c4970fa3b67bae4a17a70a460a5d01b,2021-05-07,ok,serialize to std::string,,,,,,,Fix array constructor from iterators,3274.0
+e62a95d6379f2cbeaee18f997e68bd5c90db0ef1,2021-05-22,ok,parse + read px,,,,,,,Remove trailing whitespace,6373.0
+e62a95d6379f2cbeaee18f997e68bd5c90db0ef1,2021-05-22,ok,parse into a fixed buffer,,,,,,,Remove trailing whitespace,4818.0
+e62a95d6379f2cbeaee18f997e68bd5c90db0ef1,2021-05-22,ok,"reused parser, fixed buffer",,,,,,,Remove trailing whitespace,4646.0
+e62a95d6379f2cbeaee18f997e68bd5c90db0ef1,2021-05-22,ok,serialize to std::string,,,,,,,Remove trailing whitespace,3274.0
+445efad9a97bf971986860088e17c3b0ff55bbac,2021-06-26,ok,parse + read px,,,,,,,Remove trailing whitespace,6373.0
+445efad9a97bf971986860088e17c3b0ff55bbac,2021-06-26,ok,parse into a fixed buffer,,,,,,,Remove trailing whitespace,4818.0
+445efad9a97bf971986860088e17c3b0ff55bbac,2021-06-26,ok,"reused parser, fixed buffer",,,,,,,Remove trailing whitespace,4646.0
+445efad9a97bf971986860088e17c3b0ff55bbac,2021-06-26,ok,serialize to std::string,,,,,,,Remove trailing whitespace,3274.0
+d085e86cf852195823352830c24d7a70932f1270,2021-10-08,ok,parse + read px,,,,,,,Add noexcept to destructors to support /Zc:implicitNoexcept-. Fixes #557.,6370.0
+d085e86cf852195823352830c24d7a70932f1270,2021-10-08,ok,parse into a fixed buffer,,,,,,,Add noexcept to destructors to support /Zc:implicitNoexcept-. Fixes #557.,4815.0
+d085e86cf852195823352830c24d7a70932f1270,2021-10-08,ok,"reused parser, fixed buffer",,,,,,,Add noexcept to destructors to support /Zc:implicitNoexcept-. Fixes #557.,4643.0
+d085e86cf852195823352830c24d7a70932f1270,2021-10-08,ok,serialize to std::string,,,,,,,Add noexcept to destructors to support /Zc:implicitNoexcept-. Fixes #557.,3274.0
+54cb34555703480b0974a37174ce9e7f524fe042,2022-01-15,ok,parse + read px,,,,,,,Naturally grow string in serialize_impl,6370.0
+54cb34555703480b0974a37174ce9e7f524fe042,2022-01-15,ok,parse into a fixed buffer,,,,,,,Naturally grow string in serialize_impl,4815.0
+54cb34555703480b0974a37174ce9e7f524fe042,2022-01-15,ok,"reused parser, fixed buffer",,,,,,,Naturally grow string in serialize_impl,4643.0
+54cb34555703480b0974a37174ce9e7f524fe042,2022-01-15,ok,serialize to std::string,,,,,,,Naturally grow string in serialize_impl,3274.0
+dfae47afb3bb9bfb12ae17db2f092db9bb2fac9a,2021-11-09,ok,parse + read px,,,,,,,Remove index_sequence alias,6370.0
+dfae47afb3bb9bfb12ae17db2f092db9bb2fac9a,2021-11-09,ok,parse into a fixed buffer,,,,,,,Remove index_sequence alias,4815.0
+dfae47afb3bb9bfb12ae17db2f092db9bb2fac9a,2021-11-09,ok,"reused parser, fixed buffer",,,,,,,Remove index_sequence alias,4643.0
+dfae47afb3bb9bfb12ae17db2f092db9bb2fac9a,2021-11-09,ok,serialize to std::string,,,,,,,Remove index_sequence alias,3274.0
+a9d97815ddc62da713ae459d75ad9b9860808dd1,2022-02-07,ok,parse + read px,,,,,,,Circumvent msvc-14.2 bug,6338.0
+a9d97815ddc62da713ae459d75ad9b9860808dd1,2022-02-07,ok,parse into a fixed buffer,,,,,,,Circumvent msvc-14.2 bug,4783.0
+a9d97815ddc62da713ae459d75ad9b9860808dd1,2022-02-07,ok,"reused parser, fixed buffer",,,,,,,Circumvent msvc-14.2 bug,4611.0
+a9d97815ddc62da713ae459d75ad9b9860808dd1,2022-02-07,ok,serialize to std::string,,,,,,,Circumvent msvc-14.2 bug,3274.0
+07e3ef19472d05236eb64668cfd1fc00ee4296a5,2022-03-14,ok,parse + read px,,,,,,,"array::erase(it) defers to array::erase(it,it)",6322.0
+07e3ef19472d05236eb64668cfd1fc00ee4296a5,2022-03-14,ok,parse into a fixed buffer,,,,,,,"array::erase(it) defers to array::erase(it,it)",4767.0
+07e3ef19472d05236eb64668cfd1fc00ee4296a5,2022-03-14,ok,"reused parser, fixed buffer",,,,,,,"array::erase(it) defers to array::erase(it,it)",4595.0
+07e3ef19472d05236eb64668cfd1fc00ee4296a5,2022-03-14,ok,serialize to std::string,,,,,,,"array::erase(it) defers to array::erase(it,it)",3274.0
+81664c693a84dcb4c9479adcd234a724f509a1ec,2022-05-25,ok,parse + read px,,,,,,,better subview,6322.0
+81664c693a84dcb4c9479adcd234a724f509a1ec,2022-05-25,ok,parse into a fixed buffer,,,,,,,better subview,4767.0
+81664c693a84dcb4c9479adcd234a724f509a1ec,2022-05-25,ok,"reused parser, fixed buffer",,,,,,,better subview,4595.0
+81664c693a84dcb4c9479adcd234a724f509a1ec,2022-05-25,ok,serialize to std::string,,,,,,,better subview,3272.0
+76a1fa7a0094f4510dae205b102a88e79b9a5194,2022-06-08,ok,parse + read px,,,,,,,remove unused header,6267.0
+76a1fa7a0094f4510dae205b102a88e79b9a5194,2022-06-08,ok,parse into a fixed buffer,,,,,,,remove unused header,4712.0
+76a1fa7a0094f4510dae205b102a88e79b9a5194,2022-06-08,ok,"reused parser, fixed buffer",,,,,,,remove unused header,4540.0
+76a1fa7a0094f4510dae205b102a88e79b9a5194,2022-06-08,ok,serialize to std::string,,,,,,,remove unused header,3272.0
+a3bd9207fa6ec2180474fff292c2e0da1994a87f,2022-06-10,ok,parse + read px,,,,,,,fix s390x build,6267.0
+a3bd9207fa6ec2180474fff292c2e0da1994a87f,2022-06-10,ok,parse into a fixed buffer,,,,,,,fix s390x build,4712.0
+a3bd9207fa6ec2180474fff292c2e0da1994a87f,2022-06-10,ok,"reused parser, fixed buffer",,,,,,,fix s390x build,4540.0
+a3bd9207fa6ec2180474fff292c2e0da1994a87f,2022-06-10,ok,serialize to std::string,,,,,,,fix s390x build,3272.0
+d7f271d9654455ba63f7a44b6a30c35ec3d6f584,2022-05-25,ok,parse + read px,,,,,,,link to example of parser handler usage,6267.0
+d7f271d9654455ba63f7a44b6a30c35ec3d6f584,2022-05-25,ok,parse into a fixed buffer,,,,,,,link to example of parser handler usage,4712.0
+d7f271d9654455ba63f7a44b6a30c35ec3d6f584,2022-05-25,ok,"reused parser, fixed buffer",,,,,,,link to example of parser handler usage,4540.0
+d7f271d9654455ba63f7a44b6a30c35ec3d6f584,2022-05-25,ok,serialize to std::string,,,,,,,link to example of parser handler usage,3272.0
+2cbc263ced1e2e8151fd8096e1f4e8b87eaeaa28,2022-08-28,ok,parse + read px,,,,,,,array self-swap,6267.0
+2cbc263ced1e2e8151fd8096e1f4e8b87eaeaa28,2022-08-28,ok,parse into a fixed buffer,,,,,,,array self-swap,4712.0
+2cbc263ced1e2e8151fd8096e1f4e8b87eaeaa28,2022-08-28,ok,"reused parser, fixed buffer",,,,,,,array self-swap,4540.0
+2cbc263ced1e2e8151fd8096e1f4e8b87eaeaa28,2022-08-28,ok,serialize to std::string,,,,,,,array self-swap,3272.0
+e1088609c20a97dca13f859d22066311cbc2cb8a,2022-09-02,ok,parse + read px,,,,,,,Improve erase and stable_erase documentation,6259.0
+e1088609c20a97dca13f859d22066311cbc2cb8a,2022-09-02,ok,parse into a fixed buffer,,,,,,,Improve erase and stable_erase documentation,4704.0
+e1088609c20a97dca13f859d22066311cbc2cb8a,2022-09-02,ok,"reused parser, fixed buffer",,,,,,,Improve erase and stable_erase documentation,4532.0
+e1088609c20a97dca13f859d22066311cbc2cb8a,2022-09-02,ok,serialize to std::string,,,,,,,Improve erase and stable_erase documentation,3272.0
+3ccb526ee7ed2ae2d49359fc3d4b3f18f85c9092,2022-02-16,ok,parse + read px,,,,,,,conversion to nullptr_t,6259.0
+3ccb526ee7ed2ae2d49359fc3d4b3f18f85c9092,2022-02-16,ok,parse into a fixed buffer,,,,,,,conversion to nullptr_t,4704.0
+3ccb526ee7ed2ae2d49359fc3d4b3f18f85c9092,2022-02-16,ok,"reused parser, fixed buffer",,,,,,,conversion to nullptr_t,4532.0
+3ccb526ee7ed2ae2d49359fc3d4b3f18f85c9092,2022-02-16,ok,serialize to std::string,,,,,,,conversion to nullptr_t,3272.0
+6d4b6dd23e5caf774f3b860e0253115458941911,2022-09-13,ok,parse + read px,,,,,,,user-facing conversion traits,6259.0
+6d4b6dd23e5caf774f3b860e0253115458941911,2022-09-13,ok,parse into a fixed buffer,,,,,,,user-facing conversion traits,4704.0
+6d4b6dd23e5caf774f3b860e0253115458941911,2022-09-13,ok,"reused parser, fixed buffer",,,,,,,user-facing conversion traits,4532.0
+6d4b6dd23e5caf774f3b860e0253115458941911,2022-09-13,ok,serialize to std::string,,,,,,,user-facing conversion traits,3272.0
+9e5653216990b6a5d8e9585ed83fc1649e126448,2022-09-30,ok,parse + read px,,,,,,,support unreachable on older GCC,6259.0
+9e5653216990b6a5d8e9585ed83fc1649e126448,2022-09-30,ok,parse into a fixed buffer,,,,,,,support unreachable on older GCC,4704.0
+9e5653216990b6a5d8e9585ed83fc1649e126448,2022-09-30,ok,"reused parser, fixed buffer",,,,,,,support unreachable on older GCC,4532.0
+9e5653216990b6a5d8e9585ed83fc1649e126448,2022-09-30,ok,serialize to std::string,,,,,,,support unreachable on older GCC,3272.0
+0d8a14c3a17923f06fcf012138c2be7bad0417fb,2022-08-24,build failed,,,,,,,,non-throwing conversions
+6ff132c64c5fd50caf84cdce6fdbba3a0d9f5458,2022-09-05,ok,parse + read px,,,,,,,value_to/from supports std::variant,6259.0
+6ff132c64c5fd50caf84cdce6fdbba3a0d9f5458,2022-09-05,ok,parse into a fixed buffer,,,,,,,value_to/from supports std::variant,4704.0
+6ff132c64c5fd50caf84cdce6fdbba3a0d9f5458,2022-09-05,ok,"reused parser, fixed buffer",,,,,,,value_to/from supports std::variant,4532.0
+6ff132c64c5fd50caf84cdce6fdbba3a0d9f5458,2022-09-05,ok,serialize to std::string,,,,,,,value_to/from supports std::variant,3272.0
+413c6725e70583cca1ea46b5fa7571429e1826c8,2022-10-19,ok,parse + read px,,,,,,,move merge value_traits.hpp into impl/conversion.hpp,6259.0
+413c6725e70583cca1ea46b5fa7571429e1826c8,2022-10-19,ok,parse into a fixed buffer,,,,,,,move merge value_traits.hpp into impl/conversion.hpp,4704.0
+413c6725e70583cca1ea46b5fa7571429e1826c8,2022-10-19,ok,"reused parser, fixed buffer",,,,,,,move merge value_traits.hpp into impl/conversion.hpp,4532.0
+413c6725e70583cca1ea46b5fa7571429e1826c8,2022-10-19,ok,serialize to std::string,,,,,,,move merge value_traits.hpp into impl/conversion.hpp,3272.0
+ce2b5f82ac6f0794199aa80f2597314ba9f9f561,2022-10-20,ok,parse + read px,,,,,,,value_to/from supports described structs,6259.0
+ce2b5f82ac6f0794199aa80f2597314ba9f9f561,2022-10-20,ok,parse into a fixed buffer,,,,,,,value_to/from supports described structs,4704.0
+ce2b5f82ac6f0794199aa80f2597314ba9f9f561,2022-10-20,ok,"reused parser, fixed buffer",,,,,,,value_to/from supports described structs,4532.0
+ce2b5f82ac6f0794199aa80f2597314ba9f9f561,2022-10-20,ok,serialize to std::string,,,,,,,value_to/from supports described structs,3272.0
+69bf0bbb49462968062ca1de96d02f4f2e62402c,2022-10-22,ok,parse + read px,,,,,,,replace C fp constants with C++ equivalents,6266.0
+69bf0bbb49462968062ca1de96d02f4f2e62402c,2022-10-22,ok,parse into a fixed buffer,,,,,,,replace C fp constants with C++ equivalents,4711.0
+69bf0bbb49462968062ca1de96d02f4f2e62402c,2022-10-22,ok,"reused parser, fixed buffer",,,,,,,replace C fp constants with C++ equivalents,4539.0
+69bf0bbb49462968062ca1de96d02f4f2e62402c,2022-10-22,ok,serialize to std::string,,,,,,,replace C fp constants with C++ equivalents,3272.0
+77c05d203148f67fecbb261f3e856207e9614b51,2022-11-02,ok,parse + read px,,,,,,,silence msvc-14.0 warning,6266.0
+77c05d203148f67fecbb261f3e856207e9614b51,2022-11-02,ok,parse into a fixed buffer,,,,,,,silence msvc-14.0 warning,4711.0
+77c05d203148f67fecbb261f3e856207e9614b51,2022-11-02,ok,"reused parser, fixed buffer",,,,,,,silence msvc-14.0 warning,4539.0
+77c05d203148f67fecbb261f3e856207e9614b51,2022-11-02,ok,serialize to std::string,,,,,,,silence msvc-14.0 warning,3272.0
+4d224096cea90bc8f0ad8182ac50958a78bc435c,2022-11-05,ok,parse + read px,,,,,,,"refactor operator>>(istream&, value&)",6281.0
+4d224096cea90bc8f0ad8182ac50958a78bc435c,2022-11-05,ok,parse into a fixed buffer,,,,,,,"refactor operator>>(istream&, value&)",4726.0
+4d224096cea90bc8f0ad8182ac50958a78bc435c,2022-11-05,ok,"reused parser, fixed buffer",,,,,,,"refactor operator>>(istream&, value&)",4532.0
+4d224096cea90bc8f0ad8182ac50958a78bc435c,2022-11-05,ok,serialize to std::string,,,,,,,"refactor operator>>(istream&, value&)",3272.0
+f993635f4d2ad02f7870bb6933fc17ebbf601d05,2022-11-16,ok,parse + read px,,,,,,,fix pedantic warnings,6281.0
+f993635f4d2ad02f7870bb6933fc17ebbf601d05,2022-11-16,ok,parse into a fixed buffer,,,,,,,fix pedantic warnings,4726.0
+f993635f4d2ad02f7870bb6933fc17ebbf601d05,2022-11-16,ok,"reused parser, fixed buffer",,,,,,,fix pedantic warnings,4532.0
+f993635f4d2ad02f7870bb6933fc17ebbf601d05,2022-11-16,ok,serialize to std::string,,,,,,,fix pedantic warnings,3272.0
+73946424a31d9e5eb803b8c28530fb78d698e3e8,2022-12-01,ok,parse + read px,,,,,,,add boost::hash support,6296.0
+73946424a31d9e5eb803b8c28530fb78d698e3e8,2022-12-01,ok,parse into a fixed buffer,,,,,,,add boost::hash support,4741.0
+73946424a31d9e5eb803b8c28530fb78d698e3e8,2022-12-01,ok,"reused parser, fixed buffer",,,,,,,add boost::hash support,4547.0
+73946424a31d9e5eb803b8c28530fb78d698e3e8,2022-12-01,ok,serialize to std::string,,,,,,,add boost::hash support,3272.0
+36552f0c94e4b06cdb697c6ee186a5bc33724314,2022-11-05,ok,parse + read px,,,,,,,remove namespace macros,6296.0
+36552f0c94e4b06cdb697c6ee186a5bc33724314,2022-11-05,ok,parse into a fixed buffer,,,,,,,remove namespace macros,4741.0
+36552f0c94e4b06cdb697c6ee186a5bc33724314,2022-11-05,ok,"reused parser, fixed buffer",,,,,,,remove namespace macros,4547.0
+36552f0c94e4b06cdb697c6ee186a5bc33724314,2022-11-05,ok,serialize to std::string,,,,,,,remove namespace macros,3272.0
+33d733d13cf5d8f530f8b01bc787d5b90c008c0b,2023-02-12,ok,parse + read px,,,,,,,replace Bool with T,6290.0
+33d733d13cf5d8f530f8b01bc787d5b90c008c0b,2023-02-12,ok,parse into a fixed buffer,,,,,,,replace Bool with T,4735.0
+33d733d13cf5d8f530f8b01bc787d5b90c008c0b,2023-02-12,ok,"reused parser, fixed buffer",,,,,,,replace Bool with T,4540.0
+33d733d13cf5d8f530f8b01bc787d5b90c008c0b,2023-02-12,ok,serialize to std::string,,,,,,,replace Bool with T,3275.0
+274901f3488e6ed7cf180f9167dccb2211840dea,2023-03-01,ok,parse + read px,,,,,,,fix template parameter docs for make_shared_resource,6329.0
+274901f3488e6ed7cf180f9167dccb2211840dea,2023-03-01,ok,parse into a fixed buffer,,,,,,,fix template parameter docs for make_shared_resource,4774.0
+274901f3488e6ed7cf180f9167dccb2211840dea,2023-03-01,ok,"reused parser, fixed buffer",,,,,,,fix template parameter docs for make_shared_resource,4579.0
+274901f3488e6ed7cf180f9167dccb2211840dea,2023-03-01,ok,serialize to std::string,,,,,,,fix template parameter docs for make_shared_resource,3275.0
+9f2abf1c79d7bc0d662e1a707218d941ded695d1,2023-05-19,build failed,,,,,,,,remove unnecessary doc states
+0ae7c87a65065e7b6018cea44d6d2a6931fc4a1f,2023-05-18,ok,parse + read px,,,,,,,refactor handling of literals in parser,6331.0
+0ae7c87a65065e7b6018cea44d6d2a6931fc4a1f,2023-05-18,ok,parse into a fixed buffer,,,,,,,refactor handling of literals in parser,4776.0
+0ae7c87a65065e7b6018cea44d6d2a6931fc4a1f,2023-05-18,ok,"reused parser, fixed buffer",,,,,,,refactor handling of literals in parser,4579.0
+0ae7c87a65065e7b6018cea44d6d2a6931fc4a1f,2023-05-18,ok,serialize to std::string,,,,,,,refactor handling of literals in parser,3275.0
+e4fb71474631294e6306a4ae55d55d88df8105cf,2023-05-07,ok,parse + read px,,,,,,,option for serialization of special numbers,6326.0
+e4fb71474631294e6306a4ae55d55d88df8105cf,2023-05-07,ok,parse into a fixed buffer,,,,,,,option for serialization of special numbers,4771.0
+e4fb71474631294e6306a4ae55d55d88df8105cf,2023-05-07,ok,"reused parser, fixed buffer",,,,,,,option for serialization of special numbers,4562.0
+e4fb71474631294e6306a4ae55d55d88df8105cf,2023-05-07,ok,serialize to std::string,,,,,,,option for serialization of special numbers,3285.0
+35dc1b964e2987998b2276a9d533bbd4b4825b01,2023-05-08,ok,parse + read px,,,,,,,support parse options in stream operator,6326.0
+35dc1b964e2987998b2276a9d533bbd4b4825b01,2023-05-08,ok,parse into a fixed buffer,,,,,,,support parse options in stream operator,4771.0
+35dc1b964e2987998b2276a9d533bbd4b4825b01,2023-05-08,ok,"reused parser, fixed buffer",,,,,,,support parse options in stream operator,4562.0
+35dc1b964e2987998b2276a9d533bbd4b4825b01,2023-05-08,ok,serialize to std::string,,,,,,,support parse options in stream operator,3285.0
+3956bdbb78e3924055651ecab4234d3246215419,2023-06-02,ok,parse + read px,,,,,,,fix asan failures,6340.0
+3956bdbb78e3924055651ecab4234d3246215419,2023-06-02,ok,parse into a fixed buffer,,,,,,,fix asan failures,4785.0
+3956bdbb78e3924055651ecab4234d3246215419,2023-06-02,ok,"reused parser, fixed buffer",,,,,,,fix asan failures,4575.0
+3956bdbb78e3924055651ecab4234d3246215419,2023-06-02,ok,serialize to std::string,,,,,,,fix asan failures,3285.0
+4700500920e7ad05a174b98d1e6bb36a0e6548ce,2023-05-29,ok,parse + read px,,,,,,,use Charconv for precise parsing,6329.0
+4700500920e7ad05a174b98d1e6bb36a0e6548ce,2023-05-29,ok,parse into a fixed buffer,,,,,,,use Charconv for precise parsing,4774.0
+4700500920e7ad05a174b98d1e6bb36a0e6548ce,2023-05-29,ok,"reused parser, fixed buffer",,,,,,,use Charconv for precise parsing,4564.0
+4700500920e7ad05a174b98d1e6bb36a0e6548ce,2023-05-29,ok,serialize to std::string,,,,,,,use Charconv for precise parsing,3267.0
+c4329519cdc690264ffda2319146b1c8c21f60ec,2023-06-10,ok,parse + read px,,,,,,,do not reserve preemptively in object,6042.0
+c4329519cdc690264ffda2319146b1c8c21f60ec,2023-06-10,ok,parse into a fixed buffer,,,,,,,do not reserve preemptively in object,4628.0
+c4329519cdc690264ffda2319146b1c8c21f60ec,2023-06-10,ok,"reused parser, fixed buffer",,,,,,,do not reserve preemptively in object,4415.0
+c4329519cdc690264ffda2319146b1c8c21f60ec,2023-06-10,ok,serialize to std::string,,,,,,,do not reserve preemptively in object,3267.0
+24cca5f47b75512ffdb7d06c15d73015925cee5f,2023-06-21,ok,parse + read px,,,,,,,fix error message for size_mismatch,6052.0
+24cca5f47b75512ffdb7d06c15d73015925cee5f,2023-06-21,ok,parse into a fixed buffer,,,,,,,fix error message for size_mismatch,4638.0
+24cca5f47b75512ffdb7d06c15d73015925cee5f,2023-06-21,ok,"reused parser, fixed buffer",,,,,,,fix error message for size_mismatch,4425.0
+24cca5f47b75512ffdb7d06c15d73015925cee5f,2023-06-21,ok,serialize to std::string,,,,,,,fix error message for size_mismatch,3285.0
+3d751ad9e5a6803fb4f7f7559d0a19f1c4784ce9,2023-06-26,ok,parse + read px,,,,,,,handle bias overflow,5962.0
+3d751ad9e5a6803fb4f7f7559d0a19f1c4784ce9,2023-06-26,ok,parse into a fixed buffer,,,,,,,handle bias overflow,4548.0
+3d751ad9e5a6803fb4f7f7559d0a19f1c4784ce9,2023-06-26,ok,"reused parser, fixed buffer",,,,,,,handle bias overflow,4335.0
+3d751ad9e5a6803fb4f7f7559d0a19f1c4784ce9,2023-06-26,ok,serialize to std::string,,,,,,,handle bias overflow,3267.0
+5bc9ebb8d2dd34d101f6a0ed3f55e42a51107528,2023-06-30,ok,parse + read px,,,,,,,allow exception propagation in optional and variant conversion,5962.0
+5bc9ebb8d2dd34d101f6a0ed3f55e42a51107528,2023-06-30,ok,parse into a fixed buffer,,,,,,,allow exception propagation in optional and variant conversion,4548.0
+5bc9ebb8d2dd34d101f6a0ed3f55e42a51107528,2023-06-30,ok,"reused parser, fixed buffer",,,,,,,allow exception propagation in optional and variant conversion,4335.0
+5bc9ebb8d2dd34d101f6a0ed3f55e42a51107528,2023-06-30,ok,serialize to std::string,,,,,,,allow exception propagation in optional and variant conversion,3267.0
+0c1b4692f9b1c43830c12244bf402c7a2bce23d9,2023-08-16,ok,parse + read px,,,,,,,Replace _M_ARM64 with _M_ARM for 32 bit path,5962.0
+0c1b4692f9b1c43830c12244bf402c7a2bce23d9,2023-08-16,ok,parse into a fixed buffer,,,,,,,Replace _M_ARM64 with _M_ARM for 32 bit path,4548.0
+0c1b4692f9b1c43830c12244bf402c7a2bce23d9,2023-08-16,ok,"reused parser, fixed buffer",,,,,,,Replace _M_ARM64 with _M_ARM for 32 bit path,4335.0
+0c1b4692f9b1c43830c12244bf402c7a2bce23d9,2023-08-16,ok,serialize to std::string,,,,,,,Replace _M_ARM64 with _M_ARM for 32 bit path,3267.0
+25e740d7baf174b114b31264b51788dcc15bce2c,2023-07-21,ok,parse + read px,,,,,,,fix inconsistent choice of init list constructor,5962.0
+25e740d7baf174b114b31264b51788dcc15bce2c,2023-07-21,ok,parse into a fixed buffer,,,,,,,fix inconsistent choice of init list constructor,4548.0
+25e740d7baf174b114b31264b51788dcc15bce2c,2023-07-21,ok,"reused parser, fixed buffer",,,,,,,fix inconsistent choice of init list constructor,4335.0
+25e740d7baf174b114b31264b51788dcc15bce2c,2023-07-21,ok,serialize to std::string,,,,,,,fix inconsistent choice of init list constructor,3267.0
+4c628ae36a8711fb0a04f2c2384a8ccd62c770ec,2021-10-06,ok,parse + read px,,,,,,,Add null_handler,5962.0
+4c628ae36a8711fb0a04f2c2384a8ccd62c770ec,2021-10-06,ok,parse into a fixed buffer,,,,,,,Add null_handler,4548.0
+4c628ae36a8711fb0a04f2c2384a8ccd62c770ec,2021-10-06,ok,"reused parser, fixed buffer",,,,,,,Add null_handler,4335.0
+4c628ae36a8711fb0a04f2c2384a8ccd62c770ec,2021-10-06,ok,serialize to std::string,,,,,,,Add null_handler,3267.0
+71331842523e73c754448948b5e1373aae1571d0,2023-07-28,ok,parse + read px,,,,,,,parse_into supports optionals,5962.0
+71331842523e73c754448948b5e1373aae1571d0,2023-07-28,ok,parse into a fixed buffer,,,,,,,parse_into supports optionals,4548.0
+71331842523e73c754448948b5e1373aae1571d0,2023-07-28,ok,"reused parser, fixed buffer",,,,,,,parse_into supports optionals,4335.0
+71331842523e73c754448948b5e1373aae1571d0,2023-07-28,ok,serialize to std::string,,,,,,,parse_into supports optionals,3267.0
+b5406966225544b695f497f2d49ed4682b9a7bc8,2023-08-12,ok,parse + read px,,,,,,,error_code is first argument for parse_into nested handlers' functions,5962.0
+b5406966225544b695f497f2d49ed4682b9a7bc8,2023-08-12,ok,parse into a fixed buffer,,,,,,,error_code is first argument for parse_into nested handlers' functions,4548.0
+b5406966225544b695f497f2d49ed4682b9a7bc8,2023-08-12,ok,"reused parser, fixed buffer",,,,,,,error_code is first argument for parse_into nested handlers' functions,4335.0
+b5406966225544b695f497f2d49ed4682b9a7bc8,2023-08-12,ok,serialize to std::string,,,,,,,error_code is first argument for parse_into nested handlers' functions,3267.0
+aaa4e7f58a37fadf4ed213781a8b392fc827479e,2023-08-27,ok,parse + read px,,,,,,,add tuple size checking for parse_into,5962.0
+aaa4e7f58a37fadf4ed213781a8b392fc827479e,2023-08-27,ok,parse into a fixed buffer,,,,,,,add tuple size checking for parse_into,4548.0
+aaa4e7f58a37fadf4ed213781a8b392fc827479e,2023-08-27,ok,"reused parser, fixed buffer",,,,,,,add tuple size checking for parse_into,4335.0
+aaa4e7f58a37fadf4ed213781a8b392fc827479e,2023-08-27,ok,serialize to std::string,,,,,,,add tuple size checking for parse_into,3267.0
+60bf3455c2cb236a7efc3f822915d9c99693536f,2023-09-09,ok,parse + read px,,,,,,,remove unnecessary parameters,5962.0
+60bf3455c2cb236a7efc3f822915d9c99693536f,2023-09-09,ok,parse into a fixed buffer,,,,,,,remove unnecessary parameters,4548.0
+60bf3455c2cb236a7efc3f822915d9c99693536f,2023-09-09,ok,"reused parser, fixed buffer",,,,,,,remove unnecessary parameters,4335.0
+60bf3455c2cb236a7efc3f822915d9c99693536f,2023-09-09,ok,serialize to std::string,,,,,,,remove unnecessary parameters,3267.0
+aa14b592febf3f78748b9c1af434ab7d5ec0b22a,2023-03-01,ok,parse + read px,,,,,,,remove unused macros,5962.0
+aa14b592febf3f78748b9c1af434ab7d5ec0b22a,2023-03-01,ok,parse into a fixed buffer,,,,,,,remove unused macros,4548.0
+aa14b592febf3f78748b9c1af434ab7d5ec0b22a,2023-03-01,ok,"reused parser, fixed buffer",,,,,,,remove unused macros,4335.0
+aa14b592febf3f78748b9c1af434ab7d5ec0b22a,2023-03-01,ok,serialize to std::string,,,,,,,remove unused macros,3267.0
+942bbd4cf5e5fd30b7be71d187ab5bd2e54f8939,2024-01-05,ok,parse + read px,,,,,,,remove unnecessary semicolons,5962.0
+942bbd4cf5e5fd30b7be71d187ab5bd2e54f8939,2024-01-05,ok,parse into a fixed buffer,,,,,,,remove unnecessary semicolons,4548.0
+942bbd4cf5e5fd30b7be71d187ab5bd2e54f8939,2024-01-05,ok,"reused parser, fixed buffer",,,,,,,remove unnecessary semicolons,4335.0
+942bbd4cf5e5fd30b7be71d187ab5bd2e54f8939,2024-01-05,ok,serialize to std::string,,,,,,,remove unnecessary semicolons,3267.0
+b07a034870ae52768ac7f54dc34481dff262c482,2023-11-24,ok,parse + read px,,,,,,,fix references used in visit,5962.0
+b07a034870ae52768ac7f54dc34481dff262c482,2023-11-24,ok,parse into a fixed buffer,,,,,,,fix references used in visit,4548.0
+b07a034870ae52768ac7f54dc34481dff262c482,2023-11-24,ok,"reused parser, fixed buffer",,,,,,,fix references used in visit,4335.0
+b07a034870ae52768ac7f54dc34481dff262c482,2023-11-24,ok,serialize to std::string,,,,,,,fix references used in visit,3267.0
+bacc644f93c9b2000cd137ebf541ad754d6ca747,2024-01-11,ok,parse + read px,,,,,,,deprecate type aliases,5962.0
+bacc644f93c9b2000cd137ebf541ad754d6ca747,2024-01-11,ok,parse into a fixed buffer,,,,,,,deprecate type aliases,4548.0
+bacc644f93c9b2000cd137ebf541ad754d6ca747,2024-01-11,ok,"reused parser, fixed buffer",,,,,,,deprecate type aliases,4335.0
+bacc644f93c9b2000cd137ebf541ad754d6ca747,2024-01-11,ok,serialize to std::string,,,,,,,deprecate type aliases,3267.0
+0201abe2dfc2d3e76ca814170b5853e5bfdbde9b,2024-02-13,ok,parse + read px,,,,,,,remove BOOST_ASSERT fallback,5962.0
+0201abe2dfc2d3e76ca814170b5853e5bfdbde9b,2024-02-13,ok,parse into a fixed buffer,,,,,,,remove BOOST_ASSERT fallback,4548.0
+0201abe2dfc2d3e76ca814170b5853e5bfdbde9b,2024-02-13,ok,"reused parser, fixed buffer",,,,,,,remove BOOST_ASSERT fallback,4335.0
+0201abe2dfc2d3e76ca814170b5853e5bfdbde9b,2024-02-13,ok,serialize to std::string,,,,,,,remove BOOST_ASSERT fallback,3267.0
+48286f443ab39786af0a713e2977cf60040e8466,2024-02-13,ok,parse + read px,,,,,,,remove BOOST_NOINLINE fallback,5962.0
+48286f443ab39786af0a713e2977cf60040e8466,2024-02-13,ok,parse into a fixed buffer,,,,,,,remove BOOST_NOINLINE fallback,4548.0
+48286f443ab39786af0a713e2977cf60040e8466,2024-02-13,ok,"reused parser, fixed buffer",,,,,,,remove BOOST_NOINLINE fallback,4335.0
+48286f443ab39786af0a713e2977cf60040e8466,2024-02-13,ok,serialize to std::string,,,,,,,remove BOOST_NOINLINE fallback,3267.0
+2883ff1689727f77157a7a9a603d9b8f23a5cb53,2024-03-01,ok,parse + read px,,,,,,,conversion of described classes supports private members,5962.0
+2883ff1689727f77157a7a9a603d9b8f23a5cb53,2024-03-01,ok,parse into a fixed buffer,,,,,,,conversion of described classes supports private members,4548.0
+2883ff1689727f77157a7a9a603d9b8f23a5cb53,2024-03-01,ok,"reused parser, fixed buffer",,,,,,,conversion of described classes supports private members,4335.0
+2883ff1689727f77157a7a9a603d9b8f23a5cb53,2024-03-01,ok,serialize to std::string,,,,,,,conversion of described classes supports private members,3267.0
+1f6f1a2384cebab079d3ad2d8fe2785a09d70f22,2024-05-13,ok,parse + read px,,,,,,,handle missing error case in direct parsing,6006.0
+1f6f1a2384cebab079d3ad2d8fe2785a09d70f22,2024-05-13,ok,parse into a fixed buffer,,,,,,,handle missing error case in direct parsing,4592.0
+1f6f1a2384cebab079d3ad2d8fe2785a09d70f22,2024-05-13,ok,"reused parser, fixed buffer",,,,,,,handle missing error case in direct parsing,4378.0
+1f6f1a2384cebab079d3ad2d8fe2785a09d70f22,2024-05-13,ok,serialize to std::string,,,,,,,handle missing error case in direct parsing,3267.0
+c4af9affc0d87f87b0fee3fc6d66ec9360d28ae0,2024-05-24,ok,parse + read px,,,,,,,refactor string parsing,6160.0
+c4af9affc0d87f87b0fee3fc6d66ec9360d28ae0,2024-05-24,ok,parse into a fixed buffer,,,,,,,refactor string parsing,4746.0
+c4af9affc0d87f87b0fee3fc6d66ec9360d28ae0,2024-05-24,ok,"reused parser, fixed buffer",,,,,,,refactor string parsing,4532.0
+c4af9affc0d87f87b0fee3fc6d66ec9360d28ae0,2024-05-24,ok,serialize to std::string,,,,,,,refactor string parsing,3267.0
+038916a0d42add35455bf2335a382d1156f1206f,2024-04-23,ok,parse + read px,,,,,,,use Python implementation of docca,6160.0
+038916a0d42add35455bf2335a382d1156f1206f,2024-04-23,ok,parse into a fixed buffer,,,,,,,use Python implementation of docca,4746.0
+038916a0d42add35455bf2335a382d1156f1206f,2024-04-23,ok,"reused parser, fixed buffer",,,,,,,use Python implementation of docca,4532.0
+038916a0d42add35455bf2335a382d1156f1206f,2024-04-23,ok,serialize to std::string,,,,,,,use Python implementation of docca,3267.0
+3d334a74e185578b657650cb2a47959b509b2b8d,2024-06-15,ok,parse + read px,,,,,,,add references to external types,6160.0
+3d334a74e185578b657650cb2a47959b509b2b8d,2024-06-15,ok,parse into a fixed buffer,,,,,,,add references to external types,4746.0
+3d334a74e185578b657650cb2a47959b509b2b8d,2024-06-15,ok,"reused parser, fixed buffer",,,,,,,add references to external types,4532.0
+3d334a74e185578b657650cb2a47959b509b2b8d,2024-06-15,ok,serialize to std::string,,,,,,,add references to external types,3267.0
+9b823e095b2b145ddc16cf9c4f2c83190e810ead,2024-04-07,ok,parse + read px,,,,,,,try_at functions,6281.0
+9b823e095b2b145ddc16cf9c4f2c83190e810ead,2024-04-07,ok,parse into a fixed buffer,,,,,,,try_at functions,4867.0
+9b823e095b2b145ddc16cf9c4f2c83190e810ead,2024-04-07,ok,"reused parser, fixed buffer",,,,,,,try_at functions,4653.0
+9b823e095b2b145ddc16cf9c4f2c83190e810ead,2024-04-07,ok,serialize to std::string,,,,,,,try_at functions,3267.0
+6e3ae77d636dac7e6cbb3baad608d2cb0a29c291,2024-09-09,ok,parse + read px,,,,,,,add gdb pretty printers,6305.0
+6e3ae77d636dac7e6cbb3baad608d2cb0a29c291,2024-09-09,ok,parse into a fixed buffer,,,,,,,add gdb pretty printers,4891.0
+6e3ae77d636dac7e6cbb3baad608d2cb0a29c291,2024-09-09,ok,"reused parser, fixed buffer",,,,,,,add gdb pretty printers,4674.0
+6e3ae77d636dac7e6cbb3baad608d2cb0a29c291,2024-09-09,ok,serialize to std::string,,,,,,,add gdb pretty printers,3267.0
+a7bdbcb1d314cc692db1a4b3659d327eb78150b4,2023-10-02,ok,parse + read px,,,,,,,stack can store nontrivial types,6214.0
+a7bdbcb1d314cc692db1a4b3659d327eb78150b4,2023-10-02,ok,parse into a fixed buffer,,,,,,,stack can store nontrivial types,4800.0
+a7bdbcb1d314cc692db1a4b3659d327eb78150b4,2023-10-02,ok,"reused parser, fixed buffer",,,,,,,stack can store nontrivial types,4559.0
+a7bdbcb1d314cc692db1a4b3659d327eb78150b4,2023-10-02,ok,serialize to std::string,,,,,,,stack can store nontrivial types,3298.0
+532e21aa2782a690b7cad4288840a80a49268836,2024-06-25,ok,parse + read px,,,,,,,refactor fallback reset to null,6209.0
+532e21aa2782a690b7cad4288840a80a49268836,2024-06-25,ok,parse into a fixed buffer,,,,,,,refactor fallback reset to null,4795.0
+532e21aa2782a690b7cad4288840a80a49268836,2024-06-25,ok,"reused parser, fixed buffer",,,,,,,refactor fallback reset to null,4557.0
+532e21aa2782a690b7cad4288840a80a49268836,2024-06-25,ok,serialize to std::string,,,,,,,refactor fallback reset to null,3284.0
+5666575e7b804ac2832b35a9d8766bfd2d1511c2,2024-06-26,ok,parse + read px,,,,,,,UDT serialization of tuples,6209.0
+5666575e7b804ac2832b35a9d8766bfd2d1511c2,2024-06-26,ok,parse into a fixed buffer,,,,,,,UDT serialization of tuples,4795.0
+5666575e7b804ac2832b35a9d8766bfd2d1511c2,2024-06-26,ok,"reused parser, fixed buffer",,,,,,,UDT serialization of tuples,4557.0
+5666575e7b804ac2832b35a9d8766bfd2d1511c2,2024-06-26,ok,serialize to std::string,,,,,,,UDT serialization of tuples,3282.0
+8f7b1edef938aa3f697efecd4eff8e30ec014174,2024-07-02,ok,parse + read px,,,,,,,UDT serialization of optionals,6209.0
+8f7b1edef938aa3f697efecd4eff8e30ec014174,2024-07-02,ok,parse into a fixed buffer,,,,,,,UDT serialization of optionals,4795.0
+8f7b1edef938aa3f697efecd4eff8e30ec014174,2024-07-02,ok,"reused parser, fixed buffer",,,,,,,UDT serialization of optionals,4557.0
+8f7b1edef938aa3f697efecd4eff8e30ec014174,2024-07-02,ok,serialize to std::string,,,,,,,UDT serialization of optionals,3282.0
+743be7fe13bbea76f651ab81703a5b8e1fdf25e0,2024-09-19,ok,parse + read px,,,,,,,Allow to include pretty printers only once,6209.0
+743be7fe13bbea76f651ab81703a5b8e1fdf25e0,2024-09-19,ok,parse into a fixed buffer,,,,,,,Allow to include pretty printers only once,4795.0
+743be7fe13bbea76f651ab81703a5b8e1fdf25e0,2024-09-19,ok,"reused parser, fixed buffer",,,,,,,Allow to include pretty printers only once,4557.0
+743be7fe13bbea76f651ab81703a5b8e1fdf25e0,2024-09-19,ok,serialize to std::string,,,,,,,Allow to include pretty printers only once,3282.0
+b6c916f3a6f909d10611710f012e2be5cc733ecb,2024-10-18,ok,parse + read px,,,,,,,Use correct 64bit full multiplication for MinGW on ARM64,6209.0
+b6c916f3a6f909d10611710f012e2be5cc733ecb,2024-10-18,ok,parse into a fixed buffer,,,,,,,Use correct 64bit full multiplication for MinGW on ARM64,4795.0
+b6c916f3a6f909d10611710f012e2be5cc733ecb,2024-10-18,ok,"reused parser, fixed buffer",,,,,,,Use correct 64bit full multiplication for MinGW on ARM64,4557.0
+b6c916f3a6f909d10611710f012e2be5cc733ecb,2024-10-18,ok,serialize to std::string,,,,,,,Use correct 64bit full multiplication for MinGW on ARM64,3282.0
+9b654f7b1a96aecf74729e41334752f9143d39cf,2024-07-10,ok,parse + read px,,,,,,,remove unnecessary branch in string serialization,6209.0
+9b654f7b1a96aecf74729e41334752f9143d39cf,2024-07-10,ok,parse into a fixed buffer,,,,,,,remove unnecessary branch in string serialization,4795.0
+9b654f7b1a96aecf74729e41334752f9143d39cf,2024-07-10,ok,"reused parser, fixed buffer",,,,,,,remove unnecessary branch in string serialization,4557.0
+9b654f7b1a96aecf74729e41334752f9143d39cf,2024-07-10,ok,serialize to std::string,,,,,,,remove unnecessary branch in string serialization,3285.0
+6c79a2cf88eab40b519aabd944dfd83c5ba89c32,2025-03-14,ok,parse + read px,,,,,,,Switch to asciidoc documentation,6209.0
+6c79a2cf88eab40b519aabd944dfd83c5ba89c32,2025-03-14,ok,parse into a fixed buffer,,,,,,,Switch to asciidoc documentation,4795.0
+6c79a2cf88eab40b519aabd944dfd83c5ba89c32,2025-03-14,ok,"reused parser, fixed buffer",,,,,,,Switch to asciidoc documentation,4557.0
+6c79a2cf88eab40b519aabd944dfd83c5ba89c32,2025-03-14,ok,serialize to std::string,,,,,,,Switch to asciidoc documentation,3285.0
+e4023c05e47cd002b106024dcaf060eca5a9b0b0,2024-04-08,ok,parse + read px,,,,,,,use murmur2a hash,6207.0
+e4023c05e47cd002b106024dcaf060eca5a9b0b0,2024-04-08,ok,parse into a fixed buffer,,,,,,,use murmur2a hash,4793.0
+e4023c05e47cd002b106024dcaf060eca5a9b0b0,2024-04-08,ok,"reused parser, fixed buffer",,,,,,,use murmur2a hash,4555.0
+e4023c05e47cd002b106024dcaf060eca5a9b0b0,2024-04-08,ok,serialize to std::string,,,,,,,use murmur2a hash,3285.0
+707a450ade0ecbfff83fa47d5be2e146dcc24e06,2025-12-04,ok,parse + read px,,,,,,,Fix ignoring_handler for arrays in nested described structs,6207.0
+707a450ade0ecbfff83fa47d5be2e146dcc24e06,2025-12-04,ok,parse into a fixed buffer,,,,,,,Fix ignoring_handler for arrays in nested described structs,4801.0
+707a450ade0ecbfff83fa47d5be2e146dcc24e06,2025-12-04,ok,"reused parser, fixed buffer",,,,,,,Fix ignoring_handler for arrays in nested described structs,4563.0
+707a450ade0ecbfff83fa47d5be2e146dcc24e06,2025-12-04,ok,serialize to std::string,,,,,,,Fix ignoring_handler for arrays in nested described structs,3285.0
+27491cd72162ddea0389d9cd69a8accec963040b,2026-02-09,ok,parse + read px,,,,,,,pass references to persistent objects in visit,6207.0
+27491cd72162ddea0389d9cd69a8accec963040b,2026-02-09,ok,parse into a fixed buffer,,,,,,,pass references to persistent objects in visit,4801.0
+27491cd72162ddea0389d9cd69a8accec963040b,2026-02-09,ok,"reused parser, fixed buffer",,,,,,,pass references to persistent objects in visit,4563.0
+27491cd72162ddea0389d9cd69a8accec963040b,2026-02-09,ok,serialize to std::string,,,,,,,pass references to persistent objects in visit,3285.0
+9e0d94d507cd66ae9702160eec6b97629c466ed5,2026-05-25,ok,parse + read px,,,,,,,some explicit result checking is removed,6207.0
+9e0d94d507cd66ae9702160eec6b97629c466ed5,2026-05-25,ok,parse into a fixed buffer,,,,,,,some explicit result checking is removed,4801.0
+9e0d94d507cd66ae9702160eec6b97629c466ed5,2026-05-25,ok,"reused parser, fixed buffer",,,,,,,some explicit result checking is removed,4563.0
+9e0d94d507cd66ae9702160eec6b97629c466ed5,2026-05-25,ok,serialize to std::string,,,,,,,some explicit result checking is removed,3285.0
+ea9066875c7f1bac807110e47c64df8e9ba876a7,2026-07-15,ok,parse + read px,,,,,,,"use array storage in insert(pos, first, last)",6207.0
+ea9066875c7f1bac807110e47c64df8e9ba876a7,2026-07-15,ok,parse into a fixed buffer,,,,,,,"use array storage in insert(pos, first, last)",4801.0
+ea9066875c7f1bac807110e47c64df8e9ba876a7,2026-07-15,ok,"reused parser, fixed buffer",,,,,,,"use array storage in insert(pos, first, last)",4563.0
+ea9066875c7f1bac807110e47c64df8e9ba876a7,2026-07-15,ok,serialize to std::string,,,,,,,"use array storage in insert(pos, first, last)",3285.0
+c3a56f4c6edfe5ef86c0e905c5e6609ecefea218,2026-07-19,ok,parse + read px,,,,,,,"fix overlapping memcpy in string::assign(char const*, size_type)",6315.0
+c3a56f4c6edfe5ef86c0e905c5e6609ecefea218,2026-07-19,ok,parse into a fixed buffer,,,,,,,"fix overlapping memcpy in string::assign(char const*, size_type)",4909.0
+c3a56f4c6edfe5ef86c0e905c5e6609ecefea218,2026-07-19,ok,"reused parser, fixed buffer",,,,,,,"fix overlapping memcpy in string::assign(char const*, size_type)",4671.0
+c3a56f4c6edfe5ef86c0e905c5e6609ecefea218,2026-07-19,ok,serialize to std::string,,,,,,,"fix overlapping memcpy in string::assign(char const*, size_type)",3285.0
+af039520ffde1b232a25f1a972381d1f1574cd44,2026-08-11,ok,parse + read px,,,,,,,fix deallocate size in monotonic_resource::release,6315.0
+af039520ffde1b232a25f1a972381d1f1574cd44,2026-08-11,ok,parse into a fixed buffer,,,,,,,fix deallocate size in monotonic_resource::release,4909.0
+af039520ffde1b232a25f1a972381d1f1574cd44,2026-08-11,ok,"reused parser, fixed buffer",,,,,,,fix deallocate size in monotonic_resource::release,4671.0
+af039520ffde1b232a25f1a972381d1f1574cd44,2026-08-11,ok,serialize to std::string,,,,,,,fix deallocate size in monotonic_resource::release,3285.0
+bac1ab971b8a311274994ab42ff7ca7be757417b,2026-08-11,ok,parse + read px,,,,,,,fix deallocate alignment in string_impl::destroy,6315.0
+bac1ab971b8a311274994ab42ff7ca7be757417b,2026-08-11,ok,parse into a fixed buffer,,,,,,,fix deallocate alignment in string_impl::destroy,4909.0
+bac1ab971b8a311274994ab42ff7ca7be757417b,2026-08-11,ok,"reused parser, fixed buffer",,,,,,,fix deallocate alignment in string_impl::destroy,4671.0
+bac1ab971b8a311274994ab42ff7ca7be757417b,2026-08-11,ok,serialize to std::string,,,,,,,fix deallocate alignment in string_impl::destroy,3285.0
+e2f976c941f64f310a33ba8beb0ab1ac56b00cb0,2024-03-18,ok,parse + read px,,,,,,,Charconv is used to serialize doubles,6315.0
+e2f976c941f64f310a33ba8beb0ab1ac56b00cb0,2024-03-18,ok,parse into a fixed buffer,,,,,,,Charconv is used to serialize doubles,4909.0
+e2f976c941f64f310a33ba8beb0ab1ac56b00cb0,2024-03-18,ok,"reused parser, fixed buffer",,,,,,,Charconv is used to serialize doubles,4671.0
+e2f976c941f64f310a33ba8beb0ab1ac56b00cb0,2024-03-18,ok,serialize to std::string,,,,,,,Charconv is used to serialize doubles,2877.0
+5fad60c7e5968e5b25e30b1f270d0e1f2dee13e1,2026-08-11,ok,parse + read px,,,,,,,account for completed utf-8 sequence in parse_string size limit,6315.0
+5fad60c7e5968e5b25e30b1f270d0e1f2dee13e1,2026-08-11,ok,parse into a fixed buffer,,,,,,,account for completed utf-8 sequence in parse_string size limit,4909.0
+5fad60c7e5968e5b25e30b1f270d0e1f2dee13e1,2026-08-11,ok,"reused parser, fixed buffer",,,,,,,account for completed utf-8 sequence in parse_string size limit,4671.0
+5fad60c7e5968e5b25e30b1f270d0e1f2dee13e1,2026-08-11,ok,serialize to std::string,,,,,,,account for completed utf-8 sequence in parse_string size limit,2877.0
+7cc13e949a32bc4422eff06ca2a448ea48aec870,2026-09-11,ok,parse + read px,,,,,,,buffer initializer_list before reallocation in array::insert,6315.0
+7cc13e949a32bc4422eff06ca2a448ea48aec870,2026-09-11,ok,parse into a fixed buffer,,,,,,,buffer initializer_list before reallocation in array::insert,4909.0
+7cc13e949a32bc4422eff06ca2a448ea48aec870,2026-09-11,ok,"reused parser, fixed buffer",,,,,,,buffer initializer_list before reallocation in array::insert,4671.0
+7cc13e949a32bc4422eff06ca2a448ea48aec870,2026-09-11,ok,serialize to std::string,,,,,,,buffer initializer_list before reallocation in array::insert,2877.0
+19fac5cccb9988264108ac5c4cee6b20dd84d3ca,2026-08-29,ok,parse + read px,,,,,,,some trailing whitespace removed,6315.0
+19fac5cccb9988264108ac5c4cee6b20dd84d3ca,2026-08-29,ok,parse into a fixed buffer,,,,,,,some trailing whitespace removed,4909.0
+19fac5cccb9988264108ac5c4cee6b20dd84d3ca,2026-08-29,ok,"reused parser, fixed buffer",,,,,,,some trailing whitespace removed,4671.0
+19fac5cccb9988264108ac5c4cee6b20dd84d3ca,2026-08-29,ok,serialize to std::string,,,,,,,some trailing whitespace removed,2877.0
+e4d5d157872ab58250f7dad72561edd4ba5b017f,2026-08-13,ok,parse + read px,,,,,,,exclude unreachable lines from coverage,6315.0
+e4d5d157872ab58250f7dad72561edd4ba5b017f,2026-08-13,ok,parse into a fixed buffer,,,,,,,exclude unreachable lines from coverage,4909.0
+e4d5d157872ab58250f7dad72561edd4ba5b017f,2026-08-13,ok,"reused parser, fixed buffer",,,,,,,exclude unreachable lines from coverage,4671.0
+e4d5d157872ab58250f7dad72561edd4ba5b017f,2026-08-13,ok,serialize to std::string,,,,,,,exclude unreachable lines from coverage,2877.0
+87c2e5e0350c4b6b59fe068fec792de035a3de63,2026-10-06,ok,parse + read px,,,,,,,pass full string_view to enum_from_string in value_to,6315.0
+87c2e5e0350c4b6b59fe068fec792de035a3de63,2026-10-06,ok,parse into a fixed buffer,,,,,,,pass full string_view to enum_from_string in value_to,4909.0
+87c2e5e0350c4b6b59fe068fec792de035a3de63,2026-10-06,ok,"reused parser, fixed buffer",,,,,,,pass full string_view to enum_from_string in value_to,4671.0
+87c2e5e0350c4b6b59fe068fec792de035a3de63,2026-10-06,ok,serialize to std::string,,,,,,,pass full string_view to enum_from_string in value_to,2877.0
+28a071f417ab45de85130c77fd5cb8c61323994f,2026-10-15,ok,parse + read px,,,,,,,recreate insert iterator after clear in parse_into sequence handler,6351.0
+28a071f417ab45de85130c77fd5cb8c61323994f,2026-10-15,ok,parse into a fixed buffer,,,,,,,recreate insert iterator after clear in parse_into sequence handler,4945.0
+28a071f417ab45de85130c77fd5cb8c61323994f,2026-10-15,ok,"reused parser, fixed buffer",,,,,,,recreate insert iterator after clear in parse_into sequence handler,4673.0
+28a071f417ab45de85130c77fd5cb8c61323994f,2026-10-15,ok,serialize to std::string,,,,,,,recreate insert iterator after clear in parse_into sequence handler,2877.0
+5cdaa661dfedd0e77f0af87265d28f3444b222c7,2026-10-23,ok,parse + read px,,,,,,,do not use no_destroy in clang-cl,6351.0
+5cdaa661dfedd0e77f0af87265d28f3444b222c7,2026-10-23,ok,parse into a fixed buffer,,,,,,,do not use no_destroy in clang-cl,4945.0
+5cdaa661dfedd0e77f0af87265d28f3444b222c7,2026-10-23,ok,"reused parser, fixed buffer",,,,,,,do not use no_destroy in clang-cl,4673.0
+5cdaa661dfedd0e77f0af87265d28f3444b222c7,2026-10-23,ok,serialize to std::string,,,,,,,do not use no_destroy in clang-cl,2877.0
+97488a7a5b3f3209d3bac3da21691b818a52e50e,2026-08-21,ok,parse + read px,,,,,,,account for alignment padding in monotonic_resource::do_allocate,6351.0
+97488a7a5b3f3209d3bac3da21691b818a52e50e,2026-08-21,ok,parse into a fixed buffer,,,,,,,account for alignment padding in monotonic_resource::do_allocate,5009.0
+97488a7a5b3f3209d3bac3da21691b818a52e50e,2026-08-21,ok,"reused parser, fixed buffer",,,,,,,account for alignment padding in monotonic_resource::do_allocate,4737.0
+97488a7a5b3f3209d3bac3da21691b818a52e50e,2026-08-21,ok,serialize to std::string,,,,,,,account for alignment padding in monotonic_resource::do_allocate,2877.0

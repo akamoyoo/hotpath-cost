@@ -1,0 +1,3 @@
+commit,date,status,op,alloc_per_call,free_per_call,lock_per_call,first_call_alloc,first_call_lock,median_ns,subject,instructions_per_call
+297637bc0a0f00dc504dbc1a47ebdaa577f8ae19,2026-10-29,ok,parse + read px,,,,,,,Fix integer overflow in Writer::WriteString for long strings,4848.0
+297637bc0a0f00dc504dbc1a47ebdaa577f8ae19,2026-10-29,ok,"parse + read px, pool on a fixed buffer",,,,,,,Fix integer overflow in Writer::WriteString for long strings,3189.0

@@ -61,6 +61,32 @@ hot path at zero allocations and locks, and over every measured commit nothing s
 numerical and hashing libraries the counts are zero by design; what differs there is time, which the
 compiler matrix below compares.
 
+## Six JSON libraries, one message
+
+The JSON workloads parse the same 90-byte trade message
+(`{"type":"trade","sym":"AAPL","px":187.25,"qty":100,"ts":1700000000123456,"cond":["@","F"]}`) and read one
+field. Latest library commit of each, GCC 13 `-O2 -march=x86-64-v3`; allocations and instructions per
+call are exact; times are medians of five rounds run alternately on one idle core.
+
+| library | how | allocations | instructions | ns |
+|---|---|---:|---:|---:|
+| yyjson | default allocator | 2 | 1,589 | 227 |
+| yyjson | pool allocator | 0 | 1,390 | 196 |
+| simdjson | DOM, reused parser | 0 | 1,857 | 229 |
+| glaze | read into a reused struct (no DOM) | 0 | 1,573 | 193 |
+| rapidjson | default allocator | 8 | 4,848 | 612 |
+| rapidjson | memory pool on a fixed buffer | 0 | 3,189 | 394 |
+| Boost.JSON | default resource | 8 | 6,351 | 869 |
+| Boost.JSON | `monotonic_resource` on a fixed buffer | 0 | 5,009 | 632 |
+| Boost.JSON | reused parser, fixed buffer | 0 | 4,737 | 587 |
+| nlohmann/json | default | 14 | 8,010 | 1,187 |
+
+Every library has a way to parse this message without the heap, and in every one of them that way has
+held at every measured commit since it existed. What remains is the work per byte, which differs by a
+factor of about four between the DOM parsers. In Boost.JSON's case no single place dominates: under
+callgrind the largest function is 7 % of the instructions; the rest is the parser, the object's hash
+index, string copies and the memory resource.
+
 ## Open pull requests
 
 `replay/prs.py LIB` (`check.py LIB BASE HEAD` on every open pull request (November 17, 2026, up to 30 per library)
