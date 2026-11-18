@@ -16,10 +16,7 @@ Two other comparisons find what history cannot: the same code under GCC and clan
 `-O3` (why one build is faster), and a static analysis of what the code *may* do against what the
 tests actually run (paths nobody exercises). It works on existing code, unmodified.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/figures/history-dark.svg">
-  <img alt="Two findings. abseil's flat_hash_map, replayed across its history: three refactorings in 2025 each add 40 to 50 % to the instructions of a lookup; two are undone within weeks, one stays a year. MPMCQueue, compared across compilers: GCC divided by the capacity twice per operation, 52.5 ns against 30.3 with clang; our four-line fix, merged upstream, brings GCC to 29.6 ns and clang to 26.6." src="docs/figures/history-light.svg">
-</picture>
+<img alt="Two findings. abseil's flat_hash_map, replayed across its history: three refactorings in 2025 each add 40 to 50 % to the instructions of a lookup; two are undone within weeks, one stays a year. MPMCQueue, compared across compilers: GCC divided by the capacity twice per operation and took 52.5 ns against 30.3 with clang; our four-line fix, merged upstream, brings GCC to 29.6 ns and clang to 26.6." src="docs/figures/history.svg">
 
 Top: comparing a library with its own past, every step is one commit, found and named by the replay.
 Bottom: comparing it with itself under another compiler. Drawn from the tool's results by
