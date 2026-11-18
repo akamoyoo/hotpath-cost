@@ -20,6 +20,8 @@ CHECKS = [
      ["replay.py", "msgpack-c", "--commits", "bcba2717"], None),
     ("explain.py names callback_now as the new allocation",
      ["explain.py", "liquibook", "25b0c5ec", "492c842c"], ["alloc   1.00 ->   4.00 per call in total", "callback_now"]),
+    ("Boost.Unordered before unordered_flat_map existed does not build (installed headers hidden)",
+     ["replay.py", "boost-unordered", "--commits", "29660f9c"], ["build-fail"]),
     ("abseil builds with trapping stubs for its sampler and measures 0 allocations",
      ["replay.py", "abseil", "--commits", "c16d5557"], None),
 ]
