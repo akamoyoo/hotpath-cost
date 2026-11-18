@@ -19,8 +19,7 @@ tests actually run (paths nobody exercises). It works on existing code, unmodifi
 <img alt="abseil's flat_hash_map operator[], instructions per call at every measured commit from October 2024 to November 2026: three refactorings in 2025 add 40, 44 and 50 % to a lookup; the first is undone in three weeks, the third in ten days, the second stays a year." src="docs/figures/history.svg">
 
 Each step is one commit, found and named by replaying the library's history: costs come in through
-ordinary refactorings, some leave within days and some stay for a year, and none of them was caught by
-the library's tests. Drawn from the tool's results by [`docs/figures/history.py`](docs/figures/history.py).
+ordinary refactorings; some leave within days and some stay for a year. Drawn from the tool's results by [`docs/figures/history.py`](docs/figures/history.py).
 
 ## Problems it found in real projects
 
