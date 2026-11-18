@@ -46,6 +46,7 @@ flatbuffers https://github.com/google/flatbuffers
 msgpack-c https://github.com/msgpack/msgpack-c cpp_master
 boost-unordered https://github.com/boostorg/unordered develop
 aeron https://github.com/real-logic/aeron
+boost-json https://github.com/boostorg/json develop
 LIST
 ln -sfn liquibook src/liquibook-explore             # exploration workloads run on the same clones
 ln -sfn concurrentqueue src/concurrentqueue-explore

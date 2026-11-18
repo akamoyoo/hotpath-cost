@@ -94,6 +94,12 @@ P = {
     # header missing at an old commit is missing, not taken from the release
     "boost-unordered": dict(workload="boost-unordered", paths=["include"], inc=["include"], srcs=[],
                             sysinc=(BOOST_INC, ["boost/unordered*"])),
+    # Boost.JSON: since Boost 1.85 it formats doubles with Boost.Charconv, a compiled library, taken from
+    # the installed release next to BOOST_INC
+    "boost-json": dict(workload="boost-json", paths=["include"], inc=["include"], srcs=[],
+                       sysinc=(BOOST_INC, ["boost/json*"]),
+                       libs=[f"-L{Path(BOOST_INC).parent / 'lib'}", f"-Wl,-rpath,{Path(BOOST_INC).parent / 'lib'}",
+                             "-Wl,--push-state,--as-needed", "-lboost_charconv", "-Wl,--pop-state"]),
     "boost-unordered-map": dict(workload="boost-unordered-map", paths=["include"], inc=["include"], srcs=[],
                                 sysinc=(BOOST_INC, ["boost/unordered*"])),
     "emhash": dict(workload="emhash", paths=["include", "hash_table8.hpp"], inc=["include/emhash", "."], srcs=[]),
@@ -158,7 +164,8 @@ def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
     return [CXX[cc], std, OPT, "-DNDEBUG", "-pthread", "-march=x86-64-v3", "-w", *extra,
             *[f"-I{tree / i}" for i in cfg["inc"]], *drv, *cfg.get("flags", []),
             str(workload), *[str(tree / s) for s in cfg["srcs"]],
-            *[str(tree / s) for s in cfg.get("srcs_if_present", []) if (tree / s).exists()], "-o", str(exe), "-ldl"]
+            *[str(tree / s) for s in cfg.get("srcs_if_present", []) if (tree / s).exists()], *cfg.get("libs", []),
+            "-o", str(exe), "-ldl"]
 
 def build(proj, cc, h, tree, exe, extra=()):
     """Build at the commit; C++17 first, then C++20 (newer versions of some projects need it), unless the
