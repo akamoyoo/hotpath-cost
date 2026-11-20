@@ -334,6 +334,25 @@ UBSan, with a new test across the inline/vector boundary. Reported and proposed 
 [msgpack-c#1222](https://github.com/msgpack/msgpack-c/issues/1222),
 [msgpack-c#1223](https://github.com/msgpack/msgpack-c/pull/1223).
 
+**The review, and why the fix was withdrawn.** The maintainer confirmed the allocation counts and the
+correctness at the inline/vector boundary, then timed messages of other shapes. Every one of them was
+slower: the inline stack's accessor is a branch and a choice between two storage places, called two or
+three times per element, and that costs more than the two allocations it saves. Reproduced here (GCC 13,
+reused zone, ns per message, three interleaved runs):
+
+| message | before | with the fix |
+|---|---:|---:|
+| the 4-field struct timed above | 105 | 81 |
+| 256 integers | 1,030 | 1,530 |
+| map of 64 strings to integers | 1,100 | 1,650 |
+| 16 x 16 nested arrays | 1,490 | 2,100 |
+| the 4-field struct, reused `unpacker` | 160 | 176 |
+
+The one message shape we had timed was the one case that improves. A reused `msgpack::unpacker` already
+unpacks without allocating outside the zone, so the allocations of the one-shot `unpack()` have an
+existing answer; we withdrew the pull request. The counts were exact and the attribution right; the
+price was wrong, because it was taken on one input.
+
 ## Static and run-time, side by side
 
 The counts say what a workload does; they cannot see a path it does not take. A static analysis sees

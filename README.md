@@ -25,7 +25,8 @@ ordinary refactorings; some leave within days and some stay for a year. Drawn fr
 
 Applied to 42 open-source C++ libraries used in trading, messaging and numerics (27,997 library
 commits replayed, 148 open pull requests checked). What we reported upstream, with a fix where one
-was ours to write:
+was ours to write. One fix was merged (MPMCQueue), two are under review (Liquibook, hffix), and one we
+withdrew after the maintainer's review showed it slower on messages we had not timed (msgpack-c):
 
 ### Accepted upstream
 
@@ -38,10 +39,15 @@ was ours to write:
 | library | what the tool found | found by | our report |
 |---|---|---|---|
 | [Liquibook](https://github.com/enewhuis/liquibook) (order book) | **An out-of-bounds write.** `Depth::find_level` returns a past-the-end pointer instead of `nullptr`, so fills of a triggered stop order overwrite the book's members; in ordinary order flow | a random order flow aimed at the paths the static analysis listed, which surfaced an unexpected exception | [issue #44](https://github.com/enewhuis/liquibook/issues/44); fix with regression tests in [PR #45](https://github.com/enewhuis/liquibook/pull/45) |
-| [msgpack-c](https://github.com/msgpack/msgpack-c) (MessagePack) | **2 heap allocations per message** when unpacking into a reused zone, the documented way to avoid them; since the visitor API of 2016 | exact counts, then the allocating stacks | [issue #1222](https://github.com/msgpack/msgpack-c/issues/1222); fix in [PR #1223](https://github.com/msgpack/msgpack-c/pull/1223), CI green: 0 allocations, 118.6 -> 83.7 ns |
 | [hffix](https://github.com/jamesdbrock/hffix) (FIX protocol) | **The same encoder 2.8x apart** between compilers and levels: an integer-to-ASCII helper left out of line converts constant tags at run time | the compiler matrix, then machine-code facts | [issue #63](https://github.com/jamesdbrock/hffix/issues/63); fix in [PR #64](https://github.com/jamesdbrock/hffix/pull/64) |
 | [Eigen](https://gitlab.com/libeigen/eigen) (linear algebra) | **Eigen 5's 4x4 Cholesky solve 1.48x slower than 3.4** with GCC; the step is one commit of April 2025 | instructions per call across the history, then timing | the bisection and timings, added to the maintainers' open [issue #3206](https://gitlab.com/libeigen/eigen/-/issues/3206) |
 | [parallel-hashmap](https://github.com/greg7mdp/parallel-hashmap) (hash map) | **An open "AVX2 optimization" that is slower** in every case measured, up to 42 % for missing keys in a large table | checking every open pull request, then a standalone benchmark | the benchmark, posted on [PR #167](https://github.com/greg7mdp/parallel-hashmap/pull/167#issuecomment-6961404564), whose open question was whether it helps |
+
+### Reported upstream, our fix withdrawn after review
+
+| library | what the tool found | found by | what happened |
+|---|---|---|---|
+| [msgpack-c](https://github.com/msgpack/msgpack-c) (MessagePack) | **2 heap allocations per message** when unpacking into a reused zone with `unpack()`; since the visitor API of 2016 | exact counts, then the allocating stacks | [issue #1222](https://github.com/msgpack/msgpack-c/issues/1222); our fix ([PR #1223](https://github.com/msgpack/msgpack-c/pull/1223)) removed both allocations and made the small message we timed faster, but the maintainer's review showed larger messages 40 to 100 % slower, which we reproduced; we withdrew it. A reused `msgpack::unpacker` already unpacks without these allocations |
 
 The issues, pull requests and comments above were written and submitted by us (GitHub
 [akamoyoo](https://github.com/akamoyoo)), each with the numbers behind it; their state is as of
@@ -65,7 +71,7 @@ ones and the other open pull requests: [docs/results.md](docs/results.md).
 - **Costs come in through ordinary commits, and stay.** A refactoring put a mutex lock back on spdlog's
   null sink for six releases; a simplification made Liquibook's last release allocate four times per
   order instead of one; one abseil refactoring made `operator[]` 37 % slower until a fix ten days
-  later; msgpack-c's extra allocation per message has been there since 2016. Each passed review and
+  later; msgpack-c's extra allocations per message have been there since 2016. Each passed review and
   tests. Each is one line in the replay, at the commit that made it.
 - **Exact counts make every commit comparable.** Timing every commit does not work: two builds with
   identical machine code measured 2x apart. Counts do not move between runs, so a single extra

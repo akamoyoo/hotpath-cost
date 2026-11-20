@@ -75,6 +75,12 @@ and tens of cycles; instruction counts hide it, as LLVM's division bypass hid MP
 
 An instruction count is a detector, and the price has to be measured.
 
+**And measured on more than one input.** A price taken on one input is a price for that input. The
+msgpack-c fix (case 8) made the one small message we timed 23 % faster and every larger message the
+maintainer tried 40 to 100 % slower: the change removed two allocations per message and added a branch
+per element. A change that trades a fixed cost for a per-element cost has to be timed on inputs of
+several sizes and shapes, and the maintainer's own benchmark is the one to use first.
+
 The same holds for allocation counts. rapidjson's extra allocation per parse since #1858 costs 5 %
 (587 -> 616 ns). concurrentqueue's malloc and free per 32 elements (case 7) cost nothing measurable on
 one thread: on the latest code, switching block recycling on removes all 2.9 allocations per burst and

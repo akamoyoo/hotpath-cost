@@ -160,6 +160,10 @@ other undefined symbol, and every undefined variable, fails the build.
   calls the operation through one `noinline` function in batches. The replay's workload and such a
   program agreed on every count but disagreed on time by up to 28 points (parallel-hashmap #167:
   insert+erase -11 % against +11 to +17 %), because code layout and the surrounding loop differ.
+  Time it on inputs of several sizes and shapes, and with the library's own benchmarks when it has
+  them: a change that removes a cost per call and adds one per element can be faster on the input you
+  chose and slower on the rest (msgpack-c #1223: 23 % faster on a 4-field message, 40 to 100 % slower
+  on arrays and maps).
 - **Workloads with another thread** (a logger's backend, an executor's worker; `cores > 1` in `P`):
   frees counted on the calling thread depend on which thread drops the last reference, and vary between
   runs of the same build (Taskflow: 1.4 to 2.8 per call), so `diff.py` and `--refine` do not compare
