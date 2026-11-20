@@ -81,6 +81,12 @@ maintainer tried 40 to 100 % slower: the change removed two allocations per mess
 per element. A change that trades a fixed cost for a per-element cost has to be timed on inputs of
 several sizes and shapes, and the maintainer's own benchmark is the one to use first.
 
+The next fix was checked that way before it went anywhere. In QuickFIX, decoding a message into a reused
+object copies every long field value twice more than it needs to, and moving them instead cuts the
+allocations per decode from 6 to 2. Our workload, a NewOrderSingle with two long timestamps, came out
+level; QuickFIX's own `pt` benchmark showed Heartbeat and QuoteRequest decoding 13 to 15 % slower, because
+most fields are short and moving a short string costs what copying it does. It was not submitted.
+
 The same holds for allocation counts. rapidjson's extra allocation per parse since #1858 costs 5 %
 (587 -> 616 ns). concurrentqueue's malloc and free per 32 elements (case 7) cost nothing measurable on
 one thread: on the latest code, switching block recycling on removes all 2.9 allocations per burst and

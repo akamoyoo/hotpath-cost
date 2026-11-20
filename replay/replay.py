@@ -101,6 +101,14 @@ P = {
                    # -mwaitpkg: versions before 2024 call _tpause without a target attribute, which GCC 13
                    # rejects; the library checks the CPU before executing it
                    srcs_glob=["src/tbb/*.cpp"], flags=["-D__TBB_BUILD", "-DUSE_PTHREAD", "-mwaitpkg"], cores=2),
+    # QuickFIX: the message layer's sources; Allocator.h is written by configure from config_unix.h and is
+    # empty by default; the data dictionary is the commit's own spec/FIX44.xml
+    "quickfix": dict(workload="quickfix", paths=["src/C++"], inc=["src/C++"], srcs=[],
+                     srcs_if_present=[f"src/C++/{f}.cpp" for f in ("Message", "FieldMap", "Group", "FieldConvertors",
+                                      "FieldTypes", "MessageSorters", "Utility", "DataDictionary", "pugixml",
+                                      "PUGIXML_DOMDocument", "Exceptions", "SessionID")],
+                     srcs_glob=["src/C++/double-conversion/*.cc"],
+                     gen_files={"src/C++/Allocator.h": ""}, flags=['-DQF_SPEC="{tree}/spec/FIX44.xml"']),
     "boost-json": dict(workload="boost-json", paths=["include"], inc=["include"], srcs=[],
                        sysinc=(BOOST_INC, ["boost/json*"]),
                        libs=[f"-L{Path(BOOST_INC).parent / 'lib'}", f"-Wl,-rpath,{Path(BOOST_INC).parent / 'lib'}",
@@ -167,7 +175,7 @@ def build_cmd(cfg, cc, tree, exe, std="-std=c++17", extra=()):
     workload = HERE / "workloads" / f"{cfg.get('workload') or cfg['drv']}.cpp"
     drv = [f"-I{HERE / 'drivers' / cfg['drv']}"] if "drv" in cfg else []
     return [CXX[cc], std, OPT, "-DNDEBUG", "-pthread", "-march=x86-64-v3", "-w", *extra,
-            *[f"-I{tree / i}" for i in cfg["inc"]], *drv, *cfg.get("flags", []),
+            *[f"-I{tree / i}" for i in cfg["inc"]], *drv, *[f.replace("{tree}", str(tree)) for f in cfg.get("flags", [])],
             str(workload), *[str(tree / s) for s in cfg["srcs"]],
             *[str(tree / s) for s in cfg.get("srcs_if_present", []) if (tree / s).exists()],
             *[str(p) for g in cfg.get("srcs_glob", []) for p in sorted(tree.glob(g))], *cfg.get("libs", []),
@@ -177,6 +185,9 @@ def build(proj, cc, h, tree, exe, extra=()):
     """Build at the commit; C++17 first, then C++20 (newer versions of some projects need it), unless the
     project sets its own standard ("std" in P)."""
     subprocess.run(f"git -C {TOP / 'src' / proj} archive {h} | tar -x -C {tree}", shell=True, check=True)
+    for path, text in P[proj].get("gen_files", {}).items():   # files the library's build system would write
+        f = tree / path
+        if not f.exists(): f.parent.mkdir(parents=True, exist_ok=True); f.write_text(text)
     # git submodules: the commit each one is pinned to at h, taken from a local clone in src/
     for path, clone in P[proj].get("submodules", {}).items():
         ls = subprocess.run(["git", "-C", str(TOP / "src" / proj), "ls-tree", h, path], capture_output=True, text=True).stdout.split()
