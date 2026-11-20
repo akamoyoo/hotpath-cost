@@ -138,7 +138,10 @@ commits matter, the include directories, extra sources and flags. Check the late
 library's header; older headers relied on transitive includes. Sources that exist only in some versions
 go in `srcs_if_present`, and a library's whole source directory in `srcs_glob` (oneTBB: `src/tbb/*.cpp`); C sources go in `csrcs` or `csrcs_if_present` and are compiled with the C
 compiler of the same family (Aeron's C client). A C header that does not declare `extern "C"` itself
-is wrapped in the workload, after the headers that switch to C++ headers under C++. Libraries to link go in `libs`, after the sources (Boost.JSON
+is wrapped in the workload, after the headers that switch to C++ headers under C++. Files that the library's own build system would generate go in `gen_files` (QuickFIX's
+`Allocator.h`, written by configure); `{tree}` in `flags` is replaced by the commit's source tree, for a
+workload that reads the library's data files (QuickFIX's `spec/FIX44.xml`). Libraries to link go in
+`libs`, after the sources (Boost.JSON
 links Boost.Charconv from the installed release). A library that
 needs others from an installed tree (a Boost library and the rest of Boost) uses `sysinc=(DIR,
 [patterns])`: the build mirrors DIR with the library's own files (the patterns) left out, so a header
