@@ -18,6 +18,7 @@ prints. `README.md` says what the tool is and what it found; `docs/insights.md` 
 | Did a commit change the work done per call (for code that never allocates)? | `replay/replay.py LIB --metric instr`, then `replay/diff.py LIB --instr 5` | yes: instructions per call under callgrind |
 | What does a change cost in time? | `replay/price.py LIB A B` | on an idle core, alternating rounds |
 | Why is one compiler or level faster? | `replay/gap.py LIB ENTRY` | facts, not proof: read the code |
+| What do the library's own benchmarks allocate and lock per iteration, and when did that change? | `replay/bench.py LIB COMMIT`, `--history`, `--refine`, then `diff.py LIB --tag -bench` | yes, for single-threaded benchmarks |
 | What changed in the machine code between two commits? | `replay/gap.py LIB ENTRY --commits A,B` | facts, not proof |
 
 ## Where to start
@@ -82,6 +83,19 @@ if a count changed, 2 if only instructions did, 3 if a build or run failed). By 
 its cost is not known: price it with `replay/price.py LIB BASE HEAD` before calling it a regression or
 an improvement. In the changes measured so far, time moved in the same direction as instructions by
 anything from less than a tenth to twice as much (`docs/insights.md`).
+
+**Use the library's own benchmarks instead of a workload.** For a library with Google Benchmark
+benchmarks and an entry in `BENCH` in `replay/bench.py` (its CMake options, the benchmark target and the
+binary's path), `replay/bench.py LIB COMMIT` builds them at the commit and prints, per benchmark, the
+allocations, frees and locks of one iteration and Google Benchmark's time. It needs one Google Benchmark
+installed (`GBENCH_DIR`, its install prefix): the build is pointed at it and may not download another,
+because versions before 1.8 do not take a fixed iteration count. Each benchmark runs twice, for 2,000
+and 12,000 iterations (`--benchmark_min_time=<N>x`), under `LD_PRELOAD=replay/preload/counts_preload.so`;
+the difference of the process-wide counts over the difference of the iterations is one iteration, set-up
+cancelled. A benchmark whose iteration count is not the one asked for gives no result. Benchmarks that
+run several threads (`/threads:N`) are marked inexact and `diff.py` does not compare them.
+`--history [--stride N]` and then `--history --refine` replay and bisect as `replay.py` does, into
+`out/gcc-bench/LIB/`; `--instr` measures instructions per iteration under callgrind.
 
 **Check a library's open pull requests.** `replay/prs.py LIB` (needs `gh`) fetches every open pull
 request that touches the paths in `P` as `refs/hp/pr<N>`, with its target branch, and runs `check.py`

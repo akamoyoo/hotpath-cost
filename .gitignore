@@ -21,3 +21,4 @@ fn-effects-report.json
 # run-time replay: the fetched libraries and the raw per-commit output
 /src/
 /out/
+replay/preload/*.so

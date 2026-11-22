@@ -128,6 +128,7 @@ and where it found the out-of-bounds write.
 ```
 ./fetch.sh                                     # clone the libraries into src/
 replay/check.py LIB BASE HEAD                  # a change under review: counts, changed stacks, instructions
+replay/bench.py LIB COMMIT [--history]         # the library's own Google Benchmark benchmarks, counted per iteration
 replay/prs.py LIB                              # the same for every open pull request (needs gh)
 replay/replay.py LIB [--metric instr]          # counts (or instructions) at every library commit
 replay/diff.py LIB [--instr 5]                 # which commits changed them

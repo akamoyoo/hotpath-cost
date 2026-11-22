@@ -79,6 +79,13 @@ head names the new line.
   `unordered_flat_map` existed, the compiler found the release's copy, and 770 commits back to 2008
   "measured" the 2026 code. The counts were all zero, so nothing looked wrong. The installed tree is
   now mirrored without the library's own files.
+- **Letting a benchmark choose its own iterations.** `bench.py` counts one iteration as the difference
+  of two runs with fixed iteration counts. A first replay of spdlog's own benchmarks reported lock counts
+  like 2.45 and 3.82 per call that moved at commits touching nothing on the path. The builds had not
+  found the installed Google Benchmark (a variable expanded empty) and downloaded an old one, which
+  reads `2000x` as a time and runs trial loops of its own choosing, all of them counted. The build may
+  no longer download one, and a run whose iteration count is not the one asked for is discarded; with
+  that, the same benchmarks give 1.00 and 0.00 at every commit.
 - **Results cached across workload changes.** A replay compared a cached result of an earlier version
   of the concurrentqueue exploration workload with a result of the current one, and reported a change
   at a commit that only removed `static` from inline functions. Cached results now carry a fingerprint

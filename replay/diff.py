@@ -43,6 +43,8 @@ def main():
             for op in cur:
                 if op not in pcur: continue
                 a, b = pcur[op], cur[op]
+                if a.get("exact", True) is False or b.get("exact", True) is False:
+                    continue   # several threads (bench.py): not compared
                 if instr:
                     if abs(a["instr"] - b["instr"]) * 100 >= ipct * max(a["instr"], 1):
                         lines.append(f"    {op}: instructions {a['instr']:.0f} -> {b['instr']:.0f} ({(b['instr'] - a['instr']) * 100 / a['instr']:+.0f}%)")
