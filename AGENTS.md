@@ -93,8 +93,12 @@ because versions before 1.8 do not take a fixed iteration count; `GBENCH_SRC`, i
 for builds that add it with FetchContent. Each benchmark runs once for one iteration, to see how long one
 takes, then twice, for N and 3N iterations chosen so that a run lasts about 0.05 s
 (`--benchmark_min_time=<N>x`), under `LD_PRELOAD=replay/preload/counts_preload.so`; the difference of the
-process-wide counts over the difference of the iterations is one iteration, set-up cancelled. Counts
-that are not whole numbers are amortized costs, such as a vector's growth. A benchmark whose iteration count is not the one asked for gives no result. Benchmarks that
+process-wide counts over the difference of the iterations is one iteration, set-up cancelled. N is at
+least 100, and once chosen for a benchmark it is used for every commit (`iterations.json` in the
+output directory; in a comparison, the first commit's): the fixed costs of a run, Google Benchmark's own
+output among them, move by an allocation when N changes, and a replay that chose N per commit reported
+changes like 11.00 -> 11.25 that were not there. Counts that are not whole numbers are amortized costs,
+such as a vector's growth. A benchmark whose iteration count is not the one asked for gives no result. Benchmarks that
 run several threads (`/threads:N`) are marked inexact and `diff.py` does not compare them.
 `--history [--stride N]` and then `--history --refine` replay and bisect as `replay.py` does, into
 `out/gcc-bench/LIB/`; `--instr` measures instructions per iteration under callgrind; `--filter REGEX`
