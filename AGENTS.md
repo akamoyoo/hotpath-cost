@@ -89,13 +89,20 @@ benchmarks and an entry in `BENCH` in `replay/bench.py` (its CMake options, the 
 binary's path), `replay/bench.py LIB COMMIT` builds them at the commit and prints, per benchmark, the
 allocations, frees and locks of one iteration and Google Benchmark's time. It needs one Google Benchmark
 installed (`GBENCH_DIR`, its install prefix): the build is pointed at it and may not download another,
-because versions before 1.8 do not take a fixed iteration count. Each benchmark runs twice, for 2,000
-and 12,000 iterations (`--benchmark_min_time=<N>x`), under `LD_PRELOAD=replay/preload/counts_preload.so`;
-the difference of the process-wide counts over the difference of the iterations is one iteration, set-up
-cancelled. A benchmark whose iteration count is not the one asked for gives no result. Benchmarks that
+because versions before 1.8 do not take a fixed iteration count; `GBENCH_SRC`, its source tree, is
+for builds that add it with FetchContent. Each benchmark runs once for one iteration, to see how long one
+takes, then twice, for N and 3N iterations chosen so that a run lasts about 0.05 s
+(`--benchmark_min_time=<N>x`), under `LD_PRELOAD=replay/preload/counts_preload.so`; the difference of the
+process-wide counts over the difference of the iterations is one iteration, set-up cancelled. Counts
+that are not whole numbers are amortized costs, such as a vector's growth. A benchmark whose iteration count is not the one asked for gives no result. Benchmarks that
 run several threads (`/threads:N`) are marked inexact and `diff.py` does not compare them.
 `--history [--stride N]` and then `--history --refine` replay and bisect as `replay.py` does, into
-`out/gcc-bench/LIB/`; `--instr` measures instructions per iteration under callgrind.
+`out/gcc-bench/LIB/`; `--instr` measures instructions per iteration under callgrind; `--filter REGEX`
+keeps some benchmarks (a full run of nlohmann/json's takes minutes per commit). A library whose
+benchmarks are built to compare versions (nlohmann/json: `JSON_BENCHMARK_INCLUDE_DIR`) is configured with
+`bench_tree`: the benchmark sources of one commit, `bench_paths` from it, and the library of the commit
+measured through `{lib}` in the CMake options; data sets it would download go in `data` and are fetched
+once into `out/bench-data/`.
 
 **Check a library's open pull requests.** `replay/prs.py LIB` (needs `gh`) fetches every open pull
 request that touches the paths in `P` as `refs/hp/pr<N>`, with its target branch, and runs `check.py`
