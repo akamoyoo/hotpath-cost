@@ -41,6 +41,12 @@ SLOW += [
     ("check.py: abseil f2f4fa2c changes instructions only, +50 % per operator[]",
      ["check.py", "abseil", "d5ccaa21", "f2f4fa2c"], ["+49.9 %", "no count changed; instructions changed"]),
 ]
+SLOW += [
+    ("bench.py: spdlog's own benchmarks, a null sink locks nothing and a multi-threaded sink once",
+     ["bench.py", "spdlog", "6d9805df", "--filter", "^(null_sink_st|/dev/null_mt/real_time)$"],
+     ["null_sink_st                                            alloc 0.00 free 0.00 lock 0.00",
+      "/dev/null_mt/real_time                                  alloc 0.00 free 0.00 lock 1.00"]),
+]
 STATIC = [
     ("combine.py: Liquibook's fixed workload reaches 5 of 85 hot sites, no static miss",
      ["combine.py", "liquibook", "25b0c5ec"], ["reached 5 of 85 static sites not marked cold; 0 static misses"]),
@@ -79,6 +85,7 @@ def main():
         if not quick:
             for what, cmds, want in SLOW:
                 if "check.py" in str(cmds) and not os.environ.get("VALGRIND"): print(f"skip {what} (VALGRIND not set)"); continue
+                if "bench.py" in str(cmds) and not os.environ.get("GBENCH_DIR"): print(f"skip {what} (GBENCH_DIR not set)"); continue
                 check(what, cmds, want)
         if static:
             for what, cmd, want in STATIC: check(what, cmd, want)
