@@ -90,7 +90,8 @@ def run_once(exe, name, n, core, instr=False):
 
 def measure(exe, filt, core, instr=False):
     """Per-iteration counts of every benchmark (matching filt): {name: record}."""
-    names = subprocess.run([str(exe), "--benchmark_list_tests"], capture_output=True, text=True).stdout.split("\n")
+    with tempfile.TemporaryDirectory() as t:   # programs may write files where they run (spdlog: its logs)
+        names = subprocess.run([str(exe), "--benchmark_list_tests"], capture_output=True, text=True, cwd=t).stdout.split("\n")
     out = {}
     for name in (n for n in names if n and (not filt or re.search(filt, n))):
         a, b = run_once(exe, name, N1, core, instr), run_once(exe, name, N2, core, instr)
