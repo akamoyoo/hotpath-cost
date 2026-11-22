@@ -64,6 +64,33 @@ hot path at zero allocations and locks, and over every measured commit nothing s
 numerical and hashing libraries the counts are zero by design; what differs there is time, which the
 compiler matrix below compares.
 
+## The libraries' own benchmarks
+
+`replay/bench.py` runs a library's own Google Benchmark benchmarks, unchanged, at each commit and counts
+what one iteration allocates and locks; no workload is written.
+
+**spdlog** (`bench/latency`, 13 benchmarks): 25 commits from October 2019, when the program became a
+Google Benchmark one, to October 2026, sampled every 30th and bisected: no count changed. A null-sink
+call allocates and locks nothing; the multi-threaded sinks lock once per message; with backtrace on,
+every call locks once, including those below the logger's level, which the backtrace records.
+
+**nlohmann/json** (`tests/benchmarks`, the latest commit's benchmarks against each commit's header,
+which is how the project compares versions): parsing, dumping, comparing and iterating `twitter.json` and
+`citm_catalog.json`, every 40th commit, bisected. Allocations per parse:
+
+| commit | | twitter.json | citm_catalog.json |
+|---|---|---:|---:|
+| `0a365865` 2026-10-06 | "Make basic_json destruction allocation-free and non-recursive" | 30,317 -> 30,309 | 56,259 -> 56,253 |
+| `fa37b952` 2026-10-21 | "Match literals without a stack array ..." | 30,309 -> 30,313 | 56,253 -> 56,256 |
+| `52fecc1f` 2026-10-21 | "Move object keys into the value when parsing" | 30,313 -> 27,886 | 56,256 -> 56,012 |
+| `9c50bdd1` 2026-10-24 | "Make the DOM parser cheaper per container and per member" | 27,886 -> 27,709 | 56,012 -> 51,116 |
+| `33f15727` 2026-11-10 | "Parse JSON in one block of memory ..." | 27,709 -> 27,708 | 51,116 -> 51,115 |
+
+Dumping, comparing and iterating did not change. `fa37b952`, a small step back within that work, is the
+commit the hand-written workload found too (17 -> 18 allocations for a 90-byte message, table above): two
+independent measurements, different inputs, the same commit. The history reaches back to September 2026
+only: the latest benchmark sources use interfaces older headers lack, and those commits do not build.
+
 ## Six JSON libraries, one message
 
 The JSON workloads parse the same 90-byte trade message

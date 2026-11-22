@@ -97,6 +97,11 @@ Two views of the same code, matched site by site:
   call exactly (or instructions per call, under callgrind), records the stack of each, and replays the
   library's history to find and bisect every change.
 
+A library's own Google Benchmark benchmarks can stand in for a workload: `bench.py` builds them at each
+commit, runs every benchmark for two fixed iteration counts under a counting `LD_PRELOAD` library, and
+the difference is what one iteration allocates and locks. On nlohmann/json it found the same commit as
+the hand-written workload, from the project's own benchmarks and inputs.
+
 `combine.py` puts the two side by side: what the workload exercised, what the static analysis says is
 reachable but the workload never reached, and anything seen at run time that the analysis missed
 (none, on Liquibook and concurrentqueue, where the two were matched). Because throwing a C++ exception
